@@ -23,7 +23,7 @@
     1 ：Payment with credit card pass through to the airline
 
     0 :  Payment with Prepayment
-*   #### creditCard                  Object<<mark style="color:blue;">CreditCardElement</mark>>                                                 <mark style="color:blue;"></mark>                                                 <mark style="color:orange;">Optional</mark>
+*   #### creditCard                  Object< <mark style="color:blue;">CreditCardElement</mark> >        <mark style="color:orange;">Optional</mark>
 
     1 ：Payment with credit card pass through to the airline
 
