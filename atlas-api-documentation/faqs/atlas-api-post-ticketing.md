@@ -4,7 +4,7 @@
 
 Sometimes airlines can make changes to their flight schedule. These changes range from minor changes in flight schedules to major ones such as cancellation or replacement.
 
-If your customers are affected by such changes, we will notify you. You will then need to inform your customers about these changes and the next steps. To receive these notifications, you need to configurewebhooks. \
+If your customers are affected by such changes, we will notify you. You will then need to inform your customers about these changes and the next steps. To receive these notifications, you need to configurewebhooks. 
 
 
 **How is the post ticketing process being handled?**
