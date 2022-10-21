@@ -1,6 +1,6 @@
 
 
-{% coverImg src="http://res.atlaslovestravel.com/gitbook/assets/ATL_002_Gitbook-headers_Atlas_Advanced.png" %}
+{% coverImg src="../../.gitbook/assets/ATL_002_Gitbook-headers_Atlas_Advanced.png" %}
 {% endcoverImg %}
 
 
