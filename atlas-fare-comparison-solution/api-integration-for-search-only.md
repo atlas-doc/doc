@@ -14,7 +14,7 @@ Your developer can integrate with the search API in 0.5 man-days and once integr
 
 It is a simple four-step process:
 
-![](<http://res.atlaslovestravel.com/gitbook/assets/ATL-002_API integration for search.png>)
+![](<../.gitbook/assets/ATL-002_API integration for search.png>)
 
 {% hint style="info" %}
 The Atlas quotation consists of the following four parameters:
@@ -681,7 +681,7 @@ Download the <mark style="color:blue;">Postman collection</mark> bellow to check
 | SEL-CJU 24FEB/28FEB Roundtrip | One-way with both direct and connecting flights | Number of routings returned: (to be filled-up by you)                              |
 | SEL-CJU 24FEB/28FEB Roundtrip | Roundtrip with different airlines               | <p>Departure Date:</p><p>Number of routings returned: (to be filled-up by you)</p> |
 
-> [Atlas Sandbox SearchOnly UAT.postman_collection.json.zip](http://res.atlaslovestravel.com/gitbook/assets/Atlas Sandbox SearchOnly UAT.postman_collection.json.zip)
+> [Atlas Sandbox SearchOnly UAT.postman_collection.json.zip](../.gitbook/assets/Atlas Sandbox SearchOnly UAT.postman_collection.json.zip)
 
 
 ## Start LIVE Search
