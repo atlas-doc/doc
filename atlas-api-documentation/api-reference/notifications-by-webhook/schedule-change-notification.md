@@ -27,7 +27,7 @@ Method : Post
   *   #### previousSegs                                 **Array**<<mark style="color:blue;">scSegment</mark>>      <mark style="color:blue;"></mark>     
 
       The original segments
-  *   #### revisedSegs                             <mark style="color:blue;"></mark>       Array<<mark style="color:blue;">scSegment</mark>>      <mark style="color:blue;"></mark>     
+  *   #### revisedSegs                            Array<<mark style="color:blue;">scSegment</mark>>       
 
       The revised segments
 
@@ -44,21 +44,21 @@ Method : Post
           *   #### depAirport                          <mark style="color:blue;">string</mark>                                                                            
 
               departure airport
-          *   **arrAirport                             **<mark style="color:blue;">**string**</mark>        <mark style="color:blue;"></mark>                                                                     <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                    
+          *   **arrAirport                             **<mark style="color:blue;">**string**</mark>                                                                    
 
               arrival ariport
-          *   **depTime                                **<mark style="color:blue;">**string**</mark>    <mark style="color:blue;"></mark>                                                                         <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                        
+          *   **depTime                                **<mark style="color:blue;">**string**</mark>                                                                
 
               departure time
-          *   **arrTime                                  **<mark style="color:blue;">**string**</mark>       <mark style="color:blue;"></mark>                                                                      <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                     
+          *   **arrTime                             **<mark style="color:blue;">**string**</mark>                                                               
 
-              arrival time                <mark style="color:blue;"></mark>               
-          *   **depTerminal                         **<mark style="color:blue;">**string**</mark>    <mark style="color:blue;"></mark>                                                                         <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                        
+              arrival time                 
+          *   **depTerminal                         **<mark style="color:blue;">**string**</mark>                                                         
 
               departure time
-          *   **arrTerminal                           **<mark style="color:blue;">**string**</mark>       <mark style="color:blue;"></mark>                                                                      <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                     
-
-              arrival time      <mark style="color:blue;"></mark>     
+              
+          *   **arrTerminal                           **<mark style="color:blue;">**string**</mark>                                                          
+              arrival time  
 {% endtab %}
 
 {% tab title="Samples" %}
