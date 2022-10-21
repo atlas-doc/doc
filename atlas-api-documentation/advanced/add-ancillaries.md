@@ -1,14 +1,14 @@
 # Add Ancillaries
 
-Currently, Atlas API only supports checked-in baggage service. We are looking to add more ancillaries soon.  
+Currently, Atlas API only supports checked-in baggage service. We are looking to add more ancillaries soon.
 
-![](../../.gitbook/assets/FlowChart\_3\_AddAncillaries.png)
+![](../../.gitbook/assets/FlowChart_3_AddAncillaries.png)
 
 ### 1. Get order details
 
-The first step to adding ancillaries to an existing flight reservation is to request order details such as flight information, passenger details, fare and ancillary services (if bought at the time of booking). Ancillary services offered will vary depending on the airlines. Some of them may not even offer check-in baggage service. We will assume that the airline allows passengers to buy extra baggage service for this guide. 
+The first step to adding ancillaries to an existing flight reservation is to request order details such as flight information, passenger details, fare and ancillary services (if bought at the time of booking). Ancillary services offered will vary depending on the airlines. Some of them may not even offer check-in baggage service. We will assume that the airline allows passengers to buy extra baggage service for this guide.
 
-EndPoint ：  [https://sandbox.atlaslovestravel.com/queryOrderDetails.do](https://sandbox.atlaslovestravel.com/queryOrderDetails.do)
+EndPoint ：  [https://sandbox.atlaslovestravel.com/queryOrderDetails.do](https://sandbox.atlaslovestravel.com/queryOrderDetails.do) {% debug uid="queryOrderDetails_1.0" %}{% enddebug %}
 
 Method : Post
 
@@ -213,11 +213,11 @@ Accept-Encoding: gzip
 {% endtab %}
 {% endtabs %}
 
-### 2. Get quotation for ancillaries&#x20;
+### 2. Get quotation for ancillaries
 
-Once your users have retrieved their order details, we can send the `orderNo` in the `searchAncillary` request  to fetch the complete list of ancillary services available. Currently, as we offer extra baggage only, the following example will mention `Baggage` as the `Product`**.** Please record the ancillary information with the `offerId` as the unique identifier.&#x20;
+Once your users have retrieved their order details, we can send the `orderNo` in the `searchAncillary` request  to fetch the complete list of ancillary services available. Currently, as we offer extra baggage only, the following example will mention `Baggage` as the `Product`**.** Please record the ancillary information with the `offerId` as the unique identifier.
 
-EndPoint ： [https://sandbox.atlaslovestravel.com/searchAncillary.do](https://sandbox.atlaslovestravel.com/searchAncillary.do)
+EndPoint ： [https://sandbox.atlaslovestravel.com/searchAncillary.do](https://sandbox.atlaslovestravel.com/searchAncillary.do) {% debug uid="searchAncillary_1.0" %}{% enddebug %}
 
 Method : Post
 
@@ -305,11 +305,11 @@ Accept-Encoding: gzip
 {% endtab %}
 {% endtabs %}
 
-### 3. Add extra bags&#x20;
+### 3. Add extra bags
 
-Each ancillary service has a unique ID described as `offerId` and the `productCode` mentions the extra baggage weight selected. Add all chosen ancillaries and send the related `offerIds` and `productCode` along with order details. The `totalPrice` is the amount payable. The totalPrice is set to USD by default, but the amount owed is converted into the currency we settle with you, which is described by `vendorCurrency` and displayed to your customers.  &#x20;
+Each ancillary service has a unique ID described as `offerId` and the `productCode` mentions the extra baggage weight selected. Add all chosen ancillaries and send the related `offerIds` and `productCode` along with order details. The `totalPrice` is the amount payable. The totalPrice is set to USD by default, but the amount owed is converted into the currency we settle with you, which is described by `vendorCurrency` and displayed to your customers.  
 
-EndPoint ： [https://sandbox.atlaslovestravel.com/orderAncillary.do](https://sandbox.atlaslovestravel.com/orderAncillary.do)
+EndPoint ： [https://sandbox.atlaslovestravel.com/orderAncillary.do](https://sandbox.atlaslovestravel.com/orderAncillary.do) {% debug uid="orderAncillary_1.0" %}{% enddebug %}
 
 Method : Post
 
@@ -411,9 +411,9 @@ Accept-Encoding: gzip
 
 ### 4. Pay
 
-When your customer confirms the card details and proceeds with payment, you need to send the new `orderNo` in your request to process payment for the ancillary purchase transaction. 
+When your customer confirms the card details and proceeds with payment, you need to send the new `orderNo` in your request to process payment for the ancillary purchase transaction.
 
-EndPoint ： [https://sandbox.atlaslovestravel.com/pay.do](https://sandbox.atlaslovestravel.com/pay.do)
+EndPoint ： [https://sandbox.atlaslovestravel.com/pay.do](https://sandbox.atlaslovestravel.com/pay.do) {% debug uid="pay_1.0" %}{% enddebug %}
 
 Method : Post
 
@@ -451,11 +451,11 @@ Accept-Encoding: gzip
 {% endtab %}
 {% endtabs %}
 
-### 5. Addon order complete notification &#x20;
+### 5. Addon order complete notification
 
-With Atlas, you can configure webhooks to automatically receive notifications about changes to any booking made by your customers. Adding ancillary services post reservation is one of the events for which you will receive the notification. Once you receive an `order.addonCompleted` event notification on your server, you can process and act on it as needed. &#x20;
+With Atlas, you can configure webhooks to automatically receive notifications about changes to any booking made by your customers. Adding ancillary services post reservation is one of the events for which you will receive the notification. Once you receive an `order.addonCompleted` event notification on your server, you can process and act on it as needed.
 
-EndPoint : The URL you configured to receive notifications&#x20;
+EndPoint : The URL you configured to receive notifications
 
 Method : Post
 

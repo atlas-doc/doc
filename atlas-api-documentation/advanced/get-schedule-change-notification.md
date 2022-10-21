@@ -4,7 +4,7 @@
 
 With Atlas, you can configure webhooks to automatically receive notifications about change in flight schedule made by airlines on your orders. Once you receive an `order.schedulechange` notification on your server, you can process it and take necessary action. To configure webhooks, you need to build a webhook receiver, create a webhook and you are all set to receive automatic notification.
 
-EndPoint ：The URL you configured to receive notifications&#x20;
+EndPoint ：The URL you configured to receive notifications
 
 Method : Post
 

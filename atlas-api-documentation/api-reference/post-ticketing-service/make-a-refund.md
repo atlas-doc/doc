@@ -4,9 +4,9 @@
 
 Refund quotation function should be called in prior of this call
 
-### Endpoint
+### Endpoint {% debug uid="refund_1.0" %}{% enddebug %}
 
-[https://sandbox.atlaslovestravel.com/refund.do](https://sandbox.atlaslovestravel.com/refund.do)
+[https://sandbox.atlaslovestravel.com/refund.do](https://sandbox.atlaslovestravel.com/refund.do) 
 
 ## Request
 
@@ -38,50 +38,50 @@ Refund quotation function should be called in prior of this call
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### msg                                                                        <mark style="color:blue;">string</mark>                                                                                                &#x20;
+*   #### msg                                                                        <mark style="color:blue;">string</mark>                                                                                                
 
     Error message.
-*   #### status                                                                    <mark style="color:blue;">int</mark>                                                                                                      &#x20;
+*   #### status                                                                    <mark style="color:blue;">int</mark>                                                                                                      
 
     0: success
 
-    2: System error                                                                <mark style="color:blue;"></mark>                                                               &#x20;
-*   #### isRefundable                                                       <mark style="color:blue;">boolean</mark>                                                                               &#x20;
+    2: System error                                                                <mark style="color:blue;"></mark>                                                               
+*   #### isRefundable                                                       <mark style="color:blue;">boolean</mark>                                                                               
 
     True : Refundable
 
     False: Non-Refundable
-*   #### currency                                                                <mark style="color:blue;">string</mark>                                                                               &#x20;
+*   #### currency                                                                <mark style="color:blue;">string</mark>                                                                               
 
     The currency of the fares and amount below.
-*   #### originalTotalFareAmount                              <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### originalTotalFareAmount                              <mark style="color:blue;">decimal</mark>                                                                               
 
     Original fare of the selected passengers and flights
-*   #### originalTotalAncillaryAmount                     <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### originalTotalAncillaryAmount                     <mark style="color:blue;">decimal</mark>                                                                               
 
     Original amount of ancillaries related to the selected passengers and flights
-*   #### originalTotalAmount                                       <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### originalTotalAmount                                       <mark style="color:blue;">decimal</mark>                                                                               
 
     \= originalTotalFareAmount + originalTotalAncillaryAmount
-*   #### airlinePenaltyAmountForFare                     <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### airlinePenaltyAmountForFare                     <mark style="color:blue;">decimal</mark>                                                                               
 
     Airline's penalty amount for the fare
-*   #### airlinePenaltyAmountForAncillaries        <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### airlinePenaltyAmountForAncillaries        <mark style="color:blue;">decimal</mark>                                                                               
 
     Airline's penalty amount for the ancillaries
-*   #### airlinePenaltyAmount                                     <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### airlinePenaltyAmount                                     <mark style="color:blue;">decimal</mark>                                                                               
 
     \= airlinePenaltyAmountForFare + airlinePenaltyAmountForAncillaries
-*   #### estimatedRefundAmount                             <mark style="color:blue;">string</mark>                                                                               &#x20;
+*   #### estimatedRefundAmount                             <mark style="color:blue;">string</mark>                                                                               
 
     Estimated amount which can be got back for this refund.
-*   #### transactionFee                                                   <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### transactionFee                                                   <mark style="color:blue;">decimal</mark>                                                                               
 
     The transaction fees for this refund.
 *   #### refundOfferId                                                      <mark style="color:blue;">string</mark>
 
     Refund offer id for this quotation which can be used for the coming refund call.
-*   #### refundStatus                                                       <mark style="color:blue;">int</mark>                                                                               &#x20;
+*   #### refundStatus                                                       <mark style="color:blue;">int</mark>                                                                               
 
     0 : InProcessing
 

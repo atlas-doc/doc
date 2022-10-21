@@ -1,29 +1,19 @@
----
-cover: ../../.gitbook/assets/ATL_002_Gitbook-headers_Atlas_FAQs.png
-coverY: 0
-layout: landing
----
+
+{% coverImg src="http://res.atlaslovestravel.com/gitbook/assets/ATL_002_Gitbook-headers_Atlas_FAQs.png" %}
+{% endcoverImg %}
+
+
 
 # FAQs
 
-{% content-ref url="atlas-api-general-information.md" %}
-[atlas-api-general-information.md](atlas-api-general-information.md)
-{% endcontent-ref %}
+- [atlas-api-general-information](atlas-api-general-information.md)
 
-{% content-ref url="atlas-api-api-search.md" %}
-[atlas-api-api-search.md](atlas-api-api-search.md)
-{% endcontent-ref %}
+- [atlas-api-api-search](atlas-api-api-search.md)
 
-{% content-ref url="atlas-order-api.md" %}
-[atlas-order-api.md](atlas-order-api.md)
-{% endcontent-ref %}
+- [atlas-order-api](atlas-order-api.md)
 
-{% content-ref url="atlas-api-post-ticketing.md" %}
-[atlas-api-post-ticketing.md](atlas-api-post-ticketing.md)
-{% endcontent-ref %}
+- [atlas-api-post-ticketing](atlas-api-post-ticketing.md)
 
-{% content-ref url="atlas-api-payments.md" %}
-[atlas-api-payments.md](atlas-api-payments.md)
-{% endcontent-ref %}
+- [atlas-api-payments](atlas-api-payments.md)
 
-&#x20;
+

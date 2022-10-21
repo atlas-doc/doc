@@ -2,13 +2,13 @@
 
 To process a cancellation request, you need to provide the `OrderNo` of the order you'd like to cancel. Please note, not all airlines will offer cancellation services.
 
-![](../../.gitbook/assets/FlowChart\_4\_Refund\_CancelOrder.png)
+![](../../.gitbook/assets/FlowChart_4_Refund_CancelOrder.png)
 
 ## 1. Refund Quotation
 
 Send the `orderNo`, along with the passengers' names and segment information such as `depAirport`, `arrAirport`, `depDate` and `flightNo`. Atlas charges a transaction fee on top of the amount deducted by airlines for every refund request.
 
-EndPoint ：  [https://sandbox.atlaslovestravel.com/refundQuotation.do](https://sandbox.atlaslovestravel.com/refundQuotation.do)
+EndPoint ：  [https://sandbox.atlaslovestravel.com/refundQuotation.do] (https://sandbox.atlaslovestravel.com/refundQuotation.do) {% debug uid="refundQuotation_1.0" %}{% enddebug %}
 
 Method : Post
 
@@ -82,7 +82,7 @@ Accept-Encoding: gzip
 
 When your customer confirms the refund quote, send the request schema with `refundOfferID` to the refund endpoint to confirm the refund request.
 
-EndPoint ：  [https://sandbox.atlaslovestravel.com/refund.do](https://sandbox.atlaslovestravel.com/refund.do)
+EndPoint ：  [https://sandbox.atlaslovestravel.com/refund.do](https://sandbox.atlaslovestravel.com/refund.do) {% debug uid="refund_1.0" %}{% enddebug %}
 
 Method : Post
 
@@ -134,7 +134,7 @@ Accept-Encoding: gzip
 
 With Atlas, you can configure webhooks to automatically receive notifications for ticket cancellations/refunds along with the amount refunded. Once you receive `order.refundCompleted` notification on the server for a cancelled booking, you can take action as needed.
 
-EndPoint : The URL you configured to receive notifications&#x20;
+EndPoint : The URL you configured to receive notifications
 
 Method : Post
 

@@ -4,29 +4,29 @@
 
 When your customer books an ancillary service post booking their ticket, you will receive the `order.addonComplete` notification.
 
-EndPoint ： The URL you configured to receive notifications&#x20;
+EndPoint ： The URL you configured to receive notifications
 
 Method : Post
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                &#x20;
+*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                
 
     Identifier of client and user.
-*   #### type                              <mark style="color:blue;">string</mark>                                                                                                 &#x20;
+*   #### type                              <mark style="color:blue;">string</mark>                                                                                                 
 
     Notification type.
-* #### data                                                                                                                                                          <mark style="color:blue;"></mark>                                                                                      &#x20;
-  *   #### addonOrderNo                                  <mark style="color:blue;">string</mark>                                                         &#x20;
+* #### data                                                                                                                                                          <mark style="color:blue;"></mark>                                                                                      
+  *   #### addonOrderNo                                  <mark style="color:blue;">string</mark>                                                         
 
       Order number.
-  *   #### originalOrderNo                               <mark style="color:blue;">string</mark>                                                         &#x20;
+  *   #### originalOrderNo                               <mark style="color:blue;">string</mark>                                                         
 
       Order number.
-  *   #### orderStatus                                        <mark style="color:blue;">int</mark>                                                                            &#x20;
+  *   #### orderStatus                                        <mark style="color:blue;">int</mark>                                                                            
 
       orderStatus=2 means ticketed
-  *   #### paxTicketInfos                                  Array<[PAXTicketInfo](broken-reference)>                                   <mark style="color:blue;"></mark>                                  &#x20;
+  *   #### paxTicketInfos                                  Array<[PAXTicketInfo](broken-reference)>                                   <mark style="color:blue;"></mark>                                  
 
       Passengers' ticket information, the same format as the PAXTicketInfo in order response or retrive booking response, click [**here**](broken-reference) **** to check the schema
 {% endtab %}

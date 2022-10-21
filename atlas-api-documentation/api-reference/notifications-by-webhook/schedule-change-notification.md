@@ -4,61 +4,61 @@
 
 In case of flight schedule changes, you will receive the `order.schedulechange` notification on the server, you can process and notify your affected customers about this change.
 
-EndPoint ： The URL you configured to receive notifications&#x20;
+EndPoint ： The URL you configured to receive notifications
 
 Method : Post
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                &#x20;
+*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                
 
     Identifier of client and user.
-*   #### type                              <mark style="color:blue;">string</mark>                                                                                                 &#x20;
+*   #### type                              <mark style="color:blue;">string</mark>                                                                                                 
 
     Notification type.
-* #### data                                                                                                                                           &#x20;
-  *   #### scheduleChangeType               <mark style="color:blue;">int</mark> &#x20;
+* #### data                                                                                                                                           
+  *   #### scheduleChangeType               <mark style="color:blue;">int</mark> 
 
-      Schedule change type.&#x20;
+      Schedule change type.
 
       1: Schedule change
 
-      2: Flight cancel&#x20;
-  *   #### previousSegs                                 **Array**<<mark style="color:blue;">scSegment</mark>>      <mark style="color:blue;"></mark>     &#x20;
+      2: Flight cancel
+  *   #### previousSegs                                 **Array**<<mark style="color:blue;">scSegment</mark>>      <mark style="color:blue;"></mark>     
 
       The original segments
-  *   #### revisedSegs                             <mark style="color:blue;"></mark>       Array<<mark style="color:blue;">scSegment</mark>>      <mark style="color:blue;"></mark>     &#x20;
+  *   #### revisedSegs                             <mark style="color:blue;"></mark>       Array<<mark style="color:blue;">scSegment</mark>>      <mark style="color:blue;"></mark>     
 
       The revised segments
 
-      *   **scSegment                               **<mark style="color:blue;">****</mark>**  Array<**<mark style="color:blue;">**scSegment**</mark>**>**      <mark style="color:blue;"></mark>     &#x20;
+      *   **scSegment                               **<mark style="color:blue;">****</mark>**  Array<**<mark style="color:blue;">**scSegment**</mark>**>**      <mark style="color:blue;"></mark>     
 
-          segment information for schedule change notification              <mark style="color:blue;"></mark>             &#x20;
+          segment information for schedule change notification              <mark style="color:blue;"></mark>             
 
-          *   #### carrier                                  <mark style="color:blue;">string</mark>                                                                      &#x20;
+          *   #### carrier                                  <mark style="color:blue;">string</mark>                                                                      
 
               carrier
-          *   #### flightNumber                     <mark style="color:blue;">string</mark>                                                                            &#x20;
+          *   #### flightNumber                     <mark style="color:blue;">string</mark>                                                                            
 
               flight number
-          *   #### depAirport                          <mark style="color:blue;">string</mark>                                                                            &#x20;
+          *   #### depAirport                          <mark style="color:blue;">string</mark>                                                                            
 
               departure airport
-          *   **arrAirport                             **<mark style="color:blue;">**string**</mark>        <mark style="color:blue;"></mark>                                                                     <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                    &#x20;
+          *   **arrAirport                             **<mark style="color:blue;">**string**</mark>        <mark style="color:blue;"></mark>                                                                     <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                    
 
               arrival ariport
-          *   **depTime                                **<mark style="color:blue;">**string**</mark>    <mark style="color:blue;"></mark>                                                                         <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                        &#x20;
+          *   **depTime                                **<mark style="color:blue;">**string**</mark>    <mark style="color:blue;"></mark>                                                                         <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                        
 
               departure time
-          *   **arrTime                                  **<mark style="color:blue;">**string**</mark>       <mark style="color:blue;"></mark>                                                                      <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                     &#x20;
+          *   **arrTime                                  **<mark style="color:blue;">**string**</mark>       <mark style="color:blue;"></mark>                                                                      <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                     
 
-              arrival time                <mark style="color:blue;"></mark>               &#x20;
-          *   **depTerminal                         **<mark style="color:blue;">**string**</mark>    <mark style="color:blue;"></mark>                                                                         <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                        &#x20;
+              arrival time                <mark style="color:blue;"></mark>               
+          *   **depTerminal                         **<mark style="color:blue;">**string**</mark>    <mark style="color:blue;"></mark>                                                                         <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                        
 
               departure time
-          *   **arrTerminal                           **<mark style="color:blue;">**string**</mark>       <mark style="color:blue;"></mark>                                                                      <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                     &#x20;
+          *   **arrTerminal                           **<mark style="color:blue;">**string**</mark>       <mark style="color:blue;"></mark>                                                                      <mark style="color:blue;"></mark><mark style="color:blue;"></mark>                                                                     
 
-              arrival time      <mark style="color:blue;"></mark>     &#x20;
+              arrival time      <mark style="color:blue;"></mark>     
 {% endtab %}
 
 {% tab title="Samples" %}

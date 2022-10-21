@@ -4,42 +4,42 @@
 
 When a ticket or ancillary service is cancelled, you will receive the `order.refundComplete` notification on your server.
 
-EndPoint ： The URL you configured to receive notifications&#x20;
+EndPoint ： The URL you configured to receive notifications
 
 Method : Post
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### msg                                                                        <mark style="color:blue;">string</mark>                                                                                                &#x20;
+*   #### msg                                                                        <mark style="color:blue;">string</mark>                                                                                                
 
     Error message.
-*   #### status                                                                    <mark style="color:blue;">int</mark>                                                                                                      &#x20;
+*   #### status                                                                    <mark style="color:blue;">int</mark>                                                                                                      
 
     0: success
 
     2: System error
-*   #### currency                                                                <mark style="color:blue;">string</mark>                                                                               &#x20;
+*   #### currency                                                                <mark style="color:blue;">string</mark>                                                                               
 
     currency
-*   #### originalTotalFare                                               <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### originalTotalFare                                               <mark style="color:blue;">decimal</mark>                                                                               
 
     Original fare of the selected passengers and flights
-*   #### originalTotalAncillaryAmount                     <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### originalTotalAncillaryAmount                     <mark style="color:blue;">decimal</mark>                                                                               
 
     Original amount of ancillaries related to the selected passengers and flights
-*   #### airlinePenaltyAmountForFare                     <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### airlinePenaltyAmountForFare                     <mark style="color:blue;">decimal</mark>                                                                               
 
     Airline's penalty amount for the fare
-*   #### airlinePenaltyAmountForAncillaries        <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### airlinePenaltyAmountForAncillaries        <mark style="color:blue;">decimal</mark>                                                                               
 
     Airline's penalty amount for the ancillaries
-*   #### finalRefundAmount                                         <mark style="color:blue;">string</mark>                                                                               &#x20;
+*   #### finalRefundAmount                                         <mark style="color:blue;">string</mark>                                                                               
 
     Final refund amount.
-*   #### transactionFee                                                   <mark style="color:blue;">decimal</mark>                                                                               &#x20;
+*   #### transactionFee                                                   <mark style="color:blue;">decimal</mark>                                                                               
 
     Technical service fee for this transaction
-*   #### refundStatus                                                       <mark style="color:blue;">int</mark>                                                                               &#x20;
+*   #### refundStatus                                                       <mark style="color:blue;">int</mark>                                                                               
 
     2:  Completed(Means the refund amount has credted on your account)
 {% endtab %}

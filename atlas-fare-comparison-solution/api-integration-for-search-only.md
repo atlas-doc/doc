@@ -1,7 +1,6 @@
----
-cover: ../.gitbook/assets/ATL_002_Gitbook-headers_Atlas_Search.png
-coverY: 0
----
+
+{% coverImg src="http://res.atlaslovestravel.com/gitbook/assets/ATL_002_Gitbook-headers_Atlas_Search.png" %}
+{% endcoverImg %}
 
 # API Integration For Search Only
 
@@ -15,20 +14,20 @@ Your developer can integrate with the search API in 0.5 man-days and once integr
 
 It is a simple four-step process:
 
-![](<../.gitbook/assets/ATL-002\_API integration for search.png>)
+![](<http://res.atlaslovestravel.com/gitbook/assets/ATL-002_API integration for search.png>)
 
 {% hint style="info" %}
 The Atlas quotation consists of the following four parameters:
 
-**Currency:**&#x20;
+**Currency:**
 
 * Atlas will configure currency to the one requested in your application.
 
-**FarePrice**:&#x20;
+**FarePrice**:
 
 * The fare you see is the same as the airline official price converted to your preferred currency using the market exchange rate.
 
-**Tax:**&#x20;
+**Tax:**
 
 * The tax is same as the airline official tax converted to your preferred currency using the market exchange rate.
 
@@ -51,7 +50,7 @@ Any request you initiate needs to be authenticated using your API credentials. T
 
 ## 2. Finish the search API integration
 
-### 1) Endpoint
+### 1) Endpoint {% debug uid="search_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/search.do](https://sandbox.atlaslovestravel.com/search.do)
 
@@ -143,7 +142,7 @@ Accept-Encoding: gzip
 ### 4) Response
 
 {% hint style="info" %}
-The search request will return a lot of parameters. For this example schema we will focus only on the following parameters important for fare search: &#x20;
+The search request will return a lot of parameters. For this example schema we will focus only on the following parameters important for fare search: 
 
 * Pay more attention to the items in orange, as they are important for fare search
 * The returned currency is configured, as requested by you
@@ -154,7 +153,7 @@ The search request will return a lot of parameters. For this example schema we w
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### status     <mark style="color:blue;">int</mark>                                                                                                                         &#x20;
+*   #### status     <mark style="color:blue;">int</mark>                                                                                                                         
 
     0: success
 
@@ -166,17 +165,17 @@ The search request will return a lot of parameters. For this example schema we w
 
 
 
-*   #### msg         <mark style="color:blue;">string</mark>                                                                                                                   &#x20;
+*   #### msg         <mark style="color:blue;">string</mark>                                                                                                                   
 
     Error message
 
 
 
-* #### routings   Array<[Routing Element](api-integration-for-search-only.md#route-element-schema)>                                                                                               <mark style="color:blue;"></mark>                                                                                              &#x20;
+* #### routings   Array<[Routing Element](api-integration-for-search-only.md#route-element-schema)>                                                                                               <mark style="color:blue;"></mark>                                                                                              
   * #### [Routing Element](api-integration-for-search-only.md#route-element-schema)
     *   #### currency    <mark style="color:blue;">string</mark>
 
-        Currency, it's configured in the back office according to your demand before apply.&#x20;
+        Currency, it's configured in the back office according to your demand before apply.
     *   #### <mark style="color:orange;">adultPrice</mark>   <mark style="color:blue;">decimal</mark>
 
         Adult fare per passenger.
@@ -187,7 +186,7 @@ The search request will return a lot of parameters. For this example schema we w
 
         Technical service fee per passenger.
     * #### rule               <mark style="color:orange;"></mark> Object<[RuleElement](api-integration-for-search-only.md#5.-rule-element-schema)>
-      *   #### <mark style="color:blue;">RuleElement</mark>   &#x20;
+      *   #### <mark style="color:blue;">RuleElement</mark>   
 
           Rule element includes baggage, refund rules and change rules. For fare search purpose, please pay attention to the following elements:
 
@@ -236,7 +235,7 @@ The search request will return a lot of parameters. For this example schema we w
         The following schema is for outbound segments:
 
         * #### [Segment Element](api-integration-for-search-only.md#3.-segment-element-schema)
-          *   #### carrier                       <mark style="color:blue;">string</mark>                                                                                                    &#x20;
+          *   #### carrier                       <mark style="color:blue;">string</mark>                                                                                                    
 
               IATA code of airline.
           *   #### <mark style="color:orange;">flightNumber</mark>         <mark style="color:blue;">string</mark>
@@ -682,7 +681,8 @@ Download the <mark style="color:blue;">Postman collection</mark> bellow to check
 | SEL-CJU 24FEB/28FEB Roundtrip | One-way with both direct and connecting flights | Number of routings returned: (to be filled-up by you)                              |
 | SEL-CJU 24FEB/28FEB Roundtrip | Roundtrip with different airlines               | <p>Departure Date:</p><p>Number of routings returned: (to be filled-up by you)</p> |
 
-{% file src="../.gitbook/assets/Atlas Sandbox SearchOnly UAT.postman_collection.json.zip" %}
+> [Atlas Sandbox SearchOnly UAT.postman_collection.json.zip](http://res.atlaslovestravel.com/gitbook/assets/Atlas Sandbox SearchOnly UAT.postman_collection.json.zip)
+
 
 ## Start LIVE Search
 

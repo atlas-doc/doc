@@ -1,7 +1,9 @@
----
-cover: ../.gitbook/assets/ATL_002_Gitbook-headers_Atlas_FlightSearchTool.png
-coverY: 0
----
+
+{% coverImg src="http://res.atlaslovestravel.com/gitbook/assets/ATL_002_Gitbook-headers_Atlas_FlightSearchTool.png" %}
+{% endcoverImg %}
+
+
+
 
 # Flights and Fare Search Tool
 
@@ -9,20 +11,20 @@ coverY: 0
 
 Atlas allows you to search and download flights and fare data. These rows of data can be compared with your own data at the same time. This is a quick and easy three-step process:
 
-![](<../.gitbook/assets/ATL\_002\_Flights & Fare Search Tool.png>)
+![](<http://res.atlaslovestravel.com/gitbook/assets/ATL_002_Flights & Fare Search Tool.png>)
 
 {% hint style="info" %}
 The Atlas quotation consists of the following four parameters:
 
-**Currency:**&#x20;
+**Currency:**
 
 * Atlas will configure currency to the one requested in your application.
 
-**FarePrice**:&#x20;
+**FarePrice**:
 
 * The fare you see is the same as the airline official price converted to your preferred currency using the market exchange rate.
 
-**Tax:**&#x20;
+**Tax:**
 
 * The tax is same as the airline official tax converted to your preferred currency using the market exchange rate.
 
@@ -86,7 +88,7 @@ If it is a round trip, you will get outbound and inbound flights and fare compar
 
 ## Contact us
 
-To apply for your **Flight and Fare Search Tool** credentials, please contact your account manager. For any queries or issues regarding the search tool, please contact us on b2b\_product@atlaslovestravel.com.
+To apply for your **Flight and Fare Search Tool** credentials, please contact your account manager. For any queries or issues regarding the search tool, please contact us on b2b_product@atlaslovestravel.com.
 
 
 

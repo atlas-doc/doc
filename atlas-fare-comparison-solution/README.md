@@ -1,8 +1,6 @@
----
-cover: >-
-  ../.gitbook/assets/ATL_002_Gitbook-headers_Atlas-Fare-Comparison-Solution_v4.png
-coverY: 0
----
+
+{% coverImg src="http://res.atlaslovestravel.com/gitbook/assets/ATL_002_Gitbook-headers_Atlas-Fare-Comparison-Solution_v4.png" %}
+{% endcoverImg %}
 
 # Atlas Fare Comparison Solution
 
@@ -18,16 +16,13 @@ If you are having trouble using our API for fare comparison or you need more sup
 
 Option 1: Use Atlas flights and fare search tool interface to compare with your own fare data.
 
-![](<../.gitbook/assets/ATL-002\_API Fare Comparison1.png>)
+![](<http://res.atlaslovestravel.com/gitbook/assets/ATL-002_API Fare Comparison1.png>)
 
 Option 2: Integrate Atlas search API with your booking system for comprehensive fare comparison. This method involves four hours of development effort.
 
-![](<../.gitbook/assets/ATL-002\_API Fare Comparison2.png>)
+![](<http://res.atlaslovestravel.com/gitbook/assets/ATL-002_API Fare Comparison2.png>)
 
-{% content-ref url="flights-and-fare-search-tool.md" %}
-[flights-and-fare-search-tool.md](flights-and-fare-search-tool.md)
-{% endcontent-ref %}
+- [flights-and-fare-search-tool](flights-and-fare-search-tool.md)
 
-{% content-ref url="api-integration-for-search-only.md" %}
-[api-integration-for-search-only.md](api-integration-for-search-only.md)
-{% endcontent-ref %}
+- [api-integration-for-search-only](api-integration-for-search-only.md)
+

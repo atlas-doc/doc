@@ -1,8 +1,8 @@
----
-cover: .gitbook/assets/ATL_002_Gitbook-headers_Atlas-Capability.png
-coverY: 0
----
+
+{% coverImg src="http://res.atlaslovestravel.com/gitbook/assets/ATL_002_Gitbook-headers_Atlas-Capability.png" %}
+{% endcoverImg %}
+
 
 # Atlas Capability
 
-![](<.gitbook/assets/ATL-002\_Capability doc-Yellow.png>)
+![](<http://res.atlaslovestravel.com/gitbook/assets/ATL-002_Capability doc-Yellow.png>)

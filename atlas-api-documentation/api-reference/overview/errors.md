@@ -1,8 +1,8 @@
 # Errors
 
-Atlas uses standard [HTTP response codes](https://httpstatuses.com/) to indicate the success or failure of API requests.&#x20;
+Atlas uses standard [HTTP response codes](https://httpstatuses.com/) to indicate the success or failure of API requests.
 
-#### Status codes&#x20;
+#### Status codes
 
 | Code                                 | Reason                                                 | Description                                                                                                                                                                                      |
 | ------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -23,7 +23,7 @@ Atlas uses standard [HTTP response codes](https://httpstatuses.com/) to indicate
 
 #### Error codes
 
-Atlas uses the following **Enum** to store the **error codes** and corresponding **error messages**.&#x20;
+Atlas uses the following **Enum** to store the **error codes** and corresponding **error messages**.
 
 | Value   | Description                         |
 | ------- | ----------------------------------- |
@@ -34,4 +34,4 @@ Atlas uses the following **Enum** to store the **error codes** and corre
 | **`5`** | Data encryption verification error  |
 | **`6`** | Fare change error while booking     |
 
-### &#x20;<a href="#status-codes" id="status-codes"></a>
+### <a href="#status-codes" id="status-codes"></a>
