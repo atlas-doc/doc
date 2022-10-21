@@ -1,5 +1,5 @@
 
-{% coverImg src="http://res.atlaslovestravel.com/gitbook/assets/ATL_002_Gitbook-headers_Atlas_Search.png" %}
+{% coverImg src="../.gitbook/assets/ATL_002_Gitbook-headers_Atlas_Search.png" %}
 {% endcoverImg %}
 
 # API Integration For Search Only
