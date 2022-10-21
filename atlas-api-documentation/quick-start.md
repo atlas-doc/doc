@@ -1,5 +1,5 @@
 
-{% coverImg src="http://res.atlaslovestravel.com/gitbook/assets/ATL_002_Gitbook-headers_Atlas_Quick-Start.png" %}
+{% coverImg src="../.gitbook/assets/ATL_002_Gitbook-headers_Atlas_Quick-Start.png" %}
 {% endcoverImg %}
 
 
@@ -9,7 +9,7 @@ This guide shows you how Atlas API instantly connects you to over 100 LCCs — o
 
 The integration is a simple four-step process:
 
-![](http://res.atlaslovestravel.com/gitbook/assets/FlowChart_1_QuickStart.png)
+![](../.gitbook/assets/FlowChart_1_QuickStart.png)
 
 Let’s get you started!
 
@@ -23,7 +23,7 @@ Please add them to the header of each post request.
 
 {% hint style="info" %}
 **Tip**: We've put together a Postman Collection that contains all of the requests you'll need to follow along with this guide; please download it 
- [here](http://res.atlaslovestravel.com/gitbook/assets/Atlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip).
+ [here](../.gitbook/assets/Atlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip).
 
 {% endhint %}
 
@@ -33,7 +33,7 @@ As a travel seller, your goal is to help your customers find the best flight rou
 
 The booking process is relatively simple, as illustrated:
 
-![](http://res.atlaslovestravel.com/gitbook/assets/FlowChart_2_IssueTicket.png)
+![](../.gitbook/assets/FlowChart_2_IssueTicket.png)
 
 ## 1. Search
 
