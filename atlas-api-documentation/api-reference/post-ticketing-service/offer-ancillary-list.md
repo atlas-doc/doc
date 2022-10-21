@@ -45,7 +45,7 @@ No preceding function needs to be carried out.
 *   #### orderNo                                      <mark style="color:blue;">string</mark>                                                                                                
 
     Error message.
-*   #### ancillaries                                 Array\<AncillaryElement>                                                                     <mark style="color:blue;"></mark>                                                                    
+*   #### ancillaries                                 Array <mark style="color:blue;">AncillaryElement</mark>                                                                                                                
 
     Ancillary list provided for this order
 
