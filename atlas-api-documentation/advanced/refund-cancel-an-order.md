@@ -8,7 +8,8 @@ To process a cancellation request, you need to provide the `OrderNo` of the orde
 
 Send the `orderNo`, along with the passengers' names and segment information such as `depAirport`, `arrAirport`, `depDate` and `flightNo`. Atlas charges a transaction fee on top of the amount deducted by airlines for every refund request.
 
-EndPoint ：  [https://sandbox.atlaslovestravel.com/refundQuotation.do] (https://sandbox.atlaslovestravel.com/refundQuotation.do) {% debug uid="refundQuotation_1.0" %}{% enddebug %}
+EndPoint ：  [https://sandbox.atlaslovestravel.com/refundQuotation.do](https://sandbox.atlaslovestravel.com/refundQuotation.do) 
+{% debug uid="refundQuotation_1.0" %}{% enddebug %}
 
 Method : Post
 
