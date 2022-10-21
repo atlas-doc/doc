@@ -4,15 +4,15 @@ description: Create an order request to search for flights.
 
 # Search
 
-### Dependency&#x20;
+### Dependency
 
-No preceding function needs to be called before `Search`.&#x20;
+No preceding function needs to be called before `Search`.
 
-### Endpoint&#x20;
+### Endpoint {% debug uid="search_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/search.do ](https://sandbox.atlaslovestravel.com/search.do)
 
-### Request&#x20;
+### Request
 
 {% tabs %}
 {% tab title="Schema" %}
@@ -79,11 +79,11 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
 {% endtab %}
 {% endtabs %}
 
-## Response&#x20;
+## Response
 
 {% tabs %}
 {% tab title="Schema" %}
-#### `status`     <mark style="color:blue;">int</mark>                                                                                                                         &#x20;
+#### `status`     <mark style="color:blue;">int</mark>                                                                                                                         
 
 0: success
 
@@ -93,11 +93,11 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
 
 3: unauthorized access
 
-#### `msg`        <mark style="color:blue;">string</mark>                                                                                                                   &#x20;
+#### `msg`        <mark style="color:blue;">string</mark>                                                                                                                   
 
 Error message
 
-#### `routings`   Array<[Routing Element](search.md#route-element-schema)>                                                                                               <mark style="color:blue;"></mark>                                                                                              &#x20;
+#### `routings`   Array<[Routing Element](search.md#route-element-schema)>                                                                                               <mark style="color:blue;"></mark>                                                                                              
 
 The array of the routings which include suitable flights and fares. Click [<mark style="color:red;">here</mark> ](search.md#route-element-schema)to check the schema
 {% endtab %}
@@ -446,12 +446,12 @@ The array of the routings which include suitable flights and fares. Click [<mark
 {% hint style="info" %}
 
 
-#### The search results will include a lot of items. Some highlights are: &#x20;
+#### The search results will include a lot of items. Some highlights are: 
 
-* The returned currency is by configuration according to the business agreement between you and Atlas.&#x20;
-* The total cost to purchase for a single adult passenger is: `adultPrice` + `adultTax` + `transactionFeePerPax`&#x20;
-* For the airlines which support pass through payment method, we would set `supportCreditTransPayment` to `1` and present the vendor's fare in the `vendorFare` element. Alternatively, if the airline doesn't support pass through payment method, we would set `supportCreditTransPayment` to `0` and the `vendorFare` element will be `null`.&#x20;
-* You can choose to show or hide `ancillaryProductElements` in search response, according to the configuration of each client in the backend system.&#x20;
+* The returned currency is by configuration according to the business agreement between you and Atlas.
+* The total cost to purchase for a single adult passenger is: `adultPrice` + `adultTax` + `transactionFeePerPax`
+* For the airlines which support pass through payment method, we would set `supportCreditTransPayment` to `1` and present the vendor's fare in the `vendorFare` element. Alternatively, if the airline doesn't support pass through payment method, we would set `supportCreditTransPayment` to `0` and the `vendorFare` element will be `null`.
+* You can choose to show or hide `ancillaryProductElements` in search response, according to the configuration of each client in the backend system.
 {% endhint %}
 
 ### Route Element Schema
@@ -460,7 +460,7 @@ The array of the routings which include suitable flights and fares. Click [<mark
 {% tab title="Schema" %}
 
 
-#### `routingIdentifier`     <mark style="color:blue;">string</mark>                                                                                                    &#x20;
+#### `routingIdentifier`     <mark style="color:blue;">string</mark>                                                                                                    
 
 This unique string identifier is used to verify requests for a particular route.
 
@@ -564,7 +564,7 @@ For inbound segments, click [<mark style="color:red;">**here**</mark> ](search.m
 
 #### `rule`               Object<[RuleElement](search.md#5.-rule-element-schema)>
 
-Pass `RuleElement` info for every booking to include the standard details such as baggage allowance, refund rules, change rules for the selected airline. Click [here](file://api-reference/shopping-and-ticketing/search#rule-element-schema) to check the schema.&#x20;
+Pass `RuleElement` info for every booking to include the standard details such as baggage allowance, refund rules, change rules for the selected airline. Click [here](file://api-reference/shopping-and-ticketing/search#rule-element-schema) to check the schema.
 
 
 
@@ -574,7 +574,7 @@ Currently only baggage is available in ancillaries.
 
 
 
-#### `AncillaryProductElement` includes the following parameters:&#x20;
+#### `AncillaryProductElement` includes the following parameters:
 
 *   #### `segmentIndex`                              <mark style="color:blue;">int</mark>
 
@@ -624,7 +624,7 @@ To identify the vendor’s fare with vendor’s currency. It is only available w
 
 
 
-#### &#x20;[VendorFare Element](file://api-reference/shopping-and-ticketing/search#4.-vendorfare-element-schema)&#x20;
+#### [VendorFare Element](file://api-reference/shopping-and-ticketing/search#4.-vendorfare-element-schema)
 
 *   #### `vendorAdultPrice`         <mark style="color:blue;">decimal</mark>
 
@@ -642,7 +642,7 @@ To identify the vendor’s fare with vendor’s currency. It is only available w
 
     This is the currency in which your customers will do transaction with you.
 
-&#x20;
+
 {% endtab %}
 {% endtabs %}
 
@@ -650,7 +650,7 @@ To identify the vendor’s fare with vendor’s currency. It is only available w
 
 {% tabs %}
 {% tab title="Schema" %}
-#### `carrier`                       <mark style="color:blue;">string</mark>                                                                                                    &#x20;
+#### `carrier`                       <mark style="color:blue;">string</mark>                                                                                                    
 
 IATA code of airline.
 
@@ -766,215 +766,215 @@ Operating flight number. It is blank when `codeshare=false`
 
 {% tabs %}
 {% tab title="Schema" %}
-#### `hasBaggage`                                                         <mark style="color:blue;">int</mark>&#x20;
+#### `hasBaggage`                                                         <mark style="color:blue;">int</mark>
 
-This tag is used to identify if the fare includes free checked-in baggage.&#x20;
+This tag is used to identify if the fare includes free checked-in baggage.
 
-0: Not included&#x20;
+0: Not included
 
-1: Included&#x20;
+1: Included
 
 
 
 
 
-#### `BaggageElements`                                                 Array<<mark style="color:blue;">BaggageElement</mark>>&#x20;
+#### `BaggageElements`                                                 Array<<mark style="color:blue;">BaggageElement</mark>>
 
-Free checked-in baggage information included in the fare.&#x20;
+Free checked-in baggage information included in the fare.
 
-[BaggageElement](file://api-reference/shopping-and-ticketing/search#6.-baggage-element-schema)&#x20;
+[BaggageElement](file://api-reference/shopping-and-ticketing/search#6.-baggage-element-schema)
 
 
 
-#### `segmentNo`                                            <mark style="color:blue;">int</mark>&#x20;
+#### `segmentNo`                                            <mark style="color:blue;">int</mark>
 
-Segment sequence, start from 1.&#x20;
+Segment sequence, start from 1.
 
-If it is roundtrip, sequence outbound and inbound together.&#x20;
+If it is roundtrip, sequence outbound and inbound together.
 
 
 
-#### `passengerType`                                    string&#x20;
+#### `passengerType`                                    string
 
-0: ADT&#x20;
+0: ADT
 
-1: CHD&#x20;
+1: CHD
 
-2: INF&#x20;
+2: INF
 
-If search or verify requested for ADT only, then only ADT is returned.&#x20;
+If search or verify requested for ADT only, then only ADT is returned.
 
-If search or verify requested for ADT+CHD, then ADT and CHD are returned.&#x20;
+If search or verify requested for ADT+CHD, then ADT and CHD are returned.
 
 
 
-#### `baggagePiece`                                        int&#x20;
+#### `baggagePiece`                                        int
 
-Baggage pieces:&#x20;
+Baggage pieces:
 
-0: No limitation on the number of pieces&#x20;
+0: No limitation on the number of pieces
 
-\>0: Maximum pieces&#x20;
+\>0: Maximum pieces
 
 
 
-#### `baggageWeight`                                     int&#x20;
+#### `baggageWeight`                                     int
 
-Baggage Weight, in KGs is mentioned if the airline offers free check-in baggage.&#x20;
+Baggage Weight, in KGs is mentioned if the airline offers free check-in baggage.
 
-&#x20;    0: No free baggage&#x20;
+    0: No free baggage
 
 
 
 
 
-#### &#x20;`refundRules`                                                           Array\<RefundElement> &#x20;
+#### `refundRules`                                                           Array\<RefundElement> 
 
-Refer to refund rules as mentioned in Refund Element. &#x20;
+Refer to refund rules as mentioned in Refund Element. 
 
-[RefundElement](file://api-reference/shopping-and-ticketing/search#7.-refund-element-schema)&#x20;
+[RefundElement](file://api-reference/shopping-and-ticketing/search#7.-refund-element-schema)
 
 
 
-#### `refundType`                                           int&#x20;
+#### `refundType`                                           int
 
-0: Wholly unused ticket&#x20;
+0: Wholly unused ticket
 
-1: Partially used ticket (For example, when the passenger has used an outbound flight and wants to refund an inbound flight.)&#x20;
+1: Partially used ticket (For example, when the passenger has used an outbound flight and wants to refund an inbound flight.)
 
 
 
-#### `refundStatus`            string&#x20;
+#### `refundStatus`            string
 
-Refund rule types:&#x20;
+Refund rule types:
 
-T: Non refundable&#x20;
+T: Non refundable
 
-H: Refundable with restrictions&#x20;
+H: Refundable with restrictions
 
-F: Free for refund&#x20;
+F: Free for refund
 
 
 
-#### `refundFee`                                                 decimal&#x20;
+#### `refundFee`                                                 decimal
 
-Refund fee&#x20;
+Refund fee
 
-If refundStatus = H, it should not be null&#x20;
+If refundStatus = H, it should not be null
 
-If refundStatus = T/F, it can be null.&#x20;
+If refundStatus = T/F, it can be null.
 
 
 
-#### `currency`                                                    string&#x20;
+#### `currency`                                                    string
 
-The currency in which Atlas settles transactions with you, if refundStatus = H&#x20;
+The currency in which Atlas settles transactions with you, if refundStatus = H
 
 
 
-#### `refNoshow`                                                 string&#x20;
+#### `refNoshow`                                                 string
 
-Refund status in case of no show&#x20;
+Refund status in case of no show
 
-T: Non refundable&#x20;
+T: Non refundable
 
-H: Refundable with restrictions&#x20;
+H: Refundable with restrictions
 
-F: Free for refund&#x20;
+F: Free for refund
 
 
 
-#### `refNoShowCondition`                                 string&#x20;
+#### `refNoShowCondition`                                 string
 
-Time before scheduled flight departure, by which passenger(s) need to check in.&#x20;
+Time before scheduled flight departure, by which passenger(s) need to check in.
 
 
 
-#### `refNoshowFee`                                             string&#x20;
+#### `refNoshowFee`                                             string
 
-Total refund fee in case of no show&#x20;
+Total refund fee in case of no show
 
-If refNoshow = H, it should not be null&#x20;
+If refNoshow = H, it should not be null
 
-&#x20;                       This value includes the refund fee and no-show penalty&#x20;
+                       This value includes the refund fee and no-show penalty
 
 
 
 
 
-#### `changesRules`                                                              Array\<ChangesElement>&#x20;
+#### `changesRules`                                                              Array\<ChangesElement>
 
-This function is used to fetch the change rules of the selected airline.&#x20;
+This function is used to fetch the change rules of the selected airline.
 
-[ChangesElement](file://api-reference/shopping-and-ticketing/search#8.-change-element-schema)&#x20;
+[ChangesElement](file://api-reference/shopping-and-ticketing/search#8.-change-element-schema)
 
 
 
-#### `changesType`    int&#x20;
+#### `changesType`    int
 
-Change flight type&#x20;
+Change flight type
 
-0: Wholly unused ticket&#x20;
+0: Wholly unused ticket
 
-1: Partially used ticket (For example, when the passenger has used an outbound flight and wants to refund an inbound flight)&#x20;
+1: Partially used ticket (For example, when the passenger has used an outbound flight and wants to refund an inbound flight)
 
 
 
-#### `changesStatus`   string&#x20;
+#### `changesStatus`   string
 
-Change flight rule type&#x20;
+Change flight rule type
 
-T: Non changeable&#x20;
+T: Non changeable
 
-H: Changeable with restrictions&#x20;
+H: Changeable with restrictions
 
-F: Free for change flight&#x20;
+F: Free for change flight
 
 
 
-#### `changesFee`    decimal&#x20;
+#### `changesFee`    decimal
 
-Change flight fee&#x20;
+Change flight fee
 
-If changesStatus = H, it should not be null&#x20;
+If changesStatus = H, it should not be null
 
-If changesStatus = T/F, it can be null&#x20;
+If changesStatus = T/F, it can be null
 
 
 
-#### `currency`    string&#x20;
+#### `currency`    string
 
-The currency in which Atlas settles transactions with you.&#x20;
+The currency in which Atlas settles transactions with you.
 
-If changesStatus = H, it should not be null&#x20;
+If changesStatus = H, it should not be null
 
 
 
-#### `refNoshow`                                                 string &#x20;
+#### `refNoshow`                                                 string 
 
-Change flight rule in case of no show.&#x20;
+Change flight rule in case of no show.
 
-T: Non changeable&#x20;
+T: Non changeable
 
-H: Changeable with restrictions&#x20;
+H: Changeable with restrictions
 
-F: Free for change flight&#x20;
+F: Free for change flight
 
 
 
-#### `refNoShowCondition`      int&#x20;
+#### `refNoShowCondition`      int
 
-Time before scheduled flight departure, by which passenger(s) need to check in.&#x20;
+Time before scheduled flight departure, by which passenger(s) need to check in.
 
 
 
-#### `refNoshowFee`      string&#x20;
+#### `refNoshowFee`      string
 
-The total fee charged to change flight in case of no show.&#x20;
+The total fee charged to change flight in case of no show.
 
-If refNoshow = H, it should not be null.&#x20;
+If refNoshow = H, it should not be null.
 
-This value includes the change flight fee and no-show penalty.&#x20;
+This value includes the change flight fee and no-show penalty.
 {% endtab %}
 {% endtabs %}
 

@@ -4,7 +4,7 @@
 
 The `search` function should be called prior to this call.
 
-### Endpoint
+### Endpoint {% debug uid="verify_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/verify.do](https://sandbox.atlaslovestravel.com/verify.do)
 
@@ -47,7 +47,7 @@ The `search` function should be called prior to this call.
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### status                    <mark style="color:blue;">int</mark>                                                                                                         &#x20;
+*   #### status                    <mark style="color:blue;">int</mark>                                                                                                         
 
     0: success
 
@@ -56,20 +56,20 @@ The `search` function should be called prior to this call.
     2: route is forbidden
 
     3: unauthorized access
-*   #### msg                         <mark style="color:blue;">string</mark>                                                                                                  &#x20;
+*   #### msg                         <mark style="color:blue;">string</mark>                                                                                                  
 
     Error message
-*   #### sessionId              <mark style="color:blue;">string</mark>                                                                                                  &#x20;
+*   #### sessionId              <mark style="color:blue;">string</mark>                                                                                                  
 
     The unique identifier for this verification.
 
     It is required when you call order function to make a reservation to identify which flight and fare the client is choosing.
-*   #### maxSeats              <mark style="color:blue;">int</mark>                                                                                                        &#x20;
+*   #### maxSeats              <mark style="color:blue;">int</mark>                                                                                                        
 
     Remaining seats for the fare;
 
     Please refer this element and prevent the end-users to choose more passengers than seat count.
-*   #### routing                    Object<[RouteElement](broken-reference)> <mark style="color:blue;"></mark>                                                           &#x20;
+*   #### routing                    Object<[RouteElement](broken-reference)> <mark style="color:blue;"></mark>                                                           
 
     Route and fare details. The structure is also Routing Elements, same as search response
 {% endtab %}
