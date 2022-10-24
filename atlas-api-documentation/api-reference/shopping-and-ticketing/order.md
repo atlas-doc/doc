@@ -417,3 +417,9 @@
 
 {% endtab %}
 {% endtabs %}
+
+#### Error codes
+
+| Error code | Description |
+| ------- | ----------------------------------- |
+| **`310`** | Infant not allowed.                     |
