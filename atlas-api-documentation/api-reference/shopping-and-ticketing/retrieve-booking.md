@@ -4,7 +4,7 @@
 
 `Order` function should be called in prior to this call.
 
-### Endpoint {% debug uid="queryOrderDetails_1.0" %}{% enddebug %}
+### Endpoint
 
 [https://sandbox.atlaslovestravel.com/queryOrderDetails.do](https://sandbox.atlaslovestravel.com/queryOrderDetails.do)
 
@@ -12,10 +12,10 @@
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of client and user.
-*   #### orderNo                       <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
 {% endtab %}
@@ -34,51 +34,51 @@
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### status                                     <mark style="color:blue;">int</mark>                                                                                               <mark style="color:green;">Required</mark>
+*   **status **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     0: success
 
     2: System error
-*   #### msg                                         <mark style="color:blue;">string</mark>                                                                                        <mark style="color:green;">Required</mark>
+*   **msg **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Error message
-*   #### orderNo                                  <mark style="color:blue;">string</mark>                                                                                       <mark style="color:green;">Required</mark>
+*   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number
-*   #### orderStatus                          <mark style="color:blue;">string</mark>                                                                                       <mark style="color:green;">Required</mark>
+*   **orderStatus **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     0: Unpaid
 
     1: Ticketing-in-Process
 
     2: Ticketed
-*   #### totalPrice                               <mark style="color:blue;">decimal</mark>                                                                                   <mark style="color:green;">Required</mark>
+*   **totalPrice **<mark style="color:blue;">**decimal**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Total fare of this order in the currency TheAtlas settled with you.
-*   #### totalTransactionFee         <mark style="color:blue;">decimal</mark>                                                                                   <mark style="color:green;">Required</mark>
+*   **totalTransactionFee **<mark style="color:blue;">**decimal**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Total technical fees for this order in the currency TheAtlas settled with you.
-*   #### currency                                 <mark style="color:blue;">string</mark>                                                                                      <mark style="color:green;">Required</mark>
+*   **currency **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     The currency TheAtlas settled with you.
-*   #### vendorTotalPrice                <mark style="color:blue;">decimal</mark>                                                                                  <mark style="color:green;">Required</mark>
+*   **vendorTotalPrice **<mark style="color:blue;">**decimal**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Total fare of this order in the vendor's currency, reference for you to generate the specific credit card.
-*   #### vendorCurrency                  <mark style="color:blue;">string</mark>                                                                                      <mark style="color:green;">Required</mark>
+*   **vendorCurrency **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Vendor's currency.
-*   #### supportPaymentMethod  <mark style="color:blue;">int</mark>                                                                                           <mark style="color:green;">Required</mark>
+*   **supportPaymentMethod **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    1:  Prepayment Only
+    1: Prepayment Only
 
     3: Both Credit Card Payment and Prepayment Available
-*   #### tktLimitTime                          <mark style="color:blue;">string</mark>                                                                                      <mark style="color:green;">Required</mark>
+*   **tktLimitTime **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Payment deadline for this order.
-*   #### paxTicketInfos                     Array<[PAXTicketInfo](broken-reference)>                                                   <mark style="color:blue;"></mark>                                                   <mark style="color:green;">Required</mark>
+*   **paxTicketInfos Array<**[**PAXTicketInfo**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
 
     Ticket information for passengers, the same format as the PAXTicketInfo in order response.
-*   #### routing                                     Object<[RouteElement](broken-reference)> <mark style="color:blue;"></mark>                                                <mark style="color:green;">Required</mark>
+*   **routing Object<**[**RouteElement**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
 
     Route and fare details. The structure is also Routing Elements, same as search response
 {% endtab %}
@@ -216,7 +216,5 @@
     "itineraryDownload": "https://sandbox.atlaslovestravel.com/itineraryDownload.do?orderNo=intP%2Biv7Jv70kjemGsbAJ10N%2F%2Bzwdpj%2F"
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}

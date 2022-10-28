@@ -4,7 +4,7 @@
 
 The `search` function should be called prior to this call.
 
-### Endpoint {% debug uid="verify_1.0" %}{% enddebug %}
+### Endpoint
 
 [https://sandbox.atlaslovestravel.com/verify.do](https://sandbox.atlaslovestravel.com/verify.do)
 
@@ -12,17 +12,15 @@ The `search` function should be called prior to this call.
 
 {% tabs %}
 {% tab title="Schema" %}
-
-
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of client and user.
-*   #### routingIdentifier      <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **routingIdentifier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     The unique identifier for a particular route.
 
     It is got from search response.
-*   #### requestSource         <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **requestSource **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     The tag to identify which channel does this traffic come from.
 
@@ -36,18 +34,14 @@ The `search` function should be called prior to this call.
     "routingIdentifier": "Nvm0BG9VCGJRUPzvRCF2hU1okLJgXsVU46VwnmDdMe/JgpxanH/Xja3hYaj9X/EHLiR7QMsFKwl97AMIwqGNDbcG9kV3bXzylDL2dNM3c07PTcQ67WyTJvK9ITR1HmHC2t2K1gUJztkSI4hVwhMjOGZUlo8qqzhJ8N3Bzta2M87ijqfQHCXkoLAseTdGienIy33IOIIHB6aknLdpZrvz8tCOBxWuNSYc0RRhtNsZ2n31GEmT5TthTQ\u003d\u003d"
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}
-
-
 
 ## Response
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### status                    <mark style="color:blue;">int</mark>                                                                                                         
+*   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
 
@@ -56,20 +50,20 @@ The `search` function should be called prior to this call.
     2: route is forbidden
 
     3: unauthorized access
-*   #### msg                         <mark style="color:blue;">string</mark>                                                                                                  
+*   **msg **<mark style="color:blue;">**string**</mark>
 
     Error message
-*   #### sessionId              <mark style="color:blue;">string</mark>                                                                                                  
+*   **sessionId **<mark style="color:blue;">**string**</mark>
 
     The unique identifier for this verification.
 
     It is required when you call order function to make a reservation to identify which flight and fare the client is choosing.
-*   #### maxSeats              <mark style="color:blue;">int</mark>                                                                                                        
+*   **maxSeats **<mark style="color:blue;">**int**</mark>
 
     Remaining seats for the fare;
 
     Please refer this element and prevent the end-users to choose more passengers than seat count.
-*   #### routing                    Object<[RouteElement](broken-reference)> <mark style="color:blue;"></mark>                                                           
+*   **routing Object<**[**RouteElement**](broken-reference/)**>**
 
     Route and fare details. The structure is also Routing Elements, same as search response
 {% endtab %}
@@ -204,7 +198,5 @@ The `search` function should be called prior to this call.
         }
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}

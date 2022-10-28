@@ -1,12 +1,10 @@
-
-{% coverImg src="../.gitbook/assets/ATL_002_Gitbook-headers_Atlas_Search.png" %}
-{% endcoverImg %}
-
 # API Integration For Search Only
+
+## API Integration For Search Only
 
 Integrate with the Atlas Search API in under 4 hours and start searching for air fares from over 100 low-cost carriers.
 
-### Overview
+#### Overview
 
 We want to help you test the Atlas API and arrive at a decision which you feel confident about. Manually comparing air fares for a combination of flight routes across carriers can be overwhelming. We make it easy for you with the Atlas Search API.
 
@@ -14,7 +12,7 @@ Your developer can integrate with the search API in 0.5 man-days and once integr
 
 It is a simple four-step process:
 
-![](<../.gitbook/assets/ATL-002_API integration for search.png>)
+![](<../.gitbook/assets/ATL-002\_API integration for search.png>)
 
 {% hint style="info" %}
 The Atlas quotation consists of the following four parameters:
@@ -36,7 +34,7 @@ The Atlas quotation consists of the following four parameters:
 * Please note the technical service fee will show as $0 for you. The transaction fee will be set as per the contractual agreement between Atlas and your company.
 {% endhint %}
 
-## 1. Get Atlas Sandbox Credentials
+### 1. Get Atlas Sandbox Credentials
 
 To create your Atlas Sandbox Credentials, submit your Search API application with the following three parameters:
 
@@ -48,13 +46,13 @@ You will receive the credentials in two parts: `x-atlas-client-id` and `x-atlas-
 
 Any request you initiate needs to be authenticated using your API credentials. The API will return an error for any request without valid API credentials in the header.
 
-## 2. Finish the search API integration
+### 2. Finish the search API integration
 
-### 1) Endpoint {% debug uid="search_1.0" %}{% enddebug %}
+#### 1) Endpoint
 
 [https://sandbox.atlaslovestravel.com/search.do](https://sandbox.atlaslovestravel.com/search.do)
 
-### 2) Header
+#### 2) Header
 
 ```
 x-atlas-client-id ： <Your clientid>
@@ -63,61 +61,37 @@ Content-Type: application/json
 Accept-Encoding: gzip
 ```
 
-### 3) Request
+#### 3) Request
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                 <mark style="color:blue;">string</mark>                                                                                                                  <mark style="color:green;">Required</mark>
+*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of client and user, please use x-atlas-client-id to fill in.
-
-
-
-*   #### tripType      <mark style="color:blue;">string</mark>                                                                                                                  <mark style="color:green;">Required</mark>
+*   **tripType **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     1: Oneway
 
     2: Return Trip
-
-
-
-*   #### adultNum     <mark style="color:blue;">int</mark>                                                                                                                       <mark style="color:green;">Required</mark>
+*   **adultNum **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Adult passenger count, the number can be 1-9
-
-
-
-*   #### childNum      <mark style="color:blue;">int</mark>                                                                                                                       <mark style="color:green;">Required</mark>
+*   **childNum **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Adult passenger count, the number can be 0-8
-
-
-
-*   #### infantNum    <mark style="color:blue;">int</mark>                                                                                                                       <mark style="color:orange;">Optional</mark>
+*   **infantNum **<mark style="color:blue;">**int**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Reserved, currently not support infant fare quotation.
-
-
-
-*   #### fromCity      <mark style="color:blue;">string</mark>                                                                                                                 <mark style="color:green;">Required</mark>
+*   **fromCity **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     IATA Code of departure city
-
-
-
-*   #### toCity            <mark style="color:blue;">string</mark>                                                                                                                 <mark style="color:green;">Required</mark>
+*   **toCity **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     IATA Code of arrival city
-
-
-
-*   #### fromDate     <mark style="color:blue;">string</mark>                                                                                                                 <mark style="color:green;">Required</mark>
+*   **fromDate **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Departure date, the format is YYYYMMDD
-
-
-
-*   #### retDate         <mark style="color:blue;">string</mark>                                                                                                                 <mark style="color:orange;">Optional</mark>
+*   **retDate **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Enter return date if tripType = 2, the format is YYYYMMDD. Must not be earlier than fromDate.
 {% endtab %}
@@ -139,10 +113,10 @@ Accept-Encoding: gzip
 {% endtab %}
 {% endtabs %}
 
-### 4) Response
+#### 4) Response
 
 {% hint style="info" %}
-The search request will return a lot of parameters. For this example schema we will focus only on the following parameters important for fare search: 
+The search request will return a lot of parameters. For this example schema we will focus only on the following parameters important for fare search:
 
 * Pay more attention to the items in orange, as they are important for fare search
 * The returned currency is configured, as requested by you
@@ -153,7 +127,7 @@ The search request will return a lot of parameters. For this example schema we w
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### status     <mark style="color:blue;">int</mark>                                                                                                                         
+*   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
 
@@ -162,52 +136,46 @@ The search request will return a lot of parameters. For this example schema we w
     2: route is forbidden
 
     3: unauthorized access
-
-
-
-*   #### msg         <mark style="color:blue;">string</mark>                                                                                                                   
+*   **msg **<mark style="color:blue;">**string**</mark>
 
     Error message
-
-
-
-* #### routings   Array<[Routing Element](api-integration-for-search-only.md#route-element-schema)>                                                                                               <mark style="color:blue;"></mark>                                                                                              
-  * #### [Routing Element](api-integration-for-search-only.md#route-element-schema)
-    *   #### currency    <mark style="color:blue;">string</mark>
+* **routings Array<**[**Routing Element**](api-integration-for-search-only.md#route-element-schema)**>**
+  * [**Routing Element**](api-integration-for-search-only.md#route-element-schema)
+    *   **currency **<mark style="color:blue;">**string**</mark>
 
         Currency, it's configured in the back office according to your demand before apply.
-    *   #### <mark style="color:orange;">adultPrice</mark>   <mark style="color:blue;">decimal</mark>
+    *   <mark style="color:orange;">**adultPrice**</mark>**  **<mark style="color:blue;">**decimal**</mark>
 
         Adult fare per passenger.
-    *   #### <mark style="color:orange;">adultTax</mark>      <mark style="color:blue;">decimal</mark>
+    *   <mark style="color:orange;">**adultTax**</mark>**  **<mark style="color:blue;">**decimal**</mark>
 
         Adult tax per passenger.
-    *   #### <mark style="color:orange;">transactionFeePerPax</mark>    <mark style="color:blue;">decimal</mark>
+    *   <mark style="color:orange;">**transactionFeePerPax**</mark>**  **<mark style="color:blue;">**decimal**</mark>
 
         Technical service fee per passenger.
-    * #### rule               <mark style="color:orange;"></mark> Object<[RuleElement](api-integration-for-search-only.md#5.-rule-element-schema)>
-      *   #### <mark style="color:blue;">RuleElement</mark>   
+    * **rule Object<**[**RuleElement**](api-integration-for-search-only.md#5.-rule-element-schema)**>**
+      *   <mark style="color:blue;">**RuleElement**</mark>
 
           Rule element includes baggage, refund rules and change rules. For fare search purpose, please pay attention to the following elements:
 
-          *   #### <mark style="color:orange;">hasBaggage</mark>                              <mark style="color:blue;">int</mark>
+          *   <mark style="color:orange;">**hasBaggage**</mark>**  **<mark style="color:blue;">**int**</mark>
 
               This tag is used to identify if the fare includes free checked-in baggage
 
               0 : Not included
 
               1 : Included
-          *   #### BaggageElements                 Array<[BaggageElement](api-integration-for-search-only.md#6.-baggage-element-schema)>
+          *   **BaggageElements Array<**[**BaggageElement**](api-integration-for-search-only.md#6.-baggage-element-schema)**>**
 
               Free checked-in baggage information included in the fare.
 
-              * #### [BaggageElement](api-integration-for-search-only.md#6.-baggage-element-schema)
-                *   #### segmentNo                              <mark style="color:blue;">int</mark>
+              * [**BaggageElement**](api-integration-for-search-only.md#6.-baggage-element-schema)
+                *   **segmentNo **<mark style="color:blue;">**int**</mark>
 
                     Segment sequence. Start from 1.
 
                     If it is roundtrip, outbound and inbound segments are together in the sequence.
-                *   #### passengerType                     <mark style="color:blue;">string</mark>
+                *   **passengerType **<mark style="color:blue;">**string**</mark>
 
                     0: ADT
 
@@ -218,62 +186,62 @@ The search request will return a lot of parameters. For this example schema we w
                     If search or verify for ADT only, then only ADT is returned;
 
                     If search or verify for ADT+CHD, then ADT and CHD are returned.
-                *   #### <mark style="color:orange;">baggagePiece</mark>                        <mark style="color:blue;">int</mark>
+                *   <mark style="color:orange;">**baggagePiece**</mark>**  **<mark style="color:blue;">**int**</mark>
 
                     Baggage pieces：
 
-                    0  No limitation
+                    0 No limitation
 
                     \>0 Maximum pieces
-                *   #### <mark style="color:orange;">baggageWeight</mark>                   <mark style="color:blue;">int</mark>
+                *   <mark style="color:orange;">**baggageWeight**</mark>**  **<mark style="color:blue;">**int**</mark>
 
                     Baggage Weight, mentioned in KG
 
                     0 means no free checked-in baggage
-    *   #### <mark style="color:orange;">fromSegments</mark>      Array<[Segment Element](api-integration-for-search-only.md#3.-segment-element-schema)>
+    *   <mark style="color:orange;">**fromSegments**</mark>** Array<**[**Segment Element**](api-integration-for-search-only.md#3.-segment-element-schema)**>**
 
         The following schema is for outbound segments:
 
-        * #### [Segment Element](api-integration-for-search-only.md#3.-segment-element-schema)
-          *   #### carrier                       <mark style="color:blue;">string</mark>                                                                                                    
+        * [**Segment Element**](api-integration-for-search-only.md#3.-segment-element-schema)
+          *   **carrier **<mark style="color:blue;">**string**</mark>
 
               IATA code of airline.
-          *   #### <mark style="color:orange;">flightNumber</mark>         <mark style="color:blue;">string</mark>
+          *   <mark style="color:orange;">**flightNumber**</mark>**  **<mark style="color:blue;">**string**</mark>
 
               Flight number
 
               The format is : CA123 or TR021 or FR1290.
-          *   #### <mark style="color:orange;">depAirport</mark>             <mark style="color:blue;">string</mark>
+          *   <mark style="color:orange;">**depAirport**</mark>**  **<mark style="color:blue;">**string**</mark>
 
               IATA code of departure airport.
-          *   #### depTime                  <mark style="color:blue;">string</mark>
+          *   **depTime **<mark style="color:blue;">**string**</mark>
 
               Departure time of the flight in yyyyMMddHHmm format. For example: 202203100300 means 10MAR2022 03:00.
-          *   #### <mark style="color:orange;">arrAirport</mark>                <mark style="color:blue;">string</mark>
+          *   <mark style="color:orange;">**arrAirport**</mark>**  **<mark style="color:blue;">**string**</mark>
 
               IATA code of arrival airport
-          *   #### arrTime                     <mark style="color:blue;">string</mark>
+          *   **arrTime **<mark style="color:blue;">**string**</mark>
 
               Arrival time of the flight in yyyyMMddHHmm format. For example: 202203100300 means 10MAR2022 03:00.
-          *   #### stopCities               <mark style="color:blue;">string</mark>
+          *   **stopCities **<mark style="color:blue;">**string**</mark>
 
               Returns IATA code of transit airport for the route. Please note "," is used to separate IATA codes if there are more than one transit airports on the route, e.g. "CGK,SUB".
 
               Blank means it is a non-stop flight.
-          *   #### duration               <mark style="color:blue;">int</mark>
+          *   **duration **<mark style="color:blue;">**int**</mark>
 
               The flight duration in minutes.
-          *   #### codeShare              <mark style="color:blue;">boolean</mark>
+          *   **codeShare **<mark style="color:blue;">**boolean**</mark>
 
               True : code share
 
               False : Not code share
-          *   #### cabin                         <mark style="color:blue;">string</mark>
+          *   **cabin **<mark style="color:blue;">**string**</mark>
 
               Booking code for the fare
 
               In terms of the LCCs which do not provide this, the cabin would be blank
-          *   #### cabinClass             <mark style="color:blue;">int</mark>
+          *   **cabinClass **<mark style="color:blue;">**int**</mark>
 
               Service grade of the fare
 
@@ -282,29 +250,29 @@ The search request will return a lot of parameters. For this example schema we w
               2 : Business
 
               3 : First Class
-          *   #### seatCount              <mark style="color:blue;">int</mark>
+          *   **seatCount **<mark style="color:blue;">**int**</mark>
 
               Remaining seats for the fare.
-          *   #### aircraftCode           <mark style="color:blue;">string</mark>
+          *   **aircraftCode **<mark style="color:blue;">**string**</mark>
 
               Aircraft equipment
-          *   #### depTerminal            <mark style="color:blue;">string</mark>
+          *   **depTerminal **<mark style="color:blue;">**string**</mark>
 
               Departure terminal
-          *   #### arrTerminal               <mark style="color:blue;">string</mark>
+          *   **arrTerminal **<mark style="color:blue;">**string**</mark>
 
               Arrival terminal
-          *   #### operatingCarrier     <mark style="color:blue;">string</mark>
+          *   **operatingCarrier **<mark style="color:blue;">**string**</mark>
 
               Operating carrier
 
               It is blank when codeShare=false
-          *   #### operatingFlightnumber      <mark style="color:blue;">string</mark>
+          *   **operatingFlightnumber **<mark style="color:blue;">**string**</mark>
 
               Operating flight number
 
               It is blank when codeShare=false
-    *   #### <mark style="color:orange;">retSegments</mark>         Array<[Segment Element](api-integration-for-search-only.md#3.-segment-element-schema)>
+    *   <mark style="color:orange;">**retSegments**</mark>** Array<**[**Segment Element**](api-integration-for-search-only.md#3.-segment-element-schema)**>**
 
         Inbound segments. The SegmentElement structure is the same as fromSegments
 {% endtab %}
@@ -672,7 +640,7 @@ The search request will return a lot of parameters. For this example schema we w
 {% endtab %}
 {% endtabs %}
 
-## 3. UAT Certification
+### 3. UAT Certification
 
 Download the <mark style="color:blue;">Postman collection</mark> bellow to check the samples for UAT and add your observations in the **Comments** column. Then send it to your account manager to request the UAT Certification.
 
@@ -681,10 +649,9 @@ Download the <mark style="color:blue;">Postman collection</mark> bellow to check
 | SEL-CJU 24FEB/28FEB Roundtrip | One-way with both direct and connecting flights | Number of routings returned: (to be filled-up by you)                              |
 | SEL-CJU 24FEB/28FEB Roundtrip | Roundtrip with different airlines               | <p>Departure Date:</p><p>Number of routings returned: (to be filled-up by you)</p> |
 
-> [Atlas Sandbox SearchOnly UAT.postman_collection.json.zip](../.gitbook/assets/Atlas Sandbox SearchOnly UAT.postman_collection.json.zip)
+> \[Atlas Sandbox SearchOnly UAT.postman\_collection.json.zip]\(../.gitbook/assets/Atlas Sandbox SearchOnly UAT.postman\_collection.json.zip)
 
-
-## Start LIVE Search
+### Start LIVE Search
 
 Your Atlas account manager will check the UAT submission at the earliest and respond with the live credentials if the UAT is successful. Please replace the endpoint, and the login credentials `x-atlas-client-id` and `x-atlas-client-secret` in your program to start your live search.
 

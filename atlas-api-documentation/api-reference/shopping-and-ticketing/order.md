@@ -4,7 +4,7 @@
 
 `Verify` function should be called in prior to this call.
 
-### Endpoint {% debug uid="order_1.0" %}{% enddebug %}
+### Endpoint
 
 [https://sandbox.atlaslovestravel.com/order.do](https://sandbox.atlaslovestravel.com/order.do)
 
@@ -12,42 +12,42 @@
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of client and user.
-*   #### sessionId                    <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **sessionId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of the revalidation, got from revalidation response.
-*   #### passengers                Array<<mark style="color:blue;">PassengerElement</mark>>                                                    <mark style="color:blue;"></mark>                                                    <mark style="color:green;">Required</mark>
+*   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
     Passengers' information.
 
-    * #### <mark style="color:blue;">PassengerElement</mark>
-      *   #### name                             <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+    * <mark style="color:blue;">**PassengerElement**</mark>
+      *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           LastName/FirstName MiddleName.
-      *   #### passengerType         <mark style="color:blue;">int</mark>                                                                                        <mark style="color:green;">Required</mark>
+      *   **passengerType **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          0   ADT
+          0 ADT
 
-          1   CHD
-      *   #### birthday                       <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+          1 CHD
+      *   **birthday **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Birthday, Format: YYYYMMDD
-      *   #### gender                          <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+      *   **gender **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           M : Male
 
-          F  : Female
-      *   #### gender                          <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+          F : Female
+      *   **gender **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           M : Male
 
-          F  : Female
-      *   #### cardNum                      <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+          F : Female
+      *   **cardNum **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Passenger id card number
-      *   #### cardType                      <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+      *   **cardType **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Passenger id card type：
 
@@ -60,52 +60,52 @@
           TB - China mainland pass for Taiwanese
 
           HY - International Seaman's Certificate
-      *   #### cardIssuePlace           <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+      *   **cardIssuePlace **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Card issue country，IATA code of country
-      *   #### cardExpired                  <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+      *   **cardExpired **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Card expire date，Format：YYYYMMDD
-      *   #### nationality                     <mark style="color:blue;">string</mark>                                                                                   <mark style="color:green;">Required</mark>
+      *   **nationality **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Nationality，IATA code of country
-      *   #### ancillaries                       Array<<mark style="color:blue;">AncillaryElement</mark>>                                         <mark style="color:blue;"></mark>                                         <mark style="color:green;">Required</mark>
+      *   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
           Ancillaries selection for the specific passenger
 
-          * #### <mark style="color:blue;">AncillaryElement</mark>
-            *   #### productCode                             <mark style="color:blue;">string</mark>                                                       <mark style="color:green;">Required</mark>
+          * <mark style="color:blue;">**AncillaryElement**</mark>
+            *   **productCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
                 Ancillary product code;
 
                 Got from routing element in the search/revalidation response.
-            *   #### segmentIndex                           <mark style="color:blue;">int</mark>                                                              <mark style="color:green;">Required</mark>
+            *   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
                 Segment sequence
-            *   #### offerId                                           <mark style="color:blue;">string</mark>                                                       <mark style="color:green;">Required</mark>
+            *   **offerId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
                 unique identifier for this ancillary's offer.
-*   #### contact                        Object<<mark style="color:blue;">ContactElement</mark>>                                                             <mark style="color:blue;"></mark>                                                             <mark style="color:green;">Required</mark>
+*   **contact Object<**<mark style="color:blue;">**ContactElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
     Passengers' information.
 
-    * #### <mark style="color:blue;">ContactElement</mark>
-      *   #### name                                  <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+    * <mark style="color:blue;">**ContactElement**</mark>
+      *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Contact name.
-      *   #### address                             <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+      *   **address **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Contact address.
-      *   #### postcode                          <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+      *   **postcode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Contact post code.
-      *   #### email                                   <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+      *   **email **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Contact email.
-      *   #### mobile                                   <mark style="color:blue;">string</mark>                                                                                <mark style="color:green;">Required</mark>
+      *   **mobile **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          Contact mobile.                           
-*   #### requestSource          <mark style="color:blue;">string</mark>                                                                                                       <mark style="color:orange;">Optional</mark>
+          Contact mobile.
+*   **requestSource **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     The tag to identify which channel does this traffic come from.
 {% endtab %}
@@ -156,76 +156,72 @@
     "requestSource": ""
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}
-
-
 
 ## Response
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### status                                     <mark style="color:blue;">int</mark>                                                                                              
+*   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
 
     2: System error
 
     6: Price change
-*   #### msg                                         <mark style="color:blue;">string</mark>                                                                                       
+*   **msg **<mark style="color:blue;">**string**</mark>
 
     Error message
-*   #### sessionId                              <mark style="color:blue;">string</mark>                                                                                       
+*   **sessionId **<mark style="color:blue;">**string**</mark>
 
     Same value got from order request
-*   #### orderNo                                  <mark style="color:blue;">string</mark>                                                                                      
+*   **orderNo **<mark style="color:blue;">**string**</mark>
 
     Order number
-*   #### totalPrice                               <mark style="color:blue;">decimal</mark>                                                                                  
+*   **totalPrice **<mark style="color:blue;">**decimal**</mark>
 
     Total fare of this order in the currency TheAtlas settled with you.
-*   #### totalTransactionFee         <mark style="color:blue;">decimal</mark>                                                                                  
+*   **totalTransactionFee **<mark style="color:blue;">**decimal**</mark>
 
     Total technical fees for this order in the currency TheAtlas settled with you.
-*   #### currency                                 <mark style="color:blue;">string</mark>                                                                                     
+*   **currency **<mark style="color:blue;">**string**</mark>
 
     The currency TheAtlas settled with you.
-*   #### vendorTotalPrice                <mark style="color:blue;">decimal</mark>                                                                                 
+*   **vendorTotalPrice **<mark style="color:blue;">**decimal**</mark>
 
     Total fare of this order in the vendor's currency, reference for you to generate the specific credit card.
-*   #### vendorCurrency                  <mark style="color:blue;">string</mark>                                                                                     
+*   **vendorCurrency **<mark style="color:blue;">**string**</mark>
 
     Vendor's currency.
-*   #### tktLimitTime                          <mark style="color:blue;">string</mark>                                                                                     
+*   **tktLimitTime **<mark style="color:blue;">**string**</mark>
 
     Payment deadline for this order.
-*   #### paxTicketInfos                      Array<[PAXTicketInfo](order.md#paxticketinfo-schema)>                                                  <mark style="color:blue;"></mark>                                                 
+*   **paxTicketInfos Array<**[**PAXTicketInfo**](order.md#paxticketinfo-schema)**>**
 
     Ticket information for passengers
 
-    * #### [PAXTicketInfo](order.md#paxticketinfo-schema)
-      *   #### name                             <mark style="color:blue;">string</mark>                                                                                 
+    * [**PAXTicketInfo**](order.md#paxticketinfo-schema)
+      *   **name **<mark style="color:blue;">**string**</mark>
 
           LastName/FirstName MiddleName.
-      *   #### passengerType         <mark style="color:blue;">int</mark>                                                                                        <mark style="color:green;"></mark>        
+      *   **passengerType **<mark style="color:blue;">**int**</mark>
 
-          0   ADT
+          0 ADT
 
-          1   CHD
-      *   #### birthday                       <mark style="color:blue;">string</mark>                                                                                
+          1 CHD
+      *   **birthday **<mark style="color:blue;">**string**</mark>
 
           Birthday, Format: YYYYMMDD
-      *   #### gender                          <mark style="color:blue;">string</mark>                                                                                
+      *   **gender **<mark style="color:blue;">**string**</mark>
 
           M : Male
 
-          F  : Female
-      *   #### cardNum                      <mark style="color:blue;">string</mark>                                                                                 
+          F : Female
+      *   **cardNum **<mark style="color:blue;">**string**</mark>
 
           Passenger id card number
-      *   #### cardType                      <mark style="color:blue;">string</mark>                                                                                 
+      *   **cardType **<mark style="color:blue;">**string**</mark>
 
           Passenger id card type：
 
@@ -238,38 +234,38 @@
           TB - China mainland pass for Taiwanese
 
           HY - International Seaman's Certificate
-      *   #### cardIssuePlace           <mark style="color:blue;">string</mark>                                                                                
+      *   **cardIssuePlace **<mark style="color:blue;">**string**</mark>
 
           Card issue country，IATA code of country
-      *   #### cardExpired                  <mark style="color:blue;">string</mark>                                                                                
+      *   **cardExpired **<mark style="color:blue;">**string**</mark>
 
           Card expire date，Format：YYYYMMDD
-      *   #### nationality                     <mark style="color:blue;">string</mark>                                                                                
+      *   **nationality **<mark style="color:blue;">**string**</mark>
 
           Nationality，IATA code of country
-      *   #### ticketNos                       Array<<mark style="color:blue;">string</mark>>                                                                <mark style="color:blue;"></mark>                                                               
+      *   **ticketNos Array<**<mark style="color:blue;">**string**</mark>**>**
 
           Ticket numbers
-      *   #### airlinePNRs                   Array<<mark style="color:blue;">string</mark>>                                                                <mark style="color:blue;"></mark>                                                               
+      *   **airlinePNRs Array<**<mark style="color:blue;">**string**</mark>**>**
 
           AirlinePNRs, the array count would be the same as ticketnos count
-      *   #### ancillaries                    Array<<mark style="color:blue;">AncillaryElement</mark>>                                                                <mark style="color:blue;"></mark>                                                               
+      *   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**>**
 
           Ancillaries selection for the specific passenger
 
-          * ****[**AncillaryElement**](order.md#undefined)****
-            *   #### productCode                             <mark style="color:blue;">string</mark>                                                     
+          * [**AncillaryElement**](order.md#undefined)
+            *   **productCode **<mark style="color:blue;">**string**</mark>
 
                 Ancillary product code;
 
                 Got from routing element in the search/revalidation response.
-            *   #### segmentIndex                           <mark style="color:blue;">int</mark>                                                            
+            *   **segmentIndex **<mark style="color:blue;">**int**</mark>
 
                 Segment sequence
-            *   #### offerId                                           <mark style="color:blue;">string</mark>                                                      
+            *   **offerId **<mark style="color:blue;">**string**</mark>
 
                 unique identifier for this ancillary's offer.
-*   #### routing                                     Object<[RouteElement](broken-reference)> <mark style="color:blue;"></mark>                                                   
+*   **routing Object<**[**RouteElement**](broken-reference/)**>**
 
     Route and fare details. The structure is also Routing Elements, same as search response
 {% endtab %}
@@ -413,13 +409,11 @@
     }
 }j
 ```
-
-
 {% endtab %}
 {% endtabs %}
 
 #### Error codes
 
-| Error code | Description |
-| ------- | ----------------------------------- |
-| **`310`** | Infant not allowed.                     |
+| Error code | Description         |
+| ---------- | ------------------- |
+| **`310`**  | Infant not allowed. |

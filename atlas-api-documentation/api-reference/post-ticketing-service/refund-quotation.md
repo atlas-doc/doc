@@ -4,43 +4,43 @@
 
 No preceding function needs to be carried out.
 
-### Endpoint {% debug uid="RefundQuotation_1.0" %}{% enddebug %}
+### Endpoint
 
-[https://sandbox.atlaslovestravel.com/RefundQuotation.do](https://sandbox.atlaslovestravel.com/getTicketRefundFee.do) 
+[https://sandbox.atlaslovestravel.com/RefundQuotation.do](https://sandbox.atlaslovestravel.com/getTicketRefundFee.do)
 
 ## Request
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of client and user.
-*   #### orderNo                       <mark style="color:blue;">string</mark>                                                                                                  <mark style="color:green;">Required</mark>
+*   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Original order number.
-*   #### refundRequestList                    Array<<mark style="color:blue;">RefundRequest</mark>>                                          <mark style="color:blue;"></mark>                                          <mark style="color:green;">Required</mark>
+*   **refundRequestList Array<**<mark style="color:blue;">**RefundRequest**</mark>**> **<mark style="color:green;">**Required**</mark>
 
     Ticket selection of the passengers and flights which is going to refund.
 
-    * #### <mark style="color:blue;">RefundRequest</mark>        <mark style="color:blue;"></mark>                                                                                                       <mark style="color:green;">Required</mark>
-      *   #### lastName                       <mark style="color:blue;">string</mark>                                                                                 <mark style="color:green;">Required</mark>
+    * <mark style="color:blue;">**RefundRequest**</mark>**  **<mark style="color:green;">**Required**</mark>
+      *   **lastName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Last name of the passenger who wants to refund
-      *   #### firstName                       <mark style="color:blue;">string</mark>                                                                                <mark style="color:green;">Required</mark>
+      *   **firstName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           First name of the passenger who wants to refund
-      * **segments**                   **Array<**<mark style="color:blue;">**SegmentElement**</mark>**>                                      **<mark style="color:blue;">****</mark>**                                      **<mark style="color:green;">**Required**</mark>
+      * **segments** **Array<**<mark style="color:blue;">**SegmentElement**</mark>\*\*> <mark style="color:blue;">**\*\*\*\***</mark> \*\*<mark style="color:green;">**Required**</mark>
         * <mark style="color:blue;">**SegmentElement**</mark>
-          *   #### depAirport                     <mark style="color:blue;">string</mark>                                                                 <mark style="color:green;">Required</mark>
+          *   **depAirport **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
               Departure airport of the segment which the passenger wants to refund
-          *   #### arrAirport                       <mark style="color:blue;">string</mark>                                                                 <mark style="color:green;">Required</mark>
+          *   **arrAirport **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
               Arrival airport of the segment which the passenger wants to refund
-          *   #### depDate                          <mark style="color:blue;">string</mark>                                                                  <mark style="color:green;">Required</mark>
+          *   **depDate **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
               Departure date of the segment which the passenger wants to refund
-          *   #### flightNo                           <mark style="color:blue;">string</mark>                                                                  <mark style="color:green;">Required</mark>
+          *   **flightNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
               Flight number of the segment which the passenger wants to refund
 {% endtab %}
@@ -85,47 +85,47 @@ No preceding function needs to be carried out.
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### msg                                                                          <mark style="color:blue;">string</mark>                                                                                                
+*   **msg **<mark style="color:blue;">**string**</mark>
 
     Error message.
-*   #### status                                                                      <mark style="color:blue;">int</mark>                                                                                                      
+*   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
 
     2: System error
-*   #### isRefundable                                                       <mark style="color:blue;">boolean</mark>                                                                               
+*   **isRefundable **<mark style="color:blue;">**boolean**</mark>
 
     True : Refundable
 
     False: Non-Refundable
-*   #### currency                                                                <mark style="color:blue;">string</mark>                                                                               
+*   **currency **<mark style="color:blue;">**string**</mark>
 
     The currency of the fares and amount below.
-*   #### originalTotalFareAmount                              <mark style="color:blue;">decimal</mark>                                                                               
+*   **originalTotalFareAmount **<mark style="color:blue;">**decimal**</mark>
 
     Original fare of the selected passengers and flights
-*   #### originalTotalAncillaryAmount                     <mark style="color:blue;">decimal</mark>                                                                               
+*   **originalTotalAncillaryAmount **<mark style="color:blue;">**decimal**</mark>
 
     Original amount of ancillaries related to the selected passengers and flights
-*   #### originalTotalAmount                                       <mark style="color:blue;">decimal</mark>                                                                               
+*   **originalTotalAmount **<mark style="color:blue;">**decimal**</mark>
 
     \= originalTotalFareAmount + originalTotalAncillaryAmount
-*   #### airlinePenaltyAmountForFare                     <mark style="color:blue;">decimal</mark>                                                                               
+*   **airlinePenaltyAmountForFare **<mark style="color:blue;">**decimal**</mark>
 
     Airline's penalty amount for the fare
-*   #### airlinePenaltyAmountForAncillaries        <mark style="color:blue;">decimal</mark>                                                                               
+*   **airlinePenaltyAmountForAncillaries **<mark style="color:blue;">**decimal**</mark>
 
     Airline's penalty amount for the ancillaries
-*   #### airlinePenaltyAmount                                     <mark style="color:blue;">decimal</mark>                                                                               
+*   **airlinePenaltyAmount **<mark style="color:blue;">**decimal**</mark>
 
     \= airlinePenaltyAmountForFare + airlinePenaltyAmountForAncillaries
-*   #### estimatedRefundAmount                             <mark style="color:blue;">string</mark>                                                                               
+*   **estimatedRefundAmount **<mark style="color:blue;">**string**</mark>
 
     Estimated amount which can be got back for this refund.
-*   #### transactionFee                                                   <mark style="color:blue;">decimal</mark>                                                                               
+*   **transactionFee **<mark style="color:blue;">**decimal**</mark>
 
     The transaction fees for this refund.
-*   #### refundOfferId                                                      <mark style="color:blue;">string</mark>
+*   **refundOfferId **<mark style="color:blue;">**string**</mark>
 
     Refund offer id for this quotation which can be used for the coming refund call.
 {% endtab %}
@@ -148,7 +148,5 @@ No preceding function needs to be carried out.
     "refundOfferId": "7961ab5b202642628e9595498ffea083"   
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}

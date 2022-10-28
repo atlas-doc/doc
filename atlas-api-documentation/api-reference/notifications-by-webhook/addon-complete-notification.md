@@ -10,25 +10,25 @@ Method : Post
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                
+*   **cid **<mark style="color:blue;">**string**</mark>
 
     Identifier of client and user.
-*   #### type                              <mark style="color:blue;">string</mark>                                                                                                 
+*   **type **<mark style="color:blue;">**string**</mark>
 
     Notification type.
-* #### data                                                                                                                                                          <mark style="color:blue;"></mark>                                                                                      
-  *   #### addonOrderNo                                  <mark style="color:blue;">string</mark>                                                         
+* **data**
+  *   **addonOrderNo **<mark style="color:blue;">**string**</mark>
 
       Order number.
-  *   #### originalOrderNo                               <mark style="color:blue;">string</mark>                                                         
+  *   **originalOrderNo **<mark style="color:blue;">**string**</mark>
 
       Order number.
-  *   #### orderStatus                                        <mark style="color:blue;">int</mark>                                                                            
+  *   **orderStatus **<mark style="color:blue;">**int**</mark>
 
       orderStatus=2 means ticketed
-  *   #### paxTicketInfos                                  Array<[PAXTicketInfo](broken-reference)>                                   <mark style="color:blue;"></mark>                                  
+  *   **paxTicketInfos Array<**[**PAXTicketInfo**](broken-reference/)**>**
 
-      Passengers' ticket information, the same format as the PAXTicketInfo in order response or retrive booking response, click [**here**](broken-reference) **** to check the schema
+      Passengers' ticket information, the same format as the PAXTicketInfo in order response or retrive booking response, click [**here**](broken-reference/) \*\*\*\* to check the schema
 {% endtab %}
 
 {% tab title="Sample" %}
@@ -69,7 +69,5 @@ Method : Post
     }  
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}

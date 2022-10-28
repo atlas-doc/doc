@@ -10,59 +10,58 @@ Method : Post
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                
+*   **cid **<mark style="color:blue;">**string**</mark>
 
     Identifier of client and user.
-*   #### type                              <mark style="color:blue;">string</mark>                                                                                                 
+*   **type **<mark style="color:blue;">**string**</mark>
 
     Notification type.
-* #### data                                                                                                                                           
-  *   #### scheduleChangeType               <mark style="color:blue;">int</mark> 
+* **data**
+  *   **scheduleChangeType **<mark style="color:blue;">**int**</mark>
 
       Schedule change type.
 
       1: Schedule change
 
       2: Flight cancel
-  *   #### previousSegs                                 **Array**<<mark style="color:blue;">scSegment</mark>>      <mark style="color:blue;"></mark>     
+  *   **previousSegs Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
       The original segments
-  *   #### revisedSegs                            Array<<mark style="color:blue;">scSegment</mark>>       
+  *   **revisedSegs Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
       The revised segments
 
-      *   **scSegment                               **<mark style="color:blue;">****</mark>**  Array<**<mark style="color:blue;">**scSegment**</mark>**>**      <mark style="color:blue;"></mark>     
+      *   **scSegment **<mark style="color:blue;">**\*\*\*\***</mark>** Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
-          segment information for schedule change notification              <mark style="color:blue;"></mark>             
+          segment information for schedule change notification
 
-          *   #### carrier                                  <mark style="color:blue;">string</mark>                                                                      
+          *   **carrier **<mark style="color:blue;">**string**</mark>
 
               carrier
-          *   #### flightNumber                     <mark style="color:blue;">string</mark>                                                                            
+          *   **flightNumber **<mark style="color:blue;">**string**</mark>
 
               flight number
-          *   #### depAirport                          <mark style="color:blue;">string</mark>                                                                            
+          *   **depAirport **<mark style="color:blue;">**string**</mark>
 
               departure airport
-          *   **arrAirport                             **<mark style="color:blue;">**string**</mark>                                                                    
+          *   \*\*arrAirport \*\*<mark style="color:blue;">**string**</mark>
 
               arrival ariport
-          *   **depTime                                **<mark style="color:blue;">**string**</mark>                                                                
+          *   \*\*depTime \*\*<mark style="color:blue;">**string**</mark>
 
               departure time
-          *   **arrTime                             **<mark style="color:blue;">**string**</mark>                                                               
+          *   \*\*arrTime \*\*<mark style="color:blue;">**string**</mark>
 
-              arrival time                 
-          *   **depTerminal                         **<mark style="color:blue;">**string**</mark>                                                         
+              arrival time
+          *   \*\*depTerminal \*\*<mark style="color:blue;">**string**</mark>
 
               departure time
-              
-          *   **arrTerminal                           **<mark style="color:blue;">**string**</mark>                                                          
-              arrival time  
+          * \*\*arrTerminal \*\*<mark style="color:blue;">**string**</mark>\
+            arrival time
 {% endtab %}
 
 {% tab title="Samples" %}
-#### Schedule change with alternative flights
+**Schedule change with alternative flights**
 
 ```
 {
@@ -118,7 +117,7 @@ Method : Post
 }
 ```
 
-#### Flight cancellation without alternative flight
+**Flight cancellation without alternative flight**
 
 ```
 {
@@ -144,7 +143,5 @@ Method : Post
     }
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}

@@ -4,36 +4,36 @@
 
 Offer ancillary list function should be called in prior of this call
 
-### Endpoint {% debug uid="orderAncillary_1.0" %}{% enddebug %}
+### Endpoint
 
-[https://sandbox.atlaslovestravel.com/orderAncillary.do](https://sandbox.atlaslovestravel.com/orderAncillary.do) 
+[https://sandbox.atlaslovestravel.com/orderAncillary.do](https://sandbox.atlaslovestravel.com/orderAncillary.do)
 
 ## Request
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of client and user.
-*   #### orderNo                       <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
-*   #### passengers               Array<<mark style="color:blue;">PassengerElement</mark>>                                                     <mark style="color:blue;"></mark>                                                     <mark style="color:green;">Required</mark>
+*   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
     Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
 
-    * #### <mark style="color:blue;">PassengerElement</mark>
-      *   #### name                             <mark style="color:blue;">string</mark>                                                                                  <mark style="color:green;">Required</mark>
+    * <mark style="color:blue;">**PassengerElement**</mark>
+      *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           LastName/FirstName MiddleName.
-      *   #### ancillaries                       Array<[AncillaryElement](add-ancillaries.md#undefined)>                                        <mark style="color:blue;"></mark>                                        <mark style="color:green;">Required</mark>
+      *   **ancillaries Array<**[**AncillaryElement**](add-ancillaries.md#undefined)**> **<mark style="color:green;">**Required**</mark>
 
           Ancillaries selection for the specific passenger
-      * #### [AncillaryElement](add-ancillaries.md#undefined)                                                                                 <mark style="color:blue;"></mark>                                                                                
-        *   #### segmentIndex       <mark style="color:blue;">int</mark>                                                                                       <mark style="color:green;">Required</mark>
+      * [**AncillaryElement**](add-ancillaries.md#undefined)
+        *   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
             Segment sequence, start from 1. If it is round trip, sequence outbond and inbound together.
-        *   #### offerId                       <mark style="color:blue;">string</mark>                                                                                <mark style="color:green;">Required</mark>
+        *   **offerId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
             Unique identifier for this ancillary's offer, used for the following order ancillary function.
 {% endtab %}
@@ -72,66 +72,67 @@ Offer ancillary list function should be called in prior of this call
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### status                                     <mark style="color:blue;">int</mark>                                                                                              
+*   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
 
     2: System error
 
     6: Price change
-*   #### msg                                         <mark style="color:blue;">string</mark>                                                                                       
+*   **msg **<mark style="color:blue;">**string**</mark>
 
     Error message
-*   #### orderNo                                  <mark style="color:blue;">string</mark>                                                                                      
+*   **orderNo **<mark style="color:blue;">**string**</mark>
 
     Add ancillary order number
-* **originalOrderNo                  **<mark style="color:blue;">**string**</mark>   
+*   \*\*originalOrderNo \*\*<mark style="color:blue;">**string**</mark>
 
-       <mark style="color:blue;">****</mark>        The original order number                                                                     <mark style="color:blue;">****</mark>                                                                    
-
-*   #### totalPrice                               <mark style="color:blue;">decimal</mark>                                                                                  
+    ```
+     <mark style="color:blue;">****</mark>        The original order number                                                                     <mark style="color:blue;">****</mark>                                                                    
+    ```
+*   **totalPrice **<mark style="color:blue;">**decimal**</mark>
 
     Total fare of this order in the currency TheAtlas settled with you.
-*   #### totalTransactionFee         <mark style="color:blue;">decimal</mark>                                                                                  
+*   **totalTransactionFee **<mark style="color:blue;">**decimal**</mark>
 
     Total technical fees for this order in the currency TheAtlas settled with you.
-*   #### currency                                 <mark style="color:blue;">string</mark>                                                                                     
+*   **currency **<mark style="color:blue;">**string**</mark>
 
     The currency TheAtlas settled with you.
-*   #### vendorTotalPrice                <mark style="color:blue;">decimal</mark>                                                                                 
+*   **vendorTotalPrice **<mark style="color:blue;">**decimal**</mark>
 
     Total fare of this order in the vendor's currency, reference for you to generate the specific credit card.
-*   #### vendorCurrency                  <mark style="color:blue;">string</mark>                                                                                     
+*   **vendorCurrency **<mark style="color:blue;">**string**</mark>
 
     Vendor's currency.
-*   #### tktLimitTime                          <mark style="color:blue;">string</mark>                                                                                     
+*   **tktLimitTime **<mark style="color:blue;">**string**</mark>
 
     Payment deadline for this order.
-*   #### paxTicketInfos                      Array<<mark style="color:blue;">PAXTicketInfo</mark>>                                                  <mark style="color:blue;"></mark>                                                 
+*   **paxTicketInfos Array<**<mark style="color:blue;">**PAXTicketInfo**</mark>**>**
 
     Ticket information for passengers
 
-    * #### <mark style="color:blue;">PAXTicketInfo</mark>
-      *   #### name                             <mark style="color:blue;">string</mark>                                                                                 
+    * <mark style="color:blue;">**PAXTicketInfo**</mark>
+      *   **name **<mark style="color:blue;">**string**</mark>
 
           LastName/FirstName MiddleName.
-      *   #### passengerType         <mark style="color:blue;">int</mark>                                                                                        <mark style="color:green;"></mark>        
+      *   **passengerType **<mark style="color:blue;">**int**</mark>
 
-          0   ADT
+          0 ADT
 
-          1   CHD
-      *   #### birthday                       <mark style="color:blue;">string</mark>                                                                                
+          1 CHD
+      *   **birthday **<mark style="color:blue;">**string**</mark>
 
           Birthday, Format: YYYYMMDD
-      *   #### gender                          <mark style="color:blue;">string</mark>                                                                                
+      *   **gender **<mark style="color:blue;">**string**</mark>
 
           M : Male
 
-          F  : Female
-      *   #### cardNum                      <mark style="color:blue;">string</mark>                                                                                 
+          F : Female
+      *   **cardNum **<mark style="color:blue;">**string**</mark>
 
           Passenger id card number
-      *   #### cardType                      <mark style="color:blue;">string</mark>                                                                                 
+      *   **cardType **<mark style="color:blue;">**string**</mark>
 
           Passenger id card type：
 
@@ -144,32 +145,32 @@ Offer ancillary list function should be called in prior of this call
           TB - China mainland pass for Taiwanese
 
           HY - International Seaman's Certificate
-      *   #### cardIssuePlace           <mark style="color:blue;">string</mark>                                                                                
+      *   **cardIssuePlace **<mark style="color:blue;">**string**</mark>
 
           Card issue country，IATA code of country
-      *   #### cardExpired                  <mark style="color:blue;">string</mark>                                                                                
+      *   **cardExpired **<mark style="color:blue;">**string**</mark>
 
           Card expire date，Format：YYYYMMDD
-      *   #### nationality                     <mark style="color:blue;">string</mark>                                                                                
+      *   **nationality **<mark style="color:blue;">**string**</mark>
 
           Nationality，IATA code of country
-      *   #### ticketNos                       Array<<mark style="color:blue;">string</mark>>                                                                <mark style="color:blue;"></mark>                                                               
+      *   **ticketNos Array<**<mark style="color:blue;">**string**</mark>**>**
 
           Ticket numbers
-      *   #### airlinePNRs                   Array<<mark style="color:blue;">string</mark>>                                                                <mark style="color:blue;"></mark>                                                               
+      *   **airlinePNRs Array<**<mark style="color:blue;">**string**</mark>**>**
 
           AirlinePNRs, the array count would be the same as ticketnos count
-      *   #### ancillaries                    Array<<mark style="color:blue;">AncillaryElement</mark>>                                                                <mark style="color:blue;"></mark>                                                               
+      *   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**>**
 
           Ancillaries selection for the specific passenger
 
-          * ****[**AncillaryElement**](add-ancillaries.md#undefined)****
-            *   #### productCode                             <mark style="color:blue;">string</mark>                                                     
+          * [**AncillaryElement**](add-ancillaries.md#undefined)
+            *   **productCode **<mark style="color:blue;">**string**</mark>
 
                 Ancillary product code;
 
                 Got from routing element in the search/revalidation response.
-            *   #### segmentIndex                           <mark style="color:blue;">int</mark>                                                            
+            *   **segmentIndex **<mark style="color:blue;">**int**</mark>
 
                 Segment sequence
 {% endtab %}
@@ -247,5 +248,5 @@ Offer ancillary list function should be called in prior of this call
 {% endtabs %}
 
 {% hint style="info" %}
-If you want to pay for the add-ancillary order, please call the [pay](broken-reference) function as same as the ticketing orders.
+If you want to pay for the add-ancillary order, please call the [pay](broken-reference/) function as same as the ticketing orders.
 {% endhint %}

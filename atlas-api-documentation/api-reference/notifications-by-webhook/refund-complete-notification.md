@@ -10,38 +10,38 @@ Method : Post
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### msg                                                                        <mark style="color:blue;">string</mark>                                                                                                
+*   **msg **<mark style="color:blue;">**string**</mark>
 
     Error message.
-*   #### status                                                                    <mark style="color:blue;">int</mark>                                                                                                      
+*   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
 
     2: System error
-*   #### currency                                                                <mark style="color:blue;">string</mark>                                                                               
+*   **currency **<mark style="color:blue;">**string**</mark>
 
     currency
-*   #### originalTotalFare                                               <mark style="color:blue;">decimal</mark>                                                                               
+*   **originalTotalFare **<mark style="color:blue;">**decimal**</mark>
 
     Original fare of the selected passengers and flights
-*   #### originalTotalAncillaryAmount                     <mark style="color:blue;">decimal</mark>                                                                               
+*   **originalTotalAncillaryAmount **<mark style="color:blue;">**decimal**</mark>
 
     Original amount of ancillaries related to the selected passengers and flights
-*   #### airlinePenaltyAmountForFare                     <mark style="color:blue;">decimal</mark>                                                                               
+*   **airlinePenaltyAmountForFare **<mark style="color:blue;">**decimal**</mark>
 
     Airline's penalty amount for the fare
-*   #### airlinePenaltyAmountForAncillaries        <mark style="color:blue;">decimal</mark>                                                                               
+*   **airlinePenaltyAmountForAncillaries **<mark style="color:blue;">**decimal**</mark>
 
     Airline's penalty amount for the ancillaries
-*   #### finalRefundAmount                                         <mark style="color:blue;">string</mark>                                                                               
+*   **finalRefundAmount **<mark style="color:blue;">**string**</mark>
 
     Final refund amount.
-*   #### transactionFee                                                   <mark style="color:blue;">decimal</mark>                                                                               
+*   **transactionFee **<mark style="color:blue;">**decimal**</mark>
 
     Technical service fee for this transaction
-*   #### refundStatus                                                       <mark style="color:blue;">int</mark>                                                                               
+*   **refundStatus **<mark style="color:blue;">**int**</mark>
 
-    2:  Completed(Means the refund amount has credted on your account)
+    2: Completed(Means the refund amount has credted on your account)
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -61,7 +61,5 @@ Method : Post
     "refundStatus": 2
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}

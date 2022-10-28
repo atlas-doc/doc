@@ -4,7 +4,7 @@
 
 `Order` function should be called in prior to this call.
 
-### Endpoint {% debug uid="pay_1.0" %}{% enddebug %}
+### Endpoint
 
 [https://sandbox.atlaslovestravel.com/pay.do](https://sandbox.atlaslovestravel.com/pay.do)
 
@@ -12,52 +12,52 @@
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of client and user.
-*   #### orderNo                       <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
-*   #### supportCreditTransPayment                       <mark style="color:blue;">int</mark>                                                             <mark style="color:green;">Required</mark>
+*   **supportCreditTransPayment **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     1 ：Payment with credit card pass through to the airline
 
-    0 :  Payment with Prepayment
-*   #### creditCard                  Object< <mark style="color:blue;">CreditCardElement</mark> >        <mark style="color:orange;">Optional</mark>
+    0 : Payment with Prepayment
+*   **creditCard Object< **<mark style="color:blue;">**CreditCardElement**</mark>** > **<mark style="color:orange;">**Optional**</mark>
 
     1 ：Payment with credit card pass through to the airline
 
-    0 :  Payment with Prepayment
+    0 : Payment with Prepayment
 
-    * #### <mark style="color:blue;">CreditCardElement</mark>
-      *   #### cardNumber                                  <mark style="color:blue;">string</mark>                                                               <mark style="color:green;">Required</mark>
+    * <mark style="color:blue;">**CreditCardElement**</mark>
+      *   **cardNumber **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Virtual credit card number.
-      *   #### cardExpireMonth                       <mark style="color:blue;">string</mark>                                                                <mark style="color:green;">Required</mark>
+      *   **cardExpireMonth **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Card expire month
-      *   #### cardExpireYear                            <mark style="color:blue;">string</mark>                                                                <mark style="color:green;">Required</mark>
+      *   **cardExpireYear **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Card expire year
-      *   #### cardCVV                                         <mark style="color:blue;">string</mark>                                                               <mark style="color:green;">Required</mark>
+      *   **cardCVV **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           CVV of the credit card
-      *   #### cardHolderLastName               <mark style="color:blue;">string</mark>                                                                <mark style="color:green;">Required</mark>
+      *   **cardHolderLastName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Last name of the card holder
-      *   #### cardHolderFirstName               <mark style="color:blue;">string</mark>                                                               <mark style="color:green;">Required</mark>
+      *   **cardHolderFirstName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           First name of the card holder
-      *   #### cardHolderCountry                    <mark style="color:blue;">string</mark>                                                               <mark style="color:orange;">Optional</mark>
+      *   **cardHolderCountry **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
           The country code of card holder
-      *   #### cardHolderCity                             <mark style="color:blue;">string</mark>                                                               <mark style="color:orange;">Optional</mark>
+      *   **cardHolderCity **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
           The city name of card holder
-      *   #### cardHolderPostCode                 <mark style="color:blue;">string</mark>                                                              <mark style="color:orange;">Optional</mark>
+      *   **cardHolderPostCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
           The post code of card holder
-      *   #### cardHolderAddress                     <mark style="color:blue;">string</mark>                                                             <mark style="color:orange;">Optional</mark>
+      *   **cardHolderAddress **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
           The address of card holder
 {% endtab %}
@@ -100,12 +100,12 @@
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### status                                  <mark style="color:blue;">int</mark>                                                                                                       <mark style="color:green;">Required</mark>
+*   **status **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     0: success
 
     2: System error
-*   #### msg                                      <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
+*   **msg **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Error message.
 {% endtab %}
@@ -117,7 +117,5 @@
     "msg": "success"
 }
 ```
-
-
 {% endtab %}
 {% endtabs %}
