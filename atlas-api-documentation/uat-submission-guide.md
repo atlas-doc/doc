@@ -20,9 +20,7 @@ Please right click on the above link click "Open link in new window". The file w
 
 You can also download the postman collection below:
 
-> \[TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip]
->
-> (../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip)
+> [TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip](../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip)
 
 {% hint style="info" %}
 Please right click on the above link click "Open link in new window". The file will start downloading.
