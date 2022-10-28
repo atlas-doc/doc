@@ -12,9 +12,17 @@ Please download the UAT template below, follow the steps, fill in the test resul
 
 > (../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Template.xlsx)
 
+{% hint style="info" %}
+Please right click on the above link click "Open link in new window". The file will start downloading.
+{% endhint %}
+
 You can also download the postman collection below:
 
 > (../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip)
+
+{% hint style="info" %}
+Please right click on the above link click "Open link in new window". The file will start downloading.
+{% endhint %}
 
 #### Full Integration
 
@@ -24,6 +32,14 @@ Please download the UAT submission template below, follow the steps, fill in the
 
 (../.gitbook/assets/TheAtlas UAT Test Full Integration Template.xlsx)
 
+{% hint style="info" %}
+Please right click on the above link click "Open link in new window". The file will start downloading.
+{% endhint %}
+
 You can also download the postman collection below:
 
 > (../.gitbook/assets/TheAtlas UAT Test Full Integration Postman Collection.zip)
+
+{% hint style="info" %}
+Please right click on the above link click "Open link in new window". The file will start downloading.
+{% endhint %}
