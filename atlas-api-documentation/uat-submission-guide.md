@@ -10,7 +10,7 @@ Once you have integrated the API we need to test and confirm if the integration 
 
 Please download the UAT template below, follow the steps, fill in the test results and submit the test results by email.
 
-[TheAtlas UAT Test Shopping & Ticketing Services Only Template.xlsx](../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Template.xlsx)
+> [TheAtlas UAT Test Shopping & Ticketing Services Only Template.xlsx](../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Template.xlsx)
 
 {% hint style="info" %}
 Please right click on the above link click "Open link in new window". The file will start downloading.
@@ -18,7 +18,7 @@ Please right click on the above link click "Open link in new window". The file w
 
 You can also download the postman collection below:
 
-[TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip](../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip)
+> [TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip](../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip)
 
 {% hint style="info" %}
 Please right click on the above link click "Open link in new window". The file will start downloading.
@@ -30,9 +30,7 @@ In the full integration UAT, we want to test all combinations of passenger types
 
 Please download the UAT submission template below, follow the steps, fill in the test results and submit the test results by email.
 
-\[TheAtlas UAT Test Full Integration Template.xlsx]
-
-(../.gitbook/assets/TheAtlas UAT Test Full Integration Template.xlsx)
+> [TheAtlas UAT Test Full Integration Template.xlsx](../.gitbook/assets/TheAtlas UAT Test Full Integration Template.xlsx)
 
 {% hint style="info" %}
 Please right click on the above link click "Open link in new window". The file will start downloading.
