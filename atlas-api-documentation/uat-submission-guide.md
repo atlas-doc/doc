@@ -13,7 +13,7 @@ Please download the UAT template below, follow the steps, fill in the test resul
 > \[TheAtlas UAT Test Shopping & Ticketing Services Only Template.xlsx]\(../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Template.xlsx)
 
 {% hint style="info" %}
-Please right click on the above link click "Open link in new window". The file will start downloading.
+Please right click on the above link and click "Open link in new window". The file will start downloading.
 {% endhint %}
 
 You can also download the postman collection below:
@@ -21,7 +21,7 @@ You can also download the postman collection below:
 > \[TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip]\(../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip)
 
 {% hint style="info" %}
-Please right click on the above link click "Open link in new window". The file will start downloading.
+Please right click on the above link and click "Open link in new window". The file will start downloading.
 {% endhint %}
 
 #### Full Integration
@@ -33,7 +33,7 @@ Please download the UAT submission template below, follow the steps, fill in the
 > \[TheAtlas UAT Test Full Integration Template.xlsx]\(../.gitbook/assets/TheAtlas UAT Test Full Integration Template.xlsx)
 
 {% hint style="info" %}
-Please right click on the above link click "Open link in new window". The file will start downloading.
+Please right click on the above link and click "Open link in new window". The file will start downloading.
 {% endhint %}
 
 You can also download the postman collection below:
@@ -41,5 +41,5 @@ You can also download the postman collection below:
 > \[TheAtlas UAT Test Full Integration Postman Collection.zip]\(../.gitbook/assets/TheAtlas UAT Test Full Integration Postman Collection.zip)
 
 {% hint style="info" %}
-Please right click on the above link click "Open link in new window". The file will start downloading.
+Please right click on the above link and click "Open link in new window". The file will start downloading.
 {% endhint %}
