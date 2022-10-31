@@ -66,6 +66,32 @@ The `search` function should be called prior to this call.
 *   **routing Object<**[**RouteElement**](broken-reference/)**>**
 
     Route and fare details. The structure is also Routing Elements, same as search response
+*   **bookingRequirement**                    **Object**<[<mark style="color:blue;">**Booking**</mark>](search.md#2.-route-element-schema)<mark style="color:blue;">**Requirement**</mark>> <mark style="color:blue;"></mark>                                                           &#x20;
+
+    The description for booking info schema.
+
+    * [<mark style="color:blue;">**Booking**</mark>](search.md#2.-route-element-schema)<mark style="color:blue;">**Requirement**</mark>
+      * #### <mark style="color:blue;">passenger</mark>                  Object<[PassengerRequirement](search.md#2.-route-element-schema)>&#x20;
+        *   **passengerType        Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
+
+            *   **type**                   <mark style="color:blue;">**string**</mark>
+
+                The data type of this element
+            * **required**             <mark style="color:blue;">**boolean**</mark>
+
+            &#x20;        <mark style="color:blue;">****</mark>         Identify if this element is required during booking
+
+            * **decription           **<mark style="color:blue;">**string**</mark>
+
+            &#x20;      The remark of this element for this booking
+        * **name                         Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
+        * **gender                      Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
+        * **birthday                    Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
+        * **nationality                 Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
+        * **cardType                   Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
+        * **cardNum                   Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
+        * **cardExpired              Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
+        * **cardIssuePlace         Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**    
 {% endtab %}
 
 {% tab title="Samples" %}
