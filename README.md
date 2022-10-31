@@ -1,5 +1,5 @@
 
-{% coverImg src="../.gitbook/assets/ATL_002_Gitbook-headers_Atlas_Quick-Start.png" %}
+{% coverImg src="./.gitbook/assets/ATL_002_Gitbook-headers_Atlas_Quick-Start.png" %}
 {% endcoverImg %}
 
 
