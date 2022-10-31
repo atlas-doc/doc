@@ -23,7 +23,7 @@
     1 ：Payment with credit card pass through to the airline
 
     0 : Payment with Prepayment
-*   **creditCard Object< **<mark style="color:blue;">**CreditCardElement**</mark>** > **<mark style="color:orange;">**Optional**</mark>
+*   **creditCard Object< **<mark style="color:blue;">**CreditCardElement**</mark>** > **<mark style="color:orange;">**Required**</mark>
 
     1 ：Payment with credit card pass through to the airline
 
@@ -48,16 +48,16 @@
       *   **cardHolderFirstName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           First name of the card holder
-      *   **cardHolderCountry **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+      *   **cardHolderCountry **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Required**</mark>
 
           The country code of card holder
-      *   **cardHolderCity **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+      *   **cardHolderCity **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Required**</mark>
 
           The city name of card holder
-      *   **cardHolderPostCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+      *   **cardHolderPostCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Required**</mark>
 
           The post code of card holder
-      *   **cardHolderAddress **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+      *   **cardHolderAddress **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Required**</mark>
 
           The address of card holder
 {% endtab %}
@@ -86,10 +86,10 @@
         "cardCVV": "000",
         "cardHolderLastName": "XXXXX",
         "cardHolderFirstName": "XXXXX",
-        "cardHolderCountry": null,
-        "cardHolderCity": null,
-        "cardHolderPostCode": null,
-        "cardHolderAddress": null
+        "cardHolderCountry": "XXXXX",
+        "cardHolderCity": "XXXXX",
+        "cardHolderPostCode": "XXXXX",
+        "cardHolderAddress": "XXXXX"
     }
 }
 ```
