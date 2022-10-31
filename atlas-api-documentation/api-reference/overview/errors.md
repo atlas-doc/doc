@@ -35,3 +35,20 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | **`6`** | Fare change error while booking     |
 
 ### <a href="#status-codes" id="status-codes"></a>
+
+
+### Ticket error codes
+
+| Code                                 | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| <mark style="color:blue;">601</mark> | Price change                               |
+| <mark style="color:blue;">602</mark> | Flight not found                           |
+| <mark style="color:blue;">603</mark> | Flight sould out                           |
+| <mark style="color:blue;">604</mark> | Payment declined by airline                |
+| <mark style="color:blue;">605</mark> | Incorrect passenger information            |
+| <mark style="color:blue;">606</mark> | Inconsistent flight information            |
+| <mark style="color:blue;">607</mark> | Fare not available                         |
+| <mark style="color:blue;">608</mark> | Duplicate booking                          |
+| <mark style="color:blue;">609</mark> | Contact email is blocked by airline        |
+| <mark style="color:blue;">610</mark> | Error happened during payment with airline |
+| <mark style="color:blue;">699</mark> | Unknown error                              |
