@@ -53,7 +53,17 @@
 
     2: Ticketed
     
-    -3: Cancelled(When the booking is failed due to the request information)
+    \-3: Cancelled(When the booking is failed due to the request information)
+*   #### ticketErrorCode                               <mark style="color:blue;">string</mark>                                                                         <mark style="color:orange;">Optional</mark>
+
+    It's only available when orderStatus = -3.&#x20;
+
+    Please check the definition of ticketErrorCode [**here**](../overview/errors.md#ticket-error-codes)****
+*   #### ticketErrorMessage                       <mark style="color:blue;">string</mark>                                                                         <mark style="color:orange;">Optional</mark>
+
+    It's only available when orderStatus = -3.&#x20;
+
+    Error message
 *   **totalPrice **<mark style="color:blue;">**decimal**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Total fare of this order in the currency TheAtlas settled with you.
