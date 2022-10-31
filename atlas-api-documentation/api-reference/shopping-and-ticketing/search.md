@@ -8,7 +8,7 @@ description: Create an order request to search for flights.
 
 No preceding function needs to be called before `Search`.
 
-### Endpoint
+### Endpoint {% debug uid="search_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/search.do](https://sandbox.atlaslovestravel.com/search.do)
 

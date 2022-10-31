@@ -4,7 +4,7 @@
 
 Refund quotation function should be called in prior of this call
 
-### Endpoint
+### Endpoint {% debug uid="refund_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/refund.do](https://sandbox.atlaslovestravel.com/refund.do)
 

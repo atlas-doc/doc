@@ -4,7 +4,7 @@
 
 The `search` function should be called prior to this call.
 
-### Endpoint
+### Endpoint {% debug uid="verify_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/verify.do](https://sandbox.atlaslovestravel.com/verify.do)
 

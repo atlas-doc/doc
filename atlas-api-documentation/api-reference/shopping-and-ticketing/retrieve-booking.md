@@ -4,7 +4,7 @@
 
 `Order` function should be called in prior to this call.
 
-### Endpoint
+### Endpoint {% debug uid="queryOrderDetails_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/queryOrderDetails.do](https://sandbox.atlaslovestravel.com/queryOrderDetails.do)
 

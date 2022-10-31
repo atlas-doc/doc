@@ -4,7 +4,7 @@
 
 `Verify` function should be called in prior to this call.
 
-### Endpoint
+### Endpoint {% debug uid="order_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/order.do](https://sandbox.atlaslovestravel.com/order.do)
 

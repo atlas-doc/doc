@@ -48,7 +48,7 @@ Any request you initiate needs to be authenticated using your API credentials. T
 
 ### 2. Finish the search API integration
 
-#### 1) Endpoint
+#### 1) Endpoint {% debug uid="search_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/search.do](https://sandbox.atlaslovestravel.com/search.do)
 

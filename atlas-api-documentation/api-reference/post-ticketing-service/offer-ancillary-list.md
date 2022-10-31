@@ -4,7 +4,7 @@
 
 No preceding function needs to be carried out.
 
-### Endpoint
+### Endpoint {% debug uid="searchAncillary_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/searchAncillary.do](https://sandbox.atlaslovestravel.com/searchAncillary.do)
 
