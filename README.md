@@ -9,7 +9,7 @@ This guide shows you how Atlas API instantly connects you to over 100 LCCs — o
 
 The integration is a simple four-step process:
 
-![](../.gitbook/assets/FlowChart_1_QuickStart.png)
+![](./.gitbook/assets/FlowChart_1_QuickStart.png)
 
 Let’s get you started!
 
