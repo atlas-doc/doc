@@ -52,6 +52,8 @@
     1: Ticketing-in-Process
 
     2: Ticketed
+    
+    -3: Cancelled(When the booking is failed due to the request information)
 *   **totalPrice **<mark style="color:blue;">**decimal**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Total fare of this order in the currency TheAtlas settled with you.
