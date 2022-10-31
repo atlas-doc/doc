@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Quick Start](atlas-api-documentation/quick-start.md)
+* [Quick Start](atlas-api-documentation/README.md)
 * [API Reference](atlas-api-documentation/api-reference/README.md)
   * [Overview](atlas-api-documentation/api-reference/overview/README.md)
     * [Making requests](atlas-api-documentation/api-reference/overview/making-requests.md)
