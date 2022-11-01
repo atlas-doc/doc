@@ -35,5 +35,3 @@
   * [Atlas API Post-ticketing](atlas-api-documentation/faqs/atlas-api-post-ticketing.md)
   * [Atlas API Payments](atlas-api-documentation/faqs/atlas-api-payments.md)
 * [Change Logs](atlas-api-documentation/change-logs.md)
-
-## Reference
