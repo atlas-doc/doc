@@ -2,7 +2,7 @@
 
 **Which airlines will our customers be able to book with?**
 
-We partner with over 100 airlines; the complete list of airlines is available[here](https://capability.doc.atlaslovestravel.com/).We keep adding new airlines to our list as and when we partner with them. You can also view the list of airlines under Airline List on ATRIP.
+We partner with over 150 airlines; the complete list of airlines is available [here](https://www.atriptech.com/#/document/list).We keep adding new airlines to our list as and when we partner with them. You can also view the list of airlines under Airline List on ATRIP.
 
 Once you are on board with us, you should be able to offer all the routes available with our partner airlines almost instantly.
 
@@ -17,12 +17,6 @@ We want you to test Atlas API functionality before you make a commitment, so tak
 **Are there any restrictions on the API functionality for any of the airlines?**
 
 We want to offer maximum opportunities for both our partner airlines and travel agencies, so Atlas API supports all functionalities, as provided by Airlines.
-
-
-
-**Can we set up and activate our travel agency's credentials against each LCC using Atlas API?**
-
-We hear you and are working on adding this functionality by Q2/2022.
 
 
 
