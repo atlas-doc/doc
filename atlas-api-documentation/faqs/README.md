@@ -8,9 +8,7 @@
 
 - [atlas-api-general-information](atlas-api-general-information.md)
 
-- [atlas-api-api-search](atlas-api-api-search.md)
-
-- [atlas-order-api](atlas-order-api.md)
+- [atlas-api-search&booking](atlas-api-api-search.md)
 
 - [atlas-api-post-ticketing](atlas-api-post-ticketing.md)
 
