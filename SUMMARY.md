@@ -30,7 +30,7 @@
 * [UAT Submission Guide](atlas-api-documentation/uat-submission-guide.md)
 * [FAQs](atlas-api-documentation/faqs/README.md)
   * [Atlas API General Information](atlas-api-documentation/faqs/atlas-api-general-information.md)
-  * [Atlas Search&Booking API](atlas-api-documentation/faqs/atlas-api-api-search.md)
+  * [Atlas API Search&Booking](atlas-api-documentation/faqs/atlas-api-api-search.md)
   * [Atlas API Post-ticketing](atlas-api-documentation/faqs/atlas-api-post-ticketing.md)
   * [Atlas API Payments](atlas-api-documentation/faqs/atlas-api-payments.md)
 * [Change Logs](atlas-api-documentation/change-logs.md)
