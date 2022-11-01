@@ -1,4 +1,4 @@
-# Atlas Search&Booking API
+# Atlas API Search&Booking
 
 **Can our users change the currency to see ticket prices in their local currency with Atlas?**
 
