@@ -52,4 +52,4 @@ Atlas will provide a web portal to support ticket booking, ticketing, and post t
 
 **Does Atlas provide a fare guarantee?**
 
-The fare is guaranteed after the ticket booking is paid for. Atlas API will automatically issue tickets once the transaction is complete. The entire process usually takes up to 10 minutes; in some rare scenarios, it may go up to 1 hour.
+The fare is guaranteed after the ticket booking is paid to Atlas. Atlas API will automatically issue tickets once the transaction is complete. The entire process usually takes up to 10 minutes; in some rare scenarios, it may go up to 1 hour.
