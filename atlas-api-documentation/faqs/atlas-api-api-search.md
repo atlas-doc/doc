@@ -1,14 +1,8 @@
-# Atlas API API Search
+# Atlas Search&Booking API
 
 **Can our users change the currency to see ticket prices in their local currency with Atlas?**
 
 Currently, your users can only see ticket prices in the currency we will settle with you. We don't offer the option to change currency at this time. If you have specific needs, get in touch with us and let’s find a solution together.
-
-
-
-**Can we control/filter the carriers in search response with Atlas?**
-
-Currently the API doesn’t allow for this feature. We are working to add this feature so our partner agencies can limit the search results to include only their preferred airlines. This functionality is in our roadmap for Q2/2022.
 
 
 
@@ -33,13 +27,6 @@ Contrary to Global Distribution Systems (GDSs), most LCCs do not provide cabin c
 **How many results does the search query return, and what is the default sorting order?**
 
 By default, Atlas API will return all available offers in the search response. We will soon add functionality to let you control the number of search results by modifying the API. The default sort order is from lowest fare to highest fare.
-
-
-
-**Does Atlas support special fares with passenger restrictions?**
-
-The special fare functionality, with passenger restrictions such as age and nationality, is currently not supported. We plan to support this functionality starting Q2 2022.
-
 
 
 **What does the `seatCount`element denote in the search response?**
