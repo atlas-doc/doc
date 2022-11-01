@@ -2,7 +2,7 @@
 
 **Which airlines will our customers be able to book with?**
 
-We partner with over 150 airlines; the complete list of airlines is available [here](https://www.atriptech.com/#/document/list).We keep adding new airlines to our list as and when we partner with them. You can also view the list of airlines under Airline List on ATRIP.
+We partner with over 150 airlines; the complete list of airlines is available [here](https://www.atriptech.com/#/airline/list).We keep adding new airlines to our list as and when we partner with them. You can also view the list of airlines under Airline List on ATRIP.
 
 Once you are on board with us, you should be able to offer all the routes available with our partner airlines almost instantly.
 
