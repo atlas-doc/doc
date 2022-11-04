@@ -8,7 +8,7 @@ This method is to give client the access to Atlas customer service portal with S
 
 No preceding function needs to be carried out.
 
-## Endpoint
+## Endpoint {% debug uid="toOrderDetailWeb_1.0" %}{% enddebug %}
 
 [https://sandbox.atlaslovestravel.com/toOrderDetailWeb.do](https://sandbox.atlaslovestravel.com/toOrderDetailWeb.do)
 
