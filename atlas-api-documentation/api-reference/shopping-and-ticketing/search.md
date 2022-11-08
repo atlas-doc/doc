@@ -486,11 +486,11 @@ Child tax per passenger.
 
 **`InfantPrice`  **<mark style="color:blue;">**decimal**</mark>
 
-Reserved, currently does not support infant purchase.
+Infant fare per passenger.
 
 **`InfantTax`  **<mark style="color:blue;">**decimal**</mark>
 
-Reserved, currently does not support infant purchase.
+Infant tax per passenger.
 
 **`transactionFeePerPax`  **<mark style="color:blue;">**decimal**</mark>
 
