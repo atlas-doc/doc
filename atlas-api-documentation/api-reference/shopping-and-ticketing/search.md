@@ -36,7 +36,7 @@ Adult passenger count, the number can be 0-8
 
 **`infantNum`  **<mark style="color:blue;">**int**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Infan passenger count, no more than the number of adult
+Infant passenger count, no more than the number of adult
 
 **`fromCity`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
