@@ -31,6 +31,8 @@
           0 ADT
 
           1 CHD
+          
+          2 INF
       *   **birthday **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Birthday, Format: YYYYMMDD
@@ -210,6 +212,8 @@
           0 ADT
 
           1 CHD
+          
+          2 INF
       *   **birthday **<mark style="color:blue;">**string**</mark>
 
           Birthday, Format: YYYYMMDD
