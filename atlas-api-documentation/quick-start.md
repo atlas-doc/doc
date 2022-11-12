@@ -45,7 +45,7 @@ Once the request is submitted, we send the search parameters to our robust searc
 
 Here's how the function works:
 
-- [Search](../api-reference/shopping-and-ticketing/search.md)
+- [Search](./api-reference/shopping-and-ticketing/search.md)
 
 
 Please record `routingIdentifier` for each routing offer.
@@ -56,7 +56,7 @@ The offers returned as a result of the search query will have detailed informati
 
 Obtain the `routingIdentifier` for the selected routing and send it with the verification request.
 
-- [Verify](/api-reference/shopping-and-ticketing/verify.md)
+- [Verify](./api-reference/shopping-and-ticketing/verify.md)
 
 
 ## 3. Order
