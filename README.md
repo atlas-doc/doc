@@ -33,7 +33,7 @@ As a travel seller, your goal is to help your customers find the best flight rou
 
 The booking process is relatively simple, as illustrated:
 
-![](../.gitbook/assets/FlowChart_2_IssueTicket.png)
+![](./.gitbook/assets/FlowChart_2_IssueTicket.png)
 
 ## 1. Search
 
@@ -45,7 +45,7 @@ Once the request is submitted, we send the search parameters to our robust searc
 
 Here's how the function works:
 
-- [Search](./api-reference/shopping-and-ticketing/search.md)
+- [Search](./atlas-api-documentation/api-reference/shopping-and-ticketing/search.md)
 
 
 Please record `routingIdentifier` for each routing offer.
@@ -56,7 +56,7 @@ The offers returned as a result of the search query will have detailed informati
 
 Obtain the `routingIdentifier` for the selected routing and send it with the verification request.
 
-- [Verify](./api-reference/shopping-and-ticketing/verify.md)
+- [Verify](./atlas-api-documentation/api-reference/shopping-and-ticketing/verify.md)
 
 
 ## 3. Order
@@ -69,7 +69,7 @@ Reference the `sessionId` recorded from the verification response and send it al
 
 As soon as they submit their details, they will see the detailed itinerary and ancillary information, PNR number, and information on cancellation, change and refunds.
 
-- [Order](./api-reference/shopping-and-ticketing/order.md)
+- [Order](./atlas-api-documentation/api-reference/shopping-and-ticketing/order.md)
 
 ## 4. Pay
 
@@ -84,16 +84,16 @@ If you choose the second option, we will send your credit card information along
 
 Reference the `orderNo` from the order response when sending the payment request.
 
-- [payment](./api-reference/shopping-and-ticketing/payment.md)
+- [payment](./atlas-api-documentation/api-reference/shopping-and-ticketing/payment.md)
 
 
 ## 5. Ticket Notification Webhook
 
 Atlas uses webhooks to automatically notify partner agencies when there is a change in flight schedule for any of their orders. You can then inform your customers of the change.
 
-Please follow the steps [here](./api-reference/notifications-by-webhook/) to register your webhooks and start receiving notifications.
+Please follow the steps [here](./atlas-api-documentation/api-reference/notifications-by-webhook/) to register your webhooks and start receiving notifications.
 
 In case of any changes, you will receive `order.ticketed` notification on your server. You can process this information and act on it as needed.
 
-- [ticketing-complete-notification](./api-reference/notifications-by-webhook/ticketing-complete-notification.md)
+- [ticketing-complete-notification](./atlas-api-documentation/api-reference/notifications-by-webhook/ticketing-complete-notification.md)
 
