@@ -91,7 +91,7 @@ Reference the `orderNo` from the order response when sending the payment request
 
 Atlas uses webhooks to automatically notify partner agencies when there is a change in flight schedule for any of their orders. You can then inform your customers of the change.
 
-Please follow the steps [here](./atlas-api-documentation/api-reference/notifications-by-webhook/) to register your webhooks and start receiving notifications.
+Please follow the steps [here](./atlas-api-documentation/api-reference/notifications-by-webhook/README.md) to register your webhooks and start receiving notifications.
 
 In case of any changes, you will receive `order.ticketed` notification on your server. You can process this information and act on it as needed.
 
