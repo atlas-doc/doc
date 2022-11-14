@@ -13,3 +13,6 @@ Each offer represents flights that meet your search criteria. Your users will th
 - [payment](payment.md)
 
 - [retrieve-booking](retrieve-booking.md)
+
+- [regenerateorder](regenerateorder.md)
+
