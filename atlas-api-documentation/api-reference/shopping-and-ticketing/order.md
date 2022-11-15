@@ -152,8 +152,8 @@
         "name": "Way",
         "address": null,
         "postcode": null,
-        "email": "qyjhb2@163.com",
-        "mobile": "13580579231"
+        "email": "xxxxxxxxx@xxx.com",
+        "mobile": "0065-81234567"
     },
     "requestSource": ""
 }
