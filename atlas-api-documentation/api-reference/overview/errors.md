@@ -51,4 +51,9 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">608</mark> | Duplicate booking                          |
 | <mark style="color:blue;">609</mark> | Contact email is blocked by airline        |
 | <mark style="color:blue;">610</mark> | Error happened during payment with airline |
+| <mark style="color:blue;">614</mark> | Wrong Age |
+| <mark style="color:blue;">615</mark> | Payment completed but failed to get the PNR number from the airline |
+| <mark style="color:blue;">616</mark> | 3DS Authetication |
+| <mark style="color:blue;">617</mark> | Insufficient balance |
+| <mark style="color:blue;">698</mark> | Technical error on the airline side - !!! PAYMENT STATUS UNKNOWN !!! - PLEASE CONTACT THE AIRLINE BEFORE TRYING TO BOOK AGAIN.|
 | <mark style="color:blue;">699</mark> | Unknown error                              |
