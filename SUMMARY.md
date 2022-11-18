@@ -6,6 +6,7 @@
     * [Making requests](atlas-api-documentation/api-reference/overview/making-requests.md)
     * [Errors](atlas-api-documentation/api-reference/overview/errors.md)
     * [Test mode](atlas-api-documentation/api-reference/overview/test-mode.md)
+    * [Sandbox Test Routes](atlas-api-documentation/api-reference/overview/sandbox-test-routes.md)
   * [Shopping and Ticketing](atlas-api-documentation/api-reference/shopping-and-ticketing/README.md)
     * [Search](atlas-api-documentation/api-reference/shopping-and-ticketing/search.md)
     * [Verify](atlas-api-documentation/api-reference/shopping-and-ticketing/verify.md)
