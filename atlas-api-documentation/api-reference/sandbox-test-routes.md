@@ -63,3 +63,15 @@
 | <p>SFO</p><p> </p>                                                 | <p>LAS </p><p> </p>                                                                                                                                                      |
 | <p>NYC</p><p> </p>                                                 | <p>MIA </p><p> </p>                                                                                                                                                      |
 | <p>SAN</p><p> </p>                                                 | <p>ORL </p><p> </p>                                                                                                                                                      |
+
+
+
+#### Flyadeal Air test routes
+
+
+| FromCity                                                 | ToCity             |
+| ------------------------------------------------------ | -------------------- |
+| <p>RUH</p><p> </p>                                                 | <p>JED </p><p> </p>                                                                                                                                                      |
+| <p>DMM</p><p> </p>                                                 | <p>RUH </p><p> </p>                                                                                                                                                      |
+| <p>DXB</p><p> </p>                                                 | <p>RUH </p><p> </p>                                                                                                                                                      |
+| <p>JED</p><p> </p>                                                 | <p>RUH </p><p> </p>                                                                                                                                                      |
