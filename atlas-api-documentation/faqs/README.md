@@ -14,4 +14,6 @@
 
 - [atlas-api-payments](atlas-api-payments.md)
 
+- [atlas-order-api](atlas-order-api.md)
+
 
