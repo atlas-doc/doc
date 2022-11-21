@@ -10,10 +10,11 @@
 
 - [atlas-api-search&booking](atlas-api-api-search.md)
 
+- [atlas-order-api](atlas-order-api.md)
+
 - [atlas-api-post-ticketing](atlas-api-post-ticketing.md)
 
 - [atlas-api-payments](atlas-api-payments.md)
 
-- [atlas-order-api](atlas-order-api.md)
 
 
