@@ -34,7 +34,7 @@
 * [FAQs](atlas-api-documentation/faqs/README.md)
   * [Atlas API General Information](atlas-api-documentation/faqs/atlas-api-general-information.md)
   * [Atlas API Search&Booking](atlas-api-documentation/faqs/atlas-api-api-search.md)
+  * [Atlas API Order](atlas-api-documentation/faqs/atlas-order-api.md)
   * [Atlas API Post-ticketing](atlas-api-documentation/faqs/atlas-api-post-ticketing.md)
   * [Atlas API Payments](atlas-api-documentation/faqs/atlas-api-payments.md)
-  * [Atlas API Order](atlas-api-documentation/faqs/atlas-order-api.md)
 * [Change Logs](atlas-api-documentation/change-logs.md)
