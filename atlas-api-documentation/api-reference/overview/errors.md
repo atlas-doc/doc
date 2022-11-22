@@ -36,8 +36,17 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 ### <a href="#status-codes" id="status-codes"></a>
 
+#### Query orderDetails error codes
+| Code                                 | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| <mark style="color:blue;">800</mark> | Order not exists                           |
+| <mark style="color:blue;">9999</mark> | System error                          |
+| <mark style="color:blue;">900</mark> | Unauthorized access              |
 
-### Ticket error codes
+
+
+
+#### Ticket error codes
 
 | Code                                 | Description                                |
 | ------------------------------------ | ------------------------------------------ |
