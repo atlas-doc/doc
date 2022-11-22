@@ -36,15 +36,40 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 ### <a href="#status-codes" id="status-codes"></a>
 
-#### Query orderDetails error codes
+
+#### Verify error codes
+
 | Code                                 | Description                                |
 | ------------------------------------ | ------------------------------------------ |
-| <mark style="color:blue;">800</mark> | Order not exists                           |
-| <mark style="color:blue;">9999</mark> | System error                          |
-| <mark style="color:blue;">900</mark> | Unauthorized access              |
+| <mark style="color:blue;">200</mark> | Illegal routing identifier                               |
+| <mark style="color:blue;">201</mark> | Invalid routing                           |
+| <mark style="color:blue;">202</mark> | Routing identifier expired                           |
+| <mark style="color:blue;">203</mark> | Airline closed                |
+| <mark style="color:blue;">204</mark> | The airline does not support the current interface           |
+| <mark style="color:blue;">205</mark> | Timed out           |
+| <mark style="color:blue;">206</mark> | No flights                         |
+| <mark style="color:blue;">207</mark> | The target flight does not exist                          |
+| <mark style="color:blue;">208</mark> | Cabin changed        |
+| <mark style="color:blue;">299</mark> | Verify failed |
+| <mark style="color:blue;">9999</mark> | System error |
+| <mark style="color:blue;">900</mark> | Unauthorized access |
 
+#### Order error codes
 
-
+| Code                                 | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| <mark style="color:blue;">300</mark> | Invalid session information                |
+| <mark style="color:blue;">301</mark> | Session does not exist or timed out        |
+| <mark style="color:blue;">302</mark> | The target flight does not exist           |
+| <mark style="color:blue;">303</mark> | Airline closed                             |
+| <mark style="color:blue;">304</mark> | Verify failed                              |
+| <mark style="color:blue;">305</mark> | Invalid routing                            |
+| <mark style="color:blue;">306</mark> | Cabin changed                              |
+| <mark style="color:blue;">307</mark> | Illegal request parameters                 |
+| <mark style="color:blue;">308</mark> | price changed                              |
+| <mark style="color:blue;">309</mark> | ancillary not found                        |
+| <mark style="color:blue;">900</mark> | unauthorized access                        |
+| <mark style="color:blue;">9999</mark> | system error                              |
 
 #### Ticket error codes
 
@@ -66,3 +91,12 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">617</mark> | Insufficient balance |
 | <mark style="color:blue;">698</mark> | Technical error on the airline side - !!! PAYMENT STATUS UNKNOWN !!! - PLEASE CONTACT THE AIRLINE BEFORE TRYING TO BOOK AGAIN.|
 | <mark style="color:blue;">699</mark> | Unknown error                              |
+
+
+
+#### Query order error codes
+| Code                                 | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| <mark style="color:blue;">800</mark> | Order not exists                           |
+| <mark style="color:blue;">9999</mark> | System error                          |
+| <mark style="color:blue;">900</mark> | Unauthorized access              |
