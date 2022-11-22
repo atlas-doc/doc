@@ -10,7 +10,7 @@ Once you are on board with us, you should be able to offer all the routes availa
 
 **Can we test the API functionality before we partner with Atlas?**
 
-We want you to test Atlas API functionality before you make a commitment, so take a minute to fill out [this form](https://atlaslovestravel.com/contact/), and we will get in touch with you within 24 hours. To protect our partner airlines, we need to confirm your details and get you to sign an NDA. As soon as we have verified your identity, your test credentials will be in your inbox. 
+We want you to test Atlas API functionality before you make a commitment, so take a minute to fill out [this form](https://atlaslovestravel.com/get-started/), and we will get in touch with you within 2 working days. To protect our partner airlines, we need to confirm your details and get you to sign an NDA. As soon as we have verified your identity, your test credentials will be in your inbox. 
 
 
 
@@ -32,7 +32,7 @@ We are currently providing general promotional fare functionality, and we will s
 
 
 
-**What is the Look-to-book (L2B) ratio for Atlas?**
+**What is the look-to-book (L2B) ratio for Atlas?**
 
 The L2B ratio will be determined as per the commercial agreement between Atlas and your agency.
 
