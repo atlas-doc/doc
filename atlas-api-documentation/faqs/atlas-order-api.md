@@ -6,8 +6,6 @@ We allow you to hold the inventory and guarantee the price for 30 mins after an 
 
 
 
-**Can we release the inventory which is onholdat our end?**
+**Can we release the inventory which is on hold at our end?**
 
 The Atlas API holds the inventory after the `OrderAPI` calls. We have a built-in mechanism to release the inventory after 30 minutes have passed. Different airlines have different mechanisms to release inventory; hence we cannot provide partner agencies with a function to request the release of inventory.
-
-
