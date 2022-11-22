@@ -6,15 +6,12 @@
 
 # FAQs
 
-- [atlas-api-general-information](atlas-api-general-information.md)
+- [General Information](atlas-api-general-information.md)
 
-- [atlas-api-search&booking](atlas-api-api-search.md)
+- [Search & Book](atlas-api-api-search.md)
 
-- [atlas-order-api](atlas-order-api.md)
+- [Order](atlas-order-api.md)
 
-- [atlas-api-post-ticketing](atlas-api-post-ticketing.md)
+- [Post-Ticketing](atlas-api-post-ticketing.md)
 
-- [atlas-api-payments](atlas-api-payments.md)
-
-
-
+- [Payments](atlas-api-payments.md)
