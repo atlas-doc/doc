@@ -84,7 +84,7 @@ If you choose the second option, we will send your credit card information along
 
 Reference the `orderNo` from the order response when sending the payment request.
 
-- [payment](./atlas-api-documentation/api-reference/shopping-and-ticketing/payment.md)
+- [Payment](./atlas-api-documentation/api-reference/shopping-and-ticketing/payment.md)
 
 
 ## 5. Ticket Notification Webhook
