@@ -22,7 +22,7 @@ Please add them to the header of each post request.
 
 {% hint style="info" %}
 **Tip**: We've put together a Postman Collection that contains all of the requests you'll need to follow along with this guide; please download it 
- [here](../.gitbook/assets/TheAtlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip)
+ [here](../.gitbook/assets/Atlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip)
 
 {% endhint %}
 
