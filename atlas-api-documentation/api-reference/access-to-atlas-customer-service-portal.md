@@ -1,8 +1,8 @@
-# Access to Atlas Customer Service Portal
+# Access to ATRIP 
 
 ## Description
 
-This method is to give client the access to Atlas customer service portal with SSO in client's own system.&#x20;
+This method is to give client the access to ATRIP (Air Travel Retailing and Information Platform) with SSO in client's own system.&#x20;
 
 ## Dependency
 
@@ -27,7 +27,7 @@ No preceding function needs to be carried out.
     This is to identifier the operator's name in client's system, Atlas will grant access to this operator and track his/her actions in Atlas customer service portal.
 *   #### role                                <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
 
-    This is to identifier the operator's role, Atlas will grant access to this operator according to the role client send here. Here're the acceptable options &#x20;
+    This is to identify the operator's role. Atlas will grant access to this operator according to the role assigned. Here are the acceptable options: &#x20;
 
     TICKETING : Access to manage orders and request post ticketing services
 
@@ -35,7 +35,7 @@ No preceding function needs to be carried out.
 
     TECH : Access to manage the system configurations
 
-    ADMIN : All access
+    ADMIN : Full access
 
 
 {% endtab %}
