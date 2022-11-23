@@ -12,4 +12,4 @@ Your customers have an option to make changes or cancel their booking once they 
 * Cancelling or refunding an order
 * Adding webhooks to receive automated notifications
 
-Please note that not all airlines would offer these services
+Please note that not all airlines would offer these services.
