@@ -25,7 +25,7 @@
     * [Schedule Change Notification](atlas-api-documentation/api-reference/notifications-by-webhook/schedule-change-notification.md)
     * [Addon Complete Notification](atlas-api-documentation/api-reference/notifications-by-webhook/addon-complete-notification.md)
     * [Refund Complete Notification](atlas-api-documentation/api-reference/notifications-by-webhook/refund-complete-notification.md)
-  * [Access To Atlas Customer Service Portal](atlas-api-documentation/api-reference/access-to-atlas-customer-service-portal.md)
+  * [Access To ATRIP](atlas-api-documentation/api-reference/access-to-atlas-customer-service-portal.md)
 * [Advanced](atlas-api-documentation/advanced/README.md)
   * [Add Ancillaries](atlas-api-documentation/advanced/add-ancillaries.md)
   * [Refund/Cancel an Order](atlas-api-documentation/advanced/refund-cancel-an-order.md)
