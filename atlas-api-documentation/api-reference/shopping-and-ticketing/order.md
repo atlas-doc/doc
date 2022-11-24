@@ -89,12 +89,12 @@
                 unique identifier for this ancillary's offer.
 *   **contact Object<**<mark style="color:blue;">**ContactElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
-    Passengers' information.
+    Contact's information.
 
     * <mark style="color:blue;">**ContactElement**</mark>
       *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          Contact name.
+          Contact name, please follow this format : LastName/FirstName MiddleName
       *   **address **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Contact address.
