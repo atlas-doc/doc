@@ -76,6 +76,9 @@
 *   **vendorTotalPrice **<mark style="color:blue;">**decimal**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Total fare of this order in the vendor's currency, reference for you to generate the specific credit card.
+*   **vendorTotalAncillaryPrice **<mark style="color:blue;">**decimal**</mark>** 
+
+    Total ancillary's fare of this order in the vendor's currency.
 *   **vendorCurrency **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Vendor's currency.
@@ -92,7 +95,11 @@
     Ticket information for passengers, the same format as the PAXTicketInfo in order response.
 *   **routing Object<**[**RouteElement**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
 
-    Route and fare details. The structure is also Routing Elements, same as search response
+    Route and fare details. The structure is also Routing Elements, same as search response.
+*   **airlineBookings Array<**[**ManageBookingElement**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
+
+    Booking information for airline.    
+    
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -144,6 +151,7 @@
     "currency": "USD",
     "tktLimitTime": "2022-01-19 16:51:30",
     "vendorTotalPrice": 45000.00,
+    "vendorTotalAncillaryPrice":3000,
     "vendorCurrency": "KRW",
     "adultTotalFare": 18.95,
     "childTotalFare": 18.95,
@@ -225,6 +233,18 @@
         "vendorFare": null,
         "bundleOptions": []
     },
+    "airlineBookings":
+        [
+            {
+                "airlineCode":"FR",
+                "airlineName":"xxx",
+                "airlinePnr":"xxx",
+                "airlineWebSiteAddress":"xxx.com",
+                "mmbEmail":"xxx@email.com",
+                "tailDigitsOfPaymentCard:"xxxx",
+                "extras":[{"name":"email","remark":"emailAddress","value":"xxx@sample.com"}]
+            }
+        ],
     "itineraryDownload": "https://sandbox.atlaslovestravel.com/itineraryDownload.do?orderNo=intP%2Biv7Jv70kjemGsbAJ10N%2F%2Bzwdpj%2F"
 }
 ```
