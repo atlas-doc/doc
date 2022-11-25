@@ -106,7 +106,7 @@
           Contact email.
       *   **mobile **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          Contact mobile.
+          Contact mobile, please follow this format : XXXX(digital country code)-XXXXXXXX(phone number), here're the examples: 0001-87291810, 0086-13928109091, 0971-19201998
 *   **requestSource **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     The tag to identify which channel does this traffic come from.
