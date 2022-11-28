@@ -20,11 +20,15 @@ The API Key is used to authenticate your API requests. Any request that doesn't 
 
 Please add them to the header of each post request.
 
-{% hint style="info" %}
-**Tip**: We've put together a Postman Collection that contains all of the requests you'll need to follow along with this guide; please download it 
+
+> **Tip**: We've put together a Postman Collection that contains all of the requests you'll need to follow along with this guide; please download it 
  [here](../.gitbook/assets/Atlas UAT Test Shopping & Ticketing Services Only Postman Collection.zip)
 
+{% hint style="info" %}
+Please right click on the above link and click "Open link in new window". The file will start downloading.
 {% endhint %}
+
+
 
 ## Issue a Ticket
 
