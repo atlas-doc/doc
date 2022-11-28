@@ -78,7 +78,7 @@
     Total fare of this order in the vendor's currency, reference for you to generate the specific credit card.
 *   **vendorTotalAncillaryPrice **<mark style="color:blue;">**decimal**</mark>** 
 
-    Total ancillary's fare of this order in the vendor's currency.
+    Total ancillary fare of this order in the vendor's currency.
 *   **vendorCurrency **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Vendor's currency.
@@ -95,7 +95,7 @@
     Ticket information for passengers, the same format as the PAXTicketInfo in order response.
 *   **routing Object<**[**RouteElement**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
 
-    Route and fare details. The structure is also Routing Elements, same as search response.
+    Route and fare details. The structure is the same as "Routing Element" in search response.
 *   **airlineBookings Array<**[**ManageBookingElement**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
 
     Booking information for airline.    
