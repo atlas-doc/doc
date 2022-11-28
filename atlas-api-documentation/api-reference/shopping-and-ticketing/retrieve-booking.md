@@ -95,7 +95,7 @@
     Ticket information for passengers, the same format as the PAXTicketInfo in order response.
 *   **routing Object<**[**RouteElement**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
 
-    Route and fare details. The structure is the same as "Routing Element" in search response.
+    Route and fare details. The structure is the same format as "Routing Element" in search response.
 *   **airlineBookings Array<**[**ManageBookingElement**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
 
     Booking information for airline.    
