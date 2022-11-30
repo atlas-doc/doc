@@ -4,15 +4,15 @@ Any booking transaction will start with a search for flights. Once the Atlas API
 
 Each offer represents flights that meet your search criteria. Your users will then go on to select an offer and proceed by providing more information about passengers and then place the order and pay for it. Once they have booked, they may want to retrieve their ticket(s) to make changes or add ancillary services. In this section, we will walk you through all these steps in detail.
 
-- [search](search.md)
+- [Search](search.md)
 
-- [verify](verify.md)
+- [Verify](verify.md)
 
-- [order](order.md)
+- [Order](order.md)
 
-- [payment](payment.md)
+- [Payment](payment.md)
 
-- [retrieve-booking](retrieve-booking.md)
+- [Retrieve Booking](retrieve-booking.md)
 
-- [regenerateorder](regenerateorder.md)
+- [Regenerate Order](regenerateorder.md)
 
