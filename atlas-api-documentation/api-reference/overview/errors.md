@@ -15,6 +15,22 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">9999</mark> | System error                              |
 
 
+#### Search error codes
+| Code                                 | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| <mark style="color:blue;">100</mark> | Missing required request data                               |
+| <mark style="color:blue;">101</mark> | Illegal request data                         |
+| <mark style="color:blue;">102</mark> | Illegal request param: {0}                           | 
+| <mark style="color:blue;">103</mark> | Round-trip search is not supported                               |
+| <mark style="color:blue;">104</mark> | Round-trip search is not allowed                               |
+| <mark style="color:blue;">105</mark> | OD is not in client's round-trip white list                               |
+| <mark style="color:blue;">106</mark> | Search is not allowed                               |
+| <mark style="color:blue;">107</mark> | Insufficient balance                               |
+| <mark style="color:blue;">108</mark> | Route is restricted                               |
+| <mark style="color:blue;">109</mark> | The number of searches exceeded the limit                               |
+| <mark style="color:blue;">900</mark> | Unauthorized access                              |
+
+
 #### Verify error codes
 
 | Code                                 | Description                                |
