@@ -61,6 +61,18 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">308</mark> | Price changed                              |
 | <mark style="color:blue;">309</mark> | Ancillary not found                        |
 
+#### Payment  error codes
+| Code                                 | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| <mark style="color:blue;">400</mark> | Illegal request param                               |
+| <mark style="color:blue;">401</mark> | Time out of payment                          |
+| <mark style="color:blue;">402</mark> | Order status does not support payment                        |
+| <mark style="color:blue;">403</mark> | Unsupported payment method               |
+| <mark style="color:blue;">404</mark> | The order is already paid            |
+| <mark style="color:blue;">405</mark> | Illegal transaction state            |
+| <mark style="color:blue;">800</mark> | Order not exists:            |
+| <mark style="color:blue;">900</mark> | Unauthorized access            |
+
 #### Ticket error codes
 
 | Code                                 | Description                                |
@@ -81,6 +93,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">617</mark> | Insufficient balance |
 | <mark style="color:blue;">698</mark> | Technical error on the airline side - !!! PAYMENT STATUS UNKNOWN !!! - PLEASE CONTACT THE AIRLINE BEFORE TRYING TO BOOK AGAIN.|
 | <mark style="color:blue;">699</mark> | Unknown error                              |
+
 
 
 
