@@ -70,6 +70,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">403</mark> | Unsupported payment method               |
 | <mark style="color:blue;">404</mark> | The order is already paid            |
 | <mark style="color:blue;">405</mark> | Illegal transaction state            |
+| <mark style="color:blue;">406</mark> | Payment operation is in progress            |
 | <mark style="color:blue;">800</mark> | Order not exists:            |
 | <mark style="color:blue;">900</mark> | Unauthorized access            |
 
