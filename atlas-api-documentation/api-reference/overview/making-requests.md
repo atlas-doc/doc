@@ -1,7 +1,5 @@
 # Making requests
 
-### Making requests
-
 Let’s help you with the building blocks to set up your first request.
 
 #### Authentication
@@ -23,12 +21,10 @@ Content-Type: application/json
 
 #### Compression
 
-API request responses can be very large, so we recommend enabling compression for responses returned by the API. Include `Accept-Encoding` in the header to enable compression:
+API responses can be very large, so we recommend enabling compression for responses returned by the API. Include `Accept-Encoding` in the header to enable compression:
 
 ```
 Accept-Encoding: gzip 
 ```
 
 Most HTTP clients will decompress responses. If your client doesn’t have this functionality built in, you'll need to configure it.
-
-
