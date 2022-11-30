@@ -32,7 +32,7 @@ Adult passenger count, the number can be 1-9
 
 **`childNum`  **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-Adult passenger count, the number can be 0-8
+Child passenger count, the number can be 0-8
 
 **`infantNum`  **<mark style="color:blue;">**int**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
@@ -40,11 +40,11 @@ Infant passenger count, no more than the number of adult
 
 **`fromCity`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-IATA Code of departure city
+IATA Code of departure city or airport
 
 **`toCity`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-IATA Code of arrival city
+IATA Code of arrival city or airport
 
 **`fromDate`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
@@ -97,9 +97,9 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
 
 Error message
 
-**`routings` Array<**[**Routing Element**](search.md#route-element-schema)**>**
+**`routings` Array <**[**Routing Element**](search.md#route-element-schema)**>**
 
-The array of the routings which include suitable flights and fares. Click [<mark style="color:red;">here</mark> ](search.md#route-element-schema)to check the schema
+The array of the routings include suitable flights and fares. Click [<mark style="color:red;">here</mark> ](search.md#route-element-schema)to check the schema
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -508,11 +508,11 @@ Nationality limitation type
 
 **`nationality`  **<mark style="color:blue;">**string**</mark>
 
-This is nationality limitation value, pass the IATA country code, use a comma if more than one country. Blank means there is no limitation.
+This is the nationality of the passenger. Pass the IATA country code and use a comma if there is more than one country.
 
 **`suitAge`  **<mark style="color:blue;">**string**</mark>
 
-Passenger age limitation format is 12-24. Blank means no limitation.
+Passenger age limit format is 2-numeric. The numbers allowed are between 12 and 24. Blank means no limitation.
 
 **`paxType`  **<mark style="color:blue;">**string**</mark>
 
@@ -528,7 +528,7 @@ For inbound segments, click [<mark style="color:red;">**here**</mark> ](search.m
 
 **`rule` Object<**[**RuleElement**](search.md#5.-rule-element-schema)**>**
 
-Pass `RuleElement` info for every booking to include the standard details such as baggage allowance, refund rules, change rules for the selected airline. Click [here](file://api-reference/shopping-and-ticketing/search#rule-element-schema) to check the schema.
+Pass `RuleElement` info for every booking to include the standard details such as baggage allowance, refund rules and change rules for the selected airline. Click [here](file://api-reference/shopping-and-ticketing/search#rule-element-schema) to check the schema.
 
 **`ancillaryProductElements` Array<**[**AncillaryProductElement**](search.md#9.-ancillaryproduct-element-schema)**>**
 
