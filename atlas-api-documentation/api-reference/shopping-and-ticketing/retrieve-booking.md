@@ -6,7 +6,7 @@
 
 ### Endpoint {% debug uid="queryOrderDetails_1.0" %}{% enddebug %}
 
-[https://sandbox.atlaslovestravel.com/queryOrderDetails.do](https://sandbox.atlaslovestravel.com/queryOrderDetails.do)
+[https://sandbox.atriptech.com/queryOrderDetails.do](https://sandbox.atriptech.com/queryOrderDetails.do)
 
 ## Request
 
@@ -245,7 +245,7 @@
                 "extras":[{"name":"email","remark":"emailAddress","value":"xxx@sample.com"}]
             }
         ],
-    "itineraryDownload": "https://sandbox.atlaslovestravel.com/itineraryDownload.do?orderNo=intP%2Biv7Jv70kjemGsbAJ10N%2F%2Bzwdpj%2F"
+    "itineraryDownload": "https://sandbox.atriptech.com/itineraryDownload.do?orderNo=intP%2Biv7Jv70kjemGsbAJ10N%2F%2Bzwdpj%2F"
 }
 ```
 {% endtab %}

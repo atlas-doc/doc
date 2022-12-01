@@ -50,7 +50,7 @@ Any request you initiate needs to be authenticated using your API credentials. T
 
 #### 1) Endpoint {% debug uid="search_1.0" %}{% enddebug %}
 
-[https://sandbox.atlaslovestravel.com/search.do](https://sandbox.atlaslovestravel.com/search.do)
+[https://sandbox.atriptech.com/search.do](https://sandbox.atriptech.com/search.do)
 
 #### 2) Header
 

@@ -6,7 +6,7 @@
 
 ### Endpoint {% debug uid="order_1.0" %}{% enddebug %}
 
-[https://sandbox.atlaslovestravel.com/order.do](https://sandbox.atlaslovestravel.com/order.do)
+[https://sandbox.atriptech.com/order.do](https://sandbox.atriptech.com/order.do)
 
 ## Request
 

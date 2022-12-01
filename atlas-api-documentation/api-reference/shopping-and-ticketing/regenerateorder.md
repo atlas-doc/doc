@@ -16,7 +16,7 @@ Order function should be called in prior to this call.
 
 ## Endpoint
 
-[https://sandbox.atlaslovestravel.com/regenerateOrder](https://sandbox.atlaslovestravel.com/regenerateOrder.do)
+[https://sandbox.atriptech.com/regenerateOrder](https://sandbox.atriptech.com/regenerateOrder.do)
 
 ## Request
 

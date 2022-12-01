@@ -10,7 +10,7 @@ No preceding function needs to be called before `Search`.
 
 ### Endpoint {% debug uid="search_1.0" %}{% enddebug %}
 
-[https://sandbox.atlaslovestravel.com/search.do](https://sandbox.atlaslovestravel.com/search.do)
+[https://sandbox.atriptech.com/search.do](https://sandbox.atriptech.com/search.do)
 
 ### Request
 

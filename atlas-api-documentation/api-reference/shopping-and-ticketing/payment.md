@@ -6,7 +6,7 @@
 
 ### Endpoint {% debug uid="pay_1.0" %}{% enddebug %}
 
-[https://sandbox.atlaslovestravel.com/pay.do](https://sandbox.atlaslovestravel.com/pay.do)
+[https://sandbox.atriptech.com/pay.do](https://sandbox.atriptech.com/pay.do)
 
 ## Request
 

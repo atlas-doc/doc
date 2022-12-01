@@ -6,7 +6,7 @@ No preceding function needs to be carried out.
 
 ### Endpoint {% debug uid="RefundQuotation_1.0" %}{% enddebug %}
 
-[https://sandbox.atlaslovestravel.com/RefundQuotation.do](https://sandbox.atlaslovestravel.com/getTicketRefundFee.do)
+[https://sandbox.atriptech.com/RefundQuotation.do](https://sandbox.atriptech.com/getTicketRefundFee.do)
 
 ## Request
 

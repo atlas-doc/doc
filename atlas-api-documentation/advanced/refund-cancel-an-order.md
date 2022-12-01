@@ -8,7 +8,7 @@ To process a cancellation request, you need to provide the `OrderNo` of the orde
 
 Send the `orderNo`, along with the passengers' names and segment information such as `depAirport`, `arrAirport`, `depDate` and `flightNo`. Atlas charges a transaction fee on top of the amount deducted by airlines for every refund request.
 
-EndPoint ：  [https://sandbox.atlaslovestravel.com/refundQuotation.do](https://sandbox.atlaslovestravel.com/refundQuotation.do) 
+EndPoint ：  [https://sandbox.atriptech.com/refundQuotation.do](https://sandbox.atriptech.com/refundQuotation.do) 
 {% debug uid="refundQuotation_1.0" %}{% enddebug %}
 
 Method : Post
@@ -83,7 +83,7 @@ Accept-Encoding: gzip
 
 When your customer confirms the refund quote, send the request schema with `refundOfferID` to the refund endpoint to confirm the refund request.
 
-EndPoint ：  [https://sandbox.atlaslovestravel.com/refund.do](https://sandbox.atlaslovestravel.com/refund.do) {% debug uid="refund_1.0" %}{% enddebug %}
+EndPoint ：  [https://sandbox.atriptech.com/refund.do](https://sandbox.atriptech.com/refund.do) {% debug uid="refund_1.0" %}{% enddebug %}
 
 Method : Post
 

@@ -10,7 +10,7 @@ No preceding function needs to be carried out.
 
 ## Endpoint {% debug uid="toOrderDetailWeb_1.0" %}{% enddebug %}
 
-[https://sandbox.atlaslovestravel.com/toOrderDetailWeb.do](https://sandbox.atlaslovestravel.com/toOrderDetailWeb.do)
+[https://sandbox.atriptech.com/toOrderDetailWeb.do](https://sandbox.atriptech.com/toOrderDetailWeb.do)
 
 ## Request
 

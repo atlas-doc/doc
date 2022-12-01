@@ -8,7 +8,7 @@ Currently, Atlas API only supports checked-in baggage service. We are looking to
 
 The first step to adding ancillaries to an existing flight reservation is to request order details such as flight information, passenger details, fare and ancillary services (if bought at the time of booking). Ancillary services offered will vary depending on the airlines. Some of them may not even offer check-in baggage service. We will assume that the airline allows passengers to buy extra baggage service for this guide.
 
-EndPoint ：  [https://sandbox.atlaslovestravel.com/queryOrderDetails.do](https://sandbox.atlaslovestravel.com/queryOrderDetails.do) {% debug uid="queryOrderDetails_1.0" %}{% enddebug %}
+EndPoint ：  [https://sandbox.atriptech.com/queryOrderDetails.do](https://sandbox.atriptech.com/queryOrderDetails.do) {% debug uid="queryOrderDetails_1.0" %}{% enddebug %}
 
 Method : Post
 
@@ -205,7 +205,7 @@ Accept-Encoding: gzip
             "vendorCurrency": "PHP"
         }
     },
-    "itineraryDownload": "https://sandbox.atlaslovestravel.com/itineraryDownload.do?orderNo=m8iEobNffVcMxc0hFzJuXWQBp0V2yOzK"
+    "itineraryDownload": "https://sandbox.atriptech.com/itineraryDownload.do?orderNo=m8iEobNffVcMxc0hFzJuXWQBp0V2yOzK"
 }
 ```
 
@@ -217,7 +217,7 @@ Accept-Encoding: gzip
 
 Once your users have retrieved their order details, we can send the `orderNo` in the `searchAncillary` request  to fetch the complete list of ancillary services available. Currently, as we offer extra baggage only, the following example will mention `Baggage` as the `Product`**.** Please record the ancillary information with the `offerId` as the unique identifier.
 
-EndPoint ： [https://sandbox.atlaslovestravel.com/searchAncillary.do](https://sandbox.atlaslovestravel.com/searchAncillary.do) {% debug uid="searchAncillary_1.0" %}{% enddebug %}
+EndPoint ： [https://sandbox.atriptech.com/searchAncillary.do](https://sandbox.atriptech.com/searchAncillary.do) {% debug uid="searchAncillary_1.0" %}{% enddebug %}
 
 Method : Post
 
@@ -309,7 +309,7 @@ Accept-Encoding: gzip
 
 Each ancillary service has a unique ID described as `offerId` and the `productCode` mentions the extra baggage weight selected. Add all chosen ancillaries and send the related `offerIds` and `productCode` along with order details. The `totalPrice` is the amount payable. The totalPrice is set to USD by default, but the amount owed is converted into the currency we settle with you, which is described by `vendorCurrency` and displayed to your customers.  
 
-EndPoint ： [https://sandbox.atlaslovestravel.com/orderAncillary.do](https://sandbox.atlaslovestravel.com/orderAncillary.do) {% debug uid="orderAncillary_1.0" %}{% enddebug %}
+EndPoint ： [https://sandbox.atriptech.com/orderAncillary.do](https://sandbox.atriptech.com/orderAncillary.do) {% debug uid="orderAncillary_1.0" %}{% enddebug %}
 
 Method : Post
 
@@ -413,7 +413,7 @@ Accept-Encoding: gzip
 
 When your customer confirms the card details and proceeds with payment, you need to send the new `orderNo` in your request to process payment for the ancillary purchase transaction.
 
-EndPoint ： [https://sandbox.atlaslovestravel.com/pay.do](https://sandbox.atlaslovestravel.com/pay.do) {% debug uid="pay_1.0" %}{% enddebug %}
+EndPoint ： [https://sandbox.atriptech.com/pay.do](https://sandbox.atriptech.com/pay.do) {% debug uid="pay_1.0" %}{% enddebug %}
 
 Method : Post
 
