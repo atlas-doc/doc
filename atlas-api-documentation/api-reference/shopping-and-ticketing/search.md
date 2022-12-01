@@ -498,13 +498,13 @@ Technical service fee per passenger.
 
 **`nationalityType`  **<mark style="color:blue;">**int**</mark>
 
-Nationality limitation type
+Nationality limitation values
 
-0 No Limitation
+0 No Limitation (optional)
 
-1 Allowed
+1 Allowed (required)
 
-2 Forbidden
+2 Forbidden (not to be entered)
 
 **`nationality`  **<mark style="color:blue;">**string**</mark>
 
