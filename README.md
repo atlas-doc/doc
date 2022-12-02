@@ -90,6 +90,9 @@ Reference the `orderNo` from the order response when sending the payment request
 
 - [Payment](./atlas-api-documentation/api-reference/shopping-and-ticketing/payment.md)
 
+{% hint style="info" %}
+Please note that the Atlas Fare Guarantee is only applicable for the transactions done "deposit" mode of payment. The Atlas Fare Guarantee is not applicable for VCC pass-through mode of payment.
+{% endhint %}
 
 ## 5. Ticket Notification Webhook
 
