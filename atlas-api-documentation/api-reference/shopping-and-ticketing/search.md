@@ -520,25 +520,25 @@ Currently, only ADT fare is available.
 
 **`fromSegments` Array<**[**Segment Element**](search.md#3.-segment-element-schema)**>**
 
-For outbound segments, click [<mark style="color:red;">**here**</mark> ](search.md#segment-element-schema)to check the schema
+For outbound segments, click [<mark style="color:red;">**here**</mark> ](search.md#segment-element-schema)to check the schema.
 
 **`retSegments` Array<**[**Segment Element**](search.md#3.-segment-element-schema)**>**
 
-For inbound segments, click [<mark style="color:red;">**here**</mark> ](search.md#segment-element-schema)to check the schema
+For inbound segments, click [<mark style="color:red;">**here**</mark> ](search.md#segment-element-schema)to check the schema.
 
-**`rule` Object<**[**RuleElement**](search.md#5.-rule-element-schema)**>**
+**`rule` Object<**[**Rule Element**](search.md#5.-rule-element-schema)**>**
 
 Pass `RuleElement` info for every booking to include the standard details such as baggage allowance, refund rules and change rules for the selected airline. Click [here](file://api-reference/shopping-and-ticketing/search#rule-element-schema) to check the schema.
 
-**`ancillaryProductElements` Array<**[**AncillaryProductElement**](search.md#9.-ancillaryproduct-element-schema)**>**
+**`ancillaryProductElements` Array<**[**Ancillary Product Element**](search.md#9.-ancillaryproduct-element-schema)**>**
 
 Currently only baggage is available in ancillaries.
 
-**`AncillaryProductElement` includes the following parameters:**
+**`ancillaryProductElements` includes the following parameters:**
 
 *   **`segmentIndex`  **<mark style="color:blue;">**int**</mark>
 
-    Segment sequence, start from 1. If it is return trip, sequence outbound and inbound together.
+    Segment sequence. Starts from 1. If it is return trip, sequence for outbound trip and inbound trip would be together.
 *   **`productCode`  **<mark style="color:blue;">**string**</mark>
 
     Unique identifier for the ancillary product. It would be used in the order request.
@@ -559,7 +559,7 @@ Currently only baggage is available in ancillaries.
 
     The currency in which Atlas settles transactions with you.
 * **`auxBaggageElement` Object<**[**AuxBaggageElement**](search.md#10.-auxbaggage-element-schema)**>**
-  * **`AuxBaggageElement` includes the following parameters**
+  * **`auxBaggageElement` includes the following parameters**
     *   **`piece`  **<mark style="color:blue;">**int**</mark>
 
         0：No Limitation about piece;
