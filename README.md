@@ -103,3 +103,28 @@ Please follow the steps [here](./atlas-api-documentation/api-reference/notificat
 In case of any changes, you will receive `order.ticketed` notification on your server. You can process this information and act on it as needed.
 
 - [Ticketing Complete Notification](./atlas-api-documentation/api-reference/notifications-by-webhook/ticketing-complete-notification.md)
+
+
+
+## Ticket error codes
+
+The below are the errors you may come across during the ticketing process:
+
+| Code                                 | Description                                |
+| ------------------------------------ | ------------------------------------------ |
+| <mark style="color:blue;">601</mark> | Price change                               |
+| <mark style="color:blue;">602</mark> | Flight not found                           |
+| <mark style="color:blue;">603</mark> | Flight sold out                           |
+| <mark style="color:blue;">604</mark> | Payment declined by airline                |
+| <mark style="color:blue;">605</mark> | Incorrect passenger information            |
+| <mark style="color:blue;">606</mark> | Inconsistent flight information            |
+| <mark style="color:blue;">607</mark> | Fare not available                         |
+| <mark style="color:blue;">608</mark> | Duplicate booking                          |
+| <mark style="color:blue;">609</mark> | Contact email is blocked by airline        |
+| <mark style="color:blue;">610</mark> | Error happened during payment with airline |
+| <mark style="color:blue;">614</mark> | Wrong age |
+| <mark style="color:blue;">615</mark> | Payment completed but failed to get the PNR number from the airline |
+| <mark style="color:blue;">616</mark> | 3DS Authetication |
+| <mark style="color:blue;">617</mark> | Insufficient balance |
+| <mark style="color:blue;">698</mark> | Technical error on the airline side - !!! PAYMENT STATUS UNKNOWN !!! - PLEASE CONTACT THE AIRLINE BEFORE TRYING TO BOOK AGAIN.|
+| <mark style="color:blue;">699</mark> | Unknown error                              |
