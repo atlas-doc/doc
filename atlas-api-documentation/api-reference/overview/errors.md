@@ -71,7 +71,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">404</mark> | The order is already paid            |
 | <mark style="color:blue;">405</mark> | Illegal transaction state            |
 | <mark style="color:blue;">406</mark> | Payment operation is in progress            |
-| <mark style="color:blue;">407</mark> | Pax info invalid            |
+| <mark style="color:blue;">407</mark> | Some error messages indicating incorrect passenger information            |
 | <mark style="color:blue;">408</mark> | Passenger can not board alone            |
 | <mark style="color:blue;">409</mark> | Additional baggage does not match the flight segmemt            |
 | <mark style="color:blue;">800</mark> | Order not exists:            |
