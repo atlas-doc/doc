@@ -665,6 +665,9 @@ The Postman collection below can also be downloaded to check the samples:
 
 
 > [Atlas Sandbox SearchOnly UAT.postman\_collection.json.zip](../.gitbook/assets/Atlas Sandbox SearchOnly UAT.postman_collection.json.zip)
+{% hint style="info" %}
+Please right click on the above link and click "Open link in new window". The file will start downloading.
+{% endhint %}
 
 ## 4. Start LIVE Search
 
