@@ -663,7 +663,8 @@ Please add your observations in the \[Comments] column and then send it to your 
 
 The Postman collection below can also be downloaded to check the samples:
 
-{% file src="../.gitbook/assets/Atlas Sandbox SearchOnly UAT.postman_collection.json.zip" %}
+
+> [Atlas Sandbox SearchOnly UAT.postman\_collection.json.zip](../.gitbook/assets/Atlas Sandbox SearchOnly UAT.postman_collection.json.zip)
 
 ## 4. Start LIVE Search
 
