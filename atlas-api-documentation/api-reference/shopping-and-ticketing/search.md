@@ -16,6 +16,7 @@ No preceding function needs to be called before `Search`.
 
 {% tabs %}
 {% tab title="Schema" %}
+
 **`cid`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
 Identifier of client and user.
