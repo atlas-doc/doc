@@ -60,7 +60,7 @@ Must not be earlier than fromDate. And it can be blank if tripType=1.
 
 Identify the source of the search traffic, E.g. Google Flights, Oganic Search, SkyScanner.
 
-**`airlines`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+**`airlines`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 An array of IATA Codes of airport. The reault will only contains airport you specified.
 {% endtab %}
