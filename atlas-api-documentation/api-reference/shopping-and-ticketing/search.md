@@ -59,6 +59,10 @@ Must not be earlier than fromDate. And it can be blank if tripType=1.
 **`requestSource`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 Identify the source of the search traffic, E.g. Google Flights, Oganic Search, SkyScanner.
+
+**`airlines`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+An array of IATA Codes of airport. The reault will only contains airport you specified.
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -73,7 +77,8 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
     "toCity": "DPS",
     "fromDate": "20220210",
     "retDate": "",
-    "requestSource": "Organic"
+    "requestSource": "Organic",
+    "airlines": ["JT", "ID"]
 }
 ```
 {% endtab %}
