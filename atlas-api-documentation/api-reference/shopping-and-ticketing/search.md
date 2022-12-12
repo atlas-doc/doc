@@ -62,7 +62,7 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
 
 **`airlines`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-An array of IATA Codes of airport. The reault will only contains airport you specified.
+An array of IATA Codes of airline. The reault will only contains airline you specified.
 {% endtab %}
 
 {% tab title="Samples" %}
