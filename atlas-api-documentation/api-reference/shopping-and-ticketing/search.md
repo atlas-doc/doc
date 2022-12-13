@@ -57,13 +57,13 @@ Arrival date, the format is YYYYMMDD
 
 Must not be earlier than fromDate. And it can be blank if tripType=1.
 
+**`airlines`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+An array of IATA Codes of airlines. The result will only contain airlines specified in the request.
+
 **`requestSource`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 Identify the source of the search traffic, E.g. Google Flights, Oganic Search, SkyScanner.
-
-**`airlines`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
-
-An array of IATA Codes of airline. The reault will only contains airlines you specified.
 
 {% endtab %}
 
@@ -79,8 +79,8 @@ An array of IATA Codes of airline. The reault will only contains airlines you sp
     "toCity": "DPS",
     "fromDate": "20220210",
     "retDate": "",
-    "requestSource": "Organic",
-    "airlines": ["JT", "ID"]
+    "airlines": ["JT", "ID"],
+    "requestSource": "Organic"
 }
 ```
 {% endtab %}
