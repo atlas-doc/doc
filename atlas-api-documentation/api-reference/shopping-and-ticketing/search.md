@@ -59,7 +59,7 @@ Must not be earlier than fromDate. And it can be blank if tripType=1.
 
 **`airlines`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-An array of IATA Codes of airlines. The result will only contain airlines specified in the request.
+An array of IATA Codes of airlines. The result will only contain the airlines specified in the search request
 
 **`requestSource`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
