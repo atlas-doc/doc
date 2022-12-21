@@ -470,7 +470,9 @@ This unique string identifier is used to verify requests for a particular route.
 **`supportCreditTransPayment`  **<mark style="color:blue;">**string**</mark>
 
 This tag is used to identify if the fare needs to be paid using the client's credit card. 
+
 0: The credit card details will not be passed through and only pre-payment is allowed.
+
 1: The API will allow you to pass through client’s credit card details for payment. The customer can also use pre-payment as a method of payment. 
 
 
