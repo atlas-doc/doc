@@ -27,4 +27,10 @@ API responses can be very large, so we recommend enabling compression for respon
 Accept-Encoding: gzip 
 ```
 
-Most HTTP clients will decompress responses. If your client doesn’t have this functionality built in, you'll need to configure it.
+Most HTTP clients will decompress response body by default. If your client doesn’t have this functionality built in, you'll need to configure it.
+
+Note that the response body is compressed only when the HTTP response header contains:
+```
+Content-Encoding:gzip 
+```
+Because the server may not compress data when the data size is small.
