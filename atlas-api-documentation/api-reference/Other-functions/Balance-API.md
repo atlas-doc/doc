@@ -33,6 +33,12 @@ The amount of balance in your deposit account.
 
 The currency in which Atlas settles transactions with you.
 
+**'status' **<mark style="color:blue;">**string**</mark>
+
+0: success
+
+9999: error (an error message will be displayed with the issue)
+
 {% endtab %}
 
 {% tab title="Samples" %}
