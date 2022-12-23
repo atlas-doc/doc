@@ -10,14 +10,16 @@ Method : Post
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **msg **<mark style="color:blue;">**string**</mark>
-
-    Error message.
 *   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
 
     2: System error
+*   **msg **<mark style="color:blue;">**string**</mark>
+
+    Error message.
+    
+    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
 *   **currency **<mark style="color:blue;">**string**</mark>
 
     currency
