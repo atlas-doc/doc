@@ -33,4 +33,4 @@ Note that the response body is compressed only when the HTTP response header con
 ```
 Content-Encoding:gzip 
 ```
-Because the server may not compress data when the data size is small.
+Please note that the server may not compress data when the data size is small.
