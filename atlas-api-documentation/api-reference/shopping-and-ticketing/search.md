@@ -104,6 +104,8 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
 
 Error message
 
+The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to        check the result.
+
 **`routings` Array <**[**Routing Element**](search.md#route-element-schema)**>**
 
 The array of the routings include suitable flights and fares. Click [<mark style="color:red;">here</mark> ](search.md#route-element-schema)to check the schema
