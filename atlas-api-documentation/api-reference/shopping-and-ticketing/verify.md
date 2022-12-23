@@ -45,7 +45,7 @@ The `search` function should be called prior to this call.
 
     0: success
 
-    1: request data format error
+    1: request data format error 
 
     2: route is forbidden
 
@@ -53,6 +53,8 @@ The `search` function should be called prior to this call.
 *   **msg **<mark style="color:blue;">**string**</mark>
 
     Error message
+    
+    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
 *   **sessionId **<mark style="color:blue;">**string**</mark>
 
     The unique identifier for this verification.
