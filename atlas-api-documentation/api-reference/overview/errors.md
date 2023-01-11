@@ -60,6 +60,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">307</mark> | Illegal request parameters                 |
 | <mark style="color:blue;">308</mark> | Price changed                              |
 | <mark style="color:blue;">309</mark> | Ancillary not found                        |
+| <mark style="color:blue;">310</mark> | Infant not allowed                         |
 
 #### Payment  error codes
 | Code                                 | Description                                |
