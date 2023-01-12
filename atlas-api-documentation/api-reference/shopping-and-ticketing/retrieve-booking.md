@@ -243,7 +243,7 @@
                 "airlinePnr":"xxx",
                 "airlineWebSiteAddress":"xxx.com",
                 "mmbEmail":"xxx@email.com",
-                "tailDigitsOfPaymentCard:"xxxx",
+                "tailDigitsOfPaymentCard":"xxxx",
                 "extras":[{"name":"email","remark":"emailAddress","value":"xxx@sample.com"}]
             }
         ],
