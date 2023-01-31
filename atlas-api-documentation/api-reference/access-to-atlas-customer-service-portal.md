@@ -29,13 +29,13 @@ No preceding function needs to be carried out.
 
     This is to identify the operator's role. Atlas will grant access to this operator according to the role assigned. Here are the acceptable options: &#x20;
 
-    TICKETING : Access to manage orders and request post ticketing services
+    Customer service : Access to manage orders and request post ticketing services
 
-    FINANCE : Access to manage the balance and check statements
+    Finance : Access to manage the balance and check statements
 
-    TECH : Access to manage the system configurations
+    Developer : Access to manage the system configurations
 
-    ADMIN : Full access
+    Admin : Full access
 
 
 {% endtab %}
