@@ -116,336 +116,443 @@ The array of the routings include suitable flights and fares. Click [<mark style
 {
     "status":0,
     "msg":"success",
-    "routings":[
+    "routings": [
+    {
+      "fid": "",
+      "routingIdentifier": "",
+      "supportCreditTransPayment": "1",
+      "currency": "USD",
+      "adultPrice": 67.16,
+      "adultTax": 35.04,
+      "childPrice": 67.16,
+      "childTax": 35.04,
+      "infantPrice": 76.17,
+      "infantTax": 0,
+      "infantAllowed": true,
+      "transactionFeePerPax": 10,
+      "transactionFee": 5,
+      "transactionFeeMode": "PER_TICKET",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
         {
-            "routingIdentifier":"",
-            "supportCreditTransPayment":"0",
-            "currency":"USD",
-            "adultPrice":16.46,
-            "adultTax":10.98,
-            "childPrice":16.46,
-            "childTax":10.98,
-            "InfantPrice":0,
-            "InfantTax":0,
-            "transactionFeePerPax":2,
-            "nationalityType":0,
-            "nationality":"",
-            "suitAge":"",
-            "PaxType":"ADT",
-            "fromSegments":[
-                {
-                    "carrier":"IW",
-                    "flightNumber":"IW1848",
-                    "depAirport":"DPS",
-                    "depTime":"202202041210",
-                    "arrAirport":"LOP",
-                    "arrTime":"202202041250",
-                    "stopCities":"",
-                    "duration":40,
-                    "codeShare":false,
-                    "cabin":"",
-                    "cabinClass":1,
-                    "seatCount":4,
-                    "aircraftCode":"",
-                    "depTerminal":"",
-                    "arrTerminal":"",
-                    "operatingCarrier":"",
-                    "operatingFlightnumber":""
-                }
-            ],
-            "retSegments":[
-
-            ],
-            "combineIndexs":[
-
-            ],
-            "rule":{
-                "hasBaggage":0,
-                "baggageElements":[
-                    {
-                        "segmentNo":1,
-                        "passengerType":0,
-                        "baggagePiece":0,
-                        "baggageWeight":0
-                    }
-                ],
-                "refundRules":[
-                    {
-                        "refundType":0,
-                        "refundStatus":"T",
-                        "refundFee":0,
-                        "currency":"CNY",
-                        "refNoshow":"T",
-                        "refNoShowCondition":48,
-                        "refNoshowFee":0
-                    }
-                ],
-                "changesRules":[
-                    {
-                        "changesType":0,
-                        "changesStatus":"T",
-                        "changesFee":0,
-                        "currency":"CNY",
-                        "revNoshow":"T",
-                        "revNoShowCondition":48,
-                        "revNoshowFee":0,
-                        "ruleList":[
-
-                        ]
-                    }
-                ]
-            },
-            "ancillaryProductElements":[
-                {
-                    "segmentIndex":1,
-                    "productCode":"BAG_IW_1_1P_10KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":18.61,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":10,
-                        "isAllWeight":true
-                    }
-                },
-                {
-                    "segmentIndex":1,
-                    "productCode":"BAG_IW_1P_15KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":26.8,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":15,
-                        "isAllWeight":true
-                    }
-                },
-                {
-                    "segmentIndex":1,
-                    "productCode":"BAG_IW_1_1P_20KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":37.22,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":20,
-                        "isAllWeight":true
-                    }
-                }
-            ],
-            "vendorFare":null
-        },
-       {
-            "routingIdentifier":"",
-            "supportCreditTransPayment":"0",
-            "currency":"USD",
-            "adultPrice":31.56,
-            "adultTax":21.04,
-            "childPrice":31.56,
-            "childTax":21.04,
-            "InfantPrice":0,
-            "InfantTax":0,
-            "transactionFeePerPax":2,
-            "nationalityType":0,
-            "nationality":"",
-            "suitAge":"",
-            "PaxType":"ADT",
-            "fromSegments":[
-                {
-                    "carrier":"JT",
-                    "flightNumber":"JT919",
-                    "depAirport":"DPS",
-                    "depTime":"202202040835",
-                    "arrAirport":"SUB",
-                    "arrTime":"202202040830",
-                    "stopCities":"",
-                    "duration":55,
-                    "codeShare":false,
-                    "cabin":"",
-                    "cabinClass":1,
-                    "seatCount":4,
-                    "aircraftCode":"",
-                    "depTerminal":"",
-                    "arrTerminal":"",
-                    "operatingCarrier":"",
-                    "operatingFlightnumber":""
-                },
-                {
-                    "carrier":"JT",
-                    "flightNumber":"JT822",
-                    "depAirport":"SUB",
-                    "depTime":"202202040930",
-                    "arrAirport":"LOP",
-                    "arrTime":"202202041135",
-                    "stopCities":"",
-                    "duration":65,
-                    "codeShare":false,
-                    "cabin":"",
-                    "cabinClass":1,
-                    "seatCount":4,
-                    "aircraftCode":"",
-                    "depTerminal":"",
-                    "arrTerminal":"",
-                    "operatingCarrier":"",
-                    "operatingFlightnumber":""
-                }
-            ],
-            "retSegments":[
-
-            ],
-            "rule":{
-                "hasBaggage":1,
-                "baggageElements":[
-                    {
-                        "segmentNo":1,
-                        "passengerType":0,
-                        "baggagePiece":0,
-                        "baggageWeight":20
-                    },
-                    {
-                        "segmentNo":2,
-                        "passengerType":0,
-                        "baggagePiece":0,
-                        "baggageWeight":20
-                    }
-                ],
-                "refundRules":[
-                    {
-                        "refundType":0,
-                        "refundStatus":"T",
-                        "refundFee":0,
-                        "currency":"CNY",
-                        "refNoshow":"T",
-                        "refNoShowCondition":48,
-                        "refNoshowFee":0
-                    }
-                ],
-                "changesRules":[
-                    {
-                        "changesType":0,
-                        "changesStatus":"T",
-                        "changesFee":0,
-                        "currency":"CNY",
-                        "revNoshow":"T",
-                        "revNoShowCondition":48,
-                        "revNoshowFee":0,
-                        "ruleList":[
-
-                        ]
-                    }
-                ]
-            },
-            "ancillaryProductElements":[
-                {
-                    "segmentIndex":1,
-                    "productCode":"BAG_JT_DPS-SUB_1,2,3_1P_10KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":12.27,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":10,
-                        "isAllWeight":true
-                    }
-                },
-                {
-                    "segmentIndex":1,
-                    "productCode":"BAG_JT_DPS-SUB_1,2,3_1P_15KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":17.91,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":15,
-                        "isAllWeight":true
-                    }
-                },
-                {
-                    "segmentIndex":1,
-                    "productCode":"BAG_JT_DPS-SUB_1,2,3_1P_20KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":23.55,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":20,
-                        "isAllWeight":true
-                    }
-                },
-                {
-                    "segmentIndex":1,
-                    "productCode":"BAG_JT_DPS-SUB_1,2,3_1P_30KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":34.83,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":30,
-                        "isAllWeight":true
-                    }
-                },
-                {
-                    "segmentIndex":2,
-                    "productCode":"BAG_JT_SUB-LOP_1,2,3_1P_10KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":14.39,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":10,
-                        "isAllWeight":true
-                    }
-                },
-                {
-                    "segmentIndex":2,
-                    "productCode":"BAG_JT_SUB-LOP_1,2,3_1P_15KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":21.09,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":15,
-                        "isAllWeight":true
-                    }
-                },
-                {
-                    "segmentIndex":2,
-                    "productCode":"BAG_JT_SUB-LOP_1,2,3_1P_20KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":27.78,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":20,
-                        "isAllWeight":true
-                    }
-                },
-                {
-                    "segmentIndex":2,
-                    "productCode":"BAG_JT_SUB-LOP_1,2,3_1P_30KG",
-                    "productName":"Baggage",
-                    "productType":1,
-                    "price":41.17,
-                    "currency":"USD",
-                    "auxBaggageElement":{
-                        "piece":1,
-                        "weight":30,
-                        "isAllWeight":true
-                    }
-                }
-            ],
-            "vendorFare":null
+          "carrier": "U2",
+          "flightNumber": "U22441",
+          "depAirport": "LTN",
+          "depTime": "202303231840",
+          "arrAirport": "CDG",
+          "arrTime": "202303232055",
+          "stopCities": "",
+          "duration": 75,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": null,
+          "arrTerminal": "T2D",
+          "operatingCarrier": "",
+          "operatingFlightnumber": "",
+          "fareFamily": "Standard"
         }
+      ],
+      "retSegments": [
+        {
+          "carrier": "U2",
+          "flightNumber": "U22434",
+          "depAirport": "CDG",
+          "depTime": "202303260855",
+          "arrAirport": "LTN",
+          "arrTime": "202303260910",
+          "stopCities": "",
+          "duration": 75,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "T2B",
+          "arrTerminal": null,
+          "operatingCarrier": "",
+          "operatingFlightnumber": "",
+          "fareFamily": "Standard"
+        }
+      ],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 0,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 0,
+            "baggageWeight": 0
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 0,
+            "baggageWeight": 0
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "CNY",
+            "refNoshow": "T",
+            "refNoShowCondition": 48,
+            "refNoshowFee": 0,
+            "ruleList": null
+          },
+          {
+            "refundType": 0,
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "CNY",
+            "refNoshow": "T",
+            "refNoShowCondition": 48,
+            "refNoshowFee": 0,
+            "ruleList": null
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "T",
+            "changesFee": 0,
+            "currency": "CNY",
+            "revNoshow": "T",
+            "revNoShowCondition": 48,
+            "revNoshowFee": 0,
+            "ruleList": null
+          },
+          {
+            "changesType": 0,
+            "changesStatus": "T",
+            "changesFee": 0,
+            "currency": "CNY",
+            "revNoshow": "T",
+            "revNoShowCondition": 48,
+            "revNoshowFee": 0,
+            "ruleList": null
+          }
+        ]
+      },
+      "ancillaryProductElements": [
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 34.09,
+          "currency": "USD",
+          "vendorPrice": 30.99,
+          "vendorCurrency": "GBP",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_15KG"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 37.94,
+          "currency": "USD",
+          "vendorPrice": 34.49,
+          "vendorCurrency": "GBP",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_23KG"
+        },
+        {
+          "segmentIndex": 2,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 45.69,
+          "currency": "USD",
+          "vendorPrice": 41.99,
+          "vendorCurrency": "EUR",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_15KG"
+        },
+        {
+          "segmentIndex": 2,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 50.59,
+          "currency": "USD",
+          "vendorPrice": 46.49,
+          "vendorCurrency": "EUR",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_23KG"
+        }
+      ],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false
+    },
+    {
+      "fid": "",
+      "routingIdentifier": "",
+      "supportCreditTransPayment": "1",
+      "currency": "USD",
+      "adultPrice": 74.86,
+      "adultTax": 35.04,
+      "childPrice": 74.86,
+      "childTax": 35.04,
+      "infantPrice": 76.17,
+      "infantTax": 0,
+      "infantAllowed": true,
+      "transactionFeePerPax": 10,
+      "transactionFee": 5,
+      "transactionFeeMode": "PER_TICKET",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
+        {
+          "carrier": "U2",
+          "flightNumber": "U22435",
+          "depAirport": "LTN",
+          "depTime": "202303231440",
+          "arrAirport": "CDG",
+          "arrTime": "202303231700",
+          "stopCities": "",
+          "duration": 80,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": null,
+          "arrTerminal": "T2D",
+          "operatingCarrier": "",
+          "operatingFlightnumber": "",
+          "fareFamily": "Standard"
+        }
+      ],
+      "retSegments": [
+        {
+          "carrier": "U2",
+          "flightNumber": "U22434",
+          "depAirport": "CDG",
+          "depTime": "202303260855",
+          "arrAirport": "LTN",
+          "arrTime": "202303260910",
+          "stopCities": "",
+          "duration": 75,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "T2B",
+          "arrTerminal": null,
+          "operatingCarrier": "",
+          "operatingFlightnumber": "",
+          "fareFamily": "Standard"
+        }
+      ],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 0,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 0,
+            "baggageWeight": 0
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 0,
+            "baggageWeight": 0
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "CNY",
+            "refNoshow": "T",
+            "refNoShowCondition": 48,
+            "refNoshowFee": 0,
+            "ruleList": null
+          },
+          {
+            "refundType": 0,
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "CNY",
+            "refNoshow": "T",
+            "refNoShowCondition": 48,
+            "refNoshowFee": 0,
+            "ruleList": null
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "T",
+            "changesFee": 0,
+            "currency": "CNY",
+            "revNoshow": "T",
+            "revNoShowCondition": 48,
+            "revNoshowFee": 0,
+            "ruleList": null
+          },
+          {
+            "changesType": 0,
+            "changesStatus": "T",
+            "changesFee": 0,
+            "currency": "CNY",
+            "revNoshow": "T",
+            "revNoShowCondition": 48,
+            "revNoshowFee": 0,
+            "ruleList": null
+          }
+        ]
+      },
+      "ancillaryProductElements": [
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 34.64,
+          "currency": "USD",
+          "vendorPrice": 31.49,
+          "vendorCurrency": "GBP",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_15KG"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 39.04,
+          "currency": "USD",
+          "vendorPrice": 35.49,
+          "vendorCurrency": "GBP",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_23KG"
+        },
+        {
+          "segmentIndex": 2,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 45.69,
+          "currency": "USD",
+          "vendorPrice": 41.99,
+          "vendorCurrency": "EUR",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_15KG"
+        },
+        {
+          "segmentIndex": 2,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 50.59,
+          "currency": "USD",
+          "vendorPrice": 46.49,
+          "vendorCurrency": "EUR",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_23KG"
+        }
+      ],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false
+    },
    ]
 }
 ```
@@ -459,6 +566,7 @@ The array of the routings include suitable flights and fares. Click [<mark style
 * The total cost to purchase for a single adult passenger is: `adultPrice` + `adultTax` + `transactionFeePerPax`
 * For the airlines which support pass through payment method, we would set `supportCreditTransPayment` to `1` and present the vendor's fare in the `vendorFare` element. Alternatively, if the airline doesn't support pass through payment method, we would set `supportCreditTransPayment` to `0` and the `vendorFare` element will be `null`.
 * You can choose to show or hide `ancillaryProductElements` in search response, according to the configuration of each client in the backend system.
+* The 'links' element will have the link to the terms and conditions of the airlines.
 {% endhint %}
 
 ### Route Element Schema
@@ -506,9 +614,21 @@ Infant fare per passenger.
 
 Infant tax per passenger.
 
+**`infantAllowed`  **<mark style="color:blue;">**boolean**</mark>
+
+Infant passenger allowed for that airline.
+
 **`transactionFeePerPax`  **<mark style="color:blue;">**decimal**</mark>
 
+Technical service fee per passenger as per the signed contract.
+
+**`transactionFee`  **<mark style="color:blue;">**decimal**</mark>
+
 Technical service fee per passenger.
+
+**`transactionFeeMode`  **<mark style="color:blue;">**string**</mark>
+
+The criteria of calculating the transaction fee as per the contractual agreement.
 
 **`nationalityType`  **<mark style="color:blue;">**int**</mark>
 
@@ -552,26 +672,58 @@ Currently only baggage is available in ancillaries.
 
 *   **`segmentIndex`  **<mark style="color:blue;">**int**</mark>
 
-    Segment sequence. Starts from 1. If it is return trip, sequence for outbound trip and inbound trip would be together.
+Segment sequence. Starts from 1. If it is return trip, sequence for outbound trip and inbound trip would be together.
+    
+*   **`endSegmentIndex`  **<mark style="color:blue;">**int**</mark>
+
+The last segment for which this information is applicable.
+    
 *   **`productCode`  **<mark style="color:blue;">**string**</mark>
 
-    Unique identifier for the ancillary product. It would be used in the order request.
+Unique identifier for the ancillary product. It would be used in the order request.
 *   **`productName`  **<mark style="color:blue;">**string**</mark>
 
-    Ancillary product name.
+Ancillary product name.
 *   **`productType`  **<mark style="color:blue;">**int**</mark>
 
-    Ancillary product type
+Ancillary product type
 
-    1: baggage
+1: baggage
 
-    Currently, only baggage is available.
+Currently, only baggage is available.
+    
+*   **`canPurchaseWithTicket`  **<mark style="color:blue;">**int**</mark>
+
+This ancillary product can be purchased during the booking flow. 
+    
+1=Yes; 0=No  
+    
+*   **`canPurchasePostTicket`  **<mark style="color:blue;">**int**</mark>
+
+This ancillary product can be purchased in the post-ticketing flow. 
+    
+1=Yes; 0=No  
+    
 *   **`price`  **<mark style="color:blue;">**decimal**</mark>
 
-    Price for this ancillary.
+Price for this ancillary.
+    
 *   **`currency`  **<mark style="color:blue;">**string**</mark>
 
-    The currency in which Atlas settles transactions with you.
+The currency in which Atlas settles transactions with you.
+    
+*   **`vendorPrice`  **<mark style="color:blue;">**decimal**</mark>
+
+The price charged by the vendor for the ancillary.
+    
+*   **`vendorCurrency`  **<mark style="color:blue;">**string**</mark>
+
+The currency in which the vendor charges for the ancillary.
+    
+*   **`clientTechnicalServiceFee`  **<mark style="color:blue;">**decimal**</mark>
+
+The service fee charged by Atlas for the purchase of the ancillary.
+    
 * **`auxBaggageElement` Object<**[**AuxBaggageElement**](search.md#10.-auxbaggage-element-schema)**>**
   * **`auxBaggageElement` includes the following parameters**
     *   **`piece`  **<mark style="color:blue;">**int**</mark>
@@ -587,6 +739,14 @@ Currently only baggage is available in ancillaries.
         True：The weight is for all the pieces
 
         False：The weight is for each piece
+        
+*   **`offerId`  **<mark style="color:blue;">**string**</mark>
+
+The identifier of the offer of ancillary product. This will be "null" in the booking flow but will have an id in the post-ticketing flow.
+
+*   **`ancillaryCode`  **<mark style="color:blue;">**string**</mark>
+
+The code for this ancillary option. This will be identical to the `productCode`.
 
 **`vendorFare` Object<**[**VendorFare Element**](search.md#4.-vendorfare-element-schema)**>**
 
@@ -596,19 +756,19 @@ To identify the vendor’s fare with vendor’s currency. It is only available w
 
 *   **`vendorAdultPrice`  **<mark style="color:blue;">**decimal**</mark>
 
-    Adult fare per passenger in vendor’s currency.
+Adult fare per passenger in vendor’s currency.
 *   **`vendorAdultTax`  **<mark style="color:blue;">**decimal**</mark>
 
-    Adult tax per passenger in vendor’s currency.
+Adult tax per passenger in vendor’s currency.
 *   **`vendorChildPrice`  **<mark style="color:blue;">**decimal**</mark>
 
-    Child fare per passenger in vendor’s currency.
+Child fare per passenger in vendor’s currency.
 *   **`vendorChildTax`  **<mark style="color:blue;">**decimal**</mark>
 
-    Child tax per passenger in vendor’s currency.
+Child tax per passenger in vendor’s currency.
 *   **`vendorCurrency`  **<mark style="color:blue;">**string**</mark>
 
-    This is the currency in which your customers will do transaction with you.
+This is the currency in which your customers will do transaction with you.
 {% endtab %}
 {% endtabs %}
 
@@ -694,6 +854,10 @@ Operating carrier. It is blank when `codeshare=false`
 
 Operating flight number. It is blank when `codeshare=false`
 
+**`fareFamily`  **<mark style="color:blue;">**string**</mark>
+
+Fare Family as per the information received from the airline.
+
 \`\`
 {% endtab %}
 {% endtabs %}
@@ -720,9 +884,17 @@ Free checked-in baggage information included in the fare.
 
 Segment sequence, start from 1.
 
-If it is roundtrip, sequence outbound and inbound together.
+If it is roundtrip, sequence outbound and inbound will be together.
 
-**`passengerType` string**
+**`baggageType`  **<mark style="color:blue;">**string**</mark>
+
+There are 2 options for baggage:
+
+1: StandardCheckInBaggage
+
+2: CabinBaggage
+
+**`passengerType` **<mark style="color:blue;">**string**</mark>
 
 0: ADT
 
@@ -734,7 +906,7 @@ If search or verify requested for ADT only, then only ADT is returned.
 
 If search or verify requested for ADT+CHD, then ADT and CHD are returned.
 
-**`baggagePiece` int**
+**`baggagePiece` **<mark style="color:blue;">**int**</mark>
 
 Baggage pieces:
 
@@ -742,7 +914,7 @@ Baggage pieces:
 
 \>0: Maximum pieces
 
-**`baggageWeight` int**
+**`baggageWeight` **<mark style="color:blue;">**int**</mark>
 
 Baggage Weight, in KGs is mentioned if the airline offers free check-in baggage.
 
@@ -756,13 +928,13 @@ Refer to refund rules as mentioned in Refund Element.
 
 [RefundElement](file://api-reference/shopping-and-ticketing/search#7.-refund-element-schema)
 
-**`refundType` int**
+**`refundType` **<mark style="color:blue;">**int**</mark>
 
 0: Wholly unused ticket
 
 1: Partially used ticket (For example, when the passenger has used an outbound flight and wants to refund an inbound flight.)
 
-**`refundStatus` string**
+**`refundStatus` s**<mark style="color:blue;">**string**</mark>
 
 Refund rule types:
 
@@ -772,7 +944,7 @@ H: Refundable with restrictions
 
 F: Free for refund
 
-**`refundFee` decimal**
+**`refundFee` **<mark style="color:blue;">**decimal**</mark>
 
 Refund fee
 
@@ -780,11 +952,11 @@ If refundStatus = H, it should not be null
 
 If refundStatus = T/F, it can be null.
 
-**`currency` string**
+**`currency` **<mark style="color:blue;">**string**</mark>
 
 The currency in which Atlas settles transactions with you, if refundStatus = H
 
-**`refNoshow` string**
+**`refNoshow` **<mark style="color:blue;">**string**</mark>
 
 Refund status in case of no show
 
@@ -794,11 +966,11 @@ H: Refundable with restrictions
 
 F: Free for refund
 
-**`refNoShowCondition` string**
+**`refNoShowCondition` **<mark style="color:blue;">**string**</mark>
 
 Time before scheduled flight departure, by which passenger(s) need to check in.
 
-**`refNoshowFee` string**
+**`refNoshowFee` **<mark style="color:blue;">**string**</mark>
 
 Total refund fee in case of no show
 
@@ -814,7 +986,7 @@ This function is used to fetch the change rules of the selected airline.
 
 [ChangesElement](file://api-reference/shopping-and-ticketing/search#8.-change-element-schema)
 
-**`changesType` int**
+**`changesType` **<mark style="color:blue;">**int**</mark>
 
 Change flight type
 
@@ -822,7 +994,7 @@ Change flight type
 
 1: Partially used ticket (For example, when the passenger has used an outbound flight and wants to refund an inbound flight)
 
-**`changesStatus` string**
+**`changesStatus` **<mark style="color:blue;">**string**</mark>
 
 Change flight rule type
 
@@ -832,7 +1004,7 @@ H: Changeable with restrictions
 
 F: Free for change flight
 
-**`changesFee` decimal**
+**`changesFee` **<mark style="color:blue;">**decimal**</mark>
 
 Change flight fee
 
@@ -840,13 +1012,13 @@ If changesStatus = H, it should not be null
 
 If changesStatus = T/F, it can be null
 
-**`currency` string**
+**`currency` **<mark style="color:blue;">**string**</mark>
 
 The currency in which Atlas settles transactions with you.
 
 If changesStatus = H, it should not be null
 
-**`refNoshow` string**
+**`refNoshow` **<mark style="color:blue;">**string**</mark>
 
 Change flight rule in case of no show.
 
@@ -856,11 +1028,11 @@ H: Changeable with restrictions
 
 F: Free for change flight
 
-**`refNoShowCondition` int**
+**`refNoShowCondition` **<mark style="color:blue;">**int**</mark>
 
 Time before scheduled flight departure, by which passenger(s) need to check in.
 
-**`refNoshowFee` string**
+**`refNoshowFee` **<mark style="color:blue;">**string**</mark>
 
 The total fee charged to change flight in case of no show.
 
@@ -1028,33 +1200,23 @@ The free checked-in baggage allowance for each fare is available within both `se
 {
 ...,
 "rule": {
-                "hasBaggage": 1,
-                "baggageElements": [
-                    {
-                        "segmentNo": 1,
-                        "passengerType": 0,
-                        "baggagePiece": 0,
-                        "baggageWeight": 20
-                    },
-                    {
-                        "segmentNo": 1,
-                        "passengerType": 1,
-                        "baggagePiece": 0,
-                        "baggageWeight": 20
-                    },
-                    {
-                        "segmentNo": 2,
-                        "passengerType": 0,
-                        "baggagePiece": 0,
-                        "baggageWeight": 20
-                    },
-                    {
-                        "segmentNo": 2,
-                        "passengerType": 1,
-                        "baggagePiece": 0,
-                        "baggageWeight": 20
-                    }
-                ],
+        "hasBaggage": 0,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 0,
+            "baggageWeight": 0
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 0,
+            "baggageWeight": 0
+          }
+        ],
                 "refundRules": [{...}],
                 "changesRules":[{...}]
             }
@@ -1120,55 +1282,70 @@ The details of the extra baggage offering are available in the `ancillaryProduct
 {% tab title="Samples" %}
 ```json
  "ancillaryProductElements": [
-                {
-                    "segmentIndex": 1,
-                    "productCode": "SCI_BAG_5J_5KG_WULKSI",
-                    "productName": "StandardCheckInBaggage",
-                    "productType": 1,
-                    "canPurchaseWithTicket": 1,
-                    "canPurchasePostTicket": 1,
-                    "price": 1.02,
-                    "currency": "USD",
-                    "auxBaggageElement": {
-                        "piece": 0,
-                        "weight": 5,
-                        "isAllWeight": true
-                    },
-                    "offerId": null
-                },
-                {
-                    "segmentIndex": 1,
-                    "productCode": "SCI_BAG_5J_20KG_WULKSI",
-                    "productName": "StandardCheckInBaggage",
-                    "productType": 1,
-                    "canPurchaseWithTicket": 1,
-                    "canPurchasePostTicket": 1,
-                    "price": 4.06,
-                    "currency": "USD",
-                    "auxBaggageElement": {
-                        "piece": 0,
-                        "weight": 20,
-                        "isAllWeight": true
-                    },
-                    "offerId": null
-                },
-                {
-                    "segmentIndex": 2,
-                    "productCode": "SCI_BAG_5J_10KG_WULKSI",
-                    "productName": "StandardCheckInBaggage",
-                    "productType": 1,
-                    "canPurchaseWithTicket": 1,
-                    "canPurchasePostTicket": 1,
-                    "price": 2.03,
-                    "currency": "USD",
-                    "auxBaggageElement": {
-                        "piece": 0,
-                        "weight": 10,
-                        "isAllWeight": true
-                    },
-                    "offerId": null
-                }
-            ]
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 37.94,
+          "currency": "USD",
+          "vendorPrice": 34.49,
+          "vendorCurrency": "GBP",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_15KG"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 40.69,
+          "currency": "USD",
+          "vendorPrice": 36.99,
+          "vendorCurrency": "GBP",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_23KG"
+        },
+        {
+          "segmentIndex": 2,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 1,
+          "price": 52.76,
+          "currency": "USD",
+          "vendorPrice": 48.49,
+          "vendorCurrency": "EUR",
+          "clientTechnicalServiceFee": 0,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true
+          },
+          "offerId": null,
+          "ancillaryCode": "SCI_BAG_1PC_23KG"
+        }
+      ]
 ```
 {% endtab %}
 {% endtabs %}
