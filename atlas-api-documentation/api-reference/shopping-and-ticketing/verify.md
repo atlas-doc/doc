@@ -68,7 +68,7 @@ The `search` function should be called prior to this call.
 *   **routing Object<**[**Routing Element**](search.md#route-element-schema)**>**
 
     Route and fare details. The structure is also Routing Elements, same as search response
-*   **bookingRequirement**                    **Object**<[<mark style="color:blue;">**Booking**</mark>](search.md#2.-route-element-schema)<mark style="color:blue;">**Requirement**</mark>> <mark style="color:blue;"></mark>                                                           &#x20;
+*   **bookingRequirement**                    **Object**<[<mark style="color:blue;">**Booking**</mark>](order.md#paxticketinfo-schema)<mark style="color:blue;">**Requirement**</mark>> <mark style="color:blue;"></mark>                                                           &#x20;
 
     The description for booking info schema.
 
