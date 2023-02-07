@@ -76,24 +76,36 @@ The `search` function should be called prior to this call.
       * #### <mark style="color:blue;">passenger</mark>                  Object<[PassengerRequirement](search.md#2.-route-element-schema)>&#x20;
         *   **passengerType        Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
 
-            *   **type**                   <mark style="color:blue;">**string**</mark>
+            *   **type**                   <mark style="color:blue;">**int**</mark>
 
-                The data type of this element
+            &#x20;    The data type of this element
             * **required**             <mark style="color:blue;">**boolean**</mark>
 
-            &#x20;        <mark style="color:blue;">****</mark>         Identify if this element is required during booking
+            &#x20;             Identify if this element is required during booking
 
-            * **decription           **<mark style="color:blue;">**string**</mark>
+            * **decription** <mark style="color:blue;">**string**</mark>
 
             &#x20;      The remark of this element for this booking
-        * **name                         Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
-        * **gender                      Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
-        * **birthday                    Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
-        * **nationality                 Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
-        * **cardType                   Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
-        * **cardNum                   Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
-        * **cardExpired              Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
-        * **cardIssuePlace         Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**    
+        * **name                         Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
+        * **gender                      Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
+        * **birthday                    Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
+        * **nationality                 Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
+        * **cardType                   Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
+        * **cardNum                   Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
+        * **cardExpired              Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
+        * **cardIssuePlace         Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**    
+
+
+### ReqiurementSchema
+*   **type**                   <mark style="color:blue;">**String**</mark>
+
+     &#x20;    The data type of this element
+*   **required**             <mark style="color:blue;">**boolean**</mark>
+
+     &#x20;             Identify if this element is required during booking
+*   **decription** <mark style="color:blue;">**string**</mark>
+
+     &#x20;      The remark of this element for this booking
 {% endtab %}
 
 {% tab title="Samples" %}
