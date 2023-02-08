@@ -74,7 +74,7 @@ The `search` function should be called prior to this call.
 
     * [<mark style="color:blue;">**Booking**</mark>](search.md#2.-route-element-schema)<mark style="color:blue;">**Requirement**</mark>
       * #### <mark style="color:blue;">passenger</mark>                  Object<[PassengerRequirement](search.md#2.-route-element-schema)>&#x20;
-        *   **passengerType        Object<**<mark style="color:blue;">**ReqiurementSchema**</mark>**>**
+        *   **passengerType        Object<**<mark style="color:blue;">**RequirementSchema**</mark>**>**
 
             *   **type**                   <mark style="color:blue;">**int**</mark>
 
@@ -86,14 +86,14 @@ The `search` function should be called prior to this call.
             * **decription** <mark style="color:blue;">**string**</mark>
 
             &#x20;      The remark of this element for this booking
-        * **name                         Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
-        * **gender                      Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
-        * **birthday                    Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
-        * **nationality                 Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
-        * **cardType                   Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
-        * **cardNum                   Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
-        * **cardExpired              Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**
-        * **cardIssuePlace         Object<**<mark style="color:blue;">**[ReqiurementSchema](verify.md#ReqiurementSchema)**</mark>**>**    
+        * **name                         Object<**<mark style="color:blue;">**[RequirementSchema](verify.md#RequirementSchema)**</mark>**>**
+        * **gender                      Object<**<mark style="color:blue;">**[RequirementSchema](verify.md#RequirementSchema)**</mark>**>**
+        * **birthday                    Object<**<mark style="color:blue;">**[RequirementSchema](verify.md#RequirementSchema)**</mark>**>**
+        * **nationality                 Object<**<mark style="color:blue;">**[RequirementSchema](verify.md#RequirementSchema)**</mark>**>**
+        * **cardType                   Object<**<mark style="color:blue;">**[RequirementSchema](verify.md#RequirementSchema)**</mark>**>**
+        * **cardNum                   Object<**<mark style="color:blue;">**[RequirementSchema](verify.md#RequirementSchema)**</mark>**>**
+        * **cardExpired              Object<**<mark style="color:blue;">**[RequirementSchema](verify.md#RequirementSchema)**</mark>**>**
+        * **cardIssuePlace         Object<**<mark style="color:blue;">**[RequirementSchema](verify.md#RequirementSchema)**</mark>**>**    
 
 
 ### ReqiurementSchema
