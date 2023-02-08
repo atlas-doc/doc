@@ -95,17 +95,6 @@ The `search` function should be called prior to this call.
         * **cardExpired              Object<**<mark style="color:blue;">**RequirementSchema**</mark>**>**
         * **cardIssuePlace         Object<**<mark style="color:blue;">**RequirementSchema**</mark>**>**    
 
-
-### ReqiurementSchema
-*   **type**                   <mark style="color:blue;">**String**</mark>
-
-     &#x20;    The data type of this element
-*   **required**             <mark style="color:blue;">**boolean**</mark>
-
-     &#x20;             Identify if this element is required during booking
-*   **decription** <mark style="color:blue;">**string**</mark>
-
-     &#x20;      The remark of this element for this booking
 {% endtab %}
 
 {% tab title="Samples" %}
