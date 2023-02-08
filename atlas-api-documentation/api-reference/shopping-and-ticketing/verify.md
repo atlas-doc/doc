@@ -72,7 +72,7 @@ The `search` function should be called prior to this call.
 
     The description for booking info schema.
 
-    * [<mark style="color:blue;">**Booking**</mark>](search.md#2.-route-element-schema)<mark style="color:blue;">**Requirement**</mark>
+    * [<mark style="color:blue;">**Booking**</mark>](order.md#paxticketinfo-schema)<mark style="color:blue;">**Requirement**</mark>
       * #### <mark style="color:blue;">passenger</mark>                  Object<[PassengerRequirement](order.md#PassengerElement)>&#x20;
         *   **passengerType        Object<**<mark style="color:blue;">**RequirementSchema**</mark>**>**
 
