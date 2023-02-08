@@ -16,6 +16,10 @@ Method : Post
 *   **type **<mark style="color:blue;">**string**</mark>
 
     Notification type.
+    
+*   **orderNo **<mark style="color:blue;">**string**</mark>
+
+      Order number.
 * **data**
   *   **scheduleChangeType **<mark style="color:blue;">**int**</mark>
 
