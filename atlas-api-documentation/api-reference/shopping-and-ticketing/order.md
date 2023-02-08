@@ -205,7 +205,7 @@
 
     Ticket information for passengers
 
-    * [**PAXTicketInfo**](order.md#paxticketinfo-schema)
+    * #### [**PAXTicketInfo**](order.md#paxticketinfo-schema)
       *   **name **<mark style="color:blue;">**string**</mark>
 
           LastName/FirstName MiddleName.
