@@ -22,7 +22,7 @@
 
     Passengers' information.
 
-    * <mark style="color:blue;">**PassengerElement**</mark>
+    * #### <mark style="color:blue;">**PassengerElement**</mark>
       *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           LastName/FirstName MiddleName.
