@@ -4,7 +4,7 @@
 
 # Quick Start
 
-This guide shows you how Atlas API instantly connects you to over 170 LCCs — opening up new markets for your business.
+This guide shows you how Atlas API instantly connects you to over 200 LCCs — opening up new markets for your business.
 
 The integration is a simple four-step process:
 
