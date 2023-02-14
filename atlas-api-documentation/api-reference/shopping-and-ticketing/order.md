@@ -161,6 +161,14 @@
 {% endtab %}
 {% endtabs %}
 
+
+{% hint style="info" %}
+**VCC can also be used on round-trip itineraries combining 2 one-way fares. Check our FAQs for [<mark style="color:blue;">**Atlas API Order**</mark>](atlas-order-api.md)<mark style="color:blue;"></mark>.**
+
+
+{% endhint %}
+
+
 ## Response
 
 {% tabs %}
