@@ -95,6 +95,8 @@ The `search` function should be called prior to this call.
         * **cardExpired              Object<**<mark style="color:blue;">**RequirementSchema**</mark>**>**
         * **cardIssuePlace         Object<**<mark style="color:blue;">**RequirementSchema**</mark>**>**    
 
+
+
 *   **priceChange**                    **Object**<mark style="color:blue;"></mark>
 
     **IsPriceChange **<mark style="color:blue;">**boolean**</mark>
@@ -103,55 +105,60 @@ The `search` function should be called prior to this call.
     
     false: there is no price change
     
-    **`originalAdultPrice`  **<mark style="color:blue;">**decimal**</mark>
+    **originalAdultPrice  **<mark style="color:blue;">**decimal**</mark>
     
     Original adult fare price returned in search response
     
-    **`originalAdultTax`  **<mark style="color:blue;">**decimal**</mark>
+    **originalAdultTax  **<mark style="color:blue;">**decimal**</mark>
     
     Original adult tax returned in search response
     
-    **`originalChildPrice`  **<mark style="color:blue;">**decimal**</mark>
+    **originalChildPrice  **<mark style="color:blue;">**decimal**</mark>
     
     Original child fare price returned in search response
     
-    **`originalChildTax`  **<mark style="color:blue;">**decimal**</mark>
+    **originalChildTax  **<mark style="color:blue;">**decimal**</mark>
     
     Original child tax returned in search response
     
-    **`originalInfantPrice`  **<mark style="color:blue;">**decimal**</mark>
+    **originalInfantPrice  **<mark style="color:blue;">**decimal**</mark>
     
     Original infant fare price returned in search response
     
-    **`originalInfantTax`  **<mark style="color:blue;">**decimal**</mark>
+    **originalInfantTax  **<mark style="color:blue;">**decimal**</mark>
     
     Original infant tax returned in search response
 
-    **`newAdultPrice`  **<mark style="color:blue;">**decimal**</mark>
+    **newAdultPrice  **<mark style="color:blue;">**decimal**</mark>
     
     Adult fare with price change (if any) returned in verify response
     
-    **`newAdultTax`  **<mark style="color:blue;">**decimal**</mark>
+    **newAdultTax  **<mark style="color:blue;">**decimal**</mark>
     
     Adult tax with price change (if any) returned in verify response
     
-    **`newChildPrice`  **<mark style="color:blue;">**decimal**</mark>
+    **newChildPrice  **<mark style="color:blue;">**decimal**</mark>
     
     Child fare with price change (if any) returned in verify response
     
-    **`newChildTax`  **<mark style="color:blue;">**decimal**</mark>
+    **newChildTax  **<mark style="color:blue;">**decimal**</mark>
     
     Child tax with price change (if any) returned in verify response
     
-    **`newInfantPrice`  **<mark style="color:blue;">**decimal**</mark>
+    **newInfantPrice  **<mark style="color:blue;">**decimal**</mark>
     
     Infant fare with price change (if any) returned in verify response
     
-    **`newInfantTax`  **<mark style="color:blue;">**decimal**</mark>
+    **newInfantTax  **<mark style="color:blue;">**decimal**</mark>
     
     Infant tax with price change (if any) returned in verify response
     
+{% hint style="info" %}
 
+* When there is no price change, the "original" and the "new" price and tax will always be the same.
+* When there is price change, there will be some difference between the "original" and the "new" price and tax.
+
+{% endhint %}
 
 {% endtab %}
 
@@ -678,9 +685,3 @@ The `search` function should be called prior to this call.
 ```
 {% endtab %}
 {% endtabs %}
-{% hint style="info" %}
-
-* When there is no price change, the "original" and the "new" price and tax will always be the same.
-* When there is price change, there will be some difference between the "original" and the "new" price and tax.
-
-{% endhint %}
