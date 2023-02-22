@@ -155,13 +155,6 @@ The `search` function should be called prior to this call.
 
 {% endtab %}
 
-{% hint style="info" %}
-
-* When there is no price change, the "original" and the "new" price and tax will always be the same.
-* When there is price change, there will be some difference between the "original" and the "new" price and tax.
-
-{% endhint %}
-
 {% tab title="Samples" %}
 ```
 {
@@ -685,3 +678,9 @@ The `search` function should be called prior to this call.
 ```
 {% endtab %}
 {% endtabs %}
+{% hint style="info" %}
+
+* When there is no price change, the "original" and the "new" price and tax will always be the same.
+* When there is price change, there will be some difference between the "original" and the "new" price and tax.
+
+{% endhint %}
