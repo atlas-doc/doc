@@ -209,6 +209,9 @@
 *   **tktLimitTime **<mark style="color:blue;">**string**</mark>
 
     Payment deadline for this order.
+*   **pnrCode **<mark style="color:blue;">**string**</mark>
+    
+    The pnrCode is the single reference for the booking. This is the Atlas PNR. 
 *   **paxTicketInfos Array<**[**PAXTicketInfo**](order.md#paxticketinfo-schema)**>**
 
     Ticket information for passengers
