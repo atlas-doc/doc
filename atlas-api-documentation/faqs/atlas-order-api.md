@@ -87,12 +87,11 @@ Retrieve booking2 --> Payment2
     "useAtlasMailForContact": true,
     "allowGenerateMultipleOrders": true
 }
-
+```
 {% endtab %}
 
 {% tab title="Response Sample" %}
 ```
-
 {
   "sessionId": "9695381e-760b-4bc7-acef-2f7ffce046d5",
   "orderNo": "TESTX20230224163206133,TESTX20230224163206137",
@@ -618,5 +617,6 @@ Retrieve booking2 --> Payment2
   "status": 0,
   "msg": null
 }
+```
 {% endtab %}
 {% endtabs %}
