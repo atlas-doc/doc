@@ -52,6 +52,9 @@ Retrieve booking1 --> Payment1
 
 Retrieve booking2 --> Payment2
 
+The orders must be retrieved separately and then payment made for each order. The retrieval and payment can be made in any order and the 1st order need not be the one to be paid for first.
+
+This functionality is for all roundtrip itineraries whether pre-payment or VCC payment and is applicable for the same carrier as well as different carriers in a booking.
 
 {% tabs %}
 {% tab title="Request Sample" %}
