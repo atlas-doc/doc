@@ -28,6 +28,9 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">107</mark> | Insufficient balance                               |
 | <mark style="color:blue;">108</mark> | Route is restricted                               |
 | <mark style="color:blue;">109</mark> | The number of searches exceeded the limit                               |
+| <mark style="color:blue;">110</mark> | Too many concurrent requests                               |
+| <mark style="color:blue;">111</mark> | Real time search is not allowed                               |
+| <mark style="color:blue;">112</mark> | Timed out                               |
 | <mark style="color:blue;">900</mark> | Unauthorized access                              |
 
 
