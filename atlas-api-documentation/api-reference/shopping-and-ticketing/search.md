@@ -1018,7 +1018,7 @@ The currency in which Atlas settles transactions with you.
 
 If changesStatus = H, it should not be null
 
-**`refNoshow` **<mark style="color:blue;">**string**</mark>
+**`revNoshow` **<mark style="color:blue;">**string**</mark>
 
 Change flight rule in case of no show.
 
@@ -1028,15 +1028,15 @@ H: Changeable with restrictions
 
 F: Free for change flight
 
-**`refNoShowCondition` **<mark style="color:blue;">**int**</mark>
+**`revNoShowCondition` **<mark style="color:blue;">**int**</mark>
 
 Time before scheduled flight departure, by which passenger(s) need to check in.
 
-**`refNoshowFee` **<mark style="color:blue;">**string**</mark>
+**`revNoshowFee` **<mark style="color:blue;">**string**</mark>
 
 The total fee charged to change flight in case of no show.
 
-If refNoshow = H, it should not be null.
+If revNoshow = H, it should not be null.
 
 This value includes the change flight fee and no-show penalty.
 {% endtab %}
