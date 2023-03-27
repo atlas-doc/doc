@@ -56,6 +56,121 @@ The orders must be retrieved separately and then payment made for each order. Th
 
 This functionality is for all roundtrip itineraries whether pre-payment or VCC payment and is applicable for the same carrier as well as different carriers in a booking.
 
+**How do we add "ancillaries" element when the itinerary has a transfer point?**
+
+When there are 2 or more segments in "fromSegments" or "toSegments" in the "verify" response, the order also needs to have as many "segmentIndex" elements in the "ancillaries" array.
+
+If this condition is not met, then the booking would fail.
+
+**Example:**
+
+**fromSegments (verify response):**
+
+{
+
+"fromSegments": [ {
+
+"carrier": "5J",
+
+"flightNumber": "5J580",
+
+"depAirport": "CEB",
+
+"depTime": "202304240000",
+
+"arrAirport": "MNL",
+
+"arrTime": "202304240130",
+
+"stopCities": "",
+
+"duration": 90,
+
+"codeShare": false,
+
+"cabin": "Z",
+
+"cabinClass": 1,
+
+"seatCount": 4,
+
+"aircraftCode": "",
+
+"depTerminal": "",
+
+"arrTerminal": "",
+
+"operatingCarrier": "",
+
+"operatingFlightnumber": "",
+
+"fareFamily": "GO Basic"
+
+}, 
+
+{
+
+"carrier": "5J",
+
+"flightNumber": "5J018",
+
+"depAirport": "MNL",
+
+"depTime": "202304241025",
+
+"arrAirport": "DXB",
+
+"arrTime": "202304241530",
+
+"stopCities": "",
+
+"duration": 545,
+
+"codeShare": false,
+
+"cabin": "Z",
+
+"cabinClass": 1,
+
+"seatCount": 4,
+
+"aircraftCode": "",
+
+"depTerminal": "",
+
+"arrTerminal": "",
+
+"operatingCarrier": "",
+
+"operatingFlightnumber": "",
+
+"fareFamily": "GO Basic"
+
+}
+
+
+**ancillaries (order request):**
+
+"ancillaries":[ {
+
+"productCode":"SCI_BAG_1PC_20KG",
+
+"segmentIndex":"1"
+
+}, 
+
+{
+
+"productCode":"SCI_BAG_1PC_20KG",
+
+"segmentIndex":"2"
+
+}
+
+
+In the above example, 20kg ancillary baggage is allowed between CEB - DXB. As this is a itinerary with a via point, there are 2 segments and hence both the segments should be accounted for in the "ancillaries" array as shown above.
+
+
 {% tabs %}
 {% tab title="Request Sample" %}
 ```
