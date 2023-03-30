@@ -30,7 +30,7 @@
   * [Other Functions](atlas-api-documentation/api-reference/Other-functions/README.md)
     * [Balance API](atlas-api-documentation/api-reference/Other-functions/Balance-API.md)
 * [Advanced](atlas-api-documentation/advanced/README.md)
-  * [Add Ancillaries](atlas-api-documentation/advanced/add-ancillaries.md)
+    <!--   * [Add Ancillaries](atlas-api-documentation/advanced/add-ancillaries.md) -->
   * [Refund/Cancel an Order](atlas-api-documentation/advanced/refund-cancel-an-order.md)
   * [Get Schedule Change Notification](atlas-api-documentation/advanced/get-schedule-change-notification.md)
 * [UAT Submission Guide](atlas-api-documentation/uat-submission-guide.md)
