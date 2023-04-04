@@ -114,72 +114,49 @@ The array of the routings include suitable flights and fares. Click [<mark style
 {% tab title="Samples" %}
 ```
 {
-    "status":0,
-    "msg":"success",
-    "routings": [
+  "routings": [
     {
-      "fid": "",
-      "routingIdentifier": "",
-      "supportCreditTransPayment": "1",
+      "fid": "E96Zg5Lr4XQxVimN0_rhFeZULZ_HVT5DXZo6cPTdQrVod3ISQRlb4thdb239v6gV",
+      "routingIdentifier": "IMBJh2LCiGucW/2fPoF4vPMRYyg0zjCX46VwnmDdMe+jn0SjHfR2nG/JWOkMaBeWTD2rDYRcqpu+y/YaX10pmxKn2tUuttY+1HfJLgz0LHI7LnOZ2jrdvSBEvOFFovPyBKlSp2XhW3lhu4n5bTSW67m2QQZVOrWrEsGNhmm8v+j4dHlFLH6/Y7xKzPl7i52mnGIbZR4pWe0/j4n8fX4J5VlodBwhKkOgK3MRf65LxvKKACMZha4JVAxOEnkHDfFZ7KsmGZnBHUyCee/FIdOnQLx74DLLMAEu0pzoU80F/Basafezl/tBV1hB9xDk1Zs39RhJk+U7YU0=",
+      "supportCreditTransPayment": "0",
       "currency": "USD",
-      "adultPrice": 67.16,
-      "adultTax": 35.04,
-      "childPrice": 67.16,
-      "childTax": 35.04,
-      "infantPrice": 76.17,
+      "adultPrice": 28.59,
+      "adultTax": 16.17,
+      "childPrice": 28.59,
+      "childTax": 16.17,
+      "infantPrice": 32.8,
       "infantTax": 0,
       "infantAllowed": true,
-      "transactionFeePerPax": 10,
-      "transactionFee": 5,
-      "transactionFeeMode": "PER_TICKET",
+      "transactionFeePerPax": 1,
+      "transactionFee": 1,
+      "transactionFeeMode": "PER_PAX",
       "nationalityType": 0,
       "nationality": "",
       "suitAge": "",
       "PaxType": "ADT",
       "fromSegments": [
         {
-          "carrier": "U2",
-          "flightNumber": "U22441",
-          "depAirport": "LTN",
-          "depTime": "202303231840",
-          "arrAirport": "CDG",
-          "arrTime": "202303232055",
+          "carrier": "EC",
+          "flightNumber": "EC7846",
+          "depAirport": "STN",
+          "depTime": "202304151930",
+          "arrAirport": "AMS",
+          "arrTime": "202304152135",
           "stopCities": "",
-          "duration": 75,
+          "duration": 65,
           "codeShare": false,
           "cabin": "",
           "cabinClass": 1,
           "seatCount": 4,
           "aircraftCode": "",
-          "depTerminal": null,
-          "arrTerminal": "T2D",
+          "depTerminal": "",
+          "arrTerminal": "",
           "operatingCarrier": "",
           "operatingFlightnumber": "",
           "fareFamily": "Standard"
         }
       ],
-      "retSegments": [
-        {
-          "carrier": "U2",
-          "flightNumber": "U22434",
-          "depAirport": "CDG",
-          "depTime": "202303260855",
-          "arrAirport": "LTN",
-          "arrTime": "202303260910",
-          "stopCities": "",
-          "duration": 75,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "T2B",
-          "arrTerminal": null,
-          "operatingCarrier": "",
-          "operatingFlightnumber": "",
-          "fareFamily": "Standard"
-        }
-      ],
+      "retSegments": [],
       "combineIndexs": [],
       "rule": {
         "hasBaggage": 0,
@@ -190,26 +167,9 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "passengerType": 0,
             "baggagePiece": 0,
             "baggageWeight": 0
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 0,
-            "baggageWeight": 0
           }
         ],
         "refundRules": [
-          {
-            "refundType": 0,
-            "refundStatus": "T",
-            "refundFee": 0,
-            "currency": "CNY",
-            "refNoshow": "T",
-            "refNoShowCondition": 48,
-            "refNoshowFee": 0,
-            "ruleList": null
-          },
           {
             "refundType": 0,
             "refundStatus": "T",
@@ -231,16 +191,6 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "revNoShowCondition": 48,
             "revNoshowFee": 0,
             "ruleList": null
-          },
-          {
-            "changesType": 0,
-            "changesStatus": "T",
-            "changesFee": 0,
-            "currency": "CNY",
-            "revNoshow": "T",
-            "revNoShowCondition": 48,
-            "revNoshowFee": 0,
-            "ruleList": null
           }
         ]
       },
@@ -253,17 +203,21 @@ The array of the routings include suitable flights and fares. Click [<mark style
           "productType": 1,
           "canPurchaseWithTicket": 1,
           "canPurchasePostTicket": 1,
-          "price": 34.09,
+          "price": 31.7,
           "currency": "USD",
-          "vendorPrice": 30.99,
+          "vendorPrice": 25.49,
           "vendorCurrency": "GBP",
           "clientTechnicalServiceFee": 0,
           "auxBaggageElement": {
             "piece": 1,
             "weight": 15,
-            "isAllWeight": true
+            "isAllWeight": true,
+            "size": ""
           },
           "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
           "ancillaryCode": "SCI_BAG_1PC_15KG"
         },
         {
@@ -274,59 +228,21 @@ The array of the routings include suitable flights and fares. Click [<mark style
           "productType": 1,
           "canPurchaseWithTicket": 1,
           "canPurchasePostTicket": 1,
-          "price": 37.94,
+          "price": 37.16,
           "currency": "USD",
-          "vendorPrice": 34.49,
+          "vendorPrice": 29.89,
           "vendorCurrency": "GBP",
           "clientTechnicalServiceFee": 0,
           "auxBaggageElement": {
             "piece": 1,
             "weight": 23,
-            "isAllWeight": true
+            "isAllWeight": true,
+            "size": ""
           },
           "offerId": null,
-          "ancillaryCode": "SCI_BAG_1PC_23KG"
-        },
-        {
-          "segmentIndex": 2,
-          "endSegmentIndex": null,
-          "productCode": "SCI_BAG_1PC_15KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 1,
-          "price": 45.69,
-          "currency": "USD",
-          "vendorPrice": 41.99,
-          "vendorCurrency": "EUR",
-          "clientTechnicalServiceFee": 0,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 15,
-            "isAllWeight": true
-          },
-          "offerId": null,
-          "ancillaryCode": "SCI_BAG_1PC_15KG"
-        },
-        {
-          "segmentIndex": 2,
-          "endSegmentIndex": null,
-          "productCode": "SCI_BAG_1PC_23KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 1,
-          "price": 50.59,
-          "currency": "USD",
-          "vendorPrice": 46.49,
-          "vendorCurrency": "EUR",
-          "clientTechnicalServiceFee": 0,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 23,
-            "isAllWeight": true
-          },
-          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
           "ancillaryCode": "SCI_BAG_1PC_23KG"
         }
       ],
@@ -334,226 +250,10 @@ The array of the routings include suitable flights and fares. Click [<mark style
       "bundleOptions": [],
       "links": null,
       "separateBookings": false
-    },
-    {
-      "fid": "",
-      "routingIdentifier": "",
-      "supportCreditTransPayment": "1",
-      "currency": "USD",
-      "adultPrice": 74.86,
-      "adultTax": 35.04,
-      "childPrice": 74.86,
-      "childTax": 35.04,
-      "infantPrice": 76.17,
-      "infantTax": 0,
-      "infantAllowed": true,
-      "transactionFeePerPax": 10,
-      "transactionFee": 5,
-      "transactionFeeMode": "PER_TICKET",
-      "nationalityType": 0,
-      "nationality": "",
-      "suitAge": "",
-      "PaxType": "ADT",
-      "fromSegments": [
-        {
-          "carrier": "U2",
-          "flightNumber": "U22435",
-          "depAirport": "LTN",
-          "depTime": "202303231440",
-          "arrAirport": "CDG",
-          "arrTime": "202303231700",
-          "stopCities": "",
-          "duration": 80,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": null,
-          "arrTerminal": "T2D",
-          "operatingCarrier": "",
-          "operatingFlightnumber": "",
-          "fareFamily": "Standard"
-        }
-      ],
-      "retSegments": [
-        {
-          "carrier": "U2",
-          "flightNumber": "U22434",
-          "depAirport": "CDG",
-          "depTime": "202303260855",
-          "arrAirport": "LTN",
-          "arrTime": "202303260910",
-          "stopCities": "",
-          "duration": 75,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "T2B",
-          "arrTerminal": null,
-          "operatingCarrier": "",
-          "operatingFlightnumber": "",
-          "fareFamily": "Standard"
-        }
-      ],
-      "combineIndexs": [],
-      "rule": {
-        "hasBaggage": 0,
-        "baggageElements": [
-          {
-            "segmentNo": 1,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 0,
-            "baggageWeight": 0
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 0,
-            "baggageWeight": 0
-          }
-        ],
-        "refundRules": [
-          {
-            "refundType": 0,
-            "refundStatus": "T",
-            "refundFee": 0,
-            "currency": "CNY",
-            "refNoshow": "T",
-            "refNoShowCondition": 48,
-            "refNoshowFee": 0,
-            "ruleList": null
-          },
-          {
-            "refundType": 0,
-            "refundStatus": "T",
-            "refundFee": 0,
-            "currency": "CNY",
-            "refNoshow": "T",
-            "refNoShowCondition": 48,
-            "refNoshowFee": 0,
-            "ruleList": null
-          }
-        ],
-        "changesRules": [
-          {
-            "changesType": 0,
-            "changesStatus": "T",
-            "changesFee": 0,
-            "currency": "CNY",
-            "revNoshow": "T",
-            "revNoShowCondition": 48,
-            "revNoshowFee": 0,
-            "ruleList": null
-          },
-          {
-            "changesType": 0,
-            "changesStatus": "T",
-            "changesFee": 0,
-            "currency": "CNY",
-            "revNoshow": "T",
-            "revNoShowCondition": 48,
-            "revNoshowFee": 0,
-            "ruleList": null
-          }
-        ]
-      },
-      "ancillaryProductElements": [
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_BAG_1PC_15KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 1,
-          "price": 34.64,
-          "currency": "USD",
-          "vendorPrice": 31.49,
-          "vendorCurrency": "GBP",
-          "clientTechnicalServiceFee": 0,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 15,
-            "isAllWeight": true
-          },
-          "offerId": null,
-          "ancillaryCode": "SCI_BAG_1PC_15KG"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_BAG_1PC_23KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 1,
-          "price": 39.04,
-          "currency": "USD",
-          "vendorPrice": 35.49,
-          "vendorCurrency": "GBP",
-          "clientTechnicalServiceFee": 0,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 23,
-            "isAllWeight": true
-          },
-          "offerId": null,
-          "ancillaryCode": "SCI_BAG_1PC_23KG"
-        },
-        {
-          "segmentIndex": 2,
-          "endSegmentIndex": null,
-          "productCode": "SCI_BAG_1PC_15KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 1,
-          "price": 45.69,
-          "currency": "USD",
-          "vendorPrice": 41.99,
-          "vendorCurrency": "EUR",
-          "clientTechnicalServiceFee": 0,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 15,
-            "isAllWeight": true
-          },
-          "offerId": null,
-          "ancillaryCode": "SCI_BAG_1PC_15KG"
-        },
-        {
-          "segmentIndex": 2,
-          "endSegmentIndex": null,
-          "productCode": "SCI_BAG_1PC_23KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 1,
-          "price": 50.59,
-          "currency": "USD",
-          "vendorPrice": 46.49,
-          "vendorCurrency": "EUR",
-          "clientTechnicalServiceFee": 0,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 23,
-            "isAllWeight": true
-          },
-          "offerId": null,
-          "ancillaryCode": "SCI_BAG_1PC_23KG"
-        }
-      ],
-      "vendorFare": null,
-      "bundleOptions": [],
-      "links": null,
-      "separateBookings": false
-    },
-   ]
+    }
+  ],
+  "status": 0,
+  "msg": null
 }
 ```
 {% endtab %}
