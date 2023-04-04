@@ -366,7 +366,7 @@ Pass `RuleElement` info for every booking to include the standard details such a
 
 **`ancillaryProductElements` Array<**[**Ancillary Product Element**](search.md#9.-ancillaryproduct-element-schema)**>**
 
-Currently only baggage is available in ancillaries.
+Currently only checked-in and cabin baggage are available in ancillaries.
 
 **`ancillaryProductElements` includes the following parameters:**
 
