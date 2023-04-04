@@ -688,7 +688,9 @@ Ancillary product name.
 
 Ancillary product type
 
-1: baggage
+1: Check-in baggage
+
+3: Cabin Baggage Overhead Locker
 
 Currently, only baggage is available.
     
@@ -743,6 +745,18 @@ The service fee charged by Atlas for the purchase of the ancillary.
 *   **`offerId`  **<mark style="color:blue;">**string**</mark>
 
 The identifier of the offer of ancillary product. This will be "null" in the booking flow but will have an id in the post-ticketing flow.
+
+*   **`maxQty`  **<mark style="color:blue;">**string**</mark>
+
+Maximum purchase quantity per product
+
+*   **`minQty`  **<mark style="color:blue;">**string**</mark>
+
+Starting purchase quantity per product
+
+*   **`size`  **<mark style="color:blue;">**string**</mark>
+
+Maximum size for ancillary baggage
 
 *   **`ancillaryCode`  **<mark style="color:blue;">**string**</mark>
 
