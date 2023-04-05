@@ -1,5 +1,7 @@
 # Sandbox Test Routes
 
+**The below routes are a sample of what would be available in the sandbox. There will be other routes also available.**
+
 #### Lion Air test routes
 
 
