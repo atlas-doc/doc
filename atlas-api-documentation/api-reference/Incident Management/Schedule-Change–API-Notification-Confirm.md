@@ -20,6 +20,7 @@ Incident ID.
 **`remark`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 Remark.
+{% endtabs %}
 
 
 {% tab title="Samples" %}
@@ -47,7 +48,7 @@ Remark.
 
     Error message.
     
-    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
+    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to check the result.
 {% endtab %}
 
 {% tab title="Samples" %}
