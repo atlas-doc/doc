@@ -67,6 +67,7 @@ New Arrival Terminal.
 **canceledFlights  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 Canceled Flights No.
+{% endtab %}
 
 {% tab title="Samples" %}
 **Schedule Change-Email Notification Confirm with Flight Change**
