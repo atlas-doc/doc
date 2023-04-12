@@ -29,6 +29,38 @@ Remark.
 
 **changedFlights Array<**<mark style="color:blue;">**changedFlightsElement**</mark>**> **<mark style="color:orange;">**Optional**</mark>
 
+**`newFlightNo`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
+New Flight No
+
+**`newDepartureTime`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+New Departure Time. yyyy-MM-dd HH:mm:ss
+
+**`newArrivalTime`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+New Arrival Time. yyyy-MM-dd HH:mm:ss
+
+**`newDepartureAirport`  **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+IATA code.
+
+**`newDepartureTerminal`  **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+New Departure Terminal.
+
+**`newArrivalAirport`  **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+IATA code.
+
+**`newArrivalAirport`  **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+New Arrival Terminal.
 
 **`canceledFlights`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+Canceled Flights No.
+
+
+
+
