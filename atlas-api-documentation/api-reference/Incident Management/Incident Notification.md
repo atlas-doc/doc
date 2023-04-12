@@ -22,11 +22,23 @@ Method : Post
     abnormal.cancelled: Unacounted Cancellation
     
     order.schedulechange: Schedule Change-API Notification. The Notification is <**[**Schedule Change Notification**](schedule-change-notification.md)**>
+      
+*   **`notificationId` **<mark style="color:blue;">**string**</mark>
+
+      Incident ID.
+      
+*   **`status` **<mark style="color:blue;">**string**</mark>
+
+      Incident staus.
+      
+      0: Unconfirmed
+      1: Confirmed
     
-*   **`orderNo` **<mark style="color:blue;">**string**</mark>
+* **data**
+  *   **`orderNo` **<mark style="color:blue;">**string**</mark>
 
       Order number.
-* **data**
+      
   *   **`scheduleChangeType` **<mark style="color:blue;">**int**</mark>
       Schedule change type. Only for Schedule Change-API Notification.
 
@@ -53,3 +65,19 @@ Method : Post
 
       Email Link, only valid for 10 mins. After the link expires, it can be retrieved from Incident List API. Only for Schedule Change-Email Notification.
       
+{% tab title="Samples" %}
+**Schedule Change-Email Notification**
+
+```
+{
+    "cid":"rggat40831",
+    "type":"email.schedulechange",
+    "notificationId":"20230323113246035DNIDD",
+    "status":0
+    "data":{
+        "orderNo":"TESTS20230323103458265",
+        "emailSubject":"IMPORTANT: Flight delay notice. Confirmation Code KDK7QG"
+        "emailLink":"https://theatlas/#/email-detail/4378270"
+    }
+}
+```
