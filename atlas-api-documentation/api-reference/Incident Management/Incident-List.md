@@ -121,13 +121,27 @@ Number of records per page
     
 *   **eventList Array**<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Incident List, the same format as the Notification.
+    Incident List, the same format as the <**[**Incident Notification**](Incident-Notification.md)**>
 
 {% tab title="Samples" %}
 ```
 {
     "status": 0,
-    "msg": "success"
+    "msg": "success",
+    "count":"3",
+    "eventList":[
+                {
+                "cid":"rggat40831",
+                "type":"email.schedulechange",
+                "notificationId":"20230323113246035DNIDD",
+                "status":0,
+                "data":{
+                     "orderNo":"TESTS20230323103458265",
+                     "emailSubject":"IMPORTANT: Flight delay notice. Confirmation Code KDK7QG",
+                     "emailLink":"https://theatlas/#/email-detail/43782700
+    },
+    …
+    ]
 }
 ```
 {% endtab %}
