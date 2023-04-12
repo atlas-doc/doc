@@ -73,10 +73,10 @@ Method : Post
     "cid":"rggat40831",
     "type":"email.schedulechange",
     "notificationId":"20230323113246035DNIDD",
-    "status":0
+    "status":0,
     "data":{
         "orderNo":"TESTS20230323103458265",
-        "emailSubject":"IMPORTANT: Flight delay notice. Confirmation Code KDK7QG"
+        "emailSubject":"IMPORTANT: Flight delay notice. Confirmation Code KDK7QG",
         "emailLink":"https://theatlas/#/email-detail/4378270"
     }
 }
