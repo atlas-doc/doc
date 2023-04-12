@@ -13,6 +13,10 @@ No preceding function needs to be carried out.
 {% tabs %}
 {% tab title="Schema" %}
 
+**`eventId`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+Incident ID.
+
 **`result`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
 Schedule Change Type.
@@ -28,6 +32,9 @@ NO_SCHEDULE_CHANGE: No Schedule Change
 Remark.
 
 **changedFlights Array<**<mark style="color:blue;">**changedFlightsElement**</mark>**> **<mark style="color:orange;">**Optional**</mark>
+**`originalFlightNo`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Required**</mark>
+
+Original Flight No.
 
 **`newFlightNo`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
@@ -57,9 +64,35 @@ IATA code.
 
 New Arrival Terminal.
 
-**`canceledFlights`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+**canceledFlights  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 Canceled Flights No.
+
+{% tab title="Samples" %}
+**Schedule Change-Email Notification Confirm with Flight Change**
+```
+{
+    "event":"20230323113246035DNIDD",
+    "result":"FLIGHT_CHANGE",
+    "remark":"",
+    "changedFlights":[
+        {
+        "originalFlightNo":"FZ2323",
+        "newDepartureTime":"2023-04-23 13:30",
+        "newArrivalTime":"2023-04-23 15:30"
+    }
+    ]
+}
+```
+**Schedule Change-Email Notification Confirm with Flight Cancelled**
+```
+{
+    "event":"20230323113246035DNIDD",
+    "result":"FLIGHT_CANCELED",
+    "remark":"",
+    "changedFlights":["FZ3423","FZ3467"]
+}
+```
 
 
 
