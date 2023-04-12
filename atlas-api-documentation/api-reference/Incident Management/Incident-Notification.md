@@ -64,6 +64,7 @@ Method : Post
   *   **`emailLink` **<mark style="color:blue;">**string**</mark>
 
       Email Link, only valid for 10 mins. After the link expires, it can be retrieved from Incident List API. Only for Schedule Change-Email Notification.
+{% endtab %}
       
 {% tab title="Samples" %}
 **Schedule Change-Email Notification**
@@ -81,3 +82,5 @@ Method : Post
     }
 }
 ```
+{% endtab %}
+{% endtabs %}
