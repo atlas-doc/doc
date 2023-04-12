@@ -6,7 +6,7 @@ No preceding function needs to be carried out.
 
 ### Endpoint {% debug uid="search_1.0" %}{% enddebug %}
 
-[https://sandbox.atriptech.com//event/confirmEmailScheduleChangeEvent.do](https://sandbox.atriptech.com//event/confirmEmailScheduleChangeEvent.do)
+[https://sandbox.atriptech.com/event/confirmEmailScheduleChangeEvent.do](https://sandbox.atriptech.com/event/confirmEmailScheduleChangeEvent.do)
 
 ### Request
 
