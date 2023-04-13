@@ -21,7 +21,7 @@ Method : Post
     
     abnormal.cancelled: Unacounted Cancellation
     
-    order.schedulechange: Schedule Change-API Notification. The Notification is <**[**Schedule Change Notification**]**>
+    order.schedulechange: Schedule Change-API Notification. The Notification is <**[**Schedule Change Notification**](doc/atlas-api-documentation/api-reference/notifications-by-webhook/schedule-change-notification.md)**>
       
 *   **`notificationId` **<mark style="color:blue;">**string**</mark>
 
