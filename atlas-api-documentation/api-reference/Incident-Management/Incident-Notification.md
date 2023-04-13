@@ -21,7 +21,7 @@ Method : Post
     
     abnormal.cancelled: Unacounted Cancellation
     
-    order.schedulechange: Schedule Change-API Notification. The Notification is <**[**Schedule Change Notification**](doc/atlas-api-documentation/api-reference/notifications-by-webhook/schedule-change-notification.md)**>
+    order.schedulechange: Schedule Change-API Notification. The Notification is <**<mark style="color:blue;">**Schedule Change Notification**</mark>**>**
       
 *   **`notificationId` **<mark style="color:blue;">**string**</mark>
 
@@ -48,10 +48,38 @@ Method : Post
       
   *   **`previousSegs` Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
-      The original segments. Only for Schedule Change-API Notification. <**[**Schedule Change Notification**]**>
+      The original segments. Only for Schedule Change-API Notification. 
+  *   **scSegment **<mark style="color:blue;">**\*\*\*\***</mark>** Array<**<mark style="color:blue;">**scSegment**</mark>**>**
+
+          segment information for schedule change notification
+
+          *   **carrier **<mark style="color:blue;">**string**</mark>
+
+              carrier
+          *   **flightNumber **<mark style="color:blue;">**string**</mark>
+
+              flight number
+          *   **depAirport **<mark style="color:blue;">**string**</mark>
+
+              departure airport
+          *   **arrAirport **<mark style="color:blue;">**string**</mark>
+
+              arrival ariport
+          *   **depTime **<mark style="color:blue;">**string**</mark>
+
+              departure time
+          *   **arrTime **<mark style="color:blue;">**string**</mark>
+
+              arrival time
+          *   **depTerminal **<mark style="color:blue;">**string**</mark>
+
+              departure time
+          *   **arrTerminal **<mark style="color:blue;">**string**</mark>\
+              arrival time
+          
   *   **`revisedSegs` Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
-      The revised segments. Only for Schedule Change-API Notification. <**[**Schedule Change Notification**]**>
+      The revised segments. Only for Schedule Change-API Notification.
       
   *   **`emailReceivingDate` **<mark style="color:blue;">**string**</mark>
 
