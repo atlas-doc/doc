@@ -1,4 +1,4 @@
-# Schedule Change – API Notification Confirm
+# Schedule Change–API Notification Confirm
 
 ### Dependency
 
