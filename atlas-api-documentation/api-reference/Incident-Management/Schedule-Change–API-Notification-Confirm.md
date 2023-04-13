@@ -20,7 +20,7 @@ Incident ID.
 **`remark`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 Remark.
-{% endtabs %}
+{% endtab %}
 
 
 {% tab title="Samples" %}
