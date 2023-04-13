@@ -32,7 +32,7 @@ NO_CANCELLATION: No Cancellation
 **`remark`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 Remark.
-{% endtabs %}
+{% endtab %}
 
 {% tab title="Samples" %}
 
