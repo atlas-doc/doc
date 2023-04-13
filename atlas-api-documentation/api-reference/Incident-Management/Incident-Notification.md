@@ -21,7 +21,7 @@ Method : Post
     
     abnormal.cancelled: Unacounted Cancellation
     
-    order.schedulechange: Schedule Change-API Notification. The Notification is <**[**Schedule Change Notification**](notifications-by-webhook/schedule-change-notification.md)**>
+    order.schedulechange: Schedule Change-API Notification. The Notification is <**[**Schedule Change Notification**](api-reference/notifications-by-webhook/schedule-change-notification.md)**>
       
 *   **`notificationId` **<mark style="color:blue;">**string**</mark>
 
@@ -48,10 +48,10 @@ Method : Post
       
   *   **`previousSegs` Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
-      The original segments. Only for Schedule Change-API Notification. <**[**Schedule Change Notification**](notifications-by-webhook/schedule-change-notification.md)**>
+      The original segments. Only for Schedule Change-API Notification. <**[**Schedule Change Notification**](api-reference/notifications-by-webhook/schedule-change-notification.md)**>
   *   **`revisedSegs` Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
-      The revised segments. Only for Schedule Change-API Notification. <**[**Schedule Change Notification**](notifications-by-webhook/schedule-change-notification.md)**>
+      The revised segments. Only for Schedule Change-API Notification. <**[**Schedule Change Notification**](api-reference/notifications-by-webhook/schedule-change-notification.md)**>
       
   *   **`emailReceivingDate` **<mark style="color:blue;">**string**</mark>
 
