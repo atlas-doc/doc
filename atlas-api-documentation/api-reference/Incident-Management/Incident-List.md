@@ -6,8 +6,7 @@ The "Incident List" is used to batch query incidents.
 
 No preceding function needs to be carried out.
 
-### Endpoint {% debug uid="search_1.0" %}{% enddebug %}
-
+### Endpoint
 [https://sandbox.atriptech.com/event/getPageList.do](https://sandbox.atriptech.com/event/getPageList.do)
 
 ### Request
