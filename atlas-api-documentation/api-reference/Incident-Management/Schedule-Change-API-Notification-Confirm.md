@@ -28,7 +28,7 @@ Remark.
 **Unaccounted Cancellation Confirm **
 ```
 {
-    "event":"20230323113246035DNIDD",
+    "eventId":"20230323113246035DNIDD",
     "remark":""
 }
 ```
