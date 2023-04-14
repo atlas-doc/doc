@@ -93,7 +93,7 @@ Method : Post
       
   *   **`emailLink` **<mark style="color:blue;">**string**</mark>
 
-      Email Link is only valid for 10 mins. After the link expires, it can be retrieved from Incident List API. This is only for Schedule Change-Email Notification.
+      Email Link is only valid for 10 mins. This is only for Schedule Change-Email Notification.
 {% endtab %}
       
 {% tab title="Samples" %}
