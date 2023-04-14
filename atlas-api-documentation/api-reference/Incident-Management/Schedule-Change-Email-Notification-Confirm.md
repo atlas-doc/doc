@@ -73,7 +73,7 @@ Canceled Flights No.
 **Schedule Change-Email Notification Confirm with Flight Change**
 ```
 {
-    "event":"20230323113246035DNIDD",
+    "eventId":"20230323113246035DNIDD",
     "result":"FLIGHT_CHANGE",
     "remark":"",
     "changedFlights":[
