@@ -87,14 +87,14 @@ Number of records per page
     "eventId":"",
     "orderNo":"",
     "eventType":"",
-    "eventStatus":0,
-    "airlines":"",
+    "eventStatus":[0,1],
+    "airline":"",
     "eventTimeStart":"2023-04-01 00:00:00",
     "eventTimeEnd":"2023-05-01 00:00:00",
-    "depTimeStart":"",
-    "depTimeEnd":"",
+    "depTimeStart":null,
+    "depTimeEnd":null,
     "pageIndex":1,
-    "pageSize":100,
+    "pageSize":100
 }
 ```
 
@@ -106,44 +106,112 @@ Number of records per page
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **status **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
+*   **eventId **<mark style="color:blue;">**string**</mark>**
 
-    0: success
+    Incident Id.
+*   **orderNo **<mark style="color:blue;">**string**</mark>**
 
-    2: System error
-*   **msg **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    Order Number.
 
-    Error message
+*   **eventType **<mark style="color:blue;">**string**</mark>**
+
+    Incident type
+
+    email.schedulechange: Schedule Change-Email Notification
+
+    abnormal.cancelled: Unacounted Cancellation
+
+    order.schedulechange: Schedule Change-API Notification
+
+*   **eventStatus**<mark style="color:blue;">**int**</mark>**
+
+    Incident staus
+
+    0: Unconfirmed 
+    1: Confirmed
     
-    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to check the result.
+*   **eventTime**<mark style="color:blue;">**string**</mark>**
 
-*   **count **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-    Incident count
+    Incident recieving time.
     
-*   **eventList Array**<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+*   **confirmedResult**<mark style="color:blue;">**string**</mark>**
 
-    Incident List, the same format as the <**[**Incident Notification**](Incident-Notification.md)**>
+    Incident Reason. Schedule Change Type & Cancelled Type.
+
+*   **confirmedRemark**<mark style="color:blue;">**string**</mark>**
+
+    Remark.
+
+*   **clientCode**<mark style="color:blue;">**string**</mark>**
+
+    Client code.
+
+*   **createTime**<mark style="color:blue;">**Date**</mark>**
+
+    Incident create time.
+
+*   **updateIme**<mark style="color:blue;">**Date**</mark>**
+    
+    Update Time.
+
+*   **airline**<mark style="color:blue;">**string**</mark>**
+    
+    Airline IATA code.
+
+*   **depTime**<mark style="color:blue;">**Date**</mark>**
+
+    Flight depature time
+
+*   **confirmTime**<mark style="color:blue;">**Date**</mark>**
+
+    Confirmed Time.
+
+*   **notified**<mark style="color:blue;">**int**</mark>**
+
+    Send the notification or not
+
+*   **pnr**<mark style="color:blue;">**string**</mark>**
+
+    Order's pnr
+
+*   **paxName**<mark style="color:blue;">**string**</mark>**
+
+    Order's passenger names
+
+*   **paxEmail**<mark style="color:blue;">**string**</mark>**
+
+    Order's passenger Email. Email address passed to the Airline.
+
+
     
 {% endtab %}
 
 {% tab title="Samples" %}
 ```
 {
-    "status": 0,
-    "msg": "success",
-    "count":"3",
-    "eventList":[
-                {
-                "cid":"rggat40831",
-                "type":"email.schedulechange",
-                "notificationId":"20230323113246035DNIDD",
-                "status":0,
-                "data":{
-                     "orderNo":"TESTS20230323103458265",
-                     "emailSubject":"IMPORTANT: Flight delay notice. Confirmation Code KDK7QG",
-                     "emailLink":"https://theatlas/#/email-detail/43782700
-    },
+    "records": [
+        {
+            "eventId": "20230401003644225YJQGR",
+            "orderNo": "HCNMN20230227142411968",
+            "subOrderNo": "HCNMN20230227142411968_1",
+            "eventType": "email.schedulechange",
+            "eventStatus": 0,
+            "eventTime": "Apr 1, 2023 12:36:44 AM",
+            "extraInfo": "4775822",
+            "confirmedResult": null,
+            "confirmedRemark": null,
+            "clientCode": "TAC00001",
+            "createTime": "Apr 1, 2023 12:36:44 AM",
+            "updateIme": "Apr 1, 2023 12:36:44 AM",
+            "airline": "F9",
+            "depTime": "Mar 31, 2023 11:12:00 AM",
+            "confirmTime": null,
+            "confirmUsr": null,
+            "notified": 1,
+            "pnr": "G7ZNW5",
+            "paxName": "SOWERS/REBECCA MUSETTA,STEPHENS/DAVID JEROME",
+            "paxEmail": "GeraldineDushkin2005@ttjipiao.top"
+        },
     …
     ]
 }
