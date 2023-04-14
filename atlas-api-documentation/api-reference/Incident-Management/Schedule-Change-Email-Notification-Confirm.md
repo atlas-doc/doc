@@ -15,11 +15,11 @@ No preceding function needs to be carried out.
 
 **`eventId`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-Incident ID.
+Incident ID
 
 **`result`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-Schedule Change Type.
+Schedule Change Type
 
 FLIGHT_CHANGE: Flight Change
 
@@ -35,7 +35,7 @@ Remark.
 
 **`originalFlightNo`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Required**</mark>
 
-Original Flight No.
+Original Flight No
 
 **`newFlightNo`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
@@ -43,31 +43,35 @@ New Flight No
 
 **`newDepartureTime`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-New Departure Time. yyyy-MM-dd HH:mm:ss
+New Departure Time
+
+Format: yyyy-MM-dd HH:mm:ss
 
 **`newArrivalTime`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-New Arrival Time. yyyy-MM-dd HH:mm:ss
+New Arrival Time
+
+Format: yyyy-MM-dd HH:mm:ss
 
 **`newDepartureAirport`  **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-IATA code.
+IATA code
 
 **`newDepartureTerminal`  **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-New Departure Terminal.
+New Departure Terminal
 
 **`newArrivalAirport`  **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-IATA code.
+IATA code
 
 **`newArrivalAirport`  **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-New Arrival Terminal.
+New Arrival Terminal
 
 **canceledFlights  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Canceled Flights No.
+Canceled Flights No
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -109,9 +113,9 @@ Canceled Flights No.
     2: System error
 *   **msg **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Error message.
+    Error message
     
-    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to check the result.
+    The 'msg' element is for the description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to check the result.
 {% endtab %}
 
 {% tab title="Samples" %}
