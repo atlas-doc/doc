@@ -1,4 +1,4 @@
-# Schedule Change-Email Notification Confirm
+# Schedule Change-Email Notification
 
 ### Dependency
 
