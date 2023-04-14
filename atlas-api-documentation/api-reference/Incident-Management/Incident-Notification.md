@@ -53,28 +53,28 @@ Method : Post
 
           segment information for schedule change notification
 
-          *   **carrier **<mark style="color:blue;">**string**</mark>
+         *   **carrier **<mark style="color:blue;">**string**</mark>
 
               carrier
-          *   **flightNumber **<mark style="color:blue;">**string**</mark>
+         *   **flightNumber **<mark style="color:blue;">**string**</mark>
 
               flight number
-          *   **depAirport **<mark style="color:blue;">**string**</mark>
+         *   **depAirport **<mark style="color:blue;">**string**</mark>
 
               departure airport
-          *   **arrAirport **<mark style="color:blue;">**string**</mark>
+         *   **arrAirport **<mark style="color:blue;">**string**</mark>
 
               arrival ariport
-          *   **depTime **<mark style="color:blue;">**string**</mark>
+         *   **depTime **<mark style="color:blue;">**string**</mark>
 
               departure time
-          *   **arrTime **<mark style="color:blue;">**string**</mark>
+         *   **arrTime **<mark style="color:blue;">**string**</mark>
 
               arrival time
-          *   **depTerminal **<mark style="color:blue;">**string**</mark>
+         *   **depTerminal **<mark style="color:blue;">**string**</mark>
 
               departure time
-          *   **arrTerminal **<mark style="color:blue;">**string**</mark>\
+         *   **arrTerminal **<mark style="color:blue;">**string**</mark>\
               arrival time
           
   *   **`revisedSegs` Array<**<mark style="color:blue;">**scSegment**</mark>**>**
