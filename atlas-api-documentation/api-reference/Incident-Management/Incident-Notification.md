@@ -2,7 +2,7 @@
 
 ### Incident Notification Webhook
 
-In case of incident happens, you will receive the incident notification on the server, you can process and notify your affected customers about this incident.
+In case of any incident, you will receive the incident notification on your server. You can process and notify your affected customers about this incident.
 
 EndPoint ： The URL you configured to receive notifications
 
@@ -15,21 +15,21 @@ Method : Post
     Identifier of client and user.
 *   **`type` **<mark style="color:blue;">**string**</mark>
 
-    Incident type.
+    Incident type
     
     email.schedulechange: Schedule Change-Email Notification
     
     abnormal.cancelled: Unacounted Cancellation
     
-    order.schedulechange: Schedule Change-API Notification. The Notification is **<mark style="color:blue;">**[Schedule Change Notification]**</mark>
+    order.schedulechange: Schedule Change-API Notification. The Notification is **<mark style="color:blue;">**Schedule Change Notification**</mark>
       
 *   **`notificationId` **<mark style="color:blue;">**string**</mark>
 
-      Incident ID.
+      Incident ID
       
 *   **`status` **<mark style="color:blue;">**string**</mark>
 
-      Incident staus.
+      Incident staus
       
       0: Unconfirmed
       1: Confirmed
@@ -37,10 +37,10 @@ Method : Post
 * **data**
   *   **`orderNo` **<mark style="color:blue;">**string**</mark>
 
-      Order number.
+      Order number
       
   *   **`scheduleChangeType` **<mark style="color:blue;">**int**</mark>
-      Schedule change type. Only for Schedule Change-API Notification.
+      Schedule change type. This is only for Schedule Change-API Notification.
 
       1: Schedule change
 
@@ -48,7 +48,7 @@ Method : Post
       
   *   **`previousSegs` Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
-      The original segments. Only for Schedule Change-API Notification. 
+      The original segments. This is only for Schedule Change - API Notification. 
   *   **scSegment **<mark style="color:blue;">**\*\*\*\***</mark>** Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
           segment information for schedule change notification
@@ -79,11 +79,13 @@ Method : Post
           
   *   **`revisedSegs` Array<**<mark style="color:blue;">**scSegment**</mark>**>**
 
-      The revised segments. Only for Schedule Change-API Notification.
+      The revised segments. This is only for Schedule Change-API Notification.
       
   *   **`emailReceivingDate` **<mark style="color:blue;">**string**</mark>
 
-      Email receiving Date(UTC+08:00) yyyymmdd hh:mm:ss. Only for Schedule Change-Email Notification.
+      Email receiving Date
+      
+      Format: (UTC+08:00) yyyymmdd hh:mm:ss. This is only for Schedule Change-Email Notification.
       
   *   **`emailSubject` **<mark style="color:blue;">**string**</mark>
   
@@ -91,7 +93,7 @@ Method : Post
       
   *   **`emailLink` **<mark style="color:blue;">**string**</mark>
 
-      Email Link, only valid for 10 mins. After the link expires, it can be retrieved from Incident List API. Only for Schedule Change-Email Notification.
+      Email Link is only valid for 10 mins. After the link expires, it can be retrieved from Incident List API. This is only for Schedule Change-Email Notification.
 {% endtab %}
       
 {% tab title="Samples" %}
