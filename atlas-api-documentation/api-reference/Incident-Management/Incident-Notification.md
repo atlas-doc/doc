@@ -21,7 +21,7 @@ Method : Post
     
     abnormal.cancelled: Unacounted Cancellation
     
-    order.schedulechange: Schedule Change-API Notification. The Notification is **<mark style="color:blue;">**Schedule Change Notification**</mark>
+    order.schedulechange: Schedule Change-API Notification. The Notification is <mark style="color:blue;">**Schedule Change Notification**</mark>
       
 *   **`notificationId` **<mark style="color:blue;">**string**</mark>
 
