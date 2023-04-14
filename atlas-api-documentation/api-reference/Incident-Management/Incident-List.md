@@ -1,6 +1,6 @@
 # Incident List
 
-The "Incident List" is used to batch query incidents.
+The "Incident List" is used to retrieve incidents in batches.
 
 ### Dependency
 
@@ -14,56 +14,52 @@ No preceding function needs to be carried out.
 {% tabs %}
 {% tab title="Schema" %}
 
-**`eventId`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-Incident ID.
-
 
 
 **`eventId`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Incident ID.
+Incident ID
 
 **`orderNo`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Order number.
+Order number
 
 **`eventType`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Incident type.
+Incident type
 
 email.schedulechange: Schedule Change-Email Notification
 
 abnormal.cancelled: Unacounted Cancellation
 
-order.schedulechange: Schedule Change-API Notification. 
+order.schedulechange: Schedule Change-API Notification.
 
 **`eventStatus`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Incident status.
+Incident status
 
 0: Unconfirmed 
 1: Confirmed
 
 **`airlines`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-An array of IATA Codes of airlines.
+An array of IATA Codes of airlines
 
 **`eventTimeStart`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-Incident Receiving Time Start. yyyy-MM-dd HH:mm:ss UTC+08:00
+Incident Receiving Time Start Format: yyyy-MM-dd HH:mm:ss UTC+08:00
 
 **`eventTimeEnd`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-Incident Receiving Time End. yyyy-MM-dd HH:mm:ss UTC+08:00
+Incident Receiving Time End Format: yyyy-MM-dd HH:mm:ss UTC+08:00
 
 **`depTimeStart`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Departure Time Start(Departure local time). yyyy-MM-dd HH:mm:ss
+Departure Time Start(Departure local time) Format: yyyy-MM-dd HH:mm:ss
 
 **`depTimeEnd`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Departure Time End(Departure local time). yyyy-MM-dd HH:mm:ss
+Departure Time End(Departure local time) Format: yyyy-MM-dd HH:mm:ss
 
 **`pageIndex`  **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
@@ -109,14 +105,14 @@ Number of records per page
     2: System error
 *   **msg **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Error message.
+    Error message
     
     The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to check the result.
 {% endtab %}
 
 *   **count **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Incident count.
+    Incident count
     
 *   **eventList Array**<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
