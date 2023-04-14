@@ -47,19 +47,27 @@ An array of IATA Codes of airlines
 
 **`eventTimeStart`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-Incident Receiving Time Start Format: yyyy-MM-dd HH:mm:ss UTC+08:00
+Incident Receiving Time Start 
+
+Format: yyyy-MM-dd HH:mm:ss UTC+08:00
 
 **`eventTimeEnd`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-Incident Receiving Time End Format: yyyy-MM-dd HH:mm:ss UTC+08:00
+Incident Receiving Time End 
+
+Format: yyyy-MM-dd HH:mm:ss UTC+08:00
 
 **`depTimeStart`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Departure Time Start(Departure local time) Format: yyyy-MM-dd HH:mm:ss
+Departure Time Start(Departure local time) 
+
+Format: yyyy-MM-dd HH:mm:ss
 
 **`depTimeEnd`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Departure Time End(Departure local time) Format: yyyy-MM-dd HH:mm:ss
+Departure Time End(Departure local time) 
+
+Format: yyyy-MM-dd HH:mm:ss
 
 **`pageIndex`  **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
