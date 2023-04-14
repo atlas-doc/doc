@@ -32,6 +32,7 @@ NO_SCHEDULE_CHANGE: No Schedule Change
 Remark.
 
 **changedFlights Array<**<mark style="color:blue;">**changedFlightsElement**</mark>**> **<mark style="color:orange;">**Optional**</mark>
+
 **`originalFlightNo`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Required**</mark>
 
 Original Flight No.
