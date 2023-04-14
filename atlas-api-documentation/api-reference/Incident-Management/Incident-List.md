@@ -132,7 +132,7 @@ Number of records per page
     
 *   **eventTime**<mark style="color:blue;">**string**</mark>**
 
-    Incident recieving time.
+    Incident recieving time.UTC+08:00
     
 *   **confirmedResult**<mark style="color:blue;">**string**</mark>**
 
@@ -148,11 +148,11 @@ Number of records per page
 
 *   **createTime**<mark style="color:blue;">**Date**</mark>**
 
-    Incident create time.
+    Incident create time.UTC+08:00
 
 *   **updateIme**<mark style="color:blue;">**Date**</mark>**
     
-    Update Time.
+    Update Time.UTC+08:00
 
 *   **airline**<mark style="color:blue;">**string**</mark>**
     
@@ -160,23 +160,23 @@ Number of records per page
 
 *   **depTime**<mark style="color:blue;">**Date**</mark>**
 
-    Flight depature time
+    Flight depature time. Depature local time.
 
 *   **confirmTime**<mark style="color:blue;">**Date**</mark>**
 
-    Confirmed Time.
+    Confirmed Time. UTC+08:00
 
 *   **notified**<mark style="color:blue;">**int**</mark>**
 
-    Send the notification or not
+    Send the notification or not. 1: YES. 0: No
 
 *   **pnr**<mark style="color:blue;">**string**</mark>**
 
-    Order's pnr
+    Order's pnr.
 
 *   **paxName**<mark style="color:blue;">**string**</mark>**
 
-    Order's passenger names
+    Order's passenger names.
 
 *   **paxEmail**<mark style="color:blue;">**string**</mark>**
 
