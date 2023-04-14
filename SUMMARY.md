@@ -31,9 +31,9 @@
     * [Balance API](atlas-api-documentation/api-reference/Other-functions/Balance-API.md)
   * [Incident Management](atlas-api-documentation/api-reference/Incident-Management/README.md)
     * [Incident Notification](atlas-api-documentation/api-reference/Incident-Management/Incident-Notification.md)
-    * [Schedule Change-Email Notification](atlas-api-documentation/api-reference/Incident-Management/Schedule-Change-Email-Notification-Confirm.md)
+    * [Schedule Change - Email Notification](atlas-api-documentation/api-reference/Incident-Management/Schedule-Change-Email-Notification-Confirm.md)
     * [Unaccounted Cancellation](atlas-api-documentation/api-reference/Incident-Management/Unaccounted-Cancellation-Confirm.md)    
-    * [Schedule Change–API Notification](atlas-api-documentation/api-reference/Incident-Management/Schedule-Change-API-Notification-Confirm.md)
+    * [Schedule Change – API Notification](atlas-api-documentation/api-reference/Incident-Management/Schedule-Change-API-Notification-Confirm.md)
     * [Incident List](atlas-api-documentation/api-reference/Incident-Management/Incident-List.md)
 * [Advanced](atlas-api-documentation/advanced/README.md)
     <!--   * [Add Ancillaries](atlas-api-documentation/advanced/add-ancillaries.md) -->
