@@ -613,7 +613,7 @@ CabinBaggageOverheadLocker: Cabin Baggage Overhead Locker.
 
 CabinBaggageUnderSeat: Cabin Baggage Under Seat. Usually refers to the personal item.
 
-**`passengerType` **<mark style="color:blue;">****`baggageWeight` **<mark style="color:blue;">**int**</mark>**</mark>
+**`passengerType` **<mark style="color:blue;">**int**</mark>**</mark>
 
 0: ADT
 
