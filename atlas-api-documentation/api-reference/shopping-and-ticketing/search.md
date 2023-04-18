@@ -167,7 +167,7 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "passengerType": 0,
             "baggagePiece": 0,
             "baggageWeight": 0,
-            "baggageSize": ""
+            "baggageSize": "40*25*20cm"
           }
         ],
         "refundRules": [
@@ -958,7 +958,7 @@ The free checked-in or cabin baggage allowance for each fare is available within
             "passengerType": 0,
             "baggagePiece": 0,
             "baggageWeight": 0,
-            "baggageSize": ""
+            "baggageSize": "40*25*20cm"
           }
         ],
                 "refundRules": [{...}],
