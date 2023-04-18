@@ -166,7 +166,8 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "baggageType": "StandardCheckInBaggage",
             "passengerType": 0,
             "baggagePiece": 0,
-            "baggageWeight": 0
+            "baggageWeight": 0,
+            "baggageSize": ""
           }
         ],
         "refundRules": [
@@ -582,7 +583,7 @@ Fare Family as per the information received from the airline.
 {% tab title="Schema" %}
 **`hasBaggage`  **<mark style="color:blue;">**int**</mark>
 
-This tag is used to identify if the fare includes free checked-in baggage.
+This tag is used to identify if the fare includes free checked-in or cabin baggage.
 
 0: Not included
 
@@ -590,7 +591,7 @@ This tag is used to identify if the fare includes free checked-in baggage.
 
 **`BaggageElements` Array<**<mark style="color:blue;">**BaggageElement**</mark>**>**
 
-Free checked-in baggage information included in the fare.
+Free checked-in or cabin baggage information included in the fare.
 
 [BaggageElement](file://api-reference/shopping-and-ticketing/search#6.-baggage-element-schema)
 
@@ -604,11 +605,16 @@ If it is roundtrip, sequence outbound and inbound will be together.
 
 There are 2 options for baggage:
 
-1: StandardCheckInBaggage
+StandardCheckInBaggage: Standard Check-in Baggage
 
-2: CabinBaggage
+CabinBaggage: CabinBaggage. Usually refers to the Cabin Baggage Overhead Locker.
 
-**`passengerType` **<mark style="color:blue;">**string**</mark>
+CabinBaggageOverheadLocker: Cabin Baggage Overhead Locker.
+
+CabinBaggageUnderSeat: Cabin Baggage Under Seat. Usually refers to the personal item.
+
+
+**`passengerType` **<mark style="color:blue;">****`baggageWeight` **<mark style="color:blue;">**int**</mark>**</mark>
 
 0: ADT
 
@@ -630,11 +636,16 @@ Baggage pieces:
 
 **`baggageWeight` **<mark style="color:blue;">**int**</mark>
 
-Baggage Weight, in KGs is mentioned if the airline offers free check-in baggage.
+Baggage Weight, in KGs is mentioned if the airline offers free baggage.
 
 ```
 0: No free baggage
+-1: No limitation on weight. 
 ```
+
+**`baggageSize` **<mark style="color:blue;">**string**</mark>
+
+Baggage Size: length, width, and height. Units of "cm". eg. 56*36*23cm
 
 **`refundRules` Array\<RefundElement>**
 
