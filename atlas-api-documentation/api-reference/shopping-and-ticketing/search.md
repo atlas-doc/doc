@@ -605,7 +605,7 @@ If it is roundtrip, sequence outbound and inbound will be together.
 
 There are 4 options for baggage:
 
-StandardCheckInBaggage: Standard Check-in Baggage
+StandardCheckInBaggage: Standard Check-in Baggage.
 
 CabinBaggage: Usually refers to the Cabin Baggage Overhead Locker. Transition value. It will gradually transition to CabinBaggageOverheadLocker.
 
