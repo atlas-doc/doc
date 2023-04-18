@@ -238,7 +238,7 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "piece": 1,
             "weight": 23,
             "isAllWeight": true,
-            "size": ""
+            "size": "56*36*23cm"
           },
           "offerId": null,
           "maxQty": 1,
@@ -644,7 +644,7 @@ Baggage Weight, in KGs is mentioned if the airline offers free baggage.
 
 **`baggageSize` **<mark style="color:blue;">**string**</mark>
 
-Baggage Size: length, width, and height. Units of "cm". eg. 56*36*23cm
+Baggage Size: length, width, and height. Units of "cm". eg. 56＊36＊23cm. Empty means no limitation.
 
 **`refundRules` Array\<RefundElement>**
 
@@ -881,9 +881,9 @@ Regarding connection flights, there will be multiple segments in `fromSegments` 
 
 ### 3. Where is the baggage allowance mentioned?
 
-#### 3.1. Free checked-in baggage
+#### 3.1. Free checked-in or cabin baggage
 
-The free checked-in baggage allowance for each fare is available within both `search` and the `verify` response.
+The free checked-in or cabin baggage allowance for each fare is available within both `search` and the `verify` response.
 
 {% tabs %}
 {% tab title="Schema" %}
@@ -894,6 +894,18 @@ The free checked-in baggage allowance for each fare is available within both `se
     Segment sequence, start from 1.
 
     If it is roundtrip, sequence outbond and inbound together.
+    
+*   **baggageType **<mark style="color:blue;">**string**</mark>
+
+    There are 4 options for baggage:
+
+    StandardCheckInBaggage: Standard Check-in Baggage.
+
+    CabinBaggage: Usually refers to the Cabin Baggage Overhead Locker. Transition value. It will gradually transition to CabinBaggageOverheadLocker.
+
+    CabinBaggageOverheadLocker: Cabin Baggage Overhead Locker.
+
+    CabinBaggageUnderSeat: Cabin Baggage Under Seat. Usually refers to the personal item.
 *   **passengerType **<mark style="color:blue;">**string**</mark>
 
     0: ADT
@@ -917,6 +929,12 @@ The free checked-in baggage allowance for each fare is available within both `se
     Baggage Weight, with the unit of KG
 
     0 means No Free baggage
+    -1 meas No limitation on weight. 
+
+*   **baggageSize **<mark style="color:blue;">**string**</mark>
+
+    Baggage Size: length, width, and height. Units of "cm". eg. 56＊36＊23cm
+    
 {% endtab %}
 
 {% tab title="Samples" %}
