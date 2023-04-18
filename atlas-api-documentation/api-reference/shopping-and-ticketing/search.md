@@ -603,16 +603,15 @@ If it is roundtrip, sequence outbound and inbound will be together.
 
 **`baggageType`  **<mark style="color:blue;">**string**</mark>
 
-There are 2 options for baggage:
+There are 4 options for baggage:
 
 StandardCheckInBaggage: Standard Check-in Baggage
 
-CabinBaggage: CabinBaggage. Usually refers to the Cabin Baggage Overhead Locker.
+CabinBaggage: Usually refers to the Cabin Baggage Overhead Locker. Transition value. It will gradually transition to CabinBaggageOverheadLocker.
 
 CabinBaggageOverheadLocker: Cabin Baggage Overhead Locker.
 
 CabinBaggageUnderSeat: Cabin Baggage Under Seat. Usually refers to the personal item.
-
 
 **`passengerType` **<mark style="color:blue;">****`baggageWeight` **<mark style="color:blue;">**int**</mark>**</mark>
 
