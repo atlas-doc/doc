@@ -644,7 +644,10 @@ Baggage Weight, in KGs is mentioned if the airline offers free baggage.
 
 **`baggageSize` **<mark style="color:blue;">**string**</mark>
 
-Baggage Size: length＊width＊height and units. eg. "56＊36＊23cm", "18＊14＊8inch". Or Total dimensions (length + width + height) of each piece. eg. "L+W+H<=158cm". Empty means no limitation.
+Baggage Size: 
+length＊width＊height and units. eg. "56＊36＊23cm", "18＊14＊8inch". 
+Or Total dimensions (length + width + height) of each piece. eg. "L+W+H<=158cm". 
+Empty means no limitation.
 
 **`refundRules` Array\<RefundElement>**
 
@@ -933,8 +936,11 @@ The free checked-in or cabin baggage allowance for each fare is available within
 
 *   **baggageSize **<mark style="color:blue;">**string**</mark>
 
-    Baggage Size: length＊width＊height and units. eg. "56＊36＊23cm", "18＊14＊8inch". Or Total dimensions (length + width + height) of each piece. eg. "L+W+H<=158cm". Empty means no limitation.
-    
+    Baggage Size: 
+    length＊width＊height and units. eg. "56＊36＊23cm", "18＊14＊8inch". 
+    Or Total dimensions (length + width + height) of each piece. eg. "L+W+H<=158cm". 
+    Empty means no limitation.
+
 {% endtab %}
 
 {% tab title="Samples" %}
