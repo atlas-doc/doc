@@ -638,7 +638,7 @@ Baggage pieces:
 Baggage Weight, in KGs is mentioned if the airline offers free baggage.
 
 ```
-0: No free baggage
+0 : No free baggage
 -1: No limitation on weight. 
 ```
 
