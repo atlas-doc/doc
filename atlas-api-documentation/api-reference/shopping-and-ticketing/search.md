@@ -949,14 +949,16 @@ The free checked-in or cabin baggage allowance for each fare is available within
             "baggageType": "StandardCheckInBaggage",
             "passengerType": 0,
             "baggagePiece": 0,
-            "baggageWeight": 0
+            "baggageWeight": 0,
+            "baggageSize": ""
           },
           {
             "segmentNo": 2,
             "baggageType": "StandardCheckInBaggage",
             "passengerType": 0,
             "baggagePiece": 0,
-            "baggageWeight": 0
+            "baggageWeight": 0,
+            "baggageSize": ""
           }
         ],
                 "refundRules": [{...}],
