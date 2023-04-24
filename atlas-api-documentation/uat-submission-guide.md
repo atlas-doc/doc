@@ -38,7 +38,7 @@ Please right click on the above link and click "Open link in new window". The fi
 
 You can also download the postman collection below:
 
-> [Atlas UAT Test Full Integration Postman Collection.zip](../.gitbook/assets/Atlas UAT Test Full Integration Postman Collection 20220614.zip)
+> [Atlas UAT Test Full Integration Postman Collection.zip](../.gitbook/assets/Atlas UAT Test Full Integration Postman Collection 20230424.zip)
 
 {% hint style="info" %}
 Please right click on the above link and click "Open link in new window". The file will start downloading.
