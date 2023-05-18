@@ -118,10 +118,6 @@ The 'msg' element is for description of the results. Please DO NOT use this fiel
 
 The time when the cache was populated with the results from the airline. When "acceptCacheIfTimeout" is "false" then the `refreshTime` will be "null".
 
-**`routings` Array <**[**Routing Element**](search.md#route-element-schema)**>**
-
-The array of the routings include suitable flights and fares. Click [<mark style="color:red;">here</mark> ](search.md#route-element-schema)to check the schema
-
 {% hint style="info" %}
 **Points to note for real-time search:**
 
@@ -131,6 +127,10 @@ The array of the routings include suitable flights and fares. Click [<mark style
 * As this is a LIVE search, we would recommend that the airline filter is used during the search process to speed-up the response.
 * Please contact your Business Development Director or Account Manager if you require access to this functionality.
 {% endhint %}
+
+**`routings` Array <**[**Routing Element**](search.md#route-element-schema)**>**
+
+The array of the routings include suitable flights and fares. Click [<mark style="color:red;">here</mark> ](search.md#route-element-schema)to check the schema
 
 {% endtab %}
 
