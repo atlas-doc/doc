@@ -2,7 +2,7 @@
 
 ### Dependency
 
-No preceding function needs to be called before `Search`.
+No preceding function needs to be called before this call.
 
 ### Endpoint {% debug uid="search_1.0" %}{% enddebug %}
 
@@ -70,7 +70,7 @@ Boolean. Defines if the cache search should be done if the real-time search is t
 
 If "false", then the request will time-out if it exceeds 120s and no results will be displayed.
 
-If "true", then after 120s we will look for results from cache and display the cache results.
+If "true", then after 120s cache results will be displayed.
 
 {% endtab %}
 
