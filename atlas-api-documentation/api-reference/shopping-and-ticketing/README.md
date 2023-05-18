@@ -6,7 +6,7 @@ Each offer represents flights that meet your search criteria. Your users will th
 
 - [Search](search.md)
 
-- [Real-time Search](real-timesearch.md)
+- [Real-time Search (As per requirement)](real-timesearch.md)
 
 - [Verify](verify.md)
 
