@@ -118,16 +118,6 @@ The 'msg' element is for description of the results. Please DO NOT use this fiel
 
 The time when the cache was populated with the results from the airline. When "acceptCacheIfTimeout" is "false" then the `refreshTime` will be "null".
 
-{% hint style="info" %}
-**Points to note for real-time search:**
-
-* This function will only be opened by Atlas after understanding the requirements. 
-* The content of the RQ and RS remains the same. Once the search response is received, the exact same flow needs to be followed for verify, book and pay process. The end-points for these services also remain the same.
-* The timeout duration is 120s
-* As this is a LIVE search, we would recommend that the airline filter is used during the search process to speed-up the response.
-* Please contact your Business Development Director or Account Manager if you require access to this functionality.
-{% endhint %}
-
 **`routings` Array <**[**Routing Element**](search.md#route-element-schema)**>**
 
 The array of the routings include suitable flights and fares. Click [<mark style="color:red;">here</mark> ](search.md#route-element-schema)to check the schema
@@ -331,3 +321,13 @@ The array of the routings include suitable flights and fares. Click [<mark style
 ```
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+**Points to note for real-time search:**
+
+* This function will only be opened by Atlas after understanding the requirements. 
+* The content of the RQ and RS remains the same. Once the search response is received, the exact same flow needs to be followed for verify, book and pay process. The end-points for these services also remain the same.
+* The timeout duration is 120s
+* As this is a LIVE search, we would recommend that the airline filter is used during the search process to speed-up the response.
+* Please contact your Business Development Director or Account Manager if you require access to this functionality.
+{% endhint %}
