@@ -275,7 +275,7 @@
           Ticket numbers
       *   **airlinePNRs Array<**<mark style="color:blue;">**string**</mark>**>**
 
-          AirlinePNRs, the array count would be the same as ticketnos count
+          AirlinePNRs. The array count would be the same as ticketnos count
       *   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**>**
 
           Ancillaries selection for the specific passenger
