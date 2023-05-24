@@ -642,7 +642,7 @@ The search request will return a lot of parameters. For this example schema we w
 
 ### 3. UAT Certification
 
-Download the <mark style="color:blue;">Postman collection</mark> bellow to check the samples for UAT and add your observations in the **Comments** column. Then send it to your account manager to request the UAT Certification.
+Download the <mark style="color:blue;">Postman collection</mark> bellow to check the samples for UAT and add your observations in the **Comments** column. Then upload the information in ATRIP "Requests" section and send the service request number to your account manager to request the UAT Certification.
 
 | Search Condition              | Decription                                      | Comments                                                                           |
 | ----------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------- |
