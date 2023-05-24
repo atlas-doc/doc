@@ -110,6 +110,15 @@
 *   **requestSource **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     The tag to identify which channel does this traffic come from.
+    
+*   **useAtlasMailForContact **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    The tag denoting whether to use Atlas email id for contact information.
+    
+    true: Use Atlas email as contact email.
+    
+    false: Use customer email as contact email.
+    
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -156,6 +165,7 @@
         "mobile": "0065-81234567"
     },
     "requestSource": ""
+    "useAtlasMailForContact":false
 }
 ```
 {% endtab %}
