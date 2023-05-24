@@ -654,7 +654,7 @@ The search results will include a lot of items. This schema will only pick up th
 
 ## 3. UAT Certification
 
-Please add your observations in the \[Comments] column and then send it to your account manager to request the UAT Certification.
+Download the <mark style="color:blue;">Postman collection</mark> bellow to check the samples for UAT and add your observations in the **Comments** column. Then upload the information in ATRIP "Requests" section and send the service request number to your account manager to request the UAT Certification.
 
 | Search Condition  | Decription                                                                                   | Comments                                                                                                                                       |
 | ----------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
