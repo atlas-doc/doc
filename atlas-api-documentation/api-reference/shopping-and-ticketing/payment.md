@@ -51,6 +51,10 @@
       *   **cardHolderCountry **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           The country code of card holder
+          
+      *   **cardHolderProvince **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+          The province of card holder
       *   **cardHolderCity **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           The city name of card holder
