@@ -12,6 +12,20 @@ The Atlas API holds the inventory after the `OrderAPI` calls. We have a built-in
 
 
 
+**Which email id can we use in the contact details in the booking?**
+
+In the booking request, you can use your email id on all your bookings or you can use the passenger's email id. Some airlines block bookings if they are consistently coming from the same email id.
+
+To counter the issue of blockage of bookings by airlines, Atlas has developed an in-house process for their customers' benefit. A new tag has been introduced in the "order.do" API request denoting whether to use Atlas email id for contact information.
+
+This tag is "useAtlasMailForContact". When "true" then "Use Atlas email as contact email" and when "false" then "Use customer email as contact email".
+
+When a booking request has been received with "true" in the "useAtlasMailForContact", Atlas will create a unique email id for that booking and send it to the airlines. The responses to the Atlas created email id will be available in the "Bookings" section in the "Email List" in ATRIP. Atlas will endeavour to provide the email from the airlines in the "Email List" section of ATRIP, though, Atlas will not guarantee the notification as Atlas may not always receive the same from the airline or the email service provider.
+
+When a booking request has been received with "false" in the "useAtlasMailForContact", Atlas will create the booking with the email id received in the "order.do" request to the airlines. If such bookings are blocked by the airline, Atlas will cancell the bookings at their end. An error code 321 will be returned with the message "Contact email is blocked by airline".
+
+
+
 **Can we use our VCC to book a round-trip itinerary created by 2 one-way fares?**
 
 Atlas uses 2 one-way fares to construct round-trip journeys when 2 one-way fares are cheaper than a real round-trip. When our customers use VCC for their bookings, it is their intent to use the same for the return journeys constructed using 2 one-way fares also.
