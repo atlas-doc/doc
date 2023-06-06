@@ -1,4 +1,4 @@
-# Search API Integration for Fare Comparison
+# Search API Integration for Fare Search
 
 ## Overview
 
