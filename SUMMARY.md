@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Quick Start](README.md)
-* [Fare Comparison API](atlas-fare-comparison-solution/search-api-integration-for-fare-comparison.md)
+* [Fare Search API](atlas-fare-comparison-solution/search-api-integration-for-fare-comparison.md)
 * [API Reference](atlas-api-documentation/api-reference/README.md)
   * [Overview](atlas-api-documentation/api-reference/overview/README.md)
     * [Making Requests](atlas-api-documentation/api-reference/overview/making-requests.md)
