@@ -52,7 +52,7 @@ Please add the API credentials in the header of each <mark style="color:blue;">*
 
 ### 1) Endpoint
 
-[https://sandbox.atlaslovestravel.com/search.do](https://sandbox.atlaslovestravel.com/search.do)
+[https://sandbox.atriptech.com/search.do](https://sandbox.atriptech.com/search.do)
 
 ### 2) Header
 
