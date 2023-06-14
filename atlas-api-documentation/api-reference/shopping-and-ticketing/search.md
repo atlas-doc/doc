@@ -325,7 +325,7 @@ Technical service fee per passenger as per the signed contract.
 
 **`transactionFee`  **<mark style="color:blue;">**decimal**</mark>
 
-Total technical service fee.
+Technical service fee as per "transactionFeeMode".
 
 **`transactionFeeMode`  **<mark style="color:blue;">**string**</mark>
 
