@@ -14,7 +14,7 @@ Let’s get you started!
 
 ## Get Atlas Sandbox credentials
 
-The Sandbox API credentials or the API key will be created and shared by your account manager. The API credentials or key contain two items: **x-atlas-client-id** and **x-atlas-client-secret**.
+The Sandbox API credentials or the API key can be created by yourself via ATRIP. Access the "Profile" section and then in "My Profile", click on the "Customer Information" tab. The "Generate" button should be clicked and the sandbox credentials will be automatically created. The API credentials or key contain two items: **x-atlas-client-id** and **x-atlas-client-secret**.
 
 The API Key is used to authenticate your API requests. Any request that doesn't include an API key will return an error.
 
