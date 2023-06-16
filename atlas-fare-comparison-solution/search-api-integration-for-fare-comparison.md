@@ -34,13 +34,7 @@ Atlas quotation consists of four parts as mentioned below :
 
 ## 1. Get Atlas Sandbox Credential
 
-The Search API application should be submitted to the Atlas account manager with 3 sets of information as mentioned below. The sandbox API credentials will be created and shared by your account manager.&#x20;
-
-1\) <mark style="color:blue;">Company name</mark>&#x20;
-
-2\) <mark style="color:blue;">Email Address</mark>&#x20;
-
-3\) <mark style="color:blue;">Fare Quote Currency</mark>
+The Sandbox API credentials or the API key can be created by yourself via ATRIP. Access the "Profile" section and then in "My Profile", click on the "Customer Information" tab. The "Generate" button should be clicked and the sandbox credentials will be automatically created. 
 
 The API credentials contain two items : <mark style="color:green;">x-atlas-client-id</mark> and <mark style="color:green;">x-atlas-client-secret.</mark>
 
