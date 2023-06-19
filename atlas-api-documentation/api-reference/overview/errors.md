@@ -47,8 +47,8 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">206</mark> | No flights                         |
 | <mark style="color:blue;">207</mark> | The target flight does not exist                          |
 | <mark style="color:blue;">208</mark> | Cabin changed        |
-| <mark style="color:blue;">299</mark> | Verify failed |
 | <mark style="color:blue;">210</mark> | Fare Family sold out |
+| <mark style="color:blue;">299</mark> | Verify failed |
 
 #### Order error codes
 
