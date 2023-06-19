@@ -65,10 +65,10 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">308</mark> | Price changed                              |
 | <mark style="color:blue;">309</mark> | Ancillary not found                        |
 | <mark style="color:blue;">310</mark> | Infant not allowed                         |
-| <mark style="color:blue;">312</mark> | Too many booking seats                     |
+| <mark style="color:blue;">312</mark> | Too many seats booked                    |
 | <mark style="color:blue;">313</mark> | Fare family sold out                       |
 | <mark style="color:blue;">314</mark> | Unable to regenerate order: The original order is ticketing or ticketed                         |
-| <mark style="color:blue;">315</mark> | Seats not enough                         |
+| <mark style="color:blue;">315</mark> | Not enough seats                         |
 
 #### Payment  error codes
 | Code                                 | Description                                |
