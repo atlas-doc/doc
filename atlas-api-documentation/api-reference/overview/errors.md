@@ -48,6 +48,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">207</mark> | The target flight does not exist                          |
 | <mark style="color:blue;">208</mark> | Cabin changed        |
 | <mark style="color:blue;">299</mark> | Verify failed |
+| <mark style="color:blue;">210</mark> | Fare Family sold out |
 
 #### Order error codes
 
@@ -64,6 +65,10 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">308</mark> | Price changed                              |
 | <mark style="color:blue;">309</mark> | Ancillary not found                        |
 | <mark style="color:blue;">310</mark> | Infant not allowed                         |
+| <mark style="color:blue;">312</mark> | Too many booking seats                     |
+| <mark style="color:blue;">313</mark> | Fare family sold out                       |
+| <mark style="color:blue;">314</mark> | Unable to regenerate order: The original order is ticketing or ticketed                         |
+| <mark style="color:blue;">315</mark> | Seats not enough                         |
 
 #### Payment  error codes
 | Code                                 | Description                                |
@@ -78,7 +83,8 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">407</mark> | Some error messages indicating incorrect passenger information            |
 | <mark style="color:blue;">408</mark> | Passenger can not board alone            |
 | <mark style="color:blue;">409</mark> | Additional baggage does not match the flight segmemt            |
-| <mark style="color:blue;">800</mark> | Order not exists:            |
+| <mark style="color:blue;">410</mark> | invalid contact infomation            |
+| <mark style="color:blue;">800</mark> | Order not exists          |
 | <mark style="color:blue;">900</mark> | Unauthorized access            |
 
 #### Ticket error codes
