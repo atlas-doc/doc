@@ -2,7 +2,7 @@
 
 The "Balance API" is used to fetch the deposit balance from the ATRIP credentials of the customer.
 
-The customer will need to send the header information and the respons ewill be received with the ATRIP deposit balance.
+The customer will need to send the header information and the response will be received with the ATRIP deposit balance.
 
 ## Dependency
 
@@ -10,7 +10,7 @@ There is no dependency for this call.
 
 ## Endpoint
 
-[https://sandbox.atriptech.com/balance](https://sandbox.atriptech.com/balance.do)
+[https://sandbox.atriptech.com/balance.do](https://sandbox.atriptech.com/balance.do)
 
 ## Request
 
