@@ -15,16 +15,22 @@ No preceding function needs to be carried out.
 *   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of client and user.
-*   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+*   **ticketOrderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
+    Order number. It is an order for ticketing.
+
+*   **ancillaryCategory **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    Ancillary Category. Different categorys of ancillary need to be separate requested. Currently only supports [SEAT]
+    
 {% endtab %}
 
 {% tab title="Samples" %}
 ```json
 {
     "cid": "XXXXXXXX",
-    "orderNo": "GXFDU20220117075403790"
+    "ticketOrderNo": "GXFDU20220117075403790",
+    "ancillaryCategory": "SEAT"
 }
 ```
 {% endtab %}
@@ -36,25 +42,56 @@ No preceding function needs to be carried out.
 {% tab title="Schema" %}
 *   **msg **<mark style="color:blue;">**string**</mark>
 
-    Error message.
+    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
 *   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
 
     2: System error
-*   **orderNo **<mark style="color:blue;">**string**</mark>
 
-    Error message.
+*   **sessionId **<mark style="color:blue;">**int**</mark>
+
+    The unique identifier for this search.
+
+    It is required when you call order function to make a reservation to identify which ancillary the client is choosing.
+
+*   **ticketOrderNo **<mark style="color:blue;">**string**</mark>
+
+    Order number. It is an order for ticketing.
     
-    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
+*   **supportCreditTransPayment **<mark style="color:blue;">**int**</mark>
+
+    This tag is used to identify if the fare needs to be paid using the client's credit card.
+
+    0: The credit card details will not be passed through and only pre-payment is allowed.
+
+    1: The API will allow you to pass through client’s credit card details for payment. The customer can also use pre-payment as a method of payment.
+    
+*   **currency **<mark style="color:blue;">**string**</mark>
+
+    The currency in which Atlas settles transactions with you.
+
+*   **fromSegment Array **<mark style="color:blue;">**AncillaryElement**</mark>
+
+    For outbound segments, click [<mark style="color:red;">**here**</mark> ](search.md#segment-element-schema)to check the schema.
+
+*   **retSegment Array **<mark style="color:blue;">**AncillaryElement**</mark>
+
+    For inbound segments, click [<mark style="color:red;">**here**</mark> ](search.md#segment-element-schema)to check the schema.
+
 *   **ancillaries Array **<mark style="color:blue;">**AncillaryElement**</mark>
 
     Ancillary list provided for this order
 
-    * **AncillaryElement**
+    * **AncillaryProductElements**
       *   **segmentIndex **<mark style="color:blue;">**int**</mark>
 
           Segment sequence, start from 1. If it is round trip, sequence outbond and inbound together
+
+      *   **endSegmentIndex **<mark style="color:blue;">**int**</mark>
+
+          The last segment for which this information is applicable.
+
       *   **productCode **<mark style="color:blue;">**string**</mark>
 
           Unique identifier for the ancillary product.
@@ -65,35 +102,83 @@ No preceding function needs to be carried out.
 
           Ancillary product type.
 
-          1: baggage
+          1: Check-in baggage
+          3: Cabin Baggage Overhead Locker
+          6: Seat
 
-          Currently only baggage is available
+          Currently only Seat is available.
+          
       *   **price **<mark style="color:blue;">**string**</mark>
 
           Price for this ancillary.
       *   **currency **<mark style="color:blue;">**string**</mark>
 
           Currency for this price.
-      *   **auxBaggageElement**
 
-          Baggage information
+      *   **vendorPrice **<mark style="color:blue;">**string**</mark>
 
-          *   **piece **<mark style="color:blue;">**string**</mark>
+          The price charged by the vendor for the ancillary.  Only when supportCreditTransPayment=1, there is a value.
 
-              0：No Limitation about piece;
+      *   **vendorCurrency **<mark style="color:blue;">**string**</mark>
 
-              \>0 : Maximum pieces.
-          *   **weight **<mark style="color:blue;">**string**</mark>
+          The currency in which the vendor charges for the ancillary.
 
-              Maximum weight for ancillary baggage, should be greater than 0.
-          *   **isAllWeight **<mark style="color:blue;">**string**</mark>
+      *   **canPurchaseWithTicket **<mark style="color:blue;">**int**</mark>
 
-              True：The weight is for all the pieces;
+          This ancillary product can be purchased during the booking flow.
 
-              False：The weight is for each piece.
+          1=Yes; 0=No
+
+      *   **canPurchasePostTicket **<mark style="color:blue;">**int**</mark>
+
+          This ancillary product can be purchased in the post-ticketing flow.
+
+          1=Yes; 0=No
+
       *   **offerId **<mark style="color:blue;">**string**</mark>
 
-          unique identifier for this ancillary's offer, used for the following order ancillary function.
+          Reserved field, temporarily null
+          
+      *   **maxQty **<mark style="color:blue;">**int**</mark>
+
+          Maximum purchase quantity per product
+  
+      *   **minQty **<mark style="color:blue;">**int**</mark>
+
+          Starting purchase quantity per product
+          
+      *   **categoryCode **<mark style="color:blue;">**string**</mark>
+
+          Ancillary category code.
+          
+      *   **categoryCode **<mark style="color:blue;">**string**</mark>
+
+          Ancillary code.
+
+      *   **auxBaggageElement Array**
+
+          Baggage information.(Temporarily not supported)
+
+      *   **auxSeatElement Array**
+
+          Seat information.
+
+          *   **`rowNo`  **<mark style="color:blue;">**int**</mark>
+
+          *   **`seatNo`  **<mark style="color:blue;">**string**</mark>
+
+          *   **`status`  **<mark style="color:blue;">**boolean**</mark>
+          
+
+          *   **`seatInfo Array`  **<mark style="color:blue;">**
+
+          *   **` passengerType`  **<mark style="color:blue;">**
+
+
+
+
+          
+
 {% endtab %}
 
 {% tab title="Samples" %}
