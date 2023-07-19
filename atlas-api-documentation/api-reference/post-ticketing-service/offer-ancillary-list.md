@@ -198,49 +198,327 @@ No preceding function needs to be carried out.
 {
     "status": 0,
     "msg": "success",
-    "orderNo": "GXFDU20220117075403790",
-    "ancillaries": [
+    "sessionId": "46869eec-d9b2-4e43-84eb-54651309f80c",
+    "ticketOrderNo": "TESTG20230719153539616",
+    "supportCreditTransPayment": "0",
+    "currency": "USD",
+    "fromSegments": [
         {
             "segmentIndex": 1,
-            "productCode": "SCI_BAG_ID_10KG_AABBBB",
-            "productName": "Baggage",
-            "productType": 1,
-            "price": 195.40,
+            "carrier": "JT",
+            "flightNumber": "JT656",
+            "depAirport": "CGK",
+            "depTime": "202308050500",
+            "arrAirport": "LOP",
+            "arrTime": "202308050800",
+            "stopCities": "",
+            "duration": 120,
+            "codeShare": false,
+            "cabin": "",
+            "cabinClass": 1,
+            "seatCount": 4,
+            "aircraftCode": "",
+            "depTerminal": "",
+            "arrTerminal": "",
+            "operatingCarrier": "",
+            "operatingFlightnumber": "",
+            "fareFamily": "Economy"
+        },
+        {
+            "segmentIndex": 2,
+            "carrier": "JT",
+            "flightNumber": "JT645",
+            "depAirport": "LOP",
+            "depTime": "202308050845",
+            "arrAirport": "SUB",
+            "arrTime": "202308050850",
+            "stopCities": "",
+            "duration": 65,
+            "codeShare": false,
+            "cabin": "",
+            "cabinClass": 1,
+            "seatCount": 4,
+            "aircraftCode": "",
+            "depTerminal": "",
+            "arrTerminal": "",
+            "operatingCarrier": "",
+            "operatingFlightnumber": "",
+            "fareFamily": "Economy"
+        }
+    ],
+    "retSegments": [],
+    "ancillaryProductElements": [
+        {
+            "segmentIndex": 1,
+            "endSegmentIndex": null,
+            "productCode": "AD_SEAT_1A_JT656",
+            "productName": "Seat",
+            "productType": 6,
+            "canPurchaseWithTicket": 0,
+            "canPurchasePostTicket": 1,
+            "price": 3.50,
             "currency": "USD",
-            "auxBaggageElement": {
-                "piece": 0,
-                "weight": 10,
-                "isAllWeight": true
-            },
-            "offerId": "25abbe50aaaf4d559fd7e2d21667d337"
+            "vendorPrice": null,
+            "vendorCurrency": null,
+            "clientTechnicalServiceFee": 1.50,
+            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
+            "auxBaggageElement": null,
+            "offerId": null,
+            "maxQty": 1,
+            "minQty": 1,
+            "categoryCode": "Seat",
+            "ancillaryCode": "AD_SEAT_1A_JT656",
+            "auxSeatElement": {
+                "rowNo": "1",
+                "seatNo": "1A",
+                "status": true,
+                "seatInfo": [
+                    "window",
+                    "exit"
+                ],
+                "passengerType": [
+                    "ADT",
+                    "CHD"
+                ]
+            }
         },
         {
             "segmentIndex": 1,
-            "productCode": "SCI_BAG_ID_20KG_AABBBB",
-            "productName": "Baggage",
-            "productType": 1,
-            "price": 233.17,
+            "endSegmentIndex": null,
+            "productCode": "AD_SEAT_2A_JT656",
+            "productName": "Seat",
+            "productType": 6,
+            "canPurchaseWithTicket": 0,
+            "canPurchasePostTicket": 1,
+            "price": 62.45,
             "currency": "USD",
-            "auxBaggageElement": {
-                "piece": 0,
-                "weight": 20,
-                "isAllWeight": true
-            },
-            "offerId": "67c54bade38d40fd9ad8bfbddef5d5da"
+            "vendorPrice": null,
+            "vendorCurrency": null,
+            "clientTechnicalServiceFee": 1.50,
+            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
+            "auxBaggageElement": null,
+            "offerId": null,
+            "maxQty": 1,
+            "minQty": 1,
+            "categoryCode": "Seat",
+            "ancillaryCode": "AD_SEAT_2A_JT656",
+            "auxSeatElement": {
+                "rowNo": "2",
+                "seatNo": "2A",
+                "status": true,
+                "seatInfo": [
+                    "window",
+                    "exit"
+                ],
+                "passengerType": [
+                    "ADT",
+                    "CHD"
+                ]
+            }
         },
         {
             "segmentIndex": 1,
-            "productCode": "SCI_BAG_ID_25KG_AABBBB",
-            "productName": "Baggage",
-            "productType": 1,
-            "price": 270.94,
+            "endSegmentIndex": null,
+            "productCode": "AD_SEAT_3A_JT656",
+            "productName": "Seat",
+            "productType": 6,
+            "canPurchaseWithTicket": 0,
+            "canPurchasePostTicket": 1,
+            "price": 54.29,
             "currency": "USD",
-            "auxBaggageElement": {
-                "piece": 0,
-                "weight": 20,
-                "isAllWeight": true
-            },
-            "offerId": "3007ca5972b6499e9a3d189c68155420"
+            "vendorPrice": null,
+            "vendorCurrency": null,
+            "clientTechnicalServiceFee": 1.50,
+            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
+            "auxBaggageElement": null,
+            "offerId": null,
+            "maxQty": 1,
+            "minQty": 1,
+            "categoryCode": "Seat",
+            "ancillaryCode": "AD_SEAT_3A_JT656",
+            "auxSeatElement": {
+                "rowNo": "3",
+                "seatNo": "3A",
+                "status": true,
+                "seatInfo": [
+                    "window",
+                    "exit"
+                ],
+                "passengerType": [
+                    "ADT",
+                    "CHD"
+                ]
+            }
+        },
+        {
+            "segmentIndex": 1,
+            "endSegmentIndex": null,
+            "productCode": "AD_SEAT_4A_JT656",
+            "productName": "Seat",
+            "productType": 6,
+            "canPurchaseWithTicket": 0,
+            "canPurchasePostTicket": 1,
+            "price": 9.53,
+            "currency": "USD",
+            "vendorPrice": null,
+            "vendorCurrency": null,
+            "clientTechnicalServiceFee": 1.50,
+            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
+            "auxBaggageElement": null,
+            "offerId": null,
+            "maxQty": 1,
+            "minQty": 1,
+            "categoryCode": "Seat",
+            "ancillaryCode": "AD_SEAT_4A_JT656",
+            "auxSeatElement": {
+                "rowNo": "4",
+                "seatNo": "4A",
+                "status": true,
+                "seatInfo": [
+                    "window",
+                    "exit"
+                ],
+                "passengerType": [
+                    "ADT",
+                    "CHD"
+                ]
+            }
+        },
+        {
+            "segmentIndex": 2,
+            "endSegmentIndex": null,
+            "productCode": "AD_SEAT_1A_JT645",
+            "productName": "Seat",
+            "productType": 6,
+            "canPurchaseWithTicket": 0,
+            "canPurchasePostTicket": 1,
+            "price": 17.16,
+            "currency": "USD",
+            "vendorPrice": null,
+            "vendorCurrency": null,
+            "clientTechnicalServiceFee": 1.50,
+            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
+            "auxBaggageElement": null,
+            "offerId": null,
+            "maxQty": 1,
+            "minQty": 1,
+            "categoryCode": "Seat",
+            "ancillaryCode": "AD_SEAT_1A_JT645",
+            "auxSeatElement": {
+                "rowNo": "1",
+                "seatNo": "1A",
+                "status": true,
+                "seatInfo": [
+                    "window",
+                    "exit"
+                ],
+                "passengerType": [
+                    "ADT",
+                    "CHD"
+                ]
+            }
+        },
+        {
+            "segmentIndex": 2,
+            "endSegmentIndex": null,
+            "productCode": "AD_SEAT_2A_JT645",
+            "productName": "Seat",
+            "productType": 6,
+            "canPurchaseWithTicket": 0,
+            "canPurchasePostTicket": 1,
+            "price": 3.38,
+            "currency": "USD",
+            "vendorPrice": null,
+            "vendorCurrency": null,
+            "clientTechnicalServiceFee": 1.50,
+            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
+            "auxBaggageElement": null,
+            "offerId": null,
+            "maxQty": 1,
+            "minQty": 1,
+            "categoryCode": "Seat",
+            "ancillaryCode": "AD_SEAT_2A_JT645",
+            "auxSeatElement": {
+                "rowNo": "2",
+                "seatNo": "2A",
+                "status": true,
+                "seatInfo": [
+                    "window",
+                    "exit"
+                ],
+                "passengerType": [
+                    "ADT",
+                    "CHD"
+                ]
+            }
+        },
+        {
+            "segmentIndex": 2,
+            "endSegmentIndex": null,
+            "productCode": "AD_SEAT_3A_JT645",
+            "productName": "Seat",
+            "productType": 6,
+            "canPurchaseWithTicket": 0,
+            "canPurchasePostTicket": 1,
+            "price": 19.64,
+            "currency": "USD",
+            "vendorPrice": null,
+            "vendorCurrency": null,
+            "clientTechnicalServiceFee": 1.50,
+            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
+            "auxBaggageElement": null,
+            "offerId": null,
+            "maxQty": 1,
+            "minQty": 1,
+            "categoryCode": "Seat",
+            "ancillaryCode": "AD_SEAT_3A_JT645",
+            "auxSeatElement": {
+                "rowNo": "3",
+                "seatNo": "3A",
+                "status": true,
+                "seatInfo": [
+                    "window",
+                    "exit"
+                ],
+                "passengerType": [
+                    "ADT",
+                    "CHD"
+                ]
+            }
+        },
+        {
+            "segmentIndex": 2,
+            "endSegmentIndex": null,
+            "productCode": "AD_SEAT_4A_JT645",
+            "productName": "Seat",
+            "productType": 6,
+            "canPurchaseWithTicket": 0,
+            "canPurchasePostTicket": 1,
+            "price": 7.28,
+            "currency": "USD",
+            "vendorPrice": null,
+            "vendorCurrency": null,
+            "clientTechnicalServiceFee": 1.50,
+            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
+            "auxBaggageElement": null,
+            "offerId": null,
+            "maxQty": 1,
+            "minQty": 1,
+            "categoryCode": "Seat",
+            "ancillaryCode": "AD_SEAT_4A_JT645",
+            "auxSeatElement": {
+                "rowNo": "4",
+                "seatNo": "4A",
+                "status": true,
+                "seatInfo": [
+                    "window",
+                    "exit"
+                ],
+                "passengerType": [
+                    "ADT",
+                    "CHD"
+                ]
+            }
         }
     ]
 }
