@@ -164,17 +164,29 @@ No preceding function needs to be carried out.
           Seat information.
 
           *   **`rowNo`  **<mark style="color:blue;">**int**</mark>
+     
+          Which row are the seat in
 
           *   **`seatNo`  **<mark style="color:blue;">**string**</mark>
-
-          *   **`status`  **<mark style="color:blue;">**boolean**</mark>
+     
+          Seat Number
           
+          *   **`status`  **<mark style="color:blue;">**boolean**</mark>
+     
+          true: Available seat.
+          false: Unavailable seat.
 
           *   **`seatInfo Array`  **<mark style="color:blue;">**
+     
+          Seat information description
+
+          position information：window/aisle/middle  Required, used to draw seat maps.
+
+          other information,such as "exit".
 
           *   **` passengerType`  **<mark style="color:blue;">**
 
-
+          Passenger types supported by seats.
 
 
           
