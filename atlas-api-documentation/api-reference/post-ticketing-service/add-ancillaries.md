@@ -15,13 +15,12 @@ Offer ancillary list function should be called in prior of this call
 *   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of client and user.
-*   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+*   **ticketOrderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
+    Order number. It is an order for ticketing.
+    
 *   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:green;">**Required**</mark>
-
-    Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
-
+     
     * <mark style="color:blue;">**PassengerElement**</mark>
       *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
@@ -33,32 +32,32 @@ Offer ancillary list function should be called in prior of this call
         *   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
             Segment sequence, start from 1. If it is round trip, sequence outbond and inbound together.
-        *   **offerId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+        *   **productCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-            Unique identifier for this ancillary's offer, used for the following order ancillary function.
+            Unique identifier for the ancillary product, used for the following order ancillary function.
+            
 {% endtab %}
 
 {% tab title="Samples" %}
 ```json
 {
-    "cid": "XXXXXXXX",
-    "orderNo": "XPFIW20220209163159425",
+    "cid": "tviin65428",
+    "ticketOrderNo": "APXOS20230629164129749",
+    "ancillaryCategory": "SEAT",
+    "sessionId": "e3593a39-78d4-4e60-a42e-c5c7902455d4",
+    "skipSeatVerify": true,
     "passengers": [
         {
-            "name": "TEST/ONE",
+            "name": "ZHANG/SAN",
+            "passengerType": 0,
             "ancillaries":[ 
-                {
-                    "segmentIndex": 1,
-                    "offerId":"53c50926b04441ae863ababe3eda2a71"
-                }
-            ]
-        },
-        {
-            "name": "TEST/THREE",
-            "ancillaries":[ 
-                {
-                    "segmentIndex": 1,
-                    "offerId":"c5eb4f500394432ea88bf1b142cf33e5"
+                { 
+                    "productCode":"AD_SEAT_35F_JT122", 
+                    "segmentIndex":1
+                },
+                { 
+                    "productCode":"AD_SEAT_31D_JT123", 
+                    "segmentIndex":2
                 }
             ]
         }
@@ -87,11 +86,11 @@ Offer ancillary list function should be called in prior of this call
 *   **orderNo **<mark style="color:blue;">**string**</mark>
 
     Add ancillary order number
-*   \*\*originalOrderNo \*\*<mark style="color:blue;">**string**</mark>
+    
+*   **ticketOrderNo **<mark style="color:blue;">**string**</mark>
 
-    ```
-     <mark style="color:blue;">****</mark>        The original order number                                                                     <mark style="color:blue;">****</mark>                                                                    
-    ```
+    Order number. It is an order for ticketing.
+
 *   **totalPrice **<mark style="color:blue;">**decimal**</mark>
 
     Total fare of this order in the currency TheAtlas settled with you.
@@ -175,75 +174,81 @@ Offer ancillary list function should be called in prior of this call
             *   **segmentIndex **<mark style="color:blue;">**int**</mark>
 
                 Segment sequence
+
+            *   **ancillaryPrice **<mark style="color:blue;">**int**</mark>
+
+                Ancillary's price.
+
+            *   **offerId **<mark style="color:blue;">**int**</mark>
+
+                unique identifier for this ancillary's offer.
+
+            *   **currency **<mark style="color:blue;">**int**</mark>
+
+                The currency of ancillary's price.
+                
+            
 {% endtab %}
 
 {% tab title="Samples" %}
 ```json
 {
-    "status": 0,
-    "msg": null,
-    "sessionId": null,
-    "orderNo": "GXFDU20220117075403790AU05",
-    "originalOrderNo": "GXFDU20220117075403790",
-    "totalPrice": 233.17,
-    "totalTransactionFee": 4.00,
+    "sessionId": "e3593a39-78d4-4e60-a42e-c5c7902455d4",
+    "orderNo": "BISKL20230629164129749",
+    "originalOrderNo": null,
+    "ticketOrderNo": "APXOS20230629164129749",
+    "totalPrice": 2.00,
+    "totalTransactionFee": 3.00,
     "currency": "USD",
-    "vendorTotalPrice": 302.01,
-    "vendorCurrency": "SGD",
-    "tktLimitTime": "2022-01-24 14:32:14",
-    "pnrCode": "GRJE8R",
-    "includeExtraBaggage": 0,
+    "vendorTotalPrice": null,
+    "vendorCurrency": null,
+    "tktLimitTime": "2023-07-19 17:36:35",
+    "pnrCode": "YCGY3Y",
+    "includeExtraBaggage": null,
     "paxTicketInfos": [
         {
-            "name": "LI/SI",
+            "name": "ZHANG/SAN",
             "passengerType": 0,
-            "birthday": "19920513",
+            "birthday": "19960831",
             "gender": "F",
-            "cardNum": "E12345678",
+            "cardNum": "1231",
             "cardType": "PP",
             "cardIssuePlace": "CN",
-            "cardExpired": "20201206",
-            "nationality": "CN",
+            "cardExpired": "2023",
+            "nationality": "GB",
             "ticketNos": [],
             "airlinePNRs": [],
-            "ancillaries": []
-        },
-        {
-            "name": "WANG/WU",
-            "passengerType": 1,
-            "birthday": "20120511",
-            "gender": "F",
-            "cardNum": "E12345678",
-            "cardType": "PP",
-            "cardIssuePlace": "CN",
-            "cardExpired": "20201206",
-            "nationality": "CN",
-            "ticketNos": [],
-            "airlinePNRs": [],
+            "contactEmails": [
+                "BISKL20230629164129749_1@ttjipiao.top"
+            ],
+            "contactPhones": [
+                null
+            ],
             "ancillaries": [
                 {
-                    "productCode": "SCI_BAG_ID_20KG_AABBBB",
+                    "productCode": "AD_SEAT_35F_JT122",
                     "segmentIndex": 1,
-                    "buyMethod": null,
-                    "offerId": null
+                    "buyMethod": "0",
+                    "offerId": null,
+                    "ancillaryPrice": 1.00,
+                    "currency": "USD",
+                    "auxSeatElement": null
+                },
+                {
+                    "productCode": "AD_SEAT_31D_JT123",
+                    "segmentIndex": 2,
+                    "buyMethod": "0",
+                    "offerId": null,
+                    "ancillaryPrice": 1.00,
+                    "currency": "USD",
+                    "auxSeatElement": null
                 }
             ]
-        },
-        {
-            "name": "ZHAO/LIU",
-            "passengerType": 0,
-            "birthday": "20130111",
-            "gender": "M",
-            "cardNum": "E12345678",
-            "cardType": "PP",
-            "cardIssuePlace": "CN",
-            "cardExpired": "20201206",
-            "nationality": "CN",
-            "ticketNos": [],
-            "airlinePNRs": [],
-            "ancillaries": []
         }
-    ]
+    ],
+    "routing": null,
+    "status": 0,
+    "msg": null
 }
 ```
 {% endtab %}
