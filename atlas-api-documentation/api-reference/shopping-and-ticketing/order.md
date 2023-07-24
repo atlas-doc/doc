@@ -98,10 +98,10 @@
       *   **address **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Contact address.
-      *   **postcode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+      *   **postcode **<mark style="color:orange;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
           Contact post code.
-      *   **email **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+      *   **email **<mark style="color:orange;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
           Contact email.
       *   **mobile **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
