@@ -186,6 +186,36 @@ Offer ancillary list function should be called in prior of this call
             *   **currency **<mark style="color:blue;">**int**</mark>
 
                 The currency of ancillary's price.
+
+            *   **auxSeatElement Array**
+
+                Seat information.
+
+            *   **`rowNo`  **<mark style="color:blue;">**int**</mark>
+     
+                Which row are the seat in
+
+            *   **`seatNo`  **<mark style="color:blue;">**string**</mark>
+     
+                Seat Number
+          
+            *   **`status`  **<mark style="color:blue;">**boolean**</mark>
+     
+                true: Available seat.
+                false: Unavailable seat.
+
+            *   **`seatInfo Array`  **<mark style="color:blue;">**
+     
+                Seat information description
+
+                position information：window/aisle/middle  Required, used to draw seat maps.
+
+                other information,such as "exit".
+
+            *   **` passengerType`  **<mark style="color:blue;">**
+
+                Passenger types supported by seats.
+
                 
             
 {% endtab %}
@@ -228,16 +258,14 @@ Offer ancillary list function should be called in prior of this call
                 {
                     "productCode": "AD_SEAT_35F_JT122",
                     "segmentIndex": 1,
-                    "buyMethod": "0",
                     "offerId": null,
                     "ancillaryPrice": 1.00,
                     "currency": "USD",
-                    "auxSeatElement": null
+                    "auxSeatElement": 
                 },
                 {
                     "productCode": "AD_SEAT_31D_JT123",
                     "segmentIndex": 2,
-                    "buyMethod": "0",
                     "offerId": null,
                     "ancillaryPrice": 1.00,
                     "currency": "USD",
