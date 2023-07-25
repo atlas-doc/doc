@@ -21,7 +21,7 @@ No preceding function needs to be carried out.
 
 *   **ancillaryCategory **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Ancillary Category. Different categorys of ancillary need to be separate requested. Currently only supports [SEAT]
+    Ancillary Category. Different categories of ancillaries need to be separately requested. Currently we only supports "Seats".
     
 {% endtab %}
 
@@ -42,7 +42,7 @@ No preceding function needs to be carried out.
 {% tab title="Schema" %}
 *   **msg **<mark style="color:blue;">**string**</mark>
 
-    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
+    The 'msg' element is for the description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to check the result.
 *   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
@@ -57,7 +57,7 @@ No preceding function needs to be carried out.
 
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>
 
-    Order number. It is an order for ticketing.
+    Order number. 
     
 *   **supportCreditTransPayment **<mark style="color:blue;">**int**</mark>
 
@@ -86,7 +86,7 @@ No preceding function needs to be carried out.
     * **AncillaryProductElements**
       *   **segmentIndex **<mark style="color:blue;">**int**</mark>
 
-          Segment sequence, start from 1. If it is round trip, sequence outbond and inbound together
+          Segment sequence. It starts from 1. If it is round trip, the outbound and inbound sequence would be together.
 
       *   **endSegmentIndex **<mark style="color:blue;">**int**</mark>
 
@@ -103,7 +103,9 @@ No preceding function needs to be carried out.
           Ancillary product type.
 
           1: Check-in baggage
+          
           3: Cabin Baggage Overhead Locker
+          
           6: Seat
 
           Currently only Seat is available.
@@ -113,7 +115,7 @@ No preceding function needs to be carried out.
           Price for this ancillary.
       *   **currency **<mark style="color:blue;">**string**</mark>
 
-          Currency for this price.
+          Currency for this ancillary price.
 
       *   **vendorPrice **<mark style="color:blue;">**string**</mark>
 
@@ -127,13 +129,17 @@ No preceding function needs to be carried out.
 
           This ancillary product can be purchased during the booking flow.
 
-          1=Yes; 0=No
+          1=Yes
+
+          0=No
 
       *   **canPurchasePostTicket **<mark style="color:blue;">**int**</mark>
 
           This ancillary product can be purchased in the post-ticketing flow.
 
-          1=Yes; 0=No
+          1=Yes
+
+          0=No
 
       *   **offerId **<mark style="color:blue;">**string**</mark>
 
@@ -145,7 +151,7 @@ No preceding function needs to be carried out.
   
       *   **minQty **<mark style="color:blue;">**int**</mark>
 
-          Starting purchase quantity per product
+          Minimum purchase quantity per product
           
       *   **categoryCode **<mark style="color:blue;">**string**</mark>
 
@@ -165,7 +171,7 @@ No preceding function needs to be carried out.
 
           *   **`rowNo`  **<mark style="color:blue;">**int**</mark>
      
-          Which row are the seat in
+          Row number of the seat.
 
           *   **`seatNo`  **<mark style="color:blue;">**string**</mark>
      
@@ -174,15 +180,24 @@ No preceding function needs to be carried out.
           *   **`status`  **<mark style="color:blue;">**boolean**</mark>
      
           true: Available seat.
+          
           false: Unavailable seat.
 
           *   **`seatInfo Array`  **<mark style="color:blue;">**
      
           Seat information description
 
-          position information：window/aisle/middle  Required, used to draw seat maps.
+          Seat position information：
 
-          other information,such as "exit".
+          window
+
+          aisle
+
+          middle
+
+          Required. This can be used to draw seat maps.
+
+          other information. For example; "exit".
 
           *   **` passengerType`  **<mark style="color:blue;">**
 
