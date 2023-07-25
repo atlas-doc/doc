@@ -2,7 +2,7 @@
 
 ### Dependency
 
-Offer ancillary list function should be called in prior of this call
+"Offer Ancillary List" function should be called in prior of this call.
 
 ### Endpoint {% debug uid="orderAncillary_1.0" %}{% enddebug %}
 
@@ -31,10 +31,10 @@ Offer ancillary list function should be called in prior of this call
       * [**AncillaryElement**](add-ancillaries.md#undefined)
         *   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-            Segment sequence, start from 1. If it is round trip, sequence outbond and inbound together.
+            Segment sequence. It starts from 1. If it is round trip, the outbound and inbound sequence would be together.
         *   **productCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-            Unique identifier for the ancillary product, used for the following order ancillary function.
+            Unique identifier for the ancillary product. Used for the order ancillary function.
             
 {% endtab %}
 
@@ -85,7 +85,7 @@ Offer ancillary list function should be called in prior of this call
     The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
 *   **orderNo **<mark style="color:blue;">**string**</mark>
 
-    Add ancillary order number
+    Order number of the added ancillary.
     
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>
 
@@ -93,17 +93,17 @@ Offer ancillary list function should be called in prior of this call
 
 *   **totalPrice **<mark style="color:blue;">**decimal**</mark>
 
-    Total fare of this order in the currency TheAtlas settled with you.
+    Total fare of this order in the currency Atlas settled with the customer.
 
 *   **totalTransactionFee **<mark style="color:blue;">**decimal**</mark>
 
-    Total technical fees for this order in the currency TheAtlas settled with you.
+    Total technical fees for this order in the currency Atlas settled with the customer.
 *   **currency **<mark style="color:blue;">**string**</mark>
 
-    The currency TheAtlas settled with you.
+    The currency Atlas settled with the customer.
 *   **vendorTotalPrice **<mark style="color:blue;">**decimal**</mark>
 
-    Total fare of this order in the vendor's currency, reference for you to generate the specific credit card.
+    Total fare of this order in the vendor's currency. This is the reference for the customer to generate the specific credit card.
 *   **vendorCurrency **<mark style="color:blue;">**string**</mark>
 
     Vendor's currency.
@@ -171,14 +171,14 @@ Offer ancillary list function should be called in prior of this call
 
                 Ancillary product code;
 
-                Got from routing element in the search/revalidation response.
+                Received from routing element in the search/revalidation response.
             *   **segmentIndex **<mark style="color:blue;">**int**</mark>
 
                 Segment sequence
 
             *   **ancillaryPrice **<mark style="color:blue;">**int**</mark>
 
-                Ancillary's price.
+                Price for this ancillary.
 
             *   **offerId **<mark style="color:blue;">**int**</mark>
 
@@ -186,7 +186,7 @@ Offer ancillary list function should be called in prior of this call
 
             *   **currency **<mark style="color:blue;">**int**</mark>
 
-                The currency of ancillary's price.
+                Currency for this ancillary price.
 
             *   **auxSeatElement Array**
 
@@ -194,7 +194,7 @@ Offer ancillary list function should be called in prior of this call
 
             *   **`rowNo`  **<mark style="color:blue;">**int**</mark>
      
-                Which row are the seat in
+                The row number of the seat.
 
             *   **`seatNo`  **<mark style="color:blue;">**string**</mark>
      
@@ -203,15 +203,24 @@ Offer ancillary list function should be called in prior of this call
             *   **`status`  **<mark style="color:blue;">**boolean**</mark>
      
                 true: Available seat.
+                
                 false: Unavailable seat.
 
             *   **`seatInfo Array`  **<mark style="color:blue;">**
      
                 Seat information description
 
-                position information：window/aisle/middle  Required, used to draw seat maps.
+                Seat position information：
 
-                other information,such as "exit".
+                window
+
+                aisle
+
+                middle
+
+                Required. This can be used to draw seat maps.
+
+                Other information. For example; "exit".
 
             *   **` passengerType`  **<mark style="color:blue;">**
 
