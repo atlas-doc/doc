@@ -94,6 +94,7 @@ Offer ancillary list function should be called in prior of this call
 *   **totalPrice **<mark style="color:blue;">**decimal**</mark>
 
     Total fare of this order in the currency TheAtlas settled with you.
+
 *   **totalTransactionFee **<mark style="color:blue;">**decimal**</mark>
 
     Total technical fees for this order in the currency TheAtlas settled with you.
