@@ -17,8 +17,8 @@
     * [Retrieve Booking](atlas-api-documentation/api-reference/shopping-and-ticketing/retrieve-booking.md)
     * [Regenerate Order](atlas-api-documentation/api-reference/shopping-and-ticketing/regenerateorder.md)
   * [Post Ticketing Service](atlas-api-documentation/api-reference/post-ticketing-service/README.md)
-    <!--* [Offer Ancillary List](atlas-api-documentation/api-reference/post-ticketing-service/offer-ancillary-list.md) -->
-    <!--* [Add Ancillaries](atlas-api-documentation/api-reference/post-ticketing-service/add-ancillaries.md) -->
+    * [Offer Ancillary List](atlas-api-documentation/api-reference/post-ticketing-service/offer-ancillary-list.md) 
+    * [Add Ancillaries](atlas-api-documentation/api-reference/post-ticketing-service/add-ancillaries.md) 
     * [Refund Quotation](atlas-api-documentation/api-reference/post-ticketing-service/refund-quotation.md)
     * [Make a Refund](atlas-api-documentation/api-reference/post-ticketing-service/make-a-refund.md)
   * [Notifications by Webhook](atlas-api-documentation/api-reference/notifications-by-webhook/README.md)
