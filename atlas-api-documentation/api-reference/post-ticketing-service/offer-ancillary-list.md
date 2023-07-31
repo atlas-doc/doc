@@ -74,11 +74,11 @@ No preceding function needs to be carried out.
 
 *   **fromSegment Array **<mark style="color:blue;">**AncillaryElement**</mark>
 
-    For outbound segments, click [<mark style="color:red;">**here**</mark> ](search.md#segment-element-schema)to check the schema.
+    For outbound segments, click [<mark style="color:red;">**here**</mark> ](offer-ancillary.md#segment-element-schema)to check the schema.
 
 *   **retSegment Array **<mark style="color:blue;">**AncillaryElement**</mark>
 
-    For inbound segments, click [<mark style="color:red;">**here**</mark> ](search.md#segment-element-schema)to check the schema.
+    For inbound segments, click [<mark style="color:red;">**here**</mark> ](offer-ancillary.md#segment-element-schema)to check the schema.
 
 *   **ancillaries Array **<mark style="color:blue;">**AncillaryElement**</mark>
 
