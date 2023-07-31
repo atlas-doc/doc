@@ -41,7 +41,7 @@
 {% tab title="Samples" %}
 ```json
 {
-    "cid": "tviin65428",
+    "cid": "XXXXXXXXXXX",
     "ticketOrderNo": "APXOS20230629164129749",
     "ancillaryCategory": "SEAT",
     "sessionId": "e3593a39-78d4-4e60-a42e-c5c7902455d4",
