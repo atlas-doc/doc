@@ -204,7 +204,7 @@ No preceding function needs to be carried out.
 
           Passenger types supported by seats.
 
-# Segment Element Schema
+### Segment Element Schema
 
 {% tabs %}
 {% tab title="Schema" %}
@@ -279,8 +279,6 @@ Arrival terminal.
 **`operatingCarrier`  **<mark style="color:blue;">**string**</mark>
 
 Operating carrier. It is blank when `codeshare=false`
-
-\`\`
 
 **`operatingFlightnumber`  **<mark style="color:blue;">**string**</mark>
 
