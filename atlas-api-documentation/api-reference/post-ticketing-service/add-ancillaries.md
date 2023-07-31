@@ -6,7 +6,7 @@
 
 ### Endpoint {% debug uid="orderAncillary_1.0" %}{% enddebug %}
 
-[https://sandbox.atriptech.com/orderAncillary.do](https://sandbox.atriptech.com/orderAncillary.do)
+[https://sandbox.atriptech.com/secondAdditionOrder.do](https://sandbox.atriptech.com/secondAdditionOrder.do)
 
 ## Request
 
