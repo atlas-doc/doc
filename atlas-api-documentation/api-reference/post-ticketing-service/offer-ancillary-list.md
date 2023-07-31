@@ -204,92 +204,6 @@ No preceding function needs to be carried out.
 
           Passenger types supported by seats.
 
-### Segment Element Schema
-
-{% tabs %}
-{% tab title="Schema" %}
-**`carrier`  **<mark style="color:blue;">**string**</mark>
-
-IATA code of airline.
-
-**`flightNumber`  **<mark style="color:blue;">**string**</mark>
-
-Value denotes flight number. The format is: CA123 or TR021 or FR1290, the letters denote the carrier and the three/four-digit number that follows is the flight number.
-
-**`depAirport`  **<mark style="color:blue;">**string**</mark>
-
-IATA code of departure airport.
-
-**`depTime`  **<mark style="color:blue;">**string**</mark>
-
-Departure time of the flight. The format is ：yyyyMMddHHmm, 202203100300 means 10MAR2022 03:00
-
-**`arrAirport`  **<mark style="color:blue;">**string**</mark>
-
-IATA code of arrival airport.
-
-**`arrTime`  **<mark style="color:blue;">**string**</mark>
-
-Arrival time of the flight. The format is ：yyyyMMddHHmm, 202203100300 means 10MAR2022 03:00
-
-**`stopCities`  **<mark style="color:blue;">**string**</mark>
-
-Name of cities from where the passengers will take connecting flights. Include IATA code of cities and use a comma in case of multiple cities to separate transfer airports count is higher than 1. For example: CGK, SUB. Blank means non-stop flight.
-
-**`duration`  **<mark style="color:blue;">**int**</mark>
-
-The flying duration in minutes.
-
-**`codeShare`  **<mark style="color:blue;">**boolean**</mark>
-
-True : code share
-
-False : Not code share
-
-**`cabin`  **<mark style="color:blue;">**string**</mark>
-
-Booking code for the fare. For the LCCs which do not provide cabin options, the cabin string will be blank.
-
-**`cabinClass`  **<mark style="color:blue;">**int**</mark>
-
-Service grade of the fare
-
-1 : Economy
-
-2 : Business
-
-3 : First Class
-
-**`seatCount`  **<mark style="color:blue;">**int**</mark>
-
-Remaining seats for the fare.
-
-**`aircraftCode`  **<mark style="color:blue;">**string**</mark>
-
-This value identifies the aircraft model, which is the IATA aircraft code. For example, Airbus A380 = 388, Airbus A350 = 351.
-
-**`depTerminal`  **<mark style="color:blue;">**string**</mark>
-
-Departure terminal.
-
-**`arrTerminal`  **<mark style="color:blue;">**string**</mark>
-
-Arrival terminal.
-
-**`operatingCarrier`  **<mark style="color:blue;">**string**</mark>
-
-Operating carrier. It is blank when `codeshare=false`
-
-**`operatingFlightnumber`  **<mark style="color:blue;">**string**</mark>
-
-Operating flight number. It is blank when `codeshare=false`
-
-**`fareFamily`  **<mark style="color:blue;">**string**</mark>
-
-Fare Family as per the information received from the airline.
-
-
-          
 
 {% endtab %}
 
@@ -626,4 +540,90 @@ Fare Family as per the information received from the airline.
 {% endtab %}
 {% endtabs %}
 
-###
+{% endtabs %}
+
+### Segment Element Schema
+
+{% tabs %}
+{% tab title="Schema" %}
+**`carrier`  **<mark style="color:blue;">**string**</mark>
+
+IATA code of airline.
+
+**`flightNumber`  **<mark style="color:blue;">**string**</mark>
+
+Value denotes flight number. The format is: CA123 or TR021 or FR1290, the letters denote the carrier and the three/four-digit number that follows is the flight number.
+
+**`depAirport`  **<mark style="color:blue;">**string**</mark>
+
+IATA code of departure airport.
+
+**`depTime`  **<mark style="color:blue;">**string**</mark>
+
+Departure time of the flight. The format is ：yyyyMMddHHmm, 202203100300 means 10MAR2022 03:00
+
+**`arrAirport`  **<mark style="color:blue;">**string**</mark>
+
+IATA code of arrival airport.
+
+**`arrTime`  **<mark style="color:blue;">**string**</mark>
+
+Arrival time of the flight. The format is ：yyyyMMddHHmm, 202203100300 means 10MAR2022 03:00
+
+**`stopCities`  **<mark style="color:blue;">**string**</mark>
+
+Name of cities from where the passengers will take connecting flights. Include IATA code of cities and use a comma in case of multiple cities to separate transfer airports count is higher than 1. For example: CGK, SUB. Blank means non-stop flight.
+
+**`duration`  **<mark style="color:blue;">**int**</mark>
+
+The flying duration in minutes.
+
+**`codeShare`  **<mark style="color:blue;">**boolean**</mark>
+
+True : code share
+
+False : Not code share
+
+**`cabin`  **<mark style="color:blue;">**string**</mark>
+
+Booking code for the fare. For the LCCs which do not provide cabin options, the cabin string will be blank.
+
+**`cabinClass`  **<mark style="color:blue;">**int**</mark>
+
+Service grade of the fare
+
+1 : Economy
+
+2 : Business
+
+3 : First Class
+
+**`seatCount`  **<mark style="color:blue;">**int**</mark>
+
+Remaining seats for the fare.
+
+**`aircraftCode`  **<mark style="color:blue;">**string**</mark>
+
+This value identifies the aircraft model, which is the IATA aircraft code. For example, Airbus A380 = 388, Airbus A350 = 351.
+
+**`depTerminal`  **<mark style="color:blue;">**string**</mark>
+
+Departure terminal.
+
+**`arrTerminal`  **<mark style="color:blue;">**string**</mark>
+
+Arrival terminal.
+
+**`operatingCarrier`  **<mark style="color:blue;">**string**</mark>
+
+Operating carrier. It is blank when `codeshare=false`
+
+**`operatingFlightnumber`  **<mark style="color:blue;">**string**</mark>
+
+Operating flight number. It is blank when `codeshare=false`
+
+**`fareFamily`  **<mark style="color:blue;">**string**</mark>
+
+Fare Family as per the information received from the airline.
+
+{% endtabs %}
