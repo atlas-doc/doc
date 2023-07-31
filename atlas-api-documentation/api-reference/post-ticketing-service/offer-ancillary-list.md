@@ -6,7 +6,8 @@ No preceding function needs to be carried out.
 
 ### Endpoint {% debug uid="searchAncillary_1.0" %}{% enddebug %}
 
-[https://sandbox.atriptech.com/searchAncillary.do](https://sandbox.atriptech.com/searchAncillary.do)
+
+[http://sandbox.atlaslovestravel.com/secondAdditionSearch.do](http://sandbox.atlaslovestravel.com/secondAdditionSearch.do)
 
 ## Request
 
