@@ -233,10 +233,6 @@
 {% endtabs %}
 
 
-                
-            
-{% endtab %}
-
 {% tab title="Samples" %}
 ```json
 {
