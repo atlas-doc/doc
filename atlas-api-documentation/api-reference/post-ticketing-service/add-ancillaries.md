@@ -232,7 +232,7 @@
 {% endtab %}
 {% endtabs %}
 
-
+{% tabs %}
 {% tab title="Samples" %}
 ```json
 {
