@@ -3,6 +3,7 @@
 ### Dependency
 
 No preceding function needs to be carried out.
+The order should be ticketed and the departure date should be in the future.
 
 ### Endpoint {% debug uid="searchAncillary_1.0" %}{% enddebug %}
 
