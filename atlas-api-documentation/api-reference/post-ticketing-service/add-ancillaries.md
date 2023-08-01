@@ -2,7 +2,7 @@
 
 ### Dependency
 
-"Offer Ancillary List" function should be called in prior of this call.
+"Second Addition Search" function should be called in prior of this call.
 
 ### Endpoint {% debug uid="orderAncillary_1.0" %}{% enddebug %}
 
