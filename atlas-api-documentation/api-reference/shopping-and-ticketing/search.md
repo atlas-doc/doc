@@ -173,25 +173,109 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "refundRules": [
           {
             "refundType": 0,
-            "refundStatus": "T",
-            "refundFee": 0,
-            "currency": "CNY",
-            "refNoshow": "T",
-            "refNoShowCondition": 48,
-            "refNoshowFee": 0,
-            "ruleList": null
+            "refundStatus": "H",
+            "refundFee": 83.01,
+            "currency": "SGD",
+            "refNoshow": "H",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 83.01,
+            "ruleList": [
+                    {
+                        "changesType": 0,
+                        "changesStatus": "H",
+                        "changesFee": 83.01,
+                        "currency": "SGD",
+                        "revNoshow": "H",
+                        "revNoShowCondition": 0,
+                        "revNoshowFee": 83.01,
+                        "ruleList": [
+                            {
+                                "ruleId": 1993,
+                                "status": "H",
+                                "startMinute": 525600,
+                                "endMinute": -4320,
+                                "amount": 30.0,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 1996,
+                                "status": "H",
+                                "startMinute": -4320,
+                                "endMinute": -240,
+                                "amount": 46.12,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 1999,
+                                "status": "H",
+                                "startMinute": -240,
+                                "endMinute": 0,
+                                "amount": 83.01,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 2002,
+                                "status": "H",
+                                "startMinute": 0,
+                                "endMinute": -525600,
+                                "amount": 83.01,
+                                "currency": "SGD"
+                            }
+                        ]
           }
         ],
         "changesRules": [
           {
             "changesType": 0,
-            "changesStatus": "T",
-            "changesFee": 0,
-            "currency": "CNY",
-            "revNoshow": "T",
-            "revNoShowCondition": 48,
-            "revNoshowFee": 0,
-            "ruleList": null
+            "changesStatus": "H",
+            "changesFee": 83.01,
+            "currency": "SGD",
+            "revNoshow": "H",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 83.01,
+            "ruleList": [
+                    {
+                        "changesType": 0,
+                        "changesStatus": "H",
+                        "changesFee": 83.01,
+                        "currency": "SGD",
+                        "revNoshow": "H",
+                        "revNoShowCondition": 0,
+                        "revNoshowFee": 83.01,
+                        "ruleList": [
+                            {
+                                "ruleId": 1993,
+                                "status": "H",
+                                "startMinute": 525600,
+                                "endMinute": -4320,
+                                "amount": 30.0,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 1996,
+                                "status": "H",
+                                "startMinute": -4320,
+                                "endMinute": -240,
+                                "amount": 46.12,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 1999,
+                                "status": "H",
+                                "startMinute": -240,
+                                "endMinute": 0,
+                                "amount": 83.01,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 2002,
+                                "status": "H",
+                                "startMinute": 0,
+                                "endMinute": -525600,
+                                "amount": 83.01,
+                                "currency": "SGD"
+                            }
+                        ]
           }
         ]
       },
@@ -652,7 +736,7 @@ Or Total dimensions (length + width + height) of each piece. eg. "L+W+H<=158cm".
 
 Empty means no limitation.
 
-**`refundRules` Array\<RefundElement>**
+**`refundRules` Array<RefundElement>**
 
 Refer to refund rules as mentioned in Refund Element.
 
@@ -666,7 +750,7 @@ Refer to refund rules as mentioned in Refund Element.
 
 **`refundStatus` s**<mark style="color:blue;">**string**</mark>
 
-Refund rule types:
+Refund rule types of the strictest rules:
 
 T: Non refundable
 
@@ -676,7 +760,7 @@ F: Free for refund
 
 **`refundFee` **<mark style="color:blue;">**decimal**</mark>
 
-Refund fee
+Refund fee of the strictest rules
 
 If refundStatus = H, it should not be null
 
@@ -684,11 +768,11 @@ If refundStatus = T/F, it can be null.
 
 **`currency` **<mark style="color:blue;">**string**</mark>
 
-The currency in which Atlas settles transactions with you, if refundStatus = H
+The currency of airline's rule, if refundStatus = H, it should not be null
 
 **`refNoshow` **<mark style="color:blue;">**string**</mark>
 
-Refund status in case of no show
+Refund status in case of the strictest no show rules 
 
 T: Non refundable
 
@@ -698,19 +782,51 @@ F: Free for refund
 
 **`refNoShowCondition` **<mark style="color:blue;">**string**</mark>
 
-Time before scheduled flight departure, by which passenger(s) need to check in.
+Time before scheduled flight departure.
 
 **`refNoshowFee` **<mark style="color:blue;">**string**</mark>
 
-Total refund fee in case of no show
+Total refund fee in case of the strictest no show rules 
 
 If refNoshow = H, it should not be null
 
 ```
                    This value includes the refund fee and no-show penalty
 ```
+**`ruleList` Array<ruleList>**
+List of all rules
 
-**`changesRules` Array\<ChangesElement>**
+**`ruleId` **<mark style="color:blue;">**int**</mark>
+
+Internal field, can be ignored
+
+**`status` **<mark style="color:blue;">**string**</mark>
+
+Refund rule types:
+
+T: Non refundable
+
+H: Refundable with restrictions
+
+F: Free for refund
+
+**`starMinute` **<mark style="color:blue;">**int**</mark>
+
+Starting time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
+
+**`endMinute` **<mark style="color:blue;">**int**</mark>
+
+Ending time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
+
+**`amount` **<mark style="color:blue;">**decimal**</mark>
+
+Refund fee.
+
+**`currency` **<mark style="color:blue;">**string**</mark>
+
+The currency of airline's rule, if refundStatus = H, it should not be null
+
+**`changesRules` Array<ChangesElement>**
 
 This function is used to fetch the change rules of the selected airline.
 
@@ -726,7 +842,7 @@ Change flight type
 
 **`changesStatus` **<mark style="color:blue;">**string**</mark>
 
-Change flight rule type
+Change flight rule type of the strictest rules
 
 T: Non changeable
 
@@ -736,7 +852,7 @@ F: Free for change flight
 
 **`changesFee` **<mark style="color:blue;">**decimal**</mark>
 
-Change flight fee
+Change flight fee of the strictest rules
 
 If changesStatus = H, it should not be null
 
@@ -744,13 +860,13 @@ If changesStatus = T/F, it can be null
 
 **`currency` **<mark style="color:blue;">**string**</mark>
 
-The currency in which Atlas settles transactions with you.
+The currency of airline's rule,
 
 If changesStatus = H, it should not be null
 
 **`revNoshow` **<mark style="color:blue;">**string**</mark>
 
-Change flight rule in case of no show.
+Change flight rule in case of the strictest no show rules.
 
 T: Non changeable
 
@@ -760,7 +876,7 @@ F: Free for change flight
 
 **`revNoShowCondition` **<mark style="color:blue;">**int**</mark>
 
-Time before scheduled flight departure, by which passenger(s) need to check in.
+Time before scheduled flight departure.
 
 **`revNoshowFee` **<mark style="color:blue;">**string**</mark>
 
@@ -769,6 +885,41 @@ The total fee charged to change flight in case of no show.
 If revNoshow = H, it should not be null.
 
 This value includes the change flight fee and no-show penalty.
+
+**`ruleList` Array<ruleList>**
+
+List of all rules
+
+**`ruleId` **<mark style="color:blue;">**int**</mark>
+
+Internal field, can be ignored
+
+**`status` **<mark style="color:blue;">**string**</mark>
+
+Change flight rule type
+
+T: Non changeable
+
+H: Changeable with restrictions
+
+F: Free for change flight
+
+**`starMinute` **<mark style="color:blue;">**int**</mark>
+
+Starting time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
+
+**`endMinute` **<mark style="color:blue;">**int**</mark>
+
+Ending time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
+
+**`amount` **<mark style="color:blue;">**decimal**</mark>
+
+Change flight fee
+
+**`currency` **<mark style="color:blue;">**string**</mark>
+
+The currency of airline's rule, if refundStatus = H, it should not be null
+
 {% endtab %}
 {% endtabs %}
 
