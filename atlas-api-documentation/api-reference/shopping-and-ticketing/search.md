@@ -764,7 +764,7 @@ Refund fee of the strictest rules
 
 If refundStatus = H, it should not be null
 
-If refundStatus = T/F, it can be null.
+If refundStatus = T/F, it can be null
 
 **`currency` **<mark style="color:blue;">**string**</mark>
 
