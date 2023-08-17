@@ -409,7 +409,7 @@ This is the nationality of the passenger. Pass the IATA country code and use a c
 
 **`suitAge`  **<mark style="color:blue;">**string**</mark>
 
-Passenger age limit format is 2-numeric. The numbers allowed are between 12 and 24. Blank means no limitation.
+Deprecated Field. Ignore it.
 
 **`paxType`  **<mark style="color:blue;">**string**</mark>
 
