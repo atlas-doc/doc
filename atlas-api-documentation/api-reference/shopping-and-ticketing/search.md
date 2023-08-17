@@ -716,7 +716,7 @@ Empty means no limitation.
 
 **`refundRules` Array<RefundElement>**
 
-Refer to refund rules as mentioned in Refund Element.
+Refer to refund rules as mentioned in Refund Element. 
 
 [RefundElement](file://api-reference/shopping-and-ticketing/search#7.-refund-element-schema)
 
@@ -772,7 +772,7 @@ If refNoshow = H, it should not be null
                    This value includes the refund fee and no-show penalty
 ```
 **`ruleList` Array<ruleList>**
-List of all rules
+List of all rules. Inside the ruleList are detailed airline rules for time periods, while outside the ruleList are the strictest rules before and after Noshow.
 
 **`ruleId` **<mark style="color:blue;">**int**</mark>
 
@@ -866,7 +866,7 @@ This value includes the change flight fee and no-show penalty.
 
 **`ruleList` Array<ruleList>**
 
-List of all rules
+List of all rules. Inside the ruleList are detailed airline rules for time periods, while outside the ruleList are the strictest rules before and after Noshow.
 
 **`ruleId` **<mark style="color:blue;">**int**</mark>
 
