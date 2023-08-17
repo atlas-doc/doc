@@ -180,15 +180,6 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "refNoShowCondition": 0,
             "refNoshowFee": 83.01,
             "ruleList": [
-                    {
-                        "changesType": 0,
-                        "changesStatus": "H",
-                        "changesFee": 83.01,
-                        "currency": "SGD",
-                        "revNoshow": "H",
-                        "revNoShowCondition": 0,
-                        "revNoshowFee": 83.01,
-                        "ruleList": [
                             {
                                 "ruleId": 1993,
                                 "status": "H",
@@ -221,8 +212,6 @@ The array of the routings include suitable flights and fares. Click [<mark style
                                 "amount": 83.01,
                                 "currency": "SGD"
                             }
-                        ]
-          }
         ],
         "changesRules": [
           {
@@ -234,15 +223,6 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "revNoShowCondition": 0,
             "revNoshowFee": 83.01,
             "ruleList": [
-                    {
-                        "changesType": 0,
-                        "changesStatus": "H",
-                        "changesFee": 83.01,
-                        "currency": "SGD",
-                        "revNoshow": "H",
-                        "revNoShowCondition": 0,
-                        "revNoshowFee": 83.01,
-                        "ruleList": [
                             {
                                 "ruleId": 1993,
                                 "status": "H",
@@ -276,8 +256,6 @@ The array of the routings include suitable flights and fares. Click [<mark style
                                 "currency": "SGD"
                             }
                         ]
-          }
-        ]
       },
       "ancillaryProductElements": [
         {
