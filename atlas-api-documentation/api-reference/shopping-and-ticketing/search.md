@@ -718,8 +718,6 @@ Empty means no limitation.
 
 Refer to refund rules as mentioned in Refund Element. 
 
-[RefundElement](file://api-reference/shopping-and-ticketing/search#7.-refund-element-schema)
-
 **`refundType` **<mark style="color:blue;">**int**</mark>
 
 0: Wholly unused ticket
@@ -807,8 +805,6 @@ The currency of airline's rule, if refundStatus = H, it should not be null
 **`changesRules` Array<ChangesElement>**
 
 This function is used to fetch the change rules of the selected airline.
-
-[ChangesElement](file://api-reference/shopping-and-ticketing/search#8.-change-element-schema)
 
 **`changesType` **<mark style="color:blue;">**int**</mark>
 
