@@ -726,7 +726,7 @@ Refer to refund rules as mentioned in Refund Element.
 
 **`refundStatus` s**<mark style="color:blue;">**string**</mark>
 
-Refund rule types of the strictest rules:
+Refund rule types (for the most restrictive condition):
 
 T: Non refundable
 
@@ -736,7 +736,7 @@ F: Free for refund
 
 **`refundFee` **<mark style="color:blue;">**decimal**</mark>
 
-Refund fee of the strictest rules
+Refund fee (for the most restrictive condition):
 
 If refundStatus = H, it should not be null
 
@@ -744,11 +744,11 @@ If refundStatus = T/F, it can be null
 
 **`currency` **<mark style="color:blue;">**string**</mark>
 
-The currency of airline's rule, if refundStatus = H, it should not be null
+The currency of airline's rule, if refundStatus = H, it should not be "null".
 
 **`refNoshow` **<mark style="color:blue;">**string**</mark>
 
-Refund status in case of the strictest no show rules 
+Refund status (for the most restrictive condition):
 
 T: Non refundable
 
@@ -762,19 +762,20 @@ Time before scheduled flight departure.
 
 **`refNoshowFee` **<mark style="color:blue;">**string**</mark>
 
-Total refund fee in case of the strictest no show rules 
+Total refund fee (for the most restrictive condition):
 
-If refNoshow = H, it should not be null
+If refNoshow = H, it should not be "null".
 
 ```
                    This value includes the refund fee and no-show penalty
 ```
 **`ruleList` Array<ruleList>**
+
 List of all rules. Inside the ruleList are detailed airline rules for time periods, while outside the ruleList are the strictest rules before and after Noshow.
 
 **`ruleId` **<mark style="color:blue;">**int**</mark>
 
-Internal field, can be ignored
+For internal use only. 
 
 **`status` **<mark style="color:blue;">**string**</mark>
 
@@ -784,7 +785,7 @@ T: Non refundable
 
 H: Refundable with restrictions
 
-F: Free for refund
+F: Free Refund 
 
 **`starMinute` **<mark style="color:blue;">**int**</mark>
 
@@ -800,7 +801,7 @@ Refund fee.
 
 **`currency` **<mark style="color:blue;">**string**</mark>
 
-The currency of airline's rule, if refundStatus = H, it should not be null
+The currency of airline's rule. If refundStatus = H, it should not be "null".
 
 **`changesRules` Array<ChangesElement>**
 
@@ -812,41 +813,41 @@ Change flight type
 
 0: Wholly unused ticket
 
-1: Partially used ticket (For example, when the passenger has used an outbound flight and wants to refund an inbound flight)
+1: Partially used ticket (For example. When the passenger has used an outbound flight and wants to change an inbound flight)
 
 **`changesStatus` **<mark style="color:blue;">**string**</mark>
 
-Change flight rule type of the strictest rules
+Change flight rule type (for the most restrictive condition):
 
 T: Non changeable
 
 H: Changeable with restrictions
 
-F: Free for change flight
+F: Free flight change 
 
 **`changesFee` **<mark style="color:blue;">**decimal**</mark>
 
-Change flight fee of the strictest rules
+Change flight fee (for the most restrictive condition):
 
-If changesStatus = H, it should not be null
+If changesStatus = H, it should not be "null"
 
-If changesStatus = T/F, it can be null
+If changesStatus = T/F, it can be "null"
 
 **`currency` **<mark style="color:blue;">**string**</mark>
 
-The currency of airline's rule,
+The currency of airline's rule.
 
-If changesStatus = H, it should not be null
+If changesStatus = H, it should not be "null"
 
 **`revNoshow` **<mark style="color:blue;">**string**</mark>
 
-Change flight rule in case of the strictest no show rules.
+Change flight rule (for the most restrictive condition):
 
 T: Non changeable
 
 H: Changeable with restrictions
 
-F: Free for change flight
+F: Free flight change
 
 **`revNoShowCondition` **<mark style="color:blue;">**int**</mark>
 
@@ -856,7 +857,7 @@ Time before scheduled flight departure.
 
 The total fee charged to change flight in case of no show.
 
-If revNoshow = H, it should not be null.
+If revNoshow = H, it should not be "null."
 
 This value includes the change flight fee and no-show penalty.
 
@@ -866,7 +867,7 @@ List of all rules. Inside the ruleList are detailed airline rules for time perio
 
 **`ruleId` **<mark style="color:blue;">**int**</mark>
 
-Internal field, can be ignored
+For internal use only.
 
 **`status` **<mark style="color:blue;">**string**</mark>
 
@@ -876,7 +877,7 @@ T: Non changeable
 
 H: Changeable with restrictions
 
-F: Free for change flight
+F: Free flight change
 
 **`starMinute` **<mark style="color:blue;">**int**</mark>
 
@@ -892,7 +893,7 @@ Change flight fee
 
 **`currency` **<mark style="color:blue;">**string**</mark>
 
-The currency of airline's rule, if refundStatus = H, it should not be null
+The currency of airline's rule, if refundStatus = H, it should not be "null".
 
 {% endtab %}
 {% endtabs %}
