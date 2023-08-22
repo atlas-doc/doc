@@ -787,7 +787,7 @@ H: Refundable with restrictions
 
 F: Free Refund 
 
-**`starMinute` **<mark style="color:blue;">**int**</mark>
+**`startMinute` **<mark style="color:blue;">**int**</mark>
 
 Starting time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
 
