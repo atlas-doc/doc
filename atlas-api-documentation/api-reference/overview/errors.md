@@ -31,6 +31,10 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">110</mark> | Too many concurrent requests                               |
 | <mark style="color:blue;">111</mark> | Real time search is not allowed                               |
 | <mark style="color:blue;">112</mark> | Timed out                               |
+| <mark style="color:blue;">113</mark> | Vendor is under maintenance                               |
+| <mark style="color:blue;">114</mark> | No flights present                               |
+| <mark style="color:blue;">115</mark> | Unexpected results                               |
+| <mark style="color:blue;">116</mark> | Search data not captured                             |
 | <mark style="color:blue;">900</mark> | Unauthorized access                              |
 
 
