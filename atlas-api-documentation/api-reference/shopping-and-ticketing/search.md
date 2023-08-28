@@ -179,7 +179,8 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "refNoshow": "H",
             "refNoShowCondition": 0,
             "refNoshowFee": 83.01,
-            "ruleList": [
+            "ruleList":[],
+            "ruleDetailList": [
                             {
                                 "ruleId": 1993,
                                 "status": "H",
@@ -222,7 +223,8 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "revNoshow": "H",
             "revNoShowCondition": 0,
             "revNoshowFee": 83.01,
-            "ruleList": [
+            "ruleList":[],
+            "ruleDetailList": [
                             {
                                 "ruleId": 1993,
                                 "status": "H",
@@ -770,6 +772,11 @@ If refNoshow = H, it should not be "null".
                    This value includes the refund fee and no-show penalty
 ```
 **`ruleList` Array<ruleList>**
+
+Internal field, ignore it
+
+
+**`ruleDetailList` Array<ruleList>**
 
 List of all rules. Inside the ruleList are detailed airline rules for time periods, while outside the ruleList are the strictest rules before and after Noshow.
 
