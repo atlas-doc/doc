@@ -300,141 +300,408 @@
 {% tab title="Samples" %}
 ```
 {
-    "status":0,
-    "msg":"success",
-    "sessionId":"20e00a95-0eb1-44a4-b45c-ed358b12dc8a",
-    "orderNo":"TBASP20220123212500763",
-    "totalPrice":176.15,
-    "totalTransactionFee":6.38,
-    "currency":"CNY",
-    "vendorTotalPrice":1411.24,
-    "vendorCurrency":"PHP",
-    "tktLimitTime":"2022-01-23 22:15:00",
-    "pnrCode":"YO76ZF",
-    "includeExtraBaggage":0,
-    "paxTicketInfos":[
+    "sessionId": "57f7b429-bc89-40a6-af0a-af167c43a82a",
+    "orderNo": "TESTJ20230825173736982",
+    "originalOrderNo": null,
+    "ticketOrderNo": null,
+    "totalPrice": 30.48,
+    "totalTransactionFee": 0.00,
+    "currency": "USD",
+    "vendorTotalPrice": 1.00,
+    "vendorCurrency": "EUR",
+    "tktLimitTime": "2023-08-25 18:27:37",
+    "pnrCode": "KBAYFJ",
+    "includeExtraBaggage": 0,
+    "paxTicketInfos": [
         {
-            "name":"ZHAN/SAN LI",
-            "passengerType":0,
-            "birthday":"19731012",
-            "gender":"M",
-            "cardNum":"E00000000",
-            "cardType":"PP",
-            "cardIssuePlace":"HK",
-            "cardExpired":"20240123",
-            "nationality":"HK",
-            "ticketNos":[
-
+            "name": "shao/tingjun",
+            "passengerType": 0,
+            "birthday": "19910105",
+            "gender": "M",
+            "cardNum": "330226199101051272",
+            "cardType": "PP",
+            "cardIssuePlace": "CN",
+            "cardExpired": "20220413",
+            "nationality": "CN",
+            "ticketNos": [],
+            "airlinePNRs": [],
+            "contactEmails": [
+                "manuelafellingerfx@msbzt.com"
             ],
-            "airlinePNRs":[
-
+            "contactPhones": [
+                "8615951711432"
             ],
-            "ancillaries":[
-
-            ]
+            "ancillaries": []
         }
     ],
-    "routing":{
-        "routingIdentifier":"fZLZw029cBVRUPzvRCF2hU1okLJgXsVUsFwV4I1Nrx0+IeBLujvH1Tviid634fozLt0sb7UwGvV/kRoSwhvTKJDn+QcARQ1JbBBBJK0aJ6FDZTnby0lKiPRJWJeAdVaqUxJV6TF0R3w4dtruLPIzETfWaFUbztP2R/Ld4H/wb88PYq34aqXFZDviid634fozLt0sb7UwGvV/kRoSwhvTKEDDCgG0Q21a16y8UbmfYUnBcsZk1oPoWGqjrFpf56gF",
-        "supportCreditTransPayment":"0",
-        "currency":"CNY",
-        "adultPrice":103.14,
-        "adultTax":73.01,
-        "childPrice":103.14,
-        "childTax":73.01,
-        "InfantPrice":0,
-        "InfantTax":0,
-        "transactionFeePerPax":6.38,
-        "nationalityType":0,
-        "nationality":"",
-        "suitAge":"",
-        "PaxType":"ADT",
-        "fromSegments":[
+    "routing": {
+        "fid": "UDkKJsajo9XeFOvIRI14RT95DeziNq3cn_J4LnfyL5kdu6x7i9Q_99hdb239v6gV",
+        "routingIdentifier": "kAPir1gptfa5xmCdsTZkH0e0L9cI9MFKGLICoNRk9jLIVGY3uE7U493/BiSYU2lYCYz/vMhBJjNHxx29YKKVnhlP5EWT/YXfkAPir1gptfa5xmCdsTZkH0e0L9cI9MFKUr1HOLYbauVYHwhoJ64w9UbbRSb2DZWlomLeKoQjf3ruSK5qf8AFyAIvhcka7oKSgAEHSN0RzE2FAziTj5sTU3UVadMgeF6WNFV2qOZBL4neI0CpIreuFy0NtPb3+ogO2o5sQPlp/zC+QM0Tm/GivEWod/a+C7OjcFGi7UK0QapcR/CmLEcSQLDq2GUlevjzRSOPPgKYH2Qj8m9aeuwE1ABD6GWL+Qiy",
+        "supportCreditTransPayment": "0",
+        "supportPaymentMethods": [
+            1
+        ],
+        "currency": "USD",
+        "adultPrice": 30.05,
+        "adultTax": 0.43,
+        "childPrice": 30.05,
+        "childTax": 0.43,
+        "infantPrice": 38.12,
+        "infantTax": 0.00,
+        "infantAllowed": true,
+        "transactionFeePerPax": 0.00,
+        "transactionFee": 0.00,
+        "transactionFeeMode": "PER_PAX",
+        "nationalityType": 0,
+        "nationality": "",
+        "suitAge": "",
+        "PaxType": "ADT",
+        "fromSegments": [
             {
-                "carrier":"DG",
-                "flightNumber":"DG6925",
-                "depAirport":"CEB",
-                "depTime":"202201251230",
-                "arrAirport":"BXU",
-                "arrTime":"202201251335",
-                "stopCities":"",
-                "duration":65,
-                "codeShare":false,
-                "cabin":"",
-                "cabinClass":1,
-                "seatCount":4,
-                "aircraftCode":"AT7",
-                "depTerminal":"",
-                "arrTerminal":"",
-                "operatingCarrier":"",
-                "operatingFlightnumber":""
+                "segmentIndex": 1,
+                "carrier": "W4",
+                "flightNumber": "W42849",
+                "depAirport": "VIE",
+                "depTime": "202309230605",
+                "arrAirport": "NCE",
+                "arrTime": "202309230755",
+                "stopCities": "",
+                "duration": 110,
+                "codeShare": false,
+                "cabin": "",
+                "cabinClass": 1,
+                "seatCount": 4,
+                "aircraftCode": "",
+                "depTerminal": "",
+                "arrTerminal": "",
+                "operatingCarrier": "",
+                "operatingFlightnumber": "",
+                "fareFamily": "Basic"
             }
         ],
-        "retSegments":[
-
-        ],
-        "combineIndexs":[
-
-        ],
-        "rule":{
-            "hasBaggage":0,
-            "baggageElements":[
+        "retSegments": [],
+        "combineIndexs": [],
+        "rule": {
+            "hasBaggage": 1,
+            "baggageElements": [
                 {
-                    "segmentNo":1,
-                    "passengerType":0,
-                    "baggagePiece":0,
-                    "baggageWeight":0
+                    "segmentNo": 1,
+                    "baggageType": "CabinBaggageUnderSeat",
+                    "passengerType": 0,
+                    "baggagePiece": 1,
+                    "baggageWeight": -1,
+                    "baggageSize": "40*30*20cm"
+                },
+                {
+                    "segmentNo": 1,
+                    "baggageType": "StandardCheckInBaggage",
+                    "passengerType": 0,
+                    "baggagePiece": 0,
+                    "baggageWeight": 0,
+                    "baggageSize": ""
                 }
             ],
-            "refundRules":[
+            "refundRules": [
                 {
-                    "refundType":0,
-                    "refundStatus":"T",
-                    "refundFee":0,
-                    "currency":"CNY",
-                    "refNoshow":"T",
-                    "refNoShowCondition":48,
-                    "refNoshowFee":0,
-                    "ruleList":[
-
-                    ]
+                    "refundType": 0,
+                    "refundStatus": "T",
+                    "refundFee": 0.0,
+                    "currency": "EUR",
+                    "refNoshow": "T",
+                    "refNoShowCondition": 0,
+                    "refNoshowFee": 0.0,
+                    "ruleDetailList": [
+                        {
+                            "ruleId": 3036,
+                            "status": "H",
+                            "startMinute": 525600,
+                            "endMinute": 20160,
+                            "amount": 65.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3038,
+                            "status": "H",
+                            "startMinute": 20160,
+                            "endMinute": 180,
+                            "amount": 85.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3041,
+                            "status": "T",
+                            "startMinute": 180,
+                            "endMinute": 0,
+                            "amount": 0.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3044,
+                            "status": "T",
+                            "startMinute": 0,
+                            "endMinute": -525600,
+                            "amount": 0.0,
+                            "currency": "EUR"
+                        }
+                    ],
+                    "ruleList": null
                 }
             ],
-            "changesRules":[
+            "changesRules": [
                 {
-                    "changesType":0,
-                    "changesStatus":"T",
-                    "changesFee":0,
-                    "currency":"CNY",
-                    "revNoshow":"T",
-                    "revNoShowCondition":48,
-                    "revNoshowFee":0,
-                    "ruleList":[
-
+                    "changesType": 0,
+                    "changesStatus": "T",
+                    "changesFee": 0.0,
+                    "currency": "EUR",
+                    "revNoshow": "T",
+                    "revNoShowCondition": 0,
+                    "revNoshowFee": 0.0,
+                    "ruleList": null,
+                    "ruleDetailList": [
+                        {
+                            "ruleId": 3047,
+                            "status": "H",
+                            "startMinute": 525600,
+                            "endMinute": 43200,
+                            "amount": 35.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3049,
+                            "status": "H",
+                            "startMinute": 43200,
+                            "endMinute": 10080,
+                            "amount": 40.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3051,
+                            "status": "H",
+                            "startMinute": 10080,
+                            "endMinute": 180,
+                            "amount": 45.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3054,
+                            "status": "T",
+                            "startMinute": 180,
+                            "endMinute": 0,
+                            "amount": 0.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3057,
+                            "status": "T",
+                            "startMinute": 0,
+                            "endMinute": -525600,
+                            "amount": 0.0,
+                            "currency": "EUR"
+                        }
                     ]
                 }
             ]
         },
-        "ancillaryProductElements":[
+        "ancillaryProductElements": [
             {
-                "segmentIndex":1,
-                "productCode":"BAG_DG_PH-PH_1_1P_20KG",
-                "productName":"Baggage",
-                "productType":1,
-                "canPurchaseWithTicket":1,
-                "canPurchasePostTicket":0,
-                "price":59.51,
-                "currency":"CNY",
-                "auxBaggageElement":{
-                    "piece":1,
-                    "weight":20,
-                    "isAllWeight":true
-                }
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_1PC_10KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 40.22,
+                "currency": "USD",
+                "vendorPrice": 36.93,
+                "vendorCurrency": "EUR",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 1,
+                    "weight": 10,
+                    "isAllWeight": false,
+                    "size": ""
+                },
+                "offerId": null,
+                "maxQty": 1,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_1PC_10KG",
+                "auxSeatElement": null
+            },
+            {
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_1PC_20KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 66.24,
+                "currency": "USD",
+                "vendorPrice": 60.82,
+                "vendorCurrency": "EUR",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 1,
+                    "weight": 20,
+                    "isAllWeight": false,
+                    "size": ""
+                },
+                "offerId": null,
+                "maxQty": 6,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_1PC_20KG",
+                "auxSeatElement": null
+            },
+            {
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_2PC_40KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 132.47,
+                "currency": "USD",
+                "vendorPrice": 121.64,
+                "vendorCurrency": "EUR",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 2,
+                    "weight": 40,
+                    "isAllWeight": true,
+                    "size": ""
+                },
+                "offerId": null,
+                "maxQty": 1,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_2PC_40KG",
+                "auxSeatElement": null
+            },
+            {
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_1PC_26KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 68.42,
+                "currency": "USD",
+                "vendorPrice": 62.83,
+                "vendorCurrency": "EUR",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 1,
+                    "weight": 26,
+                    "isAllWeight": false,
+                    "size": ""
+                },
+                "offerId": null,
+                "maxQty": 6,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_1PC_26KG",
+                "auxSeatElement": null
+            },
+            {
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_2PC_52KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 136.84,
+                "currency": "USD",
+                "vendorPrice": 125.66,
+                "vendorCurrency": "EUR",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 2,
+                    "weight": 52,
+                    "isAllWeight": true,
+                    "size": ""
+                },
+                "offerId": null,
+                "maxQty": 1,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_2PC_52KG",
+                "auxSeatElement": null
+            },
+            {
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_1PC_32KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 71.61,
+                "currency": "USD",
+                "vendorPrice": 65.76,
+                "vendorCurrency": "EUR",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 1,
+                    "weight": 32,
+                    "isAllWeight": false,
+                    "size": ""
+                },
+                "offerId": null,
+                "maxQty": 6,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_1PC_32KG",
+                "auxSeatElement": null
+            },
+            {
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_2PC_64KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 143.22,
+                "currency": "USD",
+                "vendorPrice": 131.52,
+                "vendorCurrency": "EUR",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 2,
+                    "weight": 64,
+                    "isAllWeight": true,
+                    "size": ""
+                },
+                "offerId": null,
+                "maxQty": 1,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_2PC_64KG",
+                "auxSeatElement": null
             }
         ],
-        "vendorFare":null
-    }
-}j
+        "vendorFare": null,
+        "bundleOptions": [],
+        "links": [],
+        "separateBookings": false,
+        "refreshTime": null
+    },
+    "status": 0,
+    "msg": null
+}
 ```
 {% endtab %}
 {% endtabs %}
