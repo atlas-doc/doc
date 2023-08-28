@@ -165,301 +165,258 @@ The `search` function should be called prior to this call.
 {% tab title="Samples" %}
 ```
 {
-  "sessionId": "0f6910f8-c783-42f4-ac67-4751906dde25",
-  "maxSeats": 4,
-  "routing": {
-    "fid": "E96Zg5Lr4XQxVimN0_rhFeZULZ_HVT5DXZo6cPTdQrVod3ISQRlb4thdb239v6gV",
-    "routingIdentifier": "IMBJh2LCiGucW/2fPoF4vPMRYyg0zjCX46VwnmDdMe+jn0SjHfR2nG/JWOkMaBeWWIsuVjYLsQv13xKhBeLbwE+OXtZXPvGMcbZEyIAKEd5pLXkmEaA9RxxXgWMbFa51MbEoePQk+F98JWr+FZCMlvI1JfshB/COpA0pnET4vO6Q+ktZg054ffXhZ6XpCo+Xt//s2/Y+Gbmh1LfPd2+Th74lI3vzTq1WH22pZxHygsDsb9b6JP7TXUWOt8lGShg1XJv7Jub9r1Y9TKsg3AR+JBuzgqA3FKthJURHwnVOil1Ia8nu9EbyIN+JHhhjzxyG",
-    "supportCreditTransPayment": "0",
-    "currency": "USD",
-    "adultPrice": 28.59,
-    "adultTax": 16.17,
-    "childPrice": 28.59,
-    "childTax": 16.17,
-    "infantPrice": 0,
-    "infantTax": 0,
-    "infantAllowed": false,
-    "transactionFeePerPax": 1,
-    "transactionFee": 1,
-    "transactionFeeMode": "PER_PAX",
-    "nationalityType": 0,
-    "nationality": "",
-    "suitAge": "",
-    "PaxType": "ADT",
-    "fromSegments": [
-      {
-        "carrier": "EC",
-        "flightNumber": "EC7846",
-        "depAirport": "STN",
-        "depTime": "202304151930",
-        "arrAirport": "AMS",
-        "arrTime": "202304152135",
-        "stopCities": "",
-        "duration": 65,
-        "codeShare": false,
-        "cabin": "",
-        "cabinClass": 1,
-        "seatCount": 4,
-        "aircraftCode": "",
-        "depTerminal": "",
-        "arrTerminal": "",
-        "operatingCarrier": "",
-        "operatingFlightnumber": "",
-        "fareFamily": "Standard"
-      }
-    ],
-    "retSegments": [],
-    "combineIndexs": [],
-    "rule": {
-      "hasBaggage": 0,
-      "baggageElements": [
-        {
-          "segmentNo": 1,
-          "baggageType": "StandardCheckInBaggage",
-          "passengerType": 0,
-          "baggagePiece": 0,
-          "baggageWeight": 0
-        }
-      ],
-      "refundRules": [
-        {
-          "refundType": 0,
-          "refundStatus": "T",
-          "refundFee": 0,
-          "currency": "CNY",
-          "refNoshow": "T",
-          "refNoShowCondition": 48,
-          "refNoshowFee": 0,
-          "ruleList": [
+    "sessionId": "a72ec919-1aca-4a85-98c1-995c57022ae0",
+    "maxSeats": 4,
+    "routing": {
+        "fid": "y2yLoRAscltEl8AFnPEHBM7XdoRc1WHsnQpcPU1QXUG6ZLJ0vSaswQ..",
+        "routingIdentifier": "kAPir1gptfa5xmCdsTZkH3md2e6FFsBnGLICoNRk9jKjtYDn0cD+IDpVpRQq8k7IHlDfvWU6CYW9A95DoiwOWbX2M65Q2y253iFBnmnd6xSXlY16a2N8IXF2rJglXJ0yIEdByMvEOt3zh9clbKPRbYKoIoMpSEo9aqOGcm2h0u0U4/BYNSbM+8aH9Lavob+A/2yy+3VlhITdZYWZJaG7heiSG/R/VPb53iNAqSK3rhctDbT29/qIDtqObED5af8wvkDNE5vxorxFqHf2vguzo4vmvrmyx26agBr9GN8Ooe67Y/uw5b7Cjv4cUsQz5IlOI/JvWnrsBNQAQ+hli/kIsg==",
+        "supportCreditTransPayment": "0",
+        "supportPaymentMethods": [
+            1
+        ],
+        "currency": "USD",
+        "adultPrice": 30.05,
+        "adultTax": 0.43,
+        "childPrice": 30.05,
+        "childTax": 0.43,
+        "infantPrice": 0.00,
+        "infantTax": 0.00,
+        "infantAllowed": false,
+        "transactionFeePerPax": 0.00,
+        "transactionFee": 0.00,
+        "transactionFeeMode": "PER_PAX",
+        "nationalityType": 0,
+        "nationality": "",
+        "suitAge": "",
+        "PaxType": "ADT",
+        "fromSegments": [
             {
-              "rowId": 1383,
-              "gmtCreate": "Feb 17, 2023 11:33:21 AM",
-              "gmtModified": "Feb 17, 2023 11:33:21 AM",
-              "creator": null,
-              "modifier": null,
-              "isDeleted": "N",
-              "airline": "EC",
-              "ruleType": "self_refund",
-              "ruleName": "self_refund_EC_1_Qpg6I7",
-              "ruleKey": "self_refund_EC_202302171133201",
-              "priority": 10,
-              "validBeginTime": "Oct 8, 2019 12:00:00 AM",
-              "validEndTime": "Jun 9, 2333 11:59:59 PM",
-              "depCity": null,
-              "arrCity": null,
-              "depCountry": null,
-              "arrCountry": null,
-              "bookingCode": null,
-              "fareFamily": null,
-              "cabinClass": null,
-              "timingMode": "depTime",
-              "timeLeft": 120,
-              "timeRight": 360,
-              "ruleExtend": {
-                "ruleKey": "self_refund_EC_202302171133201",
-                "canRefund": "N",
-                "canChange": null,
-                "canRefundTax": "N",
-                "canRefundPkg": null,
-                "canRefundCoupon": null,
-                "canMakeUpDiff": null,
-                "canNoShowRefund": null,
-                "amount": null,
-                "amountCurrency": null,
-                "pricePercent": null,
-                "priceItem": null,
-                "taxItem": null,
-                "charge": null,
-                "chargeCurrency": null,
-                "canExemptSameDay": null,
-                "exemptDuration": null,
-                "ticketBeginTime": null,
-                "ticketEndTime": null,
-                "applyBeginTime": null,
-                "applyEndTime": null,
-                "travelBeginTime": null,
-                "travelEndTime": null
-              }
+                "segmentIndex": 1,
+                "carrier": "W4",
+                "flightNumber": "W42849",
+                "depAirport": "VIE",
+                "depTime": "202309230605",
+                "arrAirport": "NCE",
+                "arrTime": "202309230755",
+                "stopCities": "",
+                "duration": 110,
+                "codeShare": false,
+                "cabin": "",
+                "cabinClass": 1,
+                "seatCount": 4,
+                "aircraftCode": "",
+                "depTerminal": "",
+                "arrTerminal": "",
+                "operatingCarrier": "",
+                "operatingFlightnumber": "",
+                "fareFamily": "Basic"
             }
-          ]
-        }
-      ],
-      "changesRules": [
-        {
-          "changesType": 0,
-          "changesStatus": "T",
-          "changesFee": 0,
-          "currency": "CNY",
-          "revNoshow": "T",
-          "revNoShowCondition": 48,
-          "revNoshowFee": 0,
-          "ruleList": []
-        }
-      ]
+        ],
+        "retSegments": [],
+        "combineIndexs": [],
+        "rule": {
+            "hasBaggage": 1,
+            "baggageElements": [
+                {
+                    "segmentNo": 1,
+                    "baggageType": "CabinBaggageUnderSeat",
+                    "passengerType": 0,
+                    "baggagePiece": 1,
+                    "baggageWeight": -1,
+                    "baggageSize": "40*30*20cm"
+                },
+                {
+                    "segmentNo": 1,
+                    "baggageType": "StandardCheckInBaggage",
+                    "passengerType": 0,
+                    "baggagePiece": 0,
+                    "baggageWeight": 0,
+                    "baggageSize": ""
+                }
+            ],
+            "refundRules": [
+                {
+                    "refundType": 0,
+                    "refundStatus": "T",
+                    "refundFee": 0.0,
+                    "currency": "EUR",
+                    "refNoshow": "T",
+                    "refNoShowCondition": 0,
+                    "refNoshowFee": 0.0,
+                    "ruleDetailList": [
+                        {
+                            "ruleId": 3036,
+                            "status": "H",
+                            "startMinute": 525600,
+                            "endMinute": 20160,
+                            "amount": 65.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3038,
+                            "status": "H",
+                            "startMinute": 20160,
+                            "endMinute": 180,
+                            "amount": 85.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3041,
+                            "status": "T",
+                            "startMinute": 180,
+                            "endMinute": 0,
+                            "amount": 0.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3044,
+                            "status": "T",
+                            "startMinute": 0,
+                            "endMinute": -525600,
+                            "amount": 0.0,
+                            "currency": "EUR"
+                        }
+                    ],
+                    "ruleList": null
+                }
+            ],
+            "changesRules": [
+                {
+                    "changesType": 0,
+                    "changesStatus": "T",
+                    "changesFee": 0.0,
+                    "currency": "EUR",
+                    "revNoshow": "T",
+                    "revNoShowCondition": 0,
+                    "revNoshowFee": 0.0,
+                    "ruleList": null,
+                    "ruleDetailList": [
+                        {
+                            "ruleId": 3047,
+                            "status": "H",
+                            "startMinute": 525600,
+                            "endMinute": 43200,
+                            "amount": 35.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3049,
+                            "status": "H",
+                            "startMinute": 43200,
+                            "endMinute": 10080,
+                            "amount": 40.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3051,
+                            "status": "H",
+                            "startMinute": 10080,
+                            "endMinute": 180,
+                            "amount": 45.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3054,
+                            "status": "T",
+                            "startMinute": 180,
+                            "endMinute": 0,
+                            "amount": 0.0,
+                            "currency": "EUR"
+                        },
+                        {
+                            "ruleId": 3057,
+                            "status": "T",
+                            "startMinute": 0,
+                            "endMinute": -525600,
+                            "amount": 0.0,
+                            "currency": "EUR"
+                        }
+                    ]
+                }
+            ]
+        },
+        "ancillaryProductElements": [],
+        "vendorFare": null,
+        "bundleOptions": [],
+        "links": [],
+        "separateBookings": false,
+        "refreshTime": null
     },
-    "ancillaryProductElements": [
-      {
-        "segmentIndex": 1,
-        "endSegmentIndex": null,
-        "productCode": "CBOL_1PC_56*45*25CM",
-        "productName": "CabinBaggageOverheadLocker",
-        "productType": 3,
-        "canPurchaseWithTicket": 1,
-        "canPurchasePostTicket": 0,
-        "price": 16.16,
-        "currency": "USD",
-        "vendorPrice": 12.99,
-        "vendorCurrency": "GBP",
-        "clientTechnicalServiceFee": 0,
-        "auxBaggageElement": {
-          "piece": 1,
-          "weight": 0,
-          "isAllWeight": true,
-          "size": "56*45*25cm"
-        },
-        "offerId": null,
-        "maxQty": 1,
-        "minQty": 1,
-        "categoryCode": "CabinBaggageOverheadLocker",
-        "ancillaryCode": "CBOL_1PC_56*45*25CM"
-      },
-      {
-        "segmentIndex": 1,
-        "endSegmentIndex": null,
-        "productCode": "SCI_1PC_15KG",
-        "productName": "StandardCheckInBaggage",
-        "productType": 1,
-        "canPurchaseWithTicket": 1,
-        "canPurchasePostTicket": 0,
-        "price": 29.84,
-        "currency": "USD",
-        "vendorPrice": 23.99,
-        "vendorCurrency": "GBP",
-        "clientTechnicalServiceFee": 0,
-        "auxBaggageElement": {
-          "piece": 1,
-          "weight": 15,
-          "isAllWeight": false,
-          "size": ""
-        },
-        "offerId": null,
-        "maxQty": 3,
-        "minQty": 1,
-        "categoryCode": "StandardCheckInBaggage",
-        "ancillaryCode": "SCI_1PC_15KG"
-      },
-      {
-        "segmentIndex": 1,
-        "endSegmentIndex": null,
-        "productCode": "SCI_1PC_23KG",
-        "productName": "StandardCheckInBaggage",
-        "productType": 1,
-        "canPurchaseWithTicket": 1,
-        "canPurchasePostTicket": 0,
-        "price": 36.05,
-        "currency": "USD",
-        "vendorPrice": 28.99,
-        "vendorCurrency": "GBP",
-        "clientTechnicalServiceFee": 0,
-        "auxBaggageElement": {
-          "piece": 1,
-          "weight": 23,
-          "isAllWeight": false,
-          "size": ""
-        },
-        "offerId": null,
-        "maxQty": 3,
-        "minQty": 1,
-        "categoryCode": "StandardCheckInBaggage",
-        "ancillaryCode": "SCI_1PC_23KG"
-      }
-    ],
-    "vendorFare": null,
-    "bundleOptions": [],
-    "links": [
-      {
-        "kind": "terms",
-        "link": "",
-        "description": "Carrier terms and conditions"
-      }
-    ],
-    "separateBookings": false
-  },
-  "bookingRequirement": {
-    "passenger": {
-      "birthday": {
-        "type": "string",
-        "required": false,
-        "description": null,
-        "maxLength": null
-      },
-      "cardIssuePlace": {
-        "type": "string",
-        "required": false,
-        "description": null,
-        "maxLength": null
-      },
-      "cardNum": {
-        "type": "string",
-        "required": false,
-        "description": null,
-        "maxLength": null
-      },
-      "passengerType": {
-        "type": "int",
-        "required": true,
-        "description": null,
-        "maxLength": null
-      },
-      "gender": {
-        "type": "string",
-        "required": true,
-        "description": null,
-        "maxLength": null
-      },
-      "nationality": {
-        "type": "string",
-        "required": false,
-        "description": null,
-        "maxLength": null
-      },
-      "cardExpired": {
-        "type": "string",
-        "required": false,
-        "description": null,
-        "maxLength": null
-      },
-      "name": {
-        "type": "string",
-        "required": true,
-        "description": null,
-        "maxLength": null
-      },
-      "cardType": {
-        "type": "string",
-        "required": false,
-        "description": null,
-        "maxLength": null
-      }
-    }
-  },
-  "priceChange": {
-    "isPriceChange": false,
-    "originalAdultPrice": 28.59,
-    "originalAdultTax": 16.17,
-    "originalChildPrice": 28.59,
-    "originalChildTax": 16.17,
-    "originalInfantPrice": 32.8,
-    "originalInfantTax": 0,
-    "newAdultPrice": 28.59,
-    "newAdultTax": 16.17,
-    "newChildPrice": 28.59,
-    "newChildTax": 16.17,
-    "newInfantPrice": 0,
-    "newInfantTax": 0
-  },
-  "status": 0,
-  "msg": "success"
+    "bookingRequirement": {
+        "passenger": {
+            "birthday": {
+                "type": "string",
+                "required": true,
+                "description": null,
+                "maxLength": null
+            },
+            "cardIssuePlace": {
+                "type": "string",
+                "required": false,
+                "description": null,
+                "maxLength": null
+            },
+            "cardNum": {
+                "type": "string",
+                "required": false,
+                "description": null,
+                "maxLength": null
+            },
+            "passengerType": {
+                "type": "int",
+                "required": true,
+                "description": null,
+                "maxLength": null
+            },
+            "gender": {
+                "type": "string",
+                "required": true,
+                "description": null,
+                "maxLength": null
+            },
+            "nationality": {
+                "type": "string",
+                "required": false,
+                "description": null,
+                "maxLength": null
+            },
+            "cardExpired": {
+                "type": "string",
+                "required": false,
+                "description": null,
+                "maxLength": null
+            },
+            "name": {
+                "type": "string",
+                "required": true,
+                "description": null,
+                "maxLength": null
+            },
+            "cardType": {
+                "type": "string",
+                "required": false,
+                "description": null,
+                "maxLength": null
+            }
+        }
+    },
+    "priceChange": {
+        "isPriceChange": false,
+        "originalAdultPrice": 30.05,
+        "originalAdultTax": 0.43,
+        "originalChildPrice": 30.05,
+        "originalChildTax": 0.43,
+        "originalInfantPrice": 38.12,
+        "originalInfantTax": 0.00,
+        "newAdultPrice": 30.05,
+        "newAdultTax": 0.43,
+        "newChildPrice": 30.05,
+        "newChildTax": 0.43,
+        "newInfantPrice": 0.00,
+        "newInfantTax": 0.00
+    },
+    "status": 0,
+    "msg": "success"
 }
 ```
 {% endtab %}
