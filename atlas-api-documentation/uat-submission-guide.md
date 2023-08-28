@@ -8,7 +8,7 @@ The Atlas API integration process is straightforward. However, we need to conduc
 
 Once you have integrated the API we need to test and confirm if the integration was successful. The attached **UAT Shopping and Ticketing Service** template has three test scenarios we need you to submit. The test cases of the journey should include the combination of passenger types, trip types, direct or connecting flights and payment methods mentioned in the UAT template.
 
-Please download the UAT template below, follow the steps, fill in the test results and submit the test results by email.
+Please download the UAT template below, follow the steps, fill in the test results and submit the test results on ATRIP via the "Requests" section.
 
 > [Atlas UAT Test Shopping & Ticketing Services Only Template.xlsx](../.gitbook/assets/Atlas UAT Test Shopping & Ticketing Services Only Template.xlsx)
 
@@ -28,7 +28,7 @@ Please right click on the above link and click "Open link in new window". The fi
 
 In the full integration UAT, we want to test all combinations of passenger types, trip types, direct or connecting flights, payment methods, ancillary services and webhooks. The attached **UAT Full integration** template has three test scenarios we need you to submit.
 
-Please download the UAT submission template below, follow the steps, fill in the test results and submit the test results by email.
+Please download the UAT submission template below, follow the steps, fill in the test results and submit the test results on ATRIP via the "Requests" section.
 
 > [Atlas UAT Test Full Integration Template.xlsx](../.gitbook/assets/Atlas UAT Test Full Integration Template.xlsx)
 
