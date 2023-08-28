@@ -773,8 +773,7 @@ If refNoshow = H, it should not be "null".
 ```
 **`ruleList` Array<ruleList>**
 
-Internal field, ignore it
-
+For internal use only.
 
 **`ruleDetailList` Array<ruleList>**
 
@@ -869,6 +868,10 @@ If revNoshow = H, it should not be "null."
 This value includes the change flight fee and no-show penalty.
 
 **`ruleList` Array<ruleList>**
+
+For internal use only.
+
+**`ruleDetailList` Array<ruleList>**
 
 List of all rules. Inside the ruleList are detailed airline rules for time periods, while outside the ruleList are the strictest rules before and after Noshow.
 
