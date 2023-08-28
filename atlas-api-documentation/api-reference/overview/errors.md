@@ -26,12 +26,12 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">105</mark> | OD is not in client's round-trip white list                               |
 | <mark style="color:blue;">106</mark> | Search is not allowed                               |
 | <mark style="color:blue;">107</mark> | Insufficient balance                               |
-| <mark style="color:blue;">108</mark> | Route is restricted                               |
+| <mark style="color:blue;">108</mark> | Route is restricted / System limitations                               |
 | <mark style="color:blue;">109</mark> | The number of searches exceeded the limit                               |
 | <mark style="color:blue;">110</mark> | Too many concurrent requests                               |
 | <mark style="color:blue;">111</mark> | Real time search is not allowed                               |
 | <mark style="color:blue;">112</mark> | Timed out                               |
-| <mark style="color:blue;">113</mark> | Vendor is under maintenance                               |
+| <mark style="color:blue;">113</mark> | Airline is under maintenance                               |
 | <mark style="color:blue;">114</mark> | No flights present                               |
 | <mark style="color:blue;">115</mark> | Unexpected results                               |
 | <mark style="color:blue;">116</mark> | Search data not captured                             |
