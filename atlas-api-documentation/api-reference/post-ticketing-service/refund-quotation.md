@@ -127,9 +127,8 @@ No preceding function needs to be carried out.
 
     Estimated amount which can be got back for this refund.
 
-    {% hint style="info" %} Estimated amount is calculated using the current time+12 hours to match airline rules. This is to reserve time for Atlas to go to the airline to process the refund.
-
- {% endhint %}
+    {% hint style="info" %} Estimated amount is calculated using the current time+12 hours to match airline rules. This is to reserve time for Atlas to go to the airline to process the refund. {% endhint %}
+    
 *   **transactionFee **<mark style="color:blue;">**decimal**</mark>
 
     The transaction fees for this refund.
