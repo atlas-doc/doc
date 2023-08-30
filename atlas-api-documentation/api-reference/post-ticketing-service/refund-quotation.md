@@ -160,5 +160,7 @@ No preceding function needs to be carried out.
 {% endtabs %}
 
 {% hint style="info" %}
-All amounts are calculated using the current time+12 hours to match airline rules. This is to reserve time for Atlas to go to the airline to process the refund.
+All amounts are calculated using the current time +12 hours. This is to permit the Atlas Operations Team to initiate the refund process with the airline.
+
+Please note that the refund quote is valid for 2 hrs.
 {% endhint %}
