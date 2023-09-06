@@ -94,6 +94,12 @@ Method : Post
   *   **`emailLink` **<mark style="color:blue;">**string**</mark>
 
       Email Link is only valid for 10 mins. This is only for Schedule Change-Email Notification.
+
+  *   **`vendorRefundInformation` **<mark style="color:blue;">**string**</mark>
+
+      Reference information for determining Unacounted Cancellation. This is only for Unacounted Cancellation.
+      FULLY: means Atlas received a full refund from the airline without any schedule change or refund apply.
+      Cancelled: means Atlas found some abnormal cancellation from airline.
 {% endtab %}
       
 {% tab title="Samples" %}
