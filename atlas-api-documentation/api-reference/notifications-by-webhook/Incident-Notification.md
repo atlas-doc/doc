@@ -107,7 +107,7 @@ Method : Post
 
 ```
 {
-    "cid":"rggat40831",
+    "cid":"xxxxxxxxxx",
     "type":"email.schedulechange",
     "notificationId":"20230323113246035DNIDD",
     "status":0,
