@@ -104,6 +104,24 @@
 
 {% tabs %}
 {% tab title="Schema" %}
+      Order number
+*   **Order Number **<mark style="color:blue;">**string**</mark>
+
+*   **pnrCode **<mark style="color:blue;">**string**</mark>
+    
+    The pnrCode is the single reference for the booking. This is the Atlas PNR. 
+
+**`paymentMethod`  **<mark style="color:blue;">**string**</mark>
+
+This tag shows the form of payment used. 
+
+0: Pre-payment
+
+1: VCC
+
+**`airlines`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+IATA Code of the airline.
 *   **status **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     0: success
@@ -119,8 +137,14 @@
 {% tab title="Samples" %}
 ```
 {
-    "status": 0,
-    "msg": "success"
+  "orderNo": "ANRUE20230906141814490",
+  "pnrCode": "ZMPB8O",
+  "paymentMethod": 1,
+  "airlines": [
+    "5W"
+  ],
+  "status": 0,
+  "msg": null
 }
 ```
 {% endtab %}
