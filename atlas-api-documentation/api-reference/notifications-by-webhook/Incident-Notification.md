@@ -81,6 +81,12 @@ Method : Post
 
       The revised segments. This is only for Schedule Change-API Notification.
       
+  *   **`vendorRefundInformation` **<mark style="color:blue;">**string**</mark>
+
+      Reference information for determining Unacounted Cancellation. This is only for Unacounted Cancellation.
+      FULLY: means Atlas received a full refund from the airline without any schedule change or refund apply.
+      Cancelled: means Atlas found some abnormal cancellation from airline.
+      
   *   **`emailReceivingDate` **<mark style="color:blue;">**string**</mark>
 
       Email receiving Date
