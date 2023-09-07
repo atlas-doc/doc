@@ -115,9 +115,9 @@
 
 This tag shows the form of payment used. 
 
-0: Pre-payment
+1: Pre-payment
 
-1: VCC
+3: VCC
 
 **`airlines`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
