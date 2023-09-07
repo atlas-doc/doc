@@ -103,9 +103,11 @@
 ## Response
 
 {% tabs %}
-{% tab title="Schema" %}
-      Order number
+{% tab title="Schema" %} 
+      
 *   **Order Number **<mark style="color:blue;">**string**</mark>
+
+    Order number
 
 *   **pnrCode **<mark style="color:blue;">**string**</mark>
     
