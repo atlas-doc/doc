@@ -208,27 +208,92 @@
                 }
             ],
             "refundRules": [
-                {
-                    "refundType": 0,
-                    "refundStatus": "T",
-                    "refundFee": 0.0,
-                    "currency": "CNY",
-                    "refNoshow": "T",
-                    "refNoShowCondition": 48,
-                    "refNoshowFee": 0.0
-                }
-            ],
-            "changesRules": [
-                {
-                    "changesType": 0,
-                    "changesStatus": "T",
-                    "changesFee": 0.0,
-                    "currency": "CNY",
-                    "revNoshow": "T",
-                    "revNoShowCondition": 48,
-                    "revNoshowFee": 0.0,
-                    "ruleList": []
-                }
+          {
+            "refundType": 0,
+            "refundStatus": "H",
+            "refundFee": 83.01,
+            "currency": "SGD",
+            "refNoshow": "H",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 83.01,
+            "ruleList":[],
+            "ruleDetailList": [
+                            {
+                                "ruleId": 1993,
+                                "status": "H",
+                                "startMinute": 525600,
+                                "endMinute": -4320,
+                                "amount": 30.0,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 1996,
+                                "status": "H",
+                                "startMinute": -4320,
+                                "endMinute": -240,
+                                "amount": 46.12,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 1999,
+                                "status": "H",
+                                "startMinute": -240,
+                                "endMinute": 0,
+                                "amount": 83.01,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 2002,
+                                "status": "H",
+                                "startMinute": 0,
+                                "endMinute": -525600,
+                                "amount": 83.01,
+                                "currency": "SGD"
+                            }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "H",
+            "changesFee": 83.01,
+            "currency": "SGD",
+            "revNoshow": "H",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 83.01,
+            "ruleList":[],
+            "ruleDetailList": [
+                            {
+                                "ruleId": 1993,
+                                "status": "H",
+                                "startMinute": 525600,
+                                "endMinute": -4320,
+                                "amount": 30.0,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 1996,
+                                "status": "H",
+                                "startMinute": -4320,
+                                "endMinute": -240,
+                                "amount": 46.12,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 1999,
+                                "status": "H",
+                                "startMinute": -240,
+                                "endMinute": 0,
+                                "amount": 83.01,
+                                "currency": "SGD"
+                            },
+                            {
+                                "ruleId": 2002,
+                                "status": "H",
+                                "startMinute": 0,
+                                "endMinute": -525600,
+                                "amount": 83.01,
+                                "currency": "SGD"
+                            }
             ]
         },
         "ancillaryProductElements": [],
