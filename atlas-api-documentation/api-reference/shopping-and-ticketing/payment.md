@@ -105,13 +105,13 @@
 {% tabs %}
 {% tab title="Schema" %} 
       
-*   **Order Number **<mark style="color:blue;">**string**</mark>
+**Order Number **<mark style="color:blue;">**string**</mark>
 
-    Order number
+Order number
 
-*   **pnrCode **<mark style="color:blue;">**string**</mark>
+**pnrCode **<mark style="color:blue;">**string**</mark>
     
-    The pnrCode is the single reference for the booking. This is the Atlas PNR. 
+The pnrCode is the single reference for the booking. This is the Atlas PNR. 
 
 **`paymentMethod`  **<mark style="color:blue;">**string**</mark>
 
@@ -126,14 +126,14 @@ This tag shows the form of payment used.
 IATA Code of the airline.
 *   **status **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    0: success
+0: success
 
-    2: System error
+2: System error
 *   **msg **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Error message.
+Error message.
     
-    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
+The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
 {% endtab %}
 
 {% tab title="Samples" %}
