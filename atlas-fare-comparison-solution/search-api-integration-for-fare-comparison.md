@@ -10,7 +10,8 @@ The effort to integrate the search API is equivalent to 0.5 man-days of a develo
 
 The workflow to achieve this is as below:
 
-![](../.gitbook/assets/Search_Only_API_workflow.jpeg)
+![](../.gitbook/assets/Search_Only_API_workflow2.png)
+
 {% hint style="info" %}
 Atlas quotation consists of four parts as mentioned below :
 
