@@ -507,6 +507,10 @@ The service fee charged by Atlas for the purchase of the ancillary.
 
         False：The weight is for each piece
         
+    *   **`size`  **<mark style="color:blue;">**string**</mark>
+
+        Maximum size for ancillary baggage
+        
 *   **`offerId`  **<mark style="color:blue;">**string**</mark>
 
 The identifier of the offer of ancillary product. This will be "null" in the booking flow but will have an id in the post-ticketing flow.
@@ -518,10 +522,6 @@ Maximum purchase quantity per product
 *   **`minQty`  **<mark style="color:blue;">**string**</mark>
 
 Starting purchase quantity per product
-
-*   **`size`  **<mark style="color:blue;">**string**</mark>
-
-Maximum size for ancillary baggage
 
 *   **`ancillaryCode`  **<mark style="color:blue;">**string**</mark>
 
@@ -1126,49 +1126,97 @@ The details of the extra baggage offering are available in the `ancillaryProduct
 {% tab title="Schema" %}
 **ancillaryProductElement**
 
-*   **segmentIndex **<mark style="color:blue;">**int**</mark>
+*   **`segmentIndex`  **<mark style="color:blue;">**int**</mark>
 
-    Segment sequence, start from 1
+Segment sequence. Starts from 1. If it is return trip, sequence for outbound trip and inbound trip would be together.
+    
+*   **`endSegmentIndex`  **<mark style="color:blue;">**int**</mark>
 
-    If it is return trip, sequence outbond and inbound together
-*   **productCode **<mark style="color:blue;">**string**</mark>
+The last segment for which this information is applicable.
+    
+*   **`productCode`  **<mark style="color:blue;">**string**</mark>
 
-    Unique identifier for the ancillary product
+Unique identifier for the ancillary product. It would be used in the order request.
+*   **`productName`  **<mark style="color:blue;">**string**</mark>
 
-    It would be used in the order request
-*   **productName **<mark style="color:blue;">**string**</mark>
+Ancillary product name.
+*   **`productType`  **<mark style="color:blue;">**int**</mark>
 
-    Ancillary product name
-*   **productType **<mark style="color:blue;">**int**</mark>
+Ancillary product type
 
-    Ancillary product type
+1: Check-in baggage
 
-    1: baggage
+3: Cabin Baggage Overhead Locker
 
-    Currently only baggage is available
-*   **price **<mark style="color:blue;">**decimal**</mark>
+Currently, only baggage is available.
+    
+*   **`canPurchaseWithTicket`  **<mark style="color:blue;">**int**</mark>
 
-    Price for this ancillary
-*   **currency **<mark style="color:blue;">**string**</mark>
+This ancillary product can be purchased during the booking flow. 
+    
+1=Yes; 0=No  
+    
+*   **`canPurchasePostTicket`  **<mark style="color:blue;">**int**</mark>
 
-    Currency for this price
-* **auxBaggageElement Object<**<mark style="color:blue;">**AuxBaggageElement**</mark>**>**
-  * **AuxBaggageElement**
-    *   **piece **<mark style="color:blue;">**int**</mark>
+This ancillary product can be purchased in the post-ticketing flow. 
+    
+1=Yes; 0=No  
+    
+*   **`price`  **<mark style="color:blue;">**decimal**</mark>
 
-        0：No Limitation about pieces
+Price for this ancillary.
+    
+*   **`currency`  **<mark style="color:blue;">**string**</mark>
+
+The currency in which Atlas settles transactions with you.
+    
+*   **`vendorPrice`  **<mark style="color:blue;">**decimal**</mark>
+
+The price charged by the vendor for the ancillary.
+    
+*   **`vendorCurrency`  **<mark style="color:blue;">**string**</mark>
+
+The currency in which the vendor charges for the ancillary.
+    
+*   **`clientTechnicalServiceFee`  **<mark style="color:blue;">**decimal**</mark>
+
+The service fee charged by Atlas for the purchase of the ancillary.
+    
+* **`auxBaggageElement` Object<**[**AuxBaggageElement**](search.md#10.-auxbaggage-element-schema)**>**
+  * **`auxBaggageElement` includes the following parameters**
+    *   **`piece`  **<mark style="color:blue;">**int**</mark>
+
+        0：No Limitation about piece;
 
         \>0：Maximum pieces
-    *   **weight **<mark style="color:blue;">**int**</mark>
+    *   **`weight`  **<mark style="color:blue;">**int**</mark>
 
-        Maximum weight for ancillary baggage;
+        Value mentions maximum weight for ancillary baggage; this should be greater than 0.
+    *   **`isAllWeight`  **<mark style="color:blue;">**boolean**</mark>
 
-        Should be greater than 0
-    *   **isAllWeight **<mark style="color:blue;">**boolean**</mark>
-
-        True：The weight is for all the pieces;
+        True：The weight is for all the pieces
 
         False：The weight is for each piece
+        
+    *   **`size`  **<mark style="color:blue;">**string**</mark>
+
+        Maximum size for ancillary baggage
+        
+*   **`offerId`  **<mark style="color:blue;">**string**</mark>
+
+The identifier of the offer of ancillary product. This will be "null" in the booking flow but will have an id in the post-ticketing flow.
+
+*   **`maxQty`  **<mark style="color:blue;">**string**</mark>
+
+Maximum purchase quantity per product
+
+*   **`minQty`  **<mark style="color:blue;">**string**</mark>
+
+Starting purchase quantity per product
+
+*   **`ancillaryCode`  **<mark style="color:blue;">**string**</mark>
+
+The code for this ancillary option. This will be identical to the `productCode`.
 {% endtab %}
 
 {% tab title="Samples" %}
