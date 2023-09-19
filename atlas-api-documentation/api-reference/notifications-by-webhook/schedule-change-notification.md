@@ -17,10 +17,21 @@ Method : Post
 
     Notification type.
     
-*   **orderNo **<mark style="color:blue;">**string**</mark>
+*   **`notificationId` **<mark style="color:blue;">**string**</mark>
+
+      Incident ID
+      
+*   **`status` **<mark style="color:blue;">**string**</mark>
+
+      Incident staus
+      
+      0: Unconfirmed
+      1: Confirmed
+* **data**
+  *   **orderNo **<mark style="color:blue;">**string**</mark>
 
       Order number.
-* **data**
+      
   *   **scheduleChangeType **<mark style="color:blue;">**int**</mark>
 
       Schedule change type.
@@ -69,83 +80,106 @@ Method : Post
 
 ```
 {
-    "cid":"rggat40831",
-    "type":"order.schedulechange",
+    "cid":"XXXXXXX",
     "data":{
-        "previousSeg":[
+        "orderNo":"ATXFQ20230720193244809",
+        "previousSegs":[
             {
-                "carrier":"PC",
-                "flightNumber":"PC2673",
-                "depAirport":"ESB",
-                "depTime":"2020-02-08 20:45:00",
-                "arrAirport":"SAW",
-                "arrTime":"2020-02-08 22:50:00",
-                "departureTerminal":"",
-                "arrivingTerminal":""
+                "arrAirport":"SGN",
+                "arrTerminal":"",
+                "arrTime":"2023-07-24 21:30:00",
+                "carrier":"VJ",
+                "codeShare":false,
+                "depAirport":"HKG",
+                "depTerminal":"",
+                "depTime":"2023-07-24 19:50:00",
+                "flightNumber":"VJ877"
             },
             {
-                "carrier":"PC",
-                "flightNumber":"PC2674",
-                "depAirport":"SAW",
-                "depTime":"2020-02-08 23:55:00",
-                "arrAirport":"ASR",
-                "arrTime":"2020-02-09 01:20:00",
-                "departureTerminal":"",
-                "arrivingTerminal":""
+                "arrAirport":"HKG",
+                "arrTerminal":"",
+                "arrTime":"2023-10-18 18:50:00",
+                "carrier":"VJ",
+                "codeShare":false,
+                "depAirport":"SGN",
+                "depTerminal":"",
+                "depTime":"2023-10-18 14:55:00",
+                "flightNumber":"VJ876"
             }
         ],
-        "revisedSeg":[
+        "revisedSegs":[
             {
-                "carrier":"PC",
-                "flightNumber":"PC2673",
-                "depAirport":"ESB",
-                "depTime":"2020-02-08 21:45:00",
-                "arrAirport":"SAW",
-                "arrTime":"2020-02-08 23:50:00",
-                "departureTerminal":"",
-                "arrivingTerminal":""
+                "arrAirport":"SGN",
+                "arrTerminal":"",
+                "arrTime":"2023-07-24 21:30:00",
+                "carrier":"VJ",
+                "codeShare":false,
+                "depAirport":"HKG",
+                "depTerminal":"",
+                "depTime":"2023-07-24 19:50:00",
+                "flightNumber":"VJ877"
             },
             {
-                "carrier":"PC",
-                "flightNumber":"PC2800",
-                "depAirport":"SAW",
-                "depTime":"2020-02-09 01:50:00",
-                "arrAirport":"ASR",
-                "arrTime":"2020-02-09 03:55:00",
-                "departureTerminal":"",
-                "arrivingTerminal":""
+                "arrAirport":"HKG",
+                "arrTerminal":"",
+                "arrTime":"2023-10-19 18:50:00",
+                "carrier":"VJ",
+                "codeShare":false,
+                "depAirport":"SGN",
+                "depTerminal":"",
+                "depTime":"2023-10-19 15:10:00",
+                "flightNumber":"VJ876"
             }
         ],
         "scheduleChangeType":1
-    }
+    },
+    "notificationId":"20230917143240511TATVO",
+    "status":0,
+    "type":"order.schedulechange"
 }
+
 ```
 
 **Flight cancellation without alternative flight**
 
 ```
 {
-    "cid":"rggat40831",
-    "type":"order.schedulechange",
+    "cid":"XXXXXXX",
     "data":{
-        "previousSeg":[
+        "orderNo":"ATXFQ20230720193244809",
+        "previousSegs":[
             {
-                "carrier":"PC",
-                "flightNumber":"PC2500",
-                "depAirport":"ESB",
-                "depTime":"2020-02-08 09:45:00",
-                "arrAirport":"SAW",
-                "arrTime":"2020-02-08 10:50:00",
-                "departureTerminal":"",
-                "arrivingTerminal":""
+                "arrAirport":"SGN",
+                "arrTerminal":"",
+                "arrTime":"2023-07-24 21:30:00",
+                "carrier":"VJ",
+                "codeShare":false,
+                "depAirport":"HKG",
+                "depTerminal":"",
+                "depTime":"2023-07-24 19:50:00",
+                "flightNumber":"VJ877"
+            },
+            {
+                "arrAirport":"HKG",
+                "arrTerminal":"",
+                "arrTime":"2023-10-18 18:50:00",
+                "carrier":"VJ",
+                "codeShare":false,
+                "depAirport":"SGN",
+                "depTerminal":"",
+                "depTime":"2023-10-18 14:55:00",
+                "flightNumber":"VJ876"
             }
         ],
-        "revisedSeg":[
-
+        "revisedSegs":[
         ],
         "scheduleChangeType":2
-    }
+    },
+    "notificationId":"20230917143240511TATVO",
+    "status":0,
+    "type":"order.schedulechange"
 }
+
 ```
 {% endtab %}
 {% endtabs %}
