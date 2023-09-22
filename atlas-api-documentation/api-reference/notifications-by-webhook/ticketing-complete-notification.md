@@ -33,7 +33,7 @@ Method : Post
 {% tab title="Samples" %}
 ```
 {
-  "cid": "tviin65428",
+  "cid": "XXXXXXX",
   "data": {
     "orderNo": "TESTL20230922153224323",
     "orderStatus": 2,
