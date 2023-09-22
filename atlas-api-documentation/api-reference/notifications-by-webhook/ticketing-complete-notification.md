@@ -33,55 +33,71 @@ Method : Post
 {% tab title="Samples" %}
 ```
 {
-    "cid": "rggat40831",
-    "type": "order.ticketed",
-    "data":
-    {
-        "ticketNotification":
-        {
-            "orderNo": "BCNQL20201031184148568",
-            "orderStatus": "2",
-            "paxTicketInfos": [
-            {
-                "name": "EHRBAR/YANN",
-                "passengerType": 0,
-                "birthday": "19771029",
-                "gender": "M",
-                "cardNum": "G000000000",
-                "cardType": "PP",
-                "cardIssuePlace": "CH",
-                "cardExpired": "20320118",
-                "nationality": "CH",
-                "ticketNos": [
-                    "EDVLRZ"
-                ],
-                "airlinePNRs": [
-                    "EDVLRZ"
-                ],
-                "ancillaries": []
-            },
-            {
-                "name": "MOREL/JEROME",
-                "passengerType": 0,
-                "birthday": "19661118",
-                "gender": "M",
-                "cardNum": "G000000000",
-                "cardType": "PP",
-                "cardIssuePlace": "FR",
-                "cardExpired": "20320118",
-                "nationality": "FR",
-                "ticketNos": [
-                    "EDVLRZ"
-                ],
-                "airlinePNRs": [
-                    "EDVLRZ"
-                ],
-                "ancillaries": []
-            }
-            ]
-        }
-    }  
+  "cid": "tviin65428",
+  "data": {
+    "orderNo": "TESTL20230922153224323",
+    "orderStatus": 2,
+    "paxTicketInfos": [
+      {
+        "airlinePNRs": [
+          "S30814"
+        ],
+        "ancillaries": [],
+        "birthday": "20160202",
+        "cardExpired": "20400101",
+        "cardIssuePlace": "CN",
+        "cardNum": "123458",
+        "cardType": "PP",
+        "gender": "F",
+        "name": "zhang/lisi",
+        "nationality": "CN",
+        "passengerType": 1,
+        "ticketNos": [
+          "S30814"
+        ]
+      },
+      {
+        "airlinePNRs": [
+          "S30814"
+        ],
+        "ancillaries": [],
+        "birthday": "19920202",
+        "cardExpired": "20400101",
+        "cardIssuePlace": "CN",
+        "cardNum": "123457",
+        "cardType": "PP",
+        "gender": "F",
+        "name": "li/si",
+        "nationality": "CN",
+        "passengerType": 0,
+        "ticketNos": [
+          "S30814"
+        ]
+      },
+      {
+        "airlinePNRs": [
+          "S30814"
+        ],
+        "ancillaries": [],
+        "birthday": "19910101",
+        "cardExpired": "20400101",
+        "cardIssuePlace": "CN",
+        "cardNum": "123456",
+        "cardType": "PP",
+        "gender": "M",
+        "name": "zhang/san",
+        "nationality": "CN",
+        "passengerType": 0,
+        "ticketNos": [
+          "S30814"
+        ]
+      }
+    ]
+  },
+  "status": -1,
+  "type": "order.ticketed"
 }
+
 ```
 {% endtab %}
 {% endtabs %}
