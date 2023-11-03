@@ -91,6 +91,7 @@
         "cardHolderLastName": "XXXXX",
         "cardHolderFirstName": "XXXXX",
         "cardHolderCountry": "XXXXX",
+        "cardHolderProvince": "XXXXX",
         "cardHolderCity": "XXXXX",
         "cardHolderPostCode": "XXXXX",
         "cardHolderAddress": "XXXXX"
