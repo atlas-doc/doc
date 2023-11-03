@@ -548,6 +548,11 @@ Child tax per passenger in vendor’s currency.
 *   **`vendorCurrency`  **<mark style="color:blue;">**string**</mark>
 
 This is the currency in which your customers will do transaction with you.
+
+**`separateBookings`  **<mark style="color:blue;">**boolean**</mark>
+
+When the outbound and inbound of round trip need to be booked separately, it will be true.
+
 {% endtab %}
 {% endtabs %}
 
