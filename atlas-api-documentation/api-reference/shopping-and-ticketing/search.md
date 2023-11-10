@@ -53,7 +53,7 @@ Departure date, the format is YYYYMMDD
 
 **`retDate`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Arrival date, the format is YYYYMMDD
+Return date, the format is YYYYMMDD
 
 Must not be earlier than fromDate. And it can be blank if tripType=1.
 
