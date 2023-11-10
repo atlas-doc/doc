@@ -1,5 +1,9 @@
 # Register Webhook
 
+## Endpoint {% debug uid="search_1.0" %}{% enddebug %}
+
+[https://sandbox.atriptech.com/updateWebhookURL.do](https://sandbox.atriptech.com/updateWebhookURL.do)
+
 ## Request
 
 {% tabs %}
