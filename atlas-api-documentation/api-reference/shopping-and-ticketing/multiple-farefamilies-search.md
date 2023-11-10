@@ -119,7 +119,7 @@ The 'msg' element is for description of the results. Please DO NOT use this fiel
 
 **`routings` Array <**[**Routing Element**](search.md#route-element-schema)**>**
 
-The array of the routings include suitable flights and fares. Click [<mark style="color:red;">here</mark> ](search.md#route-element-schema)to check the schema. 
+The array of the routings include suitable flights, farefamiles and fares. Click [<mark style="color:red;">here</mark> ](search.md#route-element-schema)to check the schema. 
 
 {% endtab %}
 
