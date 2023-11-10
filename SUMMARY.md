@@ -17,6 +17,7 @@
     * [Payment](atlas-api-documentation/api-reference/shopping-and-ticketing/payment.md)
     * [Retrieve Booking](atlas-api-documentation/api-reference/shopping-and-ticketing/retrieve-booking.md)
     * [Regenerate Order](atlas-api-documentation/api-reference/shopping-and-ticketing/regenerateorder.md)
+    * [Stop Ticket Issuance](atlas-api-documentation/api-reference/shopping-and-ticketing/stop-ticket-issuance.md)
   * [Post Ticketing Service](atlas-api-documentation/api-reference/post-ticketing-service/README.md)
     * [Search Ancillary](atlas-api-documentation/api-reference/post-ticketing-service/offer-ancillary-list.md) 
     * [Order Ancillary](atlas-api-documentation/api-reference/post-ticketing-service/add-ancillaries.md) 
