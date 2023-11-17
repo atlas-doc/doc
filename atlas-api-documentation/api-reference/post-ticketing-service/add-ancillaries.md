@@ -113,7 +113,7 @@
     Vendor's currency.
 *   **tktLimitTime **<mark style="color:blue;">**string**</mark>
 
-    Payment deadline for this order.
+    Payment deadline for this order. This time will be displayed in SGT (GMT +8)
 *   **paxTicketInfos Array<**<mark style="color:blue;">**PAXTicketInfo**</mark>**>**
 
     Ticket information for passengers
