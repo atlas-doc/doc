@@ -218,7 +218,7 @@
     Vendor's currency.
 *   **tktLimitTime **<mark style="color:blue;">**string**</mark>
 
-    Payment deadline for this order.
+    Payment deadline for this order. This time will be displayed in SGT (GMT +8)
 *   **pnrCode **<mark style="color:blue;">**string**</mark>
     
     The pnrCode is the single reference for the booking. This is the Atlas PNR. 
