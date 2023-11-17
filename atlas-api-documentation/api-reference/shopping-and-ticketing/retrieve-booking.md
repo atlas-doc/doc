@@ -91,7 +91,7 @@
     3: Both Credit Card Payment and Prepayment Available
 *   **tktLimitTime **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Payment deadline for this order.
+    Payment deadline for this order. This time will be displayed in SGT (GMT +8)
 *   **paxTicketInfos Array<**[**PAXTicketInfo**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
 
     Ticket information for passengers, the same format as the PAXTicketInfo in order response.
