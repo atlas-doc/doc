@@ -198,6 +198,9 @@
 *   **sessionId **<mark style="color:blue;">**string**</mark>
 
     Same value got from order request
+    *   **duplicateOrders **<mark style="color:blue;">**string**</mark>
+
+    Order number with which this order is a duplicate of. Please note that only orders raised in the last 10 days will be checked for duplicate information.
 *   **orderNo **<mark style="color:blue;">**string**</mark>
 
     Order number
