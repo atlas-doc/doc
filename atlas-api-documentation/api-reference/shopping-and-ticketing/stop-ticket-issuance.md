@@ -45,13 +45,15 @@ description: Tentative stopping ticket issuance.
 
     2: System error
 
-    Success does not mean that the ticket issuance has been stopped successfully, it only means that the system will attempt to stop the ticket issuance.
+    Success does not mean that the ticket issuance has been stopped successfully. It only means that the system will attempt to stop the ticket issuance.
 
     The result of stopping ticket issuance needs to be obtained by querying the order status of `Retrieve Booking` after 8 minutes.
 
     orderStatus: -3, means stop issuance successfully.
     
     orderStatus: 2, means stop issuance failed, the order is issued.
+
+    The definition of the queryOrderDetails order status will be different when the request is sent after the "Stop Ticket Issuance" request.
 
 
 *   **msg **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
