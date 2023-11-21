@@ -75,7 +75,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">315</mark> | Not enough seats                           |
 | <mark style="color:blue;">316</mark> | Timed out                                  |
 | <mark style="color:blue;">317</mark> | Booking unsuccessful with Airline          |
-| <mark style="color:blue;">317</mark> | Duplicate Booking                          |
+| <mark style="color:blue;">318</mark> | Duplicate Booking                          |
 
 #### Payment  error codes
 | Code                                 | Description                                |
