@@ -10,7 +10,7 @@ description: Tentative stopping ticket issuance.
 
 ### Endpoint {% debug uid="queryOrderDetails_1.0" %}{% enddebug %}
 
-[https://sandbox.atriptech.com/topTicket.do](https://sandbox.atriptech.com/topTicket.do)
+[https://sandbox.atriptech.com/topTicket.do](https://sandbox.atriptech.com/stopTicket.do)
 
 ## Request
 
