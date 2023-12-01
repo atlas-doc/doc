@@ -6,5 +6,4 @@ We will quickly walk you through the process to set up and handle webhooks for y
 2. Change in flight schedule: <mark style="color:green;">`order.scheduleChange`</mark>
 3. Purchase of ancillary services post-booking: <mark style="color:green;">`order.addonComplete`</mark>
 4. Ticket and ancillary service cancellation: <mark style="color:green;">`order.refundComplete`</mark>
-5. Airline online status update: <mark style="color:green;">`airline.status`</mark>
-
+5. Airline status update: <mark style="color:green;">`airline.status`</mark>
