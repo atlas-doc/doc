@@ -1,8 +1,8 @@
 # Airline Online Status Update Notification
 
-### Airline Online Status Update Webhook
+### Airline Status Update Webhook
 
-Once a airline's online status is changed, you will receive the `airline.status` notification on your server. You can process it and take action as required. For example, you could adjust your search caching strategy.
+Once an airline's status is changed, an `airline.status` notification will be received on your server. You can process it and take action as required. For example; you could adjust your search caching strategy as per the status of the airline.
 
 ### EndPoint
 
@@ -15,27 +15,28 @@ Method : Post
 
 *   **type **<mark style="color:blue;">**string**</mark>
 
-    Notification type. Notification type=airline.status
+    Notification type.
+    Notification type = airline.status
 
 * **data**
   *   **airline Array**<mark style="color:blue;">**string**</mark>
 
-  Airline Code.
+  Airline Code
 
   *   **airlineStatus **<mark style="color:blue;">**int**</mark>
 
-  Ailline Online Status. It's the same as Online Status of Airline List on Atrip.
+  Airline Status. It is the same as the information in "Online Status" of Airline List on Atrip.
 
   Active = Online
 
-  Maintenance = Airline is under maintenance.
+  Maintenance = Airline is under maintenance
 
   Inactive = Offline
 
 
 **`status` **<mark style="color:blue;">**string**</mark>
 
-  Internal field, no need to handle
+  Only for internal use by Atlas.
 
 
 {% endtab %}
