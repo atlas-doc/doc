@@ -27,6 +27,7 @@
     * [Register Webhook](atlas-api-documentation/api-reference/notifications-by-webhook/register-webhook.md)
     * [Ticketing Complete Notification](atlas-api-documentation/api-reference/notifications-by-webhook/ticketing-complete-notification.md)
     * [Schedule Change Notification](atlas-api-documentation/api-reference/notifications-by-webhook/schedule-change-notification.md)
+    * [Airline Online Status Update Notification](atlas-api-documentation/api-reference/notifications-by-webhook/airline-status-notification.md)
     <!--* [Addon Complete Notification](atlas-api-documentation/api-reference/notifications-by-webhook/addon-complete-notification.md)-->
     <!--* [Refund Complete Notification](atlas-api-documentation/api-reference/notifications-by-webhook/refund-complete-notification.md)-->
     * [Incident Notification](atlas-api-documentation/api-reference/notifications-by-webhook/Incident-Notification.md)
