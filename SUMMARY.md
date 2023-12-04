@@ -1,5 +1,6 @@
 # Table of contents
 
+* [What's New!](atlas-api-documentation/whats-new.md)
 * [Quick Start](README.md)
 * [Fare Search API](atlas-fare-comparison-solution/search-api-integration-for-fare-comparison.md)
 * [API Reference](atlas-api-documentation/api-reference/README.md)
