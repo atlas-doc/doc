@@ -3,7 +3,7 @@
 {% endcoverImg %}
 
 
-# Change Logs
+# What's New!
 
 ## Date: 21 Dec 2022
 
