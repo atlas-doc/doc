@@ -886,13 +886,13 @@ The criteria of calculating the transaction fee as per the contractual agreement
 
 Transactio Fee Mode values:
 
-PER_SEGMENT: Each segment of an itinerary
+PER_SEGMENT: Each segment of an itinerary (per passenger)
 
 PER_TICKET: No. of tickets in a booking
 
 PER_PAX: Per passenger
 
-PER_BOOKING: Per airline booking
+PER_BOOKING: Per atlas booking (order #)
 
 **`nationalityType`  **<mark style="color:blue;">**int**</mark>
 
