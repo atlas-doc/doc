@@ -1,4 +1,4 @@
-# Airline Online Status Update Notification
+# Airline Status Update Notification
 
 ### Airline Status Update Webhook
 
