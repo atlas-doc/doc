@@ -884,6 +884,16 @@ Technical service fee as per "transactionFeeMode".
 
 The criteria of calculating the transaction fee as per the contractual agreement.
 
+Transactio Fee Mode values:
+
+PER_SEGMENT: Each segment of an itinerary
+
+PER_TICKET: No. of tickets in a booking
+
+PER_PAX: Per passenger
+
+PER_BOOKING: Per airline booking
+
 **`nationalityType`  **<mark style="color:blue;">**int**</mark>
 
 Nationality limitation values
