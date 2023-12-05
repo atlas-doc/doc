@@ -3,7 +3,59 @@
 {% endcoverImg %}
 
 
-# What's New!
+# What's New!!
+
+## Dec 2023
+
+## Feature Release: Airline Status Update Notification
+
+Description: The status of an airline (whether "active" or "in maintenance" can be checked via a webhook notification.
+
+Please refer to the [Airline Status Update Notification](./atlas-api-documentation/api-reference/notifications-by-webhook/airline-status-notification.md) section.
+
+
+## Nov 2023
+
+## Feature Release: Search with Fare Families
+
+Description: A fare search can be made using our new "Multiple Farefamily Search" API.
+
+Please refer to the [Multiple Farefamilies Search](./atlas-api-documentation/api-reference/shopping-and-ticketing/multiple-farefamilies-search.md) section.
+
+
+## Feature Release: Stop Ticket Issuance
+
+Description: The ticket issuance process can be stopped if the process has not been started at airline's end.
+
+Please refer to the [Stop Ticket Issuance](./atlas-api-documentation/api-reference/shopping-and-ticketing/stop-ticket-issuance.md) section.
+
+
+## Aug 2023
+
+## Feature Release: Search & Order Ancillaries in the post-ticketing flow
+
+Description: Ancillaries (Seats) can be searched and booked using our "Search and Order Ancillary" APIs. This function is in the beta stage and will be released to all our customers in early 2024.
+
+Please refer to the [Search and Order Ancillary](./atlas-api-documentation/api-reference/post-ticketing-service/README.md) section.
+
+
+## Apr 2023
+
+## Feature Release: Incident Management
+
+Description: Our customers can now monitor and account for the schedule changes and other incidents using a webhook.
+
+Please refer to the [Incicent Management](./atlas-api-documentation/api-reference/Other-functions/README.md) section.
+
+
+## Mar 2023
+
+## Feature Release: Real-time Search
+
+Description: Atlas has created an alternative search product which will allow our customers to conduct a “real-time search” to the airline.  
+
+Please refer to the [Real-time Search API](./atlas-api-documentation/api-reference/shopping-and-ticketing/real-timesearch.md) section.
+
 
 ## Dec 2022
 
