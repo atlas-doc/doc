@@ -11,7 +11,7 @@
 
 Description: The status of an airline (whether "active" or "in maintenance" can be checked via a webhook notification.
 
-Please refer to the [Airline Status Update Notification](./atlas-api-documentation/api-reference/notifications-by-webhook/airline-status-notification.md) section.
+Please refer to the [Airline Status Update Notification](../atlas-api-documentation/api-reference/notifications-by-webhook/airline-status-notification.md) section.
 
 
 ## Nov 2023
