@@ -63,7 +63,7 @@ Please refer to the [Real-time Search API](../atlas-api-documentation/api-refere
 
 Description: The customer can now use the balance API to fetch the balance from ATRIP "Financial" section.
 
-Please refer to the [Balance API](../atlas-api-documentation/api-reference/Other Functions/Balance API.md) section.
+Please refer to the [Balance API](../atlas-api-documentation/api-reference/Other-functions/Balance-API.md) section.
 
 
 ## Feature Update: Addition of Airline Code Filter in Search API Request
