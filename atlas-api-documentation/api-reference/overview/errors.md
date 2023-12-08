@@ -65,7 +65,12 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">304</mark> | Verify failed                              |
 | <mark style="color:blue;">305</mark> | Invalid routing                            |
 | <mark style="color:blue;">306</mark> | Cabin changed                              |
-| <mark style="color:blue;">307</mark> | Illegal request parameters                 |
+| <mark style="color:blue;">307</mark> | Illegal booking request parameters:        |
+|                                      | passengers->name                           |
+|                                      | passengers->passengerType                  |
+|                                      | passengers->birthday                       |
+|                                      | passengers->gender                         |
+|                                      | passengers->cardExpired                    |
 | <mark style="color:blue;">308</mark> | Price changed                              |
 | <mark style="color:blue;">309</mark> | Ancillary not found                        |
 | <mark style="color:blue;">310</mark> | Infant not allowed                         |
@@ -76,6 +81,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">316</mark> | Timed out                                  |
 | <mark style="color:blue;">317</mark> | Booking unsuccessful with Airline          |
 | <mark style="color:blue;">318</mark> | Duplicate Booking                          |
+| <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                         |
 
 #### Payment  error codes
 | Code                                 | Description                                |
@@ -90,7 +96,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">407</mark> | Some error messages indicating incorrect passenger information            |
 | <mark style="color:blue;">408</mark> | Passenger can not board alone            |
 | <mark style="color:blue;">409</mark> | Additional baggage does not match the flight segmemt            |
-| <mark style="color:blue;">410</mark> | Invalid contact infomation            |
+| <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                        |
 | <mark style="color:blue;">411</mark> | Generic payment error          |
 | <mark style="color:blue;">800</mark> | Order not exists          |
 | <mark style="color:blue;">900</mark> | Unauthorized access            |
