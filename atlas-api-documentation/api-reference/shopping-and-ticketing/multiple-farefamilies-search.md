@@ -689,7 +689,7 @@ The array of the routings include suitable flights, farefamiles and fares. Click
 {% hint style="info" %}
 **Points to note for FareFamily search:**
 
-Workflows
+**Workflows**
 
 The Airline Fare Family functionality can be used in 3 different ways depending on the workflow you want to follow:
 
