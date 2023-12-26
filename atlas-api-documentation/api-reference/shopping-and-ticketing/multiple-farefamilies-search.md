@@ -686,4 +686,32 @@ The array of the routings include suitable flights, farefamiles and fares. Click
 {% endtab %}
 {% endtabs %}
 
+{% hint style="info" %}
+**Points to note for FareFamily search:**
 
+Workflows
+
+The Airline Fare Family functionality can be used in 3 different ways depending on the workflow you want to follow:
+
+Workflow 1:
+MultiFareFamily Search (without flight number)  Verify  Book  Pay  Retrieve PNR
+
+* Conduct a MultiFareFamily search (without flight numbers) using the Fare Family endpoint.
+* Get results.
+* Complete the same flow till payment using the "routingIdentifier".
+
+Workflow 2:
+Search  MultiFareFamily Search  Verify  Book  Pay  Retrieve PNR
+
+* Conduct a search using the search endpoint.
+* Send a Fare Family search request using the fare option selected in search response. The flight numbers should be added.
+* Get results.
+* Complete the same flow till payment using the "routingIdentifier" from MultiFareFamily search response.
+
+Workflow 3:
+MultiFareFamily Search (with flight number)  Verify  Book  Pay  Retrieve PNR
+
+* Send a Fare Family search request using the flight numbers. This flow can be used only when the flight numbers are known in advance.
+* Get results.
+* Complete the same flow till payment using the "routingIdentifier" from MultiFareFamily search response.
+{% endhint %}
