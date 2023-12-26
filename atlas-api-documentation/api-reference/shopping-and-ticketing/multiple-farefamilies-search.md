@@ -701,7 +701,7 @@ MultiFareFamily Search (without flight number) - Verify - Book - Pay - Retrieve 
 * Complete the same flow till payment using the "routingIdentifier".
 
 Workflow 2:
-Search  MultiFareFamily Search - Verify - Book - Pay - Retrieve PNR
+Search - MultiFareFamily Search - Verify - Book - Pay - Retrieve PNR
 
 * Conduct a search using the search endpoint.
 * Send a Fare Family search request using the fare option selected in search response. The flight numbers should be added.
