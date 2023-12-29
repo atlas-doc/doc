@@ -54,6 +54,8 @@ Here's how the function works:
 
 Please record the `routingIdentifier` for each routing offer.
 
+> **Tip**: Please note that all system times, apart from flight times, are in GMT+8 (Singapore Timezone). The timezone conversion needs to be handled at the client's end as per the applicable location. This is a very basic and simple technical task.
+
 ## 2. Verify
 
 The offers returned as a result of the search query will have detailed information about the flight, such as departure and arrival time, the number of layovers, flight number, and fare. Once the user selects a flight of their choice, the fare and flight information are verified.
