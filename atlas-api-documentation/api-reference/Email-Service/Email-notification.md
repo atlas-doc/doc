@@ -2,7 +2,7 @@
 
 ### Email Notification Webhook
 
-Once Altas's email service receives the airline's email, you will receive the `email.all` notification on the server.
+Once Altas' email service receives the airline's email, the customer will receive the `email.all` notification on the server.
 
 EndPoint ： The URL you configured to receive notifications
 
@@ -16,7 +16,7 @@ Method : Post
     
 *   **type **<mark style="color:blue;">**string**</mark>
 
-    Notification type.
+    Notification type
     
 *   **`notificationId` **<mark style="color:blue;">**string**</mark>
 
@@ -24,7 +24,7 @@ Method : Post
       
 *   **`status` **<mark style="color:blue;">**string**</mark>
 
-      In this type of notification status always = -1, internal field, ignore it.
+      In this type of notification status always = -1. This is an internal field and should be ignored.
 
       
 * **data**
@@ -34,9 +34,9 @@ Method : Post
 
   *   **`emailReceivingDate` **<mark style="color:blue;">**string**</mark>
 
-  Receiving Time is the time Atlas received the airline's email.
+  The time Atlas received the airline's email.
 
-  Format: yyyy-MM-dd HH:mm:ss UTC+08:00
+  Format: yyyy-mm-dd hh:mm:ss UTC+08:00
 
   *   **`uniqueCode` **<mark style="color:blue;">**string**</mark>
 
@@ -77,7 +77,8 @@ Method : Post
 
   *   **`createTime` **<mark style="color:blue;">**string**</mark>
   Create Time is the time when Atlas created this email record in the Email list. Generally, it will be later than the receiving time.
-  Format: yyyy-MM-dd HH:mm:ss UTC+08:00
+
+  Format: yyyy-mm-dd hh:mm:ss UTC+08:00
 
 {% endtab %}
 
