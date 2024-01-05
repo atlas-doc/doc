@@ -19,42 +19,42 @@ No preceding function needs to be carried out.
 
 Order number
 
-Order number, receiving time, and creation time must specify any one for querying.
+At least one of the order number, receiving time and/or creation time must be specified for querying.
 
-**`emailReceivingDateStart`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:green;">**Optional**</mark>
+**`emailReceivingDateStart`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Receiving Time Start.
+Start of the receiving time.
 
-Receiving Time is the time Atlas received the airline's email.
+The time Atlas received the airline's email.
 
-Format: yyyy-MM-dd HH:mm:ss UTC+08:00
+Format: yyyy-MM-dd hh:mm:ss UTC+08:00
 
 
 **`emailReceivingDateEnd`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Receiving Time End.
+End of the receiving time.
 
-Receiving Time is the time Atlas received the airline's email.
+The time Atlas received the airline's email.
 
-Format: yyyy-MM-dd HH:mm:ss UTC+08:00
+Format: yyyy-mm-dd hh:mm:ss UTC+08:00
 
 You can only query data for up to one month at a time
 
 **`createTimeStart`  **<mark style="color:blue;">**Date**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
-Create Time Start.
+Start of creation time.
 
 Create Time is the time when Atlas created this email record in the Email list. Generally, it will be later than the receiving time.
 
-Format: yyyy-MM-dd HH:mm:ss UTC+08:00
+Format: yyyy-mm-dd hh:mm:ss UTC+08:00
 
 **`createTimeEnd`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-Create Time End.
+End of creation time.
 
 Create Time is the time when Atlas created this email record in the Email list. Generally, it will be later than the receiving time.
 
-Format: yyyy-MM-dd HH:mm:ss UTC+08:00
+Format: yyyy-MM-dd hh:mm:ss UTC+08:00
 
 You can only query data for up to one month at a time.
 
@@ -82,6 +82,7 @@ Pagination
 **`pageSize`  **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
 Number of records per page.
+
 Maximum number=1000.
 
 {% endtab %}
@@ -132,7 +133,7 @@ False：There is not the next page
 
   *   **`emailReceivingDate` **<mark style="color:blue;">**string**</mark>
 
-  Receiving Time is the time Atlas received the airline's email.
+  The time Atlas received the airline's email.
 
   Format: yyyy-MM-dd HH:mm:ss UTC+08:00
 
@@ -175,6 +176,7 @@ False：There is not the next page
 
   *   **`createTime` **<mark style="color:blue;">**string**</mark>
   Create Time is the time when Atlas created this email record in the Email list. Generally, it will be later than the receiving time.
+
   Format: yyyy-MM-dd HH:mm:ss UTC+08:00
 
 
