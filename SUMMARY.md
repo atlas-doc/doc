@@ -32,6 +32,7 @@
     <!--* [Addon Complete Notification](atlas-api-documentation/api-reference/notifications-by-webhook/addon-complete-notification.md)-->
     <!--* [Refund Complete Notification](atlas-api-documentation/api-reference/notifications-by-webhook/refund-complete-notification.md)-->
     * [Incident Notification](atlas-api-documentation/api-reference/notifications-by-webhook/Incident-Notification.md)
+    * [Email Notification](atlas-api-documentation/api-reference/Email-Service/Email-notification.md)
   * [Access To ATRIP](atlas-api-documentation/api-reference/access-to-atlas-customer-service-portal.md)
   * [Other Functions](atlas-api-documentation/api-reference/Other-functions/README.md)
     * [Balance API](atlas-api-documentation/api-reference/Other-functions/Balance-API.md)
