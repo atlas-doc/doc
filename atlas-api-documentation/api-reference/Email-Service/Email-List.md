@@ -58,7 +58,7 @@ Format: yyyy-MM-dd hh:mm:ss UTC+08:00
 
 You can only query data for up to one month at a time.
 
-**`emailCategory`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+**`emailCategorys` Array **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 Atlas email categories. Atlas categorizes emails but does not guarantee accuracy in classification.
 - Schedule change
@@ -96,7 +96,7 @@ Maximum number=1000.
   "emailReceivingDateEnd": "2022-12-11 18:33:33",
   "createTimeStart": "2022-12-11 18:33:33",
   "createTimeEnd": "2022-12-11 18:33:45",
-  "emailCategory": "Unidentified",
+  "emailCategories": ["Payment Success","Advertisement"],
   "pageIndex": 1,
   "pageSize": 100
 }
