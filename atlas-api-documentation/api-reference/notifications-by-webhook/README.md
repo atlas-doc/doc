@@ -7,4 +7,4 @@ We will quickly walk you through the process to set up and handle webhooks for y
 3. Purchase of ancillary services post-booking: <mark style="color:green;">`order.addonComplete`</mark>
 4. Ticket and ancillary service cancellation: <mark style="color:green;">`order.refundComplete`</mark>
 5. Airline status update: <mark style="color:green;">`airline.status`</mark>
-6. Email noticification: <mark style="color:green;">`email.all`</mark>
+6. Email received: <mark style="color:green;">`email.all`</mark>
