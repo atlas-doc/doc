@@ -7,7 +7,7 @@ The "Email List" is used to retrieve email in batches.
 No preceding function needs to be carried out.
 
 ### Endpoint
-[https://sandbox.atriptech.com/event/queryMail.do](https://sandbox.atriptech.com/event/queryMail.do)
+[https://sandbox.atriptech.com/queryMail.do](https://sandbox.atriptech.com/queryMail.do)
 
 ### Request
 
