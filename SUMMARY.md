@@ -12,7 +12,7 @@
   * [Shopping and Ticketing](atlas-api-documentation/api-reference/shopping-and-ticketing/README.md)
     * [Search](atlas-api-documentation/api-reference/shopping-and-ticketing/search.md)
     * [Real-time Search](atlas-api-documentation/api-reference/shopping-and-ticketing/real-timesearch.md)
-    * [Multiple Farefamilies Search](atlas-api-documentation/api-reference/shopping-and-ticketing/multiple-farefamilies-search.md)
+    <!--* [Multiple Farefamilies Search](atlas-api-documentation/api-reference/shopping-and-ticketing/multiple-farefamilies-search.md)-->
     * [Verify](atlas-api-documentation/api-reference/shopping-and-ticketing/verify.md)
     * [Order](atlas-api-documentation/api-reference/shopping-and-ticketing/order.md)
     * [Payment](atlas-api-documentation/api-reference/shopping-and-ticketing/payment.md)
@@ -20,8 +20,8 @@
     * [Regenerate Order](atlas-api-documentation/api-reference/shopping-and-ticketing/regenerateorder.md)
     * [Stop Ticket Issuance](atlas-api-documentation/api-reference/shopping-and-ticketing/stop-ticket-issuance.md)
   * [Post Ticketing Service](atlas-api-documentation/api-reference/post-ticketing-service/README.md)
-    * [Search Ancillary](atlas-api-documentation/api-reference/post-ticketing-service/offer-ancillary-list.md) 
-    * [Order Ancillary](atlas-api-documentation/api-reference/post-ticketing-service/add-ancillaries.md) 
+    <!--* [Search Ancillary](atlas-api-documentation/api-reference/post-ticketing-service/offer-ancillary-list.md) -->
+    <!--* [Order Ancillary](atlas-api-documentation/api-reference/post-ticketing-service/add-ancillaries.md) -->
     * [Refund Quotation](atlas-api-documentation/api-reference/post-ticketing-service/refund-quotation.md)
     * [Make a Refund](atlas-api-documentation/api-reference/post-ticketing-service/make-a-refund.md)
   * [Notifications by Webhook](atlas-api-documentation/api-reference/notifications-by-webhook/README.md)
