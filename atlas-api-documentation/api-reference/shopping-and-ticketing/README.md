@@ -8,8 +8,6 @@ Each offer represents flights that meet your search criteria. Your users will th
 
 - [Real-time Search](real-timesearch.md)
 
-- [Multiple Fare Families Search](multiple-farefamilies-search.md)
-
 - [Verify](verify.md)
 
 - [Order](order.md)
