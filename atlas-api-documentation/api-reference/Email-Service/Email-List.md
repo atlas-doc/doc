@@ -58,7 +58,7 @@ Format: yyyy-MM-dd hh:mm:ss UTC+08:00
 
 You can only query data for up to one month at a time.
 
-**`emailCategorys` Array **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+**`emailCategories` Array **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 Atlas email categories. Atlas categorizes emails but does not guarantee accuracy in classification.
 - Schedule change
