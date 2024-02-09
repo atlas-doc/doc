@@ -93,7 +93,7 @@ Reference the `orderNo` from the order response when sending the payment request
 - [Payment](./atlas-api-documentation/api-reference/shopping-and-ticketing/payment.md)
 
 {% hint style="info" %}
-Please note that the Atlas Fare Guarantee is only applicable for the transactions done "deposit" mode of payment. The Atlas Fare Guarantee is not applicable for VCC pass-through mode of payment. For transactionsusing the customer VCC pass-through, since we do not provide fare guarantee, we may fail booking in some cases. The error codes related to the failed bookings can be found [here] (.atlas-api-documentation/api-reference/overview/errors.md)
+Please note that the Atlas Fare Guarantee is only applicable for the transactions done with "deposit" mode of payment. The Atlas Fare Guarantee is not applicable for VCC pass-through mode of payment. For transactions using the customer VCC pass-through, since we do not provide fare guarantee, we may fail booking in some cases. The error codes related to the failed bookings can be found [here] (.atlas-api-documentation/api-reference/overview/errors.md)
 
 {% endhint %}
 
