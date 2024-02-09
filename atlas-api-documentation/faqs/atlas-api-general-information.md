@@ -52,4 +52,34 @@ Atlas will provide a web portal to support ticket booking, ticketing, and post t
 
 **Does Atlas provide a fare guarantee?**
 
-The fare is guaranteed after the ticket booking is paid to Atlas. Atlas API will automatically issue tickets once the transaction is complete. The entire process usually takes up to 10 minutes; in some rare scenarios, it may go up to 1 hour.
+The fare is guaranteed after the ticket booking is paid to Atlas. Atlas API will automatically issue tickets once the transaction is complete. The entire process usually takes up to 10 minutes; in some rare scenarios, it may go up to 1 hour. Please note that the Atlas Fare Guarantee is only applicable for the transactions done via the "deposit" mode of payment. The Atlas Fare Guarantee is not applicable for VCC pass-through mode of payment.
+
+
+
+**Is there a time-out limit for each of Atlas' API?**
+
+The time-out limit for each of the standard API's are:
+
+search.do: no limit/not defined
+
+realTimeSearch.do: 120s
+
+verify.do: 15s
+
+order.do: 15s for normal booking and 120s for real time booking
+
+pay.do: no limit/not defined
+
+
+
+**What is the API response time for each of the Atlas APIs?**
+
+The average response times for each of the standard APIs are as below:
+
+search.do: < 500ms (98% of the responses are returned in less than 500ms)
+
+verify.do: 8s (90% of the responses are returned in less than 8s)
+
+order.do: 8s (90% of the responses are returned in less than 8s)
+
+pay.do: 2s(90% of the responses are returned in less than 2s)
