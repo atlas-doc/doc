@@ -78,6 +78,8 @@ The average response times for each of the standard APIs are as below:
 
 search.do: < 500ms (98% of the responses are returned in less than 500ms)
 
+realTimeSearch.do: 25s
+
 verify.do: 8s (90% of the responses are returned in less than 8s)
 
 order.do: 8s (90% of the responses are returned in less than 8s)
