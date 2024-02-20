@@ -16,10 +16,6 @@ description: Tentative stopping ticket issuance.
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-    Identifier of client and user.
-    
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It must be an paid and ticketing order.
@@ -28,7 +24,6 @@ description: Tentative stopping ticket issuance.
 {% tab title="Samples" %}
 ```
 {
-    "cid": "XXXXXXXX",
     "orderNo": "ZNMKU20220119160129691"
 }             
 ```
