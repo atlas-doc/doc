@@ -14,9 +14,6 @@ The order should be ticketed and the departure date should be in the future.
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-    Identifier of client and user.
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It is an order for ticketing.
@@ -30,7 +27,6 @@ The order should be ticketed and the departure date should be in the future.
 {% tab title="Samples" %}
 ```json
 {
-    "cid": "XXXXXXXX",
     "ticketOrderNo": "GXFDU20220117075403790",
     "ancillaryCategory": "SEAT"
 }
