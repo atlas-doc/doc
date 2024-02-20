@@ -16,10 +16,6 @@ No preceding function needs to be called before this call.
 {% tabs %}
 {% tab title="Schema" %}
 
-**`cid`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-Identifier of client and user.
-
 **`tripType`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
 1: Oneway
@@ -77,7 +73,6 @@ If "true", then after 120s cache results will be displayed.
 {% tab title="Samples" %}
 ```
 {
-  "cid": "xxxxxxxxxx",
   "tripType": "1",
   "adultNum": 1,
   "childNum": 0,
