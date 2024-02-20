@@ -17,10 +17,6 @@ No preceding function needs to be called before `Search`.
 {% tabs %}
 {% tab title="Schema" %}
 
-**`cid`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-Identifier of client and user.
-
 **`tripType`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
 1: Oneway
@@ -70,7 +66,6 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
 {% tab title="Samples" %}
 ```
 {
-    "cid": "XXXXXXXX",
     "tripType": "1",
     "adultNum": 1,
     "childNum": 0,
