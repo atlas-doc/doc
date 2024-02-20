@@ -12,9 +12,6 @@
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-    Identifier of client and user.
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
@@ -71,8 +68,7 @@
 
 ```json
 {
-    "cid": "XXXXXXXX",
-    "orderNo": "PSTEV20220119165629057"
+   "orderNo": "PSTEV20220119165629057"
 }
 ```
 
@@ -80,7 +76,6 @@
 
 ```json
 {
-    "cid": "XXXXXXXX",
     "orderNo": "PSTEV20220119165629057",
     "supportCreditTransPayment": "1",
     "creditCard": {
