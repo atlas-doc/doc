@@ -12,9 +12,6 @@ No preceding function needs to be carried out.
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-    Identifier of client and user.
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Original order number.
@@ -48,7 +45,6 @@ No preceding function needs to be carried out.
 {% tab title="Samples" %}
 ```json
 {
-    "cid":"XXXXXXXX",
     "orderNo":"XPFIW20220209163159425",
     "refundRequestList":[
         {
