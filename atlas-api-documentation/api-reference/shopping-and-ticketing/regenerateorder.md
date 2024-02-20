@@ -22,9 +22,6 @@ Order function should be called in prior to this call.
 
 {% tabs %}
 {% tab title="Schema" %}
-*   #### cid                                  <mark style="color:blue;">string</mark>                                                                                                 <mark style="color:green;">Required</mark>
-
-    Identifier of client and user.
 *   #### originalOrderNo                       <mark style="color:blue;">string</mark>                                                                                 <mark style="color:green;">Required</mark>
 
     Original order number which you would like to regenerate.&#x20;
@@ -33,7 +30,6 @@ Order function should be called in prior to this call.
 {% tab title="Samples" %}
 ```json
 {
-    "cid": "XXXXXXXX",
     "originalOrderNo": "ZNMKU20220119160129691"
 }             
 ```
