@@ -12,9 +12,6 @@
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-    Identifier of client and user.
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
@@ -23,7 +20,6 @@
 {% tab title="Samples" %}
 ```json
 {
-    "cid": "XXXXXXXX",
     "orderNo": "ZNMKU20220119160129691"
 }             
 ```
