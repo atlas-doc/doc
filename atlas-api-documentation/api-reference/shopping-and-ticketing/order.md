@@ -12,9 +12,6 @@
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-    Identifier of client and user.
 *   **sessionId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of the revalidation, got from revalidation response.
@@ -124,7 +121,6 @@
 {% tab title="Samples" %}
 ```
 {
-    "cid": "XXXXXXXX",
     "sessionId": "43c3c07e-2b05-4fc9-8832-29a71075a097",
     "passengers": [
         {
