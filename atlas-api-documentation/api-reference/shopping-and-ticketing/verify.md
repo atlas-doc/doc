@@ -19,7 +19,9 @@ The `search` function should be called prior to this call.
 
     The unique identifier for a particular route.
 
-    It is got from search response.
+    This is received from search response.
+
+    Validity: 6 hrs
 *   **requestSource **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     The tag to identify which channel does this traffic come from.
