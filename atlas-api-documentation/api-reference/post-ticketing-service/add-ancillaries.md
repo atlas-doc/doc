@@ -12,9 +12,6 @@
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **cid **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-    Identifier of client and user.
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It is an order for ticketing.
@@ -45,7 +42,6 @@
 {% tab title="Samples" %}
 ```json
 {
-    "cid": "XXXXXXXXXXX",
     "ticketOrderNo": "APXOS20230629164129749",
     "ancillaryCategory": "SEAT",
     "sessionId": "e3593a39-78d4-4e60-a42e-c5c7902455d4",
