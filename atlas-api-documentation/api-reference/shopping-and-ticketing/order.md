@@ -262,7 +262,7 @@
           HY - International Seaman's Certificate
       *   **cardIssuePlace **<mark style="color:blue;">**string**</mark>
 
-          Card issue country，IATA code of country
+          Card issue country，ISO code of country
       *   **cardExpired **<mark style="color:blue;">**string**</mark>
 
           Card expire date，Format：YYYYMMDD
