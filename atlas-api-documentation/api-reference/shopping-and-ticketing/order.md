@@ -154,7 +154,7 @@
         }
     ],
     "contact": {
-        "name": "Way",
+        "name": "Way/Su",
         "address": null,
         "postcode": null,
         "email": "xxxxxxxxx@xxx.com",
