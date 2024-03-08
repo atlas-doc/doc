@@ -12,6 +12,6 @@
 
 - [Order](atlas-order-api.md)
 
-- [Post-Ticketing](atlas-api-post-ticketing.md)
-
 - [Payments](atlas-api-payments.md)
+
+- [Post-Ticketing](atlas-api-post-ticketing.md)
