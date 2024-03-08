@@ -7,3 +7,15 @@ All you need is a testing access token as well as the sandbox URL to use the tes
 ### Atlas Sandbox
 
 When you search for flights in the test mode, you'll see offers from Atlas Sandbox. The airlines' fares in Sandbox are not as comprehensive and up to date as in the production environment. Atlas will not create real bookings or issue real tickets with the airline in the test mode.
+
+### Testing VCC Errors
+
+If required, our customers can test the VCC card failures by sending the "pay.do" request using the below information.
+
+Cardholder First Name: "Reject"
+Error Displayed: 604 - Payment declined by airline
+
+Cardholder First Name: "Three DS"
+Error Displayed: 616 - 3DS Authetication
+
+Any card number and last name can be added. The test for VCC errors can be done for any airline.
