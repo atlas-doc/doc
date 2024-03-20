@@ -51,7 +51,7 @@
           
       *   **cardHolderProvince **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          The province of card holder
+          The province or state of the card holder. This field is mandatory for US addresses. For addresses outside the US, this field can be left "blank". Only use 2-letter US state codes and not full names. For example; use "CA" and not "California".
       *   **cardHolderCity **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           The city name of card holder
