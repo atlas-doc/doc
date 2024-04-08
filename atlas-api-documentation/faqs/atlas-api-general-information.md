@@ -92,7 +92,7 @@ pay.do: 2s(90% of the responses are returned in less than 2s)
 
 Atlas always strives hard to maintain the highest quality of services to its clients while providing solutions to their daily transactional queries within a specified Turn Around Time (TAT) defined in the client’s SLA. However, there may be times when our team would be challenged in delivering the expected service levels and not meeting the defined SLA parameters. 
 
-We have a dedicated channel to escalate issues for which you are not satisfied with our resolution for a Service Request. It is designed to efficiently address our client's challenges. Please provide your inputs via customerfeedback@atlaslovestravel.com. 
+We have a dedicated channel to escalate issues for which you are not satisfied with our resolution for a Service Request. It is designed to efficiently address our client's challenges. Please provide your inputs via **customerfeedback@atlaslovestravel.com**. 
 
 •	The Escalation Channel will handle all issues related to daily business transactions such as Ticket Orders, Post-Ticketing Service, and Refunds between Atlas and its clients. 
 
