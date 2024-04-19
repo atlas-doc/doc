@@ -93,10 +93,10 @@
 *   **tktLimitTime **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Payment deadline for this order. This time will be displayed in SGT (GMT +8)
-*   **paxTicketInfos Array<**[**PAXTicketInfo**](order.html#paxticketinfo-schema/)**> **<mark style="color:green;">**Required**</mark>
+*   **paxTicketInfos Array<**[**PAXTicketInfo**](order.md#paxticketinfo-schema/)**> **<mark style="color:green;">**Required**</mark>
 
     Ticket information for passengers, the same format as the PAXTicketInfo in order response.
-*   **routing Object<**[**RouteElement**](search.html#route-element-schema/)**> **<mark style="color:green;">**Required**</mark>
+*   **routing Object<**[**RouteElement**](search.md#route-element-schema/)**> **<mark style="color:green;">**Required**</mark>
 
     Route and fare details. The structure is the same format as "Routing Element" in search response.
 *   **airlineBookings Array<**[**ManageBookingElement**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
