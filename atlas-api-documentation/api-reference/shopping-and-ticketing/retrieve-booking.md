@@ -99,10 +99,39 @@
 *   **routing Object<**[**RouteElement**](search.md#route-element-schema/)**> **<mark style="color:green;">**Required**</mark>
 
     Route and fare details. The structure is the same format as "Routing Element" in search response.
-*   **airlineBookings Array<**[**ManageBookingElement**](broken-reference/)**> **<mark style="color:green;">**Required**</mark>
+*   **airlineBookings Array<**[**ManageBookingElement**]**> **<mark style="color:green;">**Required**</mark>
 
-    Booking information for airline.    
-    
+    Booking information of the airline.
+
+*   **airlineCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    2 character IATA airline code.
+
+*   **airlineName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    Name of the airline.
+
+*   **airlinePnr **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    The record locator of the airline.
+
+*   **airlineWebSiteAddress **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    The URL of the public airline website.
+
+*   **mmbEmail **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    The email id to be used in the airline's MMB (Manage my Booking) section.
+
+*   **tailDigitsOfPaymentCard **<mark style="color:blue;">**decimal**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    The last 4 digits of the VCC used for payment.
+
+*   **itineraryDownload **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    The link to download the itinerary of the trip.
+
+       
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -488,13 +517,13 @@
       "airlineName": "Nok Air",
       "airlinePnr": "AQTBLW",
       "airlineWebSiteAddress": "https://www.nokair.com",
-      "mmbEmail": "booking@clickavia.ru",
+      "mmbEmail": "booking@test.ru",
       "tailDigitsOfPaymentCard": null,
       "extras": [
         {
           "name": "email",
           "remark": "email",
-          "value": "booking@clickavia.ru"
+          "value": "booking@test.ru"
         }
       ]
     }
@@ -504,7 +533,7 @@
     "name": "PLAKHUTIN/PAVEL",
     "address": null,
     "postcode": null,
-    "email": "booking@clickavia.ru",
+    "email": "booking@test.ru",
     "mobile": "0007-4953747238"
   },
   "ancillaryBuyMethod": "0",
