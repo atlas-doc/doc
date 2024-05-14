@@ -710,3 +710,52 @@
 | Error code | Description         |
 | ---------- | ------------------- |
 | **`310`**  | Infant not allowed. |
+
+
+Here is the API document formatted in a tabular format:
+
+*API Document*
+| Property | Type | Description |
+| --- | --- | --- |
+|<img width=200/>|<img width=200/>|<img width=500/>|
+| cid | string | Unique identifier of the passenger |
+| sessionId | string (uuid) | Session ID for tracking and monitoring |
+
+### Passengers
+| Property | Type | Description |
+| --- | --- | --- |
+|<img width=200/>|<img width=200/>|<img width=500/>|
+| name | string | Passenger name |
+| passengerType | integer | Passenger type: 0 = adult, 1 = child |
+| birthday | string (date format) | Passenger birthday |
+| gender | string (M/F) | Passenger gender |
+| cardNum | string | Card number: bank card or credit card |
+| cardType | string | Card type |
+| cardIssuePlace | string | Location where the card was issued |
+| cardExpired | string (date format) | Card expiration date |
+| nationality | string (CN, US, EU) | Passenger nationality |
+| ancillaries | array | Array of ancillary objects: |
+
+### Ancillaries
+| Property | Type | Description |
+| --- | --- | --- |
+|<img width=200/>|<img width=200/>|<img width=500/>|
+| productCode | string | Ancillary product code |
+| segmentIndex | integer | Segment index |
+
+### Contact Information
+| Property | Type | Description |
+| --- | --- | --- |
+|<img width=200/>|<img width=200/>|<img width=500/>|
+| name | string | Contact name |
+| address | null|string | Contact address |
+| postcode | null|string | Contact postcode |
+| email | string (email format) | Contact email |
+| mobile | string (+86-XXXXX pattern) | Contact mobile phone number |
+
+### Baggage Information
+| Property | Type | Description |
+| --- | --- | --- |
+|<img width=200/>|<img width=200/>|<img width=500/>|
+| baggagePiece | integer | Number of checked baggage pieces |
+| baggageWeight |
