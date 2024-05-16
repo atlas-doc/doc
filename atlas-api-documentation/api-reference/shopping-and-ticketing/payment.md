@@ -12,6 +12,15 @@
 
 {% tabs %}
 {% tab title="Schema" %}
+
+### Deposit Mode of Payment
+
+*   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
+
+### VCC Mode of Payment 
+
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
@@ -20,13 +29,9 @@
     1 ：Payment with credit card pass through to the airline
 
     0 : Payment with Prepayment
-*   **creditCard Object< **<mark style="color:blue;">**CreditCardElement**</mark>** > **<mark style="color:orange;">**Optional**</mark>
+*   **creditCard Object< **<mark style="color:blue;">**CreditCardElement**</mark>** > **<mark style="color:orange;">**Mandatory**</mark>
 
-    1 ：Payment with credit card pass through to the airline
-
-    0 : Payment with Prepayment
-
-    * <mark style="color:blue;">**CreditCardElement**</mark>
+   * <mark style="color:blue;">**CreditCardElement**</mark>
       *   **cardNumber **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Virtual credit card number.
