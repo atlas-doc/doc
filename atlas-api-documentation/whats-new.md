@@ -5,6 +5,24 @@
 
 # What's New!!
 
+## May 2024
+
+## Feature Release: Sandbox Optimization
+
+Description: The sandbox has been optimized to provide all the available content with Atlas. The features of production environment are also synced with the sandbox environment.
+
+Please refer to the [Search](../atlas-api-documentation/api-reference/overview/sandbox-test-routes.md) section.
+
+
+## Feb 2024
+
+## Feature Release: Display Currency
+
+Description: The fare can be displayed in a different currency as per the customers' choice. 
+
+Please refer to the [Search](../atlas-api-documentation/api-reference/shopping-and-ticketing/search.md) section.
+
+
 ## Dec 2023
 
 ## Feature Release: Airline Status Update Notification
