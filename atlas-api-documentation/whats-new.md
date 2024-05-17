@@ -11,7 +11,7 @@
 
 Description: The sandbox has been optimized to provide all the available content with Atlas. The features of production environment are also synced with the sandbox environment.
 
-Please refer to the [Search](../atlas-api-documentation/api-reference/overview/sandbox-test-routes.md) section.
+Please refer to the [Sandbox Test Routes](../atlas-api-documentation/api-reference/overview/sandbox-test-routes.md) section.
 
 
 ## Feb 2024
