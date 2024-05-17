@@ -1,18 +1,18 @@
 # Atlas Order API
 
-**Does the `OrderAPI` hold the inventory? If yes, then for how long?**
+## **Does the `OrderAPI` hold the inventory? If yes, then for how long?**
 
 We allow you to hold the inventory and guarantee the price for 30 mins after an order is generated. If the payment is not made during these 30 minutes, the price guarantee is void.
 
 
 
-**Can we release the inventory which is on hold at our end?**
+## **Can we release the inventory which is on hold at our end?**
 
 The Atlas API holds the inventory after the `OrderAPI` calls. We have a built-in mechanism to release the inventory after 30 minutes have passed. Different airlines have different mechanisms to release inventory; hence we cannot provide partner agencies with a function to request the release of inventory.
 
 
 
-**Which email id can we use in the contact details in the booking?**
+## **Which email id can we use in the contact details in the booking?**
 
 In the booking request, you can use your email id on all your bookings or you can use the passenger's email id. Some airlines block bookings if they are consistently coming from the same email id.
 
@@ -26,7 +26,7 @@ When a booking request has been received with "false" in the "useAtlasMailForCon
 
 
 
-**Can we use our VCC to book a round-trip itinerary created by 2 one-way fares?**
+## **Can we use our VCC to book a round-trip itinerary created by 2 one-way fares?**
 
 Atlas uses 2 one-way fares to construct round-trip journeys when 2 one-way fares are cheaper than a real round-trip. When our customers use VCC for their bookings, it is their intent to use the same for the return journeys constructed using 2 one-way fares also.
 
@@ -34,7 +34,7 @@ This can be achieved with the below process:
 
 The element 'allowGenerateMultipleOrders' has been added to the "order.do" request.
 
-**`allowGenerateMultipleOrders`  **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:green;">**Optional**</mark>
+## **`allowGenerateMultipleOrders`  **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
 true: Allow
 
@@ -49,7 +49,7 @@ When the "allowGenerateMultipleOrders= true" element is sent in the "order.do" r
 
 The "queryOrderDetails" function can be called to get the details of each booking. The "supportCreditTransPayment" tag can still be checked to identify if this new booking accepts credit card or not.
 
-**`supportCreditTransPayment`  **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
+## **`supportCreditTransPayment`  **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
 1: Prepayment Only
 
@@ -70,7 +70,7 @@ The orders must be retrieved separately and then payment made for each order. Th
 
 This functionality is for all roundtrip itineraries whether pre-payment or VCC payment and is applicable for the same carrier as well as different carriers in a booking.
 
-**How do we add "ancillaries" element when the itinerary has a transfer point?**
+## **How do we add "ancillaries" element when the itinerary has a transfer point?**
 
 When there are 2 or more segments in "fromSegments" or "toSegments" in the "verify" response, the order also needs to have as many "segmentIndex" elements in the "ancillaries" array.
 
