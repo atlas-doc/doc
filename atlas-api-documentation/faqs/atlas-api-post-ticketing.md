@@ -67,3 +67,87 @@ Our operations team will process the refund.
 This is the recommended method of initiating refund with Atlas as the refund quotation will be instant.
 
 ![](../.gitbook/assets/RefundFlow_1.png)
+
+
+##### Service Request (Cancel & Refund)
+
+In the “Booking Detail” screen, the customer can click on the “Raise a Request” button. A slide-out window will open. 
+
+The customer can: 
+
+1)	Select the “Post-Ticketing Request  Cancel & Refund” option.
+   
+2)	Add the information regarding the refund in the “Describe the issue” box.
+   
+3)	“Submit” the request.
+   
+Our operations team will process the refund once the quote is accepted by the customer.
+
+![](../.gitbook/assets/RefundFlow_2.png)
+
+A service request can be submitted in 2 ways: 
+
+1)	By clicking on the “Raise a Request” button on the “Booking Detail” screen.
+   
+2)	By clicking on the “New Request” button on the “My Requests” screen. Please note that the order number would need to be entered if this option is used.
+
+
+#### Agent & Passenger Initiated Refund
+
+##### Service Request (Agency & Passenger Initiated Refund)
+
+When the customer or the passenger has already submitted the refund to the airline directly, the “Agency & Passenger Initiated Refund” option should be used.
+
+In the “Booking Detail” screen, the customer can click on the “Raise a Request” button. A slide-out window will open. 
+
+The customer can: 
+
+1)	Select the “Post-Ticketing Request  Agent & Passenger Initiated Refund” option.
+   
+2)	“Submit” the request.
+   
+The refund request will be added to the “Refund” queue at Atlas’ end and processed by our operations team.
+
+![](../.gitbook/assets/RefundFlow_3.png)
+
+The order number will be added to the refund queue at Atlas’ end.
+
+A service request can be submitted in 2 ways:
+
+1)	By clicking on the “Raise a Request” button on the “Booking Detail” screen.
+   
+2)	By clicking on the “New Request” button on the “My Requests” screen. Please note that the order number would need to be entered if this option is used.
+
+##### Batch Update 
+
+After initiating the refund on the airline website, the customer will access the “Financial” module and the “Refund” menu. The customer will then click on the “Agent & Passenger Initiated” tab.
+
+![](../.gitbook/assets/RefundFlow_4.png)
+
+The refund template needs to be downloaded via the “Download File Template” button. 
+
+The order numbers need to be added in the template and the same template must be uploaded by clicking on the “Initiate a Refund” button.
+
+![](../.gitbook/assets/RefundFlow_5.png)
+
+Once uploaded, the order number will be displayed in the “Refunds” list.
+
+![](../.gitbook/assets/RefundFlow_6.png)
+
+#### Checking the Refund Statement
+
+The refund statement can be checked in ATRIP from “Finance  Refunds” section.
+
+![](../.gitbook/assets/RefundFlow_7.png)
+
+#### Checking the Service Requests Created
+
+The service request details will be also displayed in the “Request History” tab in the booking details.
+
+![](../.gitbook/assets/RefundFlow_8.png)
+
+### Follow-up Process for Refunds
+
+The customer should follow-up for refunds after a minimum of 21 days from the refund submission date.
+
+The customers should use the already created service request (if refund initiated via a service request) or create a new service request via the "Post-ticketing Request --> Cancel & Refund" category to inquire for the submitted refunds.
