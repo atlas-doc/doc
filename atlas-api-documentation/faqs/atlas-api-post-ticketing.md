@@ -1,19 +1,19 @@
 # Atlas API Post-ticketing
 
-**Do we get notified when there is a change in flight schedule for our customers?**
+## **Do we get notified when there is a change in flight schedule for our customers?**
 
 Sometimes airlines can make changes to their flight schedule. These changes range from minor changes in flight schedules to major ones such as cancellation or rerouting.
 In this case, the airline will send the message to the contact email or mobile number of this booking.
 
 
 
-**How is the post-ticketing process being handled?**
+## **How is the post-ticketing process being handled?**
 
 Atlas API supports the post-ticketing process. The API allows for post-ticketing functions such as purchasing ancillary services, cancellation requests and processing refunds. Please refer to the API Reference section for further information. You can also reach out to our API support team or the Customer Service Centre to investigate any post-ticketing queries.
 
 
 
-**Is there a refund claim process for Atlas customers?**
+## **Is there a refund claim process for Atlas customers?**
 
 The refund claim process differs as per the mode of payment. Please refer to the process as per the payment mode:
 
@@ -27,3 +27,43 @@ Mode of Payment: **Deposit**
 Mode of Payment: **VCC**
 
 When the refund has been initiated by customers via Atlas OR when customers or the passenger submits the refund to the airline directly, the funds will be directly credited into customers VCC account by the airline. The card statement will show the credit into the account.
+
+
+
+## **What is the REFUND process to be followed with Atlas?**
+
+A comprehensive process for refund is documented below for our customers.
+
+### Method of Initiating Refund with Atlas
+
+#### 1) Atlas Initiated Refund
+   
+a) Refund button.
+
+b) Service request (Cancel & Refund)
+
+#### 2) Agency & Passenger Initiated Refund
+
+a) Service request (Agency & Passenger Initiated Refund)
+      
+b)	Batch update.
+
+#### Atlas Initiated Refund
+
+##### Refund Button
+
+Refund for all airlines can be submitted to Atlas.
+
+In the “Booking Detail” screen:
+
+1)	Click on the “Refund” button. A slide-out window is displayed.
+   
+2)	Check the refund fee.
+   
+3)	Accept the calculation and click the “Refund” button.
+   
+Our operations team will process the refund.
+
+This is the recommended method of initiating refund with Atlas as the refund quotation will be instant.
+
+![](../.gitbook/assets/RefundFlow_1.png)
