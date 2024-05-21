@@ -134,9 +134,9 @@ Once uploaded, the order number will be displayed in the “Refunds” list.
 
 ![](../../.gitbook/assets/RefundFlow_6.png)
 
-#### Checking the Refund Statement
+#### Checking the Refund Status
 
-The refund statement can be checked in ATRIP from “Finance  Refunds” section.
+The refund status can be checked in ATRIP from “Finance  Refunds” section.
 
 ![](../../.gitbook/assets/RefundFlow_7.png)
 
