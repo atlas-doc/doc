@@ -2,130 +2,149 @@
 
 Atlas uses the following **Enum** to store the **error codes** and corresponding **error messages**.
 
-#### General Error codes
-
-| Value   | Description                         |
-| ------- | ----------------------------------- |
-| <mark style="color:blue;">1</mark> | Data check error                    |
-| <mark style="color:blue;">2</mark>  | System error                        |
-| <mark style="color:blue;">3</mark>  | Unauthorized access                 |
-| <mark style="color:blue;">4</mark>  | Empty data error                    |
-| <mark style="color:blue;">5</mark>  | Data encryption verification error  |
-| <mark style="color:blue;">900</mark> | Unauthorized access                        |
-| <mark style="color:blue;">9999</mark> | System error                              |
+#### General error codes
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">-1</mark> | Common error     |  | Atlas will investigate and add the relevant error code. |
+| <mark style="color:blue;">900</mark> | Unauthorized access | Incorrect credentials Or the account status is incorrect Or try to access other customer's data. | Check credentials. If the error still persists, contact your account manager. |
+| <mark style="color:blue;">901</mark> |  illegal request data                               | Check the format of request. | The request format should be Json. |
+| <mark style="color:blue;">902</mark>  |  Access denied   | Incorrect credentials Or the account status is incorrect Or you are trying to access other customer's data. | Check credentials. If the error still persists, contact your account manager. |
+| <mark style="color:blue;">9999</mark> | System error                              |  This is unexpected error. | Atlas will investigate and add the relevant error code. |
 
 
 #### Search error codes
-| Code                                 | Description                                |
-| ------------------------------------ | ------------------------------------------ |
-| <mark style="color:blue;">100</mark> | Missing required request data                               |
-| <mark style="color:blue;">101</mark> | Illegal request data                         |
-| <mark style="color:blue;">102</mark> | Illegal request param: {0}                           | 
-| <mark style="color:blue;">103</mark> | Round-trip search is not supported                               |
-| <mark style="color:blue;">104</mark> | Round-trip search is not allowed                               |
-| <mark style="color:blue;">105</mark> | OD is not in client's round-trip white list                               |
-| <mark style="color:blue;">106</mark> | Search is not allowed                               |
-| <mark style="color:blue;">107</mark> | Insufficient balance                               |
-| <mark style="color:blue;">108</mark> | Route is restricted / System limitations                               |
-| <mark style="color:blue;">109</mark> | The number of searches exceeded the limit                               |
-| <mark style="color:blue;">110</mark> | Too many concurrent requests                               |
-| <mark style="color:blue;">111</mark> | Real time search is not allowed                               |
-| <mark style="color:blue;">112</mark> | Timed out                               |
-| <mark style="color:blue;">113</mark> | Airline is under maintenance                               |
-| <mark style="color:blue;">114</mark> | No flights present                               |
-| <mark style="color:blue;">115</mark> | Unexpected results                               |
-| <mark style="color:blue;">116</mark> | Search data not captured                             |
-| <mark style="color:blue;">900</mark> | Unauthorized access                              |
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">100</mark> | Missing required request data     | Missing mandatory parameters. | Check the mandatory parameters. |
+| <mark style="color:blue;">101</mark> | Illegal request data                         | Check the format of request. | The format should be Json. |
+| <mark style="color:blue;">102</mark> | Illegal request param: {0}                           |   |  |
+|  | The adult count should not be less than 1 | The adult count is "0". | Add an adult passenger type. |   
+|  | Allow up to 9 passengers | The total number of passengers are more than 9. | Reduce the total number of passengers to a maximum of 9. | 
+|  | Unknown city code | The city code is incorrect. | Check and correct the city code. | 
+|  | The fromCity or fromAirport must not be empty | The destination from where the fare needs to be searched is empty. | Add the city or airport code. | 
+|  | The toCity or toAirport must not be empty | The destination to where the fare needs to be searched is empty. | Add the city or airport code. | 
+|  | The fromDate must not be empty | The travel start date is empty. | Add the travel start date. | 
+|  | The retDate should not be empty | The return date is empty for a fare with tripType 2. | Add the return date. | 
+|  | Invalid fromDate format | The date format is incorrect. | Change the format to YYYYMMDD. | 
+| <mark style="color:blue;">103</mark> | Round-trip search is not supported                               | Only one-way itineraries can be searched. | Check with your account manager if there is a restriction to your account.|
+| <mark style="color:blue;">104</mark> | Round-trip search is not allowed                               | Only one-way fares will be returned. A customer cannot use the tag "2) for "tripType" in search. | Check with your account manager if there is a restriction to your account. |
+| <mark style="color:blue;">105</mark> | OD is not in client's round-trip white list                               |  This city pair has not been whitelisted. | Check with your account manager if there is a restriction to your account. |
+| <mark style="color:blue;">106</mark> | Search is not allowed                               |  | Check with your account manager if there is a restriction to your account.|
+| <mark style="color:blue;">107</mark> | Insufficient balance                               |  The account balance is below the agreed threshold. | Top-up your account on a priority. |
+| <mark style="color:blue;">108</mark> | Route is restricted / System limitations   |  The airline has flights and quotations, but Atlas has closed sales for some reasons. The reasons can be 1) The sales were manually closed 2) The system has detected a risk of sold out 3) Prohibitions on nearby flights. | Try booking after some time. |
+| <mark style="color:blue;">109</mark> | The number of searches exceeded the limit                               |  The searches per day have exceeded the allowed limit. | Check with your account manager if there is a restriction to your account. |
+| <mark style="color:blue;">110</mark> | Too many concurrent requests                               | The QPS (Queries Per Second) is higher than the allowed limit. | If your business requires more resources, please contact your account manager. |
+| <mark style="color:blue;">111</mark> | Real time search is not allowed                               | This feature is not activated for your account. | Connect with your account manager if you require this service. | 
+| <mark style="color:blue;">112</mark> | Timed out                               | The search request has timed-out. | For further details please refer to FAQs --> Atlas API General Information. |
+| <mark style="color:blue;">113</mark> | Airline is under maintenance                               | Airline is in "Inactive" or "Maintenance" status with Atlas. This does not necessarily mean that there is an issue with the Airline website itself. | Wait for the status to change to “active”. |
+| <mark style="color:blue;">114</mark> | No flights present                               | "This may happen when: - The airline does not fly on that date for the searched city pair." | Check the airline website to see if the flight is operational for that date. |
+| <mark style="color:blue;">115</mark> | Unexpected results                               |  System error. | Try again. If the error persists, raise a service request. | 
+| <mark style="color:blue;">116</mark> | Search data not captured                             | An error was reported during the search data stoprage at Atlas' end. | If this error is not constantly reported, you can try trying again. If the error persists, then it is necessary to contact the account manager. |
+| <mark style="color:blue;">123</mark> |  Too many requests but too few paid orders                     |  The service has been blocked as the search requests are too many and the paid orders are very less. | Ony search the required city pairs. |
 
 
 #### Verify error codes
 
-| Code                                 | Description                                |
-| ------------------------------------ | ------------------------------------------ |
-| <mark style="color:blue;">200</mark> | Illegal routing identifier                               |
-| <mark style="color:blue;">201</mark> | Invalid routing                           |
-| <mark style="color:blue;">202</mark> | Routing identifier expired                           |
-| <mark style="color:blue;">203</mark> | Airline closed                |
-| <mark style="color:blue;">204</mark> | The airline does not support the current interface           |
-| <mark style="color:blue;">205</mark> | Timed out           |
-| <mark style="color:blue;">206</mark> | No flights                         |
-| <mark style="color:blue;">207</mark> | The target flight does not exist                          |
-| <mark style="color:blue;">208</mark> | Cabin changed        |
-| <mark style="color:blue;">210</mark> | Fare Family sold out |
-| <mark style="color:blue;">299</mark> | Verify failed |
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">200</mark> | Illegal routing identifier                               |The "routingIdentifier" tag's information does not match the routing identifier received in the search response. | Check the routing identifier and resend the verification request with the correct “routingIdentifier”. |
+| <mark style="color:blue;">201</mark> | Invalid routing                           | The airline has flights and quotations, but Atlas has closed sales for some reasons. The reasons can be 1) The sales were manually closed 2) The system has detected a risk of sold out 3) Prohibitions on nearby flights. | Try booking after some time. |
+| <mark style="color:blue;">202</mark> | Routing identifier expired                           | The "routingIdentifier" has a validity of 6 hrs. If the “routingIdentifier” is used after this time period, then this error is displayed. | Conduct “Search” again and use the new “routingIdentifier”. |
+| <mark style="color:blue;">203</mark> | Airline closed                |  The airline is no longer is business. |  |
+| <mark style="color:blue;">205</mark> | Timed out           | There is a time-out set at Atlas’ end for the verify response. The verify response has taken a longer time. | For further details please refer to FAQs --> Atlas API General Information. |
+| <mark style="color:blue;">206</mark> | No flights                         | The required flight cannot be found from the airline's side, possibly due to the flight being sold out. | Conduct the search again. |
+| <mark style="color:blue;">207</mark> | The target flight does not exist                          | The required flight cannot be found from the airline's side, possibly due to the flight being sold out | Conduct the search again. |
+| <mark style="color:blue;">208</mark> | Cabin changed        | Booking class changed. | Conduct the search again. |
+| <mark style="color:blue;">209</mark> | Seat Strong Verify failed        | Seat verification during price verification has been enabled.  | Contact yopur account manager. |
+| <mark style="color:blue;">210</mark> | Fare Family sold out | The flight or the fare family is no longer available with the airline. | Conduct the search again and rebook. |
+| <mark style="color:blue;">211</mark> |  Flight or FareFamily not found |  The flight or the fare family is no longer available with the airline. | Conduct the search again and rebook. |
+| <mark style="color:blue;">212</mark> | Illegal Request Parameter        |  Some parameter missing or additional. | Check the verify request. |
+| <mark style="color:blue;">299</mark> | Verify failed | This is an error for which Atlas needs to take action. In some uncontrollable situations, such as network issues, upgrades, and restarts, 299 errors may occur. It is possible that the airline is not available or there are challenges at Atlas' end. Atlas needs to handle these errors internally. | Retry verification. If you get the same error, then start from search. If the error still persists, escalate to Atlas. |
+
 
 #### Order error codes
 
-| Code                                 | Description                                |
-| ------------------------------------ | ------------------------------------------ |
-| <mark style="color:blue;">300</mark> | Invalid session information                |
-| <mark style="color:blue;">301</mark> | Session does not exist or timed out        |
-| <mark style="color:blue;">302</mark> | The target flight does not exist           |
-| <mark style="color:blue;">303</mark> | Airline closed                             |
-| <mark style="color:blue;">304</mark> | Verify failed                              |
-| <mark style="color:blue;">305</mark> | Invalid routing                            |
-| <mark style="color:blue;">306</mark> | Cabin changed                              |
-| <mark style="color:blue;">307</mark> | Illegal booking request parameters:        |
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">300</mark> | Invalid session information                | The "sessionID" is not the right one. | Check the session ID and enter the correct one. 
+| <mark style="color:blue;">301</mark> | Session does not exist or timed out        | The "sessionID" has a validity of 2 hrs. If the “sessionID” is used after this time period, then this error is displayed | Check the session ID and enter the correct one. If the timeframe is over 2 hrs, then start from the verify stage (if less than 6 hrs. of verification response) |
+| <mark style="color:blue;">302</mark> | The target flight does not exist           | "In the period between verify and book, the flight has been sold out. This can also be due to the number of passengers booked. The number of pax when booking and the number of pax when verifying may be different. When create a booking, the price is verified based on the actual number of pax booked. | Conduct the search again and rebook. |
+| <mark style="color:blue;">303</mark> | Airline closed                             | Airline has either ceased to exist or not operational. |  |
+| <mark style="color:blue;">304</mark> | Verify failed                              | In some uncontrollable situations, such as network issues, upgrades, and restarts, 299 error may occur, but not many. If there are many 299 errors, it is possible that the airline is not available or some technical issue at Atlas' end. | Contact your account manager if this error keeps on repeating. |
+| <mark style="color:blue;">305</mark> | Invalid routing                            | When generating an order, the system found that the flight was no longer sold for various reasons, such as 1) L2B 2) The system has identified that there may be a risk of the flight being sold out 3) The airline's sales have been closed | Conduct the search again and rebook. |
+| <mark style="color:blue;">306</mark> | Cabin changed                              | Booking class changed. | Conduct the search again. |
+| <mark style="color:blue;">307</mark> | Illegal booking request parameters:        | One request parameter has a problem. Please check the message. | Check the error message. Correct the same and resubmit the booking. |
 |                                      | passengers->name                           |
 |                                      | passengers->passengerType                  |
 |                                      | passengers->birthday                       |
 |                                      | passengers->gender                         |
 |                                      | passengers->cardExpired                    |
-| <mark style="color:blue;">308</mark> | Price changed                              |
-| <mark style="color:blue;">309</mark> | Ancillary not found                        |
-| <mark style="color:blue;">310</mark> | Infant not allowed                         |
-| <mark style="color:blue;">312</mark> | Too many seats booked                      |
-| <mark style="color:blue;">313</mark> | Fare family sold out                       |
-| <mark style="color:blue;">314</mark> | Unable to regenerate order: The original order is ticketing or ticketed                         |
-| <mark style="color:blue;">315</mark> | Not enough seats                           |
-| <mark style="color:blue;">316</mark> | Timed out                                  |
-| <mark style="color:blue;">317</mark> | Booking unsuccessful with Airline          |
-| <mark style="color:blue;">318</mark> | Duplicate Booking                          |
-| <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                         |
+| <mark style="color:blue;">308</mark> | Price changed                              |   | Regenerate booking or create an entirely new booking. |
+| <mark style="color:blue;">309</mark> | Ancillary not found                        | Incorrect ancillary product code has been entered. | Check and enter the correct ancillary product code. |
+| <mark style="color:blue;">310</mark> | Infant not allowed                         |  | Create a new booking without infant passenger type. The infant passenger can be added “offline” via the airline website. |
+| <mark style="color:blue;">311</mark> |  Seat Strong Verify failed                 | Check verify response for maximum seats allowed. | Adjust the passenger numbers as per the verification response and create a new booking. |
+| <mark style="color:blue;">312</mark> | Too many seats booked                      | The number of pax booked exceeds the remaining (or allowed) seats on the current flight. | Rebook the itinerary. |
+| <mark style="color:blue;">313</mark> | Fare family sold out                       |   | Create a new booking. |
+| <mark style="color:blue;">314</mark> | Unable to regenerate order: The original order is ticketing or ticketed                         |  | Check the order with the same passenger and flight details. |
+| <mark style="color:blue;">315</mark> | Not enough seats                           | Seats have been sold out | Rebook the itinerary |
+| <mark style="color:blue;">316</mark> | Timed out                                  |  There is a time-out error at the airline’s end. Please check the FAQs (General Information) for more details regarding timeouts. | Rebook the itinerary. |
+| <mark style="color:blue;">317</mark> | Booking unsuccessful with Airline          | An error has happened at the airline’s end. | Rebook the itinerary. |
+| <mark style="color:blue;">318</mark> | Duplicate Booking                          |  | Check if a booking with the same passenger details and flight numbers exists. After confirming, ignore this booking.|
+| <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                         | Incorrect phone number format. | Check the phone number format and rectify the same.
+
 
 #### Payment  error codes
-| Code                                 | Description                                |
-| ------------------------------------ | ------------------------------------------ |
-| <mark style="color:blue;">400</mark> | Illegal request param                               |
-| <mark style="color:blue;">401</mark> | Time out of payment                          |
-| <mark style="color:blue;">402</mark> | Order status does not support payment                        |
-| <mark style="color:blue;">403</mark> | Unsupported payment method               |
-| <mark style="color:blue;">404</mark> | The order is already paid            |
-| <mark style="color:blue;">405</mark> | Illegal transaction state            |
-| <mark style="color:blue;">406</mark> | Payment operation is in progress            |
-| <mark style="color:blue;">407</mark> | Some error messages indicating incorrect passenger information            |
-| <mark style="color:blue;">408</mark> | Passenger can not board alone            |
-| <mark style="color:blue;">409</mark> | Additional baggage does not match the flight segmemt            |
-| <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                        |
-| <mark style="color:blue;">411</mark> | Generic payment error          |
-| <mark style="color:blue;">800</mark> | Order not exists          |
-| <mark style="color:blue;">900</mark> | Unauthorized access            |
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">400</mark> | Illegal request param                               | The request parameters are illegal, and the error scenarios include 1) Invalid VCC validity period 2) Lack of VCC cardholder information | Regenerate the existing order or create a new booking and update the VCC details. |
+| <mark style="color:blue;">401</mark> | Time out of payment                          | Payment for the booking was initiated later than the payment deadline. The default payment deadline is 30 minutes after creating the order. | Regenerate the existing order or create a new booking. |
+| <mark style="color:blue;">402</mark> | Order status does not support payment                        |  The order status maybe “ticketing” or “ticketed” where the payment has already been made. | Check if the order has been paid. If “yes”, do not send the payment request. |
+| <mark style="color:blue;">403</mark> | Unsupported payment method               |  The payment method is not supported for this airline. | Change to an alternative payment method. |
+| <mark style="color:blue;">404</mark> | The order is already paid            |  The order has already been paid. | Check if the order has been paid. If “yes”, do not send the payment request. |
+| <mark style="color:blue;">405</mark> | Illegal transaction state            | The order status is not correct. | Check the order status and either regenerate the booking or ignore the request. |
+| <mark style="color:blue;">406</mark> | Payment operation is in progress            |  The previous payment request is still in process. | Wait for the airline PNR to be received in the PNR details response. |
+| <mark style="color:blue;">407</mark> | Some error messages indicating incorrect passenger information            | Some mandatory element for the passenger has not been submitted. | Check the information and correct the same and resubmit. |
+| <mark style="color:blue;">408</mark> | Passenger can not board alone            | Only a child passenger is booked in this order. | Create a new order and add an adult passenger with the child passenger. |
+| <mark style="color:blue;">409</mark> | Additional baggage does not match the flight segmemt            |  The “productCode” of the additional baggage does not match the product codes available for this flight. | Check the “productCode” and update it with the correct code. |
+| <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                        |  The contact information is not in the correct format. | Check the contact information and confirm that it matches the required format. |
+| <mark style="color:blue;">411</mark> | Generic payment error          | The error happened when we checked your account. For example, “not enough balance”. | Check the balance or as per the message received in the error. |
+
 
 #### Ticket error codes
 
-| Code                                 | Description                                |
-| ------------------------------------ | ------------------------------------------ |
-| <mark style="color:blue;">601</mark> | Price change                               |
-| <mark style="color:blue;">602</mark> | Flight not found                           |
-| <mark style="color:blue;">603</mark> | Flight sold out                           |
-| <mark style="color:blue;">604</mark> | Payment declined by airline                |
-| <mark style="color:blue;">605</mark> | Incorrect passenger information            |
-| <mark style="color:blue;">606</mark> | Inconsistent flight information            |
-| <mark style="color:blue;">607</mark> | Fare not available                         |
-| <mark style="color:blue;">608</mark> | Duplicate booking                          |
-| <mark style="color:blue;">609</mark> | Contact email is blocked by airline        |
-| <mark style="color:blue;">610</mark> | Error happened during payment with airline |
-| <mark style="color:blue;">614</mark> | Wrong age |
-| <mark style="color:blue;">615</mark> | Payment completed but failed to get the PNR number from the airline |
-| <mark style="color:blue;">616</mark> | 3DS Authetication |
-| <mark style="color:blue;">617</mark> | Insufficient balance |
-| <mark style="color:blue;">698</mark> | Technical error on the airline side - !!! PAYMENT STATUS UNKNOWN !!! - PLEASE CONTACT THE AIRLINE BEFORE TRYING TO BOOK AGAIN.|
-| <mark style="color:blue;">699</mark> | Unknown error                              |
-
-
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">601</mark> | Price change                               |  |  |
+| <mark style="color:blue;">602</mark> | Flight not found                           | The flight is no longer available on the airlines platform. | Create a new booking. |
+| <mark style="color:blue;">603</mark> | Flight sold out                            | The flight is sold out, and there are no available seats. This occurred after the payment was completed but before the ticket was issued. | Create a new booking. |
+| <mark style="color:blue;">604</mark> | Payment declined by airline                | VCC not accepted by the airline. | Try a different card for payment. |
+| <mark style="color:blue;">605</mark> | Incorrect passenger information            | The information in the "passengers" array is incorrect. | Check the passenger details and resubmit after correction. |  
+| <mark style="color:blue;">606</mark> | Inconsistent flight information            | Between search and book, the airline made a schedule change for the same flight number. | Start from search again. |
+| <mark style="color:blue;">607</mark> | Fare not available                         | 
+| <mark style="color:blue;">608</mark> | Duplicate booking                          |  | Check if a booking with the same passenger details and flight numbers exists. After confirming, ignore this booking.|
+| <mark style="color:blue;">609</mark> | Contact email is blocked by airline        |  Airline has blocked your email id as per their policy. | Create a new booking with a different email id OR provide authority to Atlas to use Atlas’ email id. Please refer to “Atlas API Order” FAQs for further details. |
+| <mark style="color:blue;">610</mark> | Error happened during payment with airline |  |  |
+| <mark style="color:blue;">614</mark> | Wrong age | |  |
+| <mark style="color:blue;">615</mark> | Payment completed but failed to get the PNR number from the airline | Sometimes for the VCC payment, the airline fails to respond and hence the PNR is not received. In such a scenario, Atlas will deal with the airline manually and get the PNR and add it to the booking. |  |
+| <mark style="color:blue;">616</mark> | 3DS Authetication |  The card used requires a 3DS authentication. Atlas does not support this feature at the moment. | Use a different card which does not have 3DS authentication OR pay via deposit mode of payment. |
+| <mark style="color:blue;">617</mark> | Insufficient balance |  The deposit balance is below the minimum threshold. | Check your balance and top-up on a priority. |
 
 
 #### Query order error codes
-| Code                                 | Description                                |
-| ------------------------------------ | ------------------------------------------ |
-| <mark style="color:blue;">800</mark> | Order does not exist                           |
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">800</mark> | Order does not exist                           | The relevant order does not exist. | Please re-check the order number and retry. |
+
+
+#### Refund error codes
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">801</mark> | Order does not exist                           |  Incorrect order number has been entered. | Check the order number and enter the correct one. |
+| <mark style="color:blue;">802</mark> |  Children cannot travel alone     |   Only ADT pax cannot be refunded. The CHD pax should also be refunded together. | Request refund for the full order including child passenger. |
+| <mark style="color:blue;">803</mark> |  The passengers have already submitted a refund |  Incorrect order number has been entered. | Check the order number and enter the correct one. |
+| <mark style="color:blue;">804</mark> |  The segments of the same PNR needs to be submitted together  |   | Check how many segments exist for that PNR and resubmit after adding all the segments. |
+| <mark style="color:blue;">8041</mark> |  Segment does not exist                      |   One of the segments in the request does not exist. | Check the segments and only provide the segments for that refund request.| 
+| <mark style="color:blue;">805</mark> |  RefundOfferId has expired                        |   The “refundOfferId” has expired. | Send a new refund request to get the latest “refundOfferId”. |
+| <mark style="color:blue;">806</mark> |  Please submit Self Refund                          |   |  |
+| <mark style="color:blue;">807</mark> |  Passenger does not exist                   |   | Check the passenger name and correct the same, if required. |
+| <mark style="color:blue;">808</mark> |  Non refundable                 |  The order is non-refundable. |  |
