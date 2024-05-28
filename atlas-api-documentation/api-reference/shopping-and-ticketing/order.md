@@ -14,7 +14,7 @@
 {% tab title="Schema" %}
 *   **sessionId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Identifier of the revalidation, got from revalidation response.
+    Identifier of the search response.
 *   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
     Passengers' information.
