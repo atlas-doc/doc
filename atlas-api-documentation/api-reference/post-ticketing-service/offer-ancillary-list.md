@@ -13,7 +13,7 @@ The order should be ticketed and the departure date should be in the future.
 {% hint style="info" %}
 Please note the below "Rules & Restrictions" while initiating a post-ticketing transaction.
 
-1. Check-in baggage and Carry-on baggage can be added to an order either in the booking flow or the post-booking flow separately and only 1 time for each in one query throughout the whole flow. This rule aims to simplify the baggage booking flow for customers by sending the query only 1 time to book multiple baggage.
+1. Check-in baggage and Carry-on baggage can be added to an order either in the booking flow or the post-booking flow. This can be only once throughout the whole flow. This rule aims to simplify the baggage booking flow for customers by sending the query only 1 time to book multiple baggage.
 
 2. "Product code" contains various baggage offerings in aspects of baggage pieces and weights for each airline.
 
@@ -27,7 +27,7 @@ Please note the below "Rules & Restrictions" while initiating a post-ticketing t
 
 	c. When the post-booking order is in "unpaid" status, the customer can create another order. However, if one of the orders completes the payment and moves to "ticketing-in-process" status, the other orders will stop processing the payment.
 
-5. In case the air ticket order already contains free baggage in the package, it’s subject to airline’s ancillary policy whether additional baggage is allowed to be purchase either at the booking flow or the post-booking flow.
+5. In case the air ticket order already contains free baggage, it’s subject to airline’s ancillary policy whether additional baggage is allowed to be purchase either at the booking flow or the post-booking flow.
 
 6. Same “product code” for baggage is mandatory to be added to each segment in connecting flights. If the "product code" is different for each of the segment (in the same direction)  or not added for all the sectors, the API will respond with an error message.
 
@@ -42,7 +42,7 @@ Please note the below "Rules & Restrictions" while initiating a post-ticketing t
 {% tab title="Schema" %}
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Order number. It is an order for ticketing.
+    Order number. It is the original order number.
 
 *   **ancillaryCategory **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
@@ -87,7 +87,7 @@ The alternative currency in which the fare and taxes amount needs to be displaye
 
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>
 
-    Order number. 
+    Order number. It is the original order number.
     
 *   **supportCreditTransPayment **<mark style="color:blue;">**int**</mark>
 
@@ -103,11 +103,11 @@ The alternative currency in which the fare and taxes amount needs to be displaye
 
 *   **fromSegment Array **<mark style="color:blue;">**AncillaryElement**</mark>
 
-    For outbound segments, same as search response.
+    For outbound segments. Same elements as search response.
 
 *   **retSegment Array **<mark style="color:blue;">**AncillaryElement**</mark>
 
-    For inbound segments, same as search response.
+    For inbound segments. Same elements as search response.
 
 *   **ancillaries Array **<mark style="color:blue;">**AncillaryElement**</mark>
 
@@ -130,6 +130,7 @@ The alternative currency in which the fare and taxes amount needs to be displaye
           Ancillary product name.
 
           Options:
+          
           StandardCheckInBaggage
 
           CabinBaggageOverheadLocker
