@@ -12,7 +12,7 @@ The "postbookingancillarysearch.do" function should be called prior to this one.
 
 ### Endpoint {% debug uid="orderAncillary_1.0" %}{% enddebug %}
 
-[https://sandbox.atriptech.com/postbookingancillaryorder.do](https://sandbox.atriptech.com/postbookingancillaryorder.do)
+[https://sandbox.atriptech.com/postBookingAncillaryOrder.do](https://sandbox.atriptech.com/postBookingAncillaryOrder.do)
 
 ## Request
 
