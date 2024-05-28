@@ -1,8 +1,14 @@
-# Second Addition Order
+# Order Ancillary
 
 ### Dependency
 
-"Second Addition Search" function should be called in prior of this call.
+The "postbookingancillarysearch.do" function should be called prior to this one.
+
+Procedure:
+
+1. Copy the Session ID into the request body.
+
+2. Type the passenger information and "product code" selected from the response in "postbookingancillarysearch.do".
 
 ### Endpoint {% debug uid="orderAncillary_1.0" %}{% enddebug %}
 
@@ -14,11 +20,15 @@
 {% tab title="Schema" %}
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Order number. It is an order for ticketing.
+    Order number. It is an order of the original ticket.
+
+*   **ancillaryCategory **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    Ancillary Category. Different categories of ancillaries need to be separately requested. Currently we only support "BAGGAGE".
 
 *   **sessionId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Identifier of the Search Addition Search, got from the response.
+    Identifier of the searched ancillary, received from the response.
     
 *   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:green;">**Required**</mark>
      
@@ -26,10 +36,15 @@
       *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           LastName/FirstName MiddleName.
-      *   **ancillaries Array<**[**AncillaryElement**](add-ancillaries.md#undefined)**> **<mark style="color:green;">**Required**</mark>
+      *   **passengerType **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+          0 ADT
+
+          1 CHD
+*   **ancillaries Array<**[**AncillaryElement**](add-ancillaries.md#undefined)**> **<mark style="color:green;">**Required**</mark>
 
           Ancillaries selection for the specific passenger
-      * [**AncillaryElement**](add-ancillaries.md#undefined)
+      * <mark style="color:blue;">**AncillaryElement**</mark>
         *   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
             Segment sequence. It starts from 1. If it is round trip, the outbound and inbound sequence would be together.
@@ -42,26 +57,18 @@
 {% tab title="Samples" %}
 ```json
 {
-    "ticketOrderNo": "APXOS20230629164129749",
-    "ancillaryCategory": "SEAT",
-    "sessionId": "e3593a39-78d4-4e60-a42e-c5c7902455d4",
-    "skipSeatVerify": true,
-    "passengers": [
-        {
-            "name": "ZHANG/SAN",
-            "passengerType": 0,
-            "ancillaries":[ 
-                { 
-                    "productCode":"AD_SEAT_35F_JT122", 
-                    "segmentIndex":1
-                },
-                { 
-                    "productCode":"AD_SEAT_31D_JT123", 
-                    "segmentIndex":2
-                }
-            ]
-        }
-    ]
+"cid": "xxxxxxxxxx",
+"ticketOrderNo": "TESTM20240520171341468",
+"ancillaryCategory": "BAGGAGE",
+"sessionId": "cde38a72-d7fa-4e5b-9ba5-08b6929143c8",
+"passengers": [{
+    "name": "TEST/ONE",
+    "passengerType": 0,
+    "ancillaries": [{
+        "productCode": "AD_SCI_1PC_19KG",
+        "segmentIndex": 1
+                   }]
+               }]
 }
 ```
 {% endtab %}
@@ -78,18 +85,23 @@
     2: System error
 
     6: Price change
+    
 *   **msg **<mark style="color:blue;">**string**</mark>
 
     Error message
     
-    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to         check the result.
+    The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to check the result.
+    
+*   **sessionId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    Identifier of the revalidation, got from search ancillary response.
 *   **orderNo **<mark style="color:blue;">**string**</mark>
 
     Order number of the added ancillary.
     
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>
 
-    Order number. It is an order for ticketing.
+    Order number of the original ticket.
 
 *   **totalPrice **<mark style="color:blue;">**decimal**</mark>
 
@@ -161,7 +173,7 @@
           Ticket numbers
       *   **airlinePNRs Array<**<mark style="color:blue;">**string**</mark>**>**
 
-          AirlinePNRs, the array count would be the same as ticketnos count
+          AirlinePNRs, the array count would be the same as ticket nos count
       *   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**>**
 
           Ancillaries selection for the specific passenger
@@ -171,7 +183,7 @@
 
                 Ancillary product code;
 
-                Received from routing element in the search/revalidation response.
+                Received from ancillary search response.
             *   **segmentIndex **<mark style="color:blue;">**int**</mark>
 
                 Segment sequence
@@ -188,44 +200,29 @@
 
                 Currency for this ancillary price.
 
-            *   **auxSeatElement Array**
+         * **`auxBaggageElement` Object<**[**AuxBaggageElement**](search.md#10.-auxbaggage-element-schema)**>**
+       
+         * **`auxBaggageElement` includes the following parameters**
+       
+        *   **`piece`  **<mark style="color:blue;">**int**</mark>
 
-                Seat information.
+        0：No Limitation about piece;
 
-            *   **`rowNo`  **<mark style="color:blue;">**int**</mark>
-     
-                The row number of the seat.
+        \>0：Maximum pieces
+        
+       *   **`weight`  **<mark style="color:blue;">**int**</mark>
 
-            *   **`seatNo`  **<mark style="color:blue;">**string**</mark>
-     
-                Seat Number
-          
-            *   **`status`  **<mark style="color:blue;">**boolean**</mark>
-     
-                true: Available seat.
-                
-                false: Unavailable seat.
+           Value mentions maximum weight for ancillary baggage; this should be greater than 0.
+        
+       *   **`isAllWeight`  **<mark style="color:blue;">**boolean**</mark>
 
-            *   **`seatInfo Array`  **<mark style="color:blue;">**
-     
-                Seat information description
+           True：The weight is for all the pieces
 
-                Seat position information：
+           False：The weight is for each piece
+        
+       *   **`size`  **<mark style="color:blue;">**string**</mark>
 
-                window
-
-                aisle
-
-                middle
-
-                Required. This can be used to draw seat maps.
-
-                Other information. For example; "exit".
-
-            *   **` passengerType`  **<mark style="color:blue;">**
-
-                Passenger types supported by seats.
-
+           Maximum size for ancillary baggage
 
 
 \`\`
