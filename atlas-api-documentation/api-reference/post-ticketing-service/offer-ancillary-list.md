@@ -8,7 +8,33 @@ The order should be ticketed and the departure date should be in the future.
 ### Endpoint {% debug uid="searchAncillary_1.0" %}{% enddebug %}
 
 
-[http://sandbox.atlaslovestravel.com/secondAdditionSearch.do](http://sandbox.atlaslovestravel.com/secondAdditionSearch.do)
+[https://sandbox.atriptech.com/postbookingancillarysearch.do](https://sandbox.atriptech.com/postbookingancillarysearch.do)
+
+{% hint style="info" %}
+Please note the below "Rules & Restrictions" while initiating a post-ticketing transaction.
+
+1. Check-in baggage and Carry-on baggage can be added to an order either in the booking flow or the post-booking flow separately and only 1 time for each in one query throughout the whole flow. This rule aims to simplify the baggage booking flow for customers by sending the query only 1 time to book multiple baggage.
+
+2. "Product code" contains various baggage offerings in aspects of baggage pieces and weights for each airline.
+
+3. Baggage ancillary is not allowed to be booked for infant passenger.
+
+4. It is not allowed to add the same type of post-booking baggage to a ticketed order the second time unless the first purchase fails in payment. Please refer to the below scenarios:
+
+	a. When the post-booking order is in "ticket-in-process" and "ticketed" status, it's not allowed to order another one. If any query is called, API will respond with an error message.
+
+	b. When the post-booking order is in "cancelled" status, the customer can create another order.
+
+	c. When the post-booking order is in "unpaid" status, the customer can create another order. However, if one of the orders completes the payment and moves to "ticketing-in-process" status, the other orders will stop processing the payment.
+
+5. In case the air ticket order already contains free baggage in the package, it’s subject to airline’s ancillary policy whether additional baggage is allowed to be purchase either at the booking flow or the post-booking flow.
+
+6. Same “product code” for baggage is mandatory to be added to each segment in connecting flights. If the "product code" is different for each of the segment (in the same direction)  or not added for all the sectors, the API will respond with an error message.
+
+7. Rule No.6 doesn't work for round trip flights. This means that the customer can purchase baggage only for one of the directions (either outbound or inbound) in round trip.
+
+8. The details of only the passenger for whom the ancillary needs to be added must be sent in the API RQ.
+{% endhint %}
 
 ## Request
 
@@ -20,15 +46,21 @@ The order should be ticketed and the departure date should be in the future.
 
 *   **ancillaryCategory **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Ancillary Category. Different categories of ancillaries need to be separately requested. Currently we only supports "Seats".
+    Ancillary Category. Different categories of ancillaries need to be separately requested. Currently we only support "BAGGAGE".
+
+*   **displayCurrency array **Optional
+
+The alternative currency in which the fare and taxes amount needs to be displayed. The 3-letter currency code should be entered. 
     
 {% endtab %}
 
 {% tab title="Samples" %}
 ```json
 {
-    "ticketOrderNo": "GXFDU20220117075403790",
-    "ancillaryCategory": "SEAT"
+    "cid": "xxxxxxxxxx",
+    "ticketOrderNo": "TESTM20240520171341468",
+    "ancillaryCategory": "BAGGAGE",
+    "displayCurrency": "CNY"
 }
 ```
 {% endtab %}
@@ -96,32 +128,22 @@ The order should be ticketed and the departure date should be in the future.
       *   **productName **<mark style="color:blue;">**string**</mark>
 
           Ancillary product name.
+
+          Options:
+          StandardCheckInBaggage
+
+          CabinBaggageOverheadLocker
       *   **productType **<mark style="color:blue;">**string**</mark>
 
           Ancillary product type.
 
-          1: Check-in baggage
+          1: Standard Check-in baggage
           
           3: Cabin Baggage Overhead Locker
           
           6: Seat
 
-          Currently only Seat is available.
-          
-      *   **price **<mark style="color:blue;">**string**</mark>
-
-          Price for this ancillary.
-      *   **currency **<mark style="color:blue;">**string**</mark>
-
-          Currency for this ancillary price.
-
-      *   **vendorPrice **<mark style="color:blue;">**string**</mark>
-
-          The price charged by the vendor for the ancillary.  Only when supportCreditTransPayment=1, there is a value.
-
-      *   **vendorCurrency **<mark style="color:blue;">**string**</mark>
-
-          The currency in which the vendor charges for the ancillary.
+          Currently only "Standard Check-in Baggage" and "Cabin Baggage Overhead Locker" are available.
 
       *   **canPurchaseWithTicket **<mark style="color:blue;">**int**</mark>
 
@@ -138,6 +160,21 @@ The order should be ticketed and the departure date should be in the future.
           1=Yes
 
           0=No
+          
+      *   **price **<mark style="color:blue;">**string**</mark>
+
+          Price for this ancillary.
+      *   **currency **<mark style="color:blue;">**string**</mark>
+
+          Currency for this ancillary price.
+
+      *   **vendorPrice **<mark style="color:blue;">**string**</mark>
+
+          The price charged by the vendor for the ancillary.  Only when supportCreditTransPayment=1, there is a value.
+
+      *   **vendorCurrency **<mark style="color:blue;">**string**</mark>
+
+          The currency in which the vendor charges for the ancillary.
 
       *   **offerId **<mark style="color:blue;">**string**</mark>
 
@@ -159,48 +196,41 @@ The order should be ticketed and the departure date should be in the future.
 
           Ancillary code.
 
-      *   **auxBaggageElement Array**
+     * **`auxBaggageElement` Object<**[**AuxBaggageElement**](search.md#10.-auxbaggage-element-schema)**>**
+       
+     * **`auxBaggageElement` includes the following parameters**
+       
+    *   **`piece`  **<mark style="color:blue;">**int**</mark>
 
-          Baggage information.(Temporarily not supported)
+        0：No Limitation about piece;
 
-      *   **auxSeatElement Array**
+        \>0：Maximum pieces
+        
+    *   **`weight`  **<mark style="color:blue;">**int**</mark>
 
-          Seat information.
+        Value mentions maximum weight for ancillary baggage; this should be greater than 0.
+        
+    *   **`isAllWeight`  **<mark style="color:blue;">**boolean**</mark>
 
-          *   **`rowNo`  **<mark style="color:blue;">**int**</mark>
-     
-          Row number of the seat.
+        True：The weight is for all the pieces
 
-          *   **`seatNo`  **<mark style="color:blue;">**string**</mark>
-     
-          Seat Number
-          
-          *   **`status`  **<mark style="color:blue;">**boolean**</mark>
-     
-          true: Available seat.
-          
-          false: Unavailable seat.
+        False：The weight is for each piece
+        
+    *   **`size`  **<mark style="color:blue;">**string**</mark>
 
-          *   **`seatInfo Array`  **<mark style="color:blue;">**
-     
-          Seat information description
+        Maximum size for ancillary baggage
 
-          Seat position information：
+    *   **`maxQty`  **<mark style="color:blue;">**string**</mark>
 
-          window
+        Maximum purchase quantity per product
 
-          aisle
+    *   **`minQty`  **<mark style="color:blue;">**string**</mark>
 
-          middle
+        Starting purchase quantity per product
 
-          Required. This can be used to draw seat maps.
+    *   **`ancillaryCode`  **<mark style="color:blue;">**string**</mark>
 
-          other information. For example; "exit".
-
-          *   **` passengerType`  **<mark style="color:blue;">**
-
-          Passenger types supported by seats.
-
+    The code for this ancillary option. This will be identical to the `productCode`.  
 
 {% endtab %}
 
@@ -209,327 +239,230 @@ The order should be ticketed and the departure date should be in the future.
 {
     "status": 0,
     "msg": "success",
-    "sessionId": "46869eec-d9b2-4e43-84eb-54651309f80c",
-    "ticketOrderNo": "TESTG20230719153539616",
+    "sessionId": "cde38a72-d7fa-4e5b-9ba5-08b6929143c8",
+    "ticketOrderNo": "TESTM20240520171341468",
     "supportCreditTransPayment": "0",
     "currency": "USD",
     "fromSegments": [
         {
             "segmentIndex": 1,
-            "carrier": "JT",
-            "flightNumber": "JT656",
-            "depAirport": "CGK",
-            "depTime": "202308050500",
-            "arrAirport": "LOP",
-            "arrTime": "202308050800",
+            "carrier": "G9",
+            "flightNumber": "G9101",
+            "depAirport": "SHJ",
+            "depTime": "202405230810",
+            "arrAirport": "BAH",
+            "arrTime": "202405230820",
             "stopCities": "",
-            "duration": 120,
+            "duration": 70,
             "codeShare": false,
             "cabin": "",
             "cabinClass": 1,
-            "seatCount": 4,
-            "aircraftCode": "",
+            "seatCount": 2,
+            "aircraftCode": "320",
             "depTerminal": "",
             "arrTerminal": "",
-            "operatingCarrier": "",
+            "operatingCarrier": "G9",
             "operatingFlightnumber": "",
-            "fareFamily": "Economy"
-        },
-        {
-            "segmentIndex": 2,
-            "carrier": "JT",
-            "flightNumber": "JT645",
-            "depAirport": "LOP",
-            "depTime": "202308050845",
-            "arrAirport": "SUB",
-            "arrTime": "202308050850",
-            "stopCities": "",
-            "duration": 65,
-            "codeShare": false,
-            "cabin": "",
-            "cabinClass": 1,
-            "seatCount": 4,
-            "aircraftCode": "",
-            "depTerminal": "",
-            "arrTerminal": "",
-            "operatingCarrier": "",
-            "operatingFlightnumber": "",
-            "fareFamily": "Economy"
+            "fareFamily": "Value"
         }
     ],
-    "retSegments": [],
+    "retSegments": [
+        {
+            "segmentIndex": 2,
+            "carrier": "G9",
+            "flightNumber": "G9104",
+            "depAirport": "BAH",
+            "depTime": "202405291750",
+            "arrAirport": "SHJ",
+            "arrTime": "202405292000",
+            "stopCities": "",
+            "duration": 70,
+            "codeShare": false,
+            "cabin": "",
+            "cabinClass": 1,
+            "seatCount": 2,
+            "aircraftCode": "320",
+            "depTerminal": "",
+            "arrTerminal": "",
+            "operatingCarrier": "G9",
+            "operatingFlightnumber": "",
+            "fareFamily": "lowest"
+        }
+    ],
     "ancillaryProductElements": [
         {
             "segmentIndex": 1,
             "endSegmentIndex": null,
-            "productCode": "AD_SEAT_1A_JT656",
-            "productName": "Seat",
-            "productType": 6,
+            "productCode": "AD_SCI_1PC_19KG",
+            "productName": "Standard Check-in Baggage",
+            "productType": 1,
             "canPurchaseWithTicket": 0,
             "canPurchasePostTicket": 1,
-            "price": 3.50,
+            "price": 85.51,
             "currency": "USD",
             "vendorPrice": null,
             "vendorCurrency": null,
-            "clientTechnicalServiceFee": 1.50,
-            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
-            "auxBaggageElement": null,
+            "clientTechnicalServiceFee": 0.00,
+            "clientTechnicalServiceFeeMode": "PER_PAX",
+            "auxBaggageElement": {
+                "piece": 1,
+                "weight": 19,
+                "isAllWeight": true,
+                "size": ""
+            },
             "offerId": null,
             "maxQty": 1,
-            "minQty": 1,
-            "categoryCode": "Seat",
-            "ancillaryCode": "AD_SEAT_1A_JT656",
-            "auxSeatElement": {
-                "rowNo": "1",
-                "seatNo": "1A",
-                "status": true,
-                "seatInfo": [
-                    "window",
-                    "exit"
-                ],
-                "passengerType": [
-                    "ADT",
-                    "CHD"
-                ]
-            }
+            "minQty": 0,
+            "categoryCode": "StandardCheckInBaggage",
+            "ancillaryCode": "AD_SCI_1PC_19KG",
+            "auxSeatElement": null,
+            "displayPrice": 617.88,
+            "displayCurrency": "CNY"
         },
         {
             "segmentIndex": 1,
             "endSegmentIndex": null,
-            "productCode": "AD_SEAT_2A_JT656",
-            "productName": "Seat",
-            "productType": 6,
+            "productCode": "AD_SCI_2PC_38KG",
+            "productName": "Standard Check-in Baggage",
+            "productType": 1,
             "canPurchaseWithTicket": 0,
             "canPurchasePostTicket": 1,
-            "price": 62.45,
+            "price": 171.01,
             "currency": "USD",
             "vendorPrice": null,
             "vendorCurrency": null,
-            "clientTechnicalServiceFee": 1.50,
-            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
-            "auxBaggageElement": null,
+            "clientTechnicalServiceFee": 0.00,
+            "clientTechnicalServiceFeeMode": "PER_PAX",
+            "auxBaggageElement": {
+                "piece": 1,
+                "weight": 38,
+                "isAllWeight": true,
+                "size": ""
+            },
             "offerId": null,
             "maxQty": 1,
-            "minQty": 1,
-            "categoryCode": "Seat",
-            "ancillaryCode": "AD_SEAT_2A_JT656",
-            "auxSeatElement": {
-                "rowNo": "2",
-                "seatNo": "2A",
-                "status": true,
-                "seatInfo": [
-                    "window",
-                    "exit"
-                ],
-                "passengerType": [
-                    "ADT",
-                    "CHD"
-                ]
-            }
+            "minQty": 0,
+            "categoryCode": "StandardCheckInBaggage",
+            "ancillaryCode": "AD_SCI_2PC_38KG",
+            "auxSeatElement": null,
+            "displayPrice": 1235.76,
+            "displayCurrency": "CNY"
         },
         {
             "segmentIndex": 1,
             "endSegmentIndex": null,
-            "productCode": "AD_SEAT_3A_JT656",
-            "productName": "Seat",
-            "productType": 6,
+            "productCode": "AD_SCI_3PC_57KG",
+            "productName": "Standard Check-in Baggage",
+            "productType": 1,
             "canPurchaseWithTicket": 0,
             "canPurchasePostTicket": 1,
-            "price": 54.29,
+            "price": 256.52,
             "currency": "USD",
             "vendorPrice": null,
             "vendorCurrency": null,
-            "clientTechnicalServiceFee": 1.50,
-            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
-            "auxBaggageElement": null,
+            "clientTechnicalServiceFee": 0.00,
+            "clientTechnicalServiceFeeMode": "PER_PAX",
+            "auxBaggageElement": {
+                "piece": 1,
+                "weight": 57,
+                "isAllWeight": true,
+                "size": ""
+            },
             "offerId": null,
             "maxQty": 1,
-            "minQty": 1,
-            "categoryCode": "Seat",
-            "ancillaryCode": "AD_SEAT_3A_JT656",
-            "auxSeatElement": {
-                "rowNo": "3",
-                "seatNo": "3A",
-                "status": true,
-                "seatInfo": [
-                    "window",
-                    "exit"
-                ],
-                "passengerType": [
-                    "ADT",
-                    "CHD"
-                ]
-            }
-        },
-        {
-            "segmentIndex": 1,
-            "endSegmentIndex": null,
-            "productCode": "AD_SEAT_4A_JT656",
-            "productName": "Seat",
-            "productType": 6,
-            "canPurchaseWithTicket": 0,
-            "canPurchasePostTicket": 1,
-            "price": 9.53,
-            "currency": "USD",
-            "vendorPrice": null,
-            "vendorCurrency": null,
-            "clientTechnicalServiceFee": 1.50,
-            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
-            "auxBaggageElement": null,
-            "offerId": null,
-            "maxQty": 1,
-            "minQty": 1,
-            "categoryCode": "Seat",
-            "ancillaryCode": "AD_SEAT_4A_JT656",
-            "auxSeatElement": {
-                "rowNo": "4",
-                "seatNo": "4A",
-                "status": true,
-                "seatInfo": [
-                    "window",
-                    "exit"
-                ],
-                "passengerType": [
-                    "ADT",
-                    "CHD"
-                ]
-            }
+            "minQty": 0,
+            "categoryCode": "StandardCheckInBaggage",
+            "ancillaryCode": "AD_SCI_3PC_57KG",
+            "auxSeatElement": null,
+            "displayPrice": 1853.63,
+            "displayCurrency": "CNY"
         },
         {
             "segmentIndex": 2,
             "endSegmentIndex": null,
-            "productCode": "AD_SEAT_1A_JT645",
-            "productName": "Seat",
-            "productType": 6,
+            "productCode": "AD_SCI_1PC_19KG",
+            "productName": "Standard Check-in Baggage",
+            "productType": 1,
             "canPurchaseWithTicket": 0,
             "canPurchasePostTicket": 1,
-            "price": 17.16,
+            "price": 85.51,
             "currency": "USD",
             "vendorPrice": null,
             "vendorCurrency": null,
-            "clientTechnicalServiceFee": 1.50,
-            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
-            "auxBaggageElement": null,
+            "clientTechnicalServiceFee": 0.00,
+            "clientTechnicalServiceFeeMode": "PER_PAX",
+            "auxBaggageElement": {
+                "piece": 1,
+                "weight": 19,
+                "isAllWeight": true,
+                "size": ""
+            },
             "offerId": null,
             "maxQty": 1,
-            "minQty": 1,
-            "categoryCode": "Seat",
-            "ancillaryCode": "AD_SEAT_1A_JT645",
-            "auxSeatElement": {
-                "rowNo": "1",
-                "seatNo": "1A",
-                "status": true,
-                "seatInfo": [
-                    "window",
-                    "exit"
-                ],
-                "passengerType": [
-                    "ADT",
-                    "CHD"
-                ]
-            }
+            "minQty": 0,
+            "categoryCode": "StandardCheckInBaggage",
+            "ancillaryCode": "AD_SCI_1PC_19KG",
+            "auxSeatElement": null,
+            "displayPrice": 617.88,
+            "displayCurrency": "CNY"
         },
         {
             "segmentIndex": 2,
             "endSegmentIndex": null,
-            "productCode": "AD_SEAT_2A_JT645",
-            "productName": "Seat",
-            "productType": 6,
+            "productCode": "AD_SCI_2PC_38KG",
+            "productName": "Standard Check-in Baggage",
+            "productType": 1,
             "canPurchaseWithTicket": 0,
             "canPurchasePostTicket": 1,
-            "price": 3.38,
+            "price": 171.01,
             "currency": "USD",
             "vendorPrice": null,
             "vendorCurrency": null,
-            "clientTechnicalServiceFee": 1.50,
-            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
-            "auxBaggageElement": null,
+            "clientTechnicalServiceFee": 0.00,
+            "clientTechnicalServiceFeeMode": "PER_PAX",
+            "auxBaggageElement": {
+                "piece": 1,
+                "weight": 38,
+                "isAllWeight": true,
+                "size": ""
+            },
             "offerId": null,
             "maxQty": 1,
-            "minQty": 1,
-            "categoryCode": "Seat",
-            "ancillaryCode": "AD_SEAT_2A_JT645",
-            "auxSeatElement": {
-                "rowNo": "2",
-                "seatNo": "2A",
-                "status": true,
-                "seatInfo": [
-                    "window",
-                    "exit"
-                ],
-                "passengerType": [
-                    "ADT",
-                    "CHD"
-                ]
-            }
+            "minQty": 0,
+            "categoryCode": "StandardCheckInBaggage",
+            "ancillaryCode": "AD_SCI_2PC_38KG",
+            "auxSeatElement": null,
+            "displayPrice": 1235.76,
+            "displayCurrency": "CNY"
         },
         {
             "segmentIndex": 2,
             "endSegmentIndex": null,
-            "productCode": "AD_SEAT_3A_JT645",
-            "productName": "Seat",
-            "productType": 6,
+            "productCode": "AD_SCI_3PC_57KG",
+            "productName": "Standard Check-in Baggage",
+            "productType": 1,
             "canPurchaseWithTicket": 0,
             "canPurchasePostTicket": 1,
-            "price": 19.64,
+            "price": 256.52,
             "currency": "USD",
             "vendorPrice": null,
             "vendorCurrency": null,
-            "clientTechnicalServiceFee": 1.50,
-            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
-            "auxBaggageElement": null,
+            "clientTechnicalServiceFee": 0.00,
+            "clientTechnicalServiceFeeMode": "PER_PAX",
+            "auxBaggageElement": {
+                "piece": 1,
+                "weight": 57,
+                "isAllWeight": true,
+                "size": ""
+            },
             "offerId": null,
             "maxQty": 1,
-            "minQty": 1,
-            "categoryCode": "Seat",
-            "ancillaryCode": "AD_SEAT_3A_JT645",
-            "auxSeatElement": {
-                "rowNo": "3",
-                "seatNo": "3A",
-                "status": true,
-                "seatInfo": [
-                    "window",
-                    "exit"
-                ],
-                "passengerType": [
-                    "ADT",
-                    "CHD"
-                ]
-            }
-        },
-        {
-            "segmentIndex": 2,
-            "endSegmentIndex": null,
-            "productCode": "AD_SEAT_4A_JT645",
-            "productName": "Seat",
-            "productType": 6,
-            "canPurchaseWithTicket": 0,
-            "canPurchasePostTicket": 1,
-            "price": 7.28,
-            "currency": "USD",
-            "vendorPrice": null,
-            "vendorCurrency": null,
-            "clientTechnicalServiceFee": 1.50,
-            "clientTechnicalServiceFeeMode": "PER_SEGMENT",
-            "auxBaggageElement": null,
-            "offerId": null,
-            "maxQty": 1,
-            "minQty": 1,
-            "categoryCode": "Seat",
-            "ancillaryCode": "AD_SEAT_4A_JT645",
-            "auxSeatElement": {
-                "rowNo": "4",
-                "seatNo": "4A",
-                "status": true,
-                "seatInfo": [
-                    "window",
-                    "exit"
-                ],
-                "passengerType": [
-                    "ADT",
-                    "CHD"
-                ]
-            }
+            "minQty": 0,
+            "categoryCode": "StandardCheckInBaggage",
+            "ancillaryCode": "AD_SCI_3PC_57KG",
+            "auxSeatElement": null,
+            "displayPrice": 1853.63,
+            "displayCurrency": "CNY"
         }
     ]
 }
