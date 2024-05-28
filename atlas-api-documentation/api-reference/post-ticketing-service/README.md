@@ -1,7 +1,7 @@
 # Post Ticketing Service
 
 {% hint style="info" %}
-This set of functions are to support the completion of the post ticketing services for the orders.
+This set of functions is to support the completion of the post ticketing services for the orders.
 {% endhint %}
 
 - [Search Ancillary](offer-ancillary-list.md)
