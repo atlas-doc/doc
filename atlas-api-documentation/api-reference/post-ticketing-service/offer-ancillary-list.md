@@ -8,7 +8,7 @@ The order should be ticketed and the departure date should be in the future.
 ### Endpoint {% debug uid="searchAncillary_1.0" %}{% enddebug %}
 
 
-[https://sandbox.atriptech.com/postbookingancillarysearch.do](https://sandbox.atriptech.com/postbookingancillarysearch.do)
+[https://sandbox.atriptech.com/postBookingAncillarySearch.do](https://sandbox.atriptech.com/postBookingAncillarySearch.do)
 
 {% hint style="info" %}
 Please note the below "Rules & Restrictions" while initiating a post-ticketing transaction.
