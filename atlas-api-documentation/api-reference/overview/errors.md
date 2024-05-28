@@ -74,11 +74,11 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">305</mark> | Invalid routing                            | When generating an order, the system found that the flight was no longer sold for various reasons, such as 1) L2B 2) The system has identified that there may be a risk of the flight being sold out 3) The airline's sales have been closed | Conduct the search again and rebook. |
 | <mark style="color:blue;">306</mark> | Cabin changed                              | Booking class changed. | Conduct the search again. |
 | <mark style="color:blue;">307</mark> | Illegal booking request parameters:        | One request parameter has a problem. Please check the message. | Check the error message. Correct the same and resubmit the booking. |
-|                                      | passengers->name                           |
-|                                      | passengers->passengerType                  |
-|                                      | passengers->birthday                       |
-|                                      | passengers->gender                         |
-|                                      | passengers->cardExpired                    |
+|                                      | passengers->name                           |  |  |
+|                                      | passengers->passengerType                  |  |  |
+|                                      | passengers->birthday                       |  |  |
+|                                      | passengers->gender                         |  |  |
+|                                      | passengers->cardExpired                    |  |  |
 | <mark style="color:blue;">308</mark> | Price changed                              |   | Regenerate booking or create an entirely new booking. |
 | <mark style="color:blue;">309</mark> | Ancillary not found                        | Incorrect ancillary product code has been entered. | Check and enter the correct ancillary product code. |
 | <mark style="color:blue;">310</mark> | Infant not allowed                         |  | Create a new booking without infant passenger type. The infant passenger can be added “offline” via the airline website. |
@@ -120,11 +120,11 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">604</mark> | Payment declined by airline                | VCC not accepted by the airline. | Try a different card for payment. |
 | <mark style="color:blue;">605</mark> | Incorrect passenger information            | The information in the "passengers" array is incorrect. | Check the passenger details and resubmit after correction. |  
 | <mark style="color:blue;">606</mark> | Inconsistent flight information            | Between search and book, the airline made a schedule change for the same flight number. | Start from search again. |
-| <mark style="color:blue;">607</mark> | Fare not available                         | 
+| <mark style="color:blue;">607</mark> | Fare not available                         |  | Start from search again. |
 | <mark style="color:blue;">608</mark> | Duplicate booking                          |  | Check if a booking with the same passenger details and flight numbers exists. After confirming, ignore this booking.|
 | <mark style="color:blue;">609</mark> | Contact email is blocked by airline        |  Airline has blocked your email id as per their policy. | Create a new booking with a different email id OR provide authority to Atlas to use Atlas’ email id. Please refer to “Atlas API Order” FAQs for further details. |
 | <mark style="color:blue;">610</mark> | Error happened during payment with airline |  |  |
-| <mark style="color:blue;">614</mark> | Wrong age | |  |
+| <mark style="color:blue;">614</mark> | Wrong age | The age of the child passenger is not correct. | Check the age and resubmit the booking. |
 | <mark style="color:blue;">615</mark> | Payment completed but failed to get the PNR number from the airline | Sometimes for the VCC payment, the airline fails to respond and hence the PNR is not received. In such a scenario, Atlas will deal with the airline manually and get the PNR and add it to the booking. |  |
 | <mark style="color:blue;">616</mark> | 3DS Authetication |  The card used requires a 3DS authentication. Atlas does not support this feature at the moment. | Use a different card which does not have 3DS authentication OR pay via deposit mode of payment. |
 | <mark style="color:blue;">617</mark> | Insufficient balance |  The deposit balance is below the minimum threshold. | Check your balance and top-up on a priority. |
@@ -145,6 +145,6 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">804</mark> |  The segments of the same PNR needs to be submitted together  |   | Check how many segments exist for that PNR and resubmit after adding all the segments. |
 | <mark style="color:blue;">8041</mark> |  Segment does not exist                      |   One of the segments in the request does not exist. | Check the segments and only provide the segments for that refund request.| 
 | <mark style="color:blue;">805</mark> |  RefundOfferId has expired                        |   The “refundOfferId” has expired. | Send a new refund request to get the latest “refundOfferId”. |
-| <mark style="color:blue;">806</mark> |  Please submit Self Refund                          |   |  |
+| <mark style="color:blue;">806</mark> |  Please submit Self Refund                          | Atlas does not support refund for this airline.  | Initiate the refund process with the airline. |
 | <mark style="color:blue;">807</mark> |  Passenger does not exist                   |   | Check the passenger name and correct the same, if required. |
-| <mark style="color:blue;">808</mark> |  Non refundable                 |  The order is non-refundable. |  |
+| <mark style="color:blue;">808</mark> |  Non refundable                 |  The order is non-refundable. |  | |
