@@ -4,7 +4,7 @@
 
 The "postbookingancillarysearch.do" function should be called prior to this one.
 
-Procedure:
+#### Procedure:
 
 1. Copy the Session ID into the request body.
 
@@ -12,7 +12,7 @@ Procedure:
 
 ### Endpoint {% debug uid="orderAncillary_1.0" %}{% enddebug %}
 
-[https://sandbox.atriptech.com/secondAdditionOrder.do](https://sandbox.atriptech.com/secondAdditionOrder.do)
+[https://sandbox.atriptech.com/postbookingancillaryorder.do](https://sandbox.atriptech.com/postbookingancillaryorder.do)
 
 ## Request
 
@@ -20,7 +20,7 @@ Procedure:
 {% tab title="Schema" %}
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Order number. It is an order of the original ticket.
+    Order number. It is the original order number.
 
 *   **ancillaryCategory **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
@@ -28,7 +28,7 @@ Procedure:
 
 *   **sessionId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Identifier of the searched ancillary, received from the response.
+    Identifier of the searched ancillary, received from the ancillary search response.
     
 *   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:green;">**Required**</mark>
      
@@ -94,7 +94,7 @@ Procedure:
     
 *   **sessionId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    Identifier of the revalidation, got from search ancillary response.
+    Identifier of the revalidation, received from search ancillary response.
 *   **orderNo **<mark style="color:blue;">**string**</mark>
 
     Order number of the added ancillary.
@@ -181,9 +181,8 @@ Procedure:
           * [**AncillaryElement**](add-ancillaries.md#undefined)
             *   **productCode **<mark style="color:blue;">**string**</mark>
 
-                Ancillary product code;
-
-                Received from ancillary search response.
+                Ancillary product code received from ancillary search response.
+                
             *   **segmentIndex **<mark style="color:blue;">**int**</mark>
 
                 Segment sequence
