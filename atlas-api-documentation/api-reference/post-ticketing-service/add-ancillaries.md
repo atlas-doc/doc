@@ -2,13 +2,13 @@
 
 ### Dependency
 
-The "postbookingancillarysearch.do" function should be called prior to this one.
+The "postBookingAncillarySearch.do" function should be called prior to this one.
 
 #### Procedure:
 
 1. Copy the Session ID into the request body.
 
-2. Type the passenger information and "product code" selected from the response in "postbookingancillarysearch.do".
+2. Type the passenger information and "product code" selected from the response in "postBookingAncillarySearch.do".
 
 ### Endpoint {% debug uid="orderAncillary_1.0" %}{% enddebug %}
 
@@ -57,18 +57,22 @@ The "postbookingancillarysearch.do" function should be called prior to this one.
 {% tab title="Samples" %}
 ```json
 {
-"cid": "xxxxxxxxxx",
-"ticketOrderNo": "TESTM20240520171341468",
-"ancillaryCategory": "BAGGAGE",
-"sessionId": "cde38a72-d7fa-4e5b-9ba5-08b6929143c8",
-"passengers": [{
-    "name": "TEST/ONE",
-    "passengerType": 0,
-    "ancillaries": [{
-        "productCode": "AD_SCI_1PC_19KG",
-        "segmentIndex": 1
-                   }]
-               }]
+    "cid": "hpbrm55935",
+    "ticketOrderNo": "TESTA20240528125154757",
+    "ancillaryCategory": "BAGGAGE",
+    "sessionId": "245f967f-24ac-4a8b-a2fa-df2b0a2bc8d6",
+    "passengers": [
+        {
+            "name": "FISRT/FISRT",
+            "passengerType": 0,
+            "ancillaries": [
+                {
+                    "productCode": "AD_SCI_1PC_28KG",
+                    "segmentIndex": 1
+                }
+            ]
+        }
+    ]
 }
 ```
 {% endtab %}
@@ -223,12 +227,8 @@ The "postbookingancillarysearch.do" function should be called prior to this one.
 
            Maximum size for ancillary baggage
 
-
-\`\`
 {% endtab %}
-{% endtabs %}
 
-{% tabs %}
 {% tab title="Samples" %}
 ```json
 {
