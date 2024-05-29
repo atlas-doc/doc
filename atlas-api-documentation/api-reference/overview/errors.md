@@ -2,7 +2,7 @@
 
 Atlas uses the following **Enum** to store the **error codes** and corresponding **error messages**.
 
-#### General error codes
+#### General Error Codes
 | Code | Description                    | Explanation                    | Next Steps                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">-1</mark> | Common error     |  | Atlas will investigate and add the relevant error code. |
@@ -12,7 +12,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">9999</mark> | System error                              |  This is unexpected error. | Atlas will investigate and add the relevant error code. |
 
 
-#### Search error codes
+#### Search Error Codes
 | Code | Description                    | Explanation                    | Next Steps                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">100</mark> | Missing required request data     | Missing mandatory parameters. | Check the mandatory parameters. |
@@ -43,7 +43,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">123</mark> |  Too many requests but too few paid orders                     |  The service has been blocked as the search requests are too many and the paid orders are very less. | Ony search the required city pairs. |
 
 
-#### Verify error codes
+#### Verify Error Codes
 
 | Code | Description                    | Explanation                    | Next Steps                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
@@ -62,7 +62,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">299</mark> | Verify failed | This is an error for which Atlas needs to take action. In some uncontrollable situations, such as network issues, upgrades, and restarts, 299 errors may occur. It is possible that the airline is not available or there are challenges at Atlas' end. Atlas needs to handle these errors internally. | Retry verification. If you get the same error, then start from search. If the error still persists, escalate to Atlas. |
 
 
-#### Order error codes
+#### Order Error Codes
 
 | Code | Description                    | Explanation                    | Next Steps                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
@@ -93,7 +93,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                         | Incorrect phone number format. | Check the phone number format and rectify the same.
 
 
-#### Payment  error codes
+#### Payment Error Codes
 | Code | Description                    | Explanation                    | Next Steps                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">400</mark> | Illegal request param                               | The request parameters are illegal, and the error scenarios include 1) Invalid VCC validity period 2) Lack of VCC cardholder information | Regenerate the existing order or create a new booking and update the VCC details. |
@@ -110,7 +110,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">411</mark> | Generic payment error          | The error happened when we checked your account. For example, “not enough balance”. | Check the balance or as per the message received in the error. |
 
 
-#### Ticket error codes
+#### Ticket Error Codes
 
 | Code | Description                    | Explanation                    | Next Steps                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
@@ -130,13 +130,13 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">617</mark> | Insufficient balance |  The deposit balance is below the minimum threshold. | Check your balance and top-up on a priority. |
 
 
-#### Query order error codes
+#### Query Order Error Codes
 | Code | Description                    | Explanation                    | Next Steps                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">800</mark> | Order does not exist                           | The relevant order does not exist. | Please re-check the order number and retry. |
 
 
-#### Refund error codes
+#### Refund Error Codes
 | Code | Description                    | Explanation                    | Next Steps                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">801</mark> | Order does not exist                           |  Incorrect order number has been entered. | Check the order number and enter the correct one. |
@@ -148,3 +148,23 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">806</mark> |  Please submit Self Refund                          | Atlas does not support refund for this airline.  | Initiate the refund process with the airline. |
 | <mark style="color:blue;">807</mark> |  Passenger does not exist                   |   | Check the passenger name and correct the same, if required. |
 | <mark style="color:blue;">808</mark> |  Non refundable                 |  The order is non-refundable. |  | |
+
+
+#### Post-booking Ancillary Search Error Codes
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">117</mark> | Baggage is not allowed for this order as it is not in the ticketed status           |  The ticket has still not been issued. | Wait for the status to changhe to "ticketed" and then search for ancillary.|
+| <mark style="color:blue;">118</mark> | Atlas currently does not support seat or baggage for this airline         |   | Check with the airline for ancillary baggage or open a Service Request with Atlas for the same.|
+| <mark style="color:blue;">119</mark> | Baggage or seat selection is not supported for orders with infants         |  There is an infant passenger in the booking. | Book ancillary baggage directly with the airline or open a Service Request with Atlas for the same|
+| <mark style="color:blue;">120</mark> | Baggage or seat selection for the flight has been closed        |  The airline no longer accepts the addition for ancillary for that flight. | Check with the airline or open a Service Request with Atlas for the same.|
+
+
+#### Post-booking Ancillary Order Error Codes
+| Code | Description                    | Explanation                    | Next Steps                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">501</mark> | Add purchase not allowed       |  Ancillary addition is not allowed for this order. | Check with the airline or open a Service Request with Atlas for the same.|
+| <mark style="color:blue;">502</mark> | The price has increased, and the order creation has failed. Please perform a new search.      |  There is a price change from the time the ancillary order search was conducted. | Search ancillary order again.|
+| <mark style="color:blue;">503</mark> | Each passenger can only select one baggage per segment    |  More than 1 product code has been attached for a passenger | Check the product code and remove the unwanted one.|
+| <mark style="color:blue;">504</mark> | Additional baggage not allowed. Ancillary baggage already exists in the original order |  Atlas only allows the attachment of ancillary baggage only once | Book ancillary baggage directly with the airline or open a Service Request with Atlas for the same |
+| <mark style="color:blue;">505</mark> | Additional baggage not allowed. Baggage already booked as post-ticket ancillary. |  Atlas only allows the attachment of ancillary baggage only once | Book ancillary baggage directly with the airline or open a Service Request with Atlas for the same |
+| <mark style="color:blue;">506</mark> | Seat selection is not supported for orders with infants |  There is an infant passenger in the booking. | Book ancillary baggage or seat directly with the airline or open a Service Request with Atlas for the same|
