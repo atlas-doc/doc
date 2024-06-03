@@ -3,7 +3,7 @@
 Atlas uses the following **Enum** to store the **error codes** and corresponding **error messages**.
 
 #### General Error Codes
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">-1</mark> | Common error     |  | Atlas will investigate and add the relevant error code. |
 | <mark style="color:blue;">900</mark> | Unauthorized access | Incorrect credentials Or the account status is incorrect Or try to access other customer's data. | Check credentials. If the error still persists, contact your account manager. |
@@ -13,7 +13,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 
 #### Search Error Codes
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">100</mark> | Missing required request data     | Missing mandatory parameters. | Check the mandatory parameters. |
 | <mark style="color:blue;">101</mark> | Illegal request data                         | Check the format of request. | The format should be Json. |
@@ -45,7 +45,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 #### Verify Error Codes
 
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">200</mark> | Illegal routing identifier                               |The "routingIdentifier" tag's information does not match the routing identifier received in the search response. | Check the routing identifier and resend the verification request with the correct “routingIdentifier”. |
 | <mark style="color:blue;">201</mark> | Invalid routing                           | The airline has flights and quotations, but Atlas has closed sales for some reasons. The reasons can be 1) The sales were manually closed 2) The system has detected a risk of sold out 3) Prohibitions on nearby flights. | Try booking after some time. |
@@ -64,7 +64,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 #### Order Error Codes
 
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">300</mark> | Invalid session information                | The "sessionID" is not the right one. | Check the session ID and enter the correct one. 
 | <mark style="color:blue;">301</mark> | Session does not exist or timed out        | The "sessionID" has a validity of 2 hrs. If the “sessionID” is used after this time period, then this error is displayed | Check the session ID and enter the correct one. If the timeframe is over 2 hrs, then start from the verify stage (if less than 6 hrs. of verification response) |
@@ -94,7 +94,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 
 #### Payment Error Codes
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">400</mark> | Illegal request param                               | The request parameters are illegal, and the error scenarios include 1) Invalid VCC validity period 2) Lack of VCC cardholder information | Regenerate the existing order or create a new booking and update the VCC details. |
 | <mark style="color:blue;">401</mark> | Time out of payment                          | Payment for the booking was initiated later than the payment deadline. The default payment deadline is 30 minutes after creating the order. | Regenerate the existing order or create a new booking. |
@@ -112,7 +112,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 #### Ticket Error Codes
 
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">601</mark> | Price change                               |  |  |
 | <mark style="color:blue;">602</mark> | Flight not found                           | The flight is no longer available on the airlines platform. | Create a new booking. |
@@ -131,13 +131,13 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 
 #### Query Order Error Codes
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">800</mark> | Order does not exist                           | The relevant order does not exist. | Please re-check the order number and retry. |
 
 
 #### Refund Error Codes
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                    |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">801</mark> | Order does not exist                           |  Incorrect order number has been entered. | Check the order number and enter the correct one. |
 | <mark style="color:blue;">802</mark> |  Children cannot travel alone     |   Only ADT pax cannot be refunded. The CHD pax should also be refunded together. | Request refund for the full order including child passenger. |
@@ -151,7 +151,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 
 #### Post-booking Ancillary Search Error Codes
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">117</mark> | Baggage is not allowed for this order as it is not in the ticketed status           |  The ticket has still not been issued. | Wait for the status to changhe to "ticketed" and then search for ancillary.|
 | <mark style="color:blue;">118</mark> | Atlas currently does not support seat or baggage for this airline         |   | Check with the airline for ancillary baggage or open a Service Request with Atlas for the same.|
@@ -160,7 +160,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 
 #### Post-booking Ancillary Order Error Codes
-| Code | Description                    | Explanation                    | Next Steps                     |
+| Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">501</mark> | Add purchase not allowed       |  Ancillary addition is not allowed for this order. | Check with the airline or open a Service Request with Atlas for the same.|
 | <mark style="color:blue;">502</mark> | The price has increased, and the order creation has failed. Please perform a new search.      |  There is a price change from the time the ancillary order search was conducted. | Search ancillary order again.|
