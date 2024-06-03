@@ -13,13 +13,14 @@ The order should be ticketed and the departure date should be in the future.
 {% hint style="info" %}
 Please note the below "Rules & Restrictions" while initiating a post-ticketing transaction.
 
-1. Check-in baggage and Carry-on baggage can be added to an order either in the booking flow or the post-booking flow. This can be only once throughout the whole flow. This rule aims to simplify the baggage booking flow for customers by sending the query only 1 time to book multiple baggage.
+1. **Single Booking Limit:** Check-in baggage and Carry-on baggage can be added to an order either in the booking flow or the post-booking flow. This can be done only once throughout the whole flow. This rule aims to simplify the baggage booking flow for customers by sending the query only 1 time to book multiple baggage.
 
-2. "Product code" contains various baggage offerings in aspects of baggage pieces and weights for each airline.
+2. **Product Code:** "Product code" contains various baggage offerings in aspects of baggage pieces and weights for each airline.
 
-3. Baggage ancillary is not allowed to be booked for infant passenger.
+3. **Restrictions for Infants:** Baggage ancillary is not allowed to be booked for infant passenger.
 
-4. It is not allowed to add the same type of post-booking baggage to a ticketed order the second time unless the first purchase fails in payment. Please refer to the below scenarios:
+4. ** Post-Booking Baggage Additions:**
+   It is not allowed to add the same type of post-booking baggage to a ticketed order the second time unless the first purchase fails in payment. Please refer to the below scenarios:
 
 	a. When the post-booking order is in "ticket-in-process" and "ticketed" status, it's not allowed to order another one. If any query is called, API will respond with an error message.
 
@@ -27,14 +28,16 @@ Please note the below "Rules & Restrictions" while initiating a post-ticketing t
 
 	c. When the post-booking order is in "unpaid" status, the customer can create another order. However, if one of the orders completes the payment and moves to "ticketing-in-process" status, the other orders will stop processing the payment.
 
-5. In case the air ticket order already contains free baggage, it’s subject to airline’s ancillary policy whether additional baggage is allowed to be purchase either at the booking flow or the post-booking flow.
+5. **Existing Baggage Policies:** In case the air ticket order already contains free baggage, it’s subject to airline’s ancillary policy whether additional baggage is allowed to be purchase either at the booking flow or the post-booking flow.
 
-6. Same “product code” for baggage is mandatory to be added to each segment in connecting flights. If the "product code" is different for each of the segment (in the same direction)  or not added for all the sectors, the API will respond with an error message.
+6. **Consistent Product Codes in Connecting Flights:** Same “product code” for baggage is mandatory to be added to each segment in connecting flights. If the "product code" is different for each of the segment (in the same direction)  or not added for all the sectors, the API will respond with an error message.
 
-7. Rule No.6 doesn't work for round trip flights. This means that the customer can purchase baggage only for one of the directions (either outbound or inbound) in round trip.
+7. **Round-Trip Baggage Rule:** Rule No.6 doesn't work for round trip flights. This means that the customer can purchase baggage only for one of the directions (either outbound or inbound) in round trip.
 
-8. The details of only the passenger for whom the ancillary needs to be added must be sent in the API RQ.
+8. **API Request Information:** The details of only the passenger for whom the ancillary needs to be added must be sent in the API RQ.
 {% endhint %}
+
+**For "Order" status, please refer to the the response of the "queryOrderDetails.do" API.**
 
 ## Request
 
