@@ -17,7 +17,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">100</mark> | Missing required request data     | Missing mandatory parameters. | Check the mandatory parameters. |
 | <mark style="color:blue;">101</mark> | Illegal request data                         | Check the format of request. | The format should be Json. |
-| <mark style="color:blue;">102</mark> | Illegal request param: {0}                           |   |  |
+| <mark style="color:blue;">102</mark> | Illegal request param: {0}                           | Please check the messages below.  |  |
 |  | The adult count should not be less than 1 | The adult count is "0". | Add an adult passenger type. |   
 |  | Allow up to 9 passengers | The total number of passengers are more than 9. | Reduce the total number of passengers to a maximum of 9. | 
 |  | Unknown city code | The city code is incorrect. | Check and correct the city code. | 
@@ -74,11 +74,11 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">305</mark> | Invalid routing                            | When generating an order, the system found that the flight was no longer sold for various reasons, such as 1) L2B 2) The system has identified that there may be a risk of the flight being sold out 3) The airline's sales have been closed | Conduct the search again and rebook. |
 | <mark style="color:blue;">306</mark> | Cabin changed                              | Booking class changed. | Conduct the search again. |
 | <mark style="color:blue;">307</mark> | Illegal booking request parameters:        | One request parameter has a problem. Please check the message. | Check the error message. Correct the same and resubmit the booking. |
-|                                      | passengers->name                           |  |  |
-|                                      | passengers->passengerType                  |  |  |
-|                                      | passengers->birthday                       |  |  |
-|                                      | passengers->gender                         |  |  |
-|                                      | passengers->cardExpired                    |  |  |
+|                                      | passengers->name                           | The passenger name seems incorrect. | Check the passenger name, correct it and resubmit the booking. |
+|                                      | passengers->passengerType                  | The passenger type is incorrect. | Check the passenger name, correct it and resubmit the booking. |
+|                                      | passengers->birthday                       | The date of birth is in incorrect format or missing. | Correct the format and resubmit the booking. |
+|                                      | passengers->gender                         | The gender is incorrect or missing. | Correct or add the information and resubmit the booking. |
+|                                      | passengers->cardExpired                    | The identity card expiry date format is incorrect or missing. | Correct or add the information and resubmit the booking. |
 | <mark style="color:blue;">308</mark> | Price changed                              |   | Regenerate booking or create an entirely new booking. |
 | <mark style="color:blue;">309</mark> | Ancillary not found                        | Incorrect ancillary product code has been entered. | Check and enter the correct ancillary product code. |
 | <mark style="color:blue;">310</mark> | Infant not allowed                         |  | Create a new booking without infant passenger type. The infant passenger can be added “offline” via the airline website. |
