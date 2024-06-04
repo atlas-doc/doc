@@ -13,7 +13,7 @@ The order should be ticketed and the departure date should be in the future.
 {% hint style="info" %}
 Please note the below "Rules & Restrictions" while initiating a post-ticketing transaction.
 
-1. **Single Booking Limit:** Check-in baggage and Carry-on baggage can be added to an order either in the booking flow or the post-booking flow. This can be done only once throughout the whole flow. This rule aims to simplify the baggage booking flow for customers by sending the query only 1 time to book multiple baggage.
+1. **Single Booking Limit:** Check-in baggage and Carry-on baggage can be added to the segment of passenger either in-booking or post-booking phase altogether or separately, but each type of baggage can only be added one time for the given segment throughout the whole flow. This rule aims to simplify the baggage booking flow for customers by sending the query only one time to book multiple baggages.
 
 2. **Product Code:** "Product code" contains various baggage offerings in aspects of baggage pieces and weights for each airline.
 
