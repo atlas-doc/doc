@@ -79,6 +79,8 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 |                                      | passengers->birthday                       | The date of birth is in incorrect format or missing. | Correct the format and resubmit the booking. |
 |                                      | passengers->gender                         | The gender is incorrect or missing. | Correct or add the information and resubmit the booking. |
 |                                      | passengers->cardExpired                    | The identity card expiry date format is incorrect or missing. | Correct or add the information and resubmit the booking. |
+|                                      | Additional baggage exceeds limit. Max allowed: 1 | The amount of ancillary baggage is more than the allowed limit. | Correct the baggage quantity and resubmit the booking. |
+|                                      | Ancillaries not equal to the number of segments(inbound) | The number of segments and ancillaries do not match. | Check the ancillaries and segments and resubmit the booking. |
 | <mark style="color:blue;">308</mark> | Price changed                              |   | Regenerate booking or create an entirely new booking. |
 | <mark style="color:blue;">309</mark> | Ancillary not found                        | Incorrect ancillary product code has been entered. | Check and enter the correct ancillary product code. |
 | <mark style="color:blue;">310</mark> | Infant not allowed                         |  | Create a new booking without infant passenger type. The infant passenger can be added “offline” via the airline website. |
