@@ -57,22 +57,18 @@ The "postBookingAncillarySearch.do" function should be called prior to this one.
 {% tab title="Samples" %}
 ```json
 {
-    "cid": "hpbrm55935",
-    "ticketOrderNo": "TESTA20240528125154757",
-    "ancillaryCategory": "BAGGAGE",
-    "sessionId": "245f967f-24ac-4a8b-a2fa-df2b0a2bc8d6",
-    "passengers": [
-        {
-            "name": "FISRT/FISRT",
-            "passengerType": 0,
-            "ancillaries": [
-                {
-                    "productCode": "AD_SCI_1PC_28KG",
-                    "segmentIndex": 1
-                }
-            ]
-        }
-    ]
+"cid": "xxxxxxxxxx",
+"ticketOrderNo": "TESTM20240520171341468",
+"ancillaryCategory": "BAGGAGE",
+"sessionId": "cde38a72-d7fa-4e5b-9ba5-08b6929143c8",
+"passengers": [{
+    "name": "TEST/ONE",
+    "passengerType": 0,
+    "ancillaries": [{
+        "productCode": "SCI_1PC_19KG",
+        "segmentIndex": 1
+                   }]
+               }]
 }
 ```
 {% endtab %}
@@ -232,61 +228,62 @@ The "postBookingAncillarySearch.do" function should be called prior to this one.
 {% tab title="Samples" %}
 ```json
 {
-    "sessionId": "e3593a39-78d4-4e60-a42e-c5c7902455d4",
-    "orderNo": "BISKL20230629164129749",
+    "sessionId": "cde38a72-d7fa-4e5b-9ba5-08b6929143c8",
+    "orderNo": "TESTB20240520180835748",
     "originalOrderNo": null,
-    "ticketOrderNo": "APXOS20230629164129749",
-    "totalPrice": 2.00,
-    "totalTransactionFee": 3.00,
+    "ticketOrderNo": "TESTM20240520171341468",
+    "totalPrice": 85.51,
+    "totalTransactionFee": 0,
     "currency": "USD",
     "vendorTotalPrice": null,
     "vendorCurrency": null,
-    "tktLimitTime": "2023-07-19 17:36:35",
-    "pnrCode": "YCGY3Y",
+    "tktLimitTime": "2024-05-20 18:24:35",
+    "pnrCode": null,
     "includeExtraBaggage": null,
     "paxTicketInfos": [
         {
-            "name": "ZHANG/SAN",
+            "name": "TEST/ONE",
             "passengerType": 0,
-            "birthday": "19960831",
-            "gender": "F",
-            "cardNum": "1231",
+            "birthday": "19900101",
+            "gender": "M",
+            "cardNum": "00000000",
             "cardType": "PP",
-            "cardIssuePlace": "CN",
-            "cardExpired": "2023",
-            "nationality": "GB",
+            "cardIssuePlace": "SG",
+            "cardExpired": "20301231",
+            "nationality": "SG",
             "ticketNos": [],
             "airlinePNRs": [],
             "contactEmails": [
-                "BISKL20230629164129749_1@ttjipiao.top"
+                "test@test.com"
             ],
             "contactPhones": [
-                null
+                "0001-87291810"
             ],
             "ancillaries": [
                 {
-                    "productCode": "AD_SEAT_35F_JT122",
+                    "productCode": "SCI_1PC_19KG",
                     "segmentIndex": 1,
+                    "buyMethod": "0",
                     "offerId": null,
-                    "ancillaryPrice": 1.00,
+                    "ancillaryPrice": 85.51,
                     "currency": "USD",
-                    "auxSeatElement": 
-                },
-                {
-                    "productCode": "AD_SEAT_31D_JT123",
-                    "segmentIndex": 2,
-                    "offerId": null,
-                    "ancillaryPrice": 1.00,
-                    "currency": "USD",
-                    "auxSeatElement": null
+                    "auxSeatElement": null,
+                    "auxBaggageElement": {
+                        "piece": 0,
+                        "weight": 0,
+                        "isAllWeight": true,
+                        "size": null
+                    }
                 }
             ]
         }
     ],
     "routing": null,
+    "duplicateOrders": null,
     "status": 0,
     "msg": null
 }
+
 ```
 {% endtab %}
 {% endtabs %}
