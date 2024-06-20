@@ -35,9 +35,9 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 *   **carrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     2 character IATA airline code.
-*   **isMainOrder **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:green;">**Required**</mark>
+*   **isCompletedOrder **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    If the order number is the "main" order then this needs to be "true" and if the order number is of the "ancillary" order, then this needs to be "false".
+    If it's true, it means the user wants to check all the order info (including air ticket and any post-booking ancillary attached). If it's false, it means the user wants to check the given order only. It could be the air ticket order in 1st transaction, or the post-booking ancillary order in 2nd transaction.
 *   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:orange;">**Optional**</mark>
 
     Passengers' information.
@@ -58,7 +58,7 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
     "orderNo": "TESTA20240620095525476",
     "airlinePNR": "S92309",
     "carrier": "G9",
-    "isMainOrder": "true",
+    "isCompletedOrder": "true",
     "passengers": [
         {
             "firstName": "ADAM",
