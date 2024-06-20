@@ -8,6 +8,20 @@
 
 [https://sandbox.atriptech.com/queryOrderDetails.do](https://sandbox.atriptech.com/queryOrderDetails.do)
 
+{% hint style="info" %}
+Please refer to the below information for the usage of the queryOrderDetails.do API.
+
+1. All the parameters can be used together, if required.
+
+2. “OrderNo” is “required” if “airlinePNR” and “carrier” cannot be provided upon calling the API. Inversely, “airlinePNR” and “carrier” are “required” if “OrderNo” cannot be provided.
+
+3. In case parameters in request don’t match (such as “orderNo”, “airlinePNR”, “carrier” and "passengers"), API response will show the error message "Parameters don't match, please check and retry".
+
+4. In case the parameters of “airlinePNR” and “carrier” cannot identify an unique order (e.g BC - PNR is made up with 4 number), customer needs to enter additional parameters such as "firstName" and "lastName" for identification. In such scenarios, API will respond with error msg ”Multi-orderNos are identified, please provide more parameters in the request, such as “firstName” and “lastName” under passengers’ element.”
+
+{% endhint %}
+
+
 ## Request
 
 {% tabs %}
@@ -15,12 +29,42 @@
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
+*   **airlinePNR **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    The record locator of the airline.
+*   **carrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    2 character IATA airline code.
+*   **isMainOrder **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    If the order number is the "main" order then this needs to be "true" and if the order number is of the "ancillary" order, then this needs to be "false".
+*   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:orange;">**Optional**</mark>
+
+    Passengers' information.
+
+* #### <mark style="color:blue;">**PassengerElement**</mark>
+*   **firstName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+  First name of the passenger.
+*   **lastName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+  Last name of the passenger.
+    
 {% endtab %}
 
 {% tab title="Samples" %}
 ```json
 {
-    "orderNo": "ZNMKU20220119160129691"
+    "orderNo": "TESTA20240620095525476",
+    "airlinePNR": "S92309",
+    "carrier": "G9",
+    "isMainOrder": "true",
+    "passengers": [
+        {
+            "firstName": "ADAM",
+            "lastName": "SMITH"
+        }
+    ]
 }             
 ```
 {% endtab %}
@@ -137,412 +181,389 @@
 {% tab title="Samples" %}
 ```
 {
-  "orderNo": "AUASC20240105124643947",
-  "pnrCode": "EROERL",
-  "orderStatus": "2",
-  "ticketStatus": "1",
-  "paxTicketInfos": [
-    {
-      "name": "PLAKHUTIN/PAVEL",
-      "passengerType": 0,
-      "birthday": "19830630",
-      "gender": "M",
-      "cardNum": "761223505",
-      "cardType": "PP",
-      "cardIssuePlace": "RU",
-      "cardExpired": "20290730",
-      "nationality": "RU",
-      "ticketNos": [
-        "AQTBLW"
-      ],
-      "airlinePNRs": [
-        "AQTBLW"
-      ],
-      "contactEmails": [
-        "booking@clickavia.ru"
-      ],
-      "contactPhones": [
-        "0007-4953747238"
-      ],
-      "ancillaries": [
+    "orderNo": "TESTA20240620095525476",
+    "orderList": [
         {
-          "productCode": "SCI_BAG_15KG",
-          "segmentIndex": 1,
-          "offerId": null,
-          "buyMethod": "0",
-          "ancillaryPrice": 13.18,
-          "currency": "USD",
-          "vendorPrice": 450,
-          "vendorCurrency": "THB"
-        }
-      ]
-    },
-    {
-      "name": "BOLSHAKOVA/ELENA",
-      "passengerType": 0,
-      "birthday": "19811223",
-      "gender": "F",
-      "cardNum": "764307091",
-      "cardType": "PP",
-      "cardIssuePlace": "RU",
-      "cardExpired": "20310409",
-      "nationality": "RU",
-      "ticketNos": [
-        "AQTBLW"
-      ],
-      "airlinePNRs": [
-        "AQTBLW"
-      ],
-      "contactEmails": [
-        "booking@clickavia.ru"
-      ],
-      "contactPhones": [
-        "0007-4953747238"
-      ],
-      "ancillaries": [
+            "orderNo": "TESTA20240620095525476",
+            "orderStatus": "2",
+            "ticketStatus": "1",
+            "totalPrice": 133.40,
+            "currency": "USD",
+            "tktLimitTime": "2024-06-20 11:15:30",
+            "vendorTotalPrice": 489.91,
+            "vendorTotalAncillaryPrice": 0.00,
+            "vendorCurrency": "AED",
+            "adultTotalFare": 133.40,
+            "childTotalFare": 133.40,
+            "infantTotalFare": 218.07,
+            "totalAncillaryPrice": 0.00,
+            "totalTransactionFee": 1.00,
+            "paymentFee": null,
+            "supportPaymentMethod": 3
+        },
         {
-          "productCode": "SCI_BAG_15KG",
-          "segmentIndex": 1,
-          "offerId": null,
-          "buyMethod": "0",
-          "ancillaryPrice": 13.18,
-          "currency": "USD",
-          "vendorPrice": 450,
-          "vendorCurrency": "THB"
+            "orderNo": "TESTB20240620100624142",
+            "orderStatus": "2",
+            "ticketStatus": "1",
+            "totalPrice": 81.42,
+            "currency": "USD",
+            "tktLimitTime": "2024-06-20 10:22:24",
+            "vendorTotalPrice": 299.00,
+            "vendorTotalAncillaryPrice": 299.00,
+            "vendorCurrency": "AED",
+            "adultTotalFare": 0.00,
+            "childTotalFare": null,
+            "infantTotalFare": null,
+            "totalAncillaryPrice": 81.42,
+            "totalTransactionFee": 0.00,
+            "paymentFee": null,
+            "supportPaymentMethod": 1
         }
-      ]
-    },
-    {
-      "name": "PLAKHUTIN/SERGEI",
-      "passengerType": 0,
-      "birthday": "20101020",
-      "gender": "M",
-      "cardNum": "766146418",
-      "cardType": "PP",
-      "cardIssuePlace": "RU",
-      "cardExpired": "20311210",
-      "nationality": "RU",
-      "ticketNos": [
-        "AQTBLW"
-      ],
-      "airlinePNRs": [
-        "AQTBLW"
-      ],
-      "contactEmails": [
-        "booking@clickavia.ru"
-      ],
-      "contactPhones": [
-        "0007-4953747238"
-      ],
-      "ancillaries": [
-        {
-          "productCode": "SCI_BAG_15KG",
-          "segmentIndex": 1,
-          "offerId": null,
-          "buyMethod": "0",
-          "ancillaryPrice": 13.18,
-          "currency": "USD",
-          "vendorPrice": 450,
-          "vendorCurrency": "THB"
-        }
-      ]
-    }
-  ],
-  "totalPrice": 232.77,
-  "currency": "USD",
-  "tktLimitTime": "2024-01-05 13:17:00",
-  "vendorTotalPrice": null,
-  "vendorTotalAncillaryPrice": null,
-  "vendorCurrency": null,
-  "adultTotalFare": 64.41,
-  "childTotalFare": 64.41,
-  "infantTotalFare": 0,
-  "totalAncillaryPrice": 39.54,
-  "totalTransactionFee": 4.5,
-  "paymentFee": null,
-  "supportPaymentMethod": 1,
-  "supportPaymentMethods": [
-    1,
-    5
-  ],
-  "paymentMethod": 1,
-  "routing": {
-    "fid": "VTzCwR8iVdfTROQQOFc2gaSUs8cvAhhAPlzSTLnQOpu3o0ig8TwDWg..",
-    "routingIdentifier": "MCxtl389GyrTSlnSN4jJXcsCtQweCS6KBTt9KkxsGo2Gmde2LeogQc0+mmXr60ifi2cmq5ZoD+875G7obwQf8wPELefpLcU2MCxtl389GyrTSlnSN4jJXcsCtQweCS6Kb+/fn97jQDRz/EhUHAhIrW8JIeYWuh/oa/RMHFGbBeoe/K8qmG98aeoG7eFOUM+mZGt2/3Sx+lLNPppl6+tIn4tnJquWaA/vO+Ru6G8EH/MhnTF2jV3NS+XT11EC/yfyX5nk43fqbjWhKrewARjdvs7Q1RfYtITfW3iItlLNNUhgd/U62DnWm1Zuj1kLywZ9b8II8Vbv7Vxb0Cf4lEcfCt+JHhhjzxyG",
-    "supportCreditTransPayment": "0",
-    "supportPaymentMethods": [
-      1,
-      5
     ],
+    "pnrCode": "S5GROX",
+    "orderStatus": null,
+    "ticketStatus": null,
+    "paxTicketInfos": [
+        {
+            "name": "Patil/Jitendra",
+            "passengerType": 0,
+            "birthday": "19591231",
+            "gender": "M",
+            "cardNum": "Z4885595",
+            "cardType": "PP",
+            "cardIssuePlace": "IN",
+            "cardExpired": "20280611",
+            "nationality": "IN",
+            "ticketNos": [
+                "S92309"
+            ],
+            "airlinePNRs": [
+                "S92309"
+            ],
+            "contactEmails": [
+                "jitendra_patil@persistent.com"
+            ],
+            "contactPhones": [
+                "0091-987654321234"
+            ],
+            "ancillaries": [
+                {
+                    "productCode": "SCI_1PC_20KG",
+                    "segmentIndex": 1,
+                    "offerId": null,
+                    "buyMethod": "0",
+                    "ancillaryPrice": 81.42,
+                    "currency": "USD",
+                    "vendorPrice": 299.00,
+                    "vendorCurrency": "AED"
+                }
+            ]
+        }
+    ],
+    "totalPrice": 214.82,
     "currency": "USD",
-    "adultPrice": 57.46,
-    "adultTax": 6.95,
-    "childPrice": 57.46,
-    "childTax": 6.95,
-    "infantPrice": 0,
-    "infantTax": 0,
-    "infantAllowed": false,
-    "transactionFeePerPax": 1.5,
-    "transactionFee": 1.5,
-    "transactionFeeMode": "PER_PAX",
-    "nationalityType": 0,
-    "nationality": "",
-    "suitAge": "",
-    "PaxType": "ADT",
-    "fromSegments": [
-      {
-        "segmentIndex": 1,
-        "carrier": "DD",
-        "flightNumber": "DD525",
-        "depAirport": "HKT",
-        "depTime": "202401111125",
-        "arrAirport": "DMK",
-        "arrTime": "202401111250",
-        "stopCities": "",
-        "duration": 85,
-        "codeShare": false,
-        "cabin": "V",
-        "cabinClass": 1,
-        "seatCount": 3,
-        "aircraftCode": "738",
-        "depTerminal": "",
-        "arrTerminal": "",
-        "operatingCarrier": "",
-        "operatingFlightnumber": "",
-        "fareFamily": "NOK LITE"
-      }
-    ],
-    "retSegments": [],
-    "combineIndexs": [],
-    "rule": {
-      "hasBaggage": 1,
-      "baggageElements": [
-        {
-          "segmentNo": 1,
-          "baggageType": "StandardCheckInBaggage",
-          "passengerType": 0,
-          "baggagePiece": 0,
-          "baggageWeight": 0,
-          "baggageSize": ""
+    "tktLimitTime": null,
+    "vendorTotalPrice": null,
+    "vendorTotalAncillaryPrice": null,
+    "vendorCurrency": null,
+    "adultTotalFare": null,
+    "childTotalFare": null,
+    "infantTotalFare": null,
+    "totalAncillaryPrice": null,
+    "totalTransactionFee": null,
+    "paymentFee": null,
+    "supportPaymentMethod": 0,
+    "supportPaymentMethods": null,
+    "paymentMethod": null,
+    "routing": {
+        "fid": "LSliV-lBOchjlN3KJUqQL_mPBN0nvNrpVjkHVeWN5WdoGwdIOLav3fUYSZPlO2FN",
+        "routingIdentifier": "aLLgQXmljm5IEm4F2B7GwEKQluoX4TVnd1SPa2qQU/Fv7YdQeP59K6Z7a19huCi/lx/9JT0nSkgkQQpugkuv0Mq0jSnTNCA4QFPYM6iGcHollB3xJSIuvYe9trgmfZ5UQs+EDbUemepQ+WprXAZ9CYGLBHekKRJMdAD+im9W2wY44inbr0j9pyQS4mYw/G1xm4SeFfcc97ETSL8R26VTfwa7fl3PT7lkHuq13N/34ZrlSRqSXcGePFziMZsYHmDK7S6re5/Hb3y13QAK7VcSLbntLalj5dk53kFJ3hu4dJlDX9AhoGS+EKXA6EH5RhaPeHwZbKI2jp4E0Wr/ntQb90HN1C6c7bv4NW8Jyn29SkVOlHDVsiAHtA==",
+        "supportCreditTransPayment": "1",
+        "currency": "USD",
+        "adultPrice": 4.96,
+        "adultTax": 128.44,
+        "childPrice": 4.96,
+        "childTax": 128.44,
+        "infantPrice": 218.07,
+        "infantTax": 0.00,
+        "infantAllowed": true,
+        "transactionFeePerPax": 1.00,
+        "transactionFee": 1.00,
+        "transactionFeeMode": "PER_PAX",
+        "nationalityType": 0,
+        "nationality": "",
+        "suitAge": "",
+        "PaxType": "ADT",
+        "fromSegments": [
+            {
+                "segmentIndex": 1,
+                "carrier": "G9",
+                "flightNumber": "G9147",
+                "depAirport": "SHJ",
+                "depTime": "202407201400",
+                "arrAirport": "JED",
+                "arrTime": "202407201550",
+                "stopCities": "",
+                "duration": 170,
+                "codeShare": false,
+                "cabin": "",
+                "cabinClass": 1,
+                "seatCount": 2,
+                "aircraftCode": "",
+                "depTerminal": "",
+                "arrTerminal": "",
+                "operatingCarrier": "G9",
+                "operatingFlightnumber": "",
+                "fareFamily": "lowest"
+            }
+        ],
+        "retSegments": [],
+        "combineIndexs": [],
+        "rule": {
+            "hasBaggage": 1,
+            "baggageElements": [
+                {
+                    "segmentNo": 1,
+                    "baggageType": "CabinBaggageOverheadLocker",
+                    "passengerType": 0,
+                    "baggagePiece": 1,
+                    "baggageWeight": 10,
+                    "baggageSize": null
+                }
+            ],
+            "refundRules": [
+                {
+                    "refundType": 0,
+                    "refundStatus": "T",
+                    "refundFee": 0.0,
+                    "currency": "AED",
+                    "refNoshow": "T",
+                    "refNoShowCondition": 0,
+                    "refNoshowFee": 0.0,
+                    "ruleDetailList": [
+                        {
+                            "ruleId": 31233,
+                            "status": "T",
+                            "startMinute": 525600,
+                            "endMinute": 4320,
+                            "amount": 0.0,
+                            "currency": "AED"
+                        },
+                        {
+                            "ruleId": 31235,
+                            "status": "T",
+                            "startMinute": 4320,
+                            "endMinute": 1440,
+                            "amount": 0.0,
+                            "currency": "AED"
+                        },
+                        {
+                            "ruleId": 31237,
+                            "status": "T",
+                            "startMinute": 1440,
+                            "endMinute": 0,
+                            "amount": 0.0,
+                            "currency": "AED"
+                        },
+                        {
+                            "ruleId": 31243,
+                            "status": "T",
+                            "startMinute": 0,
+                            "endMinute": -525600,
+                            "amount": 0.0,
+                            "currency": "AED"
+                        }
+                    ]
+                }
+            ],
+            "changesRules": [
+                {
+                    "changesType": 0,
+                    "changesStatus": "T",
+                    "changesFee": 0.0,
+                    "currency": "AED",
+                    "revNoshow": "T",
+                    "revNoShowCondition": 0,
+                    "revNoshowFee": 0.0,
+                    "ruleDetailList": [
+                        {
+                            "ruleId": 20046,
+                            "status": "H",
+                            "startMinute": 525600,
+                            "endMinute": 4320,
+                            "amount": 200.0,
+                            "currency": "AED"
+                        },
+                        {
+                            "ruleId": 20048,
+                            "status": "H",
+                            "startMinute": 4320,
+                            "endMinute": 1440,
+                            "amount": 200.0,
+                            "currency": "AED"
+                        },
+                        {
+                            "ruleId": 20050,
+                            "status": "T",
+                            "startMinute": 1440,
+                            "endMinute": 0,
+                            "amount": 0.0,
+                            "currency": "AED"
+                        },
+                        {
+                            "ruleId": 20056,
+                            "status": "T",
+                            "startMinute": 0,
+                            "endMinute": -525600,
+                            "amount": 0.0,
+                            "currency": "AED"
+                        }
+                    ]
+                }
+            ],
+            "serviceElements": [
+                {
+                    "hasFreeSeat": 0,
+                    "hasFreeMeal": 0
+                }
+            ]
         },
-        {
-          "segmentNo": 1,
-          "baggageType": "CabinBaggageOverheadLocker",
-          "passengerType": 0,
-          "baggagePiece": 1,
-          "baggageWeight": 7,
-          "baggageSize": "56*50*23cm"
-        }
-      ],
-      "refundRules": [
-        {
-          "refundType": 0,
-          "refundStatus": "T",
-          "refundFee": 0,
-          "currency": "USD",
-          "refNoshow": "T",
-          "refNoShowCondition": 0,
-          "refNoshowFee": 0,
-          "ruleDetailList": [],
-          "ruleList": []
-        }
-      ],
-      "changesRules": [
-        {
-          "changesType": 0,
-          "changesStatus": "T",
-          "changesFee": 0,
-          "currency": "USD",
-          "revNoshow": "T",
-          "revNoShowCondition": 0,
-          "revNoshowFee": 0,
-          "ruleList": [],
-          "ruleDetailList": []
-        }
-      ],
-      "serviceElements": [
-        {
-          "hasFreeSeat": 0,
-          "hasFreeMeal": 0
-        }
-      ]
+        "ancillaryProductElements": [
+            {
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_1PC_20KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 6.24,
+                "currency": "USD",
+                "vendorPrice": 22.91,
+                "vendorCurrency": "AED",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 1,
+                    "weight": 20,
+                    "isAllWeight": true,
+                    "size": null
+                },
+                "offerId": null,
+                "maxQty": 1,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_1PC_20KG",
+                "auxSeatElement": null,
+                "displayPrice": null,
+                "displayCurrency": null
+            },
+            {
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_2PC_30KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 11.31,
+                "currency": "USD",
+                "vendorPrice": 41.52,
+                "vendorCurrency": "AED",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 2,
+                    "weight": 30,
+                    "isAllWeight": true,
+                    "size": null
+                },
+                "offerId": null,
+                "maxQty": 1,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_2PC_30KG",
+                "auxSeatElement": null,
+                "displayPrice": null,
+                "displayCurrency": null
+            },
+            {
+                "segmentIndex": 1,
+                "endSegmentIndex": null,
+                "productCode": "SCI_2PC_40KG",
+                "productName": "StandardCheckInBaggage",
+                "productType": 1,
+                "canPurchaseWithTicket": 1,
+                "canPurchasePostTicket": 0,
+                "price": 28.02,
+                "currency": "USD",
+                "vendorPrice": 102.89,
+                "vendorCurrency": "AED",
+                "clientTechnicalServiceFee": 0,
+                "clientTechnicalServiceFeeMode": null,
+                "auxBaggageElement": {
+                    "piece": 2,
+                    "weight": 40,
+                    "isAllWeight": true,
+                    "size": null
+                },
+                "offerId": null,
+                "maxQty": 1,
+                "minQty": 1,
+                "categoryCode": "StandardCheckInBaggage",
+                "ancillaryCode": "SCI_2PC_40KG",
+                "auxSeatElement": null,
+                "displayPrice": null,
+                "displayCurrency": null
+            }
+        ],
+        "vendorFare": {
+            "vendorAdultPrice": 18.20,
+            "vendorAdultTax": 471.71,
+            "vendorChildPrice": 18.20,
+            "vendorChildTax": 471.71,
+            "vendorInfantPrice": 800.83,
+            "vendorInfantTax": 0.00,
+            "vendorCurrency": "AED"
+        },
+        "bundleOptions": [],
+        "links": null,
+        "separateBookings": false,
+        "refreshTime": null,
+        "displayFare": null
     },
-    "ancillaryProductElements": [
-      {
-        "segmentIndex": 1,
-        "endSegmentIndex": null,
-        "productCode": "SCI_BAG_15KG",
-        "productName": "StandardCheckInBaggage",
-        "productType": 1,
-        "canPurchaseWithTicket": 1,
-        "canPurchasePostTicket": 0,
-        "price": 13.18,
-        "currency": "USD",
-        "vendorPrice": 450,
-        "vendorCurrency": "THB",
-        "clientTechnicalServiceFee": 0,
-        "clientTechnicalServiceFeeMode": null,
-        "auxBaggageElement": {
-          "piece": 0,
-          "weight": 15,
-          "isAllWeight": true,
-          "size": ""
-        },
-        "offerId": null,
-        "maxQty": 1,
-        "minQty": 1,
-        "categoryCode": "StandardCheckInBaggage",
-        "ancillaryCode": "SCI_BAG_15KG",
-        "auxSeatElement": null
-      },
-      {
-        "segmentIndex": 1,
-        "endSegmentIndex": null,
-        "productCode": "SCI_BAG_20KG",
-        "productName": "StandardCheckInBaggage",
-        "productType": 1,
-        "canPurchaseWithTicket": 1,
-        "canPurchasePostTicket": 0,
-        "price": 14.65,
-        "currency": "USD",
-        "vendorPrice": 500,
-        "vendorCurrency": "THB",
-        "clientTechnicalServiceFee": 0,
-        "clientTechnicalServiceFeeMode": null,
-        "auxBaggageElement": {
-          "piece": 0,
-          "weight": 20,
-          "isAllWeight": true,
-          "size": ""
-        },
-        "offerId": null,
-        "maxQty": 1,
-        "minQty": 1,
-        "categoryCode": "StandardCheckInBaggage",
-        "ancillaryCode": "SCI_BAG_20KG",
-        "auxSeatElement": null
-      },
-      {
-        "segmentIndex": 1,
-        "endSegmentIndex": null,
-        "productCode": "SCI_BAG_25KG",
-        "productName": "StandardCheckInBaggage",
-        "productType": 1,
-        "canPurchaseWithTicket": 1,
-        "canPurchasePostTicket": 0,
-        "price": 18.46,
-        "currency": "USD",
-        "vendorPrice": 630,
-        "vendorCurrency": "THB",
-        "clientTechnicalServiceFee": 0,
-        "clientTechnicalServiceFeeMode": null,
-        "auxBaggageElement": {
-          "piece": 0,
-          "weight": 25,
-          "isAllWeight": true,
-          "size": ""
-        },
-        "offerId": null,
-        "maxQty": 1,
-        "minQty": 1,
-        "categoryCode": "StandardCheckInBaggage",
-        "ancillaryCode": "SCI_BAG_25KG",
-        "auxSeatElement": null
-      },
-      {
-        "segmentIndex": 1,
-        "endSegmentIndex": null,
-        "productCode": "SCI_BAG_30KG",
-        "productName": "StandardCheckInBaggage",
-        "productType": 1,
-        "canPurchaseWithTicket": 1,
-        "canPurchasePostTicket": 0,
-        "price": 29.29,
-        "currency": "USD",
-        "vendorPrice": 1000,
-        "vendorCurrency": "THB",
-        "clientTechnicalServiceFee": 0,
-        "clientTechnicalServiceFeeMode": null,
-        "auxBaggageElement": {
-          "piece": 0,
-          "weight": 30,
-          "isAllWeight": true,
-          "size": ""
-        },
-        "offerId": null,
-        "maxQty": 1,
-        "minQty": 1,
-        "categoryCode": "StandardCheckInBaggage",
-        "ancillaryCode": "SCI_BAG_30KG",
-        "auxSeatElement": null
-      },
-      {
-        "segmentIndex": 1,
-        "endSegmentIndex": null,
-        "productCode": "SCI_BAG_40KG",
-        "productName": "StandardCheckInBaggage",
-        "productType": 1,
-        "canPurchaseWithTicket": 1,
-        "canPurchasePostTicket": 0,
-        "price": 35.15,
-        "currency": "USD",
-        "vendorPrice": 1200,
-        "vendorCurrency": "THB",
-        "clientTechnicalServiceFee": 0,
-        "clientTechnicalServiceFeeMode": null,
-        "auxBaggageElement": {
-          "piece": 0,
-          "weight": 40,
-          "isAllWeight": true,
-          "size": ""
-        },
-        "offerId": null,
-        "maxQty": 1,
-        "minQty": 1,
-        "categoryCode": "StandardCheckInBaggage",
-        "ancillaryCode": "SCI_BAG_40KG",
-        "auxSeatElement": null
-      }
-    ],
-    "vendorFare": null,
-    "bundleOptions": [],
-    "links": null,
-    "separateBookings": false,
-    "refreshTime": null,
-    "displayFare": null
-  },
-  "airlineBookings": [
-    {
-      "airlineCode": "DD",
-      "airlineName": "Nok Air",
-      "airlinePnr": "AQTBLW",
-      "airlineWebSiteAddress": "https://www.nokair.com",
-      "mmbEmail": "booking@test.ru",
-      "tailDigitsOfPaymentCard": null,
-      "extras": [
+    "airlineBookings": [
         {
-          "name": "email",
-          "remark": "email",
-          "value": "booking@test.ru"
+            "airlineCode": "G9",
+            "airlineName": "Air Arabia",
+            "airlinePnr": "S92309",
+            "airlineWebSiteAddress": "https://www.airarabia.com",
+            "mmbEmail": "jitendra_patil@persistent.com",
+            "tailDigitsOfPaymentCard": null,
+            "extras": [
+                {
+                    "name": "email",
+                    "remark": "email",
+                    "value": "jitendra_patil@persistent.com"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "itineraryDownload": "https://api-sg.atriptech.com/itineraryDownload.do?orderNo=FtJs/8hfjlFZvedQEDnLooV3pGpEDoOm",
-  "contact": {
-    "name": "PLAKHUTIN/PAVEL",
-    "address": null,
-    "postcode": null,
-    "email": "booking@test.ru",
-    "mobile": "0007-4953747238"
-  },
-  "ancillaryBuyMethod": "0",
-  "errorCode": null,
-  "errorMessage": null,
-  "airlineMessage": null,
-  "locale": "",
-  "status": 0,
-  "msg": "success"
+    ],
+    "itineraryDownload": "http://121.40.236.223:8081/itineraryDownload.do?orderNo=FKEm34znpwxtNjvuGV7D9TuVfxqL3Rbs",
+    "contact": {
+        "name": "Patil/Jitendra",
+        "address": null,
+        "postcode": null,
+        "email": "jitendra_patil@persistent.com",
+        "mobile": "0091-987654321234"
+    },
+    "ancillaryBuyMethod": null,
+    "errorCode": null,
+    "errorMessage": null,
+    "airlineMessage": null,
+    "locale": "",
+    "status": 0,
+    "msg": "success"
 }
 ```
 {% endtab %}
