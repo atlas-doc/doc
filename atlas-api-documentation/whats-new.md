@@ -5,6 +5,14 @@
 
 # What's New!!
 
+## June 2024
+
+## Feature Release: Additional Parameters in Retrieve PNR API
+
+Description: Additional parameters have been added to the queryOrderDetails.do API request, enhancing our product to differentiate between the main order and an ancillary order.
+
+Please refer to the [Retrieve PNR](../atlas-api-documentation/api-reference/shopping-and-ticketing/retrieve-booking.md) section.
+
 ## May 2024
 
 ## Feature Release: Sandbox Optimization
