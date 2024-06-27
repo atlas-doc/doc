@@ -13,12 +13,31 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 
 1. All the parameters can be used together, if required.
 
-2. “OrderNo” is “required” if “airlinePNR” and “carrier” cannot be provided upon calling the API. Inversely, “airlinePNR” and “carrier” are “required” if “OrderNo” cannot be provided.
+2. “OrderNo” is “required” if “airlinePNR” and “carrier” cannot be provided upon calling the API. Inversely, “airlinePNR” and “carrier” are “required” if “OrderNo” cannot be provided. All remaining fields in the request are optional.
 
-3. In case parameters in request don’t match (such as “orderNo”, “airlinePNR”, “carrier” and "passengers"), API response will show the error message "Parameters don't match, please check and retry".
+3. The PNR (Passenger Name Record) for an airline ticket order or a luggage purchase order must be kept consistent, as per airline regulations.
 
-4. In case the parameters of “airlinePNR” and “carrier” cannot identify an unique order (e.g BC - PNR is made up with 4 number), customer needs to enter additional parameters such as "firstName" and "lastName" for identification. In such scenarios, API will respond with error msg ”Multi-orderNos are identified, please provide more parameters in the request, such as “firstName” and “lastName” under passengers’ element.”
+4. The input parameters orderNo, airlinePNR, carrier, and other optional fields will be validated together to ensure they belong to the same order data source. If any of these input parameters do not match with others, the API will return an error.
 
+5. Airline ticket orders and associated post-booking ancillary orders can be retrieved using the following methods: (airline ticket orders + post-booking ancillary orders):
+
+- OrderNo
+
+- PNR + Carrier
+
+- OrderNo + PNR + Carrier
+
+- OrderNo + PNR + Carrier + other optional parameters
+
+6. In case the parameters of “airlinePNR” and “carrier” cannot identify an unique order (e.g BC - PNR is made up with 4 number), customer needs to enter additional parameters such as "name" for identification. In such scenarios, API will respond with error msg ”Multi-orderNos are identified, please request again with extra parameters added.”
+
+7. “isCompletedOrder“ parameter
+
+<Optional>. If a value is not entered, API would take it as “false” by default. 
+
+True: It means user wants to check all the order info (including air ticket and any post-booking ancillary attached).
+
+False: It means user wants to check the given order info only, through orderNo or PNR + carrier code + other parameters. It could be the air ticket order in 1st transaction, or the post-booking ancillary order in 2nd transaction.
 {% endhint %}
 
 
@@ -35,37 +54,37 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 *   **carrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     2 character IATA airline code.
-*   **isCompletedOrder **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:green;">**Required**</mark>
+*   **isCompletedOrder **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-    If it's true, it means the user wants to check all the order info (including air ticket and any post-booking ancillary attached). If it's false, it means the user wants to check the given order only. It could be the air ticket order in 1st transaction, or the post-booking ancillary order in 2nd transaction.
+    If not entered with value, API would take it as “false” by default. 
+
+    **true**: Show the full details of main order and post-booking order
+
+    **false**: Only show the details of given order
 *   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:orange;">**Optional**</mark>
 
     Passengers' information.
 
 * #### <mark style="color:blue;">**PassengerElement**</mark>
-*   **firstName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+*   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-  First name of the passenger.
-*   **lastName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
-
-  Last name of the passenger.
+  Name of the passenger. Format: LastName/FirstName 
     
 {% endtab %}
 
 {% tab title="Samples" %}
 ```json
 {
-    "orderNo": "TESTA20240620095525476",
-    "airlinePNR": "S92309",
+    "orderNo": "TESTA20240627114717735",
+    "airlinePNR": "S75666",
     "carrier": "G9",
-    "isCompletedOrder": "true",
     "passengers": [
         {
-            "firstName": "ADAM",
-            "lastName": "SMITH"
+            "name": "Kotwal/Behram"
         }
-    ]
-}             
+    ],
+    "isCompletedOrder": "true"
+}          
 ```
 {% endtab %}
 {% endtabs %}
@@ -96,6 +115,11 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
     2: Ticketed
     
     \-3: Cancelled(When the booking is failed due to the request information)
+    Order number
+*   **orderList **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    List all the ancillary orders in the given orderNo, including in-booking and post-booking transactions.
+
 *   **ticketStatus **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     0: Ticket not issued
@@ -181,389 +205,579 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 {% tab title="Samples" %}
 ```
 {
-    "orderNo": "TESTA20240620095525476",
-    "orderList": [
+  "orderNo": "TESTA20240627114717735",
+  "orderList": [
+    {
+      "orderNo": "TESTA20240627114717735",
+      "orderStatus": "2",
+      "ticketStatus": "1",
+      "totalPrice": 86.31,
+      "currency": "USD",
+      "tktLimitTime": "2024-06-27 13:07:21",
+      "vendorTotalPrice": 316.96,
+      "vendorTotalAncillaryPrice": 0,
+      "vendorCurrency": "AED",
+      "adultTotalFare": 86.31,
+      "childTotalFare": 86.31,
+      "infantTotalFare": 153.79,
+      "totalAncillaryPrice": 0,
+      "totalTransactionFee": 1,
+      "paymentFee": null,
+      "supportPaymentMethod": 3
+    },
+    {
+      "orderNo": "TESTB20240627120309525",
+      "orderStatus": "0",
+      "ticketStatus": "0",
+      "totalPrice": 174.27,
+      "currency": "USD",
+      "tktLimitTime": "2024-06-27 12:19:10",
+      "vendorTotalPrice": 640,
+      "vendorTotalAncillaryPrice": 640,
+      "vendorCurrency": "AED",
+      "adultTotalFare": 0,
+      "childTotalFare": null,
+      "infantTotalFare": null,
+      "totalAncillaryPrice": 174.27,
+      "totalTransactionFee": 0,
+      "paymentFee": null,
+      "supportPaymentMethod": 1
+    }
+  ],
+  "pnrCode": "ODNSPH",
+  "orderStatus": null,
+  "ticketStatus": null,
+  "paxTicketInfos": [
+    {
+      "name": "Kotwal/Behram",
+      "passengerType": 0,
+      "birthday": "19890922",
+      "gender": "M",
+      "cardNum": "00000011",
+      "cardType": "PP",
+      "cardIssuePlace": "SG",
+      "cardExpired": "20301230",
+      "nationality": "LK",
+      "ticketNos": [
+        "S75666"
+      ],
+      "airlinePNRs": [
+        "S75666"
+      ],
+      "contactEmails": [
+        "TEST@GMAIL.COM"
+      ],
+      "contactPhones": [
+        "0086-13928109091"
+      ],
+      "ancillaries": [
         {
-            "orderNo": "TESTA20240620095525476",
-            "orderStatus": "2",
-            "ticketStatus": "1",
-            "totalPrice": 133.40,
-            "currency": "USD",
-            "tktLimitTime": "2024-06-20 11:15:30",
-            "vendorTotalPrice": 489.91,
-            "vendorTotalAncillaryPrice": 0.00,
-            "vendorCurrency": "AED",
-            "adultTotalFare": 133.40,
-            "childTotalFare": 133.40,
-            "infantTotalFare": 218.07,
-            "totalAncillaryPrice": 0.00,
-            "totalTransactionFee": 1.00,
-            "paymentFee": null,
-            "supportPaymentMethod": 3
+          "productCode": "SCI_2PC_52KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 174.27,
+          "currency": "USD",
+          "vendorPrice": 640,
+          "vendorCurrency": "AED"
         },
         {
-            "orderNo": "TESTB20240620100624142",
-            "orderStatus": "2",
-            "ticketStatus": "1",
-            "totalPrice": 81.42,
-            "currency": "USD",
-            "tktLimitTime": "2024-06-20 10:22:24",
-            "vendorTotalPrice": 299.00,
-            "vendorTotalAncillaryPrice": 299.00,
-            "vendorCurrency": "AED",
-            "adultTotalFare": 0.00,
-            "childTotalFare": null,
-            "infantTotalFare": null,
-            "totalAncillaryPrice": 81.42,
-            "totalTransactionFee": 0.00,
-            "paymentFee": null,
-            "supportPaymentMethod": 1
-        }
-    ],
-    "pnrCode": "S5GROX",
-    "orderStatus": null,
-    "ticketStatus": null,
-    "paxTicketInfos": [
+          "productCode": "SCI_2PC_52KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 174.27,
+          "currency": "USD",
+          "vendorPrice": 640,
+          "vendorCurrency": "AED"
+        },
         {
-            "name": "Patil/Jitendra",
-            "passengerType": 0,
-            "birthday": "19591231",
-            "gender": "M",
-            "cardNum": "Z4885595",
-            "cardType": "PP",
-            "cardIssuePlace": "IN",
-            "cardExpired": "20280611",
-            "nationality": "IN",
-            "ticketNos": [
-                "S92309"
-            ],
-            "airlinePNRs": [
-                "S92309"
-            ],
-            "contactEmails": [
-                "jitendra_patil@persistent.com"
-            ],
-            "contactPhones": [
-                "0091-987654321234"
-            ],
-            "ancillaries": [
-                {
-                    "productCode": "SCI_1PC_20KG",
-                    "segmentIndex": 1,
-                    "offerId": null,
-                    "buyMethod": "0",
-                    "ancillaryPrice": 81.42,
-                    "currency": "USD",
-                    "vendorPrice": 299.00,
-                    "vendorCurrency": "AED"
-                }
-            ]
+          "productCode": "SCI_2PC_52KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 174.27,
+          "currency": "USD",
+          "vendorPrice": 640,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_2PC_52KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 174.27,
+          "currency": "USD",
+          "vendorPrice": 640,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_2PC_52KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 174.27,
+          "currency": "USD",
+          "vendorPrice": 640,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_17KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 109.74,
+          "currency": "USD",
+          "vendorPrice": 403,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_17KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 109.74,
+          "currency": "USD",
+          "vendorPrice": 403,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_17KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 109.74,
+          "currency": "USD",
+          "vendorPrice": 403,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_17KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 109.74,
+          "currency": "USD",
+          "vendorPrice": 403,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_17KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 109.74,
+          "currency": "USD",
+          "vendorPrice": 403,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_17KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 109.74,
+          "currency": "USD",
+          "vendorPrice": 403,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_17KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 109.74,
+          "currency": "USD",
+          "vendorPrice": 403,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_22KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 50.11,
+          "currency": "USD",
+          "vendorPrice": 184,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_22KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 50.11,
+          "currency": "USD",
+          "vendorPrice": 184,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_22KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 50.11,
+          "currency": "USD",
+          "vendorPrice": 184,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_22KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 50.11,
+          "currency": "USD",
+          "vendorPrice": 184,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_22KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 50.11,
+          "currency": "USD",
+          "vendorPrice": 184,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_22KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 50.11,
+          "currency": "USD",
+          "vendorPrice": 184,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_22KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 50.11,
+          "currency": "USD",
+          "vendorPrice": 184,
+          "vendorCurrency": "AED"
+        },
+        {
+          "productCode": "SCI_1PC_22KG",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 50.11,
+          "currency": "USD",
+          "vendorPrice": 184,
+          "vendorCurrency": "AED"
         }
-    ],
-    "totalPrice": 214.82,
+      ]
+    }
+  ],
+  "totalPrice": 2126.72,
+  "currency": "USD",
+  "tktLimitTime": null,
+  "vendorTotalPrice": null,
+  "vendorTotalAncillaryPrice": null,
+  "vendorCurrency": null,
+  "adultTotalFare": null,
+  "childTotalFare": null,
+  "infantTotalFare": null,
+  "totalAncillaryPrice": null,
+  "totalTransactionFee": null,
+  "paymentFee": null,
+  "supportPaymentMethod": 0,
+  "supportPaymentMethods": null,
+  "paymentMethod": null,
+  "routing": {
+    "fid": "lyuXAz1MVngismacM3wuiwJtmFMsLpRTfm0K2S99dsxi-G5TKL1BQQ..",
+    "routingIdentifier": "aLLgQXmljm5IEm4F2B7GwEeO9d1gEcWId1SPa2qQU/Exzrmp46qTnP1Bf8nnsQGPliUgxaZGnRxPBBjFHiIgMWXmfDNoWMGlSBAzSStrZYrR/1H8sZENAaLkHq7StdgtFnCqK5m26fQhrveoISCbmz7ZAsfQcCDlbofv55bj9l6/mtrrU77wm6+6J5IB8vVHEHelUNgWevC0TCz2rsfF/wT88pb2eHTQlNmhNqBiXAjDiX47D2mSWlhB0LYI3ocs6P0jM9lV4hVrt+xXjNBBMYqAiG3TPWx6QfeTBjgt1+IwfYdzurVeKVFL3OSZMV2ZywXRwCf8qQtJX8OEUh9CzKFYopbYAwkGfOPJc9sd07lubzPS1rZmyg==",
+    "supportCreditTransPayment": "1",
     "currency": "USD",
-    "tktLimitTime": null,
-    "vendorTotalPrice": null,
-    "vendorTotalAncillaryPrice": null,
-    "vendorCurrency": null,
-    "adultTotalFare": null,
-    "childTotalFare": null,
-    "infantTotalFare": null,
-    "totalAncillaryPrice": null,
-    "totalTransactionFee": null,
-    "paymentFee": null,
-    "supportPaymentMethod": 0,
-    "supportPaymentMethods": null,
-    "paymentMethod": null,
-    "routing": {
-        "fid": "LSliV-lBOchjlN3KJUqQL_mPBN0nvNrpVjkHVeWN5WdoGwdIOLav3fUYSZPlO2FN",
-        "routingIdentifier": "aLLgQXmljm5IEm4F2B7GwEKQluoX4TVnd1SPa2qQU/Fv7YdQeP59K6Z7a19huCi/lx/9JT0nSkgkQQpugkuv0Mq0jSnTNCA4QFPYM6iGcHollB3xJSIuvYe9trgmfZ5UQs+EDbUemepQ+WprXAZ9CYGLBHekKRJMdAD+im9W2wY44inbr0j9pyQS4mYw/G1xm4SeFfcc97ETSL8R26VTfwa7fl3PT7lkHuq13N/34ZrlSRqSXcGePFziMZsYHmDK7S6re5/Hb3y13QAK7VcSLbntLalj5dk53kFJ3hu4dJlDX9AhoGS+EKXA6EH5RhaPeHwZbKI2jp4E0Wr/ntQb90HN1C6c7bv4NW8Jyn29SkVOlHDVsiAHtA==",
-        "supportCreditTransPayment": "1",
-        "currency": "USD",
-        "adultPrice": 4.96,
-        "adultTax": 128.44,
-        "childPrice": 4.96,
-        "childTax": 128.44,
-        "infantPrice": 218.07,
-        "infantTax": 0.00,
-        "infantAllowed": true,
-        "transactionFeePerPax": 1.00,
-        "transactionFee": 1.00,
-        "transactionFeeMode": "PER_PAX",
-        "nationalityType": 0,
-        "nationality": "",
-        "suitAge": "",
-        "PaxType": "ADT",
-        "fromSegments": [
-            {
-                "segmentIndex": 1,
-                "carrier": "G9",
-                "flightNumber": "G9147",
-                "depAirport": "SHJ",
-                "depTime": "202407201400",
-                "arrAirport": "JED",
-                "arrTime": "202407201550",
-                "stopCities": "",
-                "duration": 170,
-                "codeShare": false,
-                "cabin": "",
-                "cabinClass": 1,
-                "seatCount": 2,
-                "aircraftCode": "",
-                "depTerminal": "",
-                "arrTerminal": "",
-                "operatingCarrier": "G9",
-                "operatingFlightnumber": "",
-                "fareFamily": "lowest"
-            }
-        ],
-        "retSegments": [],
-        "combineIndexs": [],
-        "rule": {
-            "hasBaggage": 1,
-            "baggageElements": [
-                {
-                    "segmentNo": 1,
-                    "baggageType": "CabinBaggageOverheadLocker",
-                    "passengerType": 0,
-                    "baggagePiece": 1,
-                    "baggageWeight": 10,
-                    "baggageSize": null
-                }
-            ],
-            "refundRules": [
-                {
-                    "refundType": 0,
-                    "refundStatus": "T",
-                    "refundFee": 0.0,
-                    "currency": "AED",
-                    "refNoshow": "T",
-                    "refNoShowCondition": 0,
-                    "refNoshowFee": 0.0,
-                    "ruleDetailList": [
-                        {
-                            "ruleId": 31233,
-                            "status": "T",
-                            "startMinute": 525600,
-                            "endMinute": 4320,
-                            "amount": 0.0,
-                            "currency": "AED"
-                        },
-                        {
-                            "ruleId": 31235,
-                            "status": "T",
-                            "startMinute": 4320,
-                            "endMinute": 1440,
-                            "amount": 0.0,
-                            "currency": "AED"
-                        },
-                        {
-                            "ruleId": 31237,
-                            "status": "T",
-                            "startMinute": 1440,
-                            "endMinute": 0,
-                            "amount": 0.0,
-                            "currency": "AED"
-                        },
-                        {
-                            "ruleId": 31243,
-                            "status": "T",
-                            "startMinute": 0,
-                            "endMinute": -525600,
-                            "amount": 0.0,
-                            "currency": "AED"
-                        }
-                    ]
-                }
-            ],
-            "changesRules": [
-                {
-                    "changesType": 0,
-                    "changesStatus": "T",
-                    "changesFee": 0.0,
-                    "currency": "AED",
-                    "revNoshow": "T",
-                    "revNoShowCondition": 0,
-                    "revNoshowFee": 0.0,
-                    "ruleDetailList": [
-                        {
-                            "ruleId": 20046,
-                            "status": "H",
-                            "startMinute": 525600,
-                            "endMinute": 4320,
-                            "amount": 200.0,
-                            "currency": "AED"
-                        },
-                        {
-                            "ruleId": 20048,
-                            "status": "H",
-                            "startMinute": 4320,
-                            "endMinute": 1440,
-                            "amount": 200.0,
-                            "currency": "AED"
-                        },
-                        {
-                            "ruleId": 20050,
-                            "status": "T",
-                            "startMinute": 1440,
-                            "endMinute": 0,
-                            "amount": 0.0,
-                            "currency": "AED"
-                        },
-                        {
-                            "ruleId": 20056,
-                            "status": "T",
-                            "startMinute": 0,
-                            "endMinute": -525600,
-                            "amount": 0.0,
-                            "currency": "AED"
-                        }
-                    ]
-                }
-            ],
-            "serviceElements": [
-                {
-                    "hasFreeSeat": 0,
-                    "hasFreeMeal": 0
-                }
-            ]
-        },
-        "ancillaryProductElements": [
-            {
-                "segmentIndex": 1,
-                "endSegmentIndex": null,
-                "productCode": "SCI_1PC_20KG",
-                "productName": "StandardCheckInBaggage",
-                "productType": 1,
-                "canPurchaseWithTicket": 1,
-                "canPurchasePostTicket": 0,
-                "price": 6.24,
-                "currency": "USD",
-                "vendorPrice": 22.91,
-                "vendorCurrency": "AED",
-                "clientTechnicalServiceFee": 0,
-                "clientTechnicalServiceFeeMode": null,
-                "auxBaggageElement": {
-                    "piece": 1,
-                    "weight": 20,
-                    "isAllWeight": true,
-                    "size": null
-                },
-                "offerId": null,
-                "maxQty": 1,
-                "minQty": 1,
-                "categoryCode": "StandardCheckInBaggage",
-                "ancillaryCode": "SCI_1PC_20KG",
-                "auxSeatElement": null,
-                "displayPrice": null,
-                "displayCurrency": null
-            },
-            {
-                "segmentIndex": 1,
-                "endSegmentIndex": null,
-                "productCode": "SCI_2PC_30KG",
-                "productName": "StandardCheckInBaggage",
-                "productType": 1,
-                "canPurchaseWithTicket": 1,
-                "canPurchasePostTicket": 0,
-                "price": 11.31,
-                "currency": "USD",
-                "vendorPrice": 41.52,
-                "vendorCurrency": "AED",
-                "clientTechnicalServiceFee": 0,
-                "clientTechnicalServiceFeeMode": null,
-                "auxBaggageElement": {
-                    "piece": 2,
-                    "weight": 30,
-                    "isAllWeight": true,
-                    "size": null
-                },
-                "offerId": null,
-                "maxQty": 1,
-                "minQty": 1,
-                "categoryCode": "StandardCheckInBaggage",
-                "ancillaryCode": "SCI_2PC_30KG",
-                "auxSeatElement": null,
-                "displayPrice": null,
-                "displayCurrency": null
-            },
-            {
-                "segmentIndex": 1,
-                "endSegmentIndex": null,
-                "productCode": "SCI_2PC_40KG",
-                "productName": "StandardCheckInBaggage",
-                "productType": 1,
-                "canPurchaseWithTicket": 1,
-                "canPurchasePostTicket": 0,
-                "price": 28.02,
-                "currency": "USD",
-                "vendorPrice": 102.89,
-                "vendorCurrency": "AED",
-                "clientTechnicalServiceFee": 0,
-                "clientTechnicalServiceFeeMode": null,
-                "auxBaggageElement": {
-                    "piece": 2,
-                    "weight": 40,
-                    "isAllWeight": true,
-                    "size": null
-                },
-                "offerId": null,
-                "maxQty": 1,
-                "minQty": 1,
-                "categoryCode": "StandardCheckInBaggage",
-                "ancillaryCode": "SCI_2PC_40KG",
-                "auxSeatElement": null,
-                "displayPrice": null,
-                "displayCurrency": null
-            }
-        ],
-        "vendorFare": {
-            "vendorAdultPrice": 18.20,
-            "vendorAdultTax": 471.71,
-            "vendorChildPrice": 18.20,
-            "vendorChildTax": 471.71,
-            "vendorInfantPrice": 800.83,
-            "vendorInfantTax": 0.00,
-            "vendorCurrency": "AED"
-        },
-        "bundleOptions": [],
-        "links": null,
-        "separateBookings": false,
-        "refreshTime": null,
-        "displayFare": null
-    },
-    "airlineBookings": [
-        {
-            "airlineCode": "G9",
-            "airlineName": "Air Arabia",
-            "airlinePnr": "S92309",
-            "airlineWebSiteAddress": "https://www.airarabia.com",
-            "mmbEmail": "jitendra_patil@persistent.com",
-            "tailDigitsOfPaymentCard": null,
-            "extras": [
-                {
-                    "name": "email",
-                    "remark": "email",
-                    "value": "jitendra_patil@persistent.com"
-                }
-            ]
-        }
+    "adultPrice": 65.93,
+    "adultTax": 20.38,
+    "childPrice": 65.93,
+    "childTax": 20.38,
+    "infantPrice": 153.79,
+    "infantTax": 0,
+    "infantAllowed": true,
+    "transactionFeePerPax": 1,
+    "transactionFee": 1,
+    "transactionFeeMode": "PER_PAX",
+    "nationalityType": 0,
+    "nationality": "",
+    "suitAge": "",
+    "PaxType": "ADT",
+    "fromSegments": [
+      {
+        "segmentIndex": 1,
+        "carrier": "G9",
+        "flightNumber": "G9147",
+        "depAirport": "SHJ",
+        "depTime": "202407161400",
+        "arrAirport": "JED",
+        "arrTime": "202407161550",
+        "stopCities": "",
+        "duration": 170,
+        "codeShare": false,
+        "cabin": "",
+        "cabinClass": 1,
+        "seatCount": 2,
+        "aircraftCode": "",
+        "depTerminal": "",
+        "arrTerminal": "",
+        "operatingCarrier": "G9",
+        "operatingFlightnumber": "",
+        "fareFamily": "lowest"
+      }
     ],
-    "itineraryDownload": "http://121.40.236.223:8081/itineraryDownload.do?orderNo=FKEm34znpwxtNjvuGV7D9TuVfxqL3Rbs",
-    "contact": {
-        "name": "Patil/Jitendra",
-        "address": null,
-        "postcode": null,
-        "email": "jitendra_patil@persistent.com",
-        "mobile": "0091-987654321234"
+    "retSegments": [],
+    "combineIndexs": [],
+    "rule": {
+      "hasBaggage": 1,
+      "baggageElements": [
+        {
+          "segmentNo": 1,
+          "baggageType": "CabinBaggageOverheadLocker",
+          "passengerType": 0,
+          "baggagePiece": 1,
+          "baggageWeight": 10,
+          "baggageSize": null
+        }
+      ],
+      "refundRules": [
+        {
+          "refundType": 0,
+          "refundStatus": "T",
+          "refundFee": 0,
+          "currency": "AED",
+          "refNoshow": "T",
+          "refNoShowCondition": 0,
+          "refNoshowFee": 0,
+          "ruleDetailList": [
+            {
+              "ruleId": 31233,
+              "status": "T",
+              "startMinute": 525600,
+              "endMinute": 4320,
+              "amount": 0,
+              "currency": "AED"
+            },
+            {
+              "ruleId": 31235,
+              "status": "T",
+              "startMinute": 4320,
+              "endMinute": 1440,
+              "amount": 0,
+              "currency": "AED"
+            },
+            {
+              "ruleId": 31237,
+              "status": "T",
+              "startMinute": 1440,
+              "endMinute": 0,
+              "amount": 0,
+              "currency": "AED"
+            },
+            {
+              "ruleId": 31243,
+              "status": "T",
+              "startMinute": 0,
+              "endMinute": -525600,
+              "amount": 0,
+              "currency": "AED"
+            }
+          ]
+        }
+      ],
+      "changesRules": [
+        {
+          "changesType": 0,
+          "changesStatus": "T",
+          "changesFee": 0,
+          "currency": "AED",
+          "revNoshow": "T",
+          "revNoShowCondition": 0,
+          "revNoshowFee": 0,
+          "ruleDetailList": [
+            {
+              "ruleId": 20046,
+              "status": "H",
+              "startMinute": 525600,
+              "endMinute": 4320,
+              "amount": 200,
+              "currency": "AED"
+            },
+            {
+              "ruleId": 20048,
+              "status": "H",
+              "startMinute": 4320,
+              "endMinute": 1440,
+              "amount": 200,
+              "currency": "AED"
+            },
+            {
+              "ruleId": 20050,
+              "status": "T",
+              "startMinute": 1440,
+              "endMinute": 0,
+              "amount": 0,
+              "currency": "AED"
+            },
+            {
+              "ruleId": 20056,
+              "status": "T",
+              "startMinute": 0,
+              "endMinute": -525600,
+              "amount": 0,
+              "currency": "AED"
+            }
+          ]
+        }
+      ],
+      "serviceElements": [
+        {
+          "hasFreeSeat": 0,
+          "hasFreeMeal": 0
+        }
+      ]
     },
-    "ancillaryBuyMethod": null,
-    "errorCode": null,
-    "errorMessage": null,
-    "airlineMessage": null,
-    "locale": "",
-    "status": 0,
-    "msg": "success"
+    "ancillaryProductElements": [
+      {
+        "segmentIndex": 1,
+        "endSegmentIndex": null,
+        "productCode": "SCI_1PC_20KG",
+        "productName": "StandardCheckInBaggage",
+        "productType": 1,
+        "canPurchaseWithTicket": 1,
+        "canPurchasePostTicket": 0,
+        "price": 7.33,
+        "currency": "USD",
+        "vendorPrice": 26.89,
+        "vendorCurrency": "AED",
+        "clientTechnicalServiceFee": 0,
+        "clientTechnicalServiceFeeMode": null,
+        "auxBaggageElement": {
+          "piece": 1,
+          "weight": 20,
+          "isAllWeight": true,
+          "size": null
+        },
+        "offerId": null,
+        "maxQty": 1,
+        "minQty": 1,
+        "categoryCode": "StandardCheckInBaggage",
+        "ancillaryCode": "SCI_1PC_20KG",
+        "auxSeatElement": null,
+        "displayPrice": null,
+        "displayCurrency": null
+      },
+      {
+        "segmentIndex": 1,
+        "endSegmentIndex": null,
+        "productCode": "SCI_2PC_30KG",
+        "productName": "StandardCheckInBaggage",
+        "productType": 1,
+        "canPurchaseWithTicket": 1,
+        "canPurchasePostTicket": 0,
+        "price": 27.03,
+        "currency": "USD",
+        "vendorPrice": 99.24,
+        "vendorCurrency": "AED",
+        "clientTechnicalServiceFee": 0,
+        "clientTechnicalServiceFeeMode": null,
+        "auxBaggageElement": {
+          "piece": 2,
+          "weight": 30,
+          "isAllWeight": true,
+          "size": null
+        },
+        "offerId": null,
+        "maxQty": 1,
+        "minQty": 1,
+        "categoryCode": "StandardCheckInBaggage",
+        "ancillaryCode": "SCI_2PC_30KG",
+        "auxSeatElement": null,
+        "displayPrice": null,
+        "displayCurrency": null
+      },
+      {
+        "segmentIndex": 1,
+        "endSegmentIndex": null,
+        "productCode": "SCI_2PC_40KG",
+        "productName": "StandardCheckInBaggage",
+        "productType": 1,
+        "canPurchaseWithTicket": 1,
+        "canPurchasePostTicket": 0,
+        "price": 36.94,
+        "currency": "USD",
+        "vendorPrice": 135.63,
+        "vendorCurrency": "AED",
+        "clientTechnicalServiceFee": 0,
+        "clientTechnicalServiceFeeMode": null,
+        "auxBaggageElement": {
+          "piece": 2,
+          "weight": 40,
+          "isAllWeight": true,
+          "size": null
+        },
+        "offerId": null,
+        "maxQty": 1,
+        "minQty": 1,
+        "categoryCode": "StandardCheckInBaggage",
+        "ancillaryCode": "SCI_2PC_40KG",
+        "auxSeatElement": null,
+        "displayPrice": null,
+        "displayCurrency": null
+      }
+    ],
+    "vendorFare": {
+      "vendorAdultPrice": 242.1,
+      "vendorAdultTax": 74.86,
+      "vendorChildPrice": 242.1,
+      "vendorChildTax": 74.86,
+      "vendorInfantPrice": 564.78,
+      "vendorInfantTax": 0,
+      "vendorCurrency": "AED"
+    },
+    "bundleOptions": [],
+    "links": null,
+    "separateBookings": false,
+    "refreshTime": null,
+    "displayFare": null
+  },
+  "airlineBookings": [
+    {
+      "airlineCode": "G9",
+      "airlineName": "Air Arabia",
+      "airlinePnr": "S75666",
+      "airlineWebSiteAddress": "https://www.airarabia.com",
+      "mmbEmail": "TEST@GMAIL.COM",
+      "tailDigitsOfPaymentCard": null,
+      "extras": [
+        {
+          "name": "email",
+          "remark": "email",
+          "value": "TEST@GMAIL.COM"
+        }
+      ]
+    }
+  ],
+  "itineraryDownload": "http://121.40.236.223:8081/itineraryDownload.do?orderNo=FKEm34znpwyGDFss5iwdXC7TNqd8iZaO",
+  "contact": {
+    "name": "TEST",
+    "address": "A-3 NOIDA",
+    "postcode": "201307",
+    "email": "TEST@GMAIL.COM",
+    "mobile": "0086-13928109091"
+  },
+  "ancillaryBuyMethod": null,
+  "errorCode": null,
+  "errorMessage": null,
+  "airlineMessage": null,
+  "locale": "",
+  "status": 0,
+  "msg": "success"
 }
 ```
 {% endtab %}
