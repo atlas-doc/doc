@@ -68,7 +68,7 @@ False: It means user wants to check the given order info only, through orderNo o
 * #### <mark style="color:blue;">**PassengerElement**</mark>
 *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-  Name of the passenger. Format: LastName/FirstName 
+  Name of the passenger. Format: LastName/FirstName MiddleName
     
 {% endtab %}
 
