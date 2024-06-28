@@ -21,23 +21,16 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 
 5. Airline ticket orders and associated post-booking ancillary orders can be retrieved using the following methods: (airline ticket orders + post-booking ancillary orders):
 
-- OrderNo
+* orderNo
 
-- PNR + Carrier
+* airlinePNR + carrier
 
-- OrderNo + PNR + Carrier
+* orderNo + airlinePNR + carrier
 
-- OrderNo + PNR + Carrier + other optional parameters
+* orderNo + airlinePNR + carrier + other optional parameters
 
 6. In case the parameters of “airlinePNR” and “carrier” cannot identify an unique order (e.g BC - PNR is made up with 4 number), customer needs to enter additional parameters such as "name" for identification. In such scenarios, API will respond with error msg ”Multi-orderNos are identified, please request again with extra parameters added.”
 
-7. “isCompletedOrder“ parameter
-
-<Optional>. If a value is not entered, API would take it as “false” by default. 
-
-True: It means user wants to check all the order info (including air ticket and any post-booking ancillary attached).
-
-False: It means user wants to check the given order info only, through orderNo or PNR + carrier code + other parameters. It could be the air ticket order in 1st transaction, or the post-booking ancillary order in 2nd transaction.
 {% endhint %}
 
 
