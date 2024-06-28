@@ -24,8 +24,7 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
     - airlinePNR + carrier
     - orderNo + airlinePNR + carrier
     - orderNo + airlinePNR + carrier + other optional parameters
-
-
+  
 6. In case the parameters of “airlinePNR” and “carrier” cannot identify an unique order (e.g BC - PNR is made up with 4 number), customer needs to enter additional parameters such as "name" for identification. In such scenarios, API will respond with error msg ”Multi-orderNos are identified, please request again with extra parameters added.”
 
 {% endhint %}
