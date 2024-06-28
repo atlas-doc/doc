@@ -20,10 +20,10 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 4. The input parameters orderNo, airlinePNR, carrier, and other optional fields will be validated together to ensure they belong to the same order data source. If any of these input parameters do not match with others, the API will return an error.
 
 5. Airline ticket orders and associated post-booking ancillary orders can be retrieved using the following methods: (airline ticket orders + post-booking ancillary orders):
-* orderNo
-* airlinePNR + carrier
-* orderNo + airlinePNR + carrier
-* orderNo + airlinePNR + carrier + other optional parameters
+- orderNo
+- airlinePNR + carrier
+- orderNo + airlinePNR + carrier
+- orderNo + airlinePNR + carrier + other optional parameters
 
 6. In case the parameters of “airlinePNR” and “carrier” cannot identify an unique order (e.g BC - PNR is made up with 4 number), customer needs to enter additional parameters such as "name" for identification. In such scenarios, API will respond with error msg ”Multi-orderNos are identified, please request again with extra parameters added.”
 
