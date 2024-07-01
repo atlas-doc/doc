@@ -22,6 +22,14 @@ The "postBookingAncillarySearch.do" function should be called prior to this one.
 
     Order number. It is the original order number.
 
+*   **airlinePNR **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    The record locator of the airline.
+    
+*   **carrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    2 character IATA airline code.
+
 *   **ancillaryCategory **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Ancillary Category. Different categories of ancillaries need to be separately requested. Currently we only support "BAGGAGE".
@@ -57,18 +65,26 @@ The "postBookingAncillarySearch.do" function should be called prior to this one.
 {% tab title="Samples" %}
 ```json
 {
-"cid": "xxxxxxxxxx",
-"ticketOrderNo": "TESTM20240520171341468",
+"cid": "pxmhg93103",
+"ticketOrderNo": "TESTA20240618162411631",
+"airlinePNR": "S37310",
+"carrier": "5F",
 "ancillaryCategory": "BAGGAGE",
-"sessionId": "cde38a72-d7fa-4e5b-9ba5-08b6929143c8",
+"sessionId": "fb4861a9-d410-41ed-a483-c372f0713e9c",
 "passengers": [{
-    "name": "TEST/ONE",
+    "name": "DOER/DEF",
     "passengerType": 0,
-    "ancillaries": [{
-        "productCode": "SCI_1PC_19KG",
+    "ancillaries": [
+        {
+        "productCode": "SCI_BAG_1PC_10KG",
         "segmentIndex": 1
-                   }]
-               }]
+        },
+        {
+        "productCode": "SCI_BAG_1PC_20KG",
+        "segmentIndex": 2
+        }
+]
+}]
 }
 ```
 {% endtab %}
