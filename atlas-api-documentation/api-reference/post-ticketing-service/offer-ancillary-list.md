@@ -46,12 +46,16 @@ Please note the below "Rules & Restrictions" while initiating a post-ticketing t
 *   **ticketOrderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It is the original order number.
+*   **airlinePNR **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
+    The record locator of the airline.
+*   **carrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    2 character IATA airline code.
 *   **ancillaryCategory **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Ancillary Category. Different categories of ancillaries need to be separately requested. Currently we only support "BAGGAGE".
-
-*   **displayCurrency array **Optional
+*   **displayCurrency ** <mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 The alternative currency in which the fare and taxes amount needs to be displayed. The 3-letter currency code should be entered. 
     
@@ -60,8 +64,10 @@ The alternative currency in which the fare and taxes amount needs to be displaye
 {% tab title="Samples" %}
 ```json
 {
-    "cid": "pxmhg93103",
+    "cid": "xxxxxxxxxx",
     "ticketOrderNo": "TESTA20240618162411631",
+    "airlinePNR": "S74883",
+    "carrier": "MM",
     "ancillaryCategory": "BAGGAGE",
     "displayCurrency": "CNY"
 }
