@@ -51,7 +51,7 @@ The "postBookingAncillarySearch.do" function should be called prior to this one.
           1 CHD
 *   **ancillaries Array<**[**AncillaryElement**](add-ancillaries.md#undefined)**> **<mark style="color:green;">**Required**</mark>
 
-          Ancillaries selection for the specific passenger
+    Ancillaries selection for the specific passenger
       * <mark style="color:blue;">**AncillaryElement**</mark>
         *   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
