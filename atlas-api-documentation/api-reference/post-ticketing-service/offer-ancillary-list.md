@@ -32,7 +32,7 @@ Please note the below "Rules & Restrictions" while initiating a post-ticketing t
 
 6. **Consistent Product Codes in Connecting Flights:** Same “product code” for baggage is mandatory to be added to each segment in connecting flights. If the "product code" is different for each of the segment (in the same direction)  or not added for all the sectors, the API will respond with an error message.
 
-7. **Round-Trip Baggage Rule:** Rule No.6 doesn't work for round trip flights. This means that the customer can purchase baggage only for one of the directions (either outbound or inbound) in round trip.
+7. **Round-Trip Baggage Rule:** Rule No.6 doesn't work for round trip flights. This means that the outbound and inbound segments can have different product codes. For example, outbound journey may have a product code of 1PC and 10KG while the inbound journey may have a product code of 20KG. This is allowed.
 
 8. **API Request Information:** The details of only the passenger for whom the ancillary needs to be added must be sent in the API RQ.
 {% endhint %}
