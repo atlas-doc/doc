@@ -57,8 +57,28 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 * #### <mark style="color:blue;">**PassengerElement**</mark>
 *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-  Name of the passenger. Format: LastName/FirstName MiddleName
-    
+    Name of the passenger. Format: LastName/FirstName MiddleName
+*   **routing Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:orange;">**Optional**</mark>
+
+    Routing information.
+*   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    Segment sequence. This will always be 1 as this would be the details of the 1st sector in the booking.
+*   **carrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    2-character IATA code of the booked airline.
+*   **flightNumber **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    The flight number of the 1st sector as received in the order.
+*   **depAirport **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    IATA Code of departure city or airport.
+*   **arrAirport **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    IATA Code of arrival city or airport.
+*   **fromDate **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    Departure date, the format is YYYYMMDD.
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -72,8 +92,20 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
             "name": "Kotwal/Behram"
         }
     ],
+    "routing": {
+        "fromSegments": [
+            {
+                "segmentIndex": 1,
+                "carrier": "G9",
+                "flightNumber": "G9147",
+                "depAirport": "SHJ",
+                "arrAirport": "JED",
+                "retDate": "20240716"
+            }
+        ]
+    },
     "isCompletedOrder": "true"
-}          
+}       
 ```
 {% endtab %}
 {% endtabs %}
