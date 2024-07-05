@@ -68,6 +68,12 @@
       *   **nationality **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
           Nationality，IATA code of country
+      *   **ffpCardNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+          Frequent flyer card number.
+     *   **ffpCarrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+          Frequent flyer card issuing airline.
       *   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
           Ancillaries selection for the specific passenger
@@ -133,6 +139,8 @@
             "cardIssuePlace": "SG",
             "cardExpired": "20301231",
             "nationality": "SG",
+            "ffpCardNo": "123456",
+            "ffpCarrier": "JT",
             "ancillaries":[ 
                 { 
                 "productCode":"BAG_5J_PH-PH_1_1P_20KG", 
