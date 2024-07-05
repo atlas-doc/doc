@@ -58,7 +58,7 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Name of the passenger. Format: LastName/FirstName MiddleName
-*   **routing Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:orange;">**Optional**</mark>
+*   **routing Array<**<mark style="color:blue;">**routing**</mark>**> **<mark style="color:orange;">**Optional**</mark>
 
     Routing information.
 *   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:orange;">**Optional**</mark>
