@@ -5,6 +5,14 @@
 
 # What's New!!
 
+## July 2024
+
+## Feature Release: Frequent Flyer details in Booking Request
+
+Description: 2 new fields have been added in the order.do request for "Frequent Flyer Number" and the "Frequent Flyer Card Issuing Airline". 
+
+Please refer to the [Order](../atlas-api-documentation/api-reference/shopping-and-ticketing/order.md) section.
+
 ## June 2024
 
 ## Feature Release: Additional Parameters in Retrieve PNR API
