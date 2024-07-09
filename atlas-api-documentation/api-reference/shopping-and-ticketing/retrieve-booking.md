@@ -100,7 +100,7 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
                 "flightNumber": "G9147",
                 "depAirport": "SHJ",
                 "arrAirport": "JED",
-                "retDate": "20240716"
+                "fromDate": "20240716"
             }
         ]
     },
