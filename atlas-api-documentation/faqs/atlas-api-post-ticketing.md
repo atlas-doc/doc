@@ -26,7 +26,7 @@ Mode of Payment: **Deposit**
 
 Mode of Payment: **VCC**
 
-When the refund has been initiated by customers via Atlas OR when customers or the passenger submits the refund to the airline directly, the funds will be directly credited into customers VCC account by the airline. The card statement will show the credit into the account.
+When the refund has been initiated by customers via Atlas OR when customers or the passenger submits the refund to the airline directly, the funds will be directly credited into customers VCC account by the airline. The card statement will show the credit into the account. Please note that for VCC mode of payment, the "Agent and Passenger Initiated Refund" feature should not be used.
 
 
 
