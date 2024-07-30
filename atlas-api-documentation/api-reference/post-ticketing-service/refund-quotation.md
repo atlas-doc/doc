@@ -196,8 +196,68 @@ No preceding function needs to be carried out.
            Estimated amount which can be got back for this refund.
 *    **refundRules Array<**<mark style="color:blue;"> **<mark style="color:green;">**Required**</mark>
 
-     The refund rules for the fare whose refund quote has been requested.  
-    
+     The refund rules for the fare whose refund quote has been requested.
+      *    **airline **<mark style="color:blue;">**string**</mark>
+
+           2 character IATA code of the airline.
+      *    **status **<mark style="color:blue;">**string**</mark>
+
+           Refund rule types (for the most restrictive condition):
+
+           T: Non refundable
+
+           H: Refundable with restrictions
+
+           F: Free for refund  
+      *    **startMinute **<mark style="color:blue;">**int**</mark>
+
+           Starting time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
+      *    **endMinute **<mark style="color:blue;">**int**</mark>
+
+           Ending time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
+      *    **ruleType **<mark style="color:blue;">**string**</mark>
+
+           Refund rule types:
+
+           T: Non refundable
+
+           H: Refundable with restrictions
+
+           F: Free Refund            
+      *    **passengerType **<mark style="color:blue;">**string**</mark>
+
+           The passenger types for whom the refund rules apply.
+     *    **penaltyAmount **<mark style="color:blue;">**int**</mark>
+
+           Airline cancellation fees.
+     *    **penaltyPercentBase **<mark style="color:blue;">**string**</mark>
+
+           The calculation on which the penalty percentage is based. The options are 1) fare+tax  2) fare
+     *    **airlineFee **<mark style="color:blue;">**int**</mark>
+
+           Airline refund fee.
+     *    **taxRefundable **<mark style="color:blue;">**boolean**</mark>
+
+           Is tax refund available?
+     *    **refundable **<mark style="color:blue;">**boolean**</mark>
+
+           Is the ticket refundable?
+     *    **refundableAncillaries **<mark style="color:blue;">**string**</mark>
+
+           The list of ancillaries which are refundable.
+
+           The options are:
+
+           StandardCheckInBaggage
+
+           CabinBaggage
+
+           CabinBaggageUnderSeat
+
+           CabinBaggageOverheadLocker
+
+           Infant   
+      
 {% endtab %}
 
 {% tab title="Samples" %}
