@@ -24,6 +24,7 @@
     * [Order Ancillary](atlas-api-documentation/api-reference/post-ticketing-service/add-ancillaries.md) 
     * [Refund Quotation](atlas-api-documentation/api-reference/post-ticketing-service/refund-quotation.md)
     * [Make a Refund](atlas-api-documentation/api-reference/post-ticketing-service/make-a-refund.md)
+    * [Query Refund Status](atlas-api-documentation/api-reference/post-ticketing-service/query-refund-status.md)
   * [Notifications by Webhook](atlas-api-documentation/api-reference/notifications-by-webhook/README.md)
     * [Register Webhook](atlas-api-documentation/api-reference/notifications-by-webhook/register-webhook.md)
     * [Ticketing Complete Notification](atlas-api-documentation/api-reference/notifications-by-webhook/ticketing-complete-notification.md)
