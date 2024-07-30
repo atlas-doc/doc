@@ -87,25 +87,33 @@ Refund quotation function should be called in prior of this call
     1: Processed
 
     2: Completed(Means the money back or the voucher forwarded)
+*   **refundCode **<mark style="color:blue;">**int**</mark>
+
+    Refund order number generated for this refund request.
+*   **cancelReason **<mark style="color:blue;">**string**</mark>
+
+    The reason why the refund was cancelled.
 {% endtab %}
 
 {% tab title="Samples" %}
 ```
 {
-    "status": 0,
-    "msg": "success"
-    "refundStatus": 0,
-    "currency": "USD",
-    "originalTotalFareAmount": 37.14,
-    "originalTotalAncillaryAmount": 8.12,
-    "originalTotalAmount": 45.26,
-    "airlinePenaltyAmountForFare": 0.00,
-    "airlinePenaltyAmountForAncillaries": 0.00,
-    "airlinePenaltyAmount": 0.00,
-    "estimatedRefundAmount": 45.26,
-    "transactionFee": 2.00,
-    "refundOfferId": "7961ab5b202642628e9595498ffea083",
-    "isRefundable": true   
+  "status": 0,
+  "msg": "success",
+  "refundStatus": 0,
+  "currency": "USD",
+  "originalTotalFareAmount": 37.14,
+  "originalTotalAncillaryAmount": 8.12,
+  "originalTotalAmount": 45.26,
+  "airlinePenaltyAmountForFare": 0,
+  "airlinePenaltyAmountForAncillaries": 0,
+  "airlinePenaltyAmount": 0,
+  "estimatedRefundAmount": 45.26,
+  "transactionFee": 2,
+  "refundOfferId": "7961ab5b202642628e9595498ffea083",
+  "isRefundable": true,
+  "refundCode": "",
+  "cancelReason": ""
 }
 ```
 {% endtab %}
