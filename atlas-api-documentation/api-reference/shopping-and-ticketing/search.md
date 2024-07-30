@@ -1440,10 +1440,9 @@ Baggage pieces:
 
 Baggage Weight, in KGs is mentioned if the airline offers free baggage.
 
-```
 0 : No free baggage
+
 -1: No limitation on weight. 
-```
 
 **`baggageSize` **<mark style="color:blue;">**string**</mark>
 
@@ -1512,9 +1511,8 @@ Total refund fee (for the most restrictive condition):
 
 If refNoshow = H, it should not be "null".
 
-```
-                   This value includes the refund fee and no-show penalty
-```
+This value includes the refund fee and no-show penalty
+
 **`ruleList` Array<ruleList>**
 
 For internal use only.
@@ -1842,7 +1840,7 @@ The free checked-in or cabin baggage allowance for each fare is available within
 
     Baggage Weight, with the unit of KG
 
-    0 means No Free baggage
+    0 means No Free baggage 
     -1 meas No limitation on weight. 
 
 *   **baggageSize **<mark style="color:blue;">**string**</mark>
