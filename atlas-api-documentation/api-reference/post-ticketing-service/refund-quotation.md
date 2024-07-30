@@ -1,4 +1,4 @@
-    # Refund Quotation
+# Refund Quotation
 
 ### Dependency
 
@@ -149,58 +149,54 @@ No preceding function needs to be carried out.
     True : Refundable
 
     False: Non-Refundable
-
 *   **refundTickets Array<**<mark style="color:blue;"> **<mark style="color:green;">**Required**</mark>
 
     The refund calculation for each of the passengers whose refund quote has been requested.
-    
-          *   **firstName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+  *   **Journey **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+  
+      Each node denotes the direction of the journey. The first node is the outbound direction and the second node is the inbound direction.
+      *   **firstName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-              First name of the passenger who wants to refund
-          *   **lastName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+          First name of the passenger who wants to refund
+      *   **lastName **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-              Last name of the passenger who wants to refund
-          *   **ticketNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+          Last name of the passenger who wants to refund
+      *   **ticketNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-              The PNR received from the airline in the retrieve PNR response.
-          *   **currency **<mark style="color:blue;">**string**</mark>
+          The PNR received from the airline in the retrieve PNR response.
+      *   **currency **<mark style="color:blue;">**string**</mark>
 
-              The currency of the fares and amount below.
-          *   **originalTotalFareAmount **<mark style="color:blue;">**decimal**</mark>
+          The currency of the fares and amount below.
+      *   **originalTotalFareAmount **<mark style="color:blue;">**decimal**</mark>
 
-              Original fare of the selected passengers and flights
-          *   **originalTotalAncillaryAmount **<mark style="color:blue;">**decimal**</mark>
+          Original fare of the selected passengers and flights
+      *   **originalTotalAncillaryAmount **<mark style="color:blue;">**decimal**</mark>
 
-              Original amount of ancillaries related to the selected passengers and flights
-          *   **originalTotalAmount **<mark style="color:blue;">**decimal**</mark>
+          Original amount of ancillaries related to the selected passengers and flights
+      *    **originalTotalAmount **<mark style="color:blue;">**decimal**</mark>
 
-              \= originalTotalFareAmount + originalTotalAncillaryAmount
+           \= originalTotalFareAmount + originalTotalAncillaryAmount
+      *    **refundableAmountForFare **<mark style="color:blue;">**decimal**</mark>
 
-          *   **refundableAmountForFare **<mark style="color:blue;">**decimal**</mark>
+           The amount refundable from the fare.
+      *    **refundableAmountForAncillaries **<mark style="color:blue;">**decimal**</mark>
 
-              The amount refundable from the fare.
-          *   **refundableAmountForAncillaries **<mark style="color:blue;">**decimal**</mark>
+           The amount refundable from the ancillaries.           
+      *    **airlinePenaltyAmountForFare **<mark style="color:blue;">**decimal**</mark>
 
-              The amount refundable from the ancillaries.
-              
-          *   **airlinePenaltyAmountForFare **<mark style="color:blue;">**decimal**</mark>
+           Airline's penalty amount for the fare
+      *    **airlinePenaltyAmountForAncillaries **<mark style="color:blue;">**decimal**</mark>
 
-              Airline's penalty amount for the fare
-          *   **airlinePenaltyAmountForAncillaries **<mark style="color:blue;">**decimal**</mark>
+           Airline's penalty amount for the ancillaries
+      *    **airlinePenaltyAmount **<mark style="color:blue;">**decimal**</mark>
 
-              Airline's penalty amount for the ancillaries
-          *   **airlinePenaltyAmount **<mark style="color:blue;">**decimal**</mark>
+           \= airlinePenaltyAmountForFare + airlinePenaltyAmountForAncillaries
+      *    **estimatedRefundAmount **<mark style="color:blue;">**string**</mark>
 
-              \= airlinePenaltyAmountForFare + airlinePenaltyAmountForAncillaries
-          *   **estimatedRefundAmount **<mark style="color:blue;">**string**</mark>
+           Estimated amount which can be got back for this refund.
+*    **refundRules Array<**<mark style="color:blue;"> **<mark style="color:green;">**Required**</mark>
 
-              Estimated amount which can be got back for this refund.
-
- *   **refundRules Array<**<mark style="color:blue;"> **<mark style="color:green;">**Required**</mark>
-
-    The refund rules for the fare whose refund quote has been requested.
-
-          
+     The refund rules for the fare whose refund quote has been requested.  
     
 {% endtab %}
 
