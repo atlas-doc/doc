@@ -36,9 +36,17 @@ Refund quotation function should be called in prior of this call
 {% tab title="Schema" %}
 *   **refundStatus **<mark style="color:blue;">**int**</mark>
 
-    0: success
+   The present status of the refund.
 
-    2: System error
+    The options are:
+
+    0: Submitted (The customer has submitted to Atlas)
+
+    1: Airline processing (Submitted to airline by Atlas)
+
+    2: Refunded
+
+    3: Rejected
     
     **msg **<mark style="color:blue;">**string**</mark>
 
