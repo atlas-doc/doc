@@ -93,6 +93,41 @@ Refund quotation function should be called in prior of this call
 *   **cancelReason **<mark style="color:blue;">**string**</mark>
 
     The reason why the refund was cancelled.
+
+    The refund reasons are:
+
+    Not satisfy the condition
+
+    Booking not flight changed
+
+    Voluntary non-refundable
+
+    Fare rules are non-refundable
+
+    Only vendor refunds available
+
+    Only voucher refunds available
+
+    The user cancels the refund
+
+    Ticket already used
+
+    Excel refund
+
+    Reapply
+
+    Refund by yourself
+
+    Need contact airline yourself
+
+    Checked in
+
+    No money to return
+
+    Payment with client VCC
+
+    Eng - voluntary cancellation
+    
 {% endtab %}
 
 {% tab title="Samples" %}
