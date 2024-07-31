@@ -98,11 +98,19 @@ No preceding function needs to be carried out.
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **status **<mark style="color:blue;">**int**</mark>
+*   **refundStatus **<mark style="color:blue;">**string**</mark>
 
-    0: success
+    The present status of the refund.
 
-    2: System error
+    The options are:
+
+    0: Submitted (The customer has submitted to Atlas)
+
+    1: Airline processing (Submitted to airline by Atlas)
+
+    2: Refunded
+
+    3: Rejected
     
 *   **msg **<mark style="color:blue;">**string**</mark>
 
@@ -263,7 +271,7 @@ No preceding function needs to be carried out.
 {% tab title="Samples" %}
 ```
 {
-  "status": 0,
+  "refundStatus": 0,
   "msg": "success",
   "currency": "USD",
   "originalTotalFareAmount": 1200,
