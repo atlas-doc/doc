@@ -1,4 +1,4 @@
-# Refund Status Query
+# Query Refund Status 
 
 ### Dependency
 
@@ -54,7 +54,7 @@ No preceding function needs to be carried out.
 {% tab title="Samples" %}
 ```json
 {
-  "status": 0,
+  "refundStatus": 0,
   "msg": "",
   "refundOrders": [
     {
