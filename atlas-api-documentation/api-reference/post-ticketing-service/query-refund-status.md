@@ -38,6 +38,16 @@ No preceding function needs to be carried out.
 *   **status **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     The present status of the refund.
+
+    The options are:
+
+    0: Submitted (The customer has submitted to Atlas)
+
+    1: Airline processing (Submitted to airline by Atlas)
+
+    2: Refunded
+
+    3: Rejected
     
 {% endtab %}
 
@@ -100,7 +110,6 @@ No preceding function needs to be carried out.
      ],
      "refundRules": [{
         "airline": "RS",
-        "status": "T",
         "startMinute": 525600,
         "endMinute": 0,
         "ruleType": "1", 
