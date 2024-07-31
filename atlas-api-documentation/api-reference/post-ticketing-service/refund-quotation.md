@@ -314,7 +314,6 @@ No preceding function needs to be carried out.
   "refundRules": [
     {
       "airline": "RS",
-      "status": "T",
       "startMinute": 525600,
       "endMinute": 0,
       "ruleType": "1",
