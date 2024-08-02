@@ -227,7 +227,7 @@ No preceding function needs to be carried out.
      *    **taxRefundable **<mark style="color:blue;">**boolean**</mark>
 
            Is tax refund available?
-     *    **refundable **<mark style="color:blue;">**boolean**</mark>
+     *    **fareRefundable **<mark style="color:blue;">**boolean**</mark>
 
            Is the ticket refundable?
      *    **refundableAncillaries **<mark style="color:blue;">**string**</mark>
