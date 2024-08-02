@@ -34,7 +34,7 @@ Refund quotation function should be called in prior of this call
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **refundStatus **<mark style="color:blue;">**int**</mark>
+*  **refundStatus **<mark style="color:blue;">**int**</mark>
 
    The present status of the refund.
 
@@ -47,6 +47,12 @@ Refund quotation function should be called in prior of this call
     2: Refunded
 
     3: Rejected
+
+*   **status **<mark style="color:blue;">**int**</mark>
+
+    0: success
+
+    2: System error
     
     **msg **<mark style="color:blue;">**string**</mark>
 
@@ -142,36 +148,35 @@ Refund quotation function should be called in prior of this call
 ```
 {
     "refundStatus": 0,
-    "refundCode": "202407-0028",
+    "refundCode": "202408-0006",
     "cancelReason": "",
     "currency": "USD",
-    "originalTotalFareAmount": 103.66,
-    "originalTotalAncillaryAmount": 0.00,
-    "originalTotalAmount": 103.66,
-    "airlinePenaltyAmountForFare": 5.86,
-    "airlinePenaltyAmountForAncillaries": 0.00,
-    "airlinePenaltyAmount": 5.86,
-    "estimatedRefundAmount": 97.80,
-    "transactionFee": 2.23,
-    "refundOfferId": "q_7dd86f06ce794a0bb1ed8a22eca2167d",
+    "originalTotalFareAmount": 141.19,
+    "originalTotalAncillaryAmount": 381.00,
+    "originalTotalAmount": 522.19,
+    "airlinePenaltyAmountForFare": 66.20,
+    "airlinePenaltyAmountForAncillaries": 381.00,
+    "airlinePenaltyAmount": 447.20,
+    "estimatedRefundAmount": 74.99,
+    "transactionFee": 2.00,
+    "refundOfferId": "q_9e08be9b670c4ba590704d99b3650113",
     "isRefundable": true,
     "refundTickets": [
         {
-            "lastName": "222",
-            "firstName": "222",
-            "ticketNo": "S15051",
+            "lastName": "ZHANG",
+            "firstName": "SAN",
+            "ticketNo": "S43484",
             "currency": "USD",
-            "originalFareAmount": 103.66,
-            "originalAncillaryAmount": 0.00,
-            "originalTotalAmount": 103.66,
-            "refundableAmountForFare": 97.80,
+            "originalFareAmount": 141.19,
+            "originalAncillaryAmount": 381.00,
+            "originalTotalAmount": 522.19,
+            "refundableAmountForFare": 74.99,
             "refundableAmountForAncillaries": 0.00,
-            "actualRefundAmount": 0.00,
             "refundReason": "1",
-            "airlinePenaltyAmountForFare": 5.86,
-            "airlinePenaltyAmountForAncillaries": 0.00,
-            "airlinePenaltyAmount": 5.86,
-            "estimatedRefundAmount": 97.80
+            "airlinePenaltyAmountForFare": 66.20,
+            "airlinePenaltyAmountForAncillaries": 381.00,
+            "airlinePenaltyAmount": 447.20,
+            "estimatedRefundAmount": 74.99
         }
     ],
     "refundRules": [
@@ -179,7 +184,7 @@ Refund quotation function should be called in prior of this call
             "airline": "LJ",
             "ruleType": "1",
             "passengerType": "",
-            "penaltyAmount": "1000.00 KRW",
+            "penaltyAmount": "480.00 CNY",
             "penaltyPercent": 0,
             "penaltyPercentBase": null,
             "airlineFee": "0",
@@ -187,74 +192,13 @@ Refund quotation function should be called in prior of this call
             "fareRefundable": true,
             "refundableAncillaries": [],
             "startMinute": 525600,
-            "endMinute": 87840,
-            "status": "H"
+            "endMinute": 50
         },
         {
             "airline": "LJ",
             "ruleType": "1",
             "passengerType": "",
-            "penaltyAmount": "3000.00 KRW",
-            "penaltyPercent": 0,
-            "penaltyPercentBase": null,
-            "airlineFee": "0",
-            "taxRefundable": true,
-            "fareRefundable": true,
-            "refundableAncillaries": [],
-            "startMinute": 87840,
-            "endMinute": 44640,
-            "status": "H"
-        },
-        {
-            "airline": "LJ",
-            "ruleType": "1",
-            "passengerType": "",
-            "penaltyAmount": "4000.00 KRW",
-            "penaltyPercent": 0,
-            "penaltyPercentBase": null,
-            "airlineFee": "0",
-            "taxRefundable": true,
-            "fareRefundable": true,
-            "refundableAncillaries": [],
-            "startMinute": 44640,
-            "endMinute": 21600,
-            "status": "H"
-        },
-        {
-            "airline": "LJ",
-            "ruleType": "1",
-            "passengerType": "",
-            "penaltyAmount": "8000.00 KRW",
-            "penaltyPercent": 0,
-            "penaltyPercentBase": null,
-            "airlineFee": "0",
-            "taxRefundable": true,
-            "fareRefundable": true,
-            "refundableAncillaries": [],
-            "startMinute": 21600,
-            "endMinute": 2880,
-            "status": "H"
-        },
-        {
-            "airline": "LJ",
-            "ruleType": "1",
-            "passengerType": "",
-            "penaltyAmount": "10000.00 KRW",
-            "penaltyPercent": 0,
-            "penaltyPercentBase": null,
-            "airlineFee": "0",
-            "taxRefundable": true,
-            "fareRefundable": true,
-            "refundableAncillaries": [],
-            "startMinute": 2880,
-            "endMinute": 50,
-            "status": "H"
-        },
-        {
-            "airline": "LJ",
-            "ruleType": "1",
-            "passengerType": "",
-            "penaltyAmount": "25000.00 KRW",
+            "penaltyAmount": "1280.00 CNY",
             "penaltyPercent": 0,
             "penaltyPercentBase": null,
             "airlineFee": "0",
@@ -262,14 +206,13 @@ Refund quotation function should be called in prior of this call
             "fareRefundable": true,
             "refundableAncillaries": [],
             "startMinute": 50,
-            "endMinute": 0,
-            "status": "H"
+            "endMinute": 0
         },
         {
             "airline": "LJ",
             "ruleType": "1",
             "passengerType": "",
-            "penaltyAmount": "25000.00 KRW",
+            "penaltyAmount": "1280.00 CNY",
             "penaltyPercent": 0,
             "penaltyPercentBase": null,
             "airlineFee": "0",
@@ -277,8 +220,7 @@ Refund quotation function should be called in prior of this call
             "fareRefundable": true,
             "refundableAncillaries": [],
             "startMinute": 0,
-            "endMinute": -525600,
-            "status": "H"
+            "endMinute": -525600
         }
     ],
     "referenceInformation": {
@@ -293,6 +235,7 @@ Refund quotation function should be called in prior of this call
     "status": 0,
     "msg": null
 }
+
 ```
 {% endtab %}
 {% endtabs %}
