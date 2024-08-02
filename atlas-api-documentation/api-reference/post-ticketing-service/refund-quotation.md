@@ -54,42 +54,30 @@ No preceding function needs to be carried out.
 {% tab title="Samples" %}
 ```json
 {
-  "orderNo": "TEST20220209163159425",
-  "refundRequestList": [
-    {
-      "firstName": "TEST",
-      "lastName": "ONE",
-      "segments": [
+    "orderNo":"TESTA20240725164512131",
+    "refundRequestList":[
         {
-          "depDate": "20220210",
-          "flightNo": "RS123",
-          "depAirport": "SEL",
-          "arrAirport": "TYO"
+            "lastName":"ZHANG",
+            "firstName":"SAN",
+            "segments":[
+                {
+                    "depDate":"20240827",
+                    "flightNo":"LJ820",
+                    "depAirport":"PVG",
+                    "arrAirport":"CJU"
+                },
+                {
+                    "depDate":"20240828",
+                    "flightNo":"LJ819",
+                    "depAirport":"CJU",
+                    "arrAirport":"PVG"
+                }
+                ],
+            "refundReason":"1"
         }
-      ],
-      "refundReason": "1"
-    },
-    {
-      "firstName": "TEST",
-      "lastName": "TWO",
-      "segments": [
-        {
-          "depDate": "20220210",
-          "flightNo": "RS123",
-          "depAirport": "SEL",
-          "arrAirport": "TYO"
-        },
-        {
-          "depDate": "20220212",
-          "flightNo": "RS456",
-          "depAirport": "TYO",
-          "arrAirport": "SEL"
-        }
-      ],
-      "refundReason": "1"
-    }
-  ]
+    ]
 }
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -98,19 +86,11 @@ No preceding function needs to be carried out.
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **refundStatus **<mark style="color:blue;">**string**</mark>
+*   **status **<mark style="color:blue;">**int**</mark>
 
-    The present status of the refund.
+    0: success
 
-    The options are:
-
-    0: Submitted (The customer has submitted to Atlas)
-
-    1: Airline processing (Submitted to airline by Atlas)
-
-    2: Refunded
-
-    3: Rejected
+    2: System error
     
 *   **msg **<mark style="color:blue;">**string**</mark>
 
@@ -271,83 +251,92 @@ No preceding function needs to be carried out.
 {% tab title="Samples" %}
 ```
 {
-  "refundStatus": 0,
-  "msg": "success",
-  "currency": "USD",
-  "originalTotalFareAmount": 1200,
-  "originalTotalAncillaryAmount": 0,
-  "originalTotalAmount": 1200,
-  "airlinePenaltyAmountForFare": 500,
-  "airlinePenaltyAmountForAncillaries": 200,
-  "airlinePenaltyAmount": 700,
-  "estimatedRefundAmount": 500,
-  "transactionFee": 1,
-  "refundOfferId": "12610f6a-1d00-499e-9fdb-664f4b5ea60b",
-  "isRefundable": true,
-  "refundTickets": [
-    {
-      "firstName": "TEST",
-      "lastName": "ONE",
-      "ticketNo": "ABXSJI",
-      "currency": "USD",
-      "originalFareAmount": 600,
-      "originalAncillaryAmount": 0,
-      "originalTotalAmount": 600,
-      "refundableAmountForFare": 10,
-      "refundableAmountForAncillaries": 0,
-      "refundReason": "1",
-      "airlinePenaltyAmountForFare": 250,
-      "airlinePenaltyAmountForAncillaries": 0,
-      "airlinePenaltyAmount": 250,
-      "estimatedRefundAmount": 250
+    "currency": "USD",
+    "originalTotalFareAmount": 141.19,
+    "originalTotalAncillaryAmount": 381.00,
+    "originalTotalAmount": 522.19,
+    "airlinePenaltyAmountForFare": 66.20,
+    "airlinePenaltyAmountForAncillaries": 381.00,
+    "airlinePenaltyAmount": 447.20,
+    "estimatedRefundAmount": 74.99,
+    "transactionFee": 2.00,
+    "refundOfferId": "q_56dec16d1fe2472095426d0286cc1965",
+    "isRefundable": true,
+    "refundTickets": [
+        {
+            "lastName": "ZHANG",
+            "firstName": "SAN",
+            "ticketNo": "S43484",
+            "currency": "USD",
+            "originalFareAmount": 141.19,
+            "originalAncillaryAmount": 381.00,
+            "originalTotalAmount": 522.19,
+            "refundableAmountForFare": 74.99,
+            "refundableAmountForAncillaries": 0.00,
+            "refundReason": "1",
+            "airlinePenaltyAmountForFare": 66.20,
+            "airlinePenaltyAmountForAncillaries": 381.00,
+            "airlinePenaltyAmount": 447.20,
+            "estimatedRefundAmount": 74.99
+        }
+    ],
+    "refundRules": [
+        {
+            "airline": "LJ",
+            "ruleType": "1",
+            "passengerType": "",
+            "penaltyAmount": "480.00 CNY",
+            "penaltyPercent": 0,
+            "penaltyPercentBase": null,
+            "airlineFee": "0",
+            "taxRefundable": true,
+            "fareRefundable": true,
+            "refundableAncillaries": [],
+            "startMinute": 525600,
+            "endMinute": 50
+        },
+        {
+            "airline": "LJ",
+            "ruleType": "1",
+            "passengerType": "",
+            "penaltyAmount": "1280.00 CNY",
+            "penaltyPercent": 0,
+            "penaltyPercentBase": null,
+            "airlineFee": "0",
+            "taxRefundable": true,
+            "fareRefundable": true,
+            "refundableAncillaries": [],
+            "startMinute": 50,
+            "endMinute": 0
+        },
+        {
+            "airline": "LJ",
+            "ruleType": "1",
+            "passengerType": "",
+            "penaltyAmount": "1280.00 CNY",
+            "penaltyPercent": 0,
+            "penaltyPercentBase": null,
+            "airlineFee": "0",
+            "taxRefundable": true,
+            "fareRefundable": true,
+            "refundableAncillaries": [],
+            "startMinute": 0,
+            "endMinute": -525600
+        }
+    ],
+    "referenceInformation": {
+        "atlasPolicy": null,
+        "airline": "LJ",
+        "refundReason": "1",
+        "airlinePolicy": null,
+        "ruleAccuracy": null,
+        "atlasFulfillmentDuration": null,
+        "airlineRefundDuration": null
     },
-    {
-      "firstName": "TEST",
-      "lastName": "TWO",
-      "ticketNo": "ABXSJI",
-      "currency": "USD",
-      "originalFareAmount": 600,
-      "originalAncillaryAmount": 0,
-      "originalTotalAmount": 600,
-      "refundableAmountForFare": 10,
-      "refundableAmountForAncillaries": 0,
-      "actualRefundAmount": 10,
-      "refundReason": "1",
-      "airlinePenaltyAmountForFare": 250,
-      "airlinePenaltyAmountForAncillaries": 0,
-      "airlinePenaltyAmount": 250,
-      "estimatedRefundAmount": 250
-    }
-  ],
-  "refundRules": [
-    {
-      "airline": "RS",
-      "startMinute": 525600,
-      "endMinute": 0,
-      "ruleType": "1",
-      "passengerType": "ADT/CHD/INF",
-      "penaltyAmount": "",
-      "penaltyPercent": "",
-      "penaltyPercentBase": "fare+tax",
-      "airlineFee": "",
-      "taxRefundable": true,
-      "refundable": true,
-      "refundableAncillaries": [
-        "StandardCheckInBaggage",
-        "CabinBaggage",
-        "CabinBaggageUnderSeat",
-        "CabinBaggageOverheadLocker",
-        "Infant"
-      ]
-    }
-  ],
-  "referenceInformation": {
-    "airline": "RS",
-    "refundReason": "1",
-    "atlasPolicy": "",
-    "airlinePolicy": ""
-  }
+    "status": 0,
+    "msg": null
 }
+
 ```
 {% endtab %}
 {% endtabs %}
