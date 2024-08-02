@@ -35,7 +35,7 @@ No preceding function needs to be carried out.
 
 {% tabs %}
 {% tab title="Schema" %}
-*   **status **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+*   **refundStatus **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     The present status of the refund.
 
@@ -54,87 +54,133 @@ No preceding function needs to be carried out.
 {% tab title="Samples" %}
 ```json
 {
-  "refundStatus": 0,
-  "msg": "",
-  "refundOrders": [
-    {
-      "orderNo": "TEST20220209163159425",
-      "refundCode": "202407-0028",
-      "currency": "USD",
-      "originalTotalFareAmount": "500",
-      "originalTotalAncillaryAmount": "200",
-      "originalTotalAmount": "700",
-      
-      "airlinePenaltyAmountForFare": "100",
-      "airlinePenaltyAmountForAncillaries": "200",
-      "airlinePenaltyAmount": "50",
-      
-      "estimatedRefundAmount": "350",
-      
-      "transactionFee": "2.50",
-      
-      "refundTickets": [{
-        "firstName": "TEST",
-        "lastName": "ONE",
-        "ticketNo": "ABXSJI",
-        "currency": "USD",
-        "originalFareAmount": 600,
-        "originalAncillaryAmount": 0,
-        "originalTotalAmount": 600,
-        "refundableAmountForFare": 10,
-        "refundableAmountForAncillaries": 0,
-        "actualRefundAmount": 10,
-        "refundReason": "1",
-        "airlinePenaltyAmountForFare": 250,
-        "airlinePenaltyAmountForAncillaries": 0,
-        "airlinePenaltyAmount": 250,
-        "estimatedRefundAmount": 250
-      },
-      {
-        "firstName": "TEST",
-        "lastName": "TWO",
-        "ticketNo": "ABXSJI",
-        "currency": "USD",
-        "originalFareAmount": 600,
-        "originalAncillaryAmount": 0,
-        "originalTotalAmount": 600,
-        "refundableAmountForFare": 10,
-        "refundableAmountForAncillaries": 0,
-        "actualRefundAmount": 10,
-        "refundReason": "1",
-        "airlinePenaltyAmountForFare": 250,
-        "airlinePenaltyAmountForAncillaries": 0,
-        "airlinePenaltyAmount": 250,
-        "estimatedRefundAmount": 250
-      }
-     ],
-     "refundRules": [{
-        "airline": "RS",
-        "startMinute": 525600,
-        "endMinute": 0,
-        "ruleType": "1", 
-        "passengerType": "ADT/CHD/INF",
-        "penaltyAmount": "", 
-        "penaltyPercent": "", 
-        "penaltyPercentBase": "fare+tax", 
-        "airlineFee": "", 
-        "taxRefundable": true, 
-        "refundable": true,    
-        "refundableAncillaries": [
-          "StandardCheckInBaggage",
-          "CabinBaggage",
-          "CabinBaggageUnderSeat",
-          "CabinBaggageOverheadLocker",
-          "Infant"
-        ]                                      
-      }
+    "refundOrders": [
+        {
+            "orderNo": "TESTA20240725164512131",
+            "refundCode": "202408-0006",
+            "currency": "USD",
+            "originalTotalFareAmount": 141.19,
+            "originalTotalAncillaryAmount": 381.00,
+            "originalTotalAmount": 522.19,
+            "airlinePenaltyAmountForFare": 66.20,
+            "airlinePenaltyAmountForAncillaries": 381.00,
+            "airlinePenaltyAmount": 447.20,
+            "estimatedRefundAmount": 74.99,
+            "transactionFee": 2.00,
+            "refundTickets": [
+                {
+                    "lastName": "ZHANG",
+                    "firstName": "SAN",
+                    "ticketNo": "S43484",
+                    "currency": "USD",
+                    "originalFareAmount": 141.19,
+                    "originalAncillaryAmount": 381.00,
+                    "originalTotalAmount": 522.19,
+                    "refundableAmountForFare": 74.99,
+                    "refundableAmountForAncillaries": 0.00,
+                    "refundReason": "1",
+                    "airlinePenaltyAmountForFare": 66.20,
+                    "airlinePenaltyAmountForAncillaries": 381.00,
+                    "airlinePenaltyAmount": 447.20,
+                    "estimatedRefundAmount": 74.99
+                }
+            ],
+            "refundRules": [
+                {
+                    "airline": "LJ",
+                    "ruleType": "1",
+                    "passengerType": "",
+                    "penaltyAmount": "480.00 CNY",
+                    "penaltyPercent": 0,
+                    "penaltyPercentBase": null,
+                    "airlineFee": "0",
+                    "taxRefundable": true,
+                    "fareRefundable": true,
+                    "refundableAncillaries": [],
+                    "startMinute": 525600,
+                    "endMinute": 50
+                },
+                {
+                    "airline": "LJ",
+                    "ruleType": "1",
+                    "passengerType": "",
+                    "penaltyAmount": "480.00 CNY",
+                    "penaltyPercent": 0,
+                    "penaltyPercentBase": null,
+                    "airlineFee": "0",
+                    "taxRefundable": true,
+                    "fareRefundable": true,
+                    "refundableAncillaries": [],
+                    "startMinute": 525600,
+                    "endMinute": 50
+                },
+                {
+                    "airline": "LJ",
+                    "ruleType": "1",
+                    "passengerType": "",
+                    "penaltyAmount": "1280.00 CNY",
+                    "penaltyPercent": 0,
+                    "penaltyPercentBase": null,
+                    "airlineFee": "0",
+                    "taxRefundable": true,
+                    "fareRefundable": true,
+                    "refundableAncillaries": [],
+                    "startMinute": 50,
+                    "endMinute": 0
+                },
+                {
+                    "airline": "LJ",
+                    "ruleType": "1",
+                    "passengerType": "",
+                    "penaltyAmount": "1280.00 CNY",
+                    "penaltyPercent": 0,
+                    "penaltyPercentBase": null,
+                    "airlineFee": "0",
+                    "taxRefundable": true,
+                    "fareRefundable": true,
+                    "refundableAncillaries": [],
+                    "startMinute": 50,
+                    "endMinute": 0
+                },
+                {
+                    "airline": "LJ",
+                    "ruleType": "1",
+                    "passengerType": "",
+                    "penaltyAmount": "1280.00 CNY",
+                    "penaltyPercent": 0,
+                    "penaltyPercentBase": null,
+                    "airlineFee": "0",
+                    "taxRefundable": true,
+                    "fareRefundable": true,
+                    "refundableAncillaries": [],
+                    "startMinute": 0,
+                    "endMinute": -525600
+                },
+                {
+                    "airline": "LJ",
+                    "ruleType": "1",
+                    "passengerType": "",
+                    "penaltyAmount": "1280.00 CNY",
+                    "penaltyPercent": 0,
+                    "penaltyPercentBase": null,
+                    "airlineFee": "0",
+                    "taxRefundable": true,
+                    "fareRefundable": true,
+                    "refundableAncillaries": [],
+                    "startMinute": 0,
+                    "endMinute": -525600
+                }
+            ],
+            "refundStatus": 0,
+            "actualRefundAmount": 0.00,
+            "cancelReason": "",
+            "refundOfferId": "q_9e08be9b670c4ba590704d99b3650113"
+        }
     ],
-    "actualRefundAmount": 0,
-    "cancelReason": "",
-    "refundOfferId": "12610f6a-1d00-499e-9fdb-664f4b5ea60b"
-    }
-  ]
+    "status": 0,
+    "msg": null
 }
+
 
 ```
 {% endtab %}
