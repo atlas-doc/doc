@@ -328,10 +328,7 @@ No preceding function needs to be carried out.
         "atlasPolicy": null,
         "airline": "LJ",
         "refundReason": "1",
-        "airlinePolicy": null,
-        "ruleAccuracy": null,
-        "atlasFulfillmentDuration": null,
-        "airlineRefundDuration": null
+        "airlinePolicy": null
     },
     "status": 0,
     "msg": null
