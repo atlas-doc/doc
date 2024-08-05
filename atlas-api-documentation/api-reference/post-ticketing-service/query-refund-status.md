@@ -48,6 +48,24 @@ No preceding function needs to be carried out.
     2: Refunded
 
     3: Rejected
+
+*   **cancelReason **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    The different reasons why the refund can be rejected are:
+
+    Does not match airline policy.
+
+    There is no schedule change from the airline side. Please refer the ticket Fare Rules available in ATRIP flight deck for cancellation charges.
+
+    Voluntary Cancellation - Non-Refundable
+
+    As per airline policy, only voucher refund is available for the ticket.
+
+    Refund request cancelled by the user.
+
+    Travel has been completed by the passenger.
+
+    Refund not yet received from the airline. Please try again later.
     
 {% endtab %}
 
