@@ -4,8 +4,8 @@
 
 No preceding function needs to be carried out.
 
-### Endpoint {% debug uid="RefundQuotation_1.0" %}{% enddebug %}
-
+### Endpoint {% debug uid="RefundQuery_1.0" %}{% enddebug %}
+    
 [https://sandbox.atriptech.com/queryRefundOrders.do](https://sandbox.atriptech.com/queryRefundOrders.do)
 
 ## Request
