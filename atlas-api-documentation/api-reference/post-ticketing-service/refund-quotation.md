@@ -46,7 +46,9 @@ No preceding function needs to be carried out.
 
     1: Voluntary
 
-    2: Post-flight tax refund
+    2: Tax refund after departure
+
+    If this field has not been populated, the default of "Voluntary (1)" refund will be used.
 
     
 {% endtab %}
@@ -98,7 +100,7 @@ No preceding function needs to be carried out.
     
     The 'msg' element is for description of the results. Please DO NOT use this field to check the success or failure of the request. Only use the 'status' code to check the result.
 
-*   **RefundResponse**</mark>**> **<mark style="color:green;">**Required**</mark>
+*   **RefundResponse **<mark style="color:green;">**Required**</mark>
 
 *   **currency **<mark style="color:blue;">**string**</mark>
 
@@ -137,7 +139,7 @@ No preceding function needs to be carried out.
     True : Refundable
 
     False: Non-Refundable
-*   **refundTickets Array<**<mark style="color:blue;"> **<mark style="color:green;">**Required**</mark>
+*   **refundTickets Array **<mark style="color:green;">**Required**</mark>
 
     The refund calculation for each of the passengers whose refund quote has been requested.
   *   **Journey **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
@@ -179,10 +181,10 @@ No preceding function needs to be carried out.
       *    **airlinePenaltyAmount **<mark style="color:blue;">**decimal**</mark>
 
            \= airlinePenaltyAmountForFare + airlinePenaltyAmountForAncillaries
-      *    **estimatedRefundAmount **<mark style="color:blue;">**string**</mark>
+      *    **estimatedRefundAmount **<mark style="color:blue;">**decimal**</mark>
 
            Estimated amount which can be got back for this refund.
-*    **refundRules Array<**<mark style="color:blue;"> **<mark style="color:green;">**Required**</mark>
+*    **refundRules Array **<mark style="color:green;">**Required**</mark>
 
      The refund rules for the fare whose refund quote has been requested.
       *    **airline **<mark style="color:blue;">**string**</mark>
@@ -215,13 +217,13 @@ No preceding function needs to be carried out.
       *    **passengerType **<mark style="color:blue;">**string**</mark>
 
            The passenger types for whom the refund rules apply.
-     *    **penaltyAmount **<mark style="color:blue;">**int**</mark>
+     *    **penaltyAmount **<mark style="color:blue;">**decimal**</mark>
 
            Airline cancellation fees.
      *    **penaltyPercentBase **<mark style="color:blue;">**string**</mark>
 
            The calculation on which the penalty percentage is based. The options are 1) fare+tax  2) fare
-     *    **airlineFee **<mark style="color:blue;">**int**</mark>
+     *    **airlineFee **<mark style="color:blue;">**decimal**</mark>
 
            Airline refund fee.
      *    **taxRefundable **<mark style="color:blue;">**boolean**</mark>
