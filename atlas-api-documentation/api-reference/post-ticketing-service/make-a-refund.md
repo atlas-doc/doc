@@ -85,7 +85,7 @@ Refund quotation function should be called in prior of this call
 *   **airlinePenaltyAmount **<mark style="color:blue;">**decimal**</mark>
 
     \= airlinePenaltyAmountForFare + airlinePenaltyAmountForAncillaries
-*   **estimatedRefundAmount **<mark style="color:blue;">**string**</mark>
+*   **estimatedRefundAmount **<mark style="color:blue;">**decimal**</mark>
 
     Estimated amount which can be got back for this refund.
 *   **transactionFee **<mark style="color:blue;">**decimal**</mark>
@@ -110,37 +110,19 @@ Refund quotation function should be called in prior of this call
 
     The refund reasons are:
 
-    Not satisfy the condition
+    Does not match airline policy
 
-    Booking not flight changed
+    There is no schedule change from the airline side. Please refer the ticket Fare Rules available in ATRIP flight deck for cancellation charges.
 
-    Voluntary non-refundable
+    Voluntary Cancellation - Non-Refundable
 
-    Fare rules are non-refundable
+    As per airline policy, only voucher refund is available for the ticket
 
-    Only vendor refunds available
+    Refund request cancelled by the user
 
-    Only voucher refunds available
+    Travel has been completed by the passenger
 
-    The user cancels the refund
-
-    Ticket already used
-
-    Excel refund
-
-    Reapply
-
-    Refund by yourself
-
-    Need contact airline yourself
-
-    Checked in
-
-    No money to return
-
-    Payment with client VCC
-
-    Eng - voluntary cancellation
+    Refund not yet received from the airline. Please try again later.
     
 {% endtab %}
 
