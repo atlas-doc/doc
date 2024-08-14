@@ -256,9 +256,7 @@ Please note the below while initiating a refund transaction.
            CabinBaggageUnderSeat
 
            CabinBaggageOverheadLocker
-
-           Infant   
-      
+         
 {% endtab %}
 
 {% tab title="Samples" %}
