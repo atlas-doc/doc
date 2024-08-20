@@ -57,7 +57,7 @@ Please note the below while initiating a refund transaction.
 
     1: Voluntary
 
-    2: Tax refund after departure
+    2: Tax refund after departure for non-refundable tickets (Only available for limited airlines, please contact the accout managers if you are interested in this option)
 
     If this field has not been populated, the default of "Voluntary (1)" refund will be used.
 
