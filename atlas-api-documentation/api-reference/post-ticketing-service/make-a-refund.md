@@ -123,7 +123,13 @@ Refund quotation function should be called in prior of this call
     Travel has been completed by the passenger
 
     Refund not yet received from the airline. Please try again later.
-    
+*   **refundReason string **Optional
+
+    0: Involuntary
+
+    1: Voluntary
+
+    2: Tax refund after departure for non-refundable tickets (Only available for limited airlines, please contact the account managers if you are interested in this option)    
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -164,7 +170,7 @@ Refund quotation function should be called in prior of this call
     "refundRules": [
         {
             "airline": "LJ",
-            "ruleType": "1",
+            "refundReason": "1",
             "passengerType": "",
             "penaltyAmount": "480.00 CNY",
             "penaltyPercent": 0,
@@ -178,7 +184,7 @@ Refund quotation function should be called in prior of this call
         },
         {
             "airline": "LJ",
-            "ruleType": "1",
+            "refundReason": "1",
             "passengerType": "",
             "penaltyAmount": "1280.00 CNY",
             "penaltyPercent": 0,
@@ -192,7 +198,7 @@ Refund quotation function should be called in prior of this call
         },
         {
             "airline": "LJ",
-            "ruleType": "1",
+            "refundReason": "1",
             "passengerType": "",
             "penaltyAmount": "1280.00 CNY",
             "penaltyPercent": 0,
