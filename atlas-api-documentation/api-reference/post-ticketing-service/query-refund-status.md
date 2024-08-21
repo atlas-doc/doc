@@ -133,15 +133,6 @@ No preceding function needs to be carried out.
      *    **airline **<mark style="color:blue;">**string**</mark>
 
            2 character IATA code of the airline.
-     *    **ruleType **<mark style="color:blue;">**string**</mark>
-
-           Refund rule types (for the most restrictive condition):
-
-           T: Non refundable
-
-           H: Refundable with restrictions
-
-           F: Free for refund  
      *    **passengerType **<mark style="color:blue;">**string**</mark>
 
            The passenger types for whom the refund rules apply.
@@ -262,7 +253,7 @@ No preceding function needs to be carried out.
             "refundRules": [
                 {
                     "airline": "LJ",
-                    "ruleType": "1",
+                    "refundReason": "1",
                     "passengerType": "",
                     "penaltyAmount": "480.00 CNY",
                     "penaltyPercent": 0,
@@ -276,7 +267,7 @@ No preceding function needs to be carried out.
                 },
                 {
                     "airline": "LJ",
-                    "ruleType": "1",
+                    "refundReason": "1",
                     "passengerType": "",
                     "penaltyAmount": "480.00 CNY",
                     "penaltyPercent": 0,
@@ -290,7 +281,7 @@ No preceding function needs to be carried out.
                 },
                 {
                     "airline": "LJ",
-                    "ruleType": "1",
+                    "refundReason": "1",
                     "passengerType": "",
                     "penaltyAmount": "1280.00 CNY",
                     "penaltyPercent": 0,
@@ -304,7 +295,7 @@ No preceding function needs to be carried out.
                 },
                 {
                     "airline": "LJ",
-                    "ruleType": "1",
+                    "refundReason": "1",
                     "passengerType": "",
                     "penaltyAmount": "1280.00 CNY",
                     "penaltyPercent": 0,
@@ -318,7 +309,7 @@ No preceding function needs to be carried out.
                 },
                 {
                     "airline": "LJ",
-                    "ruleType": "1",
+                    "refundReason": "1",
                     "passengerType": "",
                     "penaltyAmount": "1280.00 CNY",
                     "penaltyPercent": 0,
@@ -332,7 +323,7 @@ No preceding function needs to be carried out.
                 },
                 {
                     "airline": "LJ",
-                    "ruleType": "1",
+                    "refundReason": "1",
                     "passengerType": "",
                     "penaltyAmount": "1280.00 CNY",
                     "penaltyPercent": 0,
