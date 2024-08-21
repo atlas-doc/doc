@@ -216,15 +216,6 @@ Please note the below while initiating a refund transaction.
       *    **endMinute **<mark style="color:blue;">**int**</mark>
 
            Ending time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
-      *    **ruleType **<mark style="color:blue;">**string**</mark>
-
-           Refund rule types:
-
-           T: Non refundable
-
-           H: Refundable with restrictions
-
-           F: Free Refund            
       *    **passengerType **<mark style="color:blue;">**string**</mark>
 
            The passenger types for whom the refund rules apply.
@@ -294,7 +285,7 @@ Please note the below while initiating a refund transaction.
     "refundRules": [
         {
             "airline": "LJ",
-            "ruleType": "1",
+            "refundReason": "1",
             "passengerType": "",
             "penaltyAmount": "480.00 CNY",
             "penaltyPercent": 0,
@@ -308,7 +299,7 @@ Please note the below while initiating a refund transaction.
         },
         {
             "airline": "LJ",
-            "ruleType": "1",
+            "refundReason": "1",
             "passengerType": "",
             "penaltyAmount": "1280.00 CNY",
             "penaltyPercent": 0,
@@ -322,7 +313,7 @@ Please note the below while initiating a refund transaction.
         },
         {
             "airline": "LJ",
-            "ruleType": "1",
+            "refundReason": "1",
             "passengerType": "",
             "penaltyAmount": "1280.00 CNY",
             "penaltyPercent": 0,
