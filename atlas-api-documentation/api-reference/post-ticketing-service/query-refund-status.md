@@ -206,9 +206,9 @@ No preceding function needs to be carried out.
 
       Refund request cancelled by the user.
 
-    Travel has been completed by the passenger.
+      Travel has been completed by the passenger.
 
-    Refund not yet received from the airline. Please try again later.   
+      Refund not yet received from the airline. Please try again later.   
       *   **refundOfferId **<mark style="color:blue;">**string**</mark>
 
            Refund offer id for this quotation which can be used for the coming refund call.
