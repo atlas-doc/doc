@@ -15,7 +15,7 @@ Please note the below while initiating a refund transaction.
 
 2. **Refund for a partially used itinerary:** Partially used itinerary cannot be refunded. Please contact the airline for the same.
 
-3. **Refund for a specific passenger:** We support the refund of a specific passenger in an itinerary. For example, if tehre are 3 passengers and only one of them is to be refunded, please send us your refund request. 
+3. **Refund for a specific passenger:** We support the refund of a specific passenger in an itinerary. For example, if there are 3 passengers and only one of them is to be refunded, please send us your refund request. 
 
 {% endhint %}
 
