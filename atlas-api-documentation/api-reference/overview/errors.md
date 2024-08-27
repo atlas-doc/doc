@@ -173,6 +173,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">118</mark> | Atlas currently does not support seat or baggage for this airline         |   | Check with the airline for ancillary baggage or open a Service Request with Atlas for the same.|
 | <mark style="color:blue;">119</mark> | Baggage or seat selection is not supported for orders with infants         |  There is an infant passenger in the booking. | Book ancillary baggage directly with the airline or open a Service Request with Atlas for the same|
 | <mark style="color:blue;">120</mark> | Baggage or seat selection for the flight has been closed        |  The airline no longer accepts the addition for ancillary for that flight. | Check with the airline or open a Service Request with Atlas for the same.| 
+| <mark style="color:blue;">121</mark> | It's not allowed to purchase ancillary so close to departure.        |  The departure time is less than the allowed time for ancillary booking. | Book the ancillary directly with the airline..| 
 
 
 #### Post-booking Ancillary Order Error Codes
