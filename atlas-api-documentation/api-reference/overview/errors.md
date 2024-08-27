@@ -135,6 +135,10 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 #### Query Order Error Codes
 | Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">701</mark> | Multi-order are identified, please request again with extra parameters added     | More than 1 order having the same Record Locator has been identified. | Add the additional parameters and try again. |
+| <mark style="color:blue;">702</mark> | airlinePNR and carrier are mandatory to fill in for order retrieval, please check and request again   | The record locator and the airline code are mandatory in the request. | Add the mentioned parameters and try again. |
+| <mark style="color:blue;">703</mark> | No order found, please check the parameter   | The order number does not seem to be correct. | Check the order number and try again. |
+| <mark style="color:blue;">704</mark> | Parameters don't match, please check and retry  | The parameters entered are not correct. | Check the parameters, correct them and try again. |
 | <mark style="color:blue;">800</mark> | Order does not exist                           | The relevant order does not exist. | Please re-check the order number and retry. |
 
 
