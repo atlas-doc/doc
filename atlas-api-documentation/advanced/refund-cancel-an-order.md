@@ -131,35 +131,4 @@ Accept-Encoding: gzip
 {% endtab %}
 {% endtabs %}
 
-## 3. Refund Status Notification
-
-With Atlas, you can configure webhooks to automatically receive notifications for ticket cancellations/refunds along with the amount refunded. Once you receive `order.refundCompleted` notification on the server for a cancelled booking, you can take action as needed.
-
-EndPoint : The URL you configured to receive notifications
-
-Method : Post
-
-{% tabs %}
-{% tab title="Samples" %}
-```json
-{
-    "cid":"XXXXXXXX",
-    "type":"order.refundComplete",
-    "data":{
-         "orderNo":"PSTEV20220119165629057",
-         "refundStatus":"2",
-         "currency": "USD",
-         "originalTotalFare": 37.32,
-         "originalTotalAncillaryAmount": 10,
-         "originalTotalAmount": 47.32,
-         "airlinePenaltyAmountForFare": 5,
-         "airlinePenaltyAmountForAncillaries": 0,
-         "airlinePenaltyAmount":0,
-         "finalRefundAmount":37.32,
-         "transactionFee": 2
-    }
-}    
-```
-{% endtab %}
-{% endtabs %}
 
