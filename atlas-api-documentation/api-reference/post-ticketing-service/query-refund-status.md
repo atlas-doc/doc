@@ -15,6 +15,12 @@ No preceding function needs to be carried out.
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Original order number.
+*   **airlinePNR **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    The record locator of the airline.
+*   **carrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    2 character IATA airline code.
 *   **refundCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
     The code of the refund transaction received in the refund.do response.
@@ -25,6 +31,8 @@ No preceding function needs to be carried out.
 ```json
 {
   "orderNo": "TEST20220209163159425",
+  "airlinePNR":"S24933",
+  "carrier":"G9",
   "refundCode": "202407-0028"
 }
 ```
