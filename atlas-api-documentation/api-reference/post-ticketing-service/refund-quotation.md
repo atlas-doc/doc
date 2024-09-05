@@ -30,6 +30,12 @@ Please note the below while initiating a refund transaction.
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Original order number.
+*   **airlinePNR **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    The record locator of the airline.
+*   **carrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    2 character IATA airline code.
 *   **refundRequestList Array<**<mark style="color:blue;">**RefundRequest**</mark>**> **<mark style="color:green;">**Required**</mark>
 
     Ticket selection of the passengers and flights which is going to refund.
@@ -72,6 +78,8 @@ Please note the below while initiating a refund transaction.
 ```json
 {
     "orderNo":"TESTA20240725164512131",
+    "airlinePNR":"S24933",
+    "carrier":"G9",
     "refundRequestList":[
         {
             "lastName":"ZHANG",
