@@ -15,6 +15,12 @@ Refund quotation function should be called in prior of this call
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Original order number.
+*   **airlinePNR **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    The record locator of the airline.
+*   **carrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    2 character IATA airline code.
 *   **refundOfferId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Get this from the refund quotation response.
@@ -24,6 +30,8 @@ Refund quotation function should be called in prior of this call
 ```json
 {
     "orderNo": "ZNMKU20220119160129691",
+    "airlinePNR":"S24933",
+    "carrier":"G9",
     "refundOfferId":"7961ab5b202642628e9595498ffea083"
 }
 ```
