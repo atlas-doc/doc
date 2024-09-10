@@ -1346,6 +1346,8 @@ Service grade of the fare
 
 3 : First Class
 
+4: Premium Economy
+
 **`seatCount`  **<mark style="color:blue;">**int**</mark>
 
 Remaining seats for the fare.
