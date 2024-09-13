@@ -111,6 +111,9 @@ Please note the below while initiating a refund transaction.
 
 {% tabs %}
 {% tab title="Schema" %}
+*   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    Original order number.
 *   **status **<mark style="color:blue;">**int**</mark>
 
     0: success
@@ -344,6 +347,7 @@ Please note the below while initiating a refund transaction.
         "refundReason": "1",
         "airlinePolicy": null
     },
+    "orderNo": "TESTA20240903015953777",
     "status": 0,
     "msg": null
 }
