@@ -8,3 +8,7 @@ We will quickly walk you through the process to set up and handle webhooks for y
 4. Ticket and ancillary service cancellation: <mark style="color:green;">`order.refundComplete`</mark>
 5. Airline status update: <mark style="color:green;">`airline.status`</mark>
 6. Email received: <mark style="color:green;">`email.all`</mark>
+
+{% hint style="info" %}
+Atlas provides the webhook functionality on the “best possible basis”. Atlas does not take the responsibility for providing all the notifications. For any schedule changes please always refer to the email sent by the airline to the email id provided in the booking request.  
+{% endhint %}
