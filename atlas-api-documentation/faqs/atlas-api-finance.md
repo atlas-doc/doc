@@ -30,7 +30,7 @@ The usual bank holidays for each currency/country applies. Below links for your 
 
 <mark style="color:blue;">**[Singapore](https://www.mom.gov.sg/employment-practices/public-holidays)**<mark style="color:blue;"></mark>
 
-<mark style="color:blue;">**[ECB](https://www.ecb.europa.eu/ecb/contacts/working-hours/html/index.en.html)**<mark style="color:blue;"></mark>
+<mark style="color:blue;">**[Europe](https://www.ecb.europa.eu/ecb/contacts/working-hours/html/index.en.html)**<mark style="color:blue;"></mark>
 
 <mark style="color:blue;">**[US (New York)](https://www.newyorkfed.org/aboutthefed/holiday_schedule)**<mark style="color:blue;"></mark>
 
