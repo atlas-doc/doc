@@ -15,3 +15,5 @@
 - [Payments](atlas-api-payments.md)
 
 - [Post-Ticketing](atlas-api-post-ticketing.md)
+
+- [Finance](atlas-api-finance.md)
