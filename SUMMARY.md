@@ -58,3 +58,4 @@
   * [Atlas API Order](atlas-api-documentation/faqs/atlas-order-api.md)
   * [Atlas API Post-ticketing](atlas-api-documentation/faqs/atlas-api-post-ticketing.md)
   * [Atlas API Payments](atlas-api-documentation/faqs/atlas-api-payments.md)
+  * [Atlas API Finance](atlas-api-documentation/faqs/atlas-api-finance.md)
