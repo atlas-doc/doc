@@ -179,6 +179,22 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
     1: Prepayment Only
 
     3: Both Credit Card Payment and Prepayment Available
+    
+    This tag shows which payment method is supported for that particular booking.
+*   **supportPaymentMethods **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    1: Prepayment Only
+
+    3: Both Credit Card Payment and Prepayment Available
+
+    This tag lists down all the various payment methods available for payment for the booking.
+*   **paymentMethod **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+    1: Prepayment Only
+
+    3: Both Credit Card Payment and Prepayment Available
+
+    This is the mode of payment used to pay for the booking.
 *   **tktLimitTime **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Payment deadline for this order. This time will be displayed in SGT (GMT +8)
