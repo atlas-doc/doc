@@ -112,6 +112,15 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">411</mark> | Generic payment error          | The error happened when we checked your account. For example, “not enough balance”. | Check the balance or as per the message received in the error. |
 
 
+#### Seat Availability Codes
+
+| Code | Description                    | Explanation                    | Solution                     |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">214</mark> | Session ID invalid or expired                               | Session ID invalid or expired. | Send a new seat availability request |
+| <mark style="color:blue;">215</mark> | Segment index missing           | Segment index does not exist. | Verify if the segmentIndex is correctly added |
+| <mark style="color:blue;">216</mark> | Seat selection failed         | Fail to get seat availability information. | Try after some time. If the problem persists, please raise a service request. |
+| <mark style="color:blue;">217</mark> | Unknown error         | Unknown error |  |
+
 #### Ticket Error Codes
 
 | Code | Description                    | Explanation                    | Solution                     |
