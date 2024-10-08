@@ -14,6 +14,8 @@ Each offer represents flights that meet your search criteria. Your users will th
 
 - [Payment](payment.md)
 
+- [Seat Availability](seat-availability.md)
+
 - [Retrieve Booking](retrieve-booking.md)
 
 - [Regenerate Order](regenerateorder.md)
