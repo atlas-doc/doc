@@ -12,6 +12,16 @@
 
 {% tabs %}
 {% tab title="Schema" %}
+*   **ifSeatOccupied **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
+
+    Configuration of ordering when the seat is occupied.
+    
+    SIMILAR_SEAT: Default, select a similar seat automatically
+
+    STOP_SEAT: Stop seat and continue ticketing
+
+    STOP_TICKET: Stop ticketing and cancel the order
+
 *   **sessionId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of the search response.
@@ -81,7 +91,7 @@
           * <mark style="color:blue;">**AncillaryElement**</mark>
             *   **productCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-                Ancillary product code;
+                Ancillary product code
 
                 Got from routing element in the search/revalidation response.
             *   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
@@ -127,7 +137,8 @@
 {% tab title="Samples" %}
 ```
 {
-    "sessionId": "43c3c07e-2b05-4fc9-8832-29a71075a097",
+"ifSeatOccupied": "SIMILAR_SEAT",
+"sessionId": "43c3c07e-2b05-4fc9-8832-29a71075a097",
     "passengers": [
         {
             "name": "TEST/ONE",
@@ -145,7 +156,19 @@
                 { 
                 "productCode":"BAG_5J_PH-PH_1_1P_20KG", 
                 "segmentIndex":1 
-                } 
+                },
+                { 
+                "productCode":"BAG_5J_PH-PH_1_1P_20KG", 
+                "segmentIndex":2 
+                },
+                {
+                    "segmentIndex": 1,
+                    "productCode": "SCI_SEAT_2B_F9_PHL_LAS"
+                },
+                {
+                    "segmentIndex": 2,
+                    "productCode": "SCI_SEAT_27A_F9_LAS_ORD"
+                }
             ]
         },
         {
@@ -299,6 +322,24 @@
             *   **offerId **<mark style="color:blue;">**string**</mark>
 
                 unique identifier for this ancillary's offer.
+            *   **auxSeatElement **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+                Configuration of ordering when the seat is occupied
+
+                SIMILAR_SEAT: Default, select a similar seat automatically
+
+                STOP_SEAT: Stop seat and continue ticketing
+
+                STOP_TICKET: Stop ticketing and cancel the order
+            *   **row **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+                Seat row
+
+                **Example**: 27
+            
+            *   **column **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+                Seat column
+
+                **Example**: A
 *   **routing Object<**[**RouteElement**](broken-reference/)**>**
 
     Route and fare details. The structure is also Routing Elements, same as search response
@@ -338,7 +379,36 @@
             "contactPhones": [
                 "8615951711432"
             ],
-            "ancillaries": []
+            "ancillaries": [
+                {
+                    "productCode": "SCI_SEAT_B2_F9_PHL_LAS",
+                    "segmentIndex": 1,
+                    "offerId": null,
+                    "buyMethod": "0",
+                    "ancillaryPrice": 63.80,
+                    "currency": "USD",
+                    "vendorPrice": null,
+                    "vendorCurrency": null,
+                    "productType": null,
+                    "auxBaggageElement": null,
+                    "auxSeatElement": null
+                },
+                {
+                    "productCode": "SCI_SEAT_A27_F9_LAS_ORD",
+                    "segmentIndex": 2,
+                    "offerId": null,
+                    "buyMethod": "0",
+                    "ancillaryPrice": 49.24,
+                    "currency": "USD",
+                    "vendorPrice": null,
+                    "vendorCurrency": null,
+                    "productType": null,
+                    "auxBaggageElement": null,
+                    "auxSeatElement": {
+                        "row": "27",
+                        "column": "A"
+                }
+            ]
         }
     ],
     "routing": {
