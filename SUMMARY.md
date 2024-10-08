@@ -28,7 +28,6 @@
   * [Post Ticketing Service](atlas-api-documentation/api-reference/post-ticketing-service/README.md)
     * [Search Ancillary](atlas-api-documentation/api-reference/post-ticketing-service/offer-ancillary-list.md) 
     * [Order Ancillary](atlas-api-documentation/api-reference/post-ticketing-service/add-ancillaries.md)
-    * [Seat Availability](atlas-api-documentation/api-reference/post-ticketing-service/seat-availability.md) 
     * [Refund Quotation](atlas-api-documentation/api-reference/post-ticketing-service/refund-quotation.md)
     * [Make a Refund](atlas-api-documentation/api-reference/post-ticketing-service/make-a-refund.md)
     * [Query Refund Status](atlas-api-documentation/api-reference/post-ticketing-service/query-refund-status.md)
