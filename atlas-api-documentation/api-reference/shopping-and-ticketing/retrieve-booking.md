@@ -206,7 +206,43 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
     Route and fare details. The structure is the same format as "Routing Element" in search response.
 *   **airlineBookings Array<**[**ManageBookingElement**]**> **<mark style="color:green;">**Required**</mark>
 
-    Booking information of the airline.
+*   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**>**
+
+    Ancillaries selection for the specific passenger
+
+  * [**AncillaryElement**](order.md)
+    
+    *   **productCode **<mark style="color:blue;">**string**</mark>
+
+        Ancillary product code;
+
+        Got from routing element in the search/revalidation response.
+     *   **segmentIndex **<mark style="color:blue;">**int**</mark>
+
+         Segment sequence
+     *   **offerId **<mark style="color:blue;">**string**</mark>
+
+         unique identifier for this ancillary's offer.
+     *   **auxSeatElement **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:green;">**Required**</mark>
+
+         Configuration of ordering when the seat is occupied
+
+         SIMILAR_SEAT: Default, select a similar seat automatically
+
+         STOP_SEAT: Stop seat and continue ticketing
+
+         STOP_TICKET: Stop ticketing and cancel the order
+     *   **row **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+         Seat row
+
+         **Example**: 27
+            
+     *   **column **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+         Seat column
+
+         **Example**: A
+
+         Booking information of the airline.
 
 *   **airlineCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
@@ -308,6 +344,38 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
         "0086-13928109091"
       ],
       "ancillaries": [
+        {
+          "productCode": "SCI_SEAT_B2_F9_PHL_LAS",
+          "segmentIndex": 1,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 63.8,
+          "currency": "USD",
+          "vendorPrice": 63.8,
+          "vendorCurrency": "USD",
+          "productType": null,
+          "auxBaggageElement": null,
+          "auxSeatElement": {
+            "row": "2",
+            "column": "B"
+          }
+        },
+        {
+          "productCode": "SCI_SEAT_A27_F9_LAS_ORD",
+          "segmentIndex": 2,
+          "offerId": null,
+          "buyMethod": "0",
+          "ancillaryPrice": 49.24,
+          "currency": "USD",
+          "vendorPrice": 49.24,
+          "vendorCurrency": "USD",
+          "productType": null,
+          "auxBaggageElement": null,
+          "auxSeatElement": {
+            "row": "27",
+            "column": "A"
+          }
+        },
         {
           "productCode": "SCI_2PC_52KG",
           "segmentIndex": 1,
