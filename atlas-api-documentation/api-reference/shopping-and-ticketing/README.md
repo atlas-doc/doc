@@ -10,11 +10,11 @@ Each offer represents flights that meet your search criteria. Your users will th
 
 - [Verify](verify.md)
 
+- [Seat Availability](seat-availability.md)
+
 - [Order](order.md)
 
 - [Payment](payment.md)
-
-- [Seat Availability](seat-availability.md)
 
 - [Retrieve Booking](retrieve-booking.md)
 
