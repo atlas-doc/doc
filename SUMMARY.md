@@ -19,9 +19,9 @@
     * [Real-time Search](atlas-api-documentation/api-reference/shopping-and-ticketing/real-timesearch.md)
     <!--* [Multiple Farefamilies Search](atlas-api-documentation/api-reference/shopping-and-ticketing/multiple-farefamilies-search.md)-->
     * [Verify](atlas-api-documentation/api-reference/shopping-and-ticketing/verify.md)
+    * [Seat Availability](atlas-api-documentation/api-reference/shopping-and-ticketing/seat-availability.md)
     * [Order](atlas-api-documentation/api-reference/shopping-and-ticketing/order.md)
     * [Payment](atlas-api-documentation/api-reference/shopping-and-ticketing/payment.md)
-    * [Seat Availability](atlas-api-documentation/api-reference/shopping-and-ticketing/seat-availability.md)
     * [Retrieve Booking](atlas-api-documentation/api-reference/shopping-and-ticketing/retrieve-booking.md)
     * [Regenerate Order](atlas-api-documentation/api-reference/shopping-and-ticketing/regenerateorder.md)
     * [Stop Ticket Issuance](atlas-api-documentation/api-reference/shopping-and-ticketing/stop-ticket-issuance.md)
