@@ -9,7 +9,7 @@
     * [Errors](atlas-api-documentation/api-reference/overview/errors.md)
     * [Test Mode](atlas-api-documentation/api-reference/overview/test-mode.md)
     * [Sandbox Test Routes](atlas-api-documentation/api-reference/overview/sandbox-test-routes.md)
-  * [Atlas Sandbox](atlas-api-documentation/api-reference/atlas-sandbox)
+  * [Atlas Sandbox](atlas-api-documentation/api-reference/atlas-sandbox/README.md)
     * [What is an API Sandbox?](atlas-api-documentation/api-reference/atlas-sandbox/What-is-an-api-sandbox.md)
     * [Test Mode](atlas-api-documentation/api-reference/atlas-sandbox/test-mode.md)
     * [Sandbox Test Routes](atlas-api-documentation/api-reference/atlas-sandbox/sandbox-test-routes.md)
