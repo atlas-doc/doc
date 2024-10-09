@@ -193,3 +193,56 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">504</mark> | Additional baggage not allowed. Ancillary baggage already exists in the original order |  Atlas only allows the attachment of ancillary baggage only once | Book ancillary baggage directly with the airline or open a Service Request with Atlas for the same |
 | <mark style="color:blue;">505</mark> | Additional baggage not allowed. Baggage already booked as post-ticket ancillary. |  Atlas only allows the attachment of ancillary baggage only once | Book ancillary baggage directly with the airline or open a Service Request with Atlas for the same |
 | <mark style="color:blue;">506</mark> | Seat selection is not supported for orders with infants |  There is an infant passenger in the booking. | Book ancillary baggage or seat directly with the airline or open a Service Request with Atlas for the same|
+
+
+## Error Samples
+
+### 214：Session ID invalid or expired
+
+### Request：
+```
+{
+    "sessionId": "49871954-6aaa-44fa-b768-1a590d21be08"
+}
+```
+
+### Response:
+```
+{
+    "cabins": null,
+    "status": 214,
+    "msg": "Session ID invalid or expired"
+}
+```
+
+### 216: Seat selection failed
+
+### Request：
+```
+{
+    "mockError": "mockSeatError", 
+    "sessionId": "31f1c47c-1fbb-4cfd-8620-49e73ab26f60"
+}
+```
+
+### Response:
+```
+{
+    "cabins": null,
+    "status": 216,
+    "msg": "Seat selection failed"
+}
+```
+
+### 217: Unknown error
+
+System fallback exception, which is typically not triggered
+
+### Response:
+```
+{
+    "cabins": null,
+    "status": 217,
+    "msg": "Unknown error"
+}
+```
