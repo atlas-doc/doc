@@ -57,7 +57,6 @@
     <!--   * [Add Ancillaries](atlas-api-documentation/advanced/add-ancillaries.md) -->
   * [Refund/Cancel an Order](atlas-api-documentation/advanced/refund-cancel-an-order.md)
   * [Get Schedule Change Notification](atlas-api-documentation/advanced/get-schedule-change-notification.md)
-* [UAT Submission Guide](atlas-api-documentation/uat-submission-guide.md)
 * [FAQs](atlas-api-documentation/faqs/README.md)
   * [Atlas API General Information](atlas-api-documentation/faqs/atlas-api-general-information.md)
   * [Atlas API Search & Book](atlas-api-documentation/faqs/atlas-api-api-search.md)
