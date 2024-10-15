@@ -5,6 +5,14 @@
 
 # What's New!!
 
+## September 2024
+
+## Feature Release: Post-ticketing Baggage 
+
+Description: Post-ticketing baggage is now available in API as well as ATRIP. 
+
+Please refer to the [Post Ticketing Service](../atlas-api-documentation/api-reference/post-ticketing-service) section.
+
 ## July 2024
 
 ## Feature Release: Frequent Flyer details in Booking Request
