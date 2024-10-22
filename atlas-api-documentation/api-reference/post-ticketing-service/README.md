@@ -9,4 +9,4 @@ This set of functions is to support the completion of the post ticketing service
 - [Refund Quotation](refund-quotation.md)
 - [Make a Refund](make-a-refund.md)
 - [Query Refund Status](query-refund-status.md)
-
+- [PNR Claim](claim-pnr.md)
