@@ -10,7 +10,52 @@ In this case, the airline will send the message to the contact email or mobile n
 ## **How is the post-ticketing process being handled?**
 
 Atlas API supports the post-ticketing process. The API allows for post-ticketing functions such as purchasing ancillary services, cancellation requests and processing refunds. Please refer to the API Reference section for further information. You can also reach out to our API support team or the Customer Service Centre to investigate any post-ticketing queries.
+Post-ticketing processes can also be handled via the ATRIP portal in the following manner:
 
+Refunds and cancellations: We have a refunds feature in ATRIP which should be used for sending refund requests to Atlas. For an LCC cancellations and refunds are one and the same. We will cancel the booking and refund the amount to your account with Atlas.
+
+Changes: Create a service request. Our ops team will process this for you.
+
+Ancillary Baggage: We have an ancillary baggage feature in ATRIP which should be used for adding baggage to an existing booking.
+
+
+## **Do you provide 24/7 support for urgent post-sales issues?**
+
+For urgent matter (changes/cancellations/adding of baggage, etc) within 24 hours of flight departure, we recommend that the customer connects directly with the airline using the "Manage My Booking" feature on the airline website.
+
+
+## **Please explaining the refund and cancellation policies?**
+
+The latest refund and cancellation policies are available on the airline website. These should be referred to.
+
+
+## **How long does it take to process refunds once a request is submitted?**
+
+We will submit the refund request to the airline within 4 hrs of receipt. In some specific cases, the airline may need many days to verify and respond with a confirmation. Regarding the refund amount being credited into your account, it depends from airline to airline. Once the refund is received from the airline, our internal systems will reconcile the same and then credit the amount into your ATRIP balance. Once processed, the refund will also show in the reconciliation statement received by you.
+
+
+## **What is the process for making changes to a booking after the sale (e.g., name corrections, flight changes)?**
+
+Please create a Service Request (SR) using ATRIP.
+
+
+## **How do you handle involuntary changes, such as schedule changes by the airline? Is it FOC?**
+
+You can use the refund feature available in ATRIP. It is FOC.
+
+
+## **In case of a service failure/ Booking Failure (e.g., delayed refunds or incorrect rebooking or booking not confirmed), what compensation , waivers or remedies do you provide?**
+
+If there is an incorrect booking or ticketing, Atlas will compensate for the new ticket. With regards to refunds, Atlas does not have any control and will not compensate. The timelines of the refunds depends on when the airline provides the amount back to Atlas.
+
+
+## **What training resources or support do you provide for our customer service or operations teams on post-sale procedures?**
+
+We will have a "Go-Live" call after the UAT certification has been completed. We will walk-through the ATRIP portal and you may ask any questions during or after the call.
+
+
+## **Do you offer or have materials and guidelines for the correct system utilization ?**
+The ATRIP portal is very user friendly. We will provide you with a user guide for the post-ticketing services. You may ask any further questions, if required.
 
 
 ## **Is there a refund claim process for Atlas customers?**
