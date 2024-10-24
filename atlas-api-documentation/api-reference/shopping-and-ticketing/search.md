@@ -83,6 +83,7 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
   "fromDate": "20240326",
   "retDate": "20240423",
   "airlines": ["W6"],
+  "currency": "GBP",
   "displayCurrency": "PHP",
   "requestSource": "Organic"
 }
