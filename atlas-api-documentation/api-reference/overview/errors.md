@@ -41,6 +41,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">115</mark> | Unexpected results                               |  System error. | Try again. If the error persists, raise a service request. | 
 | <mark style="color:blue;">116</mark> | Search data not captured                             | An error was reported during the search data stoprage at Atlas' end. | If this error is not constantly reported, you can try trying again. If the error persists, then it is necessary to contact the account manager. |
 | <mark style="color:blue;">123</mark> |  Too many requests but too few paid orders                     |  The service has been blocked as the search requests are too many and the paid orders are very less. | Ony search the required city pairs. |
+| <mark style="color:blue;">124</mark> |  Unsupported settlement currency           |  The settlement currency is different than what is accepted by Atlas. | Change the currency to the currency accepted by Atlas for settlement. |
 
 
 #### Verify Error Codes
@@ -148,6 +149,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">702</mark> | airlinePNR and carrier are mandatory to fill in for order retrieval, please check and request again   | The record locator and the airline code are mandatory in the request. | Add the mentioned parameters and try again. |
 | <mark style="color:blue;">703</mark> | No order found, please check the parameter   | The order number does not seem to be correct. | Check the order number and try again. |
 | <mark style="color:blue;">704</mark> | Parameters don't match, please check and retry  | The parameters entered are not correct. | Check the parameters, correct them and try again. |
+| <mark style="color:blue;">705</mark> | Timeout  | The response has timed-out | Try again after some time. If the issue persists, please contact support. |
 | <mark style="color:blue;">800</mark> | Order does not exist                           | The relevant order does not exist. | Please re-check the order number and retry. |
 
 
