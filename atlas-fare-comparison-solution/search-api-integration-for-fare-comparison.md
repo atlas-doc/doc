@@ -215,6 +215,7 @@ The 'msg' element is for description of the results. Please DO NOT use this fiel
               1 : Economy
               2 : Business
               3 : First Class
+              4 : Premium Ecocnomy
           *   #### seatCount              <mark style="color:blue;">int</mark>
               Remaining seats for the fare.
           *   #### aircraftCode           <mark style="color:blue;">string</mark>
