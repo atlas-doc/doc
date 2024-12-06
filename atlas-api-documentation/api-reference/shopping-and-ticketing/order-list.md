@@ -73,7 +73,29 @@ The "Order List" API is a feature which lists the orders which have been created
 {% tab title="Samples" %}
 ```
 {
-"airlinePNRs":["S79170","S86745"]
+  "orderNo": "",
+  "airlinePNRs": [
+    "FT759J",
+    "8HFT67"
+  ],
+  "paxName": "",
+  "contactEmail": "",
+  "fromCity": "",
+  "toCity": "",
+  "depDate": "20240101",
+  "createTimeRangeFrom": "2024-10-31T19:57:46Z",
+  "createTimeRangeTo": "2024-11-01T19:57:46Z",
+  "orderStatus": [
+    0,
+    1,
+    2,
+    -3
+  ],
+  "airlines": [
+    "FR"
+  ],
+  "page": 1,
+  "pageSize": 20
 }
 ```
 {% endtab %}
