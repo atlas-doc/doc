@@ -12,6 +12,16 @@ No preceding function needs to be called before 'orderList' API.
 
 {% hint style="info" %}
 The "Order List" API is a feature which lists the orders which have been created on the Atlas platform. After receiving the response, the customer can access individual order by using the queryOrderDetails.do API.
+
+Points to note:
+
+•	All the parameters are optional.
+
+•	Orders in all statuses can be queried.
+
+•	Orders with departure time within 1 year can be retrieved.
+
+•	The time format which is UTC.
 {% endhint %}
 
 ## Request
