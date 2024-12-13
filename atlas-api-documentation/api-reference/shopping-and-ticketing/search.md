@@ -57,6 +57,34 @@ Must not be earlier than fromDate. And it can be blank if tripType=1.
 
 An array of IATA Codes of airlines. The result will only contain the airlines specified in the search request. A maximum of 5 airline codes can be added.
 
+**`fromFlightNumbers`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+Search for specified departure flights. Each element represents one flight. Connecting flight numbers are separated by "," (comma).
+
+["FR123", "FR456,FR789"]
+
+["FR123"]: A direct flight
+
+["FR456,FR789"]: A connecting flight
+
+**`retFlightNumbers`  **<mark style="color:blue;">**array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+Search for specified return flights. Each element represents one flight. Connecting flight numbers are separated by "," (comma).
+
+["FR123", "FR456,FR789"]
+
+["FR123"]: A direct flight
+
+["FR456,FR789"]: A connecting flight
+
+**`includeMultipleFareFamily`  **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+Search only for the lowest fare or for the Fare Families.
+
+False: lowest fare (default)
+
+True: include fare families
+
 **`displayCurrency`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
 The alternative currency in which the fare and taxes amount needs to be displayed. The 3-letter currency code should be entered. Please refer to the "Highlights" section below for further information.
@@ -82,7 +110,10 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
   "toCity": "LTN",
   "fromDate": "20240326",
   "retDate": "20240423",
-  "airlines": ["W6"],
+  "airlines": ["FR", "W6", "F9"],
+  "fromFlightNumbers": ["FR123", "FR456"],
+  "retFlightNumbers": ["FR123", "FR456"],
+  "includeMultipleFareFamily": true
   "currency": "GBP",
   "displayCurrency": "PHP",
   "requestSource": "Organic"
@@ -122,20 +153,20 @@ The array of the routings include suitable flights and fares. Click [<mark style
 {
   "routings": [
     {
-      "fid": "NNQPjln9io_VkVCLML-tV4uTWB1-bYVbwEbgbq1gwbbyIGmv3IQjvGArLc-kVkfqqonjuSrhTmd6q9tCSQ5JdEbgsLbAG9YqlESmEgnTm4P1GEmT5TthTQ..",
-      "routingIdentifier": "EXsU8XSpfLYTSaQTVCjrJMJvG/ysDtKYfq1WIi9iKV3RuKGQWRYoLHwlk3d3nfx3CfcndJLEJ0OelZh4CJOznF9aTBiw3WJrCv1w5tPrnLqsrzEwGf6LU4JnimIHlZ8g9Mbw9o1UAsRxu28yDTH1sxCUiQXhe9aQqCnWwMFh28gA/nj6IKNh5/yz0GWbBL6s1yDekyABUkLWmuWriKG76AcSFeTleOVJEjXfFd3mUvpZJe1wsRs5TI/Nma2Sz/cOdhAjhrTIFnOMJEKInVplSW3JYquYRVlKPNaFSuoF5K7IHGWlTR0X2vJysOfDQQZWR7Qv1wj0wUrE1kfV4vUrurLMbC/8XlxjYBc7iz9giHkbTb9r/K5/eabN+BX2cuBjtcmNH0T9SwZdxpCXnsjGxdC6wjGifmzacvdkADFsgfWzqaR6+aEfwt4jQKkit64X8IoXcz9XqDadvtpoFyrQz1tXYb6UK8+doiventK1gdc8oJQnVwpWZDKzsW4suk3TsDp0v+v8UKQy69wsHIbB/y+fzp2gv7VR6YPlLhv9P5f1GEmT5TthTQ==",
-      "supportCreditTransPayment": "1",
+      "fid": "_CRghXPitTBZS-NfM-Ku_5Yttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChOQxTZJ7brCduAEac4Cv-UGG8WfOBAHVGM",
+      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MTY2LjY3XzE2Ni42N18xNTkuOTZfMS4wMF80OTQuMzBfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBCQVNJQy0xLSNSSVgtQlQwMzQ5LS1WTk8tMjAyNDEyMjYyMzE1LTIwMjQxMjI2MjM1OS1FY29ub215IEJBU0lDLTEtXjE2Ni42N18xNjYuNjdfMTU5Ljk2XzEuMDBfNDk0LjMwXkFCVF9BQlReXkFCVDFQUkdWTk80MDAyMDI0MTIyNl5FVVJ8MHwyMDI0MTIxMzE1MjgzNnwwfDE3MzQwNzQ5MTY1MDd5UlJzZnx8fHx8MS4wMHwzfDB8.kpIBDjjhcL+znY8vH8KDqLB0q+lC9s9Tmt9OBxqhyS4=",
+      "supportCreditTransPayment": "0",
       "currency": "USD",
-      "adultPrice": 60.97,
-      "adultTax": 20.68,
-      "childPrice": 60.97,
-      "childTax": 20.68,
-      "infantPrice": 77.46,
+      "adultPrice": 125.57,
+      "adultTax": 41.1,
+      "childPrice": 125.57,
+      "childTax": 41.1,
+      "infantPrice": 159.96,
       "infantTax": 0,
       "infantAllowed": true,
-      "transactionFeePerPax": 0.65,
-      "transactionFee": 0.65,
-      "transactionFeeMode": "PER_TICKET",
+      "transactionFeePerPax": 1,
+      "transactionFee": 1,
+      "transactionFeeMode": "PER_PAX",
       "nationalityType": 0,
       "nationality": "",
       "suitAge": "",
@@ -143,84 +174,83 @@ The array of the routings include suitable flights and fares. Click [<mark style
       "fromSegments": [
         {
           "segmentIndex": 1,
-          "carrier": "W6",
-          "flightNumber": "W65001",
-          "depAirport": "KRK",
-          "depTime": "202403260600",
-          "arrAirport": "LTN",
-          "arrTime": "202403260735",
+          "carrier": "BT",
+          "flightNumber": "BT0482",
+          "depAirport": "PRG",
+          "depTime": "202412261940",
+          "arrAirport": "RIX",
+          "arrTime": "202412262225",
           "stopCities": "",
-          "duration": 155,
+          "duration": 105,
           "codeShare": false,
           "cabin": "",
           "cabinClass": 1,
-          "seatCount": 9,
+          "seatCount": 4,
           "aircraftCode": "",
           "depTerminal": "",
           "arrTerminal": "",
-          "operatingCarrier": "W6",
+          "operatingCarrier": "BT",
           "operatingFlightnumber": "",
-          "fareFamily": "Basic"
-        }
-      ],
-      "retSegments": [
+          "fareFamily": "Economy BASIC"
+        },
         {
           "segmentIndex": 2,
-          "carrier": "W6",
-          "flightNumber": "W62002",
-          "depAirport": "LTN",
-          "depTime": "202404230815",
-          "arrAirport": "KRK",
-          "arrTime": "202404231140",
+          "carrier": "BT",
+          "flightNumber": "BT0349",
+          "depAirport": "RIX",
+          "depTime": "202412262315",
+          "arrAirport": "VNO",
+          "arrTime": "202412262359",
           "stopCities": "",
-          "duration": 145,
+          "duration": 44,
           "codeShare": false,
           "cabin": "",
           "cabinClass": 1,
-          "seatCount": 9,
+          "seatCount": 4,
           "aircraftCode": "",
           "depTerminal": "",
           "arrTerminal": "",
-          "operatingCarrier": "W6",
+          "operatingCarrier": "BT",
           "operatingFlightnumber": "",
-          "fareFamily": "Basic"
+          "fareFamily": "Economy BASIC"
         }
       ],
+      "retSegments": [],
       "combineIndexs": [],
       "rule": {
         "hasBaggage": 1,
         "baggageElements": [
           {
             "segmentNo": 1,
-            "baggageType": "CabinBaggageUnderSeat",
+            "baggageType": "StandardCheckInBaggage",
             "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": -1,
-            "baggageSize": "40*30*20cm"
+            "baggagePiece": 0,
+            "baggageWeight": 0,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 0,
+            "baggageWeight": 0,
+            "baggageSize": ""
           },
           {
             "segmentNo": 1,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 0,
-            "baggageWeight": 0,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "CabinBaggageUnderSeat",
+            "baggageType": "CabinBaggageOverheadLocker",
             "passengerType": 0,
             "baggagePiece": 1,
-            "baggageWeight": -1,
-            "baggageSize": "40*30*20cm"
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
           },
           {
             "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
+            "baggageType": "CabinBaggageOverheadLocker",
             "passengerType": 0,
-            "baggagePiece": 0,
-            "baggageWeight": 0,
-            "baggageSize": ""
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
           }
         ],
         "refundRules": [
@@ -234,74 +264,15 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "refNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 2988,
-                "status": "H",
-                "startMinute": 525600,
-                "endMinute": 20160,
-                "amount": 65,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 2990,
-                "status": "H",
-                "startMinute": 20160,
-                "endMinute": 180,
-                "amount": 85,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 2993,
+                "ruleId": 40283,
                 "status": "T",
-                "startMinute": 180,
+                "startMinute": 525600,
                 "endMinute": 0,
                 "amount": 0,
                 "currency": "EUR"
               },
               {
-                "ruleId": 2996,
-                "status": "T",
-                "startMinute": 0,
-                "endMinute": -525600,
-                "amount": 0,
-                "currency": "EUR"
-              }
-            ]
-          },
-          {
-            "refundType": 0,
-            "refundStatus": "T",
-            "refundFee": 0,
-            "currency": "EUR",
-            "refNoshow": "T",
-            "refNoShowCondition": 0,
-            "refNoshowFee": 0,
-            "ruleDetailList": [
-              {
-                "ruleId": 2988,
-                "status": "H",
-                "startMinute": 525600,
-                "endMinute": 20160,
-                "amount": 65,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 2990,
-                "status": "H",
-                "startMinute": 20160,
-                "endMinute": 180,
-                "amount": 85,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 2993,
-                "status": "T",
-                "startMinute": 180,
-                "endMinute": 0,
-                "amount": 0,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 2996,
+                "ruleId": 40288,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
@@ -314,98 +285,23 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "changesRules": [
           {
             "changesType": 0,
-            "changesStatus": "T",
-            "changesFee": 0,
+            "changesStatus": "H",
+            "changesFee": 50,
             "currency": "EUR",
             "revNoshow": "T",
             "revNoShowCondition": 0,
             "revNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 10153,
+                "ruleId": 40293,
                 "status": "H",
                 "startMinute": 525600,
-                "endMinute": 43200,
-                "amount": 40,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 10155,
-                "status": "H",
-                "startMinute": 43200,
-                "endMinute": 10080,
-                "amount": 45,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 10157,
-                "status": "H",
-                "startMinute": 10080,
-                "endMinute": 180,
+                "endMinute": 0,
                 "amount": 50,
                 "currency": "EUR"
               },
               {
-                "ruleId": 10160,
-                "status": "T",
-                "startMinute": 180,
-                "endMinute": 0,
-                "amount": 0,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 10163,
-                "status": "T",
-                "startMinute": 0,
-                "endMinute": -525600,
-                "amount": 0,
-                "currency": "EUR"
-              }
-            ]
-          },
-          {
-            "changesType": 0,
-            "changesStatus": "T",
-            "changesFee": 0,
-            "currency": "EUR",
-            "revNoshow": "T",
-            "revNoShowCondition": 0,
-            "revNoshowFee": 0,
-            "ruleDetailList": [
-              {
-                "ruleId": 10153,
-                "status": "H",
-                "startMinute": 525600,
-                "endMinute": 43200,
-                "amount": 40,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 10155,
-                "status": "H",
-                "startMinute": 43200,
-                "endMinute": 10080,
-                "amount": 45,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 10157,
-                "status": "H",
-                "startMinute": 10080,
-                "endMinute": 180,
-                "amount": 50,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 10160,
-                "status": "T",
-                "startMinute": 180,
-                "endMinute": 0,
-                "amount": 0,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 10163,
+                "ruleId": 40298,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
@@ -419,618 +315,1242 @@ The array of the routings include suitable flights and fares. Click [<mark style
           {
             "hasFreeSeat": 0,
             "hasFreeMeal": 0
+          }
+        ]
+      },
+      "ancillaryProductElements": [],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false,
+      "refreshTime": "2024-12-13T05:25:56Z",
+      "displayFare": null,
+      "ancillarySupported": []
+    },
+    {
+      "fid": "IX-m5EjtM9EnSVgnuTi7hpYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChOQxTZJ7brCduAEac4Cv-UGG8WfOBAHVGM",
+      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MjQwLjQ1XzI0MC40NV8xOTYuMTBfMS4wMF82NzguMDBfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBDTEFTU0lDLTEtI1JJWC1CVDAzNDktLVZOTy0yMDI0MTIyNjIzMTUtMjAyNDEyMjYyMzU5LUVjb25vbXkgQ0xBU1NJQy0xLV4yNDAuNDVfMjQwLjQ1XzE5Ni4xMF8xLjAwXzY3OC4wMF5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.IWTgIRBBgQxn9WVNnySSfJTPhq9XdiH3M4m3cy+f678=",
+      "supportCreditTransPayment": "0",
+      "currency": "USD",
+      "adultPrice": 187.13,
+      "adultTax": 53.32,
+      "childPrice": 187.13,
+      "childTax": 53.32,
+      "infantPrice": 196.1,
+      "infantTax": 0,
+      "infantAllowed": true,
+      "transactionFeePerPax": 1,
+      "transactionFee": 1,
+      "transactionFeeMode": "PER_PAX",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
+        {
+          "segmentIndex": 1,
+          "carrier": "BT",
+          "flightNumber": "BT0482",
+          "depAirport": "PRG",
+          "depTime": "202412261940",
+          "arrAirport": "RIX",
+          "arrTime": "202412262225",
+          "stopCities": "",
+          "duration": 105,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy CLASSIC"
+        },
+        {
+          "segmentIndex": 2,
+          "carrier": "BT",
+          "flightNumber": "BT0349",
+          "depAirport": "RIX",
+          "depTime": "202412262315",
+          "arrAirport": "VNO",
+          "arrTime": "202412262359",
+          "stopCities": "",
+          "duration": 44,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy CLASSIC"
+        }
+      ],
+      "retSegments": [],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 1,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 23,
+            "baggageSize": ""
           },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 1,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "EUR",
+            "refNoshow": "T",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40284,
+                "status": "T",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40289,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "H",
+            "changesFee": 50,
+            "currency": "EUR",
+            "revNoshow": "T",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40294,
+                "status": "H",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 50,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40299,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "serviceElements": [
           {
             "hasFreeSeat": 0,
             "hasFreeMeal": 0
           }
         ]
       },
-      "ancillaryProductElements": [
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_1PC_10KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 59.32,
-          "currency": "USD",
-          "vendorPrice": 235,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 10,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_1PC_10KG",
-          "auxSeatElement": null,
-          "displayPrice": 3316.95,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_1PC_20KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 90.62,
-          "currency": "USD",
-          "vendorPrice": 359,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 20,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_1PC_20KG",
-          "auxSeatElement": null,
-          "displayPrice": 5067.17,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_2PC_40KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 189.05,
-          "currency": "USD",
-          "vendorPrice": 749,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 2,
-            "weight": 40,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_2PC_40KG",
-          "auxSeatElement": null,
-          "displayPrice": 10571.89,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_3PC_60KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 289.76,
-          "currency": "USD",
-          "vendorPrice": 1148,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 3,
-            "weight": 60,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_3PC_60KG",
-          "auxSeatElement": null,
-          "displayPrice": 16203.64,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_4PC_80KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 391.73,
-          "currency": "USD",
-          "vendorPrice": 1552,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 4,
-            "weight": 80,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_4PC_80KG",
-          "auxSeatElement": null,
-          "displayPrice": 21905.97,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_5PC_100KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 495.97,
-          "currency": "USD",
-          "vendorPrice": 1965,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 5,
-            "weight": 100,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_5PC_100KG",
-          "auxSeatElement": null,
-          "displayPrice": 27735.32,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_6PC_120KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 603.74,
-          "currency": "USD",
-          "vendorPrice": 2392,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 6,
-            "weight": 120,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_6PC_120KG",
-          "auxSeatElement": null,
-          "displayPrice": 33762.29,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_1PC_26KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 92.89,
-          "currency": "USD",
-          "vendorPrice": 368,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 26,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_1PC_26KG",
-          "auxSeatElement": null,
-          "displayPrice": 5194.2,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_2PC_52KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 193.85,
-          "currency": "USD",
-          "vendorPrice": 768,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 2,
-            "weight": 52,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_2PC_52KG",
-          "auxSeatElement": null,
-          "displayPrice": 10840.07,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_3PC_78KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 297.08,
-          "currency": "USD",
-          "vendorPrice": 1177,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 3,
-            "weight": 78,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_3PC_78KG",
-          "auxSeatElement": null,
-          "displayPrice": 16612.97,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_4PC_104KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 401.57,
-          "currency": "USD",
-          "vendorPrice": 1591,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 4,
-            "weight": 104,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_4PC_104KG",
-          "auxSeatElement": null,
-          "displayPrice": 22456.44,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_5PC_130KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 508.34,
-          "currency": "USD",
-          "vendorPrice": 2014,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 5,
-            "weight": 130,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_5PC_130KG",
-          "auxSeatElement": null,
-          "displayPrice": 28426.94,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_6PC_156KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 618.38,
-          "currency": "USD",
-          "vendorPrice": 2450,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 6,
-            "weight": 156,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_6PC_156KG",
-          "auxSeatElement": null,
-          "displayPrice": 34580.94,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_1PC_32KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 96.67,
-          "currency": "USD",
-          "vendorPrice": 383,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 32,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_1PC_32KG",
-          "auxSeatElement": null,
-          "displayPrice": 5405.92,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_2PC_64KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 201.42,
-          "currency": "USD",
-          "vendorPrice": 798,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 2,
-            "weight": 64,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_2PC_64KG",
-          "auxSeatElement": null,
-          "displayPrice": 11263.51,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_3PC_96KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 308.44,
-          "currency": "USD",
-          "vendorPrice": 1222,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 3,
-            "weight": 96,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_3PC_96KG",
-          "auxSeatElement": null,
-          "displayPrice": 17248.13,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_4PC_128KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 416.46,
-          "currency": "USD",
-          "vendorPrice": 1650,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 4,
-            "weight": 128,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_4PC_128KG",
-          "auxSeatElement": null,
-          "displayPrice": 23289.2,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_5PC_160KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 526.76,
-          "currency": "USD",
-          "vendorPrice": 2087,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 5,
-            "weight": 160,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_5PC_160KG",
-          "auxSeatElement": null,
-          "displayPrice": 29457.31,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "SCI_6PC_192KG",
-          "productName": "StandardCheckInBaggage",
-          "productType": 1,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 640.59,
-          "currency": "USD",
-          "vendorPrice": 2538,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 6,
-            "weight": 192,
-            "isAllWeight": true,
-            "size": null
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "StandardCheckInBaggage",
-          "ancillaryCode": "SCI_6PC_192KG",
-          "auxSeatElement": null,
-          "displayPrice": 35823.03,
-          "displayCurrency": "PHP"
-        },
-        {
-          "segmentIndex": 1,
-          "endSegmentIndex": null,
-          "productCode": "CBOL_1PC_10KG",
-          "productName": "CabinBaggageOverheadLocker",
-          "productType": 3,
-          "canPurchaseWithTicket": 1,
-          "canPurchasePostTicket": 0,
-          "price": 29.79,
-          "currency": "USD",
-          "vendorPrice": 118,
-          "vendorCurrency": "PLN",
-          "clientTechnicalServiceFee": 0,
-          "clientTechnicalServiceFeeMode": null,
-          "auxBaggageElement": {
-            "piece": 1,
-            "weight": 10,
-            "isAllWeight": true,
-            "size": ""
-          },
-          "offerId": null,
-          "maxQty": 1,
-          "minQty": 1,
-          "categoryCode": "CabinBaggageOverheadLocker",
-          "ancillaryCode": "CBOL_1PC_10KG",
-          "auxSeatElement": null,
-          "displayPrice": 1665.54,
-          "displayCurrency": "PHP"
-        }
-      ],
-      "vendorFare": {
-        "vendorAdultPrice": 241.53,
-        "vendorAdultTax": 81.94,
-        "vendorChildPrice": 241.53,
-        "vendorChildTax": 81.94,
-        "vendorInfantPrice": 306.88,
-        "vendorInfantTax": 0,
-        "vendorCurrency": "PLN"
-      },
+      "ancillaryProductElements": [],
+      "vendorFare": null,
       "bundleOptions": [],
       "links": null,
       "separateBookings": false,
-      "refreshTime": "2024-03-20T09:31:46Z",
-      "displayFare": {
-        "currency": "PHP",
-        "exchangeRate": 14.1146661,
-        "adultPrice": 3408.69,
-        "adultTax": 1156.24,
-        "childPrice": 3408.69,
-        "childTax": 1156.24,
-        "infantPrice": 4330.77,
-        "infantTax": 0
-      }
+      "refreshTime": "2024-12-13T05:25:56Z",
+      "displayFare": null,
+      "ancillarySupported": []
+    },
+    {
+      "fid": "ZE8zDIKlUVVov0gQoBk3QpYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChOQxTZJ7brCduAEac4Cv-UGG8WfOBAHVGM",
+      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MjgyLjAzXzI4Mi4wM18yMDUuNDdfMS4wMF83NzAuNTNfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBGTEVYLTEtI1JJWC1CVDAzNDktLVZOTy0yMDI0MTIyNjIzMTUtMjAyNDEyMjYyMzU5LUVjb25vbXkgRkxFWC0xLV4yODIuMDNfMjgyLjAzXzIwNS40N18xLjAwXzc3MC41M15BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.Gxi0Kcy7ytxhPdvnDW+aoJ2wGuzE1hZ/X1YddW8Tejs=",
+      "supportCreditTransPayment": "0",
+      "currency": "USD",
+      "adultPrice": 216.79,
+      "adultTax": 65.24,
+      "childPrice": 216.79,
+      "childTax": 65.24,
+      "infantPrice": 205.47,
+      "infantTax": 0,
+      "infantAllowed": true,
+      "transactionFeePerPax": 1,
+      "transactionFee": 1,
+      "transactionFeeMode": "PER_PAX",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
+        {
+          "segmentIndex": 1,
+          "carrier": "BT",
+          "flightNumber": "BT0482",
+          "depAirport": "PRG",
+          "depTime": "202412261940",
+          "arrAirport": "RIX",
+          "arrTime": "202412262225",
+          "stopCities": "",
+          "duration": 105,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy FLEX"
+        },
+        {
+          "segmentIndex": 2,
+          "carrier": "BT",
+          "flightNumber": "BT0349",
+          "depAirport": "RIX",
+          "depTime": "202412262315",
+          "arrAirport": "VNO",
+          "arrTime": "202412262359",
+          "stopCities": "",
+          "duration": 44,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy FLEX"
+        }
+      ],
+      "retSegments": [],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 1,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 1,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "H",
+            "refundFee": 25,
+            "currency": "EUR",
+            "refNoshow": "T",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40285,
+                "status": "H",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 25,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40290,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "F",
+            "changesFee": 0,
+            "currency": "EUR",
+            "revNoshow": "T",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40295,
+                "status": "F",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40300,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "serviceElements": [
+          {
+            "hasFreeSeat": 2,
+            "hasFreeMeal": 0
+          }
+        ]
+      },
+      "ancillaryProductElements": [],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false,
+      "refreshTime": "2024-12-13T05:25:56Z",
+      "displayFare": null,
+      "ancillarySupported": []
+    },
+    {
+      "fid": "dKLKop9ZAjxNZfbXFnEjV5Yttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChOQxTZJ7brCduAEac4Cv-UGG8WfOBAHVGM",
+      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8NDAyLjE4XzQwMi4xOF8zMDYuNDNfMS4wMF8xMTExLjc5X1VTRHxQUkdfVk5PXzFfMjAyNDEyMjZfXzFfMF8wXlBSRy1CVDA0ODItLVJJWC0yMDI0MTIyNjE5NDAtMjAyNDEyMjYyMjI1LUJVU0lORVNTLTEtI1JJWC1CVDAzNDktLVZOTy0yMDI0MTIyNjIzMTUtMjAyNDEyMjYyMzU5LUJVU0lORVNTLTEtXjQwMi4xOF80MDIuMThfMzA2LjQzXzEuMDBfMTExMS43OV5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.wbZD+u0BtWPDehg9GcZ+pnAoY/qWk1MF7+9oeKE/GjA=",
+      "supportCreditTransPayment": "0",
+      "currency": "USD",
+      "adultPrice": 335.87,
+      "adultTax": 66.31,
+      "childPrice": 335.87,
+      "childTax": 66.31,
+      "infantPrice": 306.43,
+      "infantTax": 0,
+      "infantAllowed": true,
+      "transactionFeePerPax": 1,
+      "transactionFee": 1,
+      "transactionFeeMode": "PER_PAX",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
+        {
+          "segmentIndex": 1,
+          "carrier": "BT",
+          "flightNumber": "BT0482",
+          "depAirport": "PRG",
+          "depTime": "202412261940",
+          "arrAirport": "RIX",
+          "arrTime": "202412262225",
+          "stopCities": "",
+          "duration": 105,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 2,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "BUSINESS"
+        },
+        {
+          "segmentIndex": 2,
+          "carrier": "BT",
+          "flightNumber": "BT0349",
+          "depAirport": "RIX",
+          "depTime": "202412262315",
+          "arrAirport": "VNO",
+          "arrTime": "202412262359",
+          "stopCities": "",
+          "duration": 44,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 2,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "BUSINESS"
+        }
+      ],
+      "retSegments": [],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 1,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 1,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "F",
+            "refundFee": 0,
+            "currency": "EUR",
+            "refNoshow": "T",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40287,
+                "status": "F",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40292,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "F",
+            "changesFee": 0,
+            "currency": "EUR",
+            "revNoshow": "T",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40297,
+                "status": "F",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40302,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "serviceElements": [
+          {
+            "hasFreeSeat": 1,
+            "hasFreeMeal": 1
+          }
+        ]
+      },
+      "ancillaryProductElements": [],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false,
+      "refreshTime": "2024-12-13T05:25:56Z",
+      "displayFare": null,
+      "ancillarySupported": []
+    },
+    {
+      "fid": "Mwu-N61Mm8veA8_gD1qC0pYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChO-NS6-xXUaUfxYfNPi67bxeiCLttfaj7a",
+      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MjQwLjIyXzI0MC4yMl8yMDAuMDlfMS4wMF82ODEuNTNfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBCQVNJQy0xLSNSSVgtQlQwMzQxLS1WTk8tMjAyNDEyMjcwNzI1LTIwMjQxMjI3MDgxNS1FY29ub215IEJBU0lDLTEtXjI0MC4yMl8yNDAuMjJfMjAwLjA5XzEuMDBfNjgxLjUzXkFCVF9BQlReXkFCVDFQUkdWTk80MDAyMDI0MTIyNl5FVVJ8MHwyMDI0MTIxMzE1MjgzNnwwfDE3MzQwNzQ5MTY1MDd5UlJzZnx8fHx8MS4wMHwzfDB8.IBq11hDBLWLxKTDOid1snAJXBlPb2IxybZYI8A/+FGk=",
+      "supportCreditTransPayment": "0",
+      "currency": "USD",
+      "adultPrice": 200.42,
+      "adultTax": 39.8,
+      "childPrice": 200.42,
+      "childTax": 39.8,
+      "infantPrice": 200.09,
+      "infantTax": 0,
+      "infantAllowed": true,
+      "transactionFeePerPax": 1,
+      "transactionFee": 1,
+      "transactionFeeMode": "PER_PAX",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
+        {
+          "segmentIndex": 1,
+          "carrier": "BT",
+          "flightNumber": "BT0482",
+          "depAirport": "PRG",
+          "depTime": "202412261940",
+          "arrAirport": "RIX",
+          "arrTime": "202412262225",
+          "stopCities": "",
+          "duration": 105,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy BASIC"
+        },
+        {
+          "segmentIndex": 2,
+          "carrier": "BT",
+          "flightNumber": "BT0341",
+          "depAirport": "RIX",
+          "depTime": "202412270725",
+          "arrAirport": "VNO",
+          "arrTime": "202412270815",
+          "stopCities": "",
+          "duration": 50,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy BASIC"
+        }
+      ],
+      "retSegments": [],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 1,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 0,
+            "baggageWeight": 0,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 0,
+            "baggageWeight": 0,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 1,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "EUR",
+            "refNoshow": "T",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40283,
+                "status": "T",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40288,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "H",
+            "changesFee": 50,
+            "currency": "EUR",
+            "revNoshow": "T",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40293,
+                "status": "H",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 50,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40298,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "serviceElements": [
+          {
+            "hasFreeSeat": 0,
+            "hasFreeMeal": 0
+          }
+        ]
+      },
+      "ancillaryProductElements": [],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false,
+      "refreshTime": "2024-12-13T05:25:56Z",
+      "displayFare": null,
+      "ancillarySupported": []
+    },
+    {
+      "fid": "QFDyo3S-Pu4CizegTgK8l5Yttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChO-NS6-xXUaUfxYfNPi67bxeiCLttfaj7a",
+      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MjUyLjkyXzI1Mi45Ml8yMzAuNzBfMS4wMF83MzcuNTRfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBDTEFTU0lDLTEtI1JJWC1CVDAzNDEtLVZOTy0yMDI0MTIyNzA3MjUtMjAyNDEyMjcwODE1LUVjb25vbXkgQ0xBU1NJQy0xLV4yNTIuOTJfMjUyLjkyXzIzMC43MF8xLjAwXzczNy41NF5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.FQZ40tg29YMe6egtoA7Uw83hdIXSYk0RUbGwoxfL6EI=",
+      "supportCreditTransPayment": "0",
+      "currency": "USD",
+      "adultPrice": 201.16,
+      "adultTax": 51.76,
+      "childPrice": 201.16,
+      "childTax": 51.76,
+      "infantPrice": 230.7,
+      "infantTax": 0,
+      "infantAllowed": true,
+      "transactionFeePerPax": 1,
+      "transactionFee": 1,
+      "transactionFeeMode": "PER_PAX",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
+        {
+          "segmentIndex": 1,
+          "carrier": "BT",
+          "flightNumber": "BT0482",
+          "depAirport": "PRG",
+          "depTime": "202412261940",
+          "arrAirport": "RIX",
+          "arrTime": "202412262225",
+          "stopCities": "",
+          "duration": 105,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy CLASSIC"
+        },
+        {
+          "segmentIndex": 2,
+          "carrier": "BT",
+          "flightNumber": "BT0341",
+          "depAirport": "RIX",
+          "depTime": "202412270725",
+          "arrAirport": "VNO",
+          "arrTime": "202412270815",
+          "stopCities": "",
+          "duration": 50,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy CLASSIC"
+        }
+      ],
+      "retSegments": [],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 1,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 1,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "EUR",
+            "refNoshow": "T",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40284,
+                "status": "T",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40289,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "H",
+            "changesFee": 50,
+            "currency": "EUR",
+            "revNoshow": "T",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40294,
+                "status": "H",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 50,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40299,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "serviceElements": [
+          {
+            "hasFreeSeat": 0,
+            "hasFreeMeal": 0
+          }
+        ]
+      },
+      "ancillaryProductElements": [],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false,
+      "refreshTime": "2024-12-13T05:25:56Z",
+      "displayFare": null,
+      "ancillarySupported": []
+    },
+    {
+      "fid": "wbElRxulKjH_3YOTIw7gDpYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChO-NS6-xXUaUfxYfNPi67bxeiCLttfaj7a",
+      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MTgzLjUzXzE4My41M18xODkuMjBfMS4wMF81NTcuMjZfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBGTEVYLTEtI1JJWC1CVDAzNDEtLVZOTy0yMDI0MTIyNzA3MjUtMjAyNDEyMjcwODE1LUVjb25vbXkgRkxFWC0xLV4xODMuNTNfMTgzLjUzXzE4OS4yMF8xLjAwXzU1Ny4yNl5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.kbv9khpQ1b93/yqCsv6vN3h3iDvROVbLzlY/5Nqb+xI=",
+      "supportCreditTransPayment": "0",
+      "currency": "USD",
+      "adultPrice": 137.69,
+      "adultTax": 45.84,
+      "childPrice": 137.69,
+      "childTax": 45.84,
+      "infantPrice": 189.2,
+      "infantTax": 0,
+      "infantAllowed": true,
+      "transactionFeePerPax": 1,
+      "transactionFee": 1,
+      "transactionFeeMode": "PER_PAX",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
+        {
+          "segmentIndex": 1,
+          "carrier": "BT",
+          "flightNumber": "BT0482",
+          "depAirport": "PRG",
+          "depTime": "202412261940",
+          "arrAirport": "RIX",
+          "arrTime": "202412262225",
+          "stopCities": "",
+          "duration": 105,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy FLEX"
+        },
+        {
+          "segmentIndex": 2,
+          "carrier": "BT",
+          "flightNumber": "BT0341",
+          "depAirport": "RIX",
+          "depTime": "202412270725",
+          "arrAirport": "VNO",
+          "arrTime": "202412270815",
+          "stopCities": "",
+          "duration": 50,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "Economy FLEX"
+        }
+      ],
+      "retSegments": [],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 1,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 1,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "H",
+            "refundFee": 25,
+            "currency": "EUR",
+            "refNoshow": "T",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40285,
+                "status": "H",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 25,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40290,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "F",
+            "changesFee": 0,
+            "currency": "EUR",
+            "revNoshow": "T",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40295,
+                "status": "F",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40300,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "serviceElements": [
+          {
+            "hasFreeSeat": 2,
+            "hasFreeMeal": 0
+          }
+        ]
+      },
+      "ancillaryProductElements": [],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false,
+      "refreshTime": "2024-12-13T05:25:56Z",
+      "displayFare": null,
+      "ancillarySupported": []
+    },
+    {
+      "fid": "hGdhBjki7YfWzhfcplunmJYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChO-NS6-xXUaUfxYfNPi67bxeiCLttfaj7a",
+      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8NDA2LjAzXzQwNi4wM18zMjEuMDJfMS4wMF8xMTM0LjA4X1VTRHxQUkdfVk5PXzFfMjAyNDEyMjZfXzFfMF8wXlBSRy1CVDA0ODItLVJJWC0yMDI0MTIyNjE5NDAtMjAyNDEyMjYyMjI1LUJVU0lORVNTLTEtI1JJWC1CVDAzNDEtLVZOTy0yMDI0MTIyNzA3MjUtMjAyNDEyMjcwODE1LUJVU0lORVNTLTEtXjQwNi4wM180MDYuMDNfMzIxLjAyXzEuMDBfMTEzNC4wOF5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.YW9MS01re+FqhCcXom7YWC+oz1NPYDlzdA76qNJGzBo=",
+      "supportCreditTransPayment": "0",
+      "currency": "USD",
+      "adultPrice": 342.57,
+      "adultTax": 63.46,
+      "childPrice": 342.57,
+      "childTax": 63.46,
+      "infantPrice": 321.02,
+      "infantTax": 0,
+      "infantAllowed": true,
+      "transactionFeePerPax": 1,
+      "transactionFee": 1,
+      "transactionFeeMode": "PER_PAX",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
+        {
+          "segmentIndex": 1,
+          "carrier": "BT",
+          "flightNumber": "BT0482",
+          "depAirport": "PRG",
+          "depTime": "202412261940",
+          "arrAirport": "RIX",
+          "arrTime": "202412262225",
+          "stopCities": "",
+          "duration": 105,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 2,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "BUSINESS"
+        },
+        {
+          "segmentIndex": 2,
+          "carrier": "BT",
+          "flightNumber": "BT0341",
+          "depAirport": "RIX",
+          "depTime": "202412270725",
+          "arrAirport": "VNO",
+          "arrTime": "202412270815",
+          "stopCities": "",
+          "duration": 50,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 2,
+          "seatCount": 4,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "BT",
+          "operatingFlightnumber": "",
+          "fareFamily": "BUSINESS"
+        }
+      ],
+      "retSegments": [],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 1,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "StandardCheckInBaggage",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 23,
+            "baggageSize": ""
+          },
+          {
+            "segmentNo": 1,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          },
+          {
+            "segmentNo": 2,
+            "baggageType": "CabinBaggageOverheadLocker",
+            "passengerType": 0,
+            "baggagePiece": 2,
+            "baggageWeight": 8,
+            "baggageSize": "55*40*23cm"
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "F",
+            "refundFee": 0,
+            "currency": "EUR",
+            "refNoshow": "T",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40287,
+                "status": "F",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40292,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "F",
+            "changesFee": 0,
+            "currency": "EUR",
+            "revNoshow": "T",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 40297,
+                "status": "F",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "EUR"
+              },
+              {
+                "ruleId": 40302,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "EUR"
+              }
+            ]
+          }
+        ],
+        "serviceElements": [
+          {
+            "hasFreeSeat": 1,
+            "hasFreeMeal": 1
+          }
+        ]
+      },
+      "ancillaryProductElements": [],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false,
+      "refreshTime": "2024-12-13T05:25:56Z",
+      "displayFare": null,
+      "ancillarySupported": []
     }
   ],
   "status": 0,
