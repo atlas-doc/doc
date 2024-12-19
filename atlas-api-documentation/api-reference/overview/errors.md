@@ -120,7 +120,8 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">214</mark> | Session ID invalid or expired                               | Session ID invalid or expired. | Send a new seat availability request |
 | <mark style="color:blue;">216</mark> | Seat selection failed         | Fail to get seat availability information. | Try after some time. If the problem persists, please raise a service request. |
-| <mark style="color:blue;">217</mark> | Unknown error         | Unknown error |  |
+| <mark style="color:blue;">217</mark> | Unknown error         | Unknown error |  |  
+| <mark style="color:blue;">218</mark> | The airline don’t support seat selection currently  | Seat selection is not available for this airline at the moment | Check with your account manager when seat availability will be supported for this airline |  
 
 #### Ticket Error Codes
 
