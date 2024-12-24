@@ -1,6 +1,6 @@
-# Route API
+# City Pairs API
 
-The "Route API" can be used to download the routes supported by Atlas as well as by the airlines. The customer can use this structured data and transfer the routing information into their mid-back office systems.
+The "City pairs API" can be used to download the city pairs supported by Atlas as well as by the airlines. The customer can use this structured data and transfer the city pair information into their mid-back office systems.
 
 **This API is only available in the production environment.**
 
@@ -95,10 +95,6 @@ There is no dependency for this call.
 
     IATA Code of arrival country.
 
-*   **route **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Mandatory**</mark>
-
-    The full route for the journey between the 2 cities/airport.
-
 *   **isDirect **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:green;">**Mandatory**</mark>
 
     True: Direct Flight 
@@ -142,8 +138,6 @@ There is no dependency for this call.
             "toCity": "SAN", 
 
             "toCountry": "IE", 
-
-            "route": "DUB-SFO|SFO-SAN", 
 
             "isDirect": false, 
 
