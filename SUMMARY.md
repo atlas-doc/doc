@@ -44,7 +44,7 @@
   * [Other Functions](atlas-api-documentation/api-reference/Other-functions/README.md)
     * [Balance API](atlas-api-documentation/api-reference/Other-functions/Balance-API.md)
     * [City Pair API](atlas-api-documentation/api-reference/Other-functions/Route-API.md)
-    * [Cache Data feed API](atlas-api-documentation/api-reference/Other-functions/cache-data-feed.md)
+    * [Cache Data Feed API](atlas-api-documentation/api-reference/Other-functions/cache-data-feed.md)
     * [Email Service API](atlas-api-documentation/api-reference/Email-Service/README.md)
       * [Email List](atlas-api-documentation/api-reference/Email-Service/Email-List.md)
       * [Email Notification](atlas-api-documentation/api-reference/Email-Service/Email-notification.md)
