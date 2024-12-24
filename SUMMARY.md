@@ -43,6 +43,7 @@
   * [Access To ATRIP](atlas-api-documentation/api-reference/access-to-atlas-customer-service-portal.md)
   * [Other Functions](atlas-api-documentation/api-reference/Other-functions/README.md)
     * [Balance API](atlas-api-documentation/api-reference/Other-functions/Balance-API.md)
+    * [Route API](atlas-api-documentation/api-reference/Other-functions/Route-API.md)
     * [Email Service API](atlas-api-documentation/api-reference/Email-Service/README.md)
       * [Email List](atlas-api-documentation/api-reference/Email-Service/Email-List.md)
       * [Email Notification](atlas-api-documentation/api-reference/Email-Service/Email-notification.md)
