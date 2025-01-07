@@ -158,7 +158,7 @@ Points to note:
 
     2: Ticketed
 
-    3: Cancelled
+    -3: Cancelled
 *   **airlines **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
     The airline code of one of the airline in the order. E.g.: ["FR"]
