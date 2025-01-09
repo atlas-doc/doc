@@ -10,7 +10,7 @@ There is no dependency for this call.
 
 ## Endpoint
 
-[https://api-sg.atriptech.com/route/export.do](https://api-sg.atriptech.com/route/export.do)
+[https://xxxx.xxxxxxxx.com/route/export.do](https://xxxx.xxxxxxxx.com/route/export.do)
 
 ## Request
 
