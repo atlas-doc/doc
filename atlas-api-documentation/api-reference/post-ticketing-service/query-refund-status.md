@@ -180,17 +180,21 @@ No preceding function needs to be carried out.
            Ending time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
       *   **refundStatus **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          The present status of the refund.
+           The present status of the refund.
 
-          The options are:
+           The options are:
 
-          0: Submitted (The customer has submitted to Atlas)
+           0: Submitted (The customer has submitted to Atlas)
 
-          1: Airline processing (Submitted to airline by Atlas)
+           1: Airline processing (Submitted to airline by Atlas)
 
-          2: Refunded
+           2: Airline Refunding (Airline has confirmed the refund and the refund is being processed)
 
-          3: Rejected  
+           3: Refunded
+
+           4: Rejected
+
+          5: Fulfillment Done
       *   **cancelReason **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
       The different reasons why the refund can be rejected are:
