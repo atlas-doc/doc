@@ -188,13 +188,10 @@ No preceding function needs to be carried out.
 
            1: Airline processing (Submitted to airline by Atlas)
 
-           2: Airline Refunding (Airline has confirmed the refund and the refund is being processed)
-
-           3: Refunded
+           2: Refunded
 
            4: Rejected
 
-          5: Fulfillment Done
       *   **cancelReason **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
       The different reasons why the refund can be rejected are:
