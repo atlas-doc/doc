@@ -29,6 +29,12 @@
 
     Passengers' information.
 
+{% hint style="info" %}
+
+The booking requirements need to be read from the "bookingRequirement" array in the "verify.do" response. The "Booking Requirements" can be different at the route level. Alternatively, you can add all the details but please note that all the fields should have actual data and not fictitious information. Please follow this approach.
+
+{% endhint %}
+
     * #### <mark style="color:blue;">**PassengerElement**</mark>
       *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
