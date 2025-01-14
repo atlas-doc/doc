@@ -52,13 +52,9 @@ Refund quotation function should be called in prior of this call
 
     1: Airline processing (Submitted to airline by Atlas)
 
-    2: Airline Refunding (Airline has confirmed the refund and the refund is being processed)
-
-    3: Refunded
+    2: Refunded
 
     4: Rejected
-
-    5: Fulfillment Done
 
 *   **status **<mark style="color:blue;">**int**</mark>
 
