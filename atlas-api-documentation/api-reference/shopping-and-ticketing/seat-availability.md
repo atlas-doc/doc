@@ -39,28 +39,34 @@ Verify function should be called in prior to this call.
 *   **cabin **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     This is a list and will be repeated once for upper deck and once for the main deck when the requested cabin is spread across the upper and main deck.
-*   **deck **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **deck **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     “Upper deck”: Upper deck
 
     “Main”: Main deck (default)
-*   **cabinType **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **cabinClass **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-    Cabin type
+    Service grade of the fare
 
-    Examples: First Class, Business Class
-*   **cabinLayout **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:green;">**Optional**</mark>
+    1 : Economy
+
+    2 : Business
+
+    3 : First Class
+
+    4:  Premium Economy
+*   **cabinLayout **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Cabin layout detail.
-*   **columns **<mark style="color:blue;">**Object**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **columns **<mark style="color:blue;">**Object**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Contains columns and seat information for seat display purposes. Returns the characteristics for each column.
-*   **designator **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **designator **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     identify a seat column position on an aircraft
 
     **Example**: A,B,C,D,E,F
-*   **characteristics **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **characteristics **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Characteristics of column
 
@@ -69,29 +75,29 @@ Verify function should be called in prior to this call.
     M: middle column
 
     W: column by the window
-*   **rows **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **rows **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Contains rows and seat information for seat display purposes. Returns the starting end row position for each column.
-*   **first **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **first **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
     Contains rows and seat information for seat display purposes. Returns the starting end row position for each column.
 
     First row number
 
     **Example**: 20
-*   **last **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **last **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     last row number
 
     **Example**: 43
-*   **exitRowPosition **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **exitRowPosition **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Returns the exit row information, if applicable. This must be returned regardless of whether exit row seats are open or are returned as valid seats.
-*   **first **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **first **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Exit seat starting row position
 
     **Example**: 29
-*   **last **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **last **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Exit seat ending row position
 
@@ -119,38 +125,54 @@ Verify function should be called in prior to this call.
     F: Free
 
     O: Occupied
-*   **seatCharacteristics **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **seatCharacteristics **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Seat Characteristic
-
-    E: Exit row seat
-
-    I: Seat suitable for adult with an infant
-
-    W: Window seat
-
+    
     A: Aisle seat
-
-    L: Leg space seat
-
-    **Example**: refer to IATA definition from codeset 9825
+    
+    E: Exit and emergency exit
+    
+    I:  Seat suitable for adult with an infant
+    
+    IE：Seat not suitable for child
+    
+    L:  Leg space seat
+    
+    U：Seat suitable for unaccompanied minors
+    
+    V：Seat to be left vacant or offered last
+    
+    W:  Window seat
+    
+    **Example**: refer to IATA definition from codeset 9825, reference 825
+    
+    **Document link**: https://pnr.lt/Failai/Code set Directory v13 2.pdf
 *   **price **<mark style="color:blue;">**Decimal**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Price of the seat
 *   **currency **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Currency of the price.
-*   **vendorPrice **<mark style="color:blue;">**Decimal**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **vendorPrice **<mark style="color:blue;">**Decimal**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     The price charged by the vendor for the seat.
-*   **vendorCurrency **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Optional**</mark>
+*   **vendorCurrency **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     The currency in which your customers will do transaction with you.
 *   **productCode **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Ancillary product code of seat, used in order
 
+    For seat, the format is SCI_SEAT_seatNumber_carrier_depAirport_arrAirport
+    
     **Example**: SCI_SEAT_C3_FR_KRK_LTN
+*   **displayPrice **<mark style="color:blue;">**Decimal**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    Display price of the seat
+*   **displayCurrency **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    Display price of the seat
 
 {% endtab %}
 
