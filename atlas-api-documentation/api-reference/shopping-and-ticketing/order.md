@@ -35,97 +35,93 @@ The booking requirements need to be read from the "bookingRequirement" array in 
 
 {% endhint %}
 
-    * #### <mark style="color:blue;">**PassengerElement**</mark>
-      *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+**Passengers **<mark style="color:blue;">**array**</mark>** **<mark>**Passenger Element**</mark> 
+      
+*   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          LastName/FirstName MiddleName.
-      *   **passengerType **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
+    LastName/FirstName MiddleName.
+*   **passengerType **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          0 ADT
+    0 ADT
 
-          1 CHD
+    1 CHD
           
-          2 INF
-      *   **birthday **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    2 INF
+*   **birthday **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          Birthday, Format: YYYYMMDD
-      *   **gender **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    Birthday, Format: YYYYMMDD
+*   **gender **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          M : Male
+    M : Male
 
-          F : Female
-      *   **gender **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    F : Female
+*   **cardNum **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          M : Male
+    Passenger id card number
+*   **cardType **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          F : Female
-      *   **cardNum **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    Passenger id card type：
 
-          Passenger id card number
-      *   **cardType **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    PP - Passport
 
-          Passenger id card type：
+    GA - Hong Kong Macau Pass for China mainland citizens
 
-          PP - Passport
+    TW - Taiwan Pass for China mainland citizens
 
-          GA - Hong Kong Macau Pass for China mainland citizens
+    TB - China mainland pass for Taiwanese
 
-          TW - Taiwan Pass for China mainland citizens
+    HY - International Seaman's Certificate
+*   **cardIssuePlace **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          TB - China mainland pass for Taiwanese
+    Card issue country，IATA code of country
+*   **cardExpired **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          HY - International Seaman's Certificate
-      *   **cardIssuePlace **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    Card expire date，Format：YYYYMMDD
+*   **nationality **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          Card issue country，IATA code of country
-      *   **cardExpired **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    Nationality，IATA code of country
+*   **ffpCardNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-          Card expire date，Format：YYYYMMDD
-      *   **nationality **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    Frequent flyer card number.
+*   **ffpCarrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-          Nationality，IATA code of country
-      *   **ffpCardNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+    Frequent flyer card issuing airline.
+*   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
-          Frequent flyer card number.
-     *   **ffpCarrier **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+    Ancillaries selection for the specific passenger
 
-          Frequent flyer card issuing airline.
-      *   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**> **<mark style="color:green;">**Required**</mark>
+* <mark style="color:blue;">**AncillaryElement**</mark>
+*   **productCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          Ancillaries selection for the specific passenger
+    Ancillary product code
 
-          * <mark style="color:blue;">**AncillaryElement**</mark>
-            *   **productCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    Got from routing element in the search/revalidation response.
+*   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-                Ancillary product code
+    Segment sequence
+*   **offerId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-                Got from routing element in the search/revalidation response.
-            *   **segmentIndex **<mark style="color:blue;">**int**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-                Segment sequence
-            *   **offerId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
-
-                unique identifier for this ancillary's offer.
+    unique identifier for this ancillary's offer.
 *   **contact Object<**<mark style="color:blue;">**ContactElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
     Contact's information.
 
-    * <mark style="color:blue;">**ContactElement**</mark>
-      *   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+* <mark style="color:blue;">**ContactElement**</mark>
+*   **name **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          Contact name, please follow this format : LastName/FirstName MiddleName
-      *   **address **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    Contact name, please follow this format : LastName/FirstName MiddleName
+*   **address **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          Contact address.
-      *   **postcode **<mark style="color:orange;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
+    Contact address.
+*   **postcode **<mark style="color:orange;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
-          Contact post code.
-      *   **email **<mark style="color:orange;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
+    Contact post code.
+*   **email **<mark style="color:orange;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
-          Contact email.
-      *   **mobile **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
+    Contact email.
+*   **mobile **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-          Contact mobile, please follow this format : XXXX(digital country code)-XXXXXXXX(phone number), here're the examples: 0001-87291810, 0086-13928109091, 0971-19201998
+    Contact mobile, please follow this format : XXXX(digital country code)-XXXXXXXX(phone number), here're the examples: 0001-87291810, 0086-13928109091, 0971-19201998
 *   **requestSource **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     The tag to identify which channel does this traffic come from.
