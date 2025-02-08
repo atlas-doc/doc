@@ -357,6 +357,5 @@ Please note the below while initiating a refund transaction.
 {% endtabs %}
 
 {% hint style="info" %}
-All amounts are calculated using the current time +12 hours. This is to permit the Atlas Operations Team to initiate the refund process with the airline.
 Please note that the refund quote is valid for 2 hrs.
 {% endhint %}
