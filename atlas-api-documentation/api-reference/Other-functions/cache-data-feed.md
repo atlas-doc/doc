@@ -55,8 +55,6 @@ The airlines allowed in the feed would be configured at Atlas’ end.
 
 ## Endpoint
 
-[https://api-sg.atriptech.com/gather/file.do](https://api-sg.atriptech.com/gather/file.do)
-
 This request needs to be sent at regular intervals to keep the cached data fresh. 
 
 Please note that this API is only available in the production environment. Please contact your account manager for further information.
@@ -76,6 +74,36 @@ No, we do not provide full data for initialization. Customers can accumulate the
 2. **How to know which flights are sold out?**
    
 We include full flight and price data in each "data unit" (a set of "airline, departure-arrival destination, departure-arrival time" combinations), so you just need to cover with the latest data unit. If a flight is sold out, it will not appear in the latest data and thus will not be searchable by customers.  
+
+Example:
+
+Each data unit consists of airline, departure date and city pair.
+
+The first time we return Full data for: VJ, 2024-04-23, Shanghai-Singapore 
+
+VJ1902, USD 145 
+
+VJ1901, USD 145, USD 156 
+
+VJ1900, USD 145, USD 156, USD 167 
+
+If VJ1902 is sold out, then we will return VJ1902 without price following
+
+VJ, 2024-04-23, Shanghai-Singapore 
+
+VJ1902, 
+
+VJ1901, USD 145, USD 156 
+
+VJ1900, USD 145, USD 156, USD 167 
+
+If VJ1902 is cancelled, then we will not return VJ1902 in this data unit
+
+VJ, 2024-04-23, Shanghai-Singapore 
+
+VJ1901, USD 145, USD 156 
+
+VJ1900, USD 145, USD 156, USD 167 
 
 
 ## Request Header
@@ -622,10 +650,6 @@ We include full flight and price data in each "data unit" (a set of "airline, de
 ## Verification
 
 The next step is to go to the verification process. 
-
-## Production Endpoint
-
-[https://api-sg.atriptech.com/verify.do](https://api-sg.atriptech.com/verify.do)
 
 To verify the selected fare, the below fields are mandatory for the verification request: 
 
