@@ -38,7 +38,7 @@ Verify function should be called in prior to this call.
 *   **segmentIndex **<mark style="color:blue;">**String**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Flight segment for which seat map is returned.
-*   **cabin **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:green;">**Required**</mark>
+*   **cabin **<mark style="color:blue;">**Object**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     This is a list and will be repeated once for upper deck and once for the main deck when the requested cabin is spread across the upper and main deck.
 *   **deck **<mark style="color:blue;">**String**</mark>**  **<mark style="color:orange;">**Optional**</mark>
