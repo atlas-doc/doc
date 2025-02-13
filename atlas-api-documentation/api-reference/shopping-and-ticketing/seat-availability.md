@@ -18,6 +18,8 @@ Verify function should be called in prior to this call.
 
     Identifier of the search response.
 
+    **Please note that the sessionID needs to be the same throughout the order.**
+
 {% endtab %}
 
 {% tab title="Samples" %}
