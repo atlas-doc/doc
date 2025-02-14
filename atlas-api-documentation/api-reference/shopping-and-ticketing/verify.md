@@ -8,6 +8,13 @@ The `search` function should be called prior to this call.
 
 [https://sandbox.atriptech.com/verify.do](https://sandbox.atriptech.com/verify.do)
 
+{% hint style="info" %}
+
+* When there is no price change, the "original" and the "new" price and tax will always be the same.
+* When there is price change, there will be some difference between the "original" and the "new" price and tax.
+
+{% endhint %}
+
 ### Request
 
 {% tabs %}
@@ -157,13 +164,6 @@ The alternative currency in which the fare and taxes amount needs to be displaye
     
     Infant tax with price change (if any) returned in verify response
     
-{% hint style="info" %}
-
-* When there is no price change, the "original" and the "new" price and tax will always be the same.
-* When there is price change, there will be some difference between the "original" and the "new" price and tax.
-
-{% endhint %}
-
 {% endtab %}
 
 {% tab title="Samples" %}
