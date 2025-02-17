@@ -10,6 +10,8 @@ Each offer represents flights that meet your search criteria. Your users will th
 
 - [Verify](verify.md)
 
+- [Get Offer](get-offer.md)
+
 - [Seat Availability](seat-availability.md)
 
 - [Order](order.md)
