@@ -19,27 +19,122 @@ No preceding function needs to be called before Get Offer.
 
 {% tabs %}
 {% tab title="Schema" %}
-| **Parameter**                          | **Type**   | **Required/Optional** | **Description**                        | **Constraints**      | **Default** | **Example** |
-|----------------------------------------|------------|-----------------------|----------------------------------------|----------------------|-------------|-------------|
-| **adults**                             | Integer    | Required              | Number of adults                       | N/A                  | 1           | 1           |
-| **children**                           | Integer    | Required              | Number of children                     | N/A                  | 0           | 0           |
-| **infants**                            | Integer    | Required              | Number of infants                      | N/A                  | 0           | 0           |
-| **<span style="color:blue">Outbound Segments</span>** |            |                       |                                        |                      |             |             |
-| **outboundSegments**                   | Array      | Required              | List of outbound flight segments       | N/A                  | []          | [{"departureAirport": "LON", "arrivalAirport": "PAR", "carrier": "U2", "flightNumber": "673", "departureDate": "20250301"}] |
-| **outboundSegments.departureAirport**  | String     | Required              | IATA three letter code of departure airport which is case sensitive. If the value is illegal, the system will prompt that the airport does not exist.                | 3 Characters              | N/A         | "LON"       |
-| **outboundSegments.arrivalAirport**    | String     | Required              | IATA three letter code of departure airport which is case sensitive. If the value is illegal, the system will prompt that the airport does not exist.                   | 3 Characters                  | N/A         | "PAR"       |
-| **outboundSegments.carrier**           | String     | Required              | Carrier code                           | N/A                  | N/A         | "U2"        |
-| **outboundSegments.flightNumber**      | String     | Required              | Marketing flight number without airline code prefix.                           | N/A                  | N/A         | "673"       |
-| **outboundSegments.departureDate**     | String     | Required              | Departure date in YYYYMMDD format. We do not require users to specify departure times, we do not support return segments based on specific departure time as well. Considering that the externally transmitted time may not match the actual flight segment time on the supplier's (airline's) side, this can lead to search results being lost. Therefore, we will return flights with the specified flight number departing on the specified date. | 8 numerics                  | N/A         | "20250301"  |
-| **<span style="color:blue">Inbound Segments</span>** |            |                       |                                        |                      |             |             |
-| **inboundSegments**                    | Array      | Required              | List of inbound flight segments        | N/A                  | []          | [{"departureAirport": "PAR", "arrivalAirport": "LON", "carrier": "U2", "flightNumber": "674", "departureDate": "20250303"}] |
-| **inboundSegments.departureAirport**   | String     | Required              | IATA three letter code of departure airport which is case sensitive. If the value is illegal, the system will prompt that the airport does not exist.                 | 3 Characters        | N/A         | "PAR"       |
-| **inboundSegments.arrivalAirport**     | String     | Required              | IATA three letter code of departure airport which is case sensitive. If the value is illegal, the system will prompt that the airport does not exist.                 | 3 Characters                 | N/A         | "LON"       |
-| **inboundSegments.carrier**            | String     | Required              | Carrier code                           | N/A                  | N/A         | "U2"        |
-| **inboundSegments.flightNumber**       | String     | Required              | Marketing flight number without airline code prefix.          | N/A                  | N/A         | "674"       |
-| **inboundSegments.departureDate**      | String     | Required              | Departure date in YYYYMMDD format      | N/A                  | N/A         | "20250303"  |
-| **<span style="color:blue">currency</span>** |            |                       |                                        |                      |             |             |
-| **currency**                           | String     | Optional              | Currency code (if available)           | N/A                  | null        | null        | 
+
+## adults
+- **Type:** Integer  
+- **Required:** Yes  
+- **Description:** Number of adult passengers.  
+- **Constraints:** Must be 1 or more.  
+- **Default:** None  
+- **Example:** `1`  
+
+## children
+- **Type:** Integer  
+- **Required:** Yes  
+- **Description:** Number of child passengers.  
+- **Constraints:** Must be 0 or more.  
+- **Default:** `0`  
+- **Example:** `0`  
+
+## infants
+- **Type:** Integer  
+- **Required:** Yes  
+- **Description:** Number of infant passengers.  
+- **Constraints:** Must be 0 or more.  
+- **Default:** `0`  
+- **Example:** `0`  
+
+## outboundSegments
+- **Description:** The segments will be arranged in the order of the flights.  
+
+### outboundSegments[].departureAirport
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** IATA code of the departure airport.  
+- **Constraints:** 3-letter airport code.  
+- **Default:** None  
+- **Example:** `"LON"`  
+
+### outboundSegments[].arrivalAirport
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** IATA code of the arrival airport.  
+- **Constraints:** 3-letter airport code.  
+- **Default:** None  
+- **Example:** `"PAR"`  
+
+### outboundSegments[].carrier
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** IATA two letter code of marketing carrier.
+- **Constraints:** 2-letter airline code.  
+- **Default:** None  
+- **Example:** `"U2"`  
+
+### outboundSegments[].flightNumber
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** Marketing flight number without airline code prefix. 
+- **Constraints:** Numeric flight number.  
+- **Default:** None  
+- **Example:** `"673"`  
+
+### outboundSegments[].departureDate
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** Departure date of the flight. We do not require users to specify departure times. We do not support return segments based on specific departure time as well. Considering that the externally transmitted time may not match the actual flight segment time on the supplier's (airline's) side, this can lead to search results being lost. Therefore, we will return flights with the specified flight number departing on the specified date. 
+- **Constraints:** Format `YYYYMMDD`.  
+- **Default:** None  
+- **Example:** `"20250301"`  
+
+## inboundSegments
+### inboundSegments[].departureAirport
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** IATA code of the departure airport.  
+- **Constraints:** 3-letter airport code.  
+- **Default:** None  
+- **Example:** `"PAR"`  
+
+### inboundSegments[].arrivalAirport
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** IATA code of the arrival airport.  
+- **Constraints:** 3-letter airport code.  
+- **Default:** None  
+- **Example:** `"LON"`  
+
+### inboundSegments[].carrier
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** IATA two letter code of marketing carrier.
+- **Constraints:** 2-letter airline code.  
+- **Default:** None  
+- **Example:** `"U2"`  
+
+### inboundSegments[].flightNumber
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** Marketing flight number without airline code prefix. 
+- **Constraints:** Numeric flight number.  
+- **Default:** None  
+- **Example:** `"674"`  
+
+### inboundSegments[].departureDate
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** Departure date of the flight. We do not require users to specify departure times. We do not support return segments based on specific departure time as well. Considering that the externally transmitted time may not match the actual flight segment time on the supplier's (airline's) side, this can lead to search results being lost. Therefore, we will return flights with the specified flight number departing on the specified date. 
+- **Constraints:** Format `YYYYMMDD`.  
+- **Default:** None  
+- **Example:** `"20250303"`  
+
+## currency
+- **Type:** String or Null  
+- **Required:** No  
+- **Description:** Preferred currency for pricing.  
+- **Constraints:** 3-letter currency code or null.  
+- **Default:** `null`  
+- **Example:** `USD`  
 
 {% endtab %}
 
