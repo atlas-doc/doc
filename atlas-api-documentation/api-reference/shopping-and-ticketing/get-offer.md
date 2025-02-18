@@ -374,25 +374,25 @@ Fare: The base for expressing percentages is the fare.
 - **Example:**  
   ```json
   [
-  {
-    "serviceID": "string",
-    "segmentRefIDs": [
-      "string"
-    ],
-    "type": "Baggage",
-    "level": "Free",
-    "paxTypes": [
-      "ADT"
-    ],
-    "metadata": {
-      "type": "StandardCheckInBaggage",
-      "maximumWeight": 20,
-      "maximumPiece": 1,
-      "maximumDimension": "L+W+H<=158cm"
+    {
+      "serviceID": "string",
+      "segmentRefIDs": [
+        "string"
+      ],
+      "type": "Baggage",
+      "level": "Free",
+      "paxTypes": [
+        "ADT"
+      ],
+      "metadata": {
+        "type": "StandardCheckInBaggage",
+        "maximumWeight": 20,
+        "maximumPiece": 1,
+        "maximumDimension": "L+W+H<=158cm"
+      }
     }
-  }
-]
- ```
+  ]
+  ```
 
 #### `data.offer.services.serviceID`
 - **Type:** String  
