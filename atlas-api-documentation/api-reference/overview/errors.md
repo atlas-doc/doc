@@ -137,10 +137,12 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">608</mark> | Duplicate booking                          |  | Check if a booking with the same passenger details and flight numbers exists. After confirming, ignore this booking.|
 | <mark style="color:blue;">609</mark> | Contact email is blocked by airline        |  Airline has blocked your email id as per their policy. | Create a new booking with a different email id OR provide authority to Atlas to use Atlas’ email id. Please refer to “Atlas API Order” FAQs for further details. |
 | <mark style="color:blue;">610</mark> | Error happened during payment with airline |  |  |
+| <mark style="color:blue;">613</mark> | Rejected by Airline Risk Control | The airline has blocked the order as per their business rules. | Try making a payment with a different VCC. If the issue persists, due the "deposit" to make the payment. |
 | <mark style="color:blue;">614</mark> | Wrong age | The age of the child passenger is not correct. | Check the age and resubmit the booking. |
 | <mark style="color:blue;">615</mark> | Payment completed but failed to get the PNR number from the airline | Sometimes for the VCC payment, the airline fails to respond and hence the PNR is not received. In such a scenario, Atlas will deal with the airline manually and get the PNR and add it to the booking. |  |
 | <mark style="color:blue;">616</mark> | 3DS Authetication |  The card used requires a 3DS authentication. Atlas does not support this feature at the moment. | Use a different card which does not have 3DS authentication OR pay via deposit mode of payment. |
 | <mark style="color:blue;">617</mark> | Insufficient balance |  The deposit balance is below the minimum threshold. | Check your balance and top-up on a priority. |
+| <mark style="color:blue;">623</mark> | Insufficient card balance/card consumption limit |  The VCC provided has insufficient balance/card consumption limit. | Please pay using a different VCC with sufficient card balance. |
 
 
 #### Query Order Error Codes
