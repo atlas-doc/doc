@@ -4,7 +4,7 @@
 
 No preceding function needs to be called before Get Offer.  
 
-### Endpoint {% debug uid="verify_1.0" %}{% enddebug %}
+### Endpoint {% debug uid="getoffers_1.0" %}{% enddebug %}
 
 [https://sandbox.atriptech.com/getOffers.do](https://sandbox.atriptech.com/getOffers.do)
 
