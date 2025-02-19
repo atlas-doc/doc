@@ -6,6 +6,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">-1</mark> | Common error     |  | Atlas will investigate and add the relevant error code. |
+| <mark style="color:blue;">100</mark> | Missing required request data     | Missing mandatory parameters. | Check the mandatory parameters. |
 | <mark style="color:blue;">900</mark> | Unauthorized access | Incorrect credentials Or the account status is incorrect Or try to access other customer's data. | Check credentials. If the error still persists, contact your account manager. |
 | <mark style="color:blue;">901</mark> |  illegal request data                               | Check the format of request. | The request format should be Json. |
 | <mark style="color:blue;">902</mark>  |  Access denied   | Incorrect credentials Or the account status is incorrect Or you are trying to access other customer's data. | Check credentials. If the error still persists, contact your account manager. |
@@ -15,7 +16,6 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 #### Search Error Codes
 | Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
-| <mark style="color:blue;">100</mark> | Missing required request data     | Missing mandatory parameters. | Check the mandatory parameters. |
 | <mark style="color:blue;">101</mark> | Illegal request data                         | Check the format of request. | The format should be Json. |
 | <mark style="color:blue;">102</mark> | Illegal request param: {0}                           | Please check the messages below.  |  |
 |  | The adult count should not be less than 1 | The adult count is "0". | Add an adult passenger type. |   
@@ -127,22 +127,28 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 
 | Code | Description                    | Explanation                    | Solution                     |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
-| <mark style="color:blue;">601</mark> | Price change                               |  |  |
+| <mark style="color:blue;">601</mark> | Fare changed                               |  |  |
 | <mark style="color:blue;">602</mark> | Flight not found                           | The flight is no longer available on the airlines platform. | Create a new booking. |
 | <mark style="color:blue;">603</mark> | Flight sold out                            | The flight is sold out, and there are no available seats. This occurred after the payment was completed but before the ticket was issued. | Create a new booking. |
-| <mark style="color:blue;">604</mark> | Payment declined by airline                | VCC not accepted by the airline. | Try a different card for payment. |
+| <mark style="color:blue;">604</mark> | Pass-through card payment failed               | VCC not accepted by the airline. | Try a different card for payment. |
 | <mark style="color:blue;">605</mark> | Incorrect passenger information            | The information in the "passengers" array is incorrect. | Check the passenger details and resubmit after correction. |  
-| <mark style="color:blue;">606</mark> | Inconsistent flight information            | Between search and book, the airline made a schedule change for the same flight number. | Start from search again. |
-| <mark style="color:blue;">607</mark> | Fare not available                         |  | Start from search again. |
+| <mark style="color:blue;">606</mark> | Flight information updated          | Between search and book, the airline made a schedule change for the same flight number. | Start from search again. |
+| <mark style="color:blue;">607</mark> | Seat sold out                       |  | Start from search again. |
 | <mark style="color:blue;">608</mark> | Duplicate booking                          |  | Check if a booking with the same passenger details and flight numbers exists. After confirming, ignore this booking.|
 | <mark style="color:blue;">609</mark> | Contact email is blocked by airline        |  Airline has blocked your email id as per their policy. | Create a new booking with a different email id OR provide authority to Atlas to use Atlas’ email id. Please refer to “Atlas API Order” FAQs for further details. |
-| <mark style="color:blue;">610</mark> | Error happened during payment with airline |  |  |
+| <mark style="color:blue;">611</mark> | PNR canceled or expired        |  The PNR has been cancelled by the airline or the payment exceeds the time-limit. | Start from search again. |
 | <mark style="color:blue;">613</mark> | Rejected by Airline Risk Control | The airline has blocked the order as per their business rules. | Try making a payment with a different VCC. If the issue persists, due the "deposit" to make the payment. |
 | <mark style="color:blue;">614</mark> | Wrong age | The age of the child passenger is not correct. | Check the age and resubmit the booking. |
 | <mark style="color:blue;">615</mark> | Payment completed but failed to get the PNR number from the airline | Sometimes for the VCC payment, the airline fails to respond and hence the PNR is not received. In such a scenario, Atlas will deal with the airline manually and get the PNR and add it to the booking. |  |
 | <mark style="color:blue;">616</mark> | 3DS Authetication |  The card used requires a 3DS authentication. Atlas does not support this feature at the moment. | Use a different card which does not have 3DS authentication OR pay via deposit mode of payment. |
 | <mark style="color:blue;">617</mark> | Insufficient balance |  The deposit balance is below the minimum threshold. | Check your balance and top-up on a priority. |
+| <mark style="color:blue;">618</mark> | Baggage weight cannot match with airline |  The weight of the baggage does not include one of the options which the airline has. | Check with the Atlas ops team |
+| <mark style="color:blue;">619</mark> | Missing payment information |  Some information in the pay.do request is missing/incorrect. | Check the pay.do request and resubmit. |
+| <mark style="color:blue;">620</mark> | Abnormal return fare type |  Roundtrip fares are limited to basic by the airline and cannot be combined with other fare types. | Book only one-way itineraries or create 1 booking per direction. |
+| <mark style="color:blue;">621</mark> | Infant not supported |  Atlas does not suppport the "infant" passenger type for this airline. | Create a new booking without the infant passenger. |
 | <mark style="color:blue;">623</mark> | Insufficient card balance/card consumption limit |  The VCC provided has insufficient balance/card consumption limit. | Please pay using a different VCC with sufficient card balance. |
+| <mark style="color:blue;">631</mark> | Baggage fare changed. | The baggage price has changed at the time of fulfillment.  |  |
+| <mark style="color:blue;">633</mark> | Payment declined by airline. | The baggage price has changed at the time of fulfillment.  |  |
 
 
 #### Query Order Error Codes
