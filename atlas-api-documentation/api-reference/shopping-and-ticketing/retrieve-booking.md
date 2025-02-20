@@ -37,6 +37,9 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 *   **orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Order number. It can be an order for ticketing, or an order for add bags. The format of each kind of order is different.
+*   **pnrCode **<mark style="color:blue;">**string**</mark>
+    
+    The pnrCode is the single reference for the booking. This is the Atlas PNR. 
 *   **airlinePNR **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     The record locator of the airline.
