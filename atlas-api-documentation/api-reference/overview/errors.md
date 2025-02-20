@@ -147,8 +147,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">620</mark> | Abnormal return fare type |  Roundtrip fares are limited to basic by the airline and cannot be combined with other fare types. | Book only one-way itineraries or create 1 booking per direction. |
 | <mark style="color:blue;">621</mark> | Infant not supported |  Atlas does not suppport the "infant" passenger type for this airline. | Create a new booking without the infant passenger. |
 | <mark style="color:blue;">623</mark> | Insufficient card balance/card consumption limit |  The VCC provided has insufficient balance/card consumption limit. | Please pay using a different VCC with sufficient card balance. |
-| <mark style="color:blue;">631</mark> | Baggage fare changed. | The baggage price has changed at the time of fulfillment.  |  |
-| <mark style="color:blue;">633</mark> | Payment declined by airline. | The baggage price has changed at the time of fulfillment.  |  |
+| <mark style="color:blue;">631</mark> | Baggage fare changed. | The baggage price has changed at the time of fulfillment.  | Start the process from verify. |
 
 
 #### Query Order Error Codes
