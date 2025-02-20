@@ -85,6 +85,7 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 ```json
 {
     "orderNo": "TESTA20240627114717735",
+    "pnrCode": "XYZ87T",
     "airlinePNR": "S75666",
     "carrier": "G9",
     "passengers": [
