@@ -25,9 +25,9 @@ Method : Post
   *   **orderStatus **<mark style="color:blue;">**int**</mark>
 
       orderStatus=2 means ticketed
-  *   **paxTicketInfos Array<**[**PAXTicketInfo**](broken-reference/)**>**
+  *   **paxTicketInfos Array<[**PAXTicketInfo**](broken-reference/)>**
 
-      Passengers' ticket information, the same format as the PAXTicketInfo in order response or retrive booking response, click [here](./api-reference/shopping-and-ticketing/order.md) to check the schema
+      Passengers' ticket information, the same format as the PAXTicketInfo in order response or retrive booking response, click [here](../shopping-and-ticketing/order.md) to check the schema
 {% endtab %}
 
 {% tab title="Samples" %}
