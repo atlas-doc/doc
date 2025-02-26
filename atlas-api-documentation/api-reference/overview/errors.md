@@ -147,7 +147,16 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">620</mark> | Abnormal return fare type |  Roundtrip fares are limited to basic by the airline and cannot be combined with other fare types. | Book only one-way itineraries or create 1 booking per direction. |
 | <mark style="color:blue;">621</mark> | Infant not supported |  Atlas does not suppport the "infant" passenger type for this airline. | Create a new booking without the infant passenger. |
 | <mark style="color:blue;">623</mark> | Insufficient card balance/card consumption limit |  The VCC provided has insufficient balance/card consumption limit. | Please pay using a different VCC with sufficient card balance. |
+| <mark style="color:blue;">624</mark> | Round trip is not supported temporarily |  Roundtrip functionality for this airline is currently not supported | Book 2 one way as separate orders. |
+| <mark style="color:blue;">625</mark> | ffp Manual Issuance. | Frequent flyer is not supported and at the moment and can only be handled manually.  |  |
+| <mark style="color:blue;">626</mark> | There are unpaid services in the current order. | The airline identied that there were unpaid transactions under this PNR, leading to subsequent business operations failure..  | Make payment for any unpaid orders |
+| <mark style="color:blue;">627</mark> | The current order does not support post-ticketing ancillary purchase. | Post-ticketing ancillaries are not allowed for this order.  | Remove the ancillaries and create a new order. |
+| <mark style="color:blue;">628</mark> | The flight information of the post-ticketing ancillary purchase order does not match the original flight. | The flight details are incorrect.  | Check the flight details and create a new order. |
+| <mark style="color:blue;">629</mark> | The order is non-refundable. |   |  |
+| <mark style="color:blue;">630</mark> | The refund amount from the airline is less than the expected amount for the order. |   |  |
 | <mark style="color:blue;">631</mark> | Baggage fare changed. | The baggage price has changed at the time of fulfillment.  | Start the process from verify. |
+| <mark style="color:blue;">632</mark> | Baggage fare changed. | Ticketing failed due to airline risk control.  | Start the process from verify. If the problem still exists please contact our operations team. |
+| <mark style="color:blue;">633</mark> | Payment declined by airline. | Payment declined due to airline risk control.  | Use "deposit" as the payment mode and retry. |
 
 
 #### Query Order Error Codes
@@ -159,7 +168,6 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">704</mark> | Parameters don't match, please check and retry  | The parameters entered are not correct. | Check the parameters, correct them and try again. |
 | <mark style="color:blue;">705</mark> | Timeout  | The response has timed-out | Try again after some time. If the issue persists, please contact support. |
 | <mark style="color:blue;">800</mark> | Order does not exist                           | The relevant order does not exist. | Please re-check the order number and retry. |
-
 
 #### Refund Error Codes
 | Code | Description                    | Explanation                    | Solution                    |
