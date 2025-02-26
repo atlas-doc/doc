@@ -15,7 +15,7 @@ Refund quotation function should be called in prior of this call
 
 ## **orderNo**
 - **Type:** String  
-- **Required:** No  
+- **Required:** Yes  
 - **Description:** Original order number. You can choose request orderNo or airlinePNR.  
 - **Constraints:** Alphanumeric string.  
 - **Default:** None  
@@ -188,7 +188,7 @@ Ticket selection of the passengers and flights which is going to refund.
 
 ## **msg**
 - **Type:** String  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Error message describing the response. Please do not use this field to check the success or failure of the request. Only use the ‘status’ code to check the result.  
 - **Constraints:** None  
 - **Default:** None  
@@ -212,7 +212,7 @@ Ticket selection of the passengers and flights which is going to refund.
 
 ## **displayCurrency**
 - **Type:** String  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Alternative currency for displaying fare and tax amounts.  
 - **Constraints:** 3-letter ISO currency code.  
 - **Default:** None  
@@ -258,7 +258,7 @@ The refund calculation for flight fare and inflow ancillaries.
 
 ### **refundFareAmount.displayOriginalFareAmount**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Original fare amount in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -266,7 +266,7 @@ The refund calculation for flight fare and inflow ancillaries.
 
 ### **refundFareAmount.displayEstimatedRefundAmount**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Estimated refund amount in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -309,7 +309,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].displayPostTicketingServiceAmount**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Displayed original post-ticketing service amount in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -317,7 +317,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].displayEstimatedRefundAmount**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Displayed estimated refund amount in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -345,7 +345,7 @@ Service fee of refund.
 
 ### **serviceFee.displayTransactionFee**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Transaction fee displayed in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -369,7 +369,7 @@ Service fee of refund.
 
 ## **cancelReason**
 - **Type:** String  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** The reason for canceling the ticket or service.  
 - **Constraints:** Predefined cancellation reason codes or free text depending on the system's requirements.  
 The reason why the refund was cancelled.
