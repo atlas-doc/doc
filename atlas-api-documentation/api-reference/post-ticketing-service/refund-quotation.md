@@ -50,7 +50,7 @@ Please note the below while initiating a refund transaction.
 {% tab title="Schema" %}
 ## orderNo
 - **Type:** String  
-- **Required:** No  
+- **Required:** Yes  
 - **Description:** Unique order number.  
 - **Constraints:** Alphanumeric string.  
 - **Default:** None  
@@ -97,7 +97,15 @@ Ticket selection of the passengers and flights which is going to refund.
 - **Description:** First name of the passenger requesting a refund.  
 - **Constraints:** Alphabetic characters only.  
 - **Default:** None  
-- **Example:** `"SAN"`  
+- **Example:** `"SAN"`
+
+### refundRequestList[].refundReason
+- **Type:** String  
+- **Required:** Yes  
+- **Description:** Code representing the reason for the refund request.  
+- **Constraints:** 0: Involuntary  1: Voluntary  4: Void  
+- **Default:** None  
+- **Example:** `"1"`  
 
 ### refundRequestList[].segments
 #### refundRequestList[].segments[].depDate
@@ -132,13 +140,6 @@ Ticket selection of the passengers and flights which is going to refund.
 - **Default:** None  
 - **Example:** `"CJU"`  
 
-### refundRequestList[].refundReason
-- **Type:** String  
-- **Required:** Yes  
-- **Description:** Code representing the reason for the refund request.  
-- **Constraints:** 0: Involuntary  1: Voluntary  4: Void  
-- **Default:** None  
-- **Example:** `"1"`  
     
 {% endtab %}
 
@@ -189,7 +190,7 @@ Ticket selection of the passengers and flights which is going to refund.
 
 ## **fastConfirmation**
 - **Type:** Integer  
-- **Required:** 
+- **Required:** Yes
 - **Description:**  Fast confirmation depends on whether the airline supports auto fulfillment.  
 - **Constraints:** `0` for False, `1` for True.  
 - **Default:** `0`  
@@ -197,7 +198,7 @@ Ticket selection of the passengers and flights which is going to refund.
 
 ## **expectedConfirmationDate**
 - **Type:** String  
-- **Required:**   
+- **Required:** Yes
 - **Description:** Expected date of getting airline refund confirmation.  
 - **Constraints:** Format `YYYYMMDD`.  
 - **Default:** None  
@@ -205,7 +206,7 @@ Ticket selection of the passengers and flights which is going to refund.
 
 ## **expectedRefundDate**
 - **Type:** String  
-- **Required:**   
+- **Required:** Yes
 - **Description:** Expected date of getting refund.  
 - **Constraints:** Format `YYYYMMDD`.  
 - **Default:** None  
@@ -213,7 +214,7 @@ Ticket selection of the passengers and flights which is going to refund.
 
 ## **refundQuoteType**
 - **Type:** String  
-- **Required:**   
+- **Required:** Yes   
 - **Description:** Type of refund quote：
     -    AccurateQuote：quotation based on the calculated amount.
     -    CannotQuote: quotation is unknown and will be according to the airline's rates
@@ -224,7 +225,7 @@ Ticket selection of the passengers and flights which is going to refund.
 
 ## **refundOfferId**
 - **Type:** String  
-- **Required:**   
+- **Required:** Yes
 - **Description:** Refund offer id for this quotation which can be used for the coming refund call.  
 - **Constraints:** Alphanumeric string.  
 - **Default:** None  
@@ -268,7 +269,7 @@ The refund calculation for each of the passengers whose refund quote has been re
 ## **refundFareAmount**
 ### **refundFareAmount.currency**
 - **Type:** String  
-- **Required:**   
+- **Required:** Yes 
 - **Description:** The refund calculation for flight fare and inflow ancillaries.  
 - **Constraints:** 3-letter ISO currency code.  
 - **Default:** None  
@@ -276,7 +277,7 @@ The refund calculation for each of the passengers whose refund quote has been re
 
 ### **refundFareAmount.originalFareAmount**
 - **Type:** Float  
-- **Required:**   
+- **Required:** Yes 
 - **Description:** Original fare of the flight.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -284,7 +285,7 @@ The refund calculation for each of the passengers whose refund quote has been re
 
 ### **refundFareAmount.estimatedRefundAmount**
 - **Type:** Float  
-- **Required:**   
+- **Required:** Yes  
 - **Description:** Estimated amount which can be got back for this refund of flight.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -292,7 +293,7 @@ The refund calculation for each of the passengers whose refund quote has been re
 
 ### **refundFareAmount.displayOriginalFareAmount**
 - **Type:** Float  
-- **Required:**   
+- **Required:** No   
 - **Description:** Original Fare Amount in display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -300,7 +301,7 @@ The refund calculation for each of the passengers whose refund quote has been re
 
 ### **refundFareAmount.displayEstimatedRefundAmount**
 - **Type:** Float  
-- **Required:**   
+- **Required:** No   
 - **Description:** EstimatedRefundAmount in display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -311,7 +312,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].postTicketingOrderNo**
 - **Type:** String  
-- **Required:**   
+- **Required:** Yes  
 - **Description:** Unique order number for the post-ticketing service.  
 - **Constraints:** Alphanumeric string.  
 - **Default:** None  
@@ -319,7 +320,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].currency**
 - **Type:** String  
-- **Required:**   
+- **Required:** Yes   
 - **Description:** Currency used for post-ticketing service calculations.  
 - **Constraints:** 3-letter ISO currency code.  
 - **Default:** None  
@@ -327,7 +328,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].originalPostTicketingServiceAmount**
 - **Type:** Float  
-- **Required:**   
+- **Required:** Yes   
 - **Description:** The original amount charged for the post-ticketing service.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -335,7 +336,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].estimatedRefundAmount**
 - **Type:** Float  
-- **Required:**   
+- **Required:** Yes   
 - **Description:** Estimated amount which can be got back for this refund of Ancillaries.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -343,7 +344,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].displayPostTicketingServiceAmount**
 - **Type:** Float  
-- **Required:**   
+- **Required:** No  
 - **Description:** The original post-ticketing service amount in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -351,7 +352,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].displayEstimatedRefundAmount**
 - **Type:** Float  
-- **Required:**   
+- **Required:** No   
 - **Description:** The estimated refund amount displayed in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -370,7 +371,7 @@ Service fee of refund.
 
 ### **serviceFee.transactionFee**
 - **Type:** Float  
-- **Required:**   
+- **Required:** Yes   
 - **Description:** Transaction Fee of refund.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -378,7 +379,7 @@ Service fee of refund.
 
 ### **serviceFee.displayTransactionFee**
 - **Type:** Float  
-- **Required:**   
+- **Required:** No   
 - **Description:** TransactionFee in display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -389,7 +390,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].airline**
 - **Type:** String  
-- **Required:**   
+- **Required:** Yes   
 - **Description:** Airline code for which the refund rule applies.  
 - **Constraints:** 2-letter IATA airline code.  
 - **Default:** None  
@@ -397,7 +398,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].refundReason**
 - **Type:** String  
-- **Required:**   
+- **Required:** Yes   
 - **Description:** The reason for the refund.  
 - **Constraints:** Predefined reason codes such as `0` (Involuntary), `1` (Voluntary), `4` (Void).  
 - **Default:** None  
@@ -405,7 +406,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].passengerType**
 - **Type:** String  
-- **Required:**   
+- **Required:** No   
 - **Description:** Passenger type for which the refund rule applies.  
 - **Constraints:** Can be `ADT` (Adult), `CHD` (Child), `INF` (Infant).  
 - **Default:** `""`  
@@ -413,7 +414,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].penaltyAmount**
 - **Type:** String  
-- **Required:**   
+- **Required:** No  
 - **Description:** The penalty amount charged for the refund.  
 - **Constraints:** Monetary value with currency code.  
 - **Default:** None  
@@ -429,7 +430,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].penaltyPercentBase**
 - **Type:** String or Null  
-- **Required:**   
+- **Required:** No   
 - **Description:** The calculation on which the penalty percentage is based.  
 - **Constraints:** Can be `fare`, `fare+tax`.  
 - **Default:** `null`  
@@ -437,7 +438,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].airlineFee**
 - **Type:** String  
-- **Required:**   
+- **Required:** No   
 - **Description:** Additional airline fee for processing the refund.  
 - **Constraints:** Monetary value with currency code.  
 - **Default:** `"0"`  
@@ -445,7 +446,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].taxRefundable**
 - **Type:** Boolean  
-- **Required:**   
+- **Required:** No   
 - **Description:** Indicates whether the tax is refundable is available.  
 - **Constraints:** `true` or `false`.  
 - **Default:** None  
@@ -453,7 +454,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].fareRefundable**
 - **Type:** Boolean  
-- **Required:**   
+- **Required:** No   
 - **Description:** Indicates whether the ticket is refundable.  
 - **Constraints:** `true` or `false`.  
 - **Default:** None  
@@ -461,7 +462,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].refundableAncillaries**
 - **Type:** Array  
-- **Required:**   
+- **Required:** No   
 - **Description:** List of refundable ancillary services, if any.  
 - **Constraints:** The options are:
     -    StandardCheckInBaggage
@@ -473,7 +474,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].startMinute**
 - **Type:** Integer  
-- **Required:**   
+- **Required:** No   
 - **Description:** Starting time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.  
 - **Constraints:** Positive or negative integer representing minutes.  
 - **Default:** None  
@@ -481,7 +482,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **refundRules[].endMinute**
 - **Type:** Integer  
-- **Required:**   
+- **Required:** No   
 - **Description:** Ending time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
 - **Constraints:** Positive or negative integer representing minutes.  
 - **Default:** None  
@@ -491,7 +492,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **referenceInformation.atlasPolicy**
 - **Type:** String or Null  
-- **Required:**   
+- **Required:** No   
 - **Description:** Atlas policy details related to refunds.  
 - **Constraints:** Can be `null` or a policy description.  
 - **Default:** `null`  
@@ -499,7 +500,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **referenceInformation.airline**
 - **Type:** String  
-- **Required:**   
+- **Required:** No  
 - **Description:** The airline associated with the refund request.  
 - **Constraints:** 2-letter IATA airline code.  
 - **Default:** None  
@@ -507,7 +508,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **referenceInformation.refundReason**
 - **Type:** String  
-- **Required:**   
+- **Required:** No  
 - **Description:** The reason for initiating the refund request.  
 - **Constraints:** Predefined reason codes such as `0` (Involuntary), `1` (Voluntary), `4` (Void).  
 - **Default:** None  
@@ -515,7 +516,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ### **referenceInformation.airlinePolicy**
 - **Type:** String or Null  
-- **Required:**   
+- **Required:** No   
 - **Description:** Airline-specific refund policy details.  
 - **Constraints:** Can be `null` or a policy description.  
 - **Default:** `null`  
@@ -539,7 +540,7 @@ The refund rules for the fare whose refund quote has been requested.
 
 ## **msg**
 - **Type:** String or Null  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Response message.  
 - **Constraints:** None  
 - **Default:** `null`  
