@@ -94,6 +94,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">316</mark> | Timed out                                  |  There is a time-out error at the airline’s end. Please check the FAQs (General Information) for more details regarding timeouts. | Rebook the itinerary. |
 | <mark style="color:blue;">317</mark> | Booking unsuccessful with Airline          | An error has happened at the airline’s end. | Rebook the itinerary. |
 | <mark style="color:blue;">318</mark> | Duplicate Booking                          |  | Check if a booking with the same passenger details and flight numbers exists. After confirming, ignore this booking.|
+| <mark style="color:blue;">320</mark> | The requested seats were not found or they are already occupied.                      |  | Rebook seats and submit a new order.|
 | <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                         | Incorrect phone number format. | Check the phone number format and rectify the same.
 
 
