@@ -14,7 +14,7 @@ No preceding function needs to be carried out.
 {% tab title="Schema" %}
 ## **orderNo**
 - **Type:** String  
-- **Required:** Optional  
+- **Required:** Yes  
 - **Description:** Original order number.  
 - **Constraints:** Alphanumeric string.  
 - **Default:** None  
@@ -22,7 +22,7 @@ No preceding function needs to be carried out.
 
 ## **airlinePNR**
 - **Type:** String  
-- **Required:** Optional  
+- **Required:** No  
 - **Description:** The record locator of the airline. Either `orderNo` or `airlinePNR` is required for the request.  
 - **Constraints:** Alphanumeric string.  
 - **Default:** None  
@@ -30,7 +30,7 @@ No preceding function needs to be carried out.
 
 ## **carrier**
 - **Type:** String  
-- **Required:** Optional  
+- **Required:** No  
 - **Description:** 2-character IATA airline code.  
 - **Constraints:** Must be a valid 2-letter airline code.  
 - **Default:** None  
@@ -38,7 +38,7 @@ No preceding function needs to be carried out.
 
 ## **refundCode**
 - **Type:** String  
-- **Required:** Required  
+- **Required:** Yes  
 - **Description:** The code of the refund transaction received in the refund.do response.  
 - **Constraints:** Alphanumeric string.  
 - **Default:** None  
@@ -46,7 +46,7 @@ No preceding function needs to be carried out.
 
 ## **displayCurrency**
 - **Type:** String  
-- **Required:** Optional  
+- **Required:** No  
 - **Description:** Alternative currency in which the fare and taxes should be displayed. The display currency remains unchanged throughout the refund process.  
 - **Constraints:** 3-letter ISO currency code.  
 - **Default:** None  
@@ -120,7 +120,7 @@ No preceding function needs to be carried out.
 
 ## **displayCurrency**
 - **Type:** String  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Alternative currency for displaying fare and tax amounts.  
 - **Constraints:** 3-letter ISO currency code.  
 - **Default:** None  
@@ -209,7 +209,7 @@ The refund calculation for fl.
 
 ### **refundFareAmount.displayOriginalFareAmount**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** The original fare amount displayed in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -217,7 +217,7 @@ The refund calculation for fl.
 
 ### **refundFareAmount.displayEstimatedRefundAmount**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** The estimated refundable amount displayed in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -260,7 +260,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].displayPostTicketingServiceAmount**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** The original post-ticketing service amount displayed in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -268,7 +268,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundPostTicketingServiceAmounts[].displayEstimatedRefundAmount**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** The estimated refund amount displayed in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -293,7 +293,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **serviceFee.displayTransactionFee**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** The transaction fee displayed in the display currency.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -303,15 +303,23 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 ## **refundRules**
 ### **refundRules[].airline**
 - **Type:** String  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** The airline associated with the refund rule.  
 - **Constraints:** 2-letter IATA airline code.  
 - **Default:** None  
-- **Example:** `"LJ"`  
+- **Example:** `"LJ"`
+
+## **passengerType**
+- **Type:** String  
+- **Required:** No  
+- **Description:** Type of passenger for which the refund applies.  
+- **Constraints:** Possible values: `ADT` (Adult), `CHD` (Child), `INF` (Infant).  
+- **Default:** None  
+- **Example:** `"ADT"`
 
 ### **refundRules[].refundReason**
 - **Type:** String  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** The reason for the refund request.  
 - **Constraints:** Predefined reason codes such as `0` (Involuntary), `1` (Voluntary), `4` (Void).  
 - **Default:** None  
@@ -319,7 +327,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundRules[].penaltyAmount**
 - **Type:** Float  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** The penalty amount charged for the refund.  
 - **Constraints:** Positive number.  
 - **Default:** None  
@@ -351,7 +359,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundRules[].taxRefundable**
 - **Type:** Boolean  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Indicates whether the tax is refundable.  
 - **Constraints:** `true` or `false`.  
 - **Default:** None  
@@ -359,7 +367,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundRules[].fareRefundable**
 - **Type:** Boolean  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Indicates whether the fare is refundable.  
 - **Constraints:** `true` or `false`.  
 - **Default:** None  
@@ -381,7 +389,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundRules[].startMinute**
 - **Type:** Integer  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Starting time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.  
 - **Constraints:** Positive or negative integer representing minutes.  
 - **Default:** None  
@@ -389,7 +397,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ### **refundRules[].endMinute**
 - **Type:** Integer  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Ending time of rule application. Positive numbers represent XXX minutes before departure. Negative numbers represent XXX minutes after departure.
 - **Constraints:** Positive or negative integer representing minutes.  
 - **Default:** None  
@@ -397,7 +405,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 
 ## **cancelReason**
 - **Type:** String  
-- **Required:** Yes  
+- **Required:** No  
 - **Description:** Reason for refund rejection.  
 - **Constraints:** Predefined reasons such as:
   - Does not match airline policy.
