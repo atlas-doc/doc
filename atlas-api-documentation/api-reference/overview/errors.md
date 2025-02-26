@@ -176,10 +176,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">801</mark> | Order does not exist              | Incorrect order number has been entered. | Check the order number and enter the correct one. |
 | <mark style="color:blue;">802</mark> | Children cannot travel alone     | Only ADT pax cannot be refunded. The CHD pax should also be refunded together. | Request refund for the full order including child passenger. |
 | <mark style="color:blue;">803</mark> | The passengers have already submitted a refund for a pax and/or segment | Incorrect order number has been entered. | Check the order number and enter the correct one. |
-| <mark style="color:blue;">804</mark> | The segments of the same PNR needs to be submitted together  | All the segments have not been submitted for refund. | Check how many segments exist for that PNR and resubmit after adding all the segments. |
-| <mark style="color:blue;">8041</mark> | Segment does not exist. | One of the segments in the request does not exist. | Check the segments and only provide the segments for that refund request.| 
 | <mark style="color:blue;">805</mark> | RefundOfferId has expired. | The “refundOfferId” has expired. | Send a new refund request to get the latest “refundOfferId”. |
-| <mark style="color:blue;">806</mark> | Please submit Self Refund.| Atlas does not support refund for this airline.  | Initiate the refund process with the airline. |
 | <mark style="color:blue;">807</mark> | Passenger does not exist. | Incorrect passenger name has been entered. | Check the passenger name and correct the same, if required. |
 | <mark style="color:blue;">808</mark> | Non refundable.  | The order is non-refundable. |  | 
 | <mark style="color:blue;">809</mark> | Order not ticketed.  | The ticket issuance for this order is under process or the payment has not been made. | Wait for the order to be ticketed or make a payment for this order. | 
@@ -189,9 +186,19 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 |  |     | For connecting flights, both the segments need to be refunded together. | Check if both the segments are available in the request and retry.  | 
 |  |     | One sector has been flown in the journey. | Check with the airline. Atlas does not support the refund for "partially" flown itineraries. | 
 | <mark style="color:blue;">812</mark> | Unable to match pax xxx with order. | The name of the passenger does not match with the order. | Check the rpassenger name and resubmit the request.|
-| <mark style="color:blue;">813</mark> | The refund information cannot be provided at the moment. Please try again later. | This is a system error. | Retry after some time. If the problem keeps on repeating, please contact your account manager.|
 | <mark style="color:blue;">814</mark> | The refund submission is in progress. Please wait. | The refund process is in progress. Please wait for some time. | Retry after some time. If the problem keeps on repeating, please contact your account manager.|
-| <mark style="color:blue;">816</mark> | Refund.do request already submitted.| The refund.do request has already been completed. | No action required. You may check the refund status using the queryRefundOrders.do API request. | 
+| <mark style="color:blue;">815</mark> | Ticket not found. |  | Check the ticket number and retry.|
+| <mark style="color:blue;">816</mark> | Refund request already submitted.| The refund request has already been submitted. | No action required. You may check the refund status using the queryRefundOrders.do API request. | 
+| <mark style="color:blue;">817</mark> | Atlas refund applied.| The refund request has already been submitted. | No action required. You may check the refund status using the queryRefundOrders.do API request. | 
+| <mark style="color:blue;">818</mark> | Refund claim applied.| The refund claim has already been submitted. | No action required. You may check the refund status using the queryRefundOrders.do API request. | 
+| <mark style="color:blue;">820</mark> | Ticket status is used.| The sector has already been flown. | Check is the sector has been flown. Contact our ops team if the sector has not been flown. |
+| <mark style="color:blue;">821</mark> | Exceed the ticket refund deadline.| The refund submission has been done after the refund deadline. | Contact our ops team if you have any questions. |
+| <mark style="color:blue;">822</mark> | Exceed the ticket void deadline.| The void submission has been done after the deadline. | Contact our ops team if you have any questions. |
+| <mark style="color:blue;">823</mark> | Void not all pax.|  |  |
+| <mark style="color:blue;">902</mark> | Access denied.|  |  |
+| <mark style="color:blue;">905</mark> | Submission is too frequent, please try again later.|  |  |
+
+| <mark style="color:blue;">8041</mark> | Segment does not exist. | One of the segments in the request does not exist. | Check the segments and only provide the segments for that refund request.| 
 
 
 #### Post-booking Ancillary Search Error Codes
