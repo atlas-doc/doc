@@ -324,6 +324,16 @@ The booking requirements need to be read from the "bookingRequirement" array in 
             *   **offerId **<mark style="color:blue;">**string**</mark>
 
                 unique identifier for this ancillary's offer.
+            *   **productType **<mark style="color:orange;">**integer**</mark>
+
+                Ancillary product type.
+     
+                1: Standard Check-in baggage
+     
+                2: Cabin Baggage Overhead Locker
+     
+                6: Seat
+            
             *   **auxSeatElement **<mark style="color:blue;">**Array**</mark>**  **<mark style="color:green;">**Required**</mark>
 
                 Configuration of ordering when the seat is occupied
