@@ -178,6 +178,23 @@ Ticket selection of the passengers and flights which is going to refund.
 
 ## Response
 
+{% hint style="info" %}
+
+### Deprecated Fields
+Please note that the below fields are now deprecated. New fields have been introduced to fulfill their function.
+- originalTotalFareAmount
+- originalTotalAncillaryAmount
+- originalTotalAmount
+- airlinePenaltyAmountForFare
+- airlinePenaltyAmountForAncillaries
+- airlinePenaltyAmount
+- estimatedRefundAmount
+- transactionFee
+- Journey
+- status (Refund rules array)
+
+{% endhint %}
+
 {% tabs %}
 {% tab title="Schema" %}
 ## **displayCurrency**
