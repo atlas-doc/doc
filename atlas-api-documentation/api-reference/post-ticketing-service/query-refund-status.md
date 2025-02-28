@@ -69,6 +69,23 @@ No preceding function needs to be carried out.
 
 ## Response
 
+### Deprecated Fields
+Please note that the below fields are now deprecated. New fields have been introduced to fulfill their function.
+- currency
+- originalTotalAncillaryAmount
+- originalTotalAmount
+- airlinePenaltyAmountForFare
+- airlinePenaltyAmountForAncillaries
+- airlinePenaltyAmount
+- estimatedRefundAmount
+- transactionFee
+- Journey
+- airlinePenaltyAmountForFare
+- airlinePenaltyAmountForAncillaries
+- airlinePenaltyAmount
+  
+{% endhint %}
+
 {% tabs %}
 {% tab title="Schema" %}
 ## **refundStatus**
