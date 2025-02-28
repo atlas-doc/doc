@@ -125,7 +125,9 @@ The booking requirements need to be read from the "bookingRequirement" array in 
 *   **requestSource **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     The tag to identify which channel does this traffic come from.
-    
+*   **allowGenerateMultipleOrders **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    Multiple orders would be generated if a cheaper fare is found.    
 *   **useAtlasMailForContact **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     The tag denoting whether to use Atlas email id for contact information.
@@ -193,7 +195,8 @@ The booking requirements need to be read from the "bookingRequirement" array in 
         "email": "xxxxxxxxx@xxx.com",
         "mobile": "0065-81234567"
     },
-    "requestSource": ""
+    "requestSource": "",
+    "allowGenerateMultipleOrders": false,
     "useAtlasMailForContact":false
 }
 ```
