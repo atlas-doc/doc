@@ -69,6 +69,8 @@ No preceding function needs to be carried out.
 
 ## Response
 
+{% hint style="info" %}
+
 ### Deprecated Fields
 Please note that the below fields are now deprecated. New fields have been introduced to fulfill their function.
 - currency
