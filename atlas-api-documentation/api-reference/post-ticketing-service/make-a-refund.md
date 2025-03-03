@@ -413,7 +413,7 @@ The reason why the refund was cancelled.
 {% endtab %}
 
 {% tab title="Samples" %}
-```
+```json
 {
     "refundStatus": 0,
     "refundCode": "202408-0006",
