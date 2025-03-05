@@ -6,7 +6,12 @@
 generation cycle.  
 - The sources of this data include our regular data collection and passive collection triggered by various tasks in our business.
 
- 
+## Endpoint
+
+This request needs to be sent at regular intervals to keep the cached data fresh. 
+
+Please note that this API is only available in the production environment. Please contact your account manager for further information.
+
 ## Implementation Steps  
 
 - **Data Package:** Incremental data is provided in the form of multiple data packages (each package is one file).   
@@ -52,12 +57,6 @@ Since we do not provide full data, new users need to continuously acquire our da
 ## Airlines 
 
 The airlines allowed in the feed would be configured at Atlas’ end. 
-
-## Endpoint
-
-This request needs to be sent at regular intervals to keep the cached data fresh. 
-
-Please note that this API is only available in the production environment. Please contact your account manager for further information.
 
 ## Points to Note
 
