@@ -113,6 +113,23 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">409</mark> | Additional baggage does not match the flight segmemt            |  The “productCode” of the additional baggage does not match the product codes available for this flight. | Check the “productCode” and update it with the correct code. |
 | <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                        |  The contact information is not in the correct format. | Check the contact information and confirm that it matches the required format. |
 | <mark style="color:blue;">411</mark> | Generic payment error          | The error happened when we checked your account. For example, “not enough balance”. | Check the balance or as per the message received in the error. |
+| <mark style="color:blue;">413</mark> | Payment verification error      | Please check the messages below |  |
+|  | Credit card pass through to the airline is not supported for this order.      | This order can't be paid with VCC. | Use Deposit to pay this order. |
+|  | cardNumber must be 13 to 19 digits    | The cardNumber is incorrect. | Input the correct cardNumber. |
+|  | Card number is invalid of luhn    | The cardNumber is incorrect. | Input the correct cardNumber. |
+|  | Card is declined due to risk control.    | The card number is failed over 5 times in 30 minutes. | Please use another card to pay. |
+|  | cardExpireMonth must be 1 to 2 digits.    | The cardExpiryMonth does not have the correct format. | Input the correct cardExpireMonth. |
+|  | cardExpireYear must be 2 to 4 digits.    | The cardExpiryYear does not have the correct format. Example: 2025 or 25. | Input the correct cardExpireYear. |
+|  | Invalid expiration date.    | The card Expire Date can't be less than today's date. | Input the correct cardExpire date. |
+|  | cardCVV must be 3 to 4 digits.    | The CVV format is not correct. | Input the correct CVV. |
+|  | cardHolderFirstName invalid characters in string.    |  | Only use A-Z、a-z、-、À-Ö、Ø-ö、ø-ÿ. |
+|  | cardHolderLastName invalid characters in string.    |  | Only use A-Z、a-z、-、À-Ö、Ø-ö、ø-ÿ. |
+|  | cardHolderCountry must be two letters long.    | If this field is not null, it must be two characters and in ISO 3166 format. | The card HolderCountry must in IOS 3166 format. |
+|  | cardHolderCountry invalid ISO 3166 country code.    | If this field is not null, it cannot only use digits. | Input the correct cardHoldCountry. |
+|  | cardHolderProvince must be two letters long.    | If this field is not null, it cannot only use digits. | Input the correct cardHolderProvince. |
+|  | cardHolderCity cannot be purely numeric.    | If this field is not null, it can not be only numeric. | Input the correct cardHolderCity. |
+|  | cardHolderPostCode can be only numeric or alphanumeric and must exceed 4 letters.    | If this field is not null, it must be only numeric or alphanumeric and must exceed 4 letters. | Input the correct cardHoldPostCode. |
+|  | cardHolderAddress must exceed 6 characters in length.   | If this field is not null, it must exceed 6 characters in length | Input the correct cardHolderAddress. |
 
 
 #### Seat Availability Codes
