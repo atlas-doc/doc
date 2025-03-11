@@ -185,10 +185,13 @@ Please note that the below fields are now deprecated. New fields have been intro
 	- `3`: Airline Refunding
 	- `4`: Rejected
 	- `5`: Fulfillment Done
-	-`6`: Withdrew
-	- If the ticket is paid by deposit: `0,1,2,3,4`
-	- If the ticket is paid by VCC pass-through: `0,1,4,5,6`
-	- `6` (Withdrew) is only used in refund claims.  
+	- `6`: Withdrew
+
+If the ticket is paid by deposit: `0,1,2,3,4`
+
+If the ticket is paid by VCC pass-through: `0,1,4,5,6`
+
+`6` (Withdrew) is only used in refund claims.  
 - **Default:** None  
 - **Example:** `2`  
 
