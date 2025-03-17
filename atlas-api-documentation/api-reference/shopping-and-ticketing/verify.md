@@ -30,11 +30,20 @@ The `search` function should be called prior to this call.
     **displayCurrency array **Optional
 
 The alternative currency in which the fare and taxes amount needs to be displayed. The 3-letter currency code should be entered. Please refer to the "Highlights" section in fare search menu for further information.
-*   **requestSource **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-    The tag to identify which channel does this traffic come from.
+**`displayCurrency`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
-    For example: SkyScanner,Google,Oganic search,etc…
+The alternative currency in which the fare and taxes amount needs to be displayed. The 3-letter currency code should be entered. Please refer to the "Highlights" section below for further information.
+
+**`maxResponseTime`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+This is the timeout for the verify response as per the customer's requirement. The default is 5000 ms.
+
+**`requestSource` **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
+
+ The tag to identify which channel does this traffic come from.
+
+For example: SkyScanner,Google,Oganic search,etc…
 {% endtab %}
 
 {% tab title="Samples" %}
@@ -43,6 +52,7 @@ The alternative currency in which the fare and taxes amount needs to be displaye
   "cid": "ttxzp62405",
   "routingIdentifier": "EXsU8XSpfLYTSaQTVCjrJMJvG/ysDtKYfq1WIi9iKV3RuKGQWRYoLHwlk3d3nfx3CfcndJLEJ0OelZh4CJOznF9aTBiw3WJrCv1w5tPrnLqsrzEwGf6LU4JnimIHlZ8g9Mbw9o1UAsRxu28yDTH1sxCUiQXhe9aQqCnWwMFh28gA/nj6IKNh5/yz0GWbBL6s1yDekyABUkLWmuWriKG76AcSFeTleOVJEjXfFd3mUvpZJe1wsRs5TI/Nma2Sz/cOdhAjhrTIFnOMJEKInVplSW3JYquYRVlKPNaFSuoF5K7IHGWlTR0X2vJysOfDQQZWR7Qv1wj0wUrE1kfV4vUrurLMbC/8XlxjYBc7iz9giHkbTb9r/K5/eabN+BX2cuBjtcmNH0T9SwZdxpCXnsjGxdC6wjGifmzacvdkADFsgfWzqaR6+aEfwt4jQKkit64X8IoXcz9XqDadvtpoFyrQz1tXYb6UK8+doiventK1gdc8oJQnVwpWZNzAt1C0KiFMpLq+sZhmvMISTO8EV73ewgLIMtqPFERy6YPlLhv9P5f1GEmT5TthTQ==",
   "displayCurrency": "PHP"
+  "maxResponseTime": 5000
 }
 ```
 {% endtab %}
