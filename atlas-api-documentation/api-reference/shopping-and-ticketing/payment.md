@@ -36,13 +36,13 @@
 
     0 : Payment with Prepayment
 
+*   **creditCard Object< **<mark style="color:blue;">**CreditCardElement**</mark>** > **<mark style="color:green;">**Required**</mark>
+
 *   **maxAcceptedAmount **<mark style="color:blue;">**int**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     Certain airlines may experience fare change after payment submission due to their inability to hold seat reservations. You can use this parameter to set a maximum acceptable payment amount threshold. This is the maximum amount which can be used to create the booking using a VCC.
 
     If this parameter is 'null', our system will automatically set the maximum acceptable amount as the greater of either 5% of the order price or 5 USD (converted to the transacting currency) per passenger. When the amount entered by the customer is lower than 5% of the order price or 5 USD (converted to the transacting currency) per passenger, the information sent to Atlas by the customer will be used.    
-
-*   **creditCard Object< **<mark style="color:blue;">**CreditCardElement**</mark>** > **<mark style="color:green;">**Required**</mark>
 
    * <mark style="color:blue;">**CreditCardElement**</mark>
       *   **cardNumber **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
