@@ -10,7 +10,36 @@
 
 {% hint style="info" %}
 - Atlas provides the information from the search.do API response itself whether VCC can be accepted as a mode of payment for an order. Please read the "supportCreditTransPayment" field in the search.do and verify.do responses. When this field is equal to "0" (zero), it means that only "deposit" mode of payment can be used and when this field is equal to "1" (one), it means that both the "deposit" as well as the "VCC" mode of payment can be used.
-- For VCC payment, you can use any fictitious card number.
+- For VCC payments, the Test Cards to be used for testing in SANDBOX:
+
+    Visa
+    - 4532015112830366
+    - 4916931584764308
+    - 4485275742308327
+    - 4556737586899855
+    - 4532644189324563
+
+    Mastercard
+    - 5555555555554444
+    - 5105105105105100
+    - 5223456789012346
+    - 5301250070000191
+    - 5454545454545454
+
+    American Express
+    - 378282246310005
+    - 371449635398431
+    - 340000000000009
+    - 370000000000002
+    - 375987654321001
+
+    Discover 
+    - 6011111111111117 
+    - 6011000990139424 
+    - 6011987612345678
+
+    JCB
+    - 3566002020360505
 
 {% endhint %}
 
