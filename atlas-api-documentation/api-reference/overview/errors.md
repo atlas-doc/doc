@@ -214,7 +214,6 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">823</mark> | Void not all pax.|  |  |
 | <mark style="color:blue;">902</mark> | Access denied.|  |  |
 | <mark style="color:blue;">905</mark> | Submission is too frequent, please try again later.|  |  |
-
 | <mark style="color:blue;">8041</mark> | Segment does not exist. | One of the segments in the request does not exist. | Check the segments and only provide the segments for that refund request.| 
 
 
