@@ -153,19 +153,62 @@ The array of the routings include suitable flights and fares. Click [<mark style
 {
   "routings": [
     {
-      "fid": "_CRghXPitTBZS-NfM-Ku_5Yttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChOQxTZJ7brCduAEac4Cv-UGG8WfOBAHVGM",
-      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MTY2LjY3XzE2Ni42N18xNTkuOTZfMS4wMF80OTQuMzBfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBCQVNJQy0xLSNSSVgtQlQwMzQ5LS1WTk8tMjAyNDEyMjYyMzE1LTIwMjQxMjI2MjM1OS1FY29ub215IEJBU0lDLTEtXjE2Ni42N18xNjYuNjdfMTU5Ljk2XzEuMDBfNDk0LjMwXkFCVF9BQlReXkFCVDFQUkdWTk80MDAyMDI0MTIyNl5FVVJ8MHwyMDI0MTIxMzE1MjgzNnwwfDE3MzQwNzQ5MTY1MDd5UlJzZnx8fHx8MS4wMHwzfDB8.kpIBDjjhcL+znY8vH8KDqLB0q+lC9s9Tmt9OBxqhyS4=",
+      "fid": "4unk1hDRtQIyaBamcmmnxG3_BWrlKSfDr7tOYsMC-XaJsaKgElcevthdb239v6gV",
+      "routingIdentifier": "RUFQX0JVRF8xXzIwMjUwNDE1X18xXzBfMHxxcm54dzU2MzA2fDF8OTYuMjFfOTYuMjFfNTEuMDRfMi4xNl8yNDUuNjJfU0dEfEVBUF9CVURfMV8yMDI1MDQxNV9fMV8wXzBeQlNMLUVDMTIxMS0tQlVELTIwMjUwNDE1MDcwNS0yMDI1MDQxNTA4NTAtU3RhbmRhcmQtMS1eOTYuMjFfOTYuMjFfNTEuMDRfMi4xNl8yNDUuNjJeQUVDQUVVUl9BRUNeXkFFQzFFQVBCVUQyMDAyMDI1MDQxNV5DSEZeNjIuODVeNjIuODVeMzMuMzR8MHwyMDI1MDMyODE1NTY0OHwwfDE3NDMxNDg2MDg5NDB4akttWXx8fHx8Mi4xNnwzfDB8QVVE.rJaf+/539wDtfGG3ODUx9Kk1NdRkHoqX7ZcYZk3aFx0=",
       "supportCreditTransPayment": "0",
-      "currency": "USD",
-      "adultPrice": 125.57,
-      "adultTax": 41.1,
-      "childPrice": 125.57,
-      "childTax": 41.1,
-      "infantPrice": 159.96,
+      "supportPaymentMethods": [],
+      "currency": "SGD",
+      "adultPrice": 96.03,
+      "adultTax": 0.18,
+      "adultDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 96.03,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.18,
+          "description": ""
+        }
+      ],
+      "childPrice": 96.03,
+      "childTax": 0.18,
+      "childDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 96.03,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.18,
+          "description": ""
+        }
+      ],
+      "infantPrice": 51.04,
       "infantTax": 0,
+      "infantDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 51.04,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0,
+          "description": ""
+        }
+      ],
       "infantAllowed": true,
-      "transactionFeePerPax": 1,
-      "transactionFee": 1,
+      "transactionFeePerPax": 2.16,
+      "transactionFee": 2.16,
       "transactionFeeMode": "PER_PAX",
       "nationalityType": 0,
       "nationality": "",
@@ -174,45 +217,24 @@ The array of the routings include suitable flights and fares. Click [<mark style
       "fromSegments": [
         {
           "segmentIndex": 1,
-          "carrier": "BT",
-          "flightNumber": "BT0482",
-          "depAirport": "PRG",
-          "depTime": "202412261940",
-          "arrAirport": "RIX",
-          "arrTime": "202412262225",
+          "carrier": "EC",
+          "flightNumber": "EC1211",
+          "depAirport": "BSL",
+          "depTime": "202504150705",
+          "arrAirport": "BUD",
+          "arrTime": "202504150850",
           "stopCities": "",
           "duration": 105,
           "codeShare": false,
           "cabin": "",
           "cabinClass": 1,
-          "seatCount": 4,
+          "seatCount": 8,
           "aircraftCode": "",
           "depTerminal": "",
           "arrTerminal": "",
-          "operatingCarrier": "BT",
+          "operatingCarrier": "",
           "operatingFlightnumber": "",
-          "fareFamily": "Economy BASIC"
-        },
-        {
-          "segmentIndex": 2,
-          "carrier": "BT",
-          "flightNumber": "BT0349",
-          "depAirport": "RIX",
-          "depTime": "202412262315",
-          "arrAirport": "VNO",
-          "arrTime": "202412262359",
-          "stopCities": "",
-          "duration": 44,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "Economy BASIC"
+          "fareFamily": "Standard"
         }
       ],
       "retSegments": [],
@@ -222,35 +244,19 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "baggageElements": [
           {
             "segmentNo": 1,
-            "baggageType": "StandardCheckInBaggage",
+            "baggageType": "CabinBaggageUnderSeat",
             "passengerType": 0,
-            "baggagePiece": 0,
-            "baggageWeight": 0,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 0,
-            "baggageWeight": 0,
-            "baggageSize": ""
+            "baggagePiece": 1,
+            "baggageWeight": 15,
+            "baggageSize": "45*36*20cm"
           },
           {
             "segmentNo": 1,
-            "baggageType": "CabinBaggageOverheadLocker",
+            "baggageType": "StandardCheckInBaggage",
             "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
+            "baggagePiece": 0,
+            "baggageWeight": 0,
+            "baggageSize": ""
           }
         ],
         "refundRules": [
@@ -258,26 +264,26 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "refundType": 0,
             "refundStatus": "T",
             "refundFee": 0,
-            "currency": "EUR",
+            "currency": "GBP",
             "refNoshow": "T",
             "refNoShowCondition": 0,
             "refNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40283,
+                "ruleId": 47397,
                 "status": "T",
                 "startMinute": 525600,
                 "endMinute": 0,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               },
               {
-                "ruleId": 40288,
+                "ruleId": 47399,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
@@ -285,28 +291,44 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "changesRules": [
           {
             "changesType": 0,
-            "changesStatus": "H",
-            "changesFee": 50,
-            "currency": "EUR",
+            "changesStatus": "T",
+            "changesFee": 0,
+            "currency": "GBP",
             "revNoshow": "T",
             "revNoShowCondition": 0,
             "revNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40293,
+                "ruleId": 47403,
                 "status": "H",
                 "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 50,
-                "currency": "EUR"
+                "endMinute": 86400,
+                "amount": 30,
+                "currency": "GBP"
               },
               {
-                "ruleId": 40298,
+                "ruleId": 47405,
+                "status": "H",
+                "startMinute": 86400,
+                "endMinute": 120,
+                "amount": 49,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47407,
+                "status": "T",
+                "startMinute": 120,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47409,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
@@ -318,204 +340,549 @@ The array of the routings include suitable flights and fares. Click [<mark style
           }
         ]
       },
-      "ancillaryProductElements": [],
+      "ancillaryProductElements": [
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "productName": "CabinBaggageOverheadLocker",
+          "productType": 3,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 55.8,
+          "currency": "SGD",
+          "vendorPrice": 36.45,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": "Maximum Size 56 x 45 x 25 cm"
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "CabinBaggageOverheadLocker",
+          "ancillaryCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "auxSeatElement": null,
+          "displayPrice": 66.29,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 60.45,
+          "currency": "SGD",
+          "vendorPrice": 39.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_15KG",
+          "auxSeatElement": null,
+          "displayPrice": 71.81,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_30KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 120.9,
+          "currency": "SGD",
+          "vendorPrice": 78.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 30,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_30KG",
+          "auxSeatElement": null,
+          "displayPrice": 143.62,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_45KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 181.35,
+          "currency": "SGD",
+          "vendorPrice": 118.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 45,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_45KG",
+          "auxSeatElement": null,
+          "displayPrice": 215.43,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 72.7,
+          "currency": "SGD",
+          "vendorPrice": 47.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_23KG",
+          "auxSeatElement": null,
+          "displayPrice": 86.36,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_46KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 145.4,
+          "currency": "SGD",
+          "vendorPrice": 94.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 46,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_46KG",
+          "auxSeatElement": null,
+          "displayPrice": 172.73,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_69KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 218.09,
+          "currency": "SGD",
+          "vendorPrice": 142.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 69,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_69KG",
+          "auxSeatElement": null,
+          "displayPrice": 259.08,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_26KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 79.59,
+          "currency": "SGD",
+          "vendorPrice": 51.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 26,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_26KG",
+          "auxSeatElement": null,
+          "displayPrice": 94.55,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_52KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 159.17,
+          "currency": "SGD",
+          "vendorPrice": 103.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 52,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_52KG",
+          "auxSeatElement": null,
+          "displayPrice": 189.08,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_78KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 238.76,
+          "currency": "SGD",
+          "vendorPrice": 155.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 78,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_78KG",
+          "auxSeatElement": null,
+          "displayPrice": 283.63,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_29KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 86.48,
+          "currency": "SGD",
+          "vendorPrice": 56.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 29,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_29KG",
+          "auxSeatElement": null,
+          "displayPrice": 102.73,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_58KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 172.95,
+          "currency": "SGD",
+          "vendorPrice": 112.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 58,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_58KG",
+          "auxSeatElement": null,
+          "displayPrice": 205.45,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_87KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 259.42,
+          "currency": "SGD",
+          "vendorPrice": 169.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 87,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_87KG",
+          "auxSeatElement": null,
+          "displayPrice": 308.17,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_32KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 93.37,
+          "currency": "SGD",
+          "vendorPrice": 60.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 32,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_32KG",
+          "auxSeatElement": null,
+          "displayPrice": 110.92,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_64KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 186.73,
+          "currency": "SGD",
+          "vendorPrice": 121.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 64,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_64KG",
+          "auxSeatElement": null,
+          "displayPrice": 221.82,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_96KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 280.09,
+          "currency": "SGD",
+          "vendorPrice": 182.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 96,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_96KG",
+          "auxSeatElement": null,
+          "displayPrice": 332.73,
+          "displayCurrency": "AUD"
+        }
+      ],
       "vendorFare": null,
       "bundleOptions": [],
       "links": null,
       "separateBookings": false,
-      "refreshTime": "2024-12-13T05:25:56Z",
-      "displayFare": null,
-      "ancillarySupported": []
-    },
-    {
-      "fid": "IX-m5EjtM9EnSVgnuTi7hpYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChOQxTZJ7brCduAEac4Cv-UGG8WfOBAHVGM",
-      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MjQwLjQ1XzI0MC40NV8xOTYuMTBfMS4wMF82NzguMDBfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBDTEFTU0lDLTEtI1JJWC1CVDAzNDktLVZOTy0yMDI0MTIyNjIzMTUtMjAyNDEyMjYyMzU5LUVjb25vbXkgQ0xBU1NJQy0xLV4yNDAuNDVfMjQwLjQ1XzE5Ni4xMF8xLjAwXzY3OC4wMF5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.IWTgIRBBgQxn9WVNnySSfJTPhq9XdiH3M4m3cy+f678=",
-      "supportCreditTransPayment": "0",
-      "currency": "USD",
-      "adultPrice": 187.13,
-      "adultTax": 53.32,
-      "childPrice": 187.13,
-      "childTax": 53.32,
-      "infantPrice": 196.1,
-      "infantTax": 0,
-      "infantAllowed": true,
-      "transactionFeePerPax": 1,
-      "transactionFee": 1,
-      "transactionFeeMode": "PER_PAX",
-      "nationalityType": 0,
-      "nationality": "",
-      "suitAge": "",
-      "PaxType": "ADT",
-      "fromSegments": [
-        {
-          "segmentIndex": 1,
-          "carrier": "BT",
-          "flightNumber": "BT0482",
-          "depAirport": "PRG",
-          "depTime": "202412261940",
-          "arrAirport": "RIX",
-          "arrTime": "202412262225",
-          "stopCities": "",
-          "duration": 105,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "Economy CLASSIC"
-        },
-        {
-          "segmentIndex": 2,
-          "carrier": "BT",
-          "flightNumber": "BT0349",
-          "depAirport": "RIX",
-          "depTime": "202412262315",
-          "arrAirport": "VNO",
-          "arrTime": "202412262359",
-          "stopCities": "",
-          "duration": 44,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "Economy CLASSIC"
-        }
-      ],
-      "retSegments": [],
-      "combineIndexs": [],
-      "rule": {
-        "hasBaggage": 1,
-        "baggageElements": [
-          {
-            "segmentNo": 1,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 23,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 23,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 1,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          }
-        ],
-        "refundRules": [
-          {
-            "refundType": 0,
-            "refundStatus": "T",
-            "refundFee": 0,
-            "currency": "EUR",
-            "refNoshow": "T",
-            "refNoShowCondition": 0,
-            "refNoshowFee": 0,
-            "ruleDetailList": [
-              {
-                "ruleId": 40284,
-                "status": "T",
-                "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 0,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 40289,
-                "status": "T",
-                "startMinute": 0,
-                "endMinute": -525600,
-                "amount": 0,
-                "currency": "EUR"
-              }
-            ]
-          }
-        ],
-        "changesRules": [
-          {
-            "changesType": 0,
-            "changesStatus": "H",
-            "changesFee": 50,
-            "currency": "EUR",
-            "revNoshow": "T",
-            "revNoShowCondition": 0,
-            "revNoshowFee": 0,
-            "ruleDetailList": [
-              {
-                "ruleId": 40294,
-                "status": "H",
-                "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 50,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 40299,
-                "status": "T",
-                "startMinute": 0,
-                "endMinute": -525600,
-                "amount": 0,
-                "currency": "EUR"
-              }
-            ]
-          }
-        ],
-        "serviceElements": [
-          {
-            "hasFreeSeat": 0,
-            "hasFreeMeal": 0
-          }
-        ]
+      "refreshTime": "2025-03-28T06:58:05Z",
+      "displayFare": {
+        "currency": "AUD",
+        "exchangeRate": 1.1879306,
+        "adultPrice": 114.08,
+        "adultTax": 0.21,
+        "childPrice": 114.08,
+        "childTax": 0.21,
+        "infantPrice": 60.63,
+        "infantTax": 0
       },
-      "ancillaryProductElements": [],
-      "vendorFare": null,
-      "bundleOptions": [],
-      "links": null,
-      "separateBookings": false,
-      "refreshTime": "2024-12-13T05:25:56Z",
-      "displayFare": null,
-      "ancillarySupported": []
+      "ancillarySupported": [
+        "seat",
+        "luggage"
+      ]
     },
     {
-      "fid": "ZE8zDIKlUVVov0gQoBk3QpYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChOQxTZJ7brCduAEac4Cv-UGG8WfOBAHVGM",
-      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MjgyLjAzXzI4Mi4wM18yMDUuNDdfMS4wMF83NzAuNTNfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBGTEVYLTEtI1JJWC1CVDAzNDktLVZOTy0yMDI0MTIyNjIzMTUtMjAyNDEyMjYyMzU5LUVjb25vbXkgRkxFWC0xLV4yODIuMDNfMjgyLjAzXzIwNS40N18xLjAwXzc3MC41M15BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.Gxi0Kcy7ytxhPdvnDW+aoJ2wGuzE1hZ/X1YddW8Tejs=",
+      "fid": "4unk1hDRtQIyaBamcmmnxFVFEkoGK3shr7tOYsMC-XaJsaKgElcevthdb239v6gV",
+      "routingIdentifier": "RUFQX0JVRF8xXzIwMjUwNDE1X18xXzBfMHxxcm54dzU2MzA2fDF8OTYuMjFfOTYuMjFfNTEuMDRfMi4xNl8yNDUuNjJfU0dEfEVBUF9CVURfMV8yMDI1MDQxNV9fMV8wXzBeQlNMLVUyMTIxMS0tQlVELTIwMjUwNDE1MDcwNS0yMDI1MDQxNTA4NTAtU3RhbmRhcmQtMS1eOTYuMjFfOTYuMjFfNTEuMDRfMi4xNl8yNDUuNjJeQUVDQUVVUl9BRUNeXkFFQzFFQVBCVUQyMDAyMDI1MDQxNV5DSEZeNjIuODVeNjIuODVeMzMuMzR8MHwyMDI1MDMyODE1NTY0OHwwfDE3NDMxNDg2MDg5NDB4akttWXx8fHx8Mi4xNnwzfDB8QVVE.ZytlcBTQ1l2Pb6GjxY0UQjZ2vkPZ8S5HUl+vLk3gtzQ=",
       "supportCreditTransPayment": "0",
-      "currency": "USD",
-      "adultPrice": 216.79,
-      "adultTax": 65.24,
-      "childPrice": 216.79,
-      "childTax": 65.24,
-      "infantPrice": 205.47,
+      "supportPaymentMethods": [],
+      "currency": "SGD",
+      "adultPrice": 96.03,
+      "adultTax": 0.18,
+      "adultDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 96.03,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.18,
+          "description": ""
+        }
+      ],
+      "childPrice": 96.03,
+      "childTax": 0.18,
+      "childDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 96.03,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.18,
+          "description": ""
+        }
+      ],
+      "infantPrice": 51.04,
       "infantTax": 0,
+      "infantDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 51.04,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0,
+          "description": ""
+        }
+      ],
       "infantAllowed": true,
-      "transactionFeePerPax": 1,
-      "transactionFee": 1,
+      "transactionFeePerPax": 2.16,
+      "transactionFee": 2.16,
       "transactionFeeMode": "PER_PAX",
       "nationalityType": 0,
       "nationality": "",
@@ -524,45 +891,24 @@ The array of the routings include suitable flights and fares. Click [<mark style
       "fromSegments": [
         {
           "segmentIndex": 1,
-          "carrier": "BT",
-          "flightNumber": "BT0482",
-          "depAirport": "PRG",
-          "depTime": "202412261940",
-          "arrAirport": "RIX",
-          "arrTime": "202412262225",
+          "carrier": "U2",
+          "flightNumber": "U21211",
+          "depAirport": "BSL",
+          "depTime": "202504150705",
+          "arrAirport": "BUD",
+          "arrTime": "202504150850",
           "stopCities": "",
           "duration": 105,
           "codeShare": false,
           "cabin": "",
           "cabinClass": 1,
-          "seatCount": 4,
+          "seatCount": 8,
           "aircraftCode": "",
           "depTerminal": "",
           "arrTerminal": "",
-          "operatingCarrier": "BT",
+          "operatingCarrier": "",
           "operatingFlightnumber": "",
-          "fareFamily": "Economy FLEX"
-        },
-        {
-          "segmentIndex": 2,
-          "carrier": "BT",
-          "flightNumber": "BT0349",
-          "depAirport": "RIX",
-          "depTime": "202412262315",
-          "arrAirport": "VNO",
-          "arrTime": "202412262359",
-          "stopCities": "",
-          "duration": 44,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "Economy FLEX"
+          "fareFamily": "Standard"
         }
       ],
       "retSegments": [],
@@ -572,354 +918,12 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "baggageElements": [
           {
             "segmentNo": 1,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 23,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 23,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 1,
-            "baggageType": "CabinBaggageOverheadLocker",
+            "baggageType": "CabinBaggageUnderSeat",
             "passengerType": 0,
             "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
+            "baggageWeight": 15,
+            "baggageSize": "45*36*20cm"
           },
-          {
-            "segmentNo": 2,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          }
-        ],
-        "refundRules": [
-          {
-            "refundType": 0,
-            "refundStatus": "H",
-            "refundFee": 25,
-            "currency": "EUR",
-            "refNoshow": "T",
-            "refNoShowCondition": 0,
-            "refNoshowFee": 0,
-            "ruleDetailList": [
-              {
-                "ruleId": 40285,
-                "status": "H",
-                "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 25,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 40290,
-                "status": "T",
-                "startMinute": 0,
-                "endMinute": -525600,
-                "amount": 0,
-                "currency": "EUR"
-              }
-            ]
-          }
-        ],
-        "changesRules": [
-          {
-            "changesType": 0,
-            "changesStatus": "F",
-            "changesFee": 0,
-            "currency": "EUR",
-            "revNoshow": "T",
-            "revNoShowCondition": 0,
-            "revNoshowFee": 0,
-            "ruleDetailList": [
-              {
-                "ruleId": 40295,
-                "status": "F",
-                "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 0,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 40300,
-                "status": "T",
-                "startMinute": 0,
-                "endMinute": -525600,
-                "amount": 0,
-                "currency": "EUR"
-              }
-            ]
-          }
-        ],
-        "serviceElements": [
-          {
-            "hasFreeSeat": 2,
-            "hasFreeMeal": 0
-          }
-        ]
-      },
-      "ancillaryProductElements": [],
-      "vendorFare": null,
-      "bundleOptions": [],
-      "links": null,
-      "separateBookings": false,
-      "refreshTime": "2024-12-13T05:25:56Z",
-      "displayFare": null,
-      "ancillarySupported": []
-    },
-    {
-      "fid": "dKLKop9ZAjxNZfbXFnEjV5Yttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChOQxTZJ7brCduAEac4Cv-UGG8WfOBAHVGM",
-      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8NDAyLjE4XzQwMi4xOF8zMDYuNDNfMS4wMF8xMTExLjc5X1VTRHxQUkdfVk5PXzFfMjAyNDEyMjZfXzFfMF8wXlBSRy1CVDA0ODItLVJJWC0yMDI0MTIyNjE5NDAtMjAyNDEyMjYyMjI1LUJVU0lORVNTLTEtI1JJWC1CVDAzNDktLVZOTy0yMDI0MTIyNjIzMTUtMjAyNDEyMjYyMzU5LUJVU0lORVNTLTEtXjQwMi4xOF80MDIuMThfMzA2LjQzXzEuMDBfMTExMS43OV5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.wbZD+u0BtWPDehg9GcZ+pnAoY/qWk1MF7+9oeKE/GjA=",
-      "supportCreditTransPayment": "0",
-      "currency": "USD",
-      "adultPrice": 335.87,
-      "adultTax": 66.31,
-      "childPrice": 335.87,
-      "childTax": 66.31,
-      "infantPrice": 306.43,
-      "infantTax": 0,
-      "infantAllowed": true,
-      "transactionFeePerPax": 1,
-      "transactionFee": 1,
-      "transactionFeeMode": "PER_PAX",
-      "nationalityType": 0,
-      "nationality": "",
-      "suitAge": "",
-      "PaxType": "ADT",
-      "fromSegments": [
-        {
-          "segmentIndex": 1,
-          "carrier": "BT",
-          "flightNumber": "BT0482",
-          "depAirport": "PRG",
-          "depTime": "202412261940",
-          "arrAirport": "RIX",
-          "arrTime": "202412262225",
-          "stopCities": "",
-          "duration": 105,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 2,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "BUSINESS"
-        },
-        {
-          "segmentIndex": 2,
-          "carrier": "BT",
-          "flightNumber": "BT0349",
-          "depAirport": "RIX",
-          "depTime": "202412262315",
-          "arrAirport": "VNO",
-          "arrTime": "202412262359",
-          "stopCities": "",
-          "duration": 44,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 2,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "BUSINESS"
-        }
-      ],
-      "retSegments": [],
-      "combineIndexs": [],
-      "rule": {
-        "hasBaggage": 1,
-        "baggageElements": [
-          {
-            "segmentNo": 1,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 23,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 23,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 1,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          }
-        ],
-        "refundRules": [
-          {
-            "refundType": 0,
-            "refundStatus": "F",
-            "refundFee": 0,
-            "currency": "EUR",
-            "refNoshow": "T",
-            "refNoShowCondition": 0,
-            "refNoshowFee": 0,
-            "ruleDetailList": [
-              {
-                "ruleId": 40287,
-                "status": "F",
-                "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 0,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 40292,
-                "status": "T",
-                "startMinute": 0,
-                "endMinute": -525600,
-                "amount": 0,
-                "currency": "EUR"
-              }
-            ]
-          }
-        ],
-        "changesRules": [
-          {
-            "changesType": 0,
-            "changesStatus": "F",
-            "changesFee": 0,
-            "currency": "EUR",
-            "revNoshow": "T",
-            "revNoShowCondition": 0,
-            "revNoshowFee": 0,
-            "ruleDetailList": [
-              {
-                "ruleId": 40297,
-                "status": "F",
-                "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 0,
-                "currency": "EUR"
-              },
-              {
-                "ruleId": 40302,
-                "status": "T",
-                "startMinute": 0,
-                "endMinute": -525600,
-                "amount": 0,
-                "currency": "EUR"
-              }
-            ]
-          }
-        ],
-        "serviceElements": [
-          {
-            "hasFreeSeat": 1,
-            "hasFreeMeal": 1
-          }
-        ]
-      },
-      "ancillaryProductElements": [],
-      "vendorFare": null,
-      "bundleOptions": [],
-      "links": null,
-      "separateBookings": false,
-      "refreshTime": "2024-12-13T05:25:56Z",
-      "displayFare": null,
-      "ancillarySupported": []
-    },
-    {
-      "fid": "Mwu-N61Mm8veA8_gD1qC0pYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChO-NS6-xXUaUfxYfNPi67bxeiCLttfaj7a",
-      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MjQwLjIyXzI0MC4yMl8yMDAuMDlfMS4wMF82ODEuNTNfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBCQVNJQy0xLSNSSVgtQlQwMzQxLS1WTk8tMjAyNDEyMjcwNzI1LTIwMjQxMjI3MDgxNS1FY29ub215IEJBU0lDLTEtXjI0MC4yMl8yNDAuMjJfMjAwLjA5XzEuMDBfNjgxLjUzXkFCVF9BQlReXkFCVDFQUkdWTk80MDAyMDI0MTIyNl5FVVJ8MHwyMDI0MTIxMzE1MjgzNnwwfDE3MzQwNzQ5MTY1MDd5UlJzZnx8fHx8MS4wMHwzfDB8.IBq11hDBLWLxKTDOid1snAJXBlPb2IxybZYI8A/+FGk=",
-      "supportCreditTransPayment": "0",
-      "currency": "USD",
-      "adultPrice": 200.42,
-      "adultTax": 39.8,
-      "childPrice": 200.42,
-      "childTax": 39.8,
-      "infantPrice": 200.09,
-      "infantTax": 0,
-      "infantAllowed": true,
-      "transactionFeePerPax": 1,
-      "transactionFee": 1,
-      "transactionFeeMode": "PER_PAX",
-      "nationalityType": 0,
-      "nationality": "",
-      "suitAge": "",
-      "PaxType": "ADT",
-      "fromSegments": [
-        {
-          "segmentIndex": 1,
-          "carrier": "BT",
-          "flightNumber": "BT0482",
-          "depAirport": "PRG",
-          "depTime": "202412261940",
-          "arrAirport": "RIX",
-          "arrTime": "202412262225",
-          "stopCities": "",
-          "duration": 105,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "Economy BASIC"
-        },
-        {
-          "segmentIndex": 2,
-          "carrier": "BT",
-          "flightNumber": "BT0341",
-          "depAirport": "RIX",
-          "depTime": "202412270725",
-          "arrAirport": "VNO",
-          "arrTime": "202412270815",
-          "stopCities": "",
-          "duration": 50,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "Economy BASIC"
-        }
-      ],
-      "retSegments": [],
-      "combineIndexs": [],
-      "rule": {
-        "hasBaggage": 1,
-        "baggageElements": [
           {
             "segmentNo": 1,
             "baggageType": "StandardCheckInBaggage",
@@ -927,30 +931,680 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "baggagePiece": 0,
             "baggageWeight": 0,
             "baggageSize": ""
+          }
+        ],
+        "refundRules": [
+          {
+            "refundType": 0,
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "GBP",
+            "refNoshow": "T",
+            "refNoShowCondition": 0,
+            "refNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 47379,
+                "status": "T",
+                "startMinute": 525600,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47381,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "GBP"
+              }
+            ]
+          }
+        ],
+        "changesRules": [
+          {
+            "changesType": 0,
+            "changesStatus": "T",
+            "changesFee": 0,
+            "currency": "GBP",
+            "revNoshow": "T",
+            "revNoShowCondition": 0,
+            "revNoshowFee": 0,
+            "ruleDetailList": [
+              {
+                "ruleId": 47385,
+                "status": "H",
+                "startMinute": 525600,
+                "endMinute": 86400,
+                "amount": 30,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47387,
+                "status": "H",
+                "startMinute": 86400,
+                "endMinute": 120,
+                "amount": 49,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47389,
+                "status": "T",
+                "startMinute": 120,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47391,
+                "status": "T",
+                "startMinute": 0,
+                "endMinute": -525600,
+                "amount": 0,
+                "currency": "GBP"
+              }
+            ]
+          }
+        ],
+        "serviceElements": [
+          {
+            "hasFreeSeat": 0,
+            "hasFreeMeal": 0
+          }
+        ]
+      },
+      "ancillaryProductElements": [
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "productName": "CabinBaggageOverheadLocker",
+          "productType": 3,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 55.8,
+          "currency": "SGD",
+          "vendorPrice": 36.45,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": "Maximum Size 56 x 45 x 25 cm"
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "CabinBaggageOverheadLocker",
+          "ancillaryCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "auxSeatElement": null,
+          "displayPrice": 66.29,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 60.45,
+          "currency": "SGD",
+          "vendorPrice": 39.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_15KG",
+          "auxSeatElement": null,
+          "displayPrice": 71.81,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_30KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 120.9,
+          "currency": "SGD",
+          "vendorPrice": 78.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 30,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_30KG",
+          "auxSeatElement": null,
+          "displayPrice": 143.62,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_45KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 181.35,
+          "currency": "SGD",
+          "vendorPrice": 118.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 45,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_45KG",
+          "auxSeatElement": null,
+          "displayPrice": 215.43,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 72.7,
+          "currency": "SGD",
+          "vendorPrice": 47.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_23KG",
+          "auxSeatElement": null,
+          "displayPrice": 86.36,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_46KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 145.4,
+          "currency": "SGD",
+          "vendorPrice": 94.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 46,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_46KG",
+          "auxSeatElement": null,
+          "displayPrice": 172.73,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_69KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 218.09,
+          "currency": "SGD",
+          "vendorPrice": 142.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 69,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_69KG",
+          "auxSeatElement": null,
+          "displayPrice": 259.08,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_26KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 79.59,
+          "currency": "SGD",
+          "vendorPrice": 51.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 26,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_26KG",
+          "auxSeatElement": null,
+          "displayPrice": 94.55,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_52KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 159.17,
+          "currency": "SGD",
+          "vendorPrice": 103.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 52,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_52KG",
+          "auxSeatElement": null,
+          "displayPrice": 189.08,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_78KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 238.76,
+          "currency": "SGD",
+          "vendorPrice": 155.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 78,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_78KG",
+          "auxSeatElement": null,
+          "displayPrice": 283.63,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_29KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 86.48,
+          "currency": "SGD",
+          "vendorPrice": 56.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 29,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_29KG",
+          "auxSeatElement": null,
+          "displayPrice": 102.73,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_58KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 172.95,
+          "currency": "SGD",
+          "vendorPrice": 112.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 58,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_58KG",
+          "auxSeatElement": null,
+          "displayPrice": 205.45,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_87KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 259.42,
+          "currency": "SGD",
+          "vendorPrice": 169.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 87,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_87KG",
+          "auxSeatElement": null,
+          "displayPrice": 308.17,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_32KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 93.37,
+          "currency": "SGD",
+          "vendorPrice": 60.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 32,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_32KG",
+          "auxSeatElement": null,
+          "displayPrice": 110.92,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_64KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 186.73,
+          "currency": "SGD",
+          "vendorPrice": 121.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 64,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_64KG",
+          "auxSeatElement": null,
+          "displayPrice": 221.82,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_96KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 280.09,
+          "currency": "SGD",
+          "vendorPrice": 182.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 96,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_96KG",
+          "auxSeatElement": null,
+          "displayPrice": 332.73,
+          "displayCurrency": "AUD"
+        }
+      ],
+      "vendorFare": null,
+      "bundleOptions": [],
+      "links": null,
+      "separateBookings": false,
+      "refreshTime": "2025-03-28T06:58:05Z",
+      "displayFare": {
+        "currency": "AUD",
+        "exchangeRate": 1.1879306,
+        "adultPrice": 114.08,
+        "adultTax": 0.21,
+        "childPrice": 114.08,
+        "childTax": 0.21,
+        "infantPrice": 60.63,
+        "infantTax": 0
+      },
+      "ancillarySupported": [
+        "seat",
+        "luggage"
+      ]
+    },
+    {
+      "fid": "sHswaQVRxZTJHL1vGYrfbzgxD7wSGwImive8vL8d96owDKdBvUBMyTdrTrP69L7B",
+      "routingIdentifier": "RUFQX0JVRF8xXzIwMjUwNDE1X18xXzBfMHxxcm54dzU2MzA2fDF8MTM5Ljg0XzEzOS44NF81MS4wNF8yLjE2XzMzMi44OF9TR0R8RUFQX0JVRF8xXzIwMjUwNDE1X18xXzBfMF5CU0wtRFMxMjE3LS1CVUQtMjAyNTA0MTUxOTIwLTIwMjUwNDE1MjEwMC1TdGFuZGFyZC0xLV4xMzkuODRfMTM5Ljg0XzUxLjA0XzIuMTZfMzMyLjg4XkFFQ0FFVVJfQUVDXl5BRUMxRUFQQlVEMjAwMjAyNTA0MTVeQ0hGXjkxLjM1XjkxLjM1XjMzLjM0fDB8MjAyNTAzMjgxNTU2NDh8MHwxNzQzMTQ4NjA4OTQweGpLbVl8fHx8fDIuMTZ8M3wwfEFVRA==.8WAhbXqnS+rVJXX38QpWD531AMl0Z8VFtzcqebqr1T4=",
+      "supportCreditTransPayment": "0",
+      "supportPaymentMethods": [],
+      "currency": "SGD",
+      "adultPrice": 139.65,
+      "adultTax": 0.19,
+      "adultDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 139.65,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.19,
+          "description": ""
+        }
+      ],
+      "childPrice": 139.65,
+      "childTax": 0.19,
+      "childDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 139.65,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.19,
+          "description": ""
+        }
+      ],
+      "infantPrice": 51.04,
+      "infantTax": 0,
+      "infantDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 51.04,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0,
+          "description": ""
+        }
+      ],
+      "infantAllowed": true,
+      "transactionFeePerPax": 2.16,
+      "transactionFee": 2.16,
+      "transactionFeeMode": "PER_PAX",
+      "nationalityType": 0,
+      "nationality": "",
+      "suitAge": "",
+      "PaxType": "ADT",
+      "fromSegments": [
+        {
+          "segmentIndex": 1,
+          "carrier": "DS",
+          "flightNumber": "DS1217",
+          "depAirport": "BSL",
+          "depTime": "202504151920",
+          "arrAirport": "BUD",
+          "arrTime": "202504152100",
+          "stopCities": "",
+          "duration": 100,
+          "codeShare": false,
+          "cabin": "",
+          "cabinClass": 1,
+          "seatCount": 8,
+          "aircraftCode": "",
+          "depTerminal": "",
+          "arrTerminal": "",
+          "operatingCarrier": "",
+          "operatingFlightnumber": "",
+          "fareFamily": "Standard"
+        }
+      ],
+      "retSegments": [],
+      "combineIndexs": [],
+      "rule": {
+        "hasBaggage": 1,
+        "baggageElements": [
+          {
+            "segmentNo": 1,
+            "baggageType": "CabinBaggageUnderSeat",
+            "passengerType": 0,
+            "baggagePiece": 1,
+            "baggageWeight": 15,
+            "baggageSize": "45*36*20cm"
           },
           {
-            "segmentNo": 2,
+            "segmentNo": 1,
             "baggageType": "StandardCheckInBaggage",
             "passengerType": 0,
             "baggagePiece": 0,
             "baggageWeight": 0,
             "baggageSize": ""
-          },
-          {
-            "segmentNo": 1,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
           }
         ],
         "refundRules": [
@@ -958,26 +1612,26 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "refundType": 0,
             "refundStatus": "T",
             "refundFee": 0,
-            "currency": "EUR",
+            "currency": "GBP",
             "refNoshow": "T",
             "refNoShowCondition": 0,
             "refNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40283,
+                "ruleId": 47415,
                 "status": "T",
                 "startMinute": 525600,
                 "endMinute": 0,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               },
               {
-                "ruleId": 40288,
+                "ruleId": 47417,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
@@ -985,28 +1639,44 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "changesRules": [
           {
             "changesType": 0,
-            "changesStatus": "H",
-            "changesFee": 50,
-            "currency": "EUR",
+            "changesStatus": "T",
+            "changesFee": 0,
+            "currency": "GBP",
             "revNoshow": "T",
             "revNoShowCondition": 0,
             "revNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40293,
+                "ruleId": 47421,
                 "status": "H",
                 "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 50,
-                "currency": "EUR"
+                "endMinute": 86400,
+                "amount": 30,
+                "currency": "GBP"
               },
               {
-                "ruleId": 40298,
+                "ruleId": 47423,
+                "status": "H",
+                "startMinute": 86400,
+                "endMinute": 120,
+                "amount": 49,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47425,
+                "status": "T",
+                "startMinute": 120,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47427,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
@@ -1018,29 +1688,549 @@ The array of the routings include suitable flights and fares. Click [<mark style
           }
         ]
       },
-      "ancillaryProductElements": [],
+      "ancillaryProductElements": [
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "productName": "CabinBaggageOverheadLocker",
+          "productType": 3,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 55.8,
+          "currency": "SGD",
+          "vendorPrice": 36.45,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": "Maximum Size 56 x 45 x 25 cm"
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "CabinBaggageOverheadLocker",
+          "ancillaryCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "auxSeatElement": null,
+          "displayPrice": 66.29,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 45.15,
+          "currency": "SGD",
+          "vendorPrice": 29.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_15KG",
+          "auxSeatElement": null,
+          "displayPrice": 53.64,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_30KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 90.29,
+          "currency": "SGD",
+          "vendorPrice": 58.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 30,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_30KG",
+          "auxSeatElement": null,
+          "displayPrice": 107.26,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_45KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 135.43,
+          "currency": "SGD",
+          "vendorPrice": 88.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 45,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_45KG",
+          "auxSeatElement": null,
+          "displayPrice": 160.88,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 62.75,
+          "currency": "SGD",
+          "vendorPrice": 40.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_23KG",
+          "auxSeatElement": null,
+          "displayPrice": 74.54,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_46KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 125.5,
+          "currency": "SGD",
+          "vendorPrice": 81.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 46,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_46KG",
+          "auxSeatElement": null,
+          "displayPrice": 149.09,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_69KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 188.24,
+          "currency": "SGD",
+          "vendorPrice": 122.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 69,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_69KG",
+          "auxSeatElement": null,
+          "displayPrice": 223.62,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_26KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 69.64,
+          "currency": "SGD",
+          "vendorPrice": 45.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 26,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_26KG",
+          "auxSeatElement": null,
+          "displayPrice": 82.73,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_52KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 139.27,
+          "currency": "SGD",
+          "vendorPrice": 90.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 52,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_52KG",
+          "auxSeatElement": null,
+          "displayPrice": 165.44,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_78KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 208.91,
+          "currency": "SGD",
+          "vendorPrice": 136.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 78,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_78KG",
+          "auxSeatElement": null,
+          "displayPrice": 248.17,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_29KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 76.53,
+          "currency": "SGD",
+          "vendorPrice": 49.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 29,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_29KG",
+          "auxSeatElement": null,
+          "displayPrice": 90.91,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_58KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 153.05,
+          "currency": "SGD",
+          "vendorPrice": 99.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 58,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_58KG",
+          "auxSeatElement": null,
+          "displayPrice": 181.81,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_87KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 229.57,
+          "currency": "SGD",
+          "vendorPrice": 149.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 87,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_87KG",
+          "auxSeatElement": null,
+          "displayPrice": 272.71,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_32KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 83.42,
+          "currency": "SGD",
+          "vendorPrice": 54.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 32,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_32KG",
+          "auxSeatElement": null,
+          "displayPrice": 99.1,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_64KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 166.83,
+          "currency": "SGD",
+          "vendorPrice": 108.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 64,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_64KG",
+          "auxSeatElement": null,
+          "displayPrice": 198.18,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_96KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 250.24,
+          "currency": "SGD",
+          "vendorPrice": 163.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 96,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_96KG",
+          "auxSeatElement": null,
+          "displayPrice": 297.27,
+          "displayCurrency": "AUD"
+        }
+      ],
       "vendorFare": null,
       "bundleOptions": [],
       "links": null,
       "separateBookings": false,
-      "refreshTime": "2024-12-13T05:25:56Z",
-      "displayFare": null,
-      "ancillarySupported": []
+      "refreshTime": "2025-03-28T06:58:05Z",
+      "displayFare": {
+        "currency": "AUD",
+        "exchangeRate": 1.1879306,
+        "adultPrice": 165.89,
+        "adultTax": 0.23,
+        "childPrice": 165.89,
+        "childTax": 0.23,
+        "infantPrice": 60.63,
+        "infantTax": 0
+      },
+      "ancillarySupported": [
+        "seat",
+        "luggage"
+      ]
     },
     {
-      "fid": "QFDyo3S-Pu4CizegTgK8l5Yttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChO-NS6-xXUaUfxYfNPi67bxeiCLttfaj7a",
-      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MjUyLjkyXzI1Mi45Ml8yMzAuNzBfMS4wMF83MzcuNTRfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBDTEFTU0lDLTEtI1JJWC1CVDAzNDEtLVZOTy0yMDI0MTIyNzA3MjUtMjAyNDEyMjcwODE1LUVjb25vbXkgQ0xBU1NJQy0xLV4yNTIuOTJfMjUyLjkyXzIzMC43MF8xLjAwXzczNy41NF5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.FQZ40tg29YMe6egtoA7Uw83hdIXSYk0RUbGwoxfL6EI=",
+      "fid": "4unk1hDRtQIyaBamcmmnxMBsKB5A8ka8r7tOYsMC-XaJsaKgElcevthdb239v6gV",
+      "routingIdentifier": "RUFQX0JVRF8xXzIwMjUwNDE1X18xXzBfMHxxcm54dzU2MzA2fDF8OTYuMjFfOTYuMjFfNTEuMDRfMi4xNl8yNDUuNjJfU0dEfEVBUF9CVURfMV8yMDI1MDQxNV9fMV8wXzBeQlNMLURTMTIxMS0tQlVELTIwMjUwNDE1MDcwNS0yMDI1MDQxNTA4NTAtU3RhbmRhcmQtMS1eOTYuMjFfOTYuMjFfNTEuMDRfMi4xNl8yNDUuNjJeQUVDQUVVUl9BRUNeXkFFQzFFQVBCVUQyMDAyMDI1MDQxNV5DSEZeNjIuODVeNjIuODVeMzMuMzR8MHwyMDI1MDMyODE1NTY0OHwwfDE3NDMxNDg2MDg5NDB4akttWXx8fHx8Mi4xNnwzfDB8QVVE.liFcpm6avm/ABL4WwRJVZchwcgPR4rUL1NuuB1P4WQg=",
       "supportCreditTransPayment": "0",
-      "currency": "USD",
-      "adultPrice": 201.16,
-      "adultTax": 51.76,
-      "childPrice": 201.16,
-      "childTax": 51.76,
-      "infantPrice": 230.7,
+      "supportPaymentMethods": [],
+      "currency": "SGD",
+      "adultPrice": 96.03,
+      "adultTax": 0.18,
+      "adultDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 96.03,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.18,
+          "description": ""
+        }
+      ],
+      "childPrice": 96.03,
+      "childTax": 0.18,
+      "childDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 96.03,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.18,
+          "description": ""
+        }
+      ],
+      "infantPrice": 51.04,
       "infantTax": 0,
+      "infantDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 51.04,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0,
+          "description": ""
+        }
+      ],
       "infantAllowed": true,
-      "transactionFeePerPax": 1,
-      "transactionFee": 1,
+      "transactionFeePerPax": 2.16,
+      "transactionFee": 2.16,
       "transactionFeeMode": "PER_PAX",
       "nationalityType": 0,
       "nationality": "",
@@ -1049,45 +2239,24 @@ The array of the routings include suitable flights and fares. Click [<mark style
       "fromSegments": [
         {
           "segmentIndex": 1,
-          "carrier": "BT",
-          "flightNumber": "BT0482",
-          "depAirport": "PRG",
-          "depTime": "202412261940",
-          "arrAirport": "RIX",
-          "arrTime": "202412262225",
+          "carrier": "DS",
+          "flightNumber": "DS1211",
+          "depAirport": "BSL",
+          "depTime": "202504150705",
+          "arrAirport": "BUD",
+          "arrTime": "202504150850",
           "stopCities": "",
           "duration": 105,
           "codeShare": false,
           "cabin": "",
           "cabinClass": 1,
-          "seatCount": 4,
+          "seatCount": 8,
           "aircraftCode": "",
           "depTerminal": "",
           "arrTerminal": "",
-          "operatingCarrier": "BT",
+          "operatingCarrier": "",
           "operatingFlightnumber": "",
-          "fareFamily": "Economy CLASSIC"
-        },
-        {
-          "segmentIndex": 2,
-          "carrier": "BT",
-          "flightNumber": "BT0341",
-          "depAirport": "RIX",
-          "depTime": "202412270725",
-          "arrAirport": "VNO",
-          "arrTime": "202412270815",
-          "stopCities": "",
-          "duration": 50,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "Economy CLASSIC"
+          "fareFamily": "Standard"
         }
       ],
       "retSegments": [],
@@ -1097,35 +2266,19 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "baggageElements": [
           {
             "segmentNo": 1,
-            "baggageType": "StandardCheckInBaggage",
+            "baggageType": "CabinBaggageUnderSeat",
             "passengerType": 0,
             "baggagePiece": 1,
-            "baggageWeight": 23,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 23,
-            "baggageSize": ""
+            "baggageWeight": 15,
+            "baggageSize": "45*36*20cm"
           },
           {
             "segmentNo": 1,
-            "baggageType": "CabinBaggageOverheadLocker",
+            "baggageType": "StandardCheckInBaggage",
             "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
+            "baggagePiece": 0,
+            "baggageWeight": 0,
+            "baggageSize": ""
           }
         ],
         "refundRules": [
@@ -1133,26 +2286,26 @@ The array of the routings include suitable flights and fares. Click [<mark style
             "refundType": 0,
             "refundStatus": "T",
             "refundFee": 0,
-            "currency": "EUR",
+            "currency": "GBP",
             "refNoshow": "T",
             "refNoShowCondition": 0,
             "refNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40284,
+                "ruleId": 47415,
                 "status": "T",
                 "startMinute": 525600,
                 "endMinute": 0,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               },
               {
-                "ruleId": 40289,
+                "ruleId": 47417,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
@@ -1160,28 +2313,44 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "changesRules": [
           {
             "changesType": 0,
-            "changesStatus": "H",
-            "changesFee": 50,
-            "currency": "EUR",
+            "changesStatus": "T",
+            "changesFee": 0,
+            "currency": "GBP",
             "revNoshow": "T",
             "revNoShowCondition": 0,
             "revNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40294,
+                "ruleId": 47421,
                 "status": "H",
                 "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 50,
-                "currency": "EUR"
+                "endMinute": 86400,
+                "amount": 30,
+                "currency": "GBP"
               },
               {
-                "ruleId": 40299,
+                "ruleId": 47423,
+                "status": "H",
+                "startMinute": 86400,
+                "endMinute": 120,
+                "amount": 49,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47425,
+                "status": "T",
+                "startMinute": 120,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47427,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
@@ -1193,29 +2362,549 @@ The array of the routings include suitable flights and fares. Click [<mark style
           }
         ]
       },
-      "ancillaryProductElements": [],
+      "ancillaryProductElements": [
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "productName": "CabinBaggageOverheadLocker",
+          "productType": 3,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 55.8,
+          "currency": "SGD",
+          "vendorPrice": 36.45,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": "Maximum Size 56 x 45 x 25 cm"
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "CabinBaggageOverheadLocker",
+          "ancillaryCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "auxSeatElement": null,
+          "displayPrice": 66.29,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 60.45,
+          "currency": "SGD",
+          "vendorPrice": 39.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_15KG",
+          "auxSeatElement": null,
+          "displayPrice": 71.81,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_30KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 120.9,
+          "currency": "SGD",
+          "vendorPrice": 78.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 30,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_30KG",
+          "auxSeatElement": null,
+          "displayPrice": 143.62,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_45KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 181.35,
+          "currency": "SGD",
+          "vendorPrice": 118.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 45,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_45KG",
+          "auxSeatElement": null,
+          "displayPrice": 215.43,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 72.7,
+          "currency": "SGD",
+          "vendorPrice": 47.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_23KG",
+          "auxSeatElement": null,
+          "displayPrice": 86.36,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_46KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 145.4,
+          "currency": "SGD",
+          "vendorPrice": 94.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 46,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_46KG",
+          "auxSeatElement": null,
+          "displayPrice": 172.73,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_69KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 218.09,
+          "currency": "SGD",
+          "vendorPrice": 142.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 69,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_69KG",
+          "auxSeatElement": null,
+          "displayPrice": 259.08,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_26KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 79.59,
+          "currency": "SGD",
+          "vendorPrice": 51.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 26,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_26KG",
+          "auxSeatElement": null,
+          "displayPrice": 94.55,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_52KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 159.17,
+          "currency": "SGD",
+          "vendorPrice": 103.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 52,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_52KG",
+          "auxSeatElement": null,
+          "displayPrice": 189.08,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_78KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 238.76,
+          "currency": "SGD",
+          "vendorPrice": 155.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 78,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_78KG",
+          "auxSeatElement": null,
+          "displayPrice": 283.63,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_29KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 86.48,
+          "currency": "SGD",
+          "vendorPrice": 56.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 29,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_29KG",
+          "auxSeatElement": null,
+          "displayPrice": 102.73,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_58KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 172.95,
+          "currency": "SGD",
+          "vendorPrice": 112.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 58,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_58KG",
+          "auxSeatElement": null,
+          "displayPrice": 205.45,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_87KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 259.42,
+          "currency": "SGD",
+          "vendorPrice": 169.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 87,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_87KG",
+          "auxSeatElement": null,
+          "displayPrice": 308.17,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_32KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 93.37,
+          "currency": "SGD",
+          "vendorPrice": 60.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 32,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_32KG",
+          "auxSeatElement": null,
+          "displayPrice": 110.92,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_64KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 186.73,
+          "currency": "SGD",
+          "vendorPrice": 121.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 64,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_64KG",
+          "auxSeatElement": null,
+          "displayPrice": 221.82,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_96KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 280.09,
+          "currency": "SGD",
+          "vendorPrice": 182.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 96,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_96KG",
+          "auxSeatElement": null,
+          "displayPrice": 332.73,
+          "displayCurrency": "AUD"
+        }
+      ],
       "vendorFare": null,
       "bundleOptions": [],
       "links": null,
       "separateBookings": false,
-      "refreshTime": "2024-12-13T05:25:56Z",
-      "displayFare": null,
-      "ancillarySupported": []
+      "refreshTime": "2025-03-28T06:58:05Z",
+      "displayFare": {
+        "currency": "AUD",
+        "exchangeRate": 1.1879306,
+        "adultPrice": 114.08,
+        "adultTax": 0.21,
+        "childPrice": 114.08,
+        "childTax": 0.21,
+        "infantPrice": 60.63,
+        "infantTax": 0
+      },
+      "ancillarySupported": [
+        "seat",
+        "luggage"
+      ]
     },
     {
-      "fid": "wbElRxulKjH_3YOTIw7gDpYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChO-NS6-xXUaUfxYfNPi67bxeiCLttfaj7a",
-      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8MTgzLjUzXzE4My41M18xODkuMjBfMS4wMF81NTcuMjZfVVNEfFBSR19WTk9fMV8yMDI0MTIyNl9fMV8wXzBeUFJHLUJUMDQ4Mi0tUklYLTIwMjQxMjI2MTk0MC0yMDI0MTIyNjIyMjUtRWNvbm9teSBGTEVYLTEtI1JJWC1CVDAzNDEtLVZOTy0yMDI0MTIyNzA3MjUtMjAyNDEyMjcwODE1LUVjb25vbXkgRkxFWC0xLV4xODMuNTNfMTgzLjUzXzE4OS4yMF8xLjAwXzU1Ny4yNl5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.kbv9khpQ1b93/yqCsv6vN3h3iDvROVbLzlY/5Nqb+xI=",
+      "fid": "sHswaQVRxZTJHL1vGYrfb3JnsGIJXSuGive8vL8d96owDKdBvUBMyTdrTrP69L7B",
+      "routingIdentifier": "RUFQX0JVRF8xXzIwMjUwNDE1X18xXzBfMHxxcm54dzU2MzA2fDF8MTM5Ljg0XzEzOS44NF81MS4wNF8yLjE2XzMzMi44OF9TR0R8RUFQX0JVRF8xXzIwMjUwNDE1X18xXzBfMF5CU0wtRUMxMjE3LS1CVUQtMjAyNTA0MTUxOTIwLTIwMjUwNDE1MjEwMC1TdGFuZGFyZC0xLV4xMzkuODRfMTM5Ljg0XzUxLjA0XzIuMTZfMzMyLjg4XkFFQ0FFVVJfQUVDXl5BRUMxRUFQQlVEMjAwMjAyNTA0MTVeQ0hGXjkxLjM1XjkxLjM1XjMzLjM0fDB8MjAyNTAzMjgxNTU2NDh8MHwxNzQzMTQ4NjA4OTQweGpLbVl8fHx8fDIuMTZ8M3wwfEFVRA==.IuAU5lyohKJ9MwykAvaem6kLpwtpuftyTe01KCpw384=",
       "supportCreditTransPayment": "0",
-      "currency": "USD",
-      "adultPrice": 137.69,
-      "adultTax": 45.84,
-      "childPrice": 137.69,
-      "childTax": 45.84,
-      "infantPrice": 189.2,
+      "supportPaymentMethods": [],
+      "currency": "SGD",
+      "adultPrice": 139.65,
+      "adultTax": 0.19,
+      "adultDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 139.65,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.19,
+          "description": ""
+        }
+      ],
+      "childPrice": 139.65,
+      "childTax": 0.19,
+      "childDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 139.65,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.19,
+          "description": ""
+        }
+      ],
+      "infantPrice": 51.04,
       "infantTax": 0,
+      "infantDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 51.04,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0,
+          "description": ""
+        }
+      ],
       "infantAllowed": true,
-      "transactionFeePerPax": 1,
-      "transactionFee": 1,
+      "transactionFeePerPax": 2.16,
+      "transactionFee": 2.16,
       "transactionFeeMode": "PER_PAX",
       "nationalityType": 0,
       "nationality": "",
@@ -1224,45 +2913,24 @@ The array of the routings include suitable flights and fares. Click [<mark style
       "fromSegments": [
         {
           "segmentIndex": 1,
-          "carrier": "BT",
-          "flightNumber": "BT0482",
-          "depAirport": "PRG",
-          "depTime": "202412261940",
-          "arrAirport": "RIX",
-          "arrTime": "202412262225",
+          "carrier": "EC",
+          "flightNumber": "EC1217",
+          "depAirport": "BSL",
+          "depTime": "202504151920",
+          "arrAirport": "BUD",
+          "arrTime": "202504152100",
           "stopCities": "",
-          "duration": 105,
+          "duration": 100,
           "codeShare": false,
           "cabin": "",
           "cabinClass": 1,
-          "seatCount": 4,
+          "seatCount": 8,
           "aircraftCode": "",
           "depTerminal": "",
           "arrTerminal": "",
-          "operatingCarrier": "BT",
+          "operatingCarrier": "",
           "operatingFlightnumber": "",
-          "fareFamily": "Economy FLEX"
-        },
-        {
-          "segmentIndex": 2,
-          "carrier": "BT",
-          "flightNumber": "BT0341",
-          "depAirport": "RIX",
-          "depTime": "202412270725",
-          "arrAirport": "VNO",
-          "arrTime": "202412270815",
-          "stopCities": "",
-          "duration": 50,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 1,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "Economy FLEX"
+          "fareFamily": "Standard"
         }
       ],
       "retSegments": [],
@@ -1272,62 +2940,46 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "baggageElements": [
           {
             "segmentNo": 1,
-            "baggageType": "StandardCheckInBaggage",
+            "baggageType": "CabinBaggageUnderSeat",
             "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 23,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 23,
-            "baggageSize": ""
+            "baggagePiece": 1,
+            "baggageWeight": 15,
+            "baggageSize": "45*36*20cm"
           },
           {
             "segmentNo": 1,
-            "baggageType": "CabinBaggageOverheadLocker",
+            "baggageType": "StandardCheckInBaggage",
             "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 1,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
+            "baggagePiece": 0,
+            "baggageWeight": 0,
+            "baggageSize": ""
           }
         ],
         "refundRules": [
           {
             "refundType": 0,
-            "refundStatus": "H",
-            "refundFee": 25,
-            "currency": "EUR",
+            "refundStatus": "T",
+            "refundFee": 0,
+            "currency": "GBP",
             "refNoshow": "T",
             "refNoShowCondition": 0,
             "refNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40285,
-                "status": "H",
+                "ruleId": 47397,
+                "status": "T",
                 "startMinute": 525600,
                 "endMinute": 0,
-                "amount": 25,
-                "currency": "EUR"
+                "amount": 0,
+                "currency": "GBP"
               },
               {
-                "ruleId": 40290,
+                "ruleId": 47399,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
@@ -1335,62 +2987,598 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "changesRules": [
           {
             "changesType": 0,
-            "changesStatus": "F",
+            "changesStatus": "T",
             "changesFee": 0,
-            "currency": "EUR",
+            "currency": "GBP",
             "revNoshow": "T",
             "revNoShowCondition": 0,
             "revNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40295,
-                "status": "F",
+                "ruleId": 47403,
+                "status": "H",
                 "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 0,
-                "currency": "EUR"
+                "endMinute": 86400,
+                "amount": 30,
+                "currency": "GBP"
               },
               {
-                "ruleId": 40300,
+                "ruleId": 47405,
+                "status": "H",
+                "startMinute": 86400,
+                "endMinute": 120,
+                "amount": 49,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47407,
+                "status": "T",
+                "startMinute": 120,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47409,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
         ],
         "serviceElements": [
           {
-            "hasFreeSeat": 2,
+            "hasFreeSeat": 0,
             "hasFreeMeal": 0
           }
         ]
       },
-      "ancillaryProductElements": [],
+      "ancillaryProductElements": [
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "productName": "CabinBaggageOverheadLocker",
+          "productType": 3,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 55.8,
+          "currency": "SGD",
+          "vendorPrice": 36.45,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": "Maximum Size 56 x 45 x 25 cm"
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "CabinBaggageOverheadLocker",
+          "ancillaryCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "auxSeatElement": null,
+          "displayPrice": 66.29,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 45.15,
+          "currency": "SGD",
+          "vendorPrice": 29.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_15KG",
+          "auxSeatElement": null,
+          "displayPrice": 53.64,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_30KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 90.29,
+          "currency": "SGD",
+          "vendorPrice": 58.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 30,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_30KG",
+          "auxSeatElement": null,
+          "displayPrice": 107.26,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_45KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 135.43,
+          "currency": "SGD",
+          "vendorPrice": 88.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 45,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_45KG",
+          "auxSeatElement": null,
+          "displayPrice": 160.88,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 62.75,
+          "currency": "SGD",
+          "vendorPrice": 40.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_23KG",
+          "auxSeatElement": null,
+          "displayPrice": 74.54,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_46KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 125.5,
+          "currency": "SGD",
+          "vendorPrice": 81.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 46,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_46KG",
+          "auxSeatElement": null,
+          "displayPrice": 149.09,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_69KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 188.24,
+          "currency": "SGD",
+          "vendorPrice": 122.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 69,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_69KG",
+          "auxSeatElement": null,
+          "displayPrice": 223.62,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_26KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 69.64,
+          "currency": "SGD",
+          "vendorPrice": 45.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 26,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_26KG",
+          "auxSeatElement": null,
+          "displayPrice": 82.73,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_52KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 139.27,
+          "currency": "SGD",
+          "vendorPrice": 90.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 52,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_52KG",
+          "auxSeatElement": null,
+          "displayPrice": 165.44,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_78KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 208.91,
+          "currency": "SGD",
+          "vendorPrice": 136.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 78,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_78KG",
+          "auxSeatElement": null,
+          "displayPrice": 248.17,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_29KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 76.53,
+          "currency": "SGD",
+          "vendorPrice": 49.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 29,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_29KG",
+          "auxSeatElement": null,
+          "displayPrice": 90.91,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_58KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 153.05,
+          "currency": "SGD",
+          "vendorPrice": 99.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 58,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_58KG",
+          "auxSeatElement": null,
+          "displayPrice": 181.81,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_87KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 229.57,
+          "currency": "SGD",
+          "vendorPrice": 149.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 87,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_87KG",
+          "auxSeatElement": null,
+          "displayPrice": 272.71,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_32KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 83.42,
+          "currency": "SGD",
+          "vendorPrice": 54.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 32,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_32KG",
+          "auxSeatElement": null,
+          "displayPrice": 99.1,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_64KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 166.83,
+          "currency": "SGD",
+          "vendorPrice": 108.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 64,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_64KG",
+          "auxSeatElement": null,
+          "displayPrice": 198.18,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_96KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 250.24,
+          "currency": "SGD",
+          "vendorPrice": 163.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 96,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_96KG",
+          "auxSeatElement": null,
+          "displayPrice": 297.27,
+          "displayCurrency": "AUD"
+        }
+      ],
       "vendorFare": null,
       "bundleOptions": [],
       "links": null,
       "separateBookings": false,
-      "refreshTime": "2024-12-13T05:25:56Z",
-      "displayFare": null,
-      "ancillarySupported": []
+      "refreshTime": "2025-03-28T06:58:05Z",
+      "displayFare": {
+        "currency": "AUD",
+        "exchangeRate": 1.1879306,
+        "adultPrice": 165.89,
+        "adultTax": 0.23,
+        "childPrice": 165.89,
+        "childTax": 0.23,
+        "infantPrice": 60.63,
+        "infantTax": 0
+      },
+      "ancillarySupported": [
+        "seat",
+        "luggage"
+      ]
     },
     {
-      "fid": "hGdhBjki7YfWzhfcplunmJYttfzh9Cgb4yyIxDTAs_fFcjVKg92FlTFwA_GEaChO-NS6-xXUaUfxYfNPi67bxeiCLttfaj7a",
-      "routingIdentifier": "UFJHX1ZOT18xXzIwMjQxMjI2X18xXzBfMHxocGJybTU1OTM1fDF8NDA2LjAzXzQwNi4wM18zMjEuMDJfMS4wMF8xMTM0LjA4X1VTRHxQUkdfVk5PXzFfMjAyNDEyMjZfXzFfMF8wXlBSRy1CVDA0ODItLVJJWC0yMDI0MTIyNjE5NDAtMjAyNDEyMjYyMjI1LUJVU0lORVNTLTEtI1JJWC1CVDAzNDEtLVZOTy0yMDI0MTIyNzA3MjUtMjAyNDEyMjcwODE1LUJVU0lORVNTLTEtXjQwNi4wM180MDYuMDNfMzIxLjAyXzEuMDBfMTEzNC4wOF5BQlRfQUJUXl5BQlQxUFJHVk5PNDAwMjAyNDEyMjZeRVVSfDB8MjAyNDEyMTMxNTI4MzZ8MHwxNzM0MDc0OTE2NTA3eVJSc2Z8fHx8fDEuMDB8M3wwfA==.YW9MS01re+FqhCcXom7YWC+oz1NPYDlzdA76qNJGzBo=",
+      "fid": "sHswaQVRxZTJHL1vGYrfbyQxfQBs_oRFive8vL8d96owDKdBvUBMyTdrTrP69L7B",
+      "routingIdentifier": "RUFQX0JVRF8xXzIwMjUwNDE1X18xXzBfMHxxcm54dzU2MzA2fDF8MTM5Ljg0XzEzOS44NF81MS4wNF8yLjE2XzMzMi44OF9TR0R8RUFQX0JVRF8xXzIwMjUwNDE1X18xXzBfMF5CU0wtVTIxMjE3LS1CVUQtMjAyNTA0MTUxOTIwLTIwMjUwNDE1MjEwMC1TdGFuZGFyZC0xLV4xMzkuODRfMTM5Ljg0XzUxLjA0XzIuMTZfMzMyLjg4XkFFQ0FFVVJfQUVDXl5BRUMxRUFQQlVEMjAwMjAyNTA0MTVeQ0hGXjkxLjM1XjkxLjM1XjMzLjM0fDB8MjAyNTAzMjgxNTU2NDh8MHwxNzQzMTQ4NjA4OTQweGpLbVl8fHx8fDIuMTZ8M3wwfEFVRA==.0TkFPk9z/luLMONA4aZdIuY+Kh1ZSfH2kRmTTuQDliA=",
       "supportCreditTransPayment": "0",
-      "currency": "USD",
-      "adultPrice": 342.57,
-      "adultTax": 63.46,
-      "childPrice": 342.57,
-      "childTax": 63.46,
-      "infantPrice": 321.02,
+      "supportPaymentMethods": [],
+      "currency": "SGD",
+      "adultPrice": 139.65,
+      "adultTax": 0.19,
+      "adultDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 139.65,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.19,
+          "description": ""
+        }
+      ],
+      "childPrice": 139.65,
+      "childTax": 0.19,
+      "childDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 139.65,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0.19,
+          "description": ""
+        }
+      ],
+      "infantPrice": 51.04,
       "infantTax": 0,
+      "infantDetails": [
+        {
+          "code": "farePrice",
+          "type": "base",
+          "amount": 51.04,
+          "description": ""
+        },
+        {
+          "code": "tax",
+          "type": "tax",
+          "amount": 0,
+          "description": ""
+        }
+      ],
       "infantAllowed": true,
-      "transactionFeePerPax": 1,
-      "transactionFee": 1,
+      "transactionFeePerPax": 2.16,
+      "transactionFee": 2.16,
       "transactionFeeMode": "PER_PAX",
       "nationalityType": 0,
       "nationality": "",
@@ -1399,45 +3587,24 @@ The array of the routings include suitable flights and fares. Click [<mark style
       "fromSegments": [
         {
           "segmentIndex": 1,
-          "carrier": "BT",
-          "flightNumber": "BT0482",
-          "depAirport": "PRG",
-          "depTime": "202412261940",
-          "arrAirport": "RIX",
-          "arrTime": "202412262225",
+          "carrier": "U2",
+          "flightNumber": "U21217",
+          "depAirport": "BSL",
+          "depTime": "202504151920",
+          "arrAirport": "BUD",
+          "arrTime": "202504152100",
           "stopCities": "",
-          "duration": 105,
+          "duration": 100,
           "codeShare": false,
           "cabin": "",
-          "cabinClass": 2,
-          "seatCount": 4,
+          "cabinClass": 1,
+          "seatCount": 8,
           "aircraftCode": "",
           "depTerminal": "",
           "arrTerminal": "",
-          "operatingCarrier": "BT",
+          "operatingCarrier": "",
           "operatingFlightnumber": "",
-          "fareFamily": "BUSINESS"
-        },
-        {
-          "segmentIndex": 2,
-          "carrier": "BT",
-          "flightNumber": "BT0341",
-          "depAirport": "RIX",
-          "depTime": "202412270725",
-          "arrAirport": "VNO",
-          "arrTime": "202412270815",
-          "stopCities": "",
-          "duration": 50,
-          "codeShare": false,
-          "cabin": "",
-          "cabinClass": 2,
-          "seatCount": 4,
-          "aircraftCode": "",
-          "depTerminal": "",
-          "arrTerminal": "",
-          "operatingCarrier": "BT",
-          "operatingFlightnumber": "",
-          "fareFamily": "BUSINESS"
+          "fareFamily": "Standard"
         }
       ],
       "retSegments": [],
@@ -1447,62 +3614,46 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "baggageElements": [
           {
             "segmentNo": 1,
-            "baggageType": "StandardCheckInBaggage",
+            "baggageType": "CabinBaggageUnderSeat",
             "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 23,
-            "baggageSize": ""
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "StandardCheckInBaggage",
-            "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 23,
-            "baggageSize": ""
+            "baggagePiece": 1,
+            "baggageWeight": 15,
+            "baggageSize": "45*36*20cm"
           },
           {
             "segmentNo": 1,
-            "baggageType": "CabinBaggageOverheadLocker",
+            "baggageType": "StandardCheckInBaggage",
             "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
-          },
-          {
-            "segmentNo": 2,
-            "baggageType": "CabinBaggageOverheadLocker",
-            "passengerType": 0,
-            "baggagePiece": 2,
-            "baggageWeight": 8,
-            "baggageSize": "55*40*23cm"
+            "baggagePiece": 0,
+            "baggageWeight": 0,
+            "baggageSize": ""
           }
         ],
         "refundRules": [
           {
             "refundType": 0,
-            "refundStatus": "F",
+            "refundStatus": "T",
             "refundFee": 0,
-            "currency": "EUR",
+            "currency": "GBP",
             "refNoshow": "T",
             "refNoShowCondition": 0,
             "refNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40287,
-                "status": "F",
+                "ruleId": 47379,
+                "status": "T",
                 "startMinute": 525600,
                 "endMinute": 0,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               },
               {
-                "ruleId": 40292,
+                "ruleId": 47381,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
@@ -1510,47 +3661,540 @@ The array of the routings include suitable flights and fares. Click [<mark style
         "changesRules": [
           {
             "changesType": 0,
-            "changesStatus": "F",
+            "changesStatus": "T",
             "changesFee": 0,
-            "currency": "EUR",
+            "currency": "GBP",
             "revNoshow": "T",
             "revNoShowCondition": 0,
             "revNoshowFee": 0,
             "ruleDetailList": [
               {
-                "ruleId": 40297,
-                "status": "F",
+                "ruleId": 47385,
+                "status": "H",
                 "startMinute": 525600,
-                "endMinute": 0,
-                "amount": 0,
-                "currency": "EUR"
+                "endMinute": 86400,
+                "amount": 30,
+                "currency": "GBP"
               },
               {
-                "ruleId": 40302,
+                "ruleId": 47387,
+                "status": "H",
+                "startMinute": 86400,
+                "endMinute": 120,
+                "amount": 49,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47389,
+                "status": "T",
+                "startMinute": 120,
+                "endMinute": 0,
+                "amount": 0,
+                "currency": "GBP"
+              },
+              {
+                "ruleId": 47391,
                 "status": "T",
                 "startMinute": 0,
                 "endMinute": -525600,
                 "amount": 0,
-                "currency": "EUR"
+                "currency": "GBP"
               }
             ]
           }
         ],
         "serviceElements": [
           {
-            "hasFreeSeat": 1,
-            "hasFreeMeal": 1
+            "hasFreeSeat": 0,
+            "hasFreeMeal": 0
           }
         ]
       },
-      "ancillaryProductElements": [],
+      "ancillaryProductElements": [
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "productName": "CabinBaggageOverheadLocker",
+          "productType": 3,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 55.8,
+          "currency": "SGD",
+          "vendorPrice": 36.45,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": "Maximum Size 56 x 45 x 25 cm"
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "CabinBaggageOverheadLocker",
+          "ancillaryCode": "CBOL_1PC_15KG_MAXIMUM SIZE 56 X 45 X 25 CM",
+          "auxSeatElement": null,
+          "displayPrice": 66.29,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_15KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 45.15,
+          "currency": "SGD",
+          "vendorPrice": 29.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 15,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_15KG",
+          "auxSeatElement": null,
+          "displayPrice": 53.64,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_30KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 90.29,
+          "currency": "SGD",
+          "vendorPrice": 58.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 30,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_30KG",
+          "auxSeatElement": null,
+          "displayPrice": 107.26,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_45KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 135.43,
+          "currency": "SGD",
+          "vendorPrice": 88.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 45,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_45KG",
+          "auxSeatElement": null,
+          "displayPrice": 160.88,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_23KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 62.75,
+          "currency": "SGD",
+          "vendorPrice": 40.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 23,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_23KG",
+          "auxSeatElement": null,
+          "displayPrice": 74.54,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_46KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 125.5,
+          "currency": "SGD",
+          "vendorPrice": 81.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 46,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_46KG",
+          "auxSeatElement": null,
+          "displayPrice": 149.09,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_69KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 188.24,
+          "currency": "SGD",
+          "vendorPrice": 122.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 69,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_69KG",
+          "auxSeatElement": null,
+          "displayPrice": 223.62,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_26KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 69.64,
+          "currency": "SGD",
+          "vendorPrice": 45.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 26,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_26KG",
+          "auxSeatElement": null,
+          "displayPrice": 82.73,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_52KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 139.27,
+          "currency": "SGD",
+          "vendorPrice": 90.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 52,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_52KG",
+          "auxSeatElement": null,
+          "displayPrice": 165.44,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_78KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 208.91,
+          "currency": "SGD",
+          "vendorPrice": 136.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 78,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_78KG",
+          "auxSeatElement": null,
+          "displayPrice": 248.17,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_29KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 76.53,
+          "currency": "SGD",
+          "vendorPrice": 49.99,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 29,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_29KG",
+          "auxSeatElement": null,
+          "displayPrice": 90.91,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_58KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 153.05,
+          "currency": "SGD",
+          "vendorPrice": 99.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 58,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_58KG",
+          "auxSeatElement": null,
+          "displayPrice": 181.81,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_87KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 229.57,
+          "currency": "SGD",
+          "vendorPrice": 149.97,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 87,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_87KG",
+          "auxSeatElement": null,
+          "displayPrice": 272.71,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_1PC_32KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 83.42,
+          "currency": "SGD",
+          "vendorPrice": 54.49,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 1,
+            "weight": 32,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_1PC_32KG",
+          "auxSeatElement": null,
+          "displayPrice": 99.1,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_2PC_64KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 166.83,
+          "currency": "SGD",
+          "vendorPrice": 108.98,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 2,
+            "weight": 64,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_2PC_64KG",
+          "auxSeatElement": null,
+          "displayPrice": 198.18,
+          "displayCurrency": "AUD"
+        },
+        {
+          "segmentIndex": 1,
+          "endSegmentIndex": null,
+          "productCode": "SCI_BAG_3PC_96KG",
+          "productName": "StandardCheckInBaggage",
+          "productType": 1,
+          "canPurchaseWithTicket": 1,
+          "canPurchasePostTicket": 0,
+          "price": 250.24,
+          "currency": "SGD",
+          "vendorPrice": 163.47,
+          "vendorCurrency": "CHF",
+          "clientTechnicalServiceFee": 0,
+          "clientTechnicalServiceFeeMode": null,
+          "auxBaggageElement": {
+            "piece": 3,
+            "weight": 96,
+            "isAllWeight": true,
+            "size": ""
+          },
+          "offerId": null,
+          "maxQty": 1,
+          "minQty": 1,
+          "categoryCode": "StandardCheckInBaggage",
+          "ancillaryCode": "SCI_BAG_3PC_96KG",
+          "auxSeatElement": null,
+          "displayPrice": 297.27,
+          "displayCurrency": "AUD"
+        }
+      ],
       "vendorFare": null,
       "bundleOptions": [],
       "links": null,
       "separateBookings": false,
-      "refreshTime": "2024-12-13T05:25:56Z",
-      "displayFare": null,
-      "ancillarySupported": []
+      "refreshTime": "2025-03-28T06:58:05Z",
+      "displayFare": {
+        "currency": "AUD",
+        "exchangeRate": 1.1879306,
+        "adultPrice": 165.89,
+        "adultTax": 0.23,
+        "childPrice": 165.89,
+        "childTax": 0.23,
+        "infantPrice": 60.63,
+        "infantTax": 0
+      },
+      "ancillarySupported": [
+        "seat",
+        "luggage"
+      ]
     }
   ],
   "status": 0,
@@ -1592,13 +4236,41 @@ This tag is used to identify if the fare needs to be paid using the client's cre
 
 The currency in which Atlas settles transactions with you.
 
-**`adultPrice`  **<mark style="color:blue;">**decimal**</mark>
+**`adultPrice` **<mark style="color:blue;">**decimal**</mark>
 
 Adult fare per passenger.
 
 **`adultTax`  **<mark style="color:blue;">**decimal**</mark>
 
 Adult tax per passenger.
+
+**`adultDetails ` Array<**[**Price Details Element**]
+
+Details of the adult price composition 
+
+**`code`  **<mark style="color:blue;">**string**</mark>
+
+Price detail code.
+
+Valid values:
+
+fareprice
+
+tax
+
+fee 
+
+**`type`  **<mark style="color:blue;">**string**</mark>
+
+Specific types of price detail, a price detail code has multiple types. 
+
+**`amount`  **<mark style="color:blue;">**string**</mark>
+
+Price detail amount. 
+
+**`description`  **<mark style="color:blue;">**string**</mark>
+
+Supplementary explanation for price details. 
 
 **`childPrice`  **<mark style="color:blue;">**decimal**</mark>
 
@@ -1607,6 +4279,34 @@ Child fare per passenger.
 **`childTax`  **<mark style="color:blue;">**decimal**</mark>
 
 Child tax per passenger.
+
+**`childDetails ` Array<**[**Price Details Element**]
+
+Details of the adult price composition 
+
+**`code`  **<mark style="color:blue;">**string**</mark>
+
+Price detail code.
+
+Valid values:
+
+fareprice
+
+tax
+
+fee 
+
+**`type`  **<mark style="color:blue;">**string**</mark>
+
+Specific types of price detail, a price detail code has multiple types. 
+
+**`amount`  **<mark style="color:blue;">**string**</mark>
+
+Price detail amount. 
+
+**`description`  **<mark style="color:blue;">**string**</mark>
+
+Supplementary explanation for price details. 
 
 **`InfantPrice`  **<mark style="color:blue;">**decimal**</mark>
 
@@ -1619,6 +4319,34 @@ Infant tax per passenger.
 **`infantAllowed`  **<mark style="color:blue;">**boolean**</mark>
 
 Infant passenger allowed for that airline.
+
+**`infantDetails ` Array<**[**Price Details Element**]
+
+Details of the adult price composition 
+
+**`code`  **<mark style="color:blue;">**string**</mark>
+
+Price detail code.
+
+Valid values:
+
+fareprice
+
+tax
+
+fee 
+
+**`type`  **<mark style="color:blue;">**string**</mark>
+
+Specific types of price detail, a price detail code has multiple types. 
+
+**`amount`  **<mark style="color:blue;">**string**</mark>
+
+Price detail amount. 
+
+**`description`  **<mark style="color:blue;">**string**</mark>
+
+Supplementary explanation for price details. 
 
 **`transactionFeePerPax`  **<mark style="color:blue;">**decimal**</mark>
 
