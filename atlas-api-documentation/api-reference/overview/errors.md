@@ -188,14 +188,11 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 #### Refund Error Codes
 | Code | Description                    | Explanation                    | Solution                    |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
-| <mark style="color:blue;">629</mark> | The order is non-refundable. |   |  |
-| <mark style="color:blue;">630</mark> | The refund amount from the airline is less than the expected amount for the order. |   |  |
 | <mark style="color:blue;">801</mark> | Order does not exist              | Incorrect order number has been entered. | Check the order number and enter the correct one. |
 | <mark style="color:blue;">802</mark> | Children cannot travel alone     | Only ADT pax cannot be refunded. The CHD pax should also be refunded together. | Request refund for the full order including child passenger. |
 | <mark style="color:blue;">803</mark> | The passengers have already submitted a refund for a pax and/or segment | Incorrect order number has been entered. | Check the order number and enter the correct one. |
 | <mark style="color:blue;">805</mark> | RefundOfferId has expired. | The “refundOfferId” has expired. | Send a new refund request to get the latest “refundOfferId”. |
 | <mark style="color:blue;">807</mark> | Passenger does not exist. | Incorrect passenger name has been entered. | Check the passenger name and correct the same, if required. |
-| <mark style="color:blue;">808</mark> | Non refundable.  | The order is non-refundable. |  | 
 | <mark style="color:blue;">809</mark> | Order not ticketed.  | The ticket issuance for this order is under process or the payment has not been made. | Wait for the order to be ticketed or make a payment for this order. | 
 | <mark style="color:blue;">810</mark> | Illegal request param: xxx | One of the request parameters is incorrect. | Check the request and correct the required parameter.  | 
 | <mark style="color:blue;">811</mark> | Completed itineraries are not entered. Please enter the full itinerary and retry. | This can happen due to a variety of reasons. | Check if any of the scenarios listed below are applicable and take relevant action. | 
