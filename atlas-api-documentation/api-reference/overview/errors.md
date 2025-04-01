@@ -185,7 +185,27 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">705</mark> | Timeout  | The response has timed-out | Try again after some time. If the issue persists, please contact support. |
 | <mark style="color:blue;">800</mark> | Order does not exist                           | The relevant order does not exist. | Please re-check the order number and retry. |
 
-#### Refund Error Codes
+#### Refund Quotation Error Codes
+| Code | Description                    | Explanation                    | Solution                    |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">801</mark> | Order does not exist              | Incorrect order number has been entered. | Check the order number and enter the correct one. |
+| <mark style="color:blue;">802</mark> | Children cannot travel alone     | Only ADT pax cannot be refunded. The CHD pax should also be refunded together. | Request refund for the full order including child passenger. |
+| <mark style="color:blue;">803</mark> | The passengers have already submitted a refund for a pax and/or segment | Incorrect order number has been entered. | Check the order number and enter the correct one. |
+| <mark style="color:blue;">807</mark> | Passenger does not exist. | Incorrect passenger name has been entered. | Check the passenger name and correct the same, if required. |
+| <mark style="color:blue;">809</mark> | Order not ticketed.  | The ticket issuance for this order is under process or the payment has not been made. | Wait for the order to be ticketed or make a payment for this order. | 
+| <mark style="color:blue;">810</mark> | Illegal request param: xxx | One of the request parameters is incorrect. | Check the request and correct the required parameter.  | 
+| <mark style="color:blue;">811</mark> | Completed itineraries are not entered. Please enter the full itinerary and retry. | This can happen due to a variety of reasons. | Check if any of the scenarios listed below are applicable and take relevant action. | 
+|  |     | For a roundtrip itinerary, the full ticket needs to be refunded. | If the ticket is fully unused, please enter details of the whole itinerary and retry.  | 
+|  |     | For connecting flights, both the segments need to be refunded together. | Check if both the segments are available in the request and retry.  | 
+|  |     | One sector has been flown in the journey. | Check with the airline. Atlas does not support the refund for "partially" flown itineraries. | 
+| <mark style="color:blue;">812</mark> | Unable to match pax xxx with order. | The name of the passenger does not match with the order. | Check the rpassenger name and resubmit the request.|
+| <mark style="color:blue;">815</mark> | Ticket not found. |  | Check the ticket number and retry.|
+| <mark style="color:blue;">824</mark> | Refund not supported for ancillary orders. Please provide the original order number. | Only the main order is allowed for refund. | Check and confirm whether the order number is of the original order.|
+| <mark style="color:blue;">902</mark> | Access denied.|  |  |
+| <mark style="color:blue;">8041</mark> | Segment does not exist. | One of the segments in the request does not exist. | Check the segments and only provide the segments for that refund request.| 
+
+
+#### Refund Submission Error Codes
 | Code | Description                    | Explanation                    | Solution                    |
 | ---- | ------------------------------ | ------------------------------ | ------------------------------ |
 | <mark style="color:blue;">801</mark> | Order does not exist              | Incorrect order number has been entered. | Check the order number and enter the correct one. |
@@ -209,10 +229,18 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">821</mark> | Exceed the ticket refund deadline.| The refund submission has been done after the refund deadline. | Contact our ops team if you have any questions. |
 | <mark style="color:blue;">822</mark> | Exceed the ticket void deadline.| The void submission has been done after the deadline. | Contact our ops team if you have any questions. |
 | <mark style="color:blue;">823</mark> | Void not all pax.|  |  |
+| <mark style="color:blue;">824</mark> | Refund not supported for ancillary orders. Please provide the original order number. | Only the main order is allowed for refund. | Check and confirm whether the order number is of the original order.|
 | <mark style="color:blue;">902</mark> | Access denied.|  |  |
 | <mark style="color:blue;">905</mark> | Submission is too frequent, please try again later.|  |  |
 | <mark style="color:blue;">8041</mark> | Segment does not exist. | One of the segments in the request does not exist. | Check the segments and only provide the segments for that refund request.| 
 
+
+#### Refund Query Error Codes
+| Code | Description                    | Explanation                    | Solution                    |
+| ---- | ------------------------------ | ------------------------------ | ------------------------------ |
+| <mark style="color:blue;">801</mark> | Order does not exist              | Incorrect order number has been entered. | Check the order number and enter the correct one. |
+| <mark style="color:blue;">810</mark> | Illegal request param: xxx | One of the request parameters is incorrect. | Check the request and correct the required parameter.  | 
+| <mark style="color:blue;">902</mark> | Access denied.|  |  |
 
 #### Post-booking Ancillary Search Error Codes
 | Code | Description                    | Explanation                    | Solution                     |
