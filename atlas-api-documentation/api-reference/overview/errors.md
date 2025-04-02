@@ -173,6 +173,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">631</mark> | Baggage fare changed. | The baggage price has changed at the time of fulfillment.  | Start the process from verify. |
 | <mark style="color:blue;">632</mark> | Baggage fare changed. | Ticketing failed due to airline risk control.  | Start the process from verify. If the problem still exists please contact our operations team. |
 | <mark style="color:blue;">633</mark> | Payment declined by airline. | Payment declined due to airline risk control.  | Use "deposit" as the payment mode and retry. |
+| <mark style="color:blue;">699</mark> | System issues. |   | Retry after some time. If the issue persists, please contact support. |
 
 
 #### Query Order Error Codes
