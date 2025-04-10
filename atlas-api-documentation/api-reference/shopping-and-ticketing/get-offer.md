@@ -443,7 +443,7 @@ None: If it is a refund, it means it cannot be refunded. If it is a rescheduling
 - **Example:** `"USD"`
 
 ##### `data.offer.penalties.rule.percent`
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** Yes  
 - **Description:** Percentage of the penalty, if applicable.  
 - **Constraints:** Must be a positive float between 0 and 1.  
