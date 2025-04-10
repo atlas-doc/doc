@@ -150,12 +150,12 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
     0: Ticket not issued
 
     1: Ticket issued
-*   **ticketErrorCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+*   **errorCode **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     It's only available when orderStatus = -3.&#x20;
 
     Please check the definition of ticketErrorCode [**here**](../overview/errors.md#ticket-error-codes)****
-*   **ticketErrorMessage **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+*   **errorMessage **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
     It's only available when orderStatus = -3.&#x20;
 
