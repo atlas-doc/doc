@@ -293,7 +293,7 @@ The refund calculation for each of the passengers whose refund quote has been re
 - **Example:** `"USD"`  
 
 ### **refundFareAmount.originalFareAmount**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** Yes 
 - **Description:** Original fare of the flight.  
 - **Constraints:** Positive number.  
@@ -301,7 +301,7 @@ The refund calculation for each of the passengers whose refund quote has been re
 - **Example:** `141.19`  
 
 ### **refundFareAmount.estimatedRefundAmount**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** Yes  
 - **Description:** Estimated amount which can be got back for this refund of flight.  
 - **Constraints:** Positive number.  
@@ -309,7 +309,7 @@ The refund calculation for each of the passengers whose refund quote has been re
 - **Example:** `74.99`  
 
 ### **refundFareAmount.displayOriginalFareAmount**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** No   
 - **Description:** Original Fare Amount in display currency.  
 - **Constraints:** Positive number.  
@@ -317,7 +317,7 @@ The refund calculation for each of the passengers whose refund quote has been re
 - **Example:** `241.19`  
 
 ### **refundFareAmount.displayEstimatedRefundAmount**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** No   
 - **Description:** EstimatedRefundAmount in display currency.  
 - **Constraints:** Positive number.  
@@ -344,7 +344,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 - **Example:** `"USD"`  
 
 ### **refundPostTicketingServiceAmounts[].originalPostTicketingServiceAmount**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** Yes   
 - **Description:** The original amount charged for the post-ticketing service.  
 - **Constraints:** Positive number.  
@@ -352,7 +352,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 - **Example:** `141.19`  
 
 ### **refundPostTicketingServiceAmounts[].estimatedRefundAmount**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** Yes   
 - **Description:** Estimated amount which can be got back for this refund of Ancillaries.  
 - **Constraints:** Positive number.  
@@ -360,7 +360,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 - **Example:** `74.99`  
 
 ### **refundPostTicketingServiceAmounts[].displayPostTicketingServiceAmount**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** No  
 - **Description:** The original post-ticketing service amount in the display currency.  
 - **Constraints:** Positive number.  
@@ -368,7 +368,7 @@ The refund calculation for Post-ticketing Servrice, including baggage, seat, etc
 - **Example:** `241.19`  
 
 ### **refundPostTicketingServiceAmounts[].displayEstimatedRefundAmount**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** No   
 - **Description:** The estimated refund amount displayed in the display currency.  
 - **Constraints:** Positive number.  
@@ -387,7 +387,7 @@ Service fee of refund.
 - **Example:** `"USD"`  
 
 ### **serviceFee.transactionFee**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** Yes   
 - **Description:** Transaction Fee of refund.  
 - **Constraints:** Positive number.  
@@ -395,7 +395,7 @@ Service fee of refund.
 - **Example:** `1.00`  
 
 ### **serviceFee.displayTransactionFee**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** No   
 - **Description:** TransactionFee in display currency.  
 - **Constraints:** Positive number.  
@@ -438,7 +438,7 @@ The refund rules for the fare whose refund quote has been requested.
 - **Example:** `"480.00 CNY"`  
 
 ### **refundRules[].penaltyPercent**
-- **Type:** Float  
+- **Type:** Number  
 - **Required:** No  
 - **Description:** The percentage of the fare charged as penalty.
 - **Constraints:** Must be a positive number.  
