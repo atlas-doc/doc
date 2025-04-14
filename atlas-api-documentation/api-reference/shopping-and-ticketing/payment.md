@@ -78,7 +78,8 @@ Cardholder country, province, city, postcode and address are required only for a
 | E6 | Eurowings Europe | Required| Required | Required | Required | Required |
 | EI | Aer Lingus | Required| Required | Required | Required | Required |
 | EW | Eurowings | Required| Required | Required | Required | Required |
-| F9 | Frontier Airlines | Required| Not Required | Required | Required | Required |
+| F9 | Frontier Airlines (US Address) | Required | Not Required | Required | Required | Required |
+| F9 | Frontier Airlines (Non-US Address) | Not Required | Not Required | Not Required | Not Required | Not Required |
 | FA | Fly Safair | Required| Required | Required | Required | Required |
 | G4 | Allegiant Air | Required| Required | Required | Required | Required |
 | GE | Lift Airline | Required| Required | Required | Required | Required |
