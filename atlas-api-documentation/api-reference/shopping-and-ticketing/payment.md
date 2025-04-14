@@ -57,6 +57,7 @@
 ### VCC Mode of Payment 
 
 Cardholder country, province, city, postcode and address are required only for a select few airlines as per the table provided below:
+
 | Airline Code | Airline Name | cardHolderCountry | cardHoldProvince | cardHolderCity | cardHolderPostCode | cardHolderAddress |
 | ---- | -------- | -----------------| ----------------- | ------------- | ----------------- | ------------------ |
 | 4N | Air North | Required| Required | Required | Required | Required |
