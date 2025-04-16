@@ -18,6 +18,7 @@
     <!--* [Multiple Farefamilies Search](atlas-api-documentation/api-reference/shopping-and-ticketing/multiple-farefamilies-search.md)-->
     * [Verify](atlas-api-documentation/api-reference/shopping-and-ticketing/verify.md)
     * [Get Offer](atlas-api-documentation/api-reference/shopping-and-ticketing/get-offer.md)
+    * [Get Luggage](atlas-api-documentation/api-reference/shopping-and-ticketing/get-luggage.md)
     * [Seat Availability](atlas-api-documentation/api-reference/shopping-and-ticketing/seat-availability.md)
     * [Order](atlas-api-documentation/api-reference/shopping-and-ticketing/order.md)
     * [Payment](atlas-api-documentation/api-reference/shopping-and-ticketing/payment.md)
