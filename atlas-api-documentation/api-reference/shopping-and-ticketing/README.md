@@ -12,6 +12,8 @@ Each offer represents flights that meet your search criteria. Your users will th
 
 - [Get Offer](get-offer.md)
 
+- [Get Luggage](get-luggage.md)
+
 - [Seat Availability](seat-availability.md)
 
 - [Order](order.md)
