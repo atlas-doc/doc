@@ -195,9 +195,9 @@ Cardholder country, province, city, postcode and address are required only for a
 {% tabs %}
 {% tab title="Schema" %} 
       
-**Order Number **<mark style="color:blue;">**string**</mark>
+**orderNo **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
-Order number
+Order number. 
 
 **pnrCode **<mark style="color:blue;">**string**</mark>
     
