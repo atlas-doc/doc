@@ -172,6 +172,9 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
 *   **vendorTotalPrice **<mark style="color:blue;">**decimal**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Total fare of this order in the vendor's currency, reference for you to generate the specific credit card.
+*   **vendorCost **<mark style="color:blue;">**decimal**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+    Actual fare of this order in the vendor's currency. If the order does not support VCC passthrough or BYOA, this fare will not be displayed.
 *   **vendorTotalAncillaryPrice **<mark style="color:blue;">**decimal**</mark>** 
 
     Total ancillary fare of this order in the vendor's currency.
@@ -301,6 +304,7 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
       "currency": "USD",
       "tktLimitTime": "2024-06-27 13:07:21",
       "vendorTotalPrice": 316.96,
+      "vendorCost": 312.69,
       "vendorTotalAncillaryPrice": 0,
       "vendorCurrency": "AED",
       "adultTotalFare": 86.31,
