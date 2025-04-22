@@ -97,6 +97,7 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">320</mark> | The requested seats were not found or they are already occupied.                      |  | Rebook seats and submit a new order.|
 | <mark style="color:blue;">324</mark> | Airline system issues                    |  | Retry after some time. If the issue persists, please contact our operations team.|
 | <mark style="color:blue;">326</mark> | Your account balance on the airline side is insufficient  | The deposit balance for the BYOA customer is invalid in the account held with the relevant airline. | Top-up the balance and then retry after the balance has been updated.|
+| <mark style="color:blue;">327</mark> | Passenger information does not meet the requirements.  | All the mandatory requirements have not been fulfilled. | Check the booking requirements from the verfy response and ensure that all the requirements have been fulfilled.|
 | <mark style="color:blue;">410</mark> | Use the correct format \"XXXX-XXXXXXXX\" for contact phone. Example: 0001-87291810, 0086-13928109091                         | Incorrect phone number format. | Check the phone number format and rectify the same.|
 | <mark style="color:blue;">6051</mark> | The passenger is on government-imposed credit blacklist    | The passenger is on "No fly" list of the government. | Inform the passenger and cancel the order.|
 
