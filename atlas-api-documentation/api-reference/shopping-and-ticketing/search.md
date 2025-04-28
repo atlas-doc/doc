@@ -4540,6 +4540,10 @@ When the outbound and inbound of round trip need to be booked separately, it wil
 
 The converted fare as per the display currency.
 
+**`expireTime`  **<mark style="color:blue;">**string**</mark>
+
+Cache expiration time (UTC time). Please note that this time is estimated, which means Atlas may refresh the cache before or after that time. The format is: yyyy-MM-dd'T'HH: mm: ss-Z '
+
 {% endtab %}
 {% endtabs %}
 
