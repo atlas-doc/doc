@@ -113,12 +113,6 @@ Cardholder country, province, city, postcode and address are required only for a
 
 *   **creditCard Object< **<mark style="color:blue;">**CreditCardElement**</mark>** > **<mark style="color:green;">**Required**</mark>
 
-*   **maxAcceptedAmount **<mark style="color:blue;">**int**</mark>**  **<mark style="color:orange;">**Optional**</mark>
-
-    Certain airlines may experience fare change after payment submission due to their inability to hold seat reservations. You can use this parameter to set a maximum acceptable payment amount threshold. This is the maximum amount which can be used to create the booking using a VCC.
-
-    If this parameter is 'null', our system will automatically set the maximum acceptable amount as the greater of either 5% of the order price or 5 USD (converted to the transacting currency) per passenger. When the amount entered by the customer is lower than 5% of the order price or 5 USD (converted to the transacting currency) per passenger, the information sent to Atlas by the customer will be used.    
-
    * <mark style="color:blue;">**CreditCardElement**</mark>
       *   **cardNumber **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
@@ -154,6 +148,21 @@ Cardholder country, province, city, postcode and address are required only for a
       *   **cardHolderAddress **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
           The address of card holder
+      *   **reusable **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:green;">**Optional**</mark>
+
+          Valid values:
+          - true: multiple-use card
+          - false: single-use card
+       
+          Default: false: single-use card
+    
+          Do note that when encountering unknown errors in payment to the airline, Atlas will not easily attempt to retry, as this may result in multiple deductions. 
+      *   **paymentLimit **<mark style="color:blue;">**int**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+          Certain airlines may experience fare change after payment submission due to their inability to hold seat reservations. You can use this parameter to set a maximum acceptable payment amount threshold. This is the maximum amount which can be used to create the booking using a VCC.
+
+          If this parameter is 'null', our system will automatically set the maximum acceptable amount as the greater of either 5% of the order price or 5 USD (converted to the transacting currency) per passenger. When the amount entered by the customer is lower than 5% of the order price or 5 USD (converted to the transacting currency) per passenger, the information sent to Atlas by the customer will be used.  
+         
 {% endtab %}
 
 {% tab title="Samples" %}
