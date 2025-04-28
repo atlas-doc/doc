@@ -156,7 +156,7 @@ Cardholder country, province, city, postcode and address are required only for a
        
           Default: false: single-use card
     
-          Do note that when encountering unknown errors in payment to the airline, Atlas will not easily attempt to retry, as this may result in multiple deductions. 
+          Atlas expects this information as Atlas is cautious when making payments for multiple cards. When encountering unknown errors in payment to the airline, Atlas will not easily attempt to retry, as this may result in multiple deductions. 
       *   **paymentLimit **<mark style="color:blue;">**int**</mark>**  **<mark style="color:orange;">**Optional**</mark>
 
           Certain airlines may experience fare change after payment submission due to their inability to hold seat reservations. You can use this parameter to set a maximum acceptable payment amount threshold. This is the maximum amount which can be used to create the booking using a VCC.
