@@ -202,6 +202,12 @@ Please refer to the below information for the usage of the queryOrderDetails.do 
     3: Both Credit Card Payment and Prepayment Available
 
     This is the mode of payment used to pay for the booking.
+*   **paymentAttempted **<mark style="color:blue;">**boolean**</mark>**  **<mark style="color:green;">**optional**</mark>
+
+    Only used for VCC transparent transmission, indicating whether Atlas has initiated payment operations with the airline using your VCC. True/false/null (meaningless)
+
+    Note that a "true" value in this field only indicates that Atlas has previously initiated a payment operation with the airline, and does not represent the payment result (successful or failed)
+
 *   **tktLimitTime **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Payment deadline for this order. This time will be displayed in SGT (GMT +8)
