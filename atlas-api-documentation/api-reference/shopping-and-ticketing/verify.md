@@ -25,15 +25,7 @@ The `search` function should be called prior to this call.
 
     This is received from search response.
 
-    Validity: 6 hrs
-
-    **displayCurrency array **Optional
-
-The alternative currency in which the fare and taxes amount needs to be displayed. The 3-letter currency code should be entered. Please refer to the "Highlights" section in fare search menu for further information.
-
-**`displayCurrency`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
-
-The alternative currency in which the fare and taxes amount needs to be displayed. The 3-letter currency code should be entered. Please refer to the "Highlights" section below for further information.
+    Validity: 6 hrs   
 
 **`requestSource` **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Optional**</mark>
 
@@ -46,8 +38,8 @@ For example: SkyScanner,Google,Oganic search,etc…
 ```
 {
   "cid": "ttxzp62405",
-  "routingIdentifier": "EXsU8XSpfLYTSaQTVCjrJMJvG/ysDtKYfq1WIi9iKV3RuKGQWRYoLHwlk3d3nfx3CfcndJLEJ0OelZh4CJOznF9aTBiw3WJrCv1w5tPrnLqsrzEwGf6LU4JnimIHlZ8g9Mbw9o1UAsRxu28yDTH1sxCUiQXhe9aQqCnWwMFh28gA/nj6IKNh5/yz0GWbBL6s1yDekyABUkLWmuWriKG76AcSFeTleOVJEjXfFd3mUvpZJe1wsRs5TI/Nma2Sz/cOdhAjhrTIFnOMJEKInVplSW3JYquYRVlKPNaFSuoF5K7IHGWlTR0X2vJysOfDQQZWR7Qv1wj0wUrE1kfV4vUrurLMbC/8XlxjYBc7iz9giHkbTb9r/K5/eabN+BX2cuBjtcmNH0T9SwZdxpCXnsjGxdC6wjGifmzacvdkADFsgfWzqaR6+aEfwt4jQKkit64X8IoXcz9XqDadvtpoFyrQz1tXYb6UK8+doiventK1gdc8oJQnVwpWZNzAt1C0KiFMpLq+sZhmvMISTO8EV73ewgLIMtqPFERy6YPlLhv9P5f1GEmT5TthTQ==",
-  "displayCurrency": "PHP"
+  "routingIdentifier": "EXsU8XSpfLYTSaQTVCjrJMJvG/ysDtKYfq1WIi9iKV3RuKGQWRYoLHwlk3d3nfx3CfcndJLEJ0OelZh4CJOznF9aTBiw3WJrCv1w5tPrnLqsrzEwGf6LU4JnimIHlZ8g9Mbw9o1UAsRxu28yDTH1sxCUiQXhe9aQqCnWwMFh28gA/nj6IKNh5/yz0GWbBL6s1yDekyABUkLWmuWriKG76AcSFeTleOVJEjXfFd3mUvpZJe1wsRs5TI/Nma2Sz/cOdhAjhrTIFnOMJEKInVplSW3JYquYRVlKPNaFSuoF5K7IHGWlTR0X2vJysOfDQQZWR7Qv1wj0wUrE1kfV4vUrurLMbC/8XlxjYBc7iz9giHkbTb9r/K5/eabN+BX2cuBjtcmNH0T9SwZdxpCXnsjGxdC6wjGifmzacvdkADFsgfWzqaR6+aEfwt4jQKkit64X8IoXcz9XqDadvtpoFyrQz1tXYb6UK8+doiventK1gdc8oJQnVwpWZNzAt1C0KiFMpLq+sZhmvMISTO8EV73ewgLIMtqPFERy6YPlLhv9P5f1GEmT5TthTQ=="
+ 
 }
 ```
 {% endtab %}
@@ -508,8 +500,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_1PC_10KG",
         "auxSeatElement": null,
-        "displayPrice": 3316.95,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -537,8 +529,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_1PC_20KG",
         "auxSeatElement": null,
-        "displayPrice": 5067.17,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -566,8 +558,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_2PC_40KG",
         "auxSeatElement": null,
-        "displayPrice": 10571.89,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -595,8 +587,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_3PC_60KG",
         "auxSeatElement": null,
-        "displayPrice": 16203.64,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -624,8 +616,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_4PC_80KG",
         "auxSeatElement": null,
-        "displayPrice": 21905.97,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -653,8 +645,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_5PC_100KG",
         "auxSeatElement": null,
-        "displayPrice": 27735.32,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -682,8 +674,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_6PC_120KG",
         "auxSeatElement": null,
-        "displayPrice": 33762.29,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -711,8 +703,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_1PC_26KG",
         "auxSeatElement": null,
-        "displayPrice": 5194.2,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -740,8 +732,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_2PC_52KG",
         "auxSeatElement": null,
-        "displayPrice": 10840.07,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -769,8 +761,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_3PC_78KG",
         "auxSeatElement": null,
-        "displayPrice": 16612.97,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -798,8 +790,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_4PC_104KG",
         "auxSeatElement": null,
-        "displayPrice": 22456.44,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -827,8 +819,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_5PC_130KG",
         "auxSeatElement": null,
-        "displayPrice": 28426.94,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -856,8 +848,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_6PC_156KG",
         "auxSeatElement": null,
-        "displayPrice": 34580.94,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -885,8 +877,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_1PC_32KG",
         "auxSeatElement": null,
-        "displayPrice": 5405.92,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -914,8 +906,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_2PC_64KG",
         "auxSeatElement": null,
-        "displayPrice": 11263.51,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -943,8 +935,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_3PC_96KG",
         "auxSeatElement": null,
-        "displayPrice": 17248.13,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -972,8 +964,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_4PC_128KG",
         "auxSeatElement": null,
-        "displayPrice": 23289.2,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -1001,8 +993,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_5PC_160KG",
         "auxSeatElement": null,
-        "displayPrice": 29457.31,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -1030,8 +1022,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "StandardCheckInBaggage",
         "ancillaryCode": "SCI_6PC_192KG",
         "auxSeatElement": null,
-        "displayPrice": 35823.03,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       },
       {
         "segmentIndex": 1,
@@ -1059,8 +1051,8 @@ For example: SkyScanner,Google,Oganic search,etc…
         "categoryCode": "CabinBaggageOverheadLocker",
         "ancillaryCode": "CBOL_1PC_10KG",
         "auxSeatElement": null,
-        "displayPrice": 1665.54,
-        "displayCurrency": "PHP"
+        "displayPrice": null,
+        "displayCurrency": null
       }
     ],
     "vendorFare": {
@@ -1082,16 +1074,7 @@ For example: SkyScanner,Google,Oganic search,etc…
     ],
     "separateBookings": false,
     "refreshTime": null,
-    "displayFare": {
-      "currency": "PHP",
-      "exchangeRate": 14.1146661,
-      "adultPrice": 3408.69,
-      "adultTax": 1156.24,
-      "childPrice": 3408.69,
-      "childTax": 1156.24,
-      "infantPrice": 4330.77,
-      "infantTax": 0
-    }
+    "displayFare": null
   },
   "bookingRequirement": {
     "passenger": {
