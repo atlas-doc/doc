@@ -42,6 +42,8 @@ Atlas uses the following **Enum** to store the **error codes** and corresponding
 | <mark style="color:blue;">116</mark> | Search data not captured                             | An error was reported during the search data stoprage at Atlas' end. | If this error is not constantly reported, you can try trying again. If the error persists, then it is necessary to contact the account manager. |
 | <mark style="color:blue;">123</mark> |  Too many requests but too few paid orders                     |  The service has been blocked as the search requests are too many and the paid orders are very less. | Ony search the required city pairs. |
 | <mark style="color:blue;">124</mark> |  Unsupported settlement currency           |  The settlement currency is different than what is accepted by Atlas. | Change the currency to the currency accepted by Atlas for settlement. |
+| <mark style="color:blue;">126</mark> |  requestId does not exist or has already ended.  |  An incorrect requestId has been used or the requestId is no longer valid. | Check the requestId or conduct a new Smart Search and use the new requestId. |
+| <mark style="color:blue;">127</mark> |  Search timeout  |  The search has timed-out. | Conduct a new search. |
 
 
 #### Verify Error Codes
