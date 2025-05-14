@@ -122,7 +122,7 @@ Identify the source of the search traffic, E.g. Google Flights, Oganic Search, S
 
 **`requestId`  **<mark style="color:blue;">**string**</mark>
 
-Unique identifier for the request.
+Unique identifier for the request. This unique identifier is valid for 200s.
 
 {% endtab %}
 
