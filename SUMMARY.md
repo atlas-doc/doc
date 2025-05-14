@@ -14,6 +14,7 @@
     * [UAT Submission Guide](atlas-api-documentation/api-reference/atlas-sandbox/uat-submission-guide.md)
   * [Shopping and Ticketing](atlas-api-documentation/api-reference/shopping-and-ticketing/README.md)
     * [Search](atlas-api-documentation/api-reference/shopping-and-ticketing/search.md)
+    * [Smart Search](atlas-api-documentation/api-reference/shopping-and-ticketing/smart-search.md)
     * [Real-time Search](atlas-api-documentation/api-reference/shopping-and-ticketing/real-timesearch.md)
     <!--* [Multiple Farefamilies Search](atlas-api-documentation/api-reference/shopping-and-ticketing/multiple-farefamilies-search.md)-->
     * [Verify](atlas-api-documentation/api-reference/shopping-and-ticketing/verify.md)
