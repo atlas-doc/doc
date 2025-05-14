@@ -12,6 +12,25 @@ No preceding function needs to be called before `Smart Search`.
 
 [https://sandbox.atriptech.com/smartSearch.do](https://sandbox.atriptech.com/smartSearch.do)
 
+{% hint style="info" %}
+**Advantages of Smart Search:**
+
+* Supports real-time search for booking windows and routes not covered in "Search API".
+* Enhances search result rate and overall coverage.
+
+**Points to note:**
+
+* Smart Search will be activated "on demand". Please contact your account manager or sales director if you want this feature to be activated.
+
+**Workflow:**
+
+* Send the "Smart Search" request and receive the response.
+* After receiving the response, if the "smartEnd"=true, then send another request (2nd request) with the requestId.
+* Follow this flow until "smartEnd"=false. This means that the smart search has been completed. 
+
+{% endhint %}
+
+
 ### Request
 
 {% tabs %}
@@ -776,17 +795,6 @@ The array of the routings include suitable flights and fares. Click [<mark style
 {% endtabs %}
 
 {% hint style="info" %}
-**Advantages of Smart Search:**
-
-* Supports real-time search for booking windows and routes not covered in "Search API".
-* Enhances search result rate and overall coverage.
-
-*Points to note:*
-
-* Smart Search will be activated "on demand". Please contact your account manager or sales director if you want this feature to be activated.
-* The 1st response will usually send "smartEnd"=false. This means that the search is still ongoing. Send the next request with "requestId" received from the 1st response. Keep doing this at regular intervals until "smartEnd"=true.
-
-
 **The search results will include a lot of items. Some highlights are:**
 
 * The returned currency is by configuration according to the business agreement between you and Atlas.
