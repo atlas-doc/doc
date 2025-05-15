@@ -21,12 +21,13 @@ No preceding function needs to be called before `Smart Search`.
 **Points to note:**
 
 * Smart Search will be activated "on demand". Please contact your account manager or sales director if you want this feature to be activated.
+* The ist response will return the results from the cache. if the "smartEnd"=false, send the subsequent requests until if the "smartEnd"=true to get all the results from the LIVE search.
 
 **Workflow:**
 
 * Send the "Smart Search" request and receive the response.
-* After receiving the response, if the "smartEnd"=true, then send another request (2nd request) with the requestId.
-* Follow this flow until "smartEnd"=false. This means that the smart search has been completed. 
+* After receiving the response, if the "smartEnd"=false, then send another request (2nd request) with the requestId.
+* Follow this flow until "smartEnd"=true. This means that the smart search has been completed. 
 
 {% endhint %}
 
