@@ -13,6 +13,16 @@ No preceding function needs to be called before `Smart Search`.
 [https://sandbox.atriptech.com/smartSearch.do](https://sandbox.atriptech.com/smartSearch.do)
 
 {% hint style="info" %}
+**What is Smart Search?**
+
+The greatest value of Smart Search for customers is that it allows them to gain access to a greater and more complete range of shopping route resources.
+
+Currently, when customers search for routes on Atlas, we return cached data that is pre-collected based on customer needs. 
+
+To balance the airline's L2B requirements with traffic costs, we cannot cover all supported routes and booking windows.
+
+This is where ​Smart Search comes into play. It dynamically fetches real-time data from airlines, ensuring comprehensive coverage of routes and availability within the booking window, while optimizing costs and resource efficiency.
+
 **Advantages of Smart Search:**
 
 * Supports real-time search for booking windows and routes not covered in "Search API".
