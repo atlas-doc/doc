@@ -6,8 +6,6 @@ Each offer represents flights that meet your search criteria. Your users will th
 
 - [Search](search.md)
 
-- [Smart Search](smart-search.md)
-
 - [Real-time Search](real-timesearch.md)
 
 - [Verify](verify.md)
