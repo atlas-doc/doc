@@ -14,6 +14,18 @@ No preceding function needs to be called before `Search`.
 
 ### Request
 
+{% hint style="info" %}
+**To use a multi-currency account, you need to enter the "currency" tag in the "Search.do" API request.**
+
+* "currency" is not mandatory. By default, the system will use the first currency set by the customer as the default quotation and settlement currency.
+* In order to obtain quotes, issue tickets, and settle in currency you want, customers need to specify the currency at the beginning of the inquiry (search).
+* There are no changes to the request parameters of other interfaces such as price verification, order generation, and payment. In the corresponding response content, the relevant settlement amount will be displayed in the currency specified by the customer.
+* Transaction Fee Conversion: The transaction fee will be converted to the "settlement currency" as per the timestamp of the verify response as the verify response is the stage when the ticket price is quoted. 
+* When using multiple currencies, you will receive statements and invoices separately for each currency. Please refer to the below link for details.
+
+  [Multi-currency account](https://resources.atriptech.com/popular-topics/payments/multi-currency-account)
+{% endhint %}
+
 {% tabs %}
 {% tab title="Schema" %}
 
