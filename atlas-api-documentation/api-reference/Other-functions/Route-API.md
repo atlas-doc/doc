@@ -14,6 +14,21 @@ There is no dependency for this call.
 
 ## Request
 
+{% hint style="info" %}
+**Points to note**
+
+* The maximum and default limit of the city pair API response is 10000 records.
+* If the objective is to retrieve all the routes, then the tags "pageSize" and "pageNumber" should be used.
+  Sample:
+```
+  {
+    "routeType": 2,
+    "pageSize": 10000,
+    "pageNumber": 1
+  }
+```
+{% endhint %}
+
 {% tabs %}
 {% tab title="Schema" %}
 *   **routeType **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Mandatory**</mark>
