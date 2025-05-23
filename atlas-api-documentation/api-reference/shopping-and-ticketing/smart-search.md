@@ -31,12 +31,20 @@ This is where ​Smart Search comes into play. It dynamically fetches real-time
 **Points to note:**
 
 * Smart Search will be activated "on demand". Please contact your account manager or sales director if you want this feature to be activated.
-* The ist response will return the results from the cache. if the "smartEnd"=false, send the subsequent requests until if the "smartEnd"=true to get all the results from the LIVE search.
+* The "Subsequent Request" should only be used for asynchronous "Smart Search".
 
 **Workflow:**
 
+There are 2 workflows available for "Smart Search":
+#### 1. Synchronous
 * Send the "Smart Search" request and receive the response.
-* After receiving the response, if the "smartEnd"=false, then send another request (2nd request) with the requestId.
+* The "Smart Search" request should contain the parameter `"sync":"true"`
+* The response returned will have the cache results and/or live results.
+* In synchronous mode, after the search, ​all cached and real-time results will be returned in a single response​ when the maximum response duration for the first response is reached. No partial results will be returned before this point.
+
+#### 2. Asynchronous
+* Send the "Smart Search" request and receive the response. The response will return cache results.
+* After receiving the response, if the "smartEnd"=false, then send another request (2nd request) with the requestId. The response will return live results.
 * Follow this flow until "smartEnd"=true. This means that the smart search has been completed. 
 
 {% endhint %}
@@ -129,6 +137,10 @@ The longest duration of the first response (in milliseconds). By default, it is 
 
 Identify the source of the search traffic, E.g. Google Flights, Oganic Search, SkyScanner.
 
+**`sync`  **<mark style="color:blue;">**string**</mark>**  **<mark style="color:orange;">**Optional**</mark>
+
+Whether to return a synchronour response or asynschronous response. The default is "false".
+
 ## Subsequent Request
 
 **`requestId`  **<mark style="color:blue;">**string**</mark>
@@ -155,6 +167,7 @@ Unique identifier for the request. This unique identifier is valid for 200s.
   "includeMultipleFareFamily": true
   "currency": "GBP",
   "maxResponseTime": 4000,
+  "sync":"true",
   "requestSource": "Organic"
 }
 ```
