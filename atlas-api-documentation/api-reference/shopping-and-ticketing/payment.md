@@ -111,6 +111,15 @@ Cardholder country, province, city, postcode and address are required only for a
 
     0 : Payment with Prepayment
 
+*  **`paymentMethod`  **<mark style="color:blue;">**string**</mark>
+
+   List of supported payment method identifiers.
+
+   Valid values:
+      - 1: Deposit
+      - 3: VCC Passthrough
+      - 5: MOR     
+
 *   **creditCard Object< **<mark style="color:blue;">**CreditCardElement**</mark>** > **<mark style="color:green;">**Required**</mark>
 
    * <mark style="color:blue;">**CreditCardElement**</mark>
@@ -180,6 +189,7 @@ Cardholder country, province, city, postcode and address are required only for a
 {
     "orderNo": "PSTEV20220119165629057",
     "supportCreditTransPayment": "1",
+    "paymentMethod": 5,
     "creditCard": {
         "cardNumber": "0000000000000000",
         "cardExpireMonth": "12",
