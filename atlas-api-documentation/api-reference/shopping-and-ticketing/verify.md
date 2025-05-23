@@ -75,7 +75,7 @@ For example: SkyScanner,Google,Oganic search,etc…
     Please refer this element and prevent the end-users to choose more passengers than seat count.
 *   **routing Object<**[**Routing Element**](search.md#route-element-schema)**>**
 
-    Route and fare details. The structure is also Routing Elements, same as search response
+    Route and fare details. The structure for Routing Elements is also the same as search response
 *   **bookingRequirement**                    **Object**<[<mark style="color:blue;">**Booking**</mark>](order.md#paxticketinfo-schema)<mark style="color:blue;">**Requirement**</mark>> <mark style="color:blue;"></mark>                                                           &#x20;
 
     The description for booking info schema.
@@ -160,6 +160,32 @@ For example: SkyScanner,Google,Oganic search,etc…
     **newInfantTax  **<mark style="color:blue;">**decimal**</mark>
     
     Infant tax with price change (if any) returned in verify response
+
+*   **cardChargeList**                    **Object**<mark style="color:blue;"></mark>
+
+    **cardType  **<mark style="color:blue;">**string**</mark>
+    
+    The type of card being used for payment.
+
+    Valid values:
+      - Amex
+      - Visa
+      - Mastercard
+      - JCB
+      - Discover
+      - DinersClub
+ 
+    **percentage  **<mark style="color:blue;">**decimal**</mark>
+
+    The charge in percentage.
+
+    **charge  **<mark style="color:blue;">**decimal**</mark>
+
+    The charge in amount.
+
+    **currency  **<mark style="color:blue;">**string**</mark>
+
+    The currency in which the charge is applied.
     
 {% endtab %}
 
@@ -172,6 +198,9 @@ For example: SkyScanner,Google,Oganic search,etc…
     "fid": "NNQPjln9io_VkVCLML-tV4uTWB1-bYVbwEbgbq1gwbbyIGmv3IQjvGArLc-kVkfqqonjuSrhTmd6q9tCSQ5JdEbgsLbAG9YqlESmEgnTm4P1GEmT5TthTQ..",
     "routingIdentifier": "EXsU8XSpfLYTSaQTVCjrJMJvG/ysDtKYfq1WIi9iKV3RuKGQWRYoLHwlk3d3nfx3CfcndJLEJ0OelZh4CJOznF9aTBiw3WJrCv1w5tPrnLqsrzEwGf6LU4JnimIHlZ8g9Mbw9o1UAsRxu28yDTH1sxCUiQXhe9aQqCnWwMFh28gA/nj6IKNh5/yz0GWbBL6s1yDekyABUkLWmuWriKG76AcSFeTleOVJEjXfFd3mUvpZJe1wsRs5TI/Nma2Sz/cOdhAjhrTIFnOMJEKInVplSW3JYquYRVlKPNaFSuoF5K7IHGWlTR0X2vJysOfDQQZWR7Qv1wj0wUrE1kfV4vUrurLMbC/8XlxjYBc7iz9giHkbTb9r/K5/eabN+BX2cuBjtcmNH0T9SwZdxpCXnsjGxdC6wjGifmzacvdkADFsgfWzqaR6+aEfwt4jQKkit64X8IoXcz9XqDadvtpoFyrQz1tXYb6UK8+doiventK1gdc8oJQnVwpWZPELvPlBkk4NAyGgJvlATBKELGGnovqHmndI9ffItZth6YPlLhv9P5f1GEmT5TthTQ==",
     "supportCreditTransPayment": "1",
+    "supportPaymentMethods": [
+            5 
+        ],
     "currency": "USD",
     "adultPrice": 60.97,
     "adultTax": 20.68,
@@ -1055,6 +1084,27 @@ For example: SkyScanner,Google,Oganic search,etc…
         "displayCurrency": null
       }
     ],
+    "cardChargeList": [
+            {
+                "cardType": "Amex",
+                "percentage": 0.05,
+                "charge": null,
+                "currency": null
+            },
+            {
+                "cardType": "Visa",
+                "percentage": 0.03,
+                "charge": null,
+                "currency": null
+            },
+            {
+                "cardType": "Mastercard",
+                "percentage": 0.03,
+                "charge": null,
+                "currency": null
+            }
+        ]
+    },
     "vendorFare": {
       "vendorAdultPrice": 241.53,
       "vendorAdultTax": 81.94,
@@ -1076,6 +1126,26 @@ For example: SkyScanner,Google,Oganic search,etc…
     "refreshTime": null,
     "displayFare": null
   },
+  "cardChargeList": [
+            {
+                "cardType": "Amex",
+                "percentage": 0.05,
+                "charge": null,
+                "currency": null
+            },
+            {
+                "cardType": "Visa",
+                "percentage": 0.03,
+                "charge": null,
+                "currency": null
+            },
+            {
+                "cardType": "Mastercard",
+                "percentage": 0.03,
+                "charge": null,
+                "currency": null
+            }
+        ],
   "bookingRequirement": {
     "passenger": {
       "cardIssuePlace": {
