@@ -31,6 +31,19 @@ The booking requirements need to be read from the "bookingRequirement" array in 
 *   **sessionId **<mark style="color:blue;">**string**</mark>**  **<mark style="color:green;">**Required**</mark>
 
     Identifier of the search response.
+
+*   **cardType  **<mark style="color:blue;">**string**</mark>
+    
+    The type of card being used for payment.
+
+    Valid values:
+      - Amex
+      - Visa
+      - Mastercard
+      - JCB
+      - Discover
+      - DinersClub
+    
 *   **passengers Array<**<mark style="color:blue;">**PassengerElement**</mark>**> **<mark style="color:green;">**Required**</mark>
 
     Passengers' information.
@@ -143,6 +156,11 @@ The booking requirements need to be read from the "bookingRequirement" array in 
 {
 "ifSeatOccupied": "SIMILAR_SEAT",
 "sessionId": "43c3c07e-2b05-4fc9-8832-29a71075a097",
+{
+      "payment": {
+      "cardType": "Visa"
+    }
+},
     "passengers": [
         {
             "name": "TEST/ONE",
@@ -311,6 +329,35 @@ The booking requirements need to be read from the "bookingRequirement" array in 
       *   **airlinePNRs Array<**<mark style="color:blue;">**string**</mark>**>**
 
           AirlinePNRs. The array count would be the same as ticketnos count
+
+      *   **paymentOptions Array<**<mark style="color:blue;">**paymentOptions**</mark>**>**
+
+          Payment method and the charges applicable.
+
+          *   **paymentMethod **<mark style="color:blue;">**string**</mark>
+          Valid values:
+            - 1: Deposit
+            - 3: VCC Passthrough
+            - 5: MOR
+       
+          *   **serviceFee Array<**<mark style="color:blue;">**serviceFee**</mark>**>**
+
+            *   **amount **<mark style="color:blue;">**decimal**</mark>
+
+                The amount of service fee applicable.
+
+            *   **currency **<mark style="color:blue;">**string**</mark>
+
+                The currency of service fee.
+
+            *   **deductFrom **<mark style="color:blue;">**string**</mark>
+
+                From where the fee needs to be deducted.
+
+                Valid values:
+                    - Deposit
+                    - Card
+
       *   **ancillaries Array<**<mark style="color:blue;">**AncillaryElement**</mark>**>**
 
           Ancillaries selection for the specific passenger
@@ -394,6 +441,43 @@ The booking requirements need to be read from the "bookingRequirement" array in 
             "contactPhones": [
                 "8615951711432"
             ],
+            {
+    "paymentOptions": [
+        {
+            "paymentMethod": 3,
+            "serviceFee": {
+                "amount": 10.00,
+                "currency": "USD",
+                "deductFrom": "DEPOSIT"
+            },
+            
+            "ticketFare": {
+                "amount": 123744.40,
+                "currency": "KRW",
+                "deductFrom": "CARD"
+            },
+            "paymentFee": null
+        },
+        {
+          "paymentMethod": 5,
+        
+          "serviceFee": {
+          "amount": 10.00,
+          "currency": "USD",
+          "deductFrom": "DEPOSIT"
+        },
+        "ticketFare": {
+          "amount": 84.46,
+          "currency": "USD",
+          "deductFrom": "CARD"
+        },
+        "paymentFee": {
+         "amount": 4.03,
+         "currency": "USD",
+         "deductFrom": "CARD"
+      }
+    ]    
+},
             "ancillaries": [
                 {
                     "productCode": "SCI_SEAT_B2_F9_PHL_LAS",
