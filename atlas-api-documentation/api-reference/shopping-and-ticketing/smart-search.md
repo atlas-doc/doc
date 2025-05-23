@@ -844,6 +844,14 @@ This tag is used to identify if the fare needs to be paid using the client's cre
 
 1: The API will allow you to pass through client’s credit card details for payment. The customer can also use pre-payment as a method of payment. 
 
+**`supportPaymentMethods`  **<mark style="color:blue;">**string**</mark>
+
+List of supported payment method identifiers.
+
+Valid values:
+  - 1: Deposit
+  - 3: VCC Passthrough
+  - 5: MOR 
 
 **`currency`  **<mark style="color:blue;">**string**</mark>
 
