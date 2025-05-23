@@ -12,19 +12,57 @@ No preceding function needs to be called before `Search`.
 
 [https://sandbox.atriptech.com/search.do](https://sandbox.atriptech.com/search.do)
 
-### Request
-
 {% hint style="info" %}
+## Multi-currency Account
 **To use a multi-currency account, you need to enter the "currency" tag in the "Search.do" API request.**
 
 * "currency" is not mandatory. By default, the system will use the first currency set by the customer as the default quotation and settlement currency.
 * In order to obtain quotes, issue tickets, and settle in currency you want, customers need to specify the currency at the beginning of the inquiry (search).
 * There are no changes to the request parameters of other interfaces such as price verification, order generation, and payment. In the corresponding response content, the relevant settlement amount will be displayed in the currency specified by the customer.
 * Transaction Fee Conversion: The transaction fee will be converted to the "settlement currency" as per the timestamp of the verify response as the verify response is the stage when the ticket price is quoted. 
-* When using multiple currencies, you will receive statements and invoices separately for each currency. Please refer to the below link for details.
+* When using multiple currencies, you will receive statements and invoices separately for each currency. Please refer to the [Multi-currency account](https://resources.atriptech.com/popular-topics/payments/multi-currency-account) link for details.
 
-  [Multi-currency account](https://resources.atriptech.com/popular-topics/payments/multi-currency-account)
 {% endhint %}
+
+{% hint style="info" %}
+## Merchant of Record (MoR)
+
+Unlike the traditional VCC pass-through system where an airline acts as the merchant to handle transactions, the Atlas MoR solution stands as the merchant on record. This means that Atlas directly processes credit card transactions, effectively managing the acquisition and providing our B2B clients with a seamless payment capability. This innovative service offers several key benefits:
+- Enable credit card payments for deposit airlines
+- Allow card payments as an alternative when deposit balances are insufficient
+
+### Supported Currencies
+
+The primary currencies our system collectively handles are USD, EUR, GBP, and SGD.
+
+### Card types accepted by Atlas
+
+- Amex
+- Visa
+- Mastercard
+- JCB
+- Discover
+- DinersClub
+
+### Fees for Atlas Merchant of Record (MoR)
+
+|Item|Fees|
+|----|----|
+|Handling Fees for Card Acceptance - (Non-Amex) Corporate cards|3%|
+|Handling Fees for Card Acceptance - (Amex) Corporate cards|5%|
+
+### Points to note
+
+- For MoR, Atlas will use the customer's default contract currency as the settlement currency for quoting.
+- If customer's default contract currency is not supported by MOR, customer can request Atlas to config the currency they want to use for MOR transactions.
+- “currency” cannot be arbitrarily specified. For example, if payment is made through deposit method, it must be in the currency of contract; If MOR is used, it must be the currency that Atlas is willing to collect from the customer's card.
+- For MoR, Atlas limits the range of acquiring currencies for internal fund management purposes. It does not mean that customers can only use cards of the corresponding currency for payment.
+
+For further information, please refer to the [Merchant of Record (MoR)](https://resources.atriptech.com/copy-of-capability/atlas-pay) document.
+
+{% endhint %}
+
+### Request
 
 {% tabs %}
 {% tab title="Schema" %}
@@ -777,6 +815,14 @@ This tag is used to identify if the fare needs to be paid using the client's cre
 
 1: The API will allow you to pass through client’s credit card details for payment. The customer can also use pre-payment as a method of payment. 
 
+**`supportPaymentMethods`  **<mark style="color:blue;">**string**</mark>
+
+List of supported payment method identifiers.
+
+Valid values:
+  - 1: Deposit
+  - 3: VCC Passthrough
+  - 5: MOR 
 
 **`currency`  **<mark style="color:blue;">**string**</mark>
 
