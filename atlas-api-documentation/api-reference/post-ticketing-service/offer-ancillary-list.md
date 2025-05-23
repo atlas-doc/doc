@@ -105,6 +105,15 @@ The alternative currency in which the fare and taxes amount needs to be displaye
     0: The credit card details will not be passed through and only pre-payment is allowed.
 
     1: The API will allow you to pass through client’s credit card details for payment. The customer can also use pre-payment as a method of payment.
+
+*  **`supportPaymentMethods`  **<mark style="color:blue;">**string**</mark>
+
+   List of supported payment method identifiers.
+
+   Valid values:
+     - 1: Deposit
+     - 3: VCC Passthrough
+     - 5: MOR 
     
 *   **currency **<mark style="color:blue;">**string**</mark>
 
@@ -252,6 +261,11 @@ The alternative currency in which the fare and taxes amount needs to be displaye
     "sessionId": "90223f62-fd87-45b4-9a32-68f03f9f85c8",
     "ticketOrderNo": "TESTA20240618162411631",
     "supportCreditTransPayment": "0",
+    "supportPaymentMethods": [
+                    1,
+                    3,
+      		    5
+            ],
     "currency": "USD",
     "fromSegments": [
         {
