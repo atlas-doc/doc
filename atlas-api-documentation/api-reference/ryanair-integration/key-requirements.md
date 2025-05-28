@@ -1,5 +1,24 @@
 # Key Requirements and Order and Fulfillment Flow
 
+{% hint style="info" %}
+## Points to note:
+### Seats
+- When travelling with a child passenger, paid seats will be auto-allocated for 1 ADT and 1 CHD passenger by RyanAir (FR). Seat allocation is not mandatory for any other ADT passenger type.
+
+### Multiple Email Ids
+- The order.do request has to contain 2 email ids as mentioned below:
+    - Passenger email id
+    - Subscriber email id
+
+### Priority Boarding
+- When 2 cabin bags are booked (40 x 20 x 25 cm and 55 x 40 x 20 cm), priority boarding is included in the price.
+
+### RyanAir's Terms and Conditions
+The subscriber needs to procure the passenger’s acceptance to the following terms, by way of tick box or other means:
+- “I confirm that by booking a Ryanair flight as part of my [name of Subscriber] package I have read and accepted Ryanair’s General Terms and Conditions of Carriage, Website Terms, Cookie Policy, Privacy Policy. I also acknowledge that I will need to log into or create a myRyanair account in order to manage my booking.”
+
+{% endhint %}
+
 ## 1. Client allowed to obtain data through Ryanair's official API​
 - The distribution of any prohibited or scraped content is strictly prohibited​
 - Breach of this condition will lead to termination of Subscriber’s FR content agreement within one day
