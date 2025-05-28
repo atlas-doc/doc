@@ -396,11 +396,18 @@ The reason why the refund was cancelled.
 - The cancel reasons are:
     -    Does not match airline policy
     -    There is no schedule change from the airline side. Please refer the ticket Fare Rules available in ATRIP flight deck for cancellation charges.
-     untary Cancellation - Non-Refundable
+    -    Voluntary Cancellation - Non-Refundable
     -    As per airline policy, only voucher refund is available for the ticket
     -    Refund request cancelled by the user
     -    Travel has been completed by the passenger
     -    Refund not yet received from the airline. Please try again later.
+    -    The order is paid by your VCC. please refund by yourself
+    -    It's issued via your B2B account, please refund by yourself
+    -    Refund is availalbe through airline's B2C website. Please refund by yourself.
+    -    The refund claim voucher is invalid.
+    -    Duplicate Refund Record
+    -    Need to provide more materials that meet airline requirements
+    -    Actual refund amount less than service fee. Will reject it.
 - **Default:** None  
 - **Example:** `"Customer Request"`
 
