@@ -1,0 +1,1 @@
+In the stages of Search, Verify, Seat Selection, and Order, Ryanair's integration method is no different from that of other airlines. The main difference lies in the period after order creation and before payment. Users need to confirm the flight on the airline's webpage. Only after the customer's confirmation can the payment be successfully made and the ticket issued. 
