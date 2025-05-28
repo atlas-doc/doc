@@ -7,4 +7,5 @@ There are some criteria which our customers should agree to and abide to get the
 - [What RyanAir (FR) content are we offering?](what-ryanair-content-are-we-offering.md)
 - [Order & Fulfillment flow](order-and-fulfillment-flow.md)
 - [Post-booking services and refunds](post-booking-services-and-refunds.md)
+- [Ryanair's requirements for subscriber's booking flow](ryanair-requirements-for-subscriber-booking-flow.md)
 - [UAT Submission Guide](uat-submission-guide.md)
