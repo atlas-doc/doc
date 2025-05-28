@@ -7,7 +7,7 @@ Once you have integrated the API we need to test and confirm if the integration 
 
 Please download the UAT template below, follow the steps, fill in the test results and submit the test results on ATRIP via the "Requests" section.
 
-> [Atlas UAT Test Shopping & Ticketing Services Only Template.xlsx](../../../.gitbook/assets/Atlas RyanAir (FR) UAT Test Shopping & Ticketing Services Only Template.xlsx)
+> [Atlas RyanAir (FR) UAT Test Shopping & Ticketing Services Only Template.xlsx](../../../.gitbook/assets/Atlas RyanAir (FR) UAT Test Shopping & Ticketing Services Only Template.xlsx)
 
 {% hint style="info" %}
 Please right click on the above link and click "Open link in new window". The file will start downloading.
