@@ -10,7 +10,7 @@ No preceding function needs to be called before `Smart Search`.
 
 ### Endpoint {% debug uid="smartsearch_1.0" %}{% enddebug %}
 
-[https://sandbox.atriptech.com/smartSearch.do](https://sandbox.atriptech.com/smartSearch.do)
+Use production endpoint being used for APIs other than search API.
 
 {% hint style="info" %}
 **What is Smart Search?**
@@ -32,6 +32,7 @@ This is where ​Smart Search comes into play. It dynamically fetches real-time
 
 * Smart Search will be activated "on demand". Please contact your account manager or sales director if you want this feature to be activated.
 * The "Subsequent Request" should only be used for asynchronous "Smart Search".
+* Smart Search is NOT available in SANDBOX environment. Please use the endpoint being used in production for APIs other than search.
 
 **Workflow:**
 
